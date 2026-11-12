@@ -10,3 +10,6 @@ JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, overworl
 JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_end_bosses dropped
 merged jar elsewhere-3.0.0.jar 133290310 bytes in 79 s
 21:59:24Z client: scenes 23,37,49,62,108,120,132,133,147,168,177,191,207,213,231,245,246,284,303,306,314,346,372,400,403,437,446,459,491, watchdog 59 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+published 12 PNGs (progress) -> cloud-shots-b1 241fb13
