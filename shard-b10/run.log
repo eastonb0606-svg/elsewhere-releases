@@ -13,3 +13,33 @@ merged jar elsewhere-3.0.0.jar 133290310 bytes in 79 s
 fatal: expected 'acknowledgments', received 'packfile'
 warning: push negotiation failed; proceeding anyway with push
 published 4 PNGs (progress) -> cloud-shots-b10 2d53108
+published 46 PNGs (progress) -> cloud-shots-b10 aa2e52a
+client rc=0
+[22:03:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__hrafnholt_chief_move_windup.png: wait_label: no boss bar move label containing 'Furrow Run' within 120 s
+[22:03:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__hrafnholt_chief_move_strike.png: wait_label: no boss bar move label containing 'Furrow Run' within 120 s
+[22:05:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__hrafnholt_hallwarden_hearth_ward_windup.png: wait_label: no boss bar move label containing 'Hearth-Ward' within 120 s
+[22:05:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__hrafnholt_hallwarden_hearth_ward_strike.png: wait_label: no boss bar move label containing 'Hearth-Ward' within 120 s
+[22:07:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__mirewick_ames_dusk_bell_windup.png: wait_label: no boss bar move label containing 'Dusk Bell' within 120 s
+[22:07:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__mirewick_ames_dusk_bell_strike.png: wait_label: no boss bar move label containing 'Dusk Bell' within 120 s
+[22:11:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 60 ok, 6 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:00:59] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:00:59] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[22:00:59] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[22:01:03] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:01:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] 24 flat-stage scenes, 6 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:01:06] [Worker-Main-1/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+--
+22:11:49Z finished rc=0, 60 PNGs;  TOTAL 60 ok, 6 fail, 0 manual

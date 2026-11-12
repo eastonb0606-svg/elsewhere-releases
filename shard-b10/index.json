@@ -7,14 +7,16 @@
           "scene": 19,
           "line": 27,
           "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:30"
         },
         {
           "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
           "scene": 19,
           "line": 27,
           "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:38"
         }
       ],
       "elsewhere:castle_aldermark": [
@@ -23,7 +25,8 @@
           "scene": 20,
           "line": 28,
           "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:53"
         }
       ]
     },
@@ -34,21 +37,24 @@
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:03"
         },
         {
           "file": "generation__castle_aldermark_c_88_26_52_y180.png",
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:10"
         },
         {
           "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:19"
         }
       ]
     },
@@ -211,7 +217,8 @@
           "scene": 161,
           "line": 178,
           "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:29"
         }
       ]
     },
@@ -452,14 +459,16 @@
           "scene": 318,
           "line": 358,
           "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:43"
         },
         {
           "file": "s_townsfolk__mirewick_capital_time_set_12500.png",
           "scene": 318,
           "line": 358,
           "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:52"
         }
       ]
     },
@@ -576,7 +585,8 @@
           "scene": 432,
           "line": 482,
           "check": "the Calling panel starts below the Green Leaf meter (panel top y 32, meter 4-26): no overlap, both fully readable; without Green Leaf the panel sits at y 6 as before",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:47"
         }
       ]
     },
@@ -587,14 +597,16 @@
           "scene": 448,
           "line": 498,
           "check": "icon: a dark iron reliquary orb with echo-teal glass; name in epic purple; lore: a grey first line \"Reliquary of the Mute Order (Summoner, Elite)\", blue stat lines, and a red last line \"Takes 2 minion slots\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:48"
         },
         {
           "file": "s_reliquary__echo_reliquary_tooltip.png",
           "scene": 448,
           "line": 498,
           "check": "icon: a dark iron reliquary orb with echo-teal glass; name in epic purple; lore: a grey first line \"Reliquary of the Mute Order (Summoner, Elite)\", blue stat lines, and a red last line \"Takes 2 minion slots\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:48"
         }
       ]
     },
@@ -605,21 +617,23 @@
           "scene": 485,
           "line": 537,
           "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:11:03"
         },
         {
           "file": "s_struct_greenhaze__choir_geode_ground.png",
           "scene": 485,
           "line": 537,
           "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:11:09"
         }
       ]
     }
   },
-  "run": "22:08:40",
+  "run": "22:11:10",
   "totals": {
-    "ok": 46,
+    "ok": 60,
     "fail": 6,
     "manual": 0
   }
