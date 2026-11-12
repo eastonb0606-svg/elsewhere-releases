@@ -7,7 +7,8 @@
           "scene": 2,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:36"
         }
       ]
     },
@@ -138,14 +139,16 @@
           "scene": 134,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:00"
         },
         {
           "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
           "scene": 134,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:12"
         }
       ]
     },
@@ -156,7 +159,8 @@
           "scene": 149,
           "line": 164,
           "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:43"
         }
       ]
     },
@@ -167,7 +171,8 @@
           "scene": 169,
           "line": 185,
           "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:53"
         }
       ]
     },
@@ -468,14 +473,16 @@
           "scene": 349,
           "line": 392,
           "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:34"
         },
         {
           "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
           "scene": 349,
           "line": 392,
           "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:36"
         }
       ]
     },
@@ -486,21 +493,24 @@
           "scene": 373,
           "line": 421,
           "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:37"
         },
         {
           "file": "s_miresnare__mirewick_mire_snare_third_person_2.png",
           "scene": 373,
           "line": 421,
           "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:38"
         },
         {
           "file": "s_miresnare__mirewick_mire_snare_tooltip_2.png",
           "scene": 373,
           "line": 421,
           "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:39"
         }
       ]
     },
@@ -511,42 +521,48 @@
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:39"
         },
         {
           "file": "s_prismbow__prism_bow_third_person_3.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:40"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_first_person_2.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:42"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_third_person_2.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:42"
         },
         {
           "file": "s_prismbow__prism_bow_after_use_2.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:42"
         },
         {
           "file": "s_prismbow__prism_bow_tooltip_3.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:43"
         }
       ]
     },
@@ -557,14 +573,16 @@
           "scene": 404,
           "line": 454,
           "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:47"
         },
         {
           "file": "s_mothlight__swarm_attacking_mothdust_5s.png",
           "scene": 404,
           "line": 454,
           "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:48"
         }
       ]
     },
@@ -575,21 +593,24 @@
           "scene": 438,
           "line": 488,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:50"
         },
         {
           "file": "s_totems__azmar_sunglass_obelisk_third_person.png",
           "scene": 438,
           "line": 488,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:53"
         },
         {
           "file": "s_totems__azmar_sunglass_obelisk_tooltip.png",
           "scene": 438,
           "line": 488,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:54"
         }
       ]
     },
@@ -600,7 +621,8 @@
           "scene": 454,
           "line": 506,
           "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:00"
         }
       ]
     },
@@ -623,9 +645,9 @@
       ]
     }
   },
-  "run": "22:06:31",
+  "run": "22:08:53",
   "totals": {
-    "ok": 35,
+    "ok": 57,
     "fail": 4,
     "manual": 0
   }
