@@ -1,0 +1,623 @@
+{
+  "lanes": {
+    "s_galesling": {
+      "elsewhere:windwright": [
+        {
+          "file": "s_galesling__windwright_trade.png",
+          "scene": 295,
+          "line": 334,
+          "check": "an offer of 6 Zephyr Feathers + 1 String for a Gale Sling (4 uses); with -Delsewhere.overhaul3.gale_sling_trade=false a newly summoned Windwright has no sling offer",
+          "status": "ok",
+          "taken": "20:05:31"
+        }
+      ]
+    },
+    "s_vlook_azmar": {
+      "villages_azmar_overview + villages_azmar_overview_street (kingdom_villages VillagesScreenshots client gametest, Azmar village after its rebuild)": [],
+      "villages_azmar_obelisk + villages_azmar_border_hint": [],
+      "Azmar \"Migdol\" outpost + villages_azmar_palm_wall": []
+    },
+    "s_sickle": {
+      "elsewhere:mirewick_lantern_sickle": [
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_held.png",
+          "scene": 299,
+          "line": 338,
+          "check": "GUI: a steel crescent blade on a wooden haft with purple wraps and a small purple-and-gold lantern hanging under the blade (reads as a sickle, not checkerboard); handheld pose like a hoe; tooltip: \"Lantern Sickle\" (uncommon, yellow), grey \"Polder sickle of Mirewick\", the 3x3 harvest line and the leaves/vines line",
+          "status": "ok",
+          "taken": "20:05:32"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip.png",
+          "scene": 299,
+          "line": 338,
+          "check": "GUI: a steel crescent blade on a wooden haft with purple wraps and a small purple-and-gold lantern hanging under the blade (reads as a sickle, not checkerboard); handheld pose like a hoe; tooltip: \"Lantern Sickle\" (uncommon, yellow), grey \"Polder sickle of Mirewick\", the 3x3 harvest line and the leaves/vines line",
+          "status": "ok",
+          "taken": "20:05:33"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person.png",
+          "scene": 300,
+          "line": 339,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "20:05:34"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person.png",
+          "scene": 300,
+          "line": 339,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "20:05:35"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_first_person.png",
+          "scene": 300,
+          "line": 339,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "20:05:36"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_third_person.png",
+          "scene": 300,
+          "line": 339,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "20:05:36"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_after_use.png",
+          "scene": 300,
+          "line": 339,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "20:05:37"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_2.png",
+          "scene": 300,
+          "line": 339,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "20:05:38"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person_2.png",
+          "scene": 301,
+          "line": 340,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "ok",
+          "taken": "20:05:38"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person_2.png",
+          "scene": 301,
+          "line": 340,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "ok",
+          "taken": "20:05:39"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_3.png",
+          "scene": 301,
+          "line": 340,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "ok",
+          "taken": "20:05:40"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person.png",
+          "scene": 302,
+          "line": 342,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "20:05:41"
+        },
+        {
+          "file": "s_whips__thornlash_third_person.png",
+          "scene": 302,
+          "line": 342,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "20:05:41"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person.png",
+          "scene": 302,
+          "line": 342,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "20:05:42"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person.png",
+          "scene": 302,
+          "line": 342,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "20:05:43"
+        },
+        {
+          "file": "s_whips__thornlash_after_use.png",
+          "scene": 302,
+          "line": 342,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "20:05:44"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip.png",
+          "scene": 302,
+          "line": 342,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "20:05:44"
+        },
+        {
+          "file": "s_whips__thornlash_first_person_2.png",
+          "scene": 303,
+          "line": 343,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "20:05:45"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_2.png",
+          "scene": 303,
+          "line": 343,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "20:05:46"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_2.png",
+          "scene": 303,
+          "line": 343,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "20:05:47"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_2.png",
+          "scene": 303,
+          "line": 343,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "20:05:47"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_2.png",
+          "scene": 303,
+          "line": 343,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "20:05:48"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_2.png",
+          "scene": 303,
+          "line": 343,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "20:05:49"
+        },
+        {
+          "file": "s_whips__thornlash_first_person_3.png",
+          "scene": 307,
+          "line": 347,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "20:05:57"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_3.png",
+          "scene": 307,
+          "line": 347,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "20:05:58"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_3.png",
+          "scene": 307,
+          "line": 347,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "20:05:59"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_3.png",
+          "scene": 307,
+          "line": 347,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "20:05:59"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_3.png",
+          "scene": 307,
+          "line": 347,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "20:06:00"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_3.png",
+          "scene": 307,
+          "line": 347,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "20:06:01"
+        }
+      ],
+      "elsewhere:tidechain_lash": [
+        {
+          "file": "s_whips__tidechain_lash_first_person.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "20:05:50"
+        },
+        {
+          "file": "s_whips__tidechain_lash_third_person.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "20:05:51"
+        },
+        {
+          "file": "s_whips__tidechain_lash_tooltip.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "20:05:51"
+        }
+      ],
+      "elsewhere:azmar_sunscourge": [
+        {
+          "file": "s_whips__azmar_sunscourge_first_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "20:05:52"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_third_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "20:05:53"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_tooltip.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "20:05:54"
+        }
+      ],
+      "elsewhere:echo_chord": [
+        {
+          "file": "s_whips__echo_chord_first_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "ok",
+          "taken": "20:05:55"
+        },
+        {
+          "file": "s_whips__echo_chord_third_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "ok",
+          "taken": "20:05:56"
+        },
+        {
+          "file": "s_whips__echo_chord_tooltip.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "ok",
+          "taken": "20:05:56"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:aphelion_starpiercer": [
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person.png",
+          "scene": 308,
+          "line": 348,
+          "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
+          "status": "ok",
+          "taken": "20:06:02"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person.png",
+          "scene": 308,
+          "line": 348,
+          "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
+          "status": "ok",
+          "taken": "20:06:03"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person_2.png",
+          "scene": 309,
+          "line": 349,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person_2.png",
+          "scene": 309,
+          "line": 349,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person.png",
+          "scene": 309,
+          "line": 349,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person.png",
+          "scene": 309,
+          "line": 349,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_after_use.png",
+          "scene": 309,
+          "line": 349,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_tooltip.png",
+          "scene": 309,
+          "line": 349,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person_3.png",
+          "scene": 310,
+          "line": 350,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person_3.png",
+          "scene": 310,
+          "line": 350,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_after_use_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_tooltip_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_in_flight.png",
+          "scene": 311,
+          "line": 351,
+          "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__starpiercer_arrow_stuck_sprint_cancel.png",
+          "scene": 312,
+          "line": 352,
+          "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)": [
+        {
+          "file": "s_townsfolk__aldermark_capital_time_set_3000.png",
+          "scene": 313,
+          "line": 353,
+          "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
+          "status": "pending"
+        }
+      ],
+      "Aldermark fields at 14:00 + vespers": [
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers.png",
+          "scene": 314,
+          "line": 354,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers_5s.png",
+          "scene": 314,
+          "line": 354,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        }
+      ],
+      "Hrafnholt jetty at dawn + hall feast": [
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_23000.png",
+          "scene": 315,
+          "line": 355,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_11000.png",
+          "scene": 315,
+          "line": 355,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        }
+      ],
+      "Azmar bazaar vs siesta": [
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_9000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_6000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        }
+      ],
+      "Mirewick canal market + lamplighters": [
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_3000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_12500.png",
+          "scene": 317,
+          "line": 357,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_townsfolk__townsfolk_lod_fold.png",
+          "scene": 318,
+          "line": 358,
+          "check": "nobody pops out of existence in view (they fold beyond 72 blocks, outside the 64-block tracking range); coming back, residents reappear at doors/far streets, never next to you",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__townsfolk_close_up_skins.png",
+          "scene": 319,
+          "line": 359,
+          "check": "the 36 skins of TOWNSFOLK-IDS.md render (no missing-texture checkerboard), held tools visible, no nameplate",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person.png",
+          "scene": 320,
+          "line": 360,
+          "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person.png",
+          "scene": 320,
+          "line": 360,
+          "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip.png",
+          "scene": 320,
+          "line": 360,
+          "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_2.png",
+          "scene": 321,
+          "line": 361,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_2.png",
+          "scene": 321,
+          "line": 361,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person.png",
+          "scene": 321,
+          "line": 361,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person.png",
+          "scene": 321,
+          "line": 361,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use.png",
+          "scene": 321,
+          "line": 361,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_2.png",
+          "scene": 321,
+          "line": 361,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:06:03",
+  "totals": {
+    "ok": 41,
+    "fail": 0,
+    "manual": 0
+  }
+}
