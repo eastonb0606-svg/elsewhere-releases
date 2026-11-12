@@ -95,14 +95,16 @@
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:26"
         },
         {
           "file": "s_p13_particles__rimeback_avalanche_20s.png",
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:29"
         }
       ]
     },
@@ -185,7 +187,8 @@
           "scene": 272,
           "line": 308,
           "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:37"
         }
       ]
     },
@@ -196,42 +199,48 @@
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:39"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person_4.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:39"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_3.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:40"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_3.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:41"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_after_use_3.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:44"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_4.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:45"
         }
       ]
     },
@@ -242,21 +251,24 @@
           "scene": 290,
           "line": 329,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:48"
         },
         {
           "file": "s_dredge__tidebrass_dredge_third_person_2.png",
           "scene": 290,
           "line": 329,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:49"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
           "scene": 290,
           "line": 329,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:50"
         }
       ]
     },
@@ -267,14 +279,16 @@
           "scene": 291,
           "line": 330,
           "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:51"
         },
         {
           "file": "s_galesling__gale_sling_tooltip.png",
           "scene": 291,
           "line": 330,
           "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:52"
         }
       ]
     },
@@ -285,14 +299,16 @@
           "scene": 404,
           "line": 454,
           "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:55"
         },
         {
           "file": "s_mothlight__swarm_attacking_mothdust_5s.png",
           "scene": 404,
           "line": 454,
           "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:57"
         }
       ]
     },
@@ -303,29 +319,35 @@
           "scene": 452,
           "line": 504,
           "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 120 s",
+          "taken": "23:01:58"
         },
         {
           "file": "s_foresight__stormcrest_helm_third_person.png",
           "scene": 452,
           "line": 504,
           "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 120 s",
+          "taken": "23:01:58"
         },
         {
           "file": "s_foresight__stormcrest_helm_tooltip.png",
           "scene": 452,
           "line": 504,
           "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 120 s",
+          "taken": "23:01:58"
         }
       ]
     }
   },
-  "run": "22:59:05",
+  "run": "23:02:31",
   "totals": {
-    "ok": 16,
-    "fail": 0,
+    "ok": 32,
+    "fail": 3,
     "manual": 0
   }
 }
