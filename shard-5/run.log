@@ -14,3 +14,51 @@ remote: Create a pull request for 'cloud-shots-5' on GitHub by visiting:
 remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-5        
 remote: 
 published 19 PNGs (progress) -> cloud-shots-5 02bfd8f
+published 45 PNGs (progress) -> cloud-shots-5 bedf8ce
+client rc=0
+[20:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_mothlight__a_moth_falls_mothdust_icon_later.png: view: target is gone before the camera was placed
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 364 (s_vlook_mire | villages_mirewick_overview + villages_mirewick_overview_street (kingdom_villages VillagesScreenshots client gametest, Mirewick village after its rebuild)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 365 (s_vlook_mire | villages_mirewick_quay + villages_mirewick_lantern_post + villages_mirewick_border_hint): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 366 (s_vlook_mire | villages_mirewick_sluice_house): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 367 (s_vlook_mire | canal quay (Mirewick village by water)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 368 (s_vlook_hraf | villages_hrafnholt_overview + overview_street + longhall (kingdom_villages VillagesScreenshots client gametest, Hrafnholt village after its rebuild; the test now digs a 16x18 shelving pool 30 E of the bell first)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 369 (s_vlook_hraf | villages_hrafnholt_watchtower + gate + water_gate + palisade + thingstead + runestone + toft + border_hint): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 370 (s_vlook_hraf | villages_hrafnholt_pier + boathouse + strand_boat): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 374 (s_miresnare | Snared effect icon (gear3)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 378 (s_routines | Hrafnholt sparring pairs and the hall feast): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 379 (s_routines | Azmar rank blocks, siesta and bazaar): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 380 (s_routines | Mirewick half-hearted drill and lamplighters): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 382 (s_routines | Lantern Fair floating lanterns): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 383 (s_routines | Festival of the Flood lamp boats): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 384 (s_layout_mire | Mirewick fort overview): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 385 (s_layout_mire | water-gate and quay): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 386 (s_layout_mire | inner canal): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 387 (s_layout_mire | canal houses): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 388 (s_layout_mire | windmill bastion): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 389 (s_layout_mire | ravelin and dike road): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 390 (s_layout_mire | kill switch): needs a separate client launch with the kill switch off (config is read at start)
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 394 (s_throne | Aldermark throne, castle_kit=false (B9)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 396 (s_throne | Verdigrim cathedral + Galvanox and Thurgrim arenas (legacy)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 397 (s_throne | Sun chamber sarcophagi (overworld, legacy)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 61 ok, 4 fail, 23 manual
+MinecraftClientHttpException[type=HTTP_ERROR, status=429, response=null]
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.buildHttpException(MinecraftClient.java:167)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:147)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.getWithEtag(MinecraftClient.java:81)
+--
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[20:04:21] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:04:21] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[20:04:21] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[20:04:26] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:04:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] 22 flat-stage scenes, 0 worldgen scenes, 23 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[20:04:30] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+20:06:46Z finished rc=0, 61 PNGs;  TOTAL 61 ok, 4 fail, 23 manual

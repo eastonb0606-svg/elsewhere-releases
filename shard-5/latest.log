@@ -600,3 +600,123 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:05:58] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
 [20:05:58] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
 [20:05:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:58] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Mothlight Staff]
+[20:05:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_mothlight__mothlight_staff_held.png: 
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_mothlight__mothlight_staff_tooltip.png: 
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:05:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 401 (s_mothlight | elsewhere:mothlight_staff) done in 1860 ms
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:05:59] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Summoned new Mothlight Swarm
+[20:06:00] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 402 stopped at view: target is gone before the camera was placed
+[20:06:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_mothlight__mothlight_swarm_entity_idle.png: view: target is gone before the camera was placed
+[20:06:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_mothlight__mothlight_swarm_entity_idle_later.png: view: target is gone before the camera was placed
+[20:06:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 402 (s_mothlight | elsewhere:mothlight_swarm) done in 165 ms
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:00] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[20:06:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_mothlight__swarm_attacking_mothdust.png: 
+[20:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_mothlight__swarm_attacking_mothdust_5s.png: 
+[20:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 403 (s_mothlight | swarm attacking + Mothdust) done in 8535 ms
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Summoned new Mothlight Swarm
+[20:06:08] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 404 stopped at view: target is gone before the camera was placed
+[20:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_mothlight__a_moth_falls_mothdust_icon.png: view: target is gone before the camera was placed
+[20:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_mothlight__a_moth_falls_mothdust_icon_later.png: view: target is gone before the camera was placed
+[20:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 404 (s_mothlight | elsewhere:mothlight_swarm) done in 203 ms
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:06:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:09] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:09] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Wolf-Call Horn]
+[20:06:09] [Server thread/INFO] (Minecraft) System chat: Gave 1 [Wolf-Call Horn] to ShotRunner
+[20:06:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_first_person.png: 
+[20:06:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_third_person.png: 
+[20:06:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_tooltip.png: 
+[20:06:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 405 (s_wolfcall | elsewhere:hrafnholt_wolfcall_horn) done in 2733 ms
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Wolf-Call Horn]
+[20:06:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_first_person_2.png: 
+[20:06:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_third_person_2.png: 
+[20:06:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_in_use_first_person.png: 
+[20:06:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_in_use_third_person.png: 
+[20:06:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_after_use.png: 
+[20:06:15] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:06:15] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[20:06:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_tooltip_2.png: 
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:06:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 406 (s_wolfcall | elsewhere:hrafnholt_wolfcall_horn) done in 4831 ms
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Summoned new Zombie
+[20:06:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__warg_pack_hunting_gear3.png: 
+[20:06:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__warg_pack_hunting_gear3_5s.png: 
+[20:06:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 407 (s_wolfcall | Warg pack hunting (gear3)) done in 8540 ms
+[20:06:25] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:06:25] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:06:25] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:06:25] [Server thread/INFO] (Minecraft) Stopping server
+[20:06:25] [Server thread/INFO] (Minecraft) Saving players
+[20:06:25] [Server thread/INFO] (Minecraft) Saving worlds
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:06:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 364 (s_vlook_mire | villages_mirewick_overview + villages_mirewick_overview_street (kingdom_villages VillagesScreenshots client gametest, Mirewick village after its rebuild)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 365 (s_vlook_mire | villages_mirewick_quay + villages_mirewick_lantern_post + villages_mirewick_border_hint): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 366 (s_vlook_mire | villages_mirewick_sluice_house): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 367 (s_vlook_mire | canal quay (Mirewick village by water)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 368 (s_vlook_hraf | villages_hrafnholt_overview + overview_street + longhall (kingdom_villages VillagesScreenshots client gametest, Hrafnholt village after its rebuild; the test now digs a 16x18 shelving pool 30 E of the bell first)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 369 (s_vlook_hraf | villages_hrafnholt_watchtower + gate + water_gate + palisade + thingstead + runestone + toft + border_hint): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 370 (s_vlook_hraf | villages_hrafnholt_pier + boathouse + strand_boat): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 374 (s_miresnare | Snared effect icon (gear3)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 378 (s_routines | Hrafnholt sparring pairs and the hall feast): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 379 (s_routines | Azmar rank blocks, siesta and bazaar): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 380 (s_routines | Mirewick half-hearted drill and lamplighters): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 382 (s_routines | Lantern Fair floating lanterns): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 383 (s_routines | Festival of the Flood lamp boats): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 384 (s_layout_mire | Mirewick fort overview): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 385 (s_layout_mire | water-gate and quay): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 386 (s_layout_mire | inner canal): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 387 (s_layout_mire | canal houses): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 388 (s_layout_mire | windmill bastion): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 389 (s_layout_mire | ravelin and dike road): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 390 (s_layout_mire | kill switch): needs a separate client launch with the kill switch off (config is read at start)
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 394 (s_throne | Aldermark throne, castle_kit=false (B9)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 396 (s_throne | Verdigrim cathedral + Galvanox and Thurgrim arenas (legacy)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 397 (s_throne | Sun chamber sarcophagi (overworld, legacy)): no id, view or command in the line
+[20:06:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 61 ok, 4 fail, 23 manual
+[20:06:25] [Render thread/INFO] (Minecraft) Stopping!
