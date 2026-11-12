@@ -1,0 +1,123 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (aldermark realm)": [
+        {
+          "file": "villages__village_near_aldermark.png",
+          "scene": 2,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "ok",
+          "taken": "22:52:38"
+        }
+      ],
+      "the faction villages and rebuild styles (hrafnholt realm)": [
+        {
+          "file": "villages__village_near_hrafnholt.png",
+          "scene": 3,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_52_40_52_y135.png",
+          "scene": 16,
+          "line": 24,
+          "check": "flat roofs with cavetto cornices and lapis bands, kiosks on the tower tops, undulating parapet, palms in the court; no pitched roofs, no gold blocks",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_azmar_c_14_9_10_y200.png",
+          "scene": 17,
+          "line": 25,
+          "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
+          "status": "pending"
+        }
+      ],
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_mirewick)": [
+        {
+          "file": "structures_build__castle_mirewick_c_0_8_58_y180.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_58_10_30_y_120.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Azmar looks (priest, scribe, porter, merchant x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_front.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "22:52:02"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_back.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "22:52:03"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Azmar bazaar vs siesta": [
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_9000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_6000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_layout_azmar__castle_azmar_c_0_14_62_y180.png",
+          "scene": 409,
+          "line": 459,
+          "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_3_16_y180.png",
+          "scene": 413,
+          "line": 463,
+          "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:52:38",
+  "totals": {
+    "ok": 3,
+    "fail": 0,
+    "manual": 0
+  }
+}
