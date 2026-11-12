@@ -38,7 +38,8 @@
           "scene": 456,
           "line": 508,
           "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:18"
         }
       ],
       "300-soldier battle readout with /kingdomlod": [
@@ -47,7 +48,8 @@
           "scene": 457,
           "line": 509,
           "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:50"
         }
       ],
       "Live soldiers end at 96 blocks, ranks beyond (with s-impostors)": [],
@@ -60,21 +62,24 @@
           "scene": 461,
           "line": 513,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:51"
         },
         {
           "file": "s_willolantern__mirewick_will_o_lantern_third_person.png",
           "scene": 461,
           "line": 513,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:52"
         },
         {
           "file": "s_willolantern__mirewick_will_o_lantern_tooltip.png",
           "scene": 461,
           "line": 513,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:52"
         }
       ],
       "elsewhere:marsh_wisp": [
@@ -83,7 +88,9 @@
           "scene": 462,
           "line": 514,
           "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
-          "status": "pending"
+          "status": "fail",
+          "detail": "view: target is gone before the camera was placed",
+          "taken": "20:15:53"
         }
       ],
       "the wisp's light at night (gear3, wisp-light)": [],
@@ -93,42 +100,48 @@
           "scene": 464,
           "line": 516,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:54"
         },
         {
           "file": "s_willolantern__emberfall_rod_third_person.png",
           "scene": 464,
           "line": 516,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:54"
         },
         {
           "file": "s_willolantern__emberfall_rod_in_use_first_person.png",
           "scene": 464,
           "line": 516,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:55"
         },
         {
           "file": "s_willolantern__emberfall_rod_in_use_third_person.png",
           "scene": 464,
           "line": 516,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:56"
         },
         {
           "file": "s_willolantern__emberfall_rod_after_use.png",
           "scene": 464,
           "line": 516,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:56"
         },
         {
           "file": "s_willolantern__emberfall_rod_tooltip.png",
           "scene": 464,
           "line": 516,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:57"
         }
       ]
     },
@@ -139,14 +152,16 @@
           "scene": 465,
           "line": 517,
           "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:38"
         },
         {
           "file": "s_layout_hraf__castle_hrafnholt_ground.png",
           "scene": 465,
           "line": 517,
           "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:43"
         }
       ],
       "Jarl's longhall inside (Hrafnholt fv 2)": [],
@@ -162,63 +177,72 @@
           "scene": 471,
           "line": 523,
           "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:59"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_third_person.png",
           "scene": 471,
           "line": 523,
           "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:15:59"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_tooltip.png",
           "scene": 471,
           "line": 523,
           "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:00"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_first_person_2.png",
           "scene": 472,
           "line": 524,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:01"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
           "scene": 472,
           "line": 524,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:02"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
           "scene": 472,
           "line": 524,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:03"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
           "scene": 472,
           "line": 524,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:03"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
           "scene": 472,
           "line": 524,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:04"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
           "scene": 472,
           "line": 524,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:05"
         }
       ],
       "elsewhere:war_yak": [
@@ -227,21 +251,27 @@
           "scene": 473,
           "line": 525,
           "check": "a shaggy dark-brown yak a little larger than a cow: low head with a skyiron brow plate, wide cream horns curving up with skyiron caps, shoulder hump, long fur skirt, crimson Ironclan blanket with a frost-grey fringe and a white peak sign on each flank, tufted tail",
-          "status": "pending"
+          "status": "fail",
+          "detail": "view: target is gone before the camera was placed",
+          "taken": "20:16:05"
         },
         {
           "file": "s_waryak__war_yak_charge_gear3.png",
           "scene": 474,
           "line": 526,
           "check": "the head drops to lead with the horns and the legs go into a gallop with hoof dust; the zombies in its path are hit and thrown aside",
-          "status": "pending"
+          "status": "fail",
+          "detail": "view: target is gone before the camera was placed",
+          "taken": "20:16:05"
         },
         {
           "file": "s_waryak__war_yak_charge_gear3_later.png",
           "scene": 474,
           "line": 526,
           "check": "the head drops to lead with the horns and the legs go into a gallop with hoof dust; the zombies in its path are hit and thrown aside",
-          "status": "pending"
+          "status": "fail",
+          "detail": "view: target is gone before the camera was placed",
+          "taken": "20:16:05"
         }
       ]
     },
@@ -253,7 +283,8 @@
           "scene": 476,
           "line": 528,
           "check": "by ear: at 66% the theme crossfades on the beat into its louder surge section, at 33% into its hottest \"climax\" bars (no stinger at either), never two tracks fighting; the kill brings in the track's own ending; a boss without a layer at a threshold plays the short phase stinger instead",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:07"
         }
       ]
     },
@@ -433,10 +464,10 @@
       "a corner tower and a town lamp post, NEW world (fv 2)": []
     }
   },
-  "run": "20:15:07",
+  "run": "20:16:43",
   "totals": {
-    "ok": 3,
-    "fail": 0,
+    "ok": 26,
+    "fail": 4,
     "manual": 0
   }
 }
