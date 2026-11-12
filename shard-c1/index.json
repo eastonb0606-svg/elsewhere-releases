@@ -13,7 +13,818 @@
       ]
     },
     "generation": {
-      "site-rule structures (the release client test `rel_<structure>` shots, sites section, already queued)": []
+      "site-rule structures (the release client test `rel_<structure>` shots, sites section, already queued)": [
+        {
+          "file": "generation__site_aphelion_shattered_halo_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_end -1640, 92, 1304",
+          "taken": "22:36:08"
+        },
+        {
+          "file": "generation__site_aphelion_shattered_halo_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_end -1640, 92, 1304",
+          "taken": "22:36:09"
+        },
+        {
+          "file": "generation__site_bonfire_terrace_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze 728, 80, -440",
+          "taken": "22:36:20"
+        },
+        {
+          "file": "generation__site_bonfire_terrace_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze 728, 80, -440",
+          "taken": "22:36:21"
+        },
+        {
+          "file": "generation__site_breeze_temple_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:petalwind 56, 193, 24",
+          "taken": "22:36:26"
+        },
+        {
+          "file": "generation__site_breeze_temple_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:petalwind 56, 193, 24",
+          "taken": "22:36:26"
+        },
+        {
+          "file": "generation__site_castle_aldermark_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 1376, 81, -1296",
+          "taken": "22:36:37"
+        },
+        {
+          "file": "generation__site_castle_aldermark_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 1376, 81, -1296",
+          "taken": "22:36:37"
+        },
+        {
+          "file": "generation__site_castle_azmar_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 960, 97, -4464",
+          "taken": "22:36:51"
+        },
+        {
+          "file": "generation__site_castle_azmar_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 960, 97, -4464",
+          "taken": "22:36:51"
+        },
+        {
+          "file": "generation__site_castle_hrafnholt_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 1584, 101, -7152",
+          "taken": "22:37:07"
+        },
+        {
+          "file": "generation__site_castle_hrafnholt_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 1584, 101, -7152",
+          "taken": "22:37:08"
+        },
+        {
+          "file": "generation__site_castle_mirewick_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 2896, 128, -3664",
+          "taken": "22:37:31"
+        },
+        {
+          "file": "generation__site_castle_mirewick_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 2896, 128, -3664",
+          "taken": "22:37:32"
+        },
+        {
+          "file": "generation__site_choir_geode_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush 72, -88, 264",
+          "taken": "22:37:39"
+        },
+        {
+          "file": "generation__site_choir_geode_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush 72, -88, 264",
+          "taken": "22:37:39"
+        },
+        {
+          "file": "generation__site_clan_hold_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 264, 368, 1000",
+          "taken": "22:37:53"
+        },
+        {
+          "file": "generation__site_clan_hold_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 264, 368, 1000",
+          "taken": "22:37:54"
+        },
+        {
+          "file": "generation__site_climbers_cairn_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 40, 1258, 40",
+          "taken": "22:38:33"
+        },
+        {
+          "file": "generation__site_climbers_cairn_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 40, 1258, 40",
+          "taken": "22:38:34"
+        },
+        {
+          "file": "generation__site_clockwork_rig_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 104, 108, 136",
+          "taken": "22:38:42"
+        },
+        {
+          "file": "generation__site_clockwork_rig_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 104, 108, 136",
+          "taken": "22:38:43"
+        },
+        {
+          "file": "generation__site_croaking_shrine_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld -4312, 76, -8424",
+          "taken": "22:38:56"
+        },
+        {
+          "file": "generation__site_croaking_shrine_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld -4312, 76, -8424",
+          "taken": "22:38:57"
+        },
+        {
+          "file": "generation__site_drowned_cathedral_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea -520, 108, 2616",
+          "taken": "22:39:04"
+        },
+        {
+          "file": "generation__site_drowned_cathedral_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea -520, 108, 2616",
+          "taken": "22:39:04"
+        },
+        {
+          "file": "generation__site_drowned_chapel_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow 72, 90, 136",
+          "taken": "22:39:12"
+        },
+        {
+          "file": "generation__site_drowned_chapel_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow 72, 90, 136",
+          "taken": "22:39:14"
+        },
+        {
+          "file": "generation__site_engineers_atoll_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 920, 108, -728",
+          "taken": "22:39:20"
+        },
+        {
+          "file": "generation__site_engineers_atoll_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 920, 108, -728",
+          "taken": "22:39:21"
+        },
+        {
+          "file": "generation__site_eye_of_the_gale_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:petalwind 40, 198, 88",
+          "taken": "22:39:25"
+        },
+        {
+          "file": "generation__site_eye_of_the_gale_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:petalwind 40, 198, 88",
+          "taken": "22:39:26"
+        },
+        {
+          "file": "generation__site_fern_terrace_farms_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze -280, 116, 568",
+          "taken": "22:39:38"
+        },
+        {
+          "file": "generation__site_fern_terrace_farms_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze -280, 116, 568",
+          "taken": "22:39:39"
+        },
+        {
+          "file": "generation__site_glacier_shelf_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 1384, 157, 3704",
+          "taken": "22:39:48"
+        },
+        {
+          "file": "generation__site_glacier_shelf_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld 1384, 157, 3704",
+          "taken": "22:39:49"
+        },
+        {
+          "file": "generation__site_great_hotbox_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze 56, 109, 72",
+          "taken": "22:40:01"
+        },
+        {
+          "file": "generation__site_great_hotbox_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze 56, 109, 72",
+          "taken": "22:40:02"
+        },
+        {
+          "file": "generation__site_grunthar_treasure_hall_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_nether -184, 40, 72",
+          "taken": "22:40:08"
+        },
+        {
+          "file": "generation__site_grunthar_treasure_hall_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_nether -184, 40, 72",
+          "taken": "22:40:09"
+        },
+        {
+          "file": "generation__site_hanging_undercity_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush -888, -88, 1336",
+          "taken": "22:40:15"
+        },
+        {
+          "file": "generation__site_hanging_undercity_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush -888, -88, 1336",
+          "taken": "22:40:15"
+        },
+        {
+          "file": "generation__site_hollow_shrine_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow -120, 82, -312",
+          "taken": "22:40:23"
+        },
+        {
+          "file": "generation__site_hollow_shrine_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow -120, 82, -312",
+          "taken": "22:40:24"
+        },
+        {
+          "file": "generation__site_ironpeak_return_rift_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 1712, 387, -1392",
+          "taken": "22:40:39"
+        },
+        {
+          "file": "generation__site_ironpeak_return_rift_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 1712, 387, -1392",
+          "taken": "22:40:39"
+        },
+        {
+          "file": "generation__site_lantern_road_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow 184, 76, 72",
+          "taken": "22:40:46"
+        },
+        {
+          "file": "generation__site_lantern_road_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow 184, 76, 72",
+          "taken": "22:40:47"
+        },
+        {
+          "file": "generation__site_lighthouse_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 376, 108, 360",
+          "taken": "22:40:54"
+        },
+        {
+          "file": "generation__site_lighthouse_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 376, 108, 360",
+          "taken": "22:40:54"
+        },
+        {
+          "file": "generation__site_listening_engine_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush 104, -88, 40",
+          "taken": "22:41:01"
+        },
+        {
+          "file": "generation__site_listening_engine_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush 104, -88, 40",
+          "taken": "22:41:01"
+        },
+        {
+          "file": "generation__site_lucid_spring_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze -136, 91, -248",
+          "taken": "22:41:13"
+        },
+        {
+          "file": "generation__site_lucid_spring_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze -136, 91, -248",
+          "taken": "22:41:14"
+        },
+        {
+          "file": "generation__site_mournmaw_weeping_basin_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_nether -168, 40, 2680",
+          "taken": "22:41:21"
+        },
+        {
+          "file": "generation__site_mournmaw_weeping_basin_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_nether -168, 40, 2680",
+          "taken": "22:41:22"
+        },
+        {
+          "file": "generation__site_munchie_market_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze -264, 129, -376",
+          "taken": "22:41:32"
+        },
+        {
+          "file": "generation__site_munchie_market_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze -264, 129, -376",
+          "taken": "22:41:33"
+        },
+        {
+          "file": "generation__site_ossyra_matriarch_spire_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_end -1720, 116, 184",
+          "taken": "22:41:38"
+        },
+        {
+          "file": "generation__site_ossyra_matriarch_spire_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_end -1720, 116, 184",
+          "taken": "22:41:38"
+        },
+        {
+          "file": "generation__site_petal_pagoda_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:petalwind 216, 176, 88",
+          "taken": "22:41:44"
+        },
+        {
+          "file": "generation__site_petal_pagoda_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:petalwind 216, 176, 88",
+          "taken": "22:41:45"
+        },
+        {
+          "file": "generation__site_proving_grounds_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 72, 641, 1624",
+          "taken": "22:42:09"
+        },
+        {
+          "file": "generation__site_proving_grounds_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 72, 641, 1624",
+          "taken": "22:42:09"
+        },
+        {
+          "file": "generation__site_resin_kiln_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow -328, 86, -296",
+          "taken": "22:42:16"
+        },
+        {
+          "file": "generation__site_resin_kiln_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:pale_hollow -328, 86, -296",
+          "taken": "22:42:17"
+        },
+        {
+          "file": "generation__site_sesh_hut_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze 152, 93, 152",
+          "taken": "22:42:25"
+        },
+        {
+          "file": "generation__site_sesh_hut_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:greenhaze 152, 93, 152",
+          "taken": "22:42:26"
+        },
+        {
+          "file": "generation__site_silent_monastery_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush 104, -88, 360",
+          "taken": "22:42:31"
+        },
+        {
+          "file": "generation__site_silent_monastery_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:the_hush 104, -88, 360",
+          "taken": "22:42:31"
+        },
+        {
+          "file": "generation__site_solaxis_pyre_cradle_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_nether -248, 40, -184",
+          "taken": "22:42:37"
+        },
+        {
+          "file": "generation__site_solaxis_pyre_cradle_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:the_nether -248, 40, -184",
+          "taken": "22:42:37"
+        },
+        {
+          "file": "generation__site_summit_throne_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 5512, 1441, 4296",
+          "taken": "22:43:26"
+        },
+        {
+          "file": "generation__site_summit_throne_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:ironpeak 5512, 1441, 4296",
+          "taken": "22:43:26"
+        },
+        {
+          "file": "generation__site_sun_chamber_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld -248, 76, -3944",
+          "taken": "22:43:34"
+        },
+        {
+          "file": "generation__site_sun_chamber_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld -248, 76, -3944",
+          "taken": "22:43:34"
+        },
+        {
+          "file": "generation__site_sunpit_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:glasswaste 360, 66, 344",
+          "taken": "22:43:40"
+        },
+        {
+          "file": "generation__site_sunpit_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:glasswaste 360, 66, 344",
+          "taken": "22:43:40"
+        },
+        {
+          "file": "generation__site_sunwright_ziggurat_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:glasswaste -440, 74, -424",
+          "taken": "22:43:46"
+        },
+        {
+          "file": "generation__site_sunwright_ziggurat_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:glasswaste -440, 74, -424",
+          "taken": "22:43:47"
+        },
+        {
+          "file": "generation__site_tidelock_vault_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 216, 108, 24",
+          "taken": "22:43:53"
+        },
+        {
+          "file": "generation__site_tidelock_vault_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 216, 108, 24",
+          "taken": "22:43:54"
+        },
+        {
+          "file": "generation__site_verdigris_sea_return_rift_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 264, 108, 88",
+          "taken": "22:43:58"
+        },
+        {
+          "file": "generation__site_verdigris_sea_return_rift_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 264, 108, 88",
+          "taken": "22:43:59"
+        },
+        {
+          "file": "generation__site_verdigris_shipwreck_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 56, 108, 8",
+          "taken": "22:44:02"
+        },
+        {
+          "file": "generation__site_verdigris_shipwreck_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "elsewhere:verdigris_sea 56, 108, 8",
+          "taken": "22:44:03"
+        },
+        {
+          "file": "generation__site_waterfront_hrafnholt_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "fail",
+          "detail": "elsewhere:waterfront_hrafnholt could not be located within 60 chunks in any matching dimension",
+          "taken": "22:44:03"
+        },
+        {
+          "file": "generation__site_waterfront_hrafnholt_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "fail",
+          "detail": "elsewhere:waterfront_hrafnholt could not be located within 60 chunks in any matching dimension",
+          "taken": "22:44:03"
+        },
+        {
+          "file": "generation__site_wreck_ring_a.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld -872, 75, 1544",
+          "taken": "22:44:10"
+        },
+        {
+          "file": "generation__site_wreck_ring_b.png",
+          "scene": 29,
+          "line": 40,
+          "check": "each structure stands on its ground: no floating edge, no cut face taller than ~6 over the footprint, no water inside; Nether/End arenas not over lava or void",
+          "status": "ok",
+          "detail": "minecraft:overworld -872, 75, 1544",
+          "taken": "22:44:11"
+        }
+      ]
     },
     "anim": {
       "elsewhere:mirewick_tolliver": [
@@ -170,7 +981,8 @@
           "scene": 158,
           "line": 175,
           "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:44:22"
         }
       ],
       "elsewhere:verdigris_sea_return_rift": [
@@ -179,7 +991,8 @@
           "scene": 163,
           "line": 180,
           "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:44:34"
         }
       ]
     },
@@ -190,7 +1003,8 @@
           "scene": 173,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:44:46"
         }
       ]
     },
@@ -480,10 +1294,10 @@
       ]
     }
   },
-  "run": "22:35:51",
+  "run": "22:44:46",
   "totals": {
-    "ok": 29,
-    "fail": 4,
+    "ok": 120,
+    "fail": 6,
     "manual": 0
   }
 }
