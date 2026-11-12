@@ -163,7 +163,8 @@
           "scene": 204,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:58"
         }
       ]
     },
@@ -174,21 +175,24 @@
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:00"
         },
         {
           "file": "s_p3_nameplates__nameplate_lod_and_range_12.png",
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:01"
         },
         {
           "file": "s_p3_nameplates__nameplate_lod_and_range_18.png",
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:03"
         }
       ]
     },
@@ -199,7 +203,9 @@
           "scene": 264,
           "line": 300,
           "check": "three red rings and yellow circles drawn as clean bands, all visible at once, none missing",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 180 s",
+          "taken": "23:02:03"
         }
       ]
     },
@@ -210,14 +216,16 @@
           "scene": 273,
           "line": 309,
           "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:16"
         },
         {
           "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
           "scene": 273,
           "line": 309,
           "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:22"
         }
       ]
     },
@@ -228,42 +236,48 @@
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:23"
         },
         {
           "file": "s_galesling__gale_sling_third_person_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:24"
         },
         {
           "file": "s_galesling__gale_sling_in_use_first_person_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:25"
         },
         {
           "file": "s_galesling__gale_sling_in_use_third_person_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:25"
         },
         {
           "file": "s_galesling__gale_sling_after_use_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:25"
         },
         {
           "file": "s_galesling__gale_sling_tooltip_4.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:27"
         }
       ],
       "elsewhere:windwright": [
@@ -272,7 +286,8 @@
           "scene": 296,
           "line": 335,
           "check": "an offer of 6 Zephyr Feathers + 1 String for a Gale Sling (4 uses); with -Delsewhere.overhaul3.gale_sling_trade=false a newly summoned Windwright has no sling offer",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:30"
         }
       ]
     },
@@ -283,21 +298,24 @@
           "scene": 341,
           "line": 384,
           "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:32"
         },
         {
           "file": "s_p5_tooltips__ironclad_flail_third_person.png",
           "scene": 341,
           "line": 384,
           "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:33"
         },
         {
           "file": "s_p5_tooltips__ironclad_flail_tooltip.png",
           "scene": 341,
           "line": 384,
           "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:34"
         }
       ]
     },
@@ -308,22 +326,24 @@
           "scene": 346,
           "line": 389,
           "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:36"
         },
         {
           "file": "s_p10_tabard__captain_capes_heraldry_kingdom_cape_png_later.png",
           "scene": 346,
           "line": 389,
           "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:37"
         }
       ]
     }
   },
-  "run": "22:58:55",
+  "run": "23:02:37",
   "totals": {
-    "ok": 16,
-    "fail": 0,
+    "ok": 34,
+    "fail": 1,
     "manual": 0
   }
 }
