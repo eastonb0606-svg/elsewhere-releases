@@ -17,3 +17,29 @@ remote: Create a pull request for 'cloud-shots-c2' on GitHub by visiting:
 remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-c2        
 remote: 
 published 10 PNGs (progress) -> cloud-shots-c2 96b8ba7
+published 35 PNGs (progress) -> cloud-shots-c2 b9a93ff
+client rc=0
+[22:36:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_struct_core__return_rift_ring.png: anchor_from_log: no log line matches /Return Rift ring at \((-?\d+), (-?\d+), (-?\d+)\)/ (the self-test anchor was not printed in this session)
+[22:38:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 50 ok, 1 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:32:43] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:32:44] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[22:32:44] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[22:32:47] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:32:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] 13 flat-stage scenes, 14 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:32:51] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+--
+boss_music client selftest:
+22:38:41Z finished rc=0, 50 PNGs;  TOTAL 50 ok, 1 fail, 0 manual
