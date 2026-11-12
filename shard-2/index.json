@@ -70,14 +70,16 @@
           "scene": 251,
           "line": 281,
           "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:25"
         },
         {
           "file": "s_compat_jei__hacksilver_third_person.png",
           "scene": 251,
           "line": 281,
           "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:26"
         }
       ],
       "elsewhere:azmar_dinar": [
@@ -86,14 +88,16 @@
           "scene": 252,
           "line": 282,
           "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:27"
         },
         {
           "file": "s_compat_jei__azmar_dinar_third_person.png",
           "scene": 252,
           "line": 282,
           "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:28"
         }
       ],
       "JEI item list hides technical items": []
@@ -105,14 +109,16 @@
           "scene": 254,
           "line": 287,
           "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:33"
         },
         {
           "file": "s_greenhaze_rework__green_leaf_hud_soft_tint_at_high_sativa_5s.png",
           "scene": 254,
           "line": 287,
           "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:38"
         }
       ],
       "Couch-locked screen, FULL effects (hue drift + wobble)": [
@@ -121,14 +127,16 @@
           "scene": 255,
           "line": 288,
           "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:41"
         },
         {
           "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri_5s.png",
           "scene": 255,
           "line": 288,
           "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:47"
         }
       ],
       "Accessibility: `/greenleaf effects reduced`, then `/greenleaf effects off`": [
@@ -137,14 +145,16 @@
           "scene": 256,
           "line": 289,
           "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:52"
         },
         {
           "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced_5s.png",
           "scene": 256,
           "line": 289,
           "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:04:57"
         }
       ],
       "Hallucinated mobs": [
@@ -153,14 +163,16 @@
           "scene": 257,
           "line": 290,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:00"
         },
         {
           "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
           "scene": 257,
           "line": 290,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:06"
         }
       ],
       "Munchies line": [
@@ -169,14 +181,16 @@
           "scene": 258,
           "line": 291,
           "check": "gold action-bar line like \"Best. Bread. Ever.\" and green sparkles at the mouth; hunger bar shows one extra point",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:09"
         },
         {
           "file": "s_greenhaze_rework__munchies_line_5s.png",
           "scene": 258,
           "line": 291,
           "check": "gold action-bar line like \"Best. Bread. Ever.\" and green sparkles at the mouth; hunger bar shows one extra point",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:14"
         }
       ],
       "Thoughts in chat": [
@@ -185,14 +199,16 @@
           "scene": 259,
           "line": 292,
           "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:18"
         },
         {
           "file": "s_greenhaze_rework__thoughts_in_chat_5s.png",
           "scene": 259,
           "line": 292,
           "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:23"
         }
       ],
       "JEI info (with JEI loaded)": []
@@ -204,14 +220,16 @@
           "scene": 261,
           "line": 297,
           "check": "crisp yellow rings and a red cone on the ground, fill grows then the hit lands as it fills; edges pulse faster near the end; no jagged dust, nothing under the floor or floating",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:24"
         },
         {
           "file": "s_p2_telegraph__grumblegut_helm_off_foresight_rule.png",
           "scene": 262,
           "line": 298,
           "check": "NO decals at all (no rings, no cone, no dust); the boss animation and sounds still play",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:26"
         }
       ],
       "elsewhere:lithara": [
@@ -220,7 +238,8 @@
           "scene": 263,
           "line": 299,
           "check": "three red rings and yellow circles drawn as clean bands, all visible at once, none missing",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:27"
         }
       ],
       "elsewhere:rimeback": [
@@ -229,7 +248,8 @@
           "scene": 264,
           "line": 300,
           "check": "ONE yellow cone that turns with the breath (no stacked or trailing copies)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:29"
         }
       ],
       "elsewhere:verdigrim": [
@@ -238,7 +258,8 @@
           "scene": 265,
           "line": 301,
           "check": "the yellow shockwave ring travels outward smoothly (attack, not a hint, so it shows without the helm); one ring, no trail of old rings",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:31"
         }
       ],
       "elsewhere:aphelion": [
@@ -247,7 +268,8 @@
           "scene": 266,
           "line": 302,
           "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:32"
         }
       ],
       "distance LOD, helm ON": [],
@@ -257,14 +279,16 @@
           "scene": 268,
           "line": 304,
           "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:36"
         },
         {
           "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on_5s.png",
           "scene": 268,
           "line": 304,
           "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:41"
         }
       ],
       "kill switch: server started with `-Delsewhere.overhaul3.boss_telegraphs=false`, helm ON": []
@@ -276,7 +300,8 @@
           "scene": 270,
           "line": 306,
           "check": "the column bends round the corner along the leader's own footsteps, two files 0.8 to each side; no one cuts the corner or stalls in a clump; the same squad seen from 10 blocks away behaves as before (per-soldier)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:51"
         }
       ],
       "swarm-as-one squad targeting (ARMIES 3.4)": [
@@ -664,9 +689,9 @@
       ]
     }
   },
-  "run": "20:04:24",
+  "run": "20:05:51",
   "totals": {
-    "ok": 4,
+    "ok": 29,
     "fail": 2,
     "manual": 0
   }
