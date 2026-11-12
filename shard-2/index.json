@@ -310,7 +310,8 @@
           "scene": 271,
           "line": 307,
           "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:22"
         }
       ],
       "`/kingdom armies swarm` report": [
@@ -319,14 +320,16 @@
           "scene": 272,
           "line": 308,
           "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:26"
         },
         {
           "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
           "scene": 272,
           "line": 308,
           "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:31"
         }
       ]
     },
@@ -337,14 +340,16 @@
           "scene": 273,
           "line": 309,
           "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:36"
         },
         {
           "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl_5s.png",
           "scene": 273,
           "line": 309,
           "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:41"
         }
       ],
       "elsewhere:strawgrim": [
@@ -353,7 +358,8 @@
           "scene": 274,
           "line": 310,
           "check": "icon left, notches at 65% and 30% (Strawgrim's own thresholds), cream damage trail after the hit, gold flash plus an \"Invulnerable\" chip (steel frame) for ~2 s at the phase change, then \"❖ 2/3\" at the right; the '⚠ <attack>' cast bar is NOT a separate bar: its name sits under the main bar with a thin wind-up line",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:43"
         }
       ],
       "boss bar v2 state chips": [
@@ -362,14 +368,16 @@
           "scene": 275,
           "line": 311,
           "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:52"
         },
         {
           "file": "s_p1_bossbar__boss_bar_v2_state_chips_5s.png",
           "scene": 275,
           "line": 311,
           "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:58"
         }
       ],
       "boss bar v2 module shots (boss_ui runClientGameTest, BossBarShots)": []
@@ -381,63 +389,72 @@
           "scene": 277,
           "line": 313,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:59"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person.png",
           "scene": 277,
           "line": 313,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:00"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_tooltip.png",
           "scene": 277,
           "line": 313,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:00"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_first_person_2.png",
           "scene": 278,
           "line": 314,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:01"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person_2.png",
           "scene": 278,
           "line": 314,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:02"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person.png",
           "scene": 278,
           "line": 314,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:03"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person.png",
           "scene": 278,
           "line": 314,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:03"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_after_use.png",
           "scene": 278,
           "line": 314,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:04"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_2.png",
           "scene": 278,
           "line": 314,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:05"
         }
       ]
     },
@@ -482,56 +499,64 @@
           "scene": 287,
           "line": 326,
           "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:06"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip.png",
           "scene": 287,
           "line": 326,
           "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:07"
         },
         {
           "file": "s_dredge__tidebrass_dredge_first_person.png",
           "scene": 288,
           "line": 327,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:08"
         },
         {
           "file": "s_dredge__tidebrass_dredge_third_person.png",
           "scene": 288,
           "line": 327,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:08"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
           "scene": 288,
           "line": 327,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:09"
         },
         {
           "file": "s_dredge__tidebrass_dredge_first_person_2.png",
           "scene": 289,
           "line": 328,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:10"
         },
         {
           "file": "s_dredge__tidebrass_dredge_third_person_2.png",
           "scene": 289,
           "line": 328,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:10"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
           "scene": 289,
           "line": 328,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:11"
         }
       ]
     },
@@ -542,140 +567,160 @@
           "scene": 290,
           "line": 329,
           "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:12"
         },
         {
           "file": "s_galesling__gale_sling_tooltip.png",
           "scene": 290,
           "line": 329,
           "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:13"
         },
         {
           "file": "s_galesling__gale_sling_first_person.png",
           "scene": 291,
           "line": 330,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:14"
         },
         {
           "file": "s_galesling__gale_sling_third_person.png",
           "scene": 291,
           "line": 330,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:15"
         },
         {
           "file": "s_galesling__gale_sling_in_use_first_person.png",
           "scene": 291,
           "line": 330,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:16"
         },
         {
           "file": "s_galesling__gale_sling_in_use_third_person.png",
           "scene": 291,
           "line": 330,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:16"
         },
         {
           "file": "s_galesling__gale_sling_after_use.png",
           "scene": 291,
           "line": 330,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:17"
         },
         {
           "file": "s_galesling__gale_sling_tooltip_2.png",
           "scene": 291,
           "line": 330,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:18"
         },
         {
           "file": "s_galesling__gale_sling_first_person_2.png",
           "scene": 292,
           "line": 331,
           "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:18"
         },
         {
           "file": "s_galesling__gale_sling_third_person_2.png",
           "scene": 292,
           "line": 331,
           "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:19"
         },
         {
           "file": "s_galesling__gale_sling_in_use_first_person_2.png",
           "scene": 292,
           "line": 331,
           "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:20"
         },
         {
           "file": "s_galesling__gale_sling_in_use_third_person_2.png",
           "scene": 292,
           "line": 331,
           "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:20"
         },
         {
           "file": "s_galesling__gale_sling_after_use_2.png",
           "scene": 292,
           "line": 331,
           "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:21"
         },
         {
           "file": "s_galesling__gale_sling_tooltip_3.png",
           "scene": 292,
           "line": 331,
           "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:22"
         },
         {
           "file": "s_galesling__gale_sling_first_person_3.png",
           "scene": 294,
           "line": 333,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:23"
         },
         {
           "file": "s_galesling__gale_sling_third_person_3.png",
           "scene": 294,
           "line": 333,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:24"
         },
         {
           "file": "s_galesling__gale_sling_in_use_first_person_3.png",
           "scene": 294,
           "line": 333,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:25"
         },
         {
           "file": "s_galesling__gale_sling_in_use_third_person_3.png",
           "scene": 294,
           "line": 333,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:25"
         },
         {
           "file": "s_galesling__gale_sling_after_use_3.png",
           "scene": 294,
           "line": 333,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:26"
         },
         {
           "file": "s_galesling__gale_sling_tooltip_4.png",
           "scene": 294,
           "line": 333,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:26"
         }
       ],
       "elsewhere:gale_sling_stone": [
@@ -684,15 +729,17 @@
           "scene": 293,
           "line": 332,
           "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
-          "status": "pending"
+          "status": "fail",
+          "detail": "view: target is gone before the camera was placed",
+          "taken": "20:07:22"
         }
       ]
     }
   },
-  "run": "20:05:51",
+  "run": "20:07:26",
   "totals": {
-    "ok": 29,
-    "fail": 2,
+    "ok": 74,
+    "fail": 3,
     "manual": 0
   }
 }
