@@ -55,14 +55,16 @@
           "scene": 57,
           "line": 70,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:49"
         },
         {
           "file": "anim__percolax_hurt_rest.png",
           "scene": 57,
           "line": 70,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:49"
         }
       ],
       "elsewhere:grimhorn": [
@@ -71,14 +73,16 @@
           "scene": 63,
           "line": 76,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:53"
         },
         {
           "file": "anim__grimhorn_hurt_rest.png",
           "scene": 63,
           "line": 76,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:53"
         }
       ],
       "elsewhere:ankhara": [
@@ -87,14 +91,16 @@
           "scene": 69,
           "line": 82,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:56"
         },
         {
           "file": "anim__ankhara_hurt_rest.png",
           "scene": 69,
           "line": 82,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:57"
         }
       ]
     },
@@ -105,14 +111,16 @@
           "scene": 118,
           "line": 134,
           "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:58"
         },
         {
           "file": "items__mirewick_lantern_crook_tooltip.png",
           "scene": 118,
           "line": 134,
           "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:58"
         }
       ]
     },
@@ -123,7 +131,8 @@
           "scene": 146,
           "line": 161,
           "check": "rises to the vanilla blocking spot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:01"
         }
       ]
     },
@@ -134,7 +143,8 @@
           "scene": 205,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:04"
         }
       ]
     },
@@ -145,14 +155,16 @@
           "scene": 217,
           "line": 247,
           "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:05"
         },
         {
           "file": "s_echoarrow__echo_arrow_stuck_2_blocks.png",
           "scene": 217,
           "line": 247,
           "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:07"
         }
       ]
     },
@@ -163,21 +175,24 @@
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:10"
         },
         {
           "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:12"
         },
         {
           "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:14"
         }
       ]
     },
@@ -188,7 +203,9 @@
           "scene": 265,
           "line": 301,
           "check": "ONE yellow cone that turns with the breath (no stacked or trailing copies)",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Breath' within 120 s",
+          "taken": "23:02:15"
         }
       ]
     },
@@ -199,14 +216,16 @@
           "scene": 274,
           "line": 310,
           "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:18"
         },
         {
           "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl_5s.png",
           "scene": 274,
           "line": 310,
           "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:23"
         }
       ]
     },
@@ -217,42 +236,48 @@
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:26"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:28"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:30"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:32"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:33"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:34"
         }
       ]
     },
@@ -309,10 +334,10 @@
       ]
     }
   },
-  "run": "22:59:46",
+  "run": "23:02:34",
   "totals": {
-    "ok": 5,
-    "fail": 0,
+    "ok": 28,
+    "fail": 1,
     "manual": 0
   }
 }
