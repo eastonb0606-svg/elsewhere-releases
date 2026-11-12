@@ -1,0 +1,772 @@
+{
+  "lanes": {
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_jarl (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_aura_phase2.png",
+          "scene": 202,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "20:15:12"
+        }
+      ],
+      "elsewhere:azmar_sultana (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase2.png",
+          "scene": 203,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "20:15:15"
+        }
+      ],
+      "elsewhere:mirewick_ames (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_aura_phase2.png",
+          "scene": 204,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "20:15:17"
+        }
+      ],
+      "elsewhere:duelist_test (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase2.png",
+          "scene": 205,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "20:15:18"
+        }
+      ],
+      "elsewhere:hrafnholt_jarl (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_aura_phase3.png",
+          "scene": 206,
+          "line": 236,
+          "check": "",
+          "status": "ok",
+          "taken": "20:15:21"
+        }
+      ],
+      "elsewhere:azmar_sultana (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase3.png",
+          "scene": 207,
+          "line": 236,
+          "check": "",
+          "status": "ok",
+          "taken": "20:15:23"
+        }
+      ],
+      "elsewhere:mirewick_ames (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_aura_phase3.png",
+          "scene": 208,
+          "line": 236,
+          "check": "",
+          "status": "ok",
+          "taken": "20:15:25"
+        }
+      ],
+      "elsewhere:duelist_test (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase3.png",
+          "scene": 209,
+          "line": 236,
+          "check": "",
+          "status": "ok",
+          "taken": "20:15:27"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:hollow_shrine": [
+        {
+          "file": "s_struct_core__hollow_shrine_s_9_6_9.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__hollow_shrine_downhill_20.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:drowned_chapel": [
+        {
+          "file": "s_struct_core__drowned_chapel_s_14_9_14.png",
+          "scene": 211,
+          "line": 241,
+          "check": "cruciform chapel: nave, transept arms, narrower chancel; broken pale-oak gable roofs (45 degrees, overhang 1) with a fallen-in bay over exposed beams; stone gables with an oculus; buttresses; water only inside the walls (nave 2 deep with submerged pews, one step up into the transept), none outside; ground meets the walls all round",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:resin_kiln": [
+        {
+          "file": "s_struct_core__resin_kiln_s_10_7_10.png",
+          "scene": 212,
+          "line": 242,
+          "check": "L-shaped half-timber workshop (stripped pale-oak posts, plank infill, stone plinth course) with steep 2:1 roofs meeting in a valley, stone chimney stack past the ridge, lean-to over a gravel yard, mud-brick beehive kiln with flue, fenced yard, Sap Tapper inside; wings on their own floors (a step between them on slopes), nothing floating",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lantern_road": [
+        {
+          "file": "s_struct_core__lantern_road_above.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__lantern_road_end_eye_level.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        }
+      ],
+      "Return Rift ring (feature, Pale Hollow)": [
+        {
+          "file": "s_struct_core__return_rift_ring.png",
+          "scene": 214,
+          "line": 244,
+          "check": "5x5 tuff dais under the rift, ring of 8 tuff standing stones each on its own ground (heights differ, stair caps tilted, one lying fallen), no 9x9 air box cut into a slope",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lantern_road (night procession)": [
+        {
+          "file": "s_struct_core__lantern_road_procession_night.png",
+          "scene": 215,
+          "line": 245,
+          "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_item_icon_tooltip_g)": [
+        {
+          "file": "s_echoarrow__echo_arrow_icon_tooltip.png",
+          "scene": 216,
+          "line": 246,
+          "check": "icon reads as an arrow (same silhouette as vanilla) in echo-shard teal/cyan, dark sculk shaft; name \"Echo Arrow\" (uncommon, yellow) and 3 lore lines, no missing-texture",
+          "status": "ok",
+          "taken": "20:15:28"
+        }
+      ],
+      "elsewhere:echo_arrow (echo_arrow_in_flight_and_stuck)": [
+        {
+          "file": "s_echoarrow__echo_arrow_in_flight.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "20:15:30"
+        },
+        {
+          "file": "s_echoarrow__echo_arrow_stuck_2_blocks.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "20:15:32"
+        }
+      ],
+      "elsewhere:echo_arrow (echo_arrow_pulse_mobs_within_6)": [
+        {
+          "file": "s_echoarrow__echo_arrow_pulse_glow.png",
+          "scene": 218,
+          "line": 248,
+          "check": "hit husk and the one 4 away have the white Glowing outline (lasts 5 s), the one 9 away does not; a teal sculk ring at the hit point and vibration lines to each glowing husk (sound is not shot-checkable: silence is covered by the self-test sculk-sensor check)",
+          "status": "ok",
+          "taken": "20:15:35"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Aldermark looks (peasant_0..2, craftsman_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_front.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "ok",
+          "taken": "20:15:37"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_back.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "ok",
+          "taken": "20:15:37"
+        }
+      ],
+      "elsewhere:townsfolk, Hrafnholt looks (thrall_0..2, fisherfolk_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_front.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "ok",
+          "taken": "20:15:39"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_back.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "ok",
+          "taken": "20:15:40"
+        }
+      ],
+      "elsewhere:townsfolk, Azmar looks (priest, scribe, porter, merchant x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_front.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "20:15:42"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_back.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "20:15:43"
+        }
+      ],
+      "elsewhere:townsfolk, Mirewick looks (clerk, bargeman, lamplighter, peat_cutter x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_front.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "20:15:45"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_back.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "20:15:45"
+        }
+      ],
+      "elsewhere:serf variants (serf, thrall, porter, peat_cutter; kingdom_villages SerfRenderer)": [
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_front.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "ok",
+          "taken": "20:15:47"
+        },
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_back.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "ok",
+          "taken": "20:15:48"
+        }
+      ]
+    },
+    "s_testfix": {
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "20:15:50"
+        },
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k_later.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "20:15:52"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "kingdom soldier nameplates, Aldermark (POLISH P3; supersedes polish2's 10:05 nameplate scene in INTEGRATION-REQUESTS)": [
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_6.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "pending"
+        }
+      ],
+      "nameplate LOD and range": [
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_6.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_12.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_18.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        }
+      ],
+      "nameplates hidden behind walls and while crouching": [
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        }
+      ],
+      "rival kingdoms' plates (each kingdom unique)": [
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_6.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        }
+      ],
+      "court ruler plates": [
+        {
+          "file": "s_p3_nameplates__court_ruler_plates_6.png",
+          "scene": 229,
+          "line": 259,
+          "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__court_ruler_plates_12.png",
+          "scene": 229,
+          "line": 259,
+          "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__court_ruler_plates_18.png",
+          "scene": 229,
+          "line": 259,
+          "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
+          "status": "pending"
+        }
+      ],
+      "nameplate kill switch": []
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:gale_rapier": [
+        {
+          "file": "s_p6_useanims__gale_rapier_first_person.png",
+          "scene": 233,
+          "line": 263,
+          "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__gale_rapier_third_person.png",
+          "scene": 233,
+          "line": 263,
+          "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__gale_rapier_tooltip.png",
+          "scene": 233,
+          "line": 263,
+          "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:amethyst_wand": [
+        {
+          "file": "s_p6_useanims__amethyst_wand_first_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_third_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_in_use_first_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_in_use_third_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_after_use.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_tooltip.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sculk_resonator": [
+        {
+          "file": "s_p6_useanims__sculk_resonator_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_after_use.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_tooltip.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        }
+      ],
+      "weapon effects level + kill switch": [
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch_5s.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:munchie_boar": [
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ironclan_raider": [
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ossuary_chorister": [
+        {
+          "file": "s_spawngroups__ossuary_chorister_choir_greenhaze_hush_t.png",
+          "scene": 240,
+          "line": 270,
+          "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hollow_stag": [
+        {
+          "file": "s_spawngroups__hollow_stag_herd_core.png",
+          "scene": 241,
+          "line": 271,
+          "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_langfix": {
+      "elsewhere:azmar_soldier_spawn_egg": [
+        {
+          "file": "s_langfix__azmar_soldier_spawn_egg_death_15t.png",
+          "scene": 242,
+          "line": 272,
+          "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:grunthar": [
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:15:52",
+  "totals": {
+    "ok": 24,
+    "fail": 0,
+    "manual": 0
+  }
+}
