@@ -1,0 +1,126 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (mirewick realm)": [
+        {
+          "file": "villages__village_near_mirewick.png",
+          "scene": 5,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "ok",
+          "taken": "22:52:24"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 14,
+          "line": 22,
+          "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
+          "status": "ok",
+          "taken": "22:52:41"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 20,
+          "line": 28,
+          "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
+          "status": "ok",
+          "taken": "22:52:52"
+        }
+      ],
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_hrafnholt)": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_0_8_58_y180.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_castle": {
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)": [
+        {
+          "file": "z_castle__castle_mirewick_c_44_8_44_y135.png",
+          "scene": 149,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Hrafnholt jetty at dawn + hall feast": [
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_23000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_11000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_townsfolk__townsfolk_close_up_skins.png",
+          "scene": 320,
+          "line": 360,
+          "check": "the 36 skins of TOWNSFOLK-IDS.md render (no missing-texture checkerboard), held tools visible, no nameplate",
+          "status": "ok",
+          "taken": "22:51:36"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_5_10_y180.png",
+          "scene": 411,
+          "line": 461,
+          "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle façade, scarab over its door",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_hraf": {
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_overview.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_ground.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:52:52",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
