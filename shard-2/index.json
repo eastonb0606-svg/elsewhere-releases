@@ -465,14 +465,16 @@
           "scene": 285,
           "line": 324,
           "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:46"
         },
         {
           "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
           "scene": 285,
           "line": 324,
           "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:48"
         }
       ],
       "elsewhere:ossyra_matriarch_spire": [
@@ -481,14 +483,16 @@
           "scene": 286,
           "line": 325,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:55"
         },
         {
           "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
           "scene": 286,
           "line": 325,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:57"
         }
       ]
     },
@@ -736,10 +740,10 @@
       ]
     }
   },
-  "run": "20:07:26",
+  "run": "20:07:58",
   "totals": {
-    "ok": 74,
+    "ok": 78,
     "fail": 3,
-    "manual": 0
+    "manual": 6
   }
 }

@@ -15,3 +15,35 @@ remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/clou
 remote: 
 published 4 PNGs (progress) -> cloud-shots-2 3f6460e
 published 29 PNGs (progress) -> cloud-shots-2 d523e94
+published 74 PNGs (progress) -> cloud-shots-2 510dfec
+client rc=0
+[20:04:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_jei__loot_auto.png: auto: elsewhere:loot is neither an entity type nor an item in this build
+[20:04:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_jei__kingdom_shop_auto.png: auto: elsewhere:kingdom_shop is neither an entity type nor an item in this build
+[20:07:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_galesling__sling_stone_in_flight_and_impact.png: view: target is gone before the camera was placed
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 247 (s_p8_bossanims | P8 kill switch): needs a separate client launch with the kill switch off (config is read at start)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 253 (s_compat_jei | JEI item list hides technical items): needs JEI loaded (-Pjei, the release client's jei section)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 260 (s_greenhaze_rework | JEI info (with JEI loaded)): needs JEI loaded (-Pjei, the release client's jei section)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 267 (s_p2_telegraph | distance LOD, helm ON): no id, view or command in the line
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 269 (s_p2_telegraph | kill switch: server started with `-Delsewhere.overhaul3.boss_telegraphs=false`, helm ON): needs a separate client launch with the kill switch off (config is read at start)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 276 (s_p1_bossbar | boss bar v2 module shots (boss_ui runClientGameTest, BossBarShots)): no id, view or command in the line
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 78 ok, 3 fail, 6 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[20:04:03] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:04:03] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[20:04:03] [Worker-Main-3/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[20:04:06] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:04:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] 36 flat-stage scenes, 2 worldgen scenes, 6 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[20:04:10] [Worker-Main-1/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+20:08:21Z finished rc=0, 78 PNGs;  TOTAL 78 ok, 3 fail, 6 manual

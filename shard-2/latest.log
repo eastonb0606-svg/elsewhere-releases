@@ -789,3 +789,99 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:07:32] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
 [20:07:32] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
 [20:07:32] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:07:32] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:32] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:07:33] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:33] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:07:33] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:33] [Server thread/INFO] (Minecraft) Preparing spawn area: 18%
+[20:07:33] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:33] [Server thread/INFO] (Minecraft) Preparing spawn area: 29%
+[20:07:33] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:33] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2091ms or 41 ticks behind
+[20:07:33] [Server thread/INFO] (Minecraft) Preparing spawn area: 29%
+[20:07:33] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:33] [Server thread/INFO] (Minecraft) Preparing spawn area: 36%
+[20:07:34] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:34] [Server thread/INFO] (Minecraft) Preparing spawn area: 55%
+[20:07:34] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:34] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:34] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:34] [Server thread/INFO] (Minecraft) Preparing spawn area: 100%
+[20:07:34] [Server thread/INFO] (Minecraft) Time elapsed: 6093 ms
+[20:07:34] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:34] [Server thread/INFO] (Minecraft) ShotRunner[local:E:2d6358f4] logged in with entity id 113 at (9.5, 65.0, -7.5)
+[20:07:34] [Server thread/INFO] (Minecraft) System chat: ShotRunner joined the game
+[20:07:34] [Server thread/INFO] (Minecraft) Changing view distance to 5, from 10
+[20:07:34] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[20:07:34] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[20:07:34] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:35] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:35] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:35] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:35] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:35] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:35] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:36] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@3d6d66f8
+[20:07:36] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: null
+[20:07:39] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Game rule random_tick_speed is now set to 0
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Game rule spawn_mobs is now set to false
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: gamerule do_daylight_cycle false<--[HERE]
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: gamerule do_weather_cycle false<--[HERE]
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: gamerule do_mob_spawning false<--[HERE]
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Game rule send_command_feedback is now set to false
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Spectator Mode
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:aphelion_shattered_halo in minecraft:the_end at C = -1648 65 1296
+[20:07:41] [Server thread/INFO] (Minecraft) System chat: ShotRunner has made the advancement [The End?]
+[20:07:41] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1621.500000, 75.000000, 1322.500000
+[20:07:41] [Render thread/INFO] (Minecraft) Loaded 17 advancements
+[20:07:46] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[20:07:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__aphelion_shattered_halo_s_26_10_26.png: 
+[20:07:46] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1633.500000, 55.000000, 1296.500000
+[20:07:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__aphelion_shattered_halo_s_14_10_0.png: 
+[20:07:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 285 (s_struct_nether | elsewhere:aphelion_shattered_halo) done in 8176 ms
+[20:07:48] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:07:48] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:07:49] [Server thread/INFO] (Minecraft) System chat: Set minecraft:the_end to 6000 tick(s)
+[20:07:49] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:ossyra_matriarch_spire in minecraft:the_end at C = -1728 60 176
+[20:07:49] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1707.500000, 46.000000, 196.500000
+[20:07:53] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5042ms or 100 ticks behind
+[20:07:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__ossyra_matriarch_spire_s_20_14_20.png: 
+[20:07:55] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1715.500000, 34.000000, 176.500000
+[20:07:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png: 
+[20:07:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 286 (s_struct_nether | elsewhere:ossyra_matriarch_spire) done in 8583 ms
+[20:07:57] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:07:57] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:07:57] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:07:57] [Server thread/INFO] (Minecraft) Stopping server
+[20:07:57] [Server thread/INFO] (Minecraft) Saving players
+[20:07:57] [Server thread/INFO] (Minecraft) Saving worlds
+[20:07:57] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:07:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 247 (s_p8_bossanims | P8 kill switch): needs a separate client launch with the kill switch off (config is read at start)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 253 (s_compat_jei | JEI item list hides technical items): needs JEI loaded (-Pjei, the release client's jei section)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 260 (s_greenhaze_rework | JEI info (with JEI loaded)): needs JEI loaded (-Pjei, the release client's jei section)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 267 (s_p2_telegraph | distance LOD, helm ON): no id, view or command in the line
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 269 (s_p2_telegraph | kill switch: server started with `-Delsewhere.overhaul3.boss_telegraphs=false`, helm ON): needs a separate client launch with the kill switch off (config is read at start)
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 276 (s_p1_bossbar | boss bar v2 module shots (boss_ui runClientGameTest, BossBarShots)): no id, view or command in the line
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 78 ok, 3 fail, 6 manual
+[20:07:58] [Render thread/INFO] (Minecraft) Stopping!
