@@ -1,0 +1,264 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:ashtusk": [
+        {
+          "file": "anim__ashtusk_death_15t.png",
+          "scene": 51,
+          "line": 64,
+          "check": "legs splayed and head sagging while it tips over",
+          "status": "ok",
+          "taken": "23:40:35"
+        }
+      ],
+      "elsewhere:mother_creak": [
+        {
+          "file": "anim__mother_creak_hurt_peak.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:38"
+        },
+        {
+          "file": "anim__mother_creak_hurt_rest.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:39"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:engineers_atoll": [
+        {
+          "file": "s_struct_verdigris__engineers_atoll_s_16_8_16.png",
+          "scene": 158,
+          "line": 175,
+          "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_sultana (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase2.png",
+          "scene": 203,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "23:40:47"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:drowned_chapel": [
+        {
+          "file": "s_struct_core__drowned_chapel_s_14_9_14.png",
+          "scene": 211,
+          "line": 241,
+          "check": "cruciform chapel: nave, transept arms, narrower chancel; broken pale-oak gable roofs (45 degrees, overhang 1) with a fallen-in bay over exposed beams; stone gables with an oculus; buttresses; water only inside the walls (nave 2 deep with submerged pews, one step up into the transept), none outside; ground meets the walls all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "23:40:48"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "23:40:49"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "23:40:50"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "23:40:51"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "23:40:51"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "23:40:53"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:aphelion_starpiercer": [
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "ok",
+          "taken": "23:40:54"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "ok",
+          "taken": "23:40:55"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "ok",
+          "taken": "23:40:56"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "ok",
+          "taken": "23:40:56"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_after_use.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "ok",
+          "taken": "23:40:58"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_tooltip.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "ok",
+          "taken": "23:40:58"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "elsewhere:kingdom_archer": [
+        {
+          "file": "s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png",
+          "scene": 327,
+          "line": 370,
+          "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "23:40:59"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "23:41:00"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "23:41:01"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_40_60_50_y140.png",
+          "scene": 410,
+          "line": 460,
+          "check": "49 x 50 palm-wall enclosure (Aldermark's curtain is 61 x 61) with an undulating top; one processional axis: pylons, palm court with two lapis pools, hypostyle hall (raised nave roof), throne hall with a roof kiosk, naos to the west, mud-brick palace with kiosk and striped awning to the east; terraces stepping up north; nothing floating at the edges",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "elsewhere:everflow_bong": [
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_bossdrops": {
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        },
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:41:01",
+  "totals": {
+    "ok": 19,
+    "fail": 0,
+    "manual": 0
+  }
+}
