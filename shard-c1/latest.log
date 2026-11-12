@@ -737,3 +737,39 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:37:45] [Render thread/INFO] (Minecraft) Loaded 27 advancements
 [22:37:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_clan_hold_a.png: elsewhere:ironpeak 264, 368, 1000
 [22:37:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_clan_hold_b.png: elsewhere:ironpeak 264, 368, 1000
+[22:38:16] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 24555ms or 491 ticks behind
+[22:38:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_climbers_cairn_a.png: elsewhere:ironpeak 40, 1258, 40
+[22:38:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_climbers_cairn_b.png: elsewhere:ironpeak 40, 1258, 40
+[22:38:35] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2184ms or 43 ticks behind
+[22:38:35] [Render thread/INFO] (Minecraft) Loaded 28 advancements
+[22:38:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_clockwork_rig_a.png: elsewhere:verdigris_sea 104, 108, 136
+[22:38:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_clockwork_rig_b.png: elsewhere:verdigris_sea 104, 108, 136
+[22:38:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_croaking_shrine_a.png: minecraft:overworld -4312, 76, -8424
+[22:38:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_croaking_shrine_b.png: minecraft:overworld -4312, 76, -8424
+[22:39:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_drowned_cathedral_a.png: elsewhere:verdigris_sea -520, 108, 2616
+[22:39:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_drowned_cathedral_b.png: elsewhere:verdigris_sea -520, 108, 2616
+[22:39:06] [Render thread/INFO] (Minecraft) Loaded 29 advancements
+[22:39:07] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 17383ms or 347 ticks behind
+[22:39:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_drowned_chapel_a.png: elsewhere:pale_hollow 72, 90, 136
+[22:39:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_drowned_chapel_b.png: elsewhere:pale_hollow 72, 90, 136
+[22:39:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_engineers_atoll_a.png: elsewhere:verdigris_sea 920, 108, -728
+[22:39:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_engineers_atoll_b.png: elsewhere:verdigris_sea 920, 108, -728
+[22:39:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_eye_of_the_gale_a.png: elsewhere:petalwind 40, 198, 88
+[22:39:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_eye_of_the_gale_b.png: elsewhere:petalwind 40, 198, 88
+[22:39:35] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 12904ms or 258 ticks behind
+[22:39:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_fern_terrace_farms_a.png: elsewhere:greenhaze -280, 116, 568
+[22:39:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_fern_terrace_farms_b.png: elsewhere:greenhaze -280, 116, 568
+[22:39:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_glacier_shelf_a.png: minecraft:overworld 1384, 157, 3704
+[22:39:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_glacier_shelf_b.png: minecraft:overworld 1384, 157, 3704
+[22:40:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_great_hotbox_a.png: elsewhere:greenhaze 56, 109, 72
+[22:40:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_great_hotbox_b.png: elsewhere:greenhaze 56, 109, 72
+[22:40:03] [Server thread/INFO] (Minecraft) System chat: ShotRunner has made the advancement [We Need to Go Deeper]
+[22:40:03] [Render thread/INFO] (Minecraft) Loaded 47 advancements
+[22:40:04] [Render thread/INFO] (Minecraft) Loaded 47 advancements
+[22:40:07] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 16704ms or 334 ticks behind
+[22:40:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_grunthar_treasure_hall_a.png: minecraft:the_nether -184, 40, 72
+[22:40:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_grunthar_treasure_hall_b.png: minecraft:the_nether -184, 40, 72
+[22:40:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_hanging_undercity_a.png: elsewhere:the_hush -888, -88, 1336
+[22:40:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_hanging_undercity_b.png: elsewhere:the_hush -888, -88, 1336
+[22:40:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_hollow_shrine_a.png: elsewhere:pale_hollow -120, 82, -312
+[22:40:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_hollow_shrine_b.png: elsewhere:pale_hollow -120, 82, -312
