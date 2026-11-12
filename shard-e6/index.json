@@ -1,0 +1,328 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:ashtusk": [
+        {
+          "file": "anim__ashtusk_hurt_peak.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:57:40"
+        },
+        {
+          "file": "anim__ashtusk_hurt_rest.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:57:40"
+        },
+        {
+          "file": "anim__ashtusk_death_15t.png",
+          "scene": 51,
+          "line": 64,
+          "check": "legs splayed and head sagging while it tips over",
+          "status": "ok",
+          "taken": "22:57:44"
+        }
+      ],
+      "elsewhere:gulpmother": [
+        {
+          "file": "anim__gulpmother_hurt_peak.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:47"
+        },
+        {
+          "file": "anim__gulpmother_hurt_rest.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:48"
+        }
+      ],
+      "elsewhere:grumblegut": [
+        {
+          "file": "anim__grumblegut_hurt_peak.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:51"
+        },
+        {
+          "file": "anim__grumblegut_hurt_rest.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:51"
+        }
+      ],
+      "elsewhere:verdigrim": [
+        {
+          "file": "anim__verdigrim_hurt_peak.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:54"
+        },
+        {
+          "file": "anim__verdigrim_hurt_rest.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:55"
+        }
+      ],
+      "elsewhere:mother_creak": [
+        {
+          "file": "anim__mother_creak_hurt_peak.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:58"
+        },
+        {
+          "file": "anim__mother_creak_hurt_rest.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:58"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:mirewick_fowlers_bandolier": [
+        {
+          "file": "items__mirewick_fowlers_bandolier_held.png",
+          "scene": 123,
+          "line": 139,
+          "check": "icon matches the sprite page (16x16, Fowler's Bandolier), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:00"
+        },
+        {
+          "file": "items__mirewick_fowlers_bandolier_tooltip.png",
+          "scene": 123,
+          "line": 139,
+          "check": "icon matches the sprite page (16x16, Fowler's Bandolier), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:00"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Percolax phase-0 smoke hide (elsewhere:percolax)": [
+        {
+          "file": "s_p13_particles__percolax_smoke_hide_3s.png",
+          "scene": 168,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "ok",
+          "taken": "22:58:04"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_sultana (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase3.png",
+          "scene": 207,
+          "line": 236,
+          "check": "",
+          "status": "ok",
+          "taken": "22:58:07"
+        }
+      ]
+    },
+    "s_testfix": {
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "22:58:10"
+        },
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k_later.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "22:58:12"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:verdigrim": [
+        {
+          "file": "s_p2_telegraph__verdigrim_note_shockwave_helm_off.png",
+          "scene": 266,
+          "line": 302,
+          "check": "the yellow shockwave ring travels outward smoothly (attack, not a hint, so it shows without the helm); one ring, no trail of old rings",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p1_bossbar": {
+      "boss bar v2 state chips": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_state_chips.png",
+          "scene": 276,
+          "line": 312,
+          "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_state_chips_5s.png",
+          "scene": 276,
+          "line": 312,
+          "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person.png",
+          "scene": 278,
+          "line": 314,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person.png",
+          "scene": 278,
+          "line": 314,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip.png",
+          "scene": 278,
+          "line": 314,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:steam_auger": [
+        {
+          "file": "s_p5_tooltips__steam_auger_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_after_use.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_tooltip.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers.png",
+          "scene": 350,
+          "line": 393,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers_later.png",
+          "scene": 350,
+          "line": 393,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_foresight": {
+      "elsewhere:azmar_wazir": [
+        {
+          "file": "s_foresight__ground_patch_pre_arm_ring_duelist_ground.png",
+          "scene": 454,
+          "line": 506,
+          "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:58:12",
+  "totals": {
+    "ok": 17,
+    "fail": 0,
+    "manual": 0
+  }
+}
