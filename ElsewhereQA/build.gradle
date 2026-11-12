@@ -87,6 +87,8 @@ afterEvaluate {
 		if (project.findProperty("qaShotSeed")) property "elsewhereqa.shotSeed", project.findProperty("qaShotSeed").toString()
 		// fixed offline dev name for client runs (-PqaUser=...); never a real account
 		if (project.findProperty("qaUser")) programArgs "--username", project.findProperty("qaUser").toString()
+		// -PqaVm="-Da=b -Dc=d" also reaches the client (boss_music client self-test in cloud shot runs; lead 16:45)
+		if (project.findProperty("qaVm")) project.findProperty("qaVm").toString().split(" ").each { if (it) vmArg it }
 	}
 }
 

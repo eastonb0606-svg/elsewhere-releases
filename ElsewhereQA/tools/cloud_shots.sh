@@ -12,10 +12,12 @@
 # Status for the polling agent: ~/cloudshots-<shard>/status (one line), ~/cloudshots-<shard>/DONE when finished.
 set -u
 SHARD="${1:?shard}"; SPEC="${2:?scene spec}"; WD_MAX="${3:-90}"
+# boss_music client self-test only in m* shards (it adds a stand-in boss bar that would spoil scene shots; lead 16:47)
+MUSICVM=""; case "$SHARD" in m*) MUSICVM="-PqaVm=-Dboss_music.selftest=true";; esac
 R="$(git rev-parse --show-toplevel)"; cd "$R" || exit 2
 W="$HOME/cloudshots-$SHARD"; S="$W/shots"; mkdir -p "$W" "$S" "$W/mods"; rm -f "$W/DONE" "$W/client.done"
 LOG="$W/run.log"; exec > >(tee -a "$LOG") 2>&1
-BRANCH="cloud-shots-$SHARD"; DEADLINE=$(date -u -d '2026-11-12T23:05:00Z' +%s)
+BRANCH="cloud-shots-$SHARD"; DEADLINE=$(date -u -d '2026-11-13T02:00:00Z' +%s)
 st() { echo "$(date -u +%H:%M:%SZ) $*" | tee "$W/status"; }
 export GIT_AUTHOR_NAME="Elsewhere build" GIT_AUTHOR_EMAIL="build@localhost" GIT_COMMITTER_NAME="Elsewhere build" GIT_COMMITTER_EMAIL="build@localhost"
 QALOG="$R/ElsewhereQA/build/run/clientGameTest/logs/latest.log"
@@ -101,7 +103,7 @@ echo "merged jar $(basename "$JAR") $(stat -c %s "$JAR") bytes in $(( $(date +%s
 cd "$R/ElsewhereQA" || fail "no ElsewhereQA"
 chmod +x gradlew
 now=$(date +%s); WD=$(( (DEADLINE - now) / 60 - 6 )); [ "$WD" -gt "$WD_MAX" ] && WD=$WD_MAX
-[ "$WD" -ge 5 ] || fail "too late to start (deadline 23:05Z)"
+[ "$WD" -ge 5 ] || fail "too late to start (deadline 02:00Z)"
 st "client: scenes $SPEC, watchdog $WD min"
 rm -rf build/run/clientGameTest/saves build/run/clientGameTest/logs
 (
@@ -118,12 +120,12 @@ rm -rf build/run/clientGameTest/saves build/run/clientGameTest/logs
 PUB=$!
 timeout --kill-after=60 $(( (WD + 12) * 60 )) xvfb-run -a -s "-screen 0 1920x1080x24" ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx1g --console=plain \
   -Pfapi=0.166.0+26.3 -PqaMods="$W/mods" -PqaClient=shots -PqaShotList="$R/ElsewhereQA/shots-3.0/shotlist.json" -PqaShotDir="$S" \
-  -PqaShotOnly="$SPEC" -PqaUser=ShotRunner -PqaWatchdog="$WD" -PqaVm="-Dboss_music.selftest=true" runClientGameTest > "$W/client.out" 2>&1
+  -PqaShotOnly="$SPEC" -PqaUser=ShotRunner -PqaWatchdog="$WD" $MUSICVM runClientGameTest > "$W/client.out" 2>&1
 rc=$?
 touch "$W/client.done"; wait "$PUB" 2>/dev/null
 echo "client rc=$rc"; grep -E '\[shots\] (TOTAL|FAIL|MANUAL)|watchdog' "$QALOG" 2>/dev/null | tail -25
 grep -E 'What went wrong|FAILED|Exception' -A2 "$W/client.out" | head -20
-echo "boss_music client selftest:"; grep -E '\[boss_music-selftest\] (FAIL|TOTAL)' "$W/client.out" | head -20
+echo "boss_music client selftest:"; grep -E '\[boss_music-(ingame-)?selftest\] (FAIL|TOTAL)' "$W/client.out" | head -20
 st "finished rc=$rc, $(ls "$S"/*.png 2>/dev/null | wc -l) PNGs; $(grep -E '\[shots\] TOTAL' "$QALOG" 2>/dev/null | tail -1 | sed 's/.*\[shots\]//')"
 publish "final rc=$rc"
 touch "$W/DONE"
