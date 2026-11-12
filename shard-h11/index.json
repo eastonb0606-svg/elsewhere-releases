@@ -1,0 +1,282 @@
+{
+  "lanes": {
+    "gear": {
+      "/calling readout": [
+        {
+          "file": "gear__calling_readout_chat.png",
+          "scene": 11,
+          "line": 16,
+          "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
+          "status": "ok",
+          "taken": "23:41:06"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:thurgrim": [
+        {
+          "file": "anim__thurgrim_hurt_peak.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:41:09"
+        },
+        {
+          "file": "anim__thurgrim_hurt_rest.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:41:10"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (third person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_third_person_blocking.png",
+          "scene": 147,
+          "line": 162,
+          "check": "arm in the block pose, steel face with blue ring and gold boss toward the camera",
+          "status": "ok",
+          "taken": "23:41:12"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:verdigris_sea_return_rift": [
+        {
+          "file": "s_struct_verdigris__verdigris_sea_return_rift_s_8_4_8.png",
+          "scene": 163,
+          "line": 180,
+          "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:grunthar": [
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "ok",
+          "taken": "23:41:17"
+        },
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "ok",
+          "taken": "23:41:18"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:grunthar_treasure_hall": [
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_0_0_21.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:azmar_sunscourge": [
+        {
+          "file": "s_whips__azmar_sunscourge_first_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "23:41:21"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_third_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "23:41:22"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_tooltip.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "23:41:22"
+        }
+      ]
+    },
+    "s_setbonus_a": {
+      "elsewhere:azmar_glyphmail_hood": [
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_first_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:41:23"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_third_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:41:24"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_first_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:41:25"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_third_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:41:26"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_after_use.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:41:27"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_tooltip.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:41:28"
+        }
+      ]
+    },
+    "s_locate": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_locate__castle_azmar_overview.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__castle_azmar_ground.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:41:29"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:41:30"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_first_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:41:34"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_third_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:41:36"
+        },
+        {
+          "file": "s_sunglass__sunglass_after_use.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:41:39"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:41:40"
+        }
+      ]
+    },
+    "s_lod": {
+      "Far soldiers in their baked LOD skin (48-96 blocks, ARMIES 3.7)": [
+        {
+          "file": "s_lod__battle_aldermark_azmar_60_30s.png",
+          "scene": 456,
+          "line": 508,
+          "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_hraf": {
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_overview.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_ground.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:41:40",
+  "totals": {
+    "ok": 21,
+    "fail": 0,
+    "manual": 0
+  }
+}
