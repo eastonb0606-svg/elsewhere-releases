@@ -1,0 +1,329 @@
+{
+  "lanes": {
+    "gear": {
+      "Calling panel (moonsilk + sunlance_staff)": [
+        {
+          "file": "gear__calling_panel_caster.png",
+          "scene": 9,
+          "line": 14,
+          "check": "top-left box \"Callings\": Caster Primary with a full bar, Vanguard/Marksman/Summoner Open with short bars; text readable, nothing overlapping the hotbar or the Glimmer bar",
+          "status": "ok",
+          "taken": "22:58:30"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:solaxis": [
+        {
+          "file": "anim__solaxis_hurt_peak.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:58:34"
+        },
+        {
+          "file": "anim__solaxis_hurt_rest.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:58:34"
+        }
+      ],
+      "elsewhere:ossyra": [
+        {
+          "file": "anim__ossyra_hurt_peak.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:58:38"
+        },
+        {
+          "file": "anim__ossyra_hurt_rest.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:58:38"
+        }
+      ],
+      "elsewhere:vorlagh": [
+        {
+          "file": "anim__vorlagh_hurt_peak.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:41"
+        },
+        {
+          "file": "anim__vorlagh_hurt_rest.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:42"
+        }
+      ],
+      "elsewhere:hrolf": [
+        {
+          "file": "anim__hrolf_hurt_peak.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:45"
+        },
+        {
+          "file": "anim__hrolf_hurt_rest.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:45"
+        }
+      ],
+      "elsewhere:heliodor": [
+        {
+          "file": "anim__heliodor_hurt_peak.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:48"
+        },
+        {
+          "file": "anim__heliodor_hurt_rest.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:49"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:hrafnholt_skjaldborg_shield": [
+        {
+          "file": "items__hrafnholt_skjaldborg_shield_held.png",
+          "scene": 111,
+          "line": 127,
+          "check": "icon matches the sprite page (16x16, Skjaldborg Round-Shield), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:50"
+        },
+        {
+          "file": "items__hrafnholt_skjaldborg_shield_tooltip.png",
+          "scene": 111,
+          "line": 127,
+          "check": "icon matches the sprite page (16x16, Skjaldborg Round-Shield), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:51"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, idle)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_idle.png",
+          "scene": 145,
+          "line": 160,
+          "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
+          "status": "ok",
+          "taken": "22:58:53"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer": [
+        {
+          "file": "s_censer__choirlight_censer_held.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "22:58:54"
+        },
+        {
+          "file": "s_censer__choirlight_censer_tooltip.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "22:58:55"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:mirewick_ames (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_aura_phase2.png",
+          "scene": 204,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "nameplate LOD and range": [
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_6.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_12.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_18.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:lithara": [
+        {
+          "file": "s_p2_telegraph__lithara_triple_rings_6_12_18_falling_roc.png",
+          "scene": 264,
+          "line": 300,
+          "check": "three red rings and yellow circles drawn as clean bands, all visible at once, none missing",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "`/kingdom armies swarm` report": [
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        },
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_first_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_4.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:windwright": [
+        {
+          "file": "s_galesling__windwright_trade.png",
+          "scene": 296,
+          "line": 335,
+          "check": "an offer of 6 Zephyr Feathers + 1 String for a Gale Sling (4 uses); with -Delsewhere.overhaul3.gale_sling_trade=false a newly summoned Windwright has no sling offer",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p5_tooltips__ironclad_flail_first_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_third_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_tooltip.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__captain_capes_heraldry_kingdom_cape_png.png",
+          "scene": 346,
+          "line": 389,
+          "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__captain_capes_heraldry_kingdom_cape_png_later.png",
+          "scene": 346,
+          "line": 389,
+          "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:58:55",
+  "totals": {
+    "ok": 16,
+    "fail": 0,
+    "manual": 0
+  }
+}
