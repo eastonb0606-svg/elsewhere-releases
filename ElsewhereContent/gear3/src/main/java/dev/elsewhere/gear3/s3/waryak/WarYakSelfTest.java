@@ -77,6 +77,7 @@ public final class WarYakSelfTest {
 		AttributeInstance slots = SummonerAttributes.slots() == null ? null : p.getAttribute(SummonerAttributes.slots());
 		Identifier slotMod = Gear3Content.id("selftest.war_yak_slots");
 		List<Mob> extra = new ArrayList<>();
+		String calling0 = dev.elsewhere.gear3.dev.SelfTest.primarySummoner(p); // s-asm-gear3: Unattuned caps at 1 slot; a Primary Summoner may have 1-4
 		try {
 			GlimmerStub.testFree = true;
 			GlimmerStub.devDeny = false;
@@ -219,6 +220,7 @@ public final class WarYakSelfTest {
 			MinionEntity.testOwnerLookup = lookup0;
 			p.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
 			WarYak.resetBlasts();
+			dev.elsewhere.gear3.dev.SelfTest.restoreCalling(p, calling0);
 		}
 		info(P + "done");
 	}

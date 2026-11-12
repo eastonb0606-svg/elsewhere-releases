@@ -1,0 +1,12 @@
+{
+  "_doc": "s-meadhorn: Mead-Horn honey-bottle refill (dev.elsewhere.gear3.s3.meadhorn): action-bar messages and the refill JEI line (moved here from the generated files by s-asm-gear3 so a regen keeps them).",
+  "lang": {
+    "item.elsewhere.hrafnholt_mead_horn.refilled": "The Mead-Horn is full again",
+    "item.elsewhere.hrafnholt_mead_horn.empty": "The Mead-Horn is empty. Use it with a honey bottle in the other hand"
+  },
+  "jei": {
+    "elsewhere:hrafnholt_mead_horn": [
+      "Drink: heal 6 over 3 s and gain 3 Fury stacks. The horn is then empty: use it with a honey bottle in the other hand (or use the bottle with the horn in the other hand) to refill it. The bottle is used up and you get a glass bottle back."
+    ]
+  }
+}

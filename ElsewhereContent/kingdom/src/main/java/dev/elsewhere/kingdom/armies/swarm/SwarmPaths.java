@@ -137,6 +137,42 @@ public final class SwarmPaths {
 
 	// ---- march -------------------------------------------------------------------------------------------------------------------
 
+	/** Repaths skipped because the leader still walked a live path into its goal cell. */
+	public static long marchKept;
+
+	/**
+	 * True when the leader already walks a live path (its own search or a joined one) into {@code goal}'s 4x4x4 cell: keep it, no join and no
+	 * search, as vanilla keeps a path to an unchanged target. Without this every repath re-joined whichever neighbouring squad had stored last,
+	 * at that path's nearest node (often its start, to the side), so leaders hopped between paths and zig-zagged on the spot (s-armies-fix,
+	 * 14:15: 0 of 3 leaders 6 blocks closer in 80 ticks). A joined path that brought no progress for 20+ ticks is evicted and not kept.
+	 */
+	public static boolean keepMarch(KingdomSoldier mob, BlockPos goal) {
+		if (!Swarm.on() || mob.isPassenger()) return false;
+		PathNavigation nav = mob.getNavigation();
+		Path p = nav.getPath();
+		if (p == null || p.isDone() || nav.isStuck()) return false;
+		BlockPos t = p.getTarget();
+		if (t == null || (t.getX() >> 2) != (goal.getX() >> 2) || (t.getY() >> 2) != (goal.getY() >> 2) || (t.getZ() >> 2) != (goal.getZ() >> 2)) return false;
+		Join j = JOINS.get(mob);
+		if (j != null) {
+			long now = mob.level().getGameTime();
+			double dist = Math.sqrt(goal.distToCenterSqr(mob.position()));
+			if (dist <= j.dist - 1.0) {
+				j.tick = now;
+				j.dist = dist;
+			} else if (now - j.tick >= 20) {
+				// no progress on the shared path: it is bad for us (blocked, changed terrain); drop it and search for real
+				MARCH.remove(j.key);
+				JOINS.remove(mob);
+				evicted++;
+				nav.stop();
+				return false;
+			}
+		}
+		marchKept++;
+		return true;
+	}
+
 	/** Joins a stored march path to {@code goal}; false = search for real (then call {@link #offerMarch}). Never uses the path budget. */
 	public static boolean joinMarch(KingdomSoldier mob, BlockPos goal, double speed) {
 		if (!Swarm.on() || mob.isPassenger()) return false;

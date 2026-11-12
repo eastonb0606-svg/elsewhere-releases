@@ -45,7 +45,7 @@ public final class ElsewhereJeiData {
 	public static final List<String> HIDDEN = List.of("elsewhere:arena_seal", "elsewhere:return_rift", "elsewhere:skyiron_sword",
 		"elsewhere:gold_bomb", "elsewhere:void_breath", "elsewhere:soul_tear", "elsewhere:sun_orb", "elsewhere:soul_fireball",
 		"elsewhere:frogspawn_glob", "elsewhere:seed_fireball", "elsewhere:frost_shard", "elsewhere:spit_seed", "elsewhere:smoke_ring",
-		"elsewhere:ember_flick");
+		"elsewhere:ember_flick", "elsewhere:crystal_shard");
 
 	/** One possible drop of a loot page: {@code chance} is per roll of its pool (weight share times any random_chance condition). */
 	public record LootEntry(Item item, float chance, int min, int max) {}

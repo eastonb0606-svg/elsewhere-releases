@@ -375,7 +375,7 @@ final class SelfTestHrafnholtFort {
 		}
 		int n = plan.cells().length;
 		boolean meets = n == 0 || plan.h()[n - 1] == sea + 1 - o.getY();
-		info(tag + ": shore road " + n + " cells" + (n == 0 ? "" : " from height " + plan.h()[0] + " to " + plan.h()[n - 1]) + ", berths " + plan.berths().size());
+		info(tag + ": shore road " + n + " cells" + (n == 0 ? "" : " from height " + plan.h()[0] + " to " + plan.h()[n - 1]) + ", berths " + plan.berths().size() + " (" + plan.note() + ")");
 		check(tag + ": the shore road has steps of at most 1 and meets the jetty at sea level", steps == 0 && missing == 0 && meets, steps + " steps, " + missing + " missing" + (first == null ? "" : "; " + first));
 		int ok = 0;
 		for (int[] b : plan.berths()) {

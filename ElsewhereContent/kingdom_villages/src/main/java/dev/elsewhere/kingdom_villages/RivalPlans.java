@@ -747,7 +747,13 @@ public final class RivalPlans {
 
 	/** The ground y under (x, z): the top block that stops motion (plants, snow layers and leaves are not ground). */
 	static int groundY(ServerLevel level, int x, int z) {
-		return level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
+		int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
+		BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos(x, y, z);
+		for (int i = 0; i < 8 && m.getY() > level.getMinY(); i++, m.move(Direction.DOWN)) { // under a flower or a snow layer the heightmap may still stand on it
+			BlockState s = level.getBlockState(m);
+			if (s.isSolid() && !s.canBeReplaced()) return m.getY();
+		}
+		return y;
 	}
 
 	/**
@@ -793,11 +799,12 @@ public final class RivalPlans {
 		for (var e : r.journal.long2ObjectEntrySet()) {
 			BlockState w = e.getValue().written();
 			BlockPos pos = BlockPos.of(e.getLongKey());
-			if (!(w.getBlock() instanceof BannerBlock)) continue;
+			if (!(w.getBlock() instanceof net.minecraft.world.level.block.AbstractBannerBlock)) continue;
 			if (!level.isLoaded(pos)) continue;
 			BlockState cur = level.getBlockState(pos);
-			if (!(cur.getBlock() instanceof BannerBlock)) continue;
-			ops.add(new VillageRecord.Op(pos.asLong(), Blocks.BANNER.pick(HrafnLooks.tint(now, pos, now.banner())).defaultBlockState().setValue(BannerBlock.ROTATION, cur.getValue(BannerBlock.ROTATION))));
+			BlockState dyed = redye(cur, HrafnLooks.tint(now, pos, now.banner()));
+			if (dyed == null) continue;
+			ops.add(new VillageRecord.Op(pos.asLong(), dyed));
 			if (ops.size() >= MAX_SWAP) return ops;
 		}
 		BlockPos bell = Plans.surface(level, r.center);
@@ -826,14 +833,24 @@ public final class RivalPlans {
 	public static List<VillageRecord.Op> recolor(ServerLevel level, VillageRecord r, net.minecraft.world.item.DyeColor color) {
 		List<VillageRecord.Op> ops = new ArrayList<>();
 		for (var e : r.journal.long2ObjectEntrySet()) {
-			if (!(e.getValue().written().getBlock() instanceof BannerBlock)) continue;
+			if (!(e.getValue().written().getBlock() instanceof net.minecraft.world.level.block.AbstractBannerBlock)) continue;
 			BlockPos pos = BlockPos.of(e.getLongKey());
 			if (!level.isLoaded(pos)) continue;
-			BlockState cur = level.getBlockState(pos);
-			if (!(cur.getBlock() instanceof BannerBlock)) continue;
-			ops.add(new VillageRecord.Op(pos.asLong(), Blocks.BANNER.pick(HrafnLooks.tint(r, pos, color)).defaultBlockState().setValue(BannerBlock.ROTATION, cur.getValue(BannerBlock.ROTATION))));
+			BlockState dyed = redye(level.getBlockState(pos), HrafnLooks.tint(r, pos, color));
+			if (dyed != null) ops.add(new VillageRecord.Op(pos.asLong(), dyed));
 		}
 		return ops;
+	}
+
+	/**
+	 * The banner at {@code cur} in another colour, standing or on a wall (same rotation or facing), or null when it is no banner any more.
+	 * Wall banners count too (s-asm-vill: Hrafnholt's and Azmar's wall banners kept the old owner's colour after a swap or flip-back).
+	 */
+	static @Nullable BlockState redye(BlockState cur, net.minecraft.world.item.DyeColor color) {
+		if (cur.getBlock() instanceof BannerBlock) return Blocks.BANNER.pick(color).defaultBlockState().setValue(BannerBlock.ROTATION, cur.getValue(BannerBlock.ROTATION));
+		if (cur.getBlock() instanceof net.minecraft.world.level.block.WallBannerBlock)
+			return Blocks.WALL_BANNER.pick(color).defaultBlockState().setValue(net.minecraft.world.level.block.WallBannerBlock.FACING, cur.getValue(net.minecraft.world.level.block.WallBannerBlock.FACING));
+		return null;
 	}
 
 	// ---- border-wall growth (Azmar) -----------------------------------------------------------------------------------

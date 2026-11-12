@@ -73,7 +73,7 @@ public final class CoreFit {
 				return g.computeIfAbsent(BlockPos.asLong(x, 0, z), k -> {
 					if (seaOnly) {
 						int top = surface(x, z);
-						if (top >= sea) return top;
+						if (top > sea) return top; // heights are top block + 1; sea water fills y < sea, so an open sea's surface height is exactly sea
 					}
 					return gen.getFirstOccupiedHeight(x, z, Heightmap.Types.OCEAN_FLOOR_WG, h, rs);
 				});

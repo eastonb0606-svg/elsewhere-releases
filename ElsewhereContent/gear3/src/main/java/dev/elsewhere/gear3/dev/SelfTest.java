@@ -95,6 +95,31 @@ public final class SelfTest {
 		}
 	}
 
+	/**
+	 * s-asm-gear3: makes {@code p} a settled Primary Summoner (Summoner mastery 1.0, so the summoner allows up to 4 minion
+	 * slots). A bare FakePlayer is Unattuned (M 0.40), which caps it at 1 slot whatever the slots attribute says. Returns the
+	 * previous Calling state for {@link #restoreCalling}. Only for checks about slot counts, since mastery also scales minion damage.
+	 */
+	public static String primarySummoner(net.minecraft.world.entity.player.Player p) {
+		String old = p.getAttached(dev.elsewhere.arsenal.spell.Calling.STATE);
+		p.setAttached(dev.elsewhere.arsenal.spell.Calling.STATE, dev.elsewhere.arsenal.spell.Calling.Path.SUMMONER.ordinal() + ",-1,-2,-2,0");
+		return old;
+	}
+
+	public static void restoreCalling(net.minecraft.world.entity.player.Player p, String old) {
+		if (old == null) p.removeAttached(dev.elsewhere.arsenal.spell.Calling.STATE);
+		else p.setAttached(dev.elsewhere.arsenal.spell.Calling.STATE, old);
+	}
+
+	/**
+	 * s-asm-gear3: clears the hurt cooldown so a test can hit the same mob again in the same tick. In 26.3 that cooldown is
+	 * {@code LivingEntity.damageCooldownTime}; {@code Entity.setInvulnerableTime} sets a different field and no longer resets it.
+	 */
+	public static void noIFrames(net.minecraft.world.entity.Entity e) {
+		e.setInvulnerableTime(0);
+		if (e instanceof net.minecraft.world.entity.LivingEntity le) le.damageCooldownTime = 0;
+	}
+
 	public static boolean near(double a, double b) {
 		return Math.abs(a - b) < 1.0E-3;
 	}

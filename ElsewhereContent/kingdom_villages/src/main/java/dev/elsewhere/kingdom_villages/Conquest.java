@@ -155,8 +155,10 @@ public final class Conquest {
 		s.state = VillageRecord.State.OCCUPIED;
 		s.builtAt = now;
 		Direction gate = Direction.getApproximateNearest((double) (castle.getX() - c.getX()), 0.0, (double) (castle.getZ() - c.getZ()));
+		// s-asm-vill: legacy outposts sit on their own ground; the hint is read before the writes (the post would hide its own ground)
+		BlockPos hint = fort != null ? fort.flag() : prof.isAldermark() ? c.offset(-1, 6, -1) : RivalPlans.hintPos(level, prof, c);
 		for (VillageRecord.Op op : fort != null ? fort.ops() : prof.isAldermark() ? Plans.outpost(c, gate) : RivalPlans.outpost(level, prof, c, gate)) BlockWriter.write(level, s, BlockPos.of(op.pos()), op.state());
-		s.hint = fort != null ? fort.flag() : prof.isAldermark() ? c.offset(-1, 6, -1) : RivalPlans.hintPos(level, prof, c); // s-asm-vill: legacy outposts sit on their own ground
+		s.hint = hint;
 		if (faction.equals(Factions.ALDERMARK)) {
 			ledger.outpostsFounded++;
 			ledger.lastOutpostTime = now;

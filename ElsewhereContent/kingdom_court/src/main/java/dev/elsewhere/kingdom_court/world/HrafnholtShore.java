@@ -23,12 +23,12 @@ public final class HrafnholtShore {
 	private HrafnholtShore() {}
 
 	/** Planned road (cells {u, v} in the waterfront frame, standing heights relative to the floor) and the naust berths {vc, ub}. */
-	public record Plan(int[][] cells, int[] h, int end, List<int[]> berths) {}
+	public record Plan(int[][] cells, int[] h, int end, List<int[]> berths, String note) {}
 
 	private static final Map<String, Plan> PLANS = new ConcurrentHashMap<>();
 	static final int[] BERTHS = {-7, -14};
 	/** s-asm-court: a naust is dug into the bank; its footprint's ground may stand up to this far above the sea (earth stays over the turf roof). */
-	static final int NAUST_BANK = 12;
+	static final int NAUST_BANK = 16;
 
 	/** Builds the shore road and nausts into the placer's chunk; the caller sets {@code pl.style} to the faction's style. */
 	public static void build(CastleLayout.Placer pl, BlockPos o, int dir, int shore, int sea, CastleLayout.Ground g) {
@@ -119,19 +119,31 @@ public final class HrafnholtShore {
 		}
 		// naust berths: dry shore behind the waterline at the moored longships' lanes
 		List<int[]> berths = new ArrayList<>();
+		StringBuilder note = new StringBuilder(); // s-asm-court: per lane, why a naust stands or not (self-test detail)
 		for (int vc : BERTHS) {
-			int ub = -1, from = Math.max(Waterfront.U_MIN, shore - 16);
-			if (gw(g, o, dir, from, vc) <= sea + 1) continue;
-			for (int u = from + 1; u <= shore + 1 && ub < 0; u++) if (gw(g, o, dir, u, vc) <= sea + 1) ub = u;
-			if (ub < 0 || ub - 13 < 38) continue;
+			// s-asm-court: the lane's own waterline, the first wet cell right after dry land, anywhere from clear of the ring (a 12-long shed
+			// behind it starts at u >= 38) to just past the shore. It used to need dry land exactly 16 before the shore, which a flat or marshy
+			// coast never has.
+			int ub = -1;
+			for (int u = 51; u <= shore + 2 && ub < 0; u++) if (gw(g, o, dir, u, vc) <= sea + 1 && gw(g, o, dir, u - 1, vc) > sea + 1) ub = u;
+			if (note.length() > 0) note.append("; ");
+			note.append("lane ").append(vc).append(": ");
+			if (ub < 0 || ub - 13 < 38) {
+				note.append("no waterline after dry land in u 51..").append(shore + 2);
+				continue;
+			}
 			boolean ok = true;
-			for (int u = ub - 13; u <= ub - 2 && ok; u++) for (int v = vc - 3; v <= vc + 3 && ok; v++) {
+			int lo = Integer.MAX_VALUE, hi = Integer.MIN_VALUE;
+			for (int u = ub - 13; u <= ub - 2; u++) for (int v = vc - 3; v <= vc + 3; v++) {
 				int y = gw(g, o, dir, u, v);
+				lo = Math.min(lo, y);
+				hi = Math.max(hi, y);
 				if (y <= sea || y > sea + NAUST_BANK) ok = false;
 			}
+			note.append("waterline u ").append(ub).append(", bank ").append(lo - sea).append("..").append(hi - sea).append(ok ? " -> naust" : " -> none");
 			if (ok) berths.add(new int[] {vc, ub});
 		}
-		Plan p = new Plan(cells.toArray(new int[0][]), h, hEnd, berths);
+		Plan p = new Plan(cells.toArray(new int[0][]), h, hEnd, berths, note.toString());
 		if (PLANS.size() > 64) PLANS.clear();
 		PLANS.put(key, p);
 		return p;

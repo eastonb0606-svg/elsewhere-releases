@@ -141,14 +141,14 @@ public final class TotemTests {
 			check(P + "Bramble ignores a hostile 6.5 blocks away and a passive cow", !hurt(far) && !hurt(cow));
 			check(P + "Bramble lash damage is minion damage (base 2 through the summoner)", MinionApi.LAST_HIT_DAMAGE > 0, MinionApi.LAST_HIT_DAMAGE);
 			check(P + "no sneeze before the 4th lashed mob", bt.sneezes == 0, bt.sneezes);
-			for (Entity e : extra) e.setInvulnerableTime(0);
+			for (Entity e : extra) dev.elsewhere.gear3.dev.SelfTest.noIFrames(e);
 			bt.lash(l, p);
 			check(P + "gag: haze pollen makes every 4th lashed mob sneeze (cosmetic)", bt.sneezes == 1, bt.sneezes);
 			int before = bt.strikes;
-			for (Entity e : extra) e.setInvulnerableTime(0);
+			for (Entity e : extra) dev.elsewhere.gear3.dev.SelfTest.noIFrames(e);
 			for (int i = 0; i < 40; i++) {
 				tick(bt);
-				for (Entity e : extra) e.setInvulnerableTime(0);
+				for (Entity e : extra) dev.elsewhere.gear3.dev.SelfTest.noIFrames(e);
 			}
 			check(P + "Bramble lashes once per 2 s on its own timer (40 ticks: 1 lash of 3)", bt.strikes - before == 3, bt.strikes - before);
 			clear(extra);
@@ -172,7 +172,7 @@ public final class TotemTests {
 			check(P + "Sentry: a bolt at a hostile 10 blocks away, aimed (synced target id)", cs.fire(l, p) && hurt(t10) && cs.aimTargetId() == t10.getId());
 			int s0 = cs.strikes;
 			for (int i = 0; i < 40; i++) {
-				t10.setInvulnerableTime(0);
+				dev.elsewhere.gear3.dev.SelfTest.noIFrames(t10);
 				tick(cs);
 			}
 			check(P + "Sentry fires once per second on its own timer (40 ticks: 2 bolts)", cs.strikes - s0 == 2, cs.strikes - s0);
@@ -192,7 +192,7 @@ public final class TotemTests {
 			double[] base = new double[4];
 			float[] dealt = new float[4];
 			for (int i = 0; i < 4; i++) {
-				tank.setInvulnerableTime(0);
+				dev.elsewhere.gear3.dev.SelfTest.noIFrames(tank);
 				base[i] = ob.burn(l, p);
 				dealt[i] = MinionApi.LAST_HIT_DAMAGE;
 			}
@@ -201,10 +201,10 @@ public final class TotemTests {
 				base[0] + "," + base[1] + "," + base[2] + "," + base[3]);
 			check(P + "Obelisk ramp doubles the dealt minion damage", dealt[0] > 0 && Math.abs(dealt[3] / dealt[0] - 2.0) < 0.01, dealt[0] + " -> " + dealt[3]);
 			SunglassObelisk.testBrightness = 4;
-			tank.setInvulnerableTime(0);
+			dev.elsewhere.gear3.dev.SelfTest.noIFrames(tank);
 			check(P + "Obelisk dormant in the dark (light < 12): no beam, lens dim", ob.burn(l, p) == 0 && !ob.isLit() && ob.aimTargetId() == -1 && !ob.isRamped());
 			SunglassObelisk.testBrightness = 12;
-			tank.setInvulnerableTime(0);
+			dev.elsewhere.gear3.dev.SelfTest.noIFrames(tank);
 			check(P + "Obelisk relit at light 12: the ramp starts over (4)", near(ob.burn(l, p), 4) && ob.isLit());
 			SunglassObelisk.testBrightness = -1;
 			info(P + "world light at the test lens: " + ob.light(l));

@@ -190,7 +190,7 @@ public final class Pennant {
 	}
 
 	private static void schedule(Standard s) {
-		Gear3Scheduler.after(s.level.getServer(), PULSE_TICKS, () -> second(s));
+		s.timer = Gear3Scheduler.after(s.level.getServer(), PULSE_TICKS, () -> second(s));
 	}
 
 	/** One timer firing (once a second). Counted, so the standard always ends after {@link #PULSES} firings, also in a synchronous self-test. */
@@ -251,6 +251,8 @@ public final class Pennant {
 		public final float mult;
 		int pulses;
 		boolean ended;
+		/** The queued one-second timer, dropped from the scheduler when the standard ends early. */
+		@Nullable Object timer;
 		private final Set<LivingEntity> buffed = Collections.newSetFromMap(new IdentityHashMap<>());
 
 		Standard(ServerPlayer owner, ServerLevel level, HerdcallerStandard entity, BlockPos base, float mult) {
@@ -328,6 +330,8 @@ public final class Pennant {
 		public void end(boolean effects) {
 			if (ended) return;
 			ended = true;
+			if (timer != null) Gear3Scheduler.cancel(timer); // no dead pulse left queued behind it
+			timer = null;
 			ACTIVE.remove(owner.getUUID(), this);
 			for (LivingEntity m : buffed) speed(m, 0);
 			buffed.clear();

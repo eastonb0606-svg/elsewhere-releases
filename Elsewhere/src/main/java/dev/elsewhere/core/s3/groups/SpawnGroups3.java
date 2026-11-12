@@ -232,7 +232,9 @@ public final class SpawnGroups3 {
 			EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.fromNamespaceAndPath("elsewhere", Groups3Data.TEST_TYPE));
 			Herds3.Rule rule = Herds3.ruleFor(Groups3Data.TEST_TYPE);
 			List<Mob> pack = new ArrayList<>();
-			for (int i = 0; i < 4 && rule != null; i++) {
+			// a full pack of at most 4, never more than the rule's max (bog_wight's is 3): an extra member rightly leads its own pack
+			int size = rule == null ? 0 : Math.max(2, Math.min(4, rule.max()));
+			for (int i = 0; i < size; i++) {
 				if (type.create(level, EntitySpawnReason.NATURAL) instanceof Mob m) {
 					m.setPos(at.getX() + 0.5 + i * 1.5, at.getY(), at.getZ() + 0.5);
 					m.finalizeSpawn(level, level.getCurrentDifficultyAt(at), EntitySpawnReason.NATURAL, null); // as NaturalSpawner does
@@ -269,7 +271,7 @@ public final class SpawnGroups3 {
 				addAlone = !Herds3.isLeader(add) && Herds3.leaderId(add) == null;
 			}
 			check.accept(addAlone, n + "a boss add (no finalizeSpawn) never joins or leads a herd");
-			check.accept(pack.size() == 4 && leaders == 1 && follow && grown, n + "a natural pack of " + Groups3Data.TEST_TYPE + " forms one leader + 3 followers (steer "
+			check.accept(size >= 2 && pack.size() == size && leaders == 1 && follow && grown, n + "a natural pack of " + Groups3Data.TEST_TYPE + " forms one leader + " + (size - 1) + " followers (steer "
 				+ (rule == null ? "?" : rule.steer()) + ", leader scale " + (lead == null ? "?" : lead.getScale()) + (ticking ? "" : ", TEST SITE NEVER ENTITY-TICKING") + ")");
 			// the 10-tick decision gate: canUse is evaluated every other tick, so one in five calls decides
 			Mob f0 = pack.size() > 1 ? pack.get(pack.indexOf(lead) == 0 ? 1 : 0) : null;

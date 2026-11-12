@@ -71,7 +71,9 @@ public class TotemItem extends Item {
 		BlockState below = level.getBlockState(pos.below());
 		Vec3 foot = Vec3.atBottomCenterOf(pos);
 		AABB box = type.getDimensions().makeBoundingBox(foot);
-		if (!below.isFaceSturdy(level, pos.below(), Direction.UP) || !level.getBlockState(pos).canBeReplaced() || !level.noCollision(box)) {
+		// noCollision ignores mobs (only boats/shulkers collide), so a totem already standing there is checked by hand (s-asm-gear3)
+		if (!below.isFaceSturdy(level, pos.below(), Direction.UP) || !level.getBlockState(pos).canBeReplaced() || !level.noCollision(box)
+			|| !level.getEntitiesOfClass(TotemEntity.class, box, e -> !e.isRemoved()).isEmpty()) {
 			sp.sendOverlayMessage(Component.translatable("message.elsewhere.totem.no_room"));
 			return null;
 		}

@@ -114,10 +114,12 @@ public final class SelfTest {
 		if (measuring) {
 			tickStart = System.nanoTime();
 			cpuStart = MX.getCurrentThreadCpuTime();
+			SiegeSampler.inTick = true;
 		}
 	}
 
 	public static void tick(MinecraftServer srv) {
+		SiegeSampler.inTick = false;
 		if (measuring && tickStart != 0) {
 			SAMPLES.add(System.nanoTime() - tickStart);
 			if (cpuStart >= 0) CPU_SAMPLES.add(MX.getCurrentThreadCpuTime() - cpuStart);
@@ -837,6 +839,7 @@ public final class SelfTest {
 				SAMPLES.clear();
 				CPU_SAMPLES.clear();
 				measuring = true;
+				SiegeSampler.start(Thread.currentThread());
 				java.util.Map<String, Integer> cen = new java.util.TreeMap<>();
 				int tot = 0;
 				for (var e : level.getEntitiesOfClass(net.minecraft.world.entity.Entity.class, new AABB(-5000, -128, -5000, 5000, 400, 5000), x -> true)) { cen.merge(e.getType().toShortString(), 1, Integer::sum); tot++; }
@@ -859,6 +862,8 @@ public final class SelfTest {
 				double loadAvg = java.lang.management.ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage();
 				info(String.format("PROFILE window ending age %d: mean %.2f ms p95 %.2f max %.2f; server-thread CPU mean %.2f p95 %.2f; machine load %.1f", age(), wm, wp, w.get(w.size() - 1) / 1e6, cm, cp, loadAvg));
 				if (age() == 640) {
+					SiegeSampler.stop();
+					for (String line : SiegeSampler.report()) info(line);
 					int serfsN = level.getEntitiesOfClass(Serf.class, AABB.of(E.bounds.inflatedBy(32)), e -> true).size();
 					info(String.format("LOAD full siege D=%s (force %d, burned %d) + rebuild E=%s (plan %d/%d, serfs %d), soldiers loaded %d, golems %d: MSPT mean %.2f p95 %.2f over %d ticks; villages manager %.3f ms/tick; block writes %d",
 						D.state, D.forceSpawned, D.journal.size(), E.state, E.planIndex, E.plan.size(), serfsN, KingdomPerf.loaded(level).size(),

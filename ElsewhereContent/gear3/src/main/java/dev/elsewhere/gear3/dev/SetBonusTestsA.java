@@ -113,8 +113,17 @@ public final class SetBonusTestsA {
 	}
 
 	static MinionEntity minion() {
-		MinionEntity m = MinionManager.summon(p, SummonerEntities.ROOTLING, 0);
-		if (m == null) info("setbonus-a: could not summon a test Rootling (slots " + MinionApi.maxSlots(p) + ")");
+		// s-asm-gear3: a cost of 0 still spends 1 real Glimmer (GlimmerStub.scaled, minimum 1), and the earlier Glimmer
+		// checks leave this player with none, so the summon was refused. testFree makes the test summon free.
+		boolean free0 = dev.elsewhere.stub.summoner.GlimmerStub.testFree;
+		dev.elsewhere.stub.summoner.GlimmerStub.testFree = true;
+		MinionEntity m;
+		try {
+			m = MinionManager.summon(p, SummonerEntities.ROOTLING, 0);
+		} finally {
+			dev.elsewhere.stub.summoner.GlimmerStub.testFree = free0;
+		}
+		if (m == null) info("setbonus-a: could not summon a test Rootling (slots " + MinionApi.maxSlots(p) + ", Glimmer " + dev.elsewhere.arsenal.glimmer.Glimmer.current(p) + ")");
 		return m;
 	}
 

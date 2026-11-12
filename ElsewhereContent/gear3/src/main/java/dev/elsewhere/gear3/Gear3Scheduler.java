@@ -35,9 +35,17 @@ public final class Gear3Scheduler {
 		ServerLifecycleEvents.SERVER_STOPPING.register(server -> QUEUE.clear());
 	}
 
-	public static void after(MinecraftServer server, int ticks, Runnable r) {
+	/** Queues {@code r} to run {@code ticks} ticks from now; the returned handle can be passed to {@link #cancel}. */
+	public static Object after(MinecraftServer server, int ticks, Runnable r) {
 		now = server.getTickCount();
-		QUEUE.add(new Task(now + ticks, seq++, r));
+		Task t = new Task(now + ticks, seq++, r);
+		QUEUE.add(t);
+		return t;
+	}
+
+	/** Drops a task queued by {@link #after} that has not run yet; false when it already ran or was never queued. */
+	public static boolean cancel(Object handle) {
+		return handle instanceof Task t && QUEUE.remove(t);
 	}
 
 	public static int pending() {

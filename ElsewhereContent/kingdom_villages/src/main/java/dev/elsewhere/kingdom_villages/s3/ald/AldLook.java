@@ -90,7 +90,7 @@ public final class AldLook {
 		BlockPos p = new BlockPos(x, y, z);
 		BlockState s = level.getBlockState(p);
 		if (!(s.getBlock() instanceof DoublePlantBlock)) return;
-		ops.set(s.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.LOWER ? p.above() : p.below(), Blocks.AIR.defaultBlockState());
+		ops.clear(s.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.LOWER ? p.above() : p.below());
 	}
 
 	// ---- materials ---------------------------------------------------------------------------------------------------

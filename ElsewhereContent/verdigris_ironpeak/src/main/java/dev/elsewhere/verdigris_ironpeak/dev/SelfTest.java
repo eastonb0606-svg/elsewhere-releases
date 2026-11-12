@@ -354,6 +354,7 @@ public final class SelfTest {
 		}
 		// --- traders spawn in their structures, once, and come back after a death
 		String[][] sites = {{"engineers_atoll", "tidewright"}, {"clan_hold", "clan_quartermaster"}};
+		List<Runnable> unforce = new java.util.ArrayList<>();
 		for (String[] st : sites) {
 			ServerLevel level = st[0].equals("clan_hold") ? peak : sea;
 			var found = MapOffers.find(level, List.of(Reg.id(st[0])), new BlockPos(0, 64, 0));
@@ -366,6 +367,16 @@ public final class SelfTest {
 			check(!sitesFound.isEmpty(), st[0] + ": structure start is visible to the trader spawner");
 			if (sitesFound.isEmpty()) continue;
 			var site = sitesFound.get(0);
+			// the spot must be entity-visible before ensure(force) runs: a chunk loaded inside the self-test only becomes so once the
+			// server runs its chunk tasks, and until then ensure's own de-dup query (and the cleanup below) cannot see the trader it
+			// just added, so a second call spawned a duplicate (merged-jar run, GOTCHAS: arsenal)
+			int fx = site.spot().getX() >> 4, fz = site.spot().getZ() >> 4;
+			level.setChunkForced(fx, fz, true);
+			unforce.add(() -> level.setChunkForced(fx, fz, false));
+			long visibleBy = System.nanoTime() + 30_000_000_000L;
+			while (!level.isPositionEntityTicking(site.spot()) && System.nanoTime() < visibleBy) {
+				if (!level.getChunkSource().pollTask()) java.util.concurrent.locks.LockSupport.parkNanos(200_000L);
+			}
 			check(level.getBlockState(site.spot()).isAir(), st[0] + ": the trader's spot is free (" + site.spot().toShortString() + ")");
 			int n1 = StructureTraders.ensure(level, at, true), n2 = StructureTraders.ensure(level, at, true);
 			var found1 = level.getEntitiesOfClass(ElsewhereTrader.class, new net.minecraft.world.phys.AABB(site.spot()).inflate(24));
@@ -395,6 +406,7 @@ public final class SelfTest {
 			check(StructureTraders.ensure(level, at, true) == 1, st[1] + ": a missing trader is replaced");
 			level.getEntitiesOfClass(ElsewhereTrader.class, new net.minecraft.world.phys.AABB(site.spot()).inflate(24)).forEach(e -> e.discard());
 		}
+		unforce.forEach(Runnable::run);
 		// maps resolve to generated structures
 		String[][] mapSites = {{"verdigris_sea", "drowned_cathedral"}, {"verdigris_sea", "lighthouse"}, {"ironpeak", "summit_throne"}, {"ironpeak", "proving_grounds"},
 			{"the_end", "ossyra_matriarch_spire"}, {"the_end", "aphelion_shattered_halo"}, {"the_nether", "grunthar_treasure_hall"}, {"the_nether", "solaxis_pyre_cradle"}, {"the_nether", "mournmaw_weeping_basin"}};

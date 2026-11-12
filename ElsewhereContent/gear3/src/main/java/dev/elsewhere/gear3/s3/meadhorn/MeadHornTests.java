@@ -235,11 +235,25 @@ public final class MeadHornTests {
 		}
 	}
 
+	/**
+	 * Every copy of a resource on the classpath, merged (first wins). The core jar ships its own
+	 * assets/elsewhere/lang/en_us.json, so a single getResourceAsStream can return the core file instead of gear3's.
+	 */
 	static JsonObject json(String path) {
-		try (InputStream in = Gear3Content.class.getResourceAsStream(path)) {
-			return in == null ? null : JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
+		String rel = path.startsWith("/") ? path.substring(1) : path;
+		JsonObject out = new JsonObject();
+		boolean any = false;
+		try {
+			for (java.net.URL u : java.util.Collections.list(Gear3Content.class.getClassLoader().getResources(rel))) {
+				try (InputStream in = u.openStream()) {
+					for (var e : JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject().entrySet())
+						if (!out.has(e.getKey())) out.add(e.getKey(), e.getValue());
+					any = true;
+				}
+			}
 		} catch (Exception e) {
 			return null;
 		}
+		return any ? out : null;
 	}
 }

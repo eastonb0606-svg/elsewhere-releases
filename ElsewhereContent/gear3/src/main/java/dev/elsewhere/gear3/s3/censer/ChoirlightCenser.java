@@ -164,7 +164,10 @@ public class ChoirlightCenser extends CasterItem {
 		if (e == holder || !e.isAlive()) return false;
 		if (e instanceof Player o) {
 			if (o.isSpectator()) return false;
-			PlayerTeam a = holder.getTeam(), b = o.getTeam();
+			// Look teams up by scoreboard name: Fabric's FakePlayer overrides getTeam() to always return null, which made
+			// rival-team fake players (and the self-test) count as allies.
+			var sb = holder.level().getScoreboard();
+			PlayerTeam a = sb.getPlayersTeam(holder.getScoreboardName()), b = sb.getPlayersTeam(o.getScoreboardName());
 			return a == null || b == null || a.isAlliedTo(b);
 		}
 		if (e instanceof OwnableEntity o) {

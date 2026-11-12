@@ -59,7 +59,10 @@ public final class LeaderMarchGoal extends Goal {
 		BlockPos o = objective();
 		if (o == null || !(mob.level() instanceof ServerLevel level)) return;
 		if (--repath <= 0) {
-			if (dev.elsewhere.kingdom.armies.swarm.SwarmPaths.joinMarch(mob, o, 0.8)) {
+			if (dev.elsewhere.kingdom.armies.swarm.SwarmPaths.keepMarch(mob, o)) {
+				// 3.0 swarm: still on a live path into this goal cell; keep walking it (swarm off: vanilla moveTo keeps a path to the same target)
+				repath = KingdomConfig.leaderRepathMin + mob.getRandom().nextInt(Math.max(1, KingdomConfig.leaderRepathMax - KingdomConfig.leaderRepathMin + 1));
+			} else if (dev.elsewhere.kingdom.armies.swarm.SwarmPaths.joinMarch(mob, o, 0.8)) {
 				// 3.0 swarm: another squad's (or our own) fresh path from this section into this goal cell; no search
 				repath = KingdomConfig.leaderRepathMin + mob.getRandom().nextInt(Math.max(1, KingdomConfig.leaderRepathMax - KingdomConfig.leaderRepathMin + 1));
 			} else if (KingdomPerf.tryPath(level)) {

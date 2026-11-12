@@ -118,15 +118,15 @@ public final class MothlightSelfTest {
 		check("Mothlight: a 10-damage blow fells exactly one moth (18 -> 12 HP, 2 moths)", sw.moths() == 2 && near(sw.getHealth(), 12), sw.getHealth() + " HP, " + sw.moths());
 		sw.heal(10F);
 		check("Mothlight: healing never raises a fallen moth (stays 12 HP, 2 moths)", sw.moths() == 2 && near(sw.getHealth(), 12), sw.getHealth());
-		sw.setInvulnerableTime(0);
+		dev.elsewhere.gear3.dev.SelfTest.noIFrames(sw);
 		sw.hurtServer(l, hit(l, brute), 3F);
 		check("Mothlight: a light hit only wounds the moth in front (9 HP, still 2 moths)", sw.moths() == 2 && near(sw.getHealth(), 9), sw.getHealth());
 		sw.heal(2F);
 		check("Mothlight: a wounded living moth heals (11 HP)", near(sw.getHealth(), 11), sw.getHealth());
-		sw.setInvulnerableTime(0);
+		dev.elsewhere.gear3.dev.SelfTest.noIFrames(sw);
 		sw.hurtServer(l, hit(l, brute), 100F);
 		check("Mothlight: even a 100-damage blow fells one moth (6 HP, 1 moth)", sw.moths() == 1 && near(sw.getHealth(), 6) && sw.isAlive(), sw.getHealth());
-		sw.setInvulnerableTime(0);
+		dev.elsewhere.gear3.dev.SelfTest.noIFrames(sw);
 		sw.hurtServer(l, hit(l, brute), 100F);
 		check("Mothlight: the last moth falls and the slot frees", !sw.isAlive() && sw.moths() == 0 && MinionManager.count(p) == 0, MinionManager.count(p));
 		brute.discard();
@@ -143,7 +143,7 @@ public final class MothlightSelfTest {
 		check("Mothlight: a 3-moth flurry deals 3 x 1.5 through the minion rules (x minion_damage, Calling)", landed && near(MinionApi.LAST_HIT_DAMAGE, want3),
 			MinionApi.LAST_HIT_DAMAGE + " vs " + want3);
 		check("Mothlight: the hit dusts a non-boss target (Mothdust, 3 s)", target.hasEffect(Mothlight.MOTHDUST) && target.getEffect(Mothlight.MOTHDUST).getDuration() == Mothlight.DUST_TICKS);
-		a.setInvulnerableTime(0);
+		dev.elsewhere.gear3.dev.SelfTest.noIFrames(a);
 		a.hurtServer(l, l.damageSources().generic(), 6F); // not the dusted husk: Mothdust would cut its blow to 5.4
 		Mob target2 = mob(l, EntityTypes.HUSK, 2, -2);
 		double want2 = MinionApi.minionDamage(p, a, target2, 2 * Mothlight.MOTH_DAMAGE);

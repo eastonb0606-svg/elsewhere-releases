@@ -30,11 +30,23 @@ public final class AldOps {
 	/** Pieces that hang from the block above (written after everything else in the section). */
 	final LongOpenHashSet hanging = new LongOpenHashSet();
 
+	/** Cells planned as air only to clear a plant's other half: a real block planned there later takes the cell. */
+	final LongOpenHashSet clears = new LongOpenHashSet();
+
 	public boolean set(BlockPos p, BlockState s) {
 		long k = p.asLong();
-		if (map.containsKey(k)) return false;
+		if (map.containsKey(k)) {
+			if (s.isAir() || !clears.remove(k)) return false;
+			map.put(k, s); // s-asm-vill: a post through tall grass kept an air gap where the grass top was cleared
+			return true;
+		}
 		map.put(k, s);
 		return true;
+	}
+
+	/** Air at {@code p} to clear a plant half, unless something is planned there; a block planned there later replaces it. */
+	public void clear(BlockPos p) {
+		if (set(p, net.minecraft.world.level.block.Blocks.AIR.defaultBlockState())) clears.add(p.asLong());
 	}
 
 	public boolean set(int x, int y, int z, BlockState s) {

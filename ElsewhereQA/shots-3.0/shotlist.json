@@ -34378,7 +34378,7 @@
    "n": 459,
    "line": 511,
    "lane": "s_lod",
-   "item": null,
+   "item": "Distant battle subtitles: one \"Distant battle\" line at 50 blocks, normal lines in the melee",
    "world": "flat",
    "steps": [
     [
@@ -34402,34 +34402,39 @@
      true
     ],
     [
-     "summon",
-     null,
-     "{PersistenceRequired:1b}"
+     "fly"
     ],
     [
-     "view",
-     0.0,
-     12.0,
-     20.0
+     "cmd",
+     "kingdom armies battle aldermark azmar 30"
     ],
     [
-     "chunks"
+     "cmd",
+     "tp @s ^ ^4 ^-50"
     ],
     [
      "wait",
-     40
-    ],
-    [
-     "hurt_to",
-     0.45
-    ],
-    [
-     "wait",
-     10
+     200
     ],
     [
      "shot",
-     "boss_subtitle"
+     "distant_battle_subtitles"
+    ],
+    [
+     "cmd",
+     "tp @s ^ ^ ^44"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "shot",
+     "melee_subtitles"
+    ],
+    [
+     "cmd",
+     "kingdom armies battle stop"
     ],
     [
      "subtitles",
@@ -34438,13 +34443,17 @@
    ],
    "shots": [
     {
-     "slug": "boss_subtitle",
-     "file": "s_lod__boss_subtitle.png"
+     "slug": "distant_battle_subtitles",
+     "file": "s_lod__distant_battle_subtitles.png"
+    },
+    {
+     "slug": "melee_subtitles",
+     "file": "s_lod__melee_subtitles.png"
     }
    ],
    "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
    "setup": "Options > Accessibility > Show Subtitles on; same battle, stand 50 blocks from the fighting",
-   "note": "hurt to 45% of max HP (just past the first threshold); flat stage instead of the arena"
+   "note": "lead 14:50: rebuilt from the army battle scenes (was a boss scene with a null item that crashed shard 7)"
   },
   {
    "n": 460,
