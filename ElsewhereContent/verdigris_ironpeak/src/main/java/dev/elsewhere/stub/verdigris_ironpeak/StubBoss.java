@@ -444,14 +444,14 @@ public abstract class StubBoss extends Monster {
 			return;
 		}
 		// The seal: a translucent ring of light at the arena edge.
-		if (tickCount % 10 == 0) {
+		if (tickCount % 5 == 0) {
 			double r = arenaRadius + 1;
-			DustParticleOptions dust = new DustParticleOptions(sealColor(), 1.2F);
-			for (int i = 0; i < 48; i++) {
-				double a = Math.PI * 2 * (i + (tickCount / 10 % 2) * 0.5) / 48;
-				// P13: one packet of 2 dust per column over the same 1-6 band, was 3 packets of 1
+			DustParticleOptions dust = new DustParticleOptions(sealColor(), 1.6F);
+			// w4-vfx: 96 columns (about 1 block apart at r 16), 3 dust each every 5 ticks, so the ring reads as one wall, not pillars
+			for (int i = 0; i < 96; i++) {
+				double a = Math.PI * 2 * (i + (tickCount / 5 % 2) * 0.5) / 96;
 				level.sendParticles(dust, arenaCenter.getX() + 0.5 + Math.cos(a) * r,
-					arenaCenter.getY() + 3.5, arenaCenter.getZ() + 0.5 + Math.sin(a) * r, 2, 0, 1.25, 0, 0);
+					arenaCenter.getY() + 3.0, arenaCenter.getZ() + 0.5 + Math.sin(a) * r, 3, 0, 1.6, 0, 0);
 			}
 		}
 	}

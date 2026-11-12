@@ -62,8 +62,7 @@
     ],
     "kingdom_court": [
       "^dev/elsewhere/kingdom_court/DevEntry\\.java$",
-      "^assets/elsewhere/sounds\\.json$",
-      "^assets/elsewhere/sounds/music/boss_court_.*\\.ogg$"
+      "^assets/elsewhere/sounds/music/boss_court_realm\\.ogg$"
     ],
     "kingdom_villages": [
       "^dev/elsewhere/kingdom_villages/DevEntry\\.java$"
@@ -332,6 +331,7 @@
   "snapshot_from": {},
   "art2_overlay": "ElsewhereContent/art2",
   "snapshot_extra": {
+    "kingdom_court": [["ElsewhereBeta/tools/court_sounds_beta.json", "src/main/resources/assets/elsewhere/sounds.json"]],
     "gear2": [
       [
         "ElsewhereContent/gear2/INTEGRATION/jei_info_gear2.json",

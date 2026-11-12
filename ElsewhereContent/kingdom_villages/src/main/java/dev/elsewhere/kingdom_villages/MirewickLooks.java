@@ -266,7 +266,7 @@ public final class MirewickLooks {
 	 * grass in a real village never blocks a stilt or a post. Never a fluid, never half of a tall plant (that would leave the other half).
 	 */
 	static boolean open(BlockState s, boolean inBox) {
-		return s.isAir() || inBox && s.canBeReplaced() && s.getFluidState().isEmpty() && !(s.getBlock() instanceof DoublePlantBlock);
+		return s.isAir() || inBox && (s.canBeReplaced() || s.is(BlockTags.SMALL_FLOWERS)) && s.getFluidState().isEmpty() && !(s.getBlock() instanceof DoublePlantBlock);
 	}
 
 	/** Open space the plan may fill: loaded, in the village footprint, not already planned. */
@@ -386,7 +386,7 @@ public final class MirewickLooks {
 			return false;
 		}
 		BlockPos top = new BlockPos(x, c.level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1, z);
-		return c.level.isLoaded(top) && c.level.getBlockState(top).is(Blocks.DIRT_PATH) && c.level.getBlockState(top.above()).getCollisionShape(c.level, top.above()).isEmpty() && c.level.getBlockState(top.above()).getFluidState().isEmpty(); // a flower or grass on the path (no collision) does not cut the street
+		return c.level.isLoaded(top) && c.level.getBlockState(top).is(Blocks.DIRT_PATH) && open(c.level.getBlockState(top.above()), true); // a flower or short grass on the path does not cut the street, and the leg may lay over it (same test as free())
 	}
 
 	static void boardwalk(B b) {
@@ -502,10 +502,7 @@ public final class MirewickLooks {
 			int cut = n;
 			for (int i = 0; i < n && cut == n; i++) {
 				if (d[i] - s[i] > 4 || d[i] < s[i] || i > 0 && Math.abs(d[i] - d[i - 1]) > 1) cut = i;
-				else if (!(anchored && i == 0)) for (int y = s[i]; y <= d[i] && cut == n; y++) if (!free(c, new BlockPos(xs[i], y, zs[i]))) {
-					cut = i;
-					if (lastWalkWhy.length() < 700) lastWalkWhy += " {free " + xs[i] + "," + y + "," + zs[i] + " " + level.getBlockState(new BlockPos(xs[i], y, zs[i])).getBlock().getDescriptionId() + " used " + c.used.contains(new BlockPos(xs[i], y, zs[i]).asLong()) + " fp " + c.r.insideFootprint(new BlockPos(xs[i], y, zs[i]), BlockWriter.UP) + " i " + i + "}";
-				}
+				else if (!(anchored && i == 0)) for (int y = s[i]; y <= d[i] && cut == n; y++) if (!free(c, new BlockPos(xs[i], y, zs[i]))) cut = i;
 			}
 			if (cut < n) {
 				n = cut;

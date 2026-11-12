@@ -244,7 +244,7 @@ public final class FitBuilders {
 	static void bowl(FitWriter w, FitPiece p) {
 		int ox = p.origin.getX(), oy = p.origin.getY(), oz = p.origin.getZ(), q = p.ix, R = p.param;
 		BlockState sand = Blocks.SAND.defaultBlockState(), sst = Blocks.SANDSTONE.defaultBlockState(), bone = Blocks.BONE_BLOCK.defaultBlockState();
-		int ribQ = (int) (p.seed & 3);
+		int ribQ = 1; // the south-west slope: in view of both the south overview and the east-side shot
 		double qa = quadrantAngle(q);
 		for (int x = w.x0; x <= w.x1; x++) for (int z = w.z0; z <= w.z1; z++) {
 			int dx = x - ox, dz = z - oz;
@@ -256,10 +256,13 @@ public final class FitBuilders {
 			if (top >= oy + 30) continue; // a dune taller than the scan: the slope ends against it, nothing is left hanging
 			int surf;
 			if (top > yb) {
-				w.clear(x, z, yb + 1, oy + 30);
-				w.set(x, yb, z, w.h(x, 1, z) % 17 == 0 ? sst : sand);
-				if (!w.solid(x, yb - 1, z)) w.set(x, yb - 1, z, sst);
-				surf = yb;
+				// near the rim the cut rises to meet the dune: a steeper sand slope, never a sheer wall at the crater edge
+				double t = Math.max(0.0, Math.min(1.0, (r - (R - 12)) / 12.0));
+				int yc = Math.min(top, yb + (int) Math.floor((top - yb) * t));
+				w.clear(x, z, yc + 1, oy + 30);
+				w.set(x, yc, z, w.h(x, 1, z) % 17 == 0 ? sst : sand);
+				if (!w.solid(x, yc - 1, z)) w.set(x, yc - 1, z, sst);
+				surf = yc;
 			} else if (r <= 28 && top < yb) {
 				int to = Math.min(yb, top + 5); // a low sand rampart so the pit never opens sideways
 				for (int y = top + 1; y < to; y++) w.set(x, y, z, sst);
@@ -271,12 +274,12 @@ public final class FitBuilders {
 			if (q == ribQ) {
 				for (int j = 0; j < 5; j++) {
 					double aj = qa - 0.44 + 0.22 * j;
-					if (Math.abs(angDiff(ang, aj)) * r < 0.6 && r >= 26 && r <= 33) {
-						int hgt = (int) Math.round(3.2 * Math.sin(Math.PI * (r - 26) / 7.0));
+					if (Math.abs(angDiff(ang, aj)) * r < 1.0 && r >= 26 && r <= 34) {
+						int hgt = (int) Math.round(4.2 * Math.sin(Math.PI * (r - 26) / 8.0));
 						for (int y = 1; y <= hgt; y++) w.set(x, surf + y, z, bone);
 					}
 				}
-				if (Math.abs(r - 34) <= 0.5 && Math.abs(angDiff(ang, qa)) <= 0.55) w.set(x, surf + 1, z, bone);
+				if (Math.abs(r - 35) <= 0.8 && Math.abs(angDiff(ang, qa)) <= 0.62) w.set(x, surf + 1, z, bone);
 			}
 			// a broken sandstone marker on the rim of each quadrant
 			if (r >= 37.5 && r <= 38.5 && Math.abs(angDiff(ang, qa)) * r < 0.7) {
@@ -419,7 +422,9 @@ public final class FitBuilders {
 				boolean path = (gx == 0 && Math.abs(dx) <= 1) || (gz == 0 && Math.abs(dz) <= 1);
 				BlockState top = outer ? tuffB : path ? Blocks.POLISHED_TUFF.defaultBlockState() : Blocks.GRASS_BLOCK.defaultBlockState();
 				w.set(x, y, z, top);
-				w.foundation(x, z, y, outer ? tuffB : dirt, outer ? tuffB : dirt, outer ? tuffB : tuff, 12);
+				// a column over a pit or cave deeper than the usual cap still gets carried down to real ground (never a floating cell column)
+				if (w.foundation(x, z, y, outer ? tuffB : dirt, outer ? tuffB : dirt, outer ? tuffB : tuff, 12) < 0)
+					w.foundation(x, z, y, outer ? tuffB : dirt, outer ? tuffB : dirt, outer ? tuffB : tuff, 64);
 				// steps up to the platform on the axis paths
 				int k = gz != 0 && gx == 0 ? Math.abs(dz) - 9 : gx != 0 && gz == 0 ? Math.abs(dx) - 9 : 99;
 				int n = oy - y;

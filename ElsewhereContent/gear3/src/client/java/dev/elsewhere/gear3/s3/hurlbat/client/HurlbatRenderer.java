@@ -30,7 +30,9 @@ public class HurlbatRenderer extends EntityRenderer<HurlbatEntity, HurlbatRender
 	/** Model-space pivots from the sprite (pixel (px, py) -> (px/16 - 0.5, 0.5 - py/16)): head centre (9.5, 5), blade edge (13, 5). */
 	static final float HEAD_X = 0.094F, HEAD_Y = 0.1875F, EDGE_X = 0.3125F, EDGE_Y = 0.1875F;
 	/** How far the stuck blade sinks past the hit point, in blocks. */
-	static final float SINK = 0.1F;
+	static final float SINK = 0.25F;
+	/** Stuck pose: the sprite's haft-to-head axis points 61.9 degrees above the sprite's +X; the pivot is the top of the head. */
+	static final float AXIS_DEG = 61.9F, TIP_X = 0.094F, TIP_Y = 0.3125F;
 
 	public static void register() {
 		if (Hurlbats.ENTITY != null) EntityRendererRegistry.register(Hurlbats.ENTITY, HurlbatRenderer::new);
@@ -73,15 +75,24 @@ public class HurlbatRenderer extends EntityRenderer<HurlbatEntity, HurlbatRender
 			pose.rotateDegrees(Axis.ZP, s.xRot);
 			if (s.shake > 0.0F) pose.rotateDegrees(Axis.ZP, -Mth.sin(s.shake * 3.0F) * s.shake);
 			if (s.stuck) {
-				pose.translate(SINK, 0.0F, 0.0F);
-				pose.scale(SCALE, SCALE, SCALE);
-				pose.translate(-EDGE_X, -EDGE_Y, 0.0F);
+				// the haft runs along the flight line (standing out of the face), the head buried; a second sprite rolled 90 degrees about
+				// the flight line crosses the first, so it reads as a solid blade from every side instead of one flat sticker
+				for (int i = 0; i < 2; i++) {
+					pose.pushPose();
+					pose.translate(SINK, 0.0F, 0.0F);
+					pose.scale(SCALE, SCALE, SCALE);
+					if (i == 1) pose.rotateDegrees(Axis.XP, 90.0F);
+					pose.rotateDegrees(Axis.ZP, -AXIS_DEG);
+					pose.translate(-TIP_X, -TIP_Y, 0.0F);
+					s.item.submit(pose, collector, s.lightCoords, OverlayTexture.NO_OVERLAY, s.outlineColor);
+					pose.popPose();
+				}
 			} else {
 				pose.scale(SCALE, SCALE, SCALE);
 				pose.rotateDegrees(Axis.ZP, -s.ageInTicks * SPIN);
 				pose.translate(-HEAD_X, -HEAD_Y, 0.0F);
+				s.item.submit(pose, collector, s.lightCoords, OverlayTexture.NO_OVERLAY, s.outlineColor);
 			}
-			s.item.submit(pose, collector, s.lightCoords, OverlayTexture.NO_OVERLAY, s.outlineColor);
 			pose.popPose();
 		}
 		super.submit(s, pose, collector, camera);

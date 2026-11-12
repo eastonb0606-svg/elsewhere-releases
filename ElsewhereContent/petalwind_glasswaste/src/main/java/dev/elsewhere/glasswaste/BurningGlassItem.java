@@ -48,7 +48,7 @@ public class BurningGlassItem extends SpyglassItem {
 	}
 
 	public static void beam(ServerLevel level, Vec3 from, Vec3 to) {
-		int n = (int) Math.max(4, from.distanceTo(to) * 1.25); // P13: was 2 per block
+		int n = (int) Math.max(4, from.distanceTo(to) * 2.5); // w4-vfx: 2.5 per block (0.4 spacing) so the beam is one line, not puffs
 		for (int i = 0; i <= n; i++) {
 			Vec3 p = from.lerp(to, i / (double) n);
 			level.sendParticles(ParticleTypes.END_ROD, p.x, p.y, p.z, 1, 0, 0, 0, 0);

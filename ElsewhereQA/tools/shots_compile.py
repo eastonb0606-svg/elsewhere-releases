@@ -777,6 +777,10 @@ def apply_overrides(scenes):
                 sc["steps"] = ov["steps"]
                 if sc["world"] == "none":
                     sc["world"] = "flat"
+                if ov.get("world") in ("flat", "normal"):
+                    sc["world"] = ov["world"]
+                elif sc["world"] == "flat" and any(st and st[0] in ("locate", "locate_near") for st in ov["steps"]):
+                    sc["world"] = "normal"  # lead 17:35: a flat stage has no structures to locate (f-wave castle locate fails)
                 slugs = [st[1] for st in ov["steps"] if st[0] in ("shot", "logcheck")]
                 if slugs != [x["slug"] for x in sc["shots"]]:
                     print("override: %s: %s shot slugs %s differ from scene shots %s" % (tag, fn, slugs, [x["slug"] for x in sc["shots"]]))

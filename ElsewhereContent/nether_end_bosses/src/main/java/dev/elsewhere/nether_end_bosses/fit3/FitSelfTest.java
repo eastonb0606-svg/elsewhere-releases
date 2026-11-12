@@ -157,10 +157,17 @@ public final class FitSelfTest {
 		a.build(one, o);
 		one.finish();
 		int diff = 0;
+		StringBuilder dd = new StringBuilder();
 		k = 0;
-		for (int yy = y0; yy <= y1; yy++) for (int dz = -23; dz <= 23; dz++) for (int dx = -23; dx <= 23; dx++)
-			if (snap[k++] != level.getBlockState(p.set(x + dx, yy, z + dz))) diff++;
-		check.accept(diff == 0, f("fit3: %s built chunk by chunk equals the one-shot build (%d blocks differ at %s; %d writes)", a.id(), diff, o.toShortString(), one.writes));
+		for (int yy = y0; yy <= y1; yy++) for (int dz = -23; dz <= 23; dz++) for (int dx = -23; dx <= 23; dx++) {
+			BlockState was = snap[k++];
+			BlockState now = level.getBlockState(p.set(x + dx, yy, z + dz));
+			if (was != now) {
+				diff++;
+				if (diff <= 6) dd.append(p.toShortString()).append(" chunkwise ").append(was).append(" -> whole ").append(now).append("; ");
+			}
+		}
+		check.accept(diff == 0, f("fit3: %s built chunk by chunk equals the one-shot build (%d blocks differ at %s; %d writes)", a.id(), diff, o.toShortString(), one.writes) + (diff == 0 ? "" : " :: " + dd));
 		check.accept(one.outsideWatch == 0 && one.writes > 500, f("fit3: %s writes stay in the 3x3 chunks around its centre (%d outside of %d)", a.id(), one.outsideWatch, one.writes));
 		check.accept(valuable == 0 && one.valuable == 0, f("fit3: %s places no valuable blocks (gold, iron, diamond, emerald, lapis, netherite, gilded blackstone, ores: %d)", a.id(), valuable + one.valuable));
 		BlockState anchor = level.getBlockState(a.anchor(o));

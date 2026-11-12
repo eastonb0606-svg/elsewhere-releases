@@ -93,6 +93,13 @@ public class TraderScreen extends Screen {
 		buttons();
 	}
 
+	/** Flips {@code SoldierNameplates.suppress} (kingdom's client class; reflective so this module needs no compile-time link to it). */
+	private static void plates(boolean suppress) {
+		try {
+			Class.forName("dev.elsewhere.kingdom.client.SoldierNameplates").getField("suppress").setBoolean(null, suppress);
+		} catch (ReflectiveOperationException | LinkageError ignored) {}
+	}
+
 	record Line(Component text, int color) {}
 
 	Component price(String key, Object... args) {
@@ -175,7 +182,7 @@ public class TraderScreen extends Screen {
 		};
 		boolean browseOk = !hostile || "treasury".equals(browse);
 		b.add(button(browse, () -> minecraft.gui.setScreen(new ChatScreen("", false)), browseOk ? browse : "hostile", browseOk));
-		if (role == Diplomacy.Role.LAWSPEAKER || role == Diplomacy.Role.ENVOY || role == Diplomacy.Role.CLERK)
+		if (role != Diplomacy.Role.AUCTIONEER && role != Diplomacy.Role.CARAVAN_MASTER)
 			b.add(button("tribute", () -> minecraft.gui.setScreen(new ChatScreen("/diplomacy tribute ", false)), "tribute", true));
 		switch (role) {
 			case LAWSPEAKER -> b.add(button("claim", () -> run("diplomacy claim"), hostile ? "hostile" : "claim", !hostile));
@@ -234,7 +241,14 @@ public class TraderScreen extends Screen {
 		g.fill(bx, by, bx + bw, by + bh, style.inset);
 		g.outline(bx, by, bw, bh, style.insetEdge);
 		LivingEntity e = trader();
-		if (e != null) InventoryScreen.extractEntityInInventoryFollowsMouse(g, bx + 1, by + 1, bx + bw - 1, by + bh - 1, 46, 0.0625F, mouseX, mouseY, e);
+		if (e != null) {
+			plates(true); // no world nameplate in the portrait inset
+			try {
+				InventoryScreen.extractEntityInInventoryFollowsMouse(g, bx + 1, by + 1, bx + bw - 1, by + bh - 1, 46, 0.0625F, mouseX, mouseY, e);
+			} finally {
+				plates(false);
+			}
+		}
 		else g.blitSprite(RenderPipelines.GUI_TEXTURED, style.crest, bx + bw / 2 - 16, by + bh / 2 - 16, 32, 32);
 		// greeting, Standing and the price lines
 		int x = px + 96, y = py + 40, w = pw - 104;

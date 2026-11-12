@@ -867,8 +867,9 @@ public final class CastleLayout {
 			}
 		}
 		// palisade; 3.0 fit (fv 2): each post stands on its own ground and the top follows the smoothed contour
-		int[] pal = l.p.ground != null ? ringLift(l, 22, -8) : null; // 3.0 visual QA (generation): the top may drop with the ground (down to 8 below the floor)
 		boolean azmar = CastleKit.kitOf(l.p) == CastleKit.Kit.AZMAR;
+		// 3.0 visual QA (generation): the timber palisade's top may drop with the ground (down to 8 below the floor); Azmar's banded curtain keeps its floor-level course
+		int[] pal = l.p.ground != null ? ringLift(l, 22, azmar ? 0 : -8) : null;
 		for (int x = -22; x <= 22; x++) for (int z = -22; z <= 22; z++) {
 			if (Math.max(Math.abs(x), Math.abs(z)) != 22) continue;
 			if (z == 22 && Math.abs(x) <= 1) continue;

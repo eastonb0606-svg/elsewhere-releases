@@ -28,6 +28,7 @@ import net.minecraft.world.entity.ai.util.DefaultRandomPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
@@ -117,6 +118,47 @@ public class Townsfolk extends PathfinderMob implements dev.elsewhere.kingdom.id
 		ItemStack held = r.held();
 		setItemSlot(EquipmentSlot.MAINHAND, held.isEmpty() ? ItemStack.EMPTY : held.copy());
 		for (EquipmentSlot s : EquipmentSlot.values()) setDropChance(s, 0F);
+	}
+
+	/** A summoned stray (no town, default look) gets a kingdom, role, skin and tool of its own instead of 36 clones of the default peasant. */
+	private boolean strayChecked;
+
+	@Override
+	protected void readAdditionalSaveData(ValueInput in) {
+		super.readAdditionalSaveData(in);
+		// QA/commands: {TownsfolkLook:"azmar/priest/1"} sets the look of a /summoned resident
+		String lk = in.getStringOr("TownsfolkLook", "");
+		String[] p = lk.split("/");
+		if (p.length == 3) {
+			TownsfolkRoles.Kingdom k = TownsfolkRoles.of(Identifier.fromNamespaceAndPath("elsewhere", p[0]));
+			TownsfolkRoles.Role r = k == null ? null : k.role(p[1]);
+			if (r != null) {
+				try {
+					setup("", k.faction(), r, Integer.parseInt(p[2]));
+					strayChecked = true;
+				} catch (NumberFormatException ignored) {}
+			}
+		}
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (!strayChecked && !level().isClientSide()) {
+			strayChecked = true;
+			if (townKey.isEmpty() && DEFAULT_LOOK.equals(look())) randomiseStray();
+		}
+	}
+
+	private void randomiseStray() {
+		Towns.Town near = Towns.near(blockPosition(), null, 96);
+		TownsfolkRoles.Kingdom k = near == null ? null : TownsfolkRoles.of(near.faction);
+		if (k == null) {
+			java.util.List<TownsfolkRoles.Kingdom> all = new java.util.ArrayList<>(TownsfolkRoles.all().values());
+			if (all.isEmpty()) return;
+			k = all.get(getRandom().nextInt(all.size()));
+		}
+		setup("", k.faction(), k.pick(getRandom().nextDouble()), getRandom().nextInt(TownsfolkRoles.VARIANTS));
 	}
 
 	/** New plan from the manager: walk the waypoints to {@code to}, then take {@code pose}. */

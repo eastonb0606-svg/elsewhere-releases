@@ -34,6 +34,7 @@ public class AzmarSoldier extends KingdomSoldier implements Guardable {
 
 	public AzmarSoldier(EntityType<? extends KingdomSoldier> type, Level level) {
 		super(type, level);
+		setFaction(AzmarContent.FACTION); // a /summoned or egg-spawned Azmar soldier is Azmar's (sand-dancer roster, lapis tabard), not the base class's Aldermark default
 	}
 
 	public boolean isSandDancer() {

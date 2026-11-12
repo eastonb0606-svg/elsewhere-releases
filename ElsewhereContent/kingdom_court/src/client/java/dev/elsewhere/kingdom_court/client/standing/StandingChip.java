@@ -50,7 +50,7 @@ public final class StandingChip {
 	private static int builtId = Integer.MIN_VALUE;
 	private static Object builtName, builtEntry;
 	private static String builtFaction;
-	private static FormattedCharSequence nameLine, valueLine, warnLine;
+	private static FormattedCharSequence nameLine, kingdomLine, valueLine, warnLine;
 	private static int chipW, valueStanding;
 	private static boolean hasValue;
 	private static KingdomStyle style = KingdomStyle.ALDERMARK;
@@ -158,14 +158,15 @@ public final class StandingChip {
 		if (f.isEmpty()) return;
 		StandingCache.Entry e = StandingCache.get(f);
 		build(mc.font, r, f, e);
-		int h = warnLine != null ? 42 : 32;
+		int h = warnLine != null ? 52 : 42;
 		int x = (g.guiWidth() - chipW) / 2, y = g.guiHeight() / 2 + 20;
 		g.blitSprite(RenderPipelines.GUI_TEXTURED, style.chip, x, y, chipW, h, KingdomStyle.fade(0xFFFFFFFF, a));
 		g.blitSprite(RenderPipelines.GUI_TEXTURED, style.crest, x + 6, y + 8, 16, 16, KingdomStyle.fade(0xFFFFFFFF, a));
 		g.text(mc.font, nameLine, x + 27, y + 5, KingdomStyle.fade(style.title, a), false);
-		g.text(mc.font, valueLine, x + 27, y + 15, KingdomStyle.fade(hasValue ? style.text : style.dim, a), false);
-		if (hasValue) StandingBar.draw(g, x + 27, y + 26, chipW - 34, 2, valueStanding, style, a);
-		if (warnLine != null) g.text(mc.font, warnLine, x + 27, y + 31, KingdomStyle.fade(0xFFF07A6A, a), false);
+		g.text(mc.font, kingdomLine, x + 27, y + 15, KingdomStyle.fade(style.dim, a), false);
+		g.text(mc.font, valueLine, x + 27, y + 25, KingdomStyle.fade(hasValue ? style.text : style.dim, a), false);
+		if (hasValue) StandingBar.draw(g, x + 27, y + 36, chipW - 34, 2, valueStanding, style, a);
+		if (warnLine != null) g.text(mc.font, warnLine, x + 27, y + 41, KingdomStyle.fade(0xFFF07A6A, a), false);
 	}
 
 	/** Rebuilds the chip's lines when the ruler, its name or the Standing copy changed; otherwise it returns at once without allocating. */
@@ -179,6 +180,7 @@ public final class StandingChip {
 		Component name = custom != null ? custom : r.getDisplayName();
 		style = KingdomStyle.of(faction);
 		nameLine = clip(font, name, 170);
+		kingdomLine = clip(font, KingdomStyle.name(faction), 170);
 		Component value;
 		if (e == null) {
 			hasValue = false;
@@ -194,7 +196,7 @@ public final class StandingChip {
 			warnLine = warn == null ? null : clip(font, Component.translatable(StandingText.chipKey(warn)), 170);
 		}
 		valueLine = clip(font, value, 170);
-		int w = Math.max(font.width(nameLine), font.width(valueLine));
+		int w = Math.max(Math.max(font.width(nameLine), font.width(kingdomLine)), font.width(valueLine));
 		if (warnLine != null) w = Math.max(w, font.width(warnLine));
 		chipW = Math.max(110, w + 34);
 	}

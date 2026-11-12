@@ -59,6 +59,20 @@ public final class SoldierHeraldry {
 		capesOn = on[1];
 	}
 
+	private static final Map<Identifier, Identifier> GREY = new IdentityHashMap<>();
+
+	/** A remnant's faded heraldry: the desaturated twin of a kingdom texture ({@code <kingdom>_remnant_<rest>.png}); a plain multiply cannot grey a blue. */
+	static Identifier grey(Identifier t) {
+		Identifier g = GREY.get(t);
+		if (g == null) {
+			String p = t.getPath();
+			int slash = p.lastIndexOf('/') + 1, us = p.indexOf('_', slash);
+			g = us < 0 ? t : Identifier.fromNamespaceAndPath(t.getNamespace(), p.substring(0, us) + "_remnant" + p.substring(us));
+			GREY.put(t, g);
+		}
+		return g;
+	}
+
 	static Heraldry.Style style(String faction) {
 		Heraldry.Style st = STYLES.get(faction);
 		if (st == null && !STYLES.containsKey(faction)) {
@@ -96,12 +110,13 @@ public final class SoldierHeraldry {
 		if (st == null) return;
 		double d2 = s.distanceToCameraSq;
 		s.heraldryTint = st.tint();
-		if (emblemsOn && Heraldry.emblemVisible(d2)) s.emblem = st.kingdom().emblem;
+		if (emblemsOn && Heraldry.emblemVisible(d2)) s.emblem = st.remnant() ? grey(st.kingdom().emblem) : st.kingdom().emblem;
 		// a subclassed state (the court's rulers) brings its own cape layer; only plain soldiers get this one
 		if (!capesOn || s.getClass() != KingdomSoldierRenderer.SoldierRenderState.class) return;
 		int lod = Heraldry.capeLod(d2, KingdomClientConfig.detail == KingdomClientConfig.Detail.LOW);
 		Identifier cape = lod == Heraldry.CAPE_NONE ? null : st.cape(e.rank());
 		if (cape == null) return;
+		if (st.remnant()) cape = grey(cape);
 		s.capeTexture = cape;
 		s.capeWave = lod == Heraldry.CAPE_WAVE;
 		// motion: smoothed walk speed and distance (the mount's when riding), direction from the last tick's movement

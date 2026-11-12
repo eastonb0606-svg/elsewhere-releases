@@ -13,6 +13,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityAttachment;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 
 /**
@@ -35,6 +37,8 @@ public final class SoldierNameplates {
 	public static final double RANGE = Nameplate.RANGE;
 	private static Boolean enabled;
 	private static boolean hooked;
+	/** Set by GUI portraits (kingdom_court's trader dialogue) around their entity draw: no plate, no vanilla tag. */
+	public static boolean suppress;
 
 	/** Cached soldier plates per synced faction id: index rank * 3 + lod. Rebuilt when the tint changes. */
 	private static final Map<String, Plates> SOLDIER = new HashMap<>();
@@ -79,6 +83,10 @@ public final class SoldierNameplates {
 	public static void apply(KingdomSoldier e, AvatarRenderState state) {
 		if (!(state instanceof KingdomSoldierRenderer.SoldierRenderState s)) return;
 		s.plate = Nameplate.NONE;
+		if (suppress) {
+			state.nameTag = null; // a GUI portrait (the trader dialogue) never carries a world nameplate
+			return;
+		}
 		if (!enabled() || e.isInvisible() || !e.isAlive() || e.isCrouching() || e.isDiscrete()) return;
 		Minecraft mc = Minecraft.getInstance();
 		if (mc.gui.hud.isHidden() || e == mc.getCameraEntity()) return;
@@ -94,8 +102,18 @@ public final class SoldierNameplates {
 		state.nameTag = plate;
 		Vec3 a = e.getAttachments().getNullable(EntityAttachment.NAME_TAG, 0, e.getYRot());
 		state.nameTagAttachment = a != null ? a : new Vec3(0.0, e.getBbHeight() + 0.5, 0.0);
-		state.isDiscrete = true; // one NORMAL (depth-tested) draw instead of vanilla's see-through pair
+		// Vanilla's discrete draw is one depth-tested pass at half alpha (the faint plate the QA judges flagged). A soldier with a clear line of sight
+		// from the camera gets the normal full-alpha draw instead; a plate behind a wall or a block stays discrete so it never shows through.
+		state.isDiscrete = !(lod == Nameplate.FULL && clearView(mc, e));
 		s.plate = (byte) lod;
+	}
+
+	/** True when no block lies between the camera and the soldier's head (checked only for full plates, within 8 blocks). */
+	private static boolean clearView(Minecraft mc, KingdomSoldier e) {
+		if (mc.level == null || mc.gameRenderer == null) return false;
+		Vec3 from = mc.gameRenderer.mainCamera().position();
+		Vec3 to = e.position().add(0.0, e.getBbHeight() + 0.3, 0.0);
+		return mc.level.clip(new ClipContext(from, to, ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, e)).getType() == HitResult.Type.MISS;
 	}
 
 	static Component soldierPlate(int rank, String fid, int argb, int lod) {

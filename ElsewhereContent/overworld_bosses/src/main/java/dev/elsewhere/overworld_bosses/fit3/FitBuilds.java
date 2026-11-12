@@ -723,6 +723,12 @@ public final class FitBuilds {
 		}
 		// the mast breaks the surface with its broken yard
 		for (int y = keel + 1; y <= sea + 2; y++) if (s.writes(hx, hz)) s.set(hx, y, hz, Blocks.SPRUCE_LOG.defaultBlockState());
+		// a patch of broken deck planks floats at the waterline around the mast, so the mast and yard read as the wreck's, never adrift
+		for (int fx = -1; fx <= 1; fx++) for (int fz = -1; fz <= 1; fz++) {
+			if ((fx != 0 || fz != 0) && s.writes(hx + fx, hz + fz) && hash(o, fx + p.a * 5, fz, 0, 74) < 0.75) {
+				s.set(hx + fx, sea, hz + fz, hash(o, fx, fz, p.a, 75) < 0.5 ? Blocks.DARK_OAK_PLANKS.defaultBlockState() : Blocks.SPRUCE_PLANKS.defaultBlockState());
+			}
+		}
 		for (int k = -1; k <= 1; k += 2) {
 			int x = hx + (alongX ? 0 : k), z = hz + (alongX ? k : 0);
 			if (s.writes(x, z) && hash(o, p.a, k, 0, 73) < 0.7) s.set(x, sea + 1, z, log(Blocks.STRIPPED_SPRUCE_LOG, alongX ? Direction.Axis.Z : Direction.Axis.X));

@@ -224,7 +224,15 @@ public final class PGStructures {
 					if (y < 50) return Optional.empty();
 					base = new BlockPos(x, y - 6, z);
 				}
-				default -> base = new BlockPos(x, 190, z); // the Eye floats in the sky
+				default -> {
+					// the Eye floats in the sky, always clear of the land under its 48-wide footprint (never sunk into an island)
+					int hi = y;
+					for (int ex = -24; ex <= 24; ex += 12) for (int ez = -24; ez <= 24; ez += 12) {
+						hi = Math.max(hi, context.chunkGenerator().getFirstOccupiedHeight(x + ex, z + ez, Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor(), context.randomState()));
+					}
+					int top = context.heightAccessor().getMaxY() - 36;
+					base = new BlockPos(x, Math.min(top, Math.max(hi + 34, 120)), z);
+				}
 			}
 			if (!context.validBiome().test(context.biomeResolver().getNoiseBiome(x >> 2, Math.max(y, 64) >> 2, z >> 2))
 				&& !kind.equals(EYE)) return Optional.empty();

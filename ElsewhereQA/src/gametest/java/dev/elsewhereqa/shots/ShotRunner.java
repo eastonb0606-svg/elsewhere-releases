@@ -276,6 +276,35 @@ public class ShotRunner implements FabricClientGameTest {
 				useHeld = false;
 			}
 			case "attack" -> ctx.getInput().pressKey(o -> o.keyAttack);
+			// ["scroll", x, y, amount]: cursor to (x, y) in window pixels, then one wheel scroll (negative = down; scrolls a trade list)
+			// ["menu_click", <slot index or item id>, "shift"?]: in the OPEN container screen, hover the slot and left-click it (shift-click with "shift")
+			case "menu_click" -> {
+				String w = a.get(1).getAsString();
+				boolean shift = a.size() > 2 && "shift".equals(a.get(2).getAsString());
+				int idx = w.matches("\\d+") ? Integer.parseInt(w) : slotOf(ctx, w);
+				hoverSlot(ctx, idx);
+				if (shift) {
+					ctx.getInput().holdShift();
+				}
+				ctx.getInput().pressMouse(0);
+				ctx.waitTicks(2);
+				if (shift) {
+					ctx.getInput().releaseShift();
+				}
+			}
+			// ["click_at", x, y]: cursor to (x, y) in window pixels, left-click
+			case "click_at" -> {
+				ctx.getInput().setCursorPos(a.get(1).getAsDouble(), a.get(2).getAsDouble());
+				ctx.waitTicks(2);
+				ctx.getInput().pressMouse(0);
+				ctx.waitTicks(2);
+			}
+			// ["type", "<text>"]: types into the focused widget (JEI search box)
+			case "type" -> ctx.getInput().typeChars(a.get(1).getAsString());
+			case "scroll" -> {
+				ctx.getInput().setCursorPos(a.get(1).getAsDouble(), a.get(2).getAsDouble());
+				ctx.getInput().scroll(a.get(3).getAsDouble());
+			}
 			case "client_set" -> clientSet(ctx, a.get(1).getAsString(), a.get(2).getAsString(), a.get(3));
 			case "player_cmd" -> {
 				String c = a.get(1).getAsString();

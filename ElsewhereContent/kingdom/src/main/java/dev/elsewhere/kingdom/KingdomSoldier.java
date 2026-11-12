@@ -822,9 +822,12 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 	@Override
 	protected void readAdditionalSaveData(ValueInput in) {
 		super.readAdditionalSaveData(in);
-		Identifier u = Identifier.tryParse(in.getStringOr("KingdomUnit", ""));
+		// an absent key reads "" and Identifier.tryParse("") is a valid empty "minecraft:", which used to turn a /summoned captain into a man-at-arms
+		String us = in.getStringOr("KingdomUnit", "");
+		Identifier u = us.isEmpty() ? null : Identifier.tryParse(us);
 		if (u != null) unitId = u;
-		Identifier f = Identifier.tryParse(in.getStringOr("KingdomFaction", ""));
+		String fs = in.getStringOr("KingdomFaction", "");
+		Identifier f = fs.isEmpty() ? null : Identifier.tryParse(fs);
 		if (f != null) setFaction(f);
 		squadId = in.getString("KingdomSquad").map(s -> {
 			try {

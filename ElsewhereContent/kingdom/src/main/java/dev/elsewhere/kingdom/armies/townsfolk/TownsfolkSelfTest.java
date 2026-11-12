@@ -1,5 +1,7 @@
 package dev.elsewhere.kingdom.armies.townsfolk;
 
+import dev.elsewhere.kingdom.armies.ArmyScale;
+
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -146,7 +148,10 @@ final class TownsfolkSelfTest {
 			Identifier[] fs = {ALD, HRAF, AZ, MIRE};
 			for (int i = 0; i < 4; i++) {
 				int c = TownsfolkRoles.residents(fs[i], true), t = TownsfolkRoles.residents(fs[i], false);
-				check("townsfolk-residents " + fs[i].getPath() + " capital " + res[i][0] + " / town " + res[i][1], c == res[i][0] && t == res[i][1], c + " / " + t);
+				// rival kingdoms' army.scale lives in their own modules: standalone they get the fallback, so only expect their counts when loaded
+				boolean loadedScale = ArmyScale.of(fs[i]) != null;
+				int ec = loadedScale ? res[i][0] : TownsfolkRoles.FALLBACK_RESIDENTS[0], et = loadedScale ? res[i][1] : TownsfolkRoles.FALLBACK_RESIDENTS[1];
+				check("townsfolk-residents " + fs[i].getPath() + " capital " + ec + " / town " + et + (loadedScale ? "" : " (fallback, module not loaded)"), c == ec && t == et, c + " / " + t);
 			}
 			int[] live = {40, 40, 32, 48};
 			for (int i = 0; i < 4; i++) {
@@ -159,7 +164,7 @@ final class TownsfolkSelfTest {
 			for (Identifier f : fs) {
 				TownsfolkRoles.Kingdom k = TownsfolkRoles.of(f);
 				if (f != AZ && k != null && az != null) smallest &= az.liveCapital() < k.liveCapital() && az.liveTown() < k.liveTown()
-					&& TownsfolkRoles.residents(AZ, true) < TownsfolkRoles.residents(f, true) && TownsfolkRoles.residents(AZ, false) < TownsfolkRoles.residents(f, false);
+					&& (ArmyScale.of(AZ) == null || ArmyScale.of(f) == null || TownsfolkRoles.residents(AZ, true) < TownsfolkRoles.residents(f, true) && TownsfolkRoles.residents(AZ, false) < TownsfolkRoles.residents(f, false));
 			}
 			check("townsfolk-azmar-smallest in every row", smallest, null);
 			// day schedules: lore checks
