@@ -1,0 +1,576 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_mirewick": [
+        {
+          "file": "structures_build__castle_mirewick_c_0_6_48_y180.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 20,
+          "line": 28,
+          "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
+          "status": "pending"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:hrafnholt_chief": [
+        {
+          "file": "anim__hrafnholt_chief_move_windup.png",
+          "scene": 34,
+          "line": 47,
+          "check": "Furrow Run and Pelt Leap = leap (crouched, arms back, then arms up and body lifted with legs tucked); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Furrow Run' within 120 s",
+          "taken": "22:03:13"
+        },
+        {
+          "file": "anim__hrafnholt_chief_move_strike.png",
+          "scene": 34,
+          "line": 47,
+          "check": "Furrow Run and Pelt Leap = leap (crouched, arms back, then arms up and body lifted with legs tucked); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Furrow Run' within 120 s",
+          "taken": "22:03:13"
+        }
+      ],
+      "elsewhere:grunthar": [
+        {
+          "file": "anim__grunthar_hurt_peak.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:03:16"
+        },
+        {
+          "file": "anim__grunthar_hurt_rest.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:03:17"
+        }
+      ],
+      "elsewhere:auris": [
+        {
+          "file": "anim__auris_hurt_peak.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:20"
+        },
+        {
+          "file": "anim__auris_hurt_rest.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:21"
+        }
+      ],
+      "elsewhere:selenne": [
+        {
+          "file": "anim__selenne_hurt_peak.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__selenne_hurt_rest.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:hrafnholt_hearthguard_boots": [
+        {
+          "file": "items__hrafnholt_hearthguard_boots_front.png",
+          "scene": 78,
+          "line": 94,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_boots_side.png",
+          "scene": 78,
+          "line": 94,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_boots_tooltip.png",
+          "scene": 78,
+          "line": 94,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:echo_chord": [
+        {
+          "file": "items__echo_chord_held.png",
+          "scene": 117,
+          "line": 133,
+          "check": "icon matches the sprite page (16x16, Echo Chord), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__echo_chord_tooltip.png",
+          "scene": 117,
+          "line": 133,
+          "check": "icon matches the sprite page (16x16, Echo Chord), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:blinkstone": [
+        {
+          "file": "items__blinkstone_held.png",
+          "scene": 129,
+          "line": 145,
+          "check": "icon matches the sprite page (16x16, Blinkstone), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__blinkstone_tooltip.png",
+          "scene": 129,
+          "line": 145,
+          "check": "icon matches the sprite page (16x16, Blinkstone), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (third person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_third_person_blocking.png",
+          "scene": 142,
+          "line": 158,
+          "check": "arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:drowned_cathedral": [
+        {
+          "file": "s_struct_verdigris__drowned_cathedral_s_26_6_26.png",
+          "scene": 161,
+          "line": 178,
+          "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Prism beam and Burning Glass beam": [
+        {
+          "file": "s_p13_particles__prism_beam_15.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__burning_glass_beam_10.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_hallwarden Hearth-Ward": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hallwarden_hearth_ward_windup.png",
+          "scene": 188,
+          "line": 207,
+          "check": "very low wide guard, weapon held two-handed in front; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: driven forward from the guard, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hallwarden_hearth_ward_strike.png",
+          "scene": 188,
+          "line": 207,
+          "check": "very low wide guard, weapon held two-handed in front; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: driven forward from the guard, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_ames Dusk Bell": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_dusk_bell_windup.png",
+          "scene": 200,
+          "line": 231,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_dusk_bell_strike.png",
+          "scene": 200,
+          "line": 231,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_ames (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_aura_phase2.png",
+          "scene": 204,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:munchie_boar": [
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ossuary_chorister": [
+        {
+          "file": "s_spawngroups__ossuary_chorister_choir_greenhaze_hush_t.png",
+          "scene": 240,
+          "line": 270,
+          "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:eyeblossom_wisp": [
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core.png",
+          "scene": 394,
+          "line": 442,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core_later.png",
+          "scene": 394,
+          "line": 442,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p1_bossbar": {
+      "boss bar v2 state chips": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_state_chips.png",
+          "scene": 276,
+          "line": 312,
+          "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_state_chips_5s.png",
+          "scene": 276,
+          "line": 312,
+          "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_first_person_2.png",
+          "scene": 293,
+          "line": 332,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person_2.png",
+          "scene": 293,
+          "line": 332,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person_2.png",
+          "scene": 293,
+          "line": 332,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person_2.png",
+          "scene": 293,
+          "line": 332,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use_2.png",
+          "scene": 293,
+          "line": 332,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_3.png",
+          "scene": 293,
+          "line": 332,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:windwright": [
+        {
+          "file": "s_galesling__windwright_trade.png",
+          "scene": 296,
+          "line": 335,
+          "check": "an offer of 6 Zephyr Feathers + 1 String for a Gale Sling (4 uses); with -Delsewhere.overhaul3.gale_sling_trade=false a newly summoned Windwright has no sling offer",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Mirewick canal market + lamplighters": [
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_3000.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_12500.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_a": {
+      "elsewhere:azmar_glyphmail_hood": [
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_first_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_third_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_first_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_third_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_after_use.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_tooltip.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hearth_ward_mail": [
+        {
+          "file": "s_setbonus_a__hrafnholt_hearth_ward_mail_first_person.png",
+          "scene": 354,
+          "line": 397,
+          "check": "armor bar gains 2 icons (+4) the moment you sneak or raise the shield, with a soft iron-equip clink; it drops back when you stand or lower the shield",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__hrafnholt_hearth_ward_mail_third_person.png",
+          "scene": 354,
+          "line": 397,
+          "check": "armor bar gains 2 icons (+4) the moment you sneak or raise the shield, with a soft iron-equip clink; it drops back when you stand or lower the shield",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__hrafnholt_hearth_ward_mail_tooltip.png",
+          "scene": 354,
+          "line": 397,
+          "check": "armor bar gains 2 icons (+4) the moment you sneak or raise the shield, with a soft iron-equip clink; it drops back when you stand or lower the shield",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "Calling panel (moonsilk + sunlance_staff)": [
+        {
+          "file": "s_compat_greenhaze__calling_panel_caster.png",
+          "scene": 432,
+          "line": 482,
+          "check": "the Calling panel starts below the Green Leaf meter (panel top y 32, meter 4-26): no overlap, both fully readable; without Green Leaf the panel sits at y 6 as before",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_reliquary": [
+        {
+          "file": "s_reliquary__echo_reliquary_held.png",
+          "scene": 448,
+          "line": 498,
+          "check": "icon: a dark iron reliquary orb with echo-teal glass; name in epic purple; lore: a grey first line \"Reliquary of the Mute Order (Summoner, Elite)\", blue stat lines, and a red last line \"Takes 2 minion slots\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_reliquary_tooltip.png",
+          "scene": 448,
+          "line": 498,
+          "check": "icon: a dark iron reliquary orb with echo-teal glass; name in epic purple; lore: a grey first line \"Reliquary of the Mute Order (Summoner, Elite)\", blue stat lines, and a red last line \"Takes 2 minion slots\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:choir_geode": [
+        {
+          "file": "s_struct_greenhaze__choir_geode_overview.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__choir_geode_ground.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:03:21",
+  "totals": {
+    "ok": 4,
+    "fail": 2,
+    "manual": 0
+  }
+}
