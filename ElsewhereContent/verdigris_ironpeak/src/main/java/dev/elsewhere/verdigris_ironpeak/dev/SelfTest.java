@@ -89,12 +89,16 @@ public final class SelfTest {
 		if (drainTicks < 1000 && (drainTicks % 20 != 0 || loaded > limit)) return;
 		int drainTicks0 = drainTicks;
 		drainTicks = -1;
+		// unloading only queues the chunks' saves (copied chunk data waiting for the region writer); /stop writes them all at once,
+		// which is where the 1.5 GB JVM ran out. Flush them here, as /stop does, then measure what is still held.
+		long queued = usedAfterGc();
+		server.saveAllChunks(true, true, false);
 		long after = usedAfterGc();
-		VerdigrisIronpeakContent.LOG.info("[selftest] heap: base {} MB, after tests {} MB with {} chunks loaded, after unload {} MB with {} chunks loaded",
-			heapBase, heapPeak, chunksPeak, after, loaded);
+		VerdigrisIronpeakContent.LOG.info("[selftest] heap: base {} MB, after tests {} MB with {} chunks loaded, after unload {} MB with {} chunks loaded and their saves queued, after the save flush {} MB",
+			heapBase, heapPeak, chunksPeak, queued, loaded, after);
 		check(loaded <= limit, f("the test's chunks unload once the server ticks (%d before the tests, %d after, %d after %d ticks)", chunksBase, chunksPeak, loaded, drainTicks0));
 		check(after - heapBase <= Math.max(160, (heapPeak - heapBase) / 4),
-			f("no worldgen retention: used heap after unload %d MB vs base %d MB (after tests %d MB)", after, heapBase, heapPeak));
+			f("no worldgen retention: used heap after unload and save flush %d MB vs base %d MB (after tests %d MB with %d chunks; %d MB while their saves were queued)", after, heapBase, heapPeak, chunksPeak, queued));
 		VerdigrisIronpeakContent.LOG.info("[selftest] TOTAL {} passed, {} failed ({} ms) {}", passed, failed, System.currentTimeMillis() - testStart, failed == 0 ? "ALL PASSED" : "");
 		server.halt(false);
 	}

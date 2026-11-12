@@ -53,6 +53,12 @@ final class Gear3MechanicTests {
 	}
 
 	static void run(MinecraftServer s) {
+		SelfTest.group("Gear3MechanicTests", () -> mechanics(s)); // s-asm-gear3: own guard, so the whip and hurlbat blocks still run if this one stops
+		SelfTest.group("WhipTests", () -> WhipTests.run(s)); // s-whips: "<whip id>: ..." and "whips: ..." checks
+		SelfTest.group("HurlbatSelfTest", () -> dev.elsewhere.gear3.s3.hurlbat.HurlbatSelfTest.run(s)); // s-hurlbat: "hurlbat: ..." checks
+	}
+
+	static void mechanics(MinecraftServer s) {
 		ServerLevel l = s.overworld();
 		BlockPos base = new BlockPos(40, 100, 40);
 		FakePlayer p = FakePlayer.get(l);
@@ -153,6 +159,12 @@ final class Gear3MechanicTests {
 			final int k = i;
 			checkS(costs[i][0] + ": is a CasterItem costing " + want[i] + " Glimmer", () -> it(costs[k][0]) instanceof CasterItem c && c.rawCost(p) == want[k]);
 		}
+		if (!SelfTest.spellEnv()) { // s-asm-gear3: a classes-only devlib (cloud mirror) has no elsewhere:spell damage type, so no spell hit can be built
+			SelfTest.info("spell item effects skipped: damage type elsewhere:spell is not in this environment");
+			target.discard();
+			p.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+			return;
+		}
 		LivingEntity dummy = husk(l, new Vec3(base.getX() + 6.5, base.getY(), base.getZ() + 0.5));
 		SpellItems.AmberGrimoire.amberLock(p, dummy, 4);
 		check("Grimoire: non-boss amber-locked (Slowness IV, Weakness II)", dummy.hasEffect(MobEffects.SLOWNESS) && dummy.getEffect(MobEffects.SLOWNESS).getAmplifier() == 3
@@ -230,7 +242,5 @@ final class Gear3MechanicTests {
 		for (LivingEntity e : new LivingEntity[] {target, dummy, ember, frost, star}) e.discard();
 		p.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
 		SelfTest.info("mechanic blocks done");
-		WhipTests.run(s); // s-whips: "<whip id>: ..." and "whips: ..." checks
-		dev.elsewhere.gear3.s3.hurlbat.HurlbatSelfTest.run(s); // s-hurlbat: "hurlbat: ..." checks
 	}
 }

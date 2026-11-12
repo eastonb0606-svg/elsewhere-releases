@@ -294,8 +294,10 @@ public final class CoreFitSelfTest {
 				FitPiece p = (FitPiece) ps.get(0);
 				int[][] c = RoadKit.cells(p);
 				int maxStep = 0, missing = 0, floatCells = 0, lanterns = 0, rift = 0;
+				java.util.Set<Long> seen = new java.util.HashSet<>();
 				for (int k = 0; k < c.length; k++) {
 					if (k > 0) maxStep = Math.max(maxStep, Math.abs(c[k][2] - c[k - 1][2]));
+					if (!seen.add(BlockPos.asLong(c[k][0], 0, c[k][1]))) continue; // a column the centreline revisits keeps its first height
 					int dy = RoadKit.deckY(c[k][2]);
 					BlockPos d = new BlockPos(c[k][0], dy, c[k][1]);
 					BlockState top = l.getBlockState(d);

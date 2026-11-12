@@ -284,15 +284,26 @@ public final class AldRebuild {
 	/** A steep square spire (CastleKit's Aldermark spire): stair rings with full rings between, two full blocks on top. Returns the y above it. */
 	public static int spire(AldOps o, int cx, int cz, int hs, int y0, Block stairs, BlockState full) {
 		int y = y0;
-		ring(o, cx, cz, hs, y++, stairs, full);
+		ring(o, cx, cz, hs, y, stairs, full);
+		under(o, cx, cz, hs - 1, y++, full);
 		for (int s = hs - 1; s >= 1; s--) {
 			for (int dx = -s; dx <= s; dx++) for (int dz = -s; dz <= s; dz++) if (Math.abs(dx) == s || Math.abs(dz) == s) o.set(cx + dx, y, cz + dz, full);
 			y++;
-			ring(o, cx, cz, s, y++, stairs, full);
+			ring(o, cx, cz, s, y, stairs, full);
+			under(o, cx, cz, s - 1, y++, full);
 		}
 		o.set(cx, y++, cz, full);
 		o.set(cx, y++, cz, full);
 		return y;
+	}
+
+	/**
+	 * The hidden course inside a stair ring: the next step up (half-size {@code s}, or the peak when {@code s} is 0) gets a full block
+	 * under every cell, so each step stands on the one below instead of touching it only at an edge (s-asm-vill: spire tops floated).
+	 */
+	static void under(AldOps o, int cx, int cz, int s, int y, BlockState full) {
+		if (s < 0) return;
+		for (int dx = -s; dx <= s; dx++) for (int dz = -s; dz <= s; dz++) if (Math.abs(dx) == s || Math.abs(dz) == s) o.set(cx + dx, y, cz + dz, full);
 	}
 
 	/** A ring of stairs at half-size {@code s} whose high side faces the centre, full blocks on the corners. */

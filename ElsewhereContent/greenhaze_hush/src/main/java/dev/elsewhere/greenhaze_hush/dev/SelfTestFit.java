@@ -165,19 +165,19 @@ final class SelfTestFit {
 
 	/** Walk level on dry ground near (x, z): the first of 8 spots 96 apart with no water over the centre and 8 points at r 20 (worldgen rejects wet sites too). */
 	static BlockPos surface(ServerLevel l, int x, int z) {
+		// the live Ground reads the chunk itself (Level.getHeight answers min y for a chunk that is not visible yet) and skips trees
+		GhFit.Ground g = GhFit.live(l);
 		int bx = x;
 		for (int k = 0; k < 8; k++) {
 			int cx = x + 96 * k;
 			boolean dry = true;
 			for (int i = 0; i < 9 && dry; i++) {
 				double a = i * Math.PI / 4;
-				int px = cx + (i == 8 ? 0 : (int) Math.round(Math.cos(a) * 20)), pz = z + (i == 8 ? 0 : (int) Math.round(Math.sin(a) * 20));
-				l.getChunk(px >> 4, pz >> 4);
-				dry = l.getHeight(Heightmap.Types.OCEAN_FLOOR, px, pz) == l.getHeight(Heightmap.Types.WORLD_SURFACE, px, pz);
+				dry = !g.wet(cx + (i == 8 ? 0 : (int) Math.round(Math.cos(a) * 20)), z + (i == 8 ? 0 : (int) Math.round(Math.sin(a) * 20)));
 			}
 			if (dry) { bx = cx; break; }
 		}
-		return new BlockPos(bx, l.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, bx, z), z);
+		return new BlockPos(bx, g.y(bx, z) + 1, z);
 	}
 
 	static boolean lootAt(ServerLevel l, BlockPos p, String table) {
@@ -208,7 +208,7 @@ final class SelfTestFit {
 			for (BlockPos v : BlockPos.betweenClosed(lv.offset(-3, -3, -3), lv.offset(3, 6, 3))) near |= l.getBlockState(v).is(GreenhazeBlocks.HOTBOX_VENT);
 			if (near) paired++;
 		}
-		int voids = 0;
+		int voids = o.getY() - 2 <= l.getMinY() ? 999 : 0; // a floor on the world's bottom is a void too
 		for (int dx = -14; dx <= 14; dx++) for (int dz = -14; dz <= 14; dz++) if (dx * dx + dz * dz <= 196 && l.getBlockState(o.offset(dx, -2, dz)).isAir()) voids++;
 		int glass = t.n(Blocks.STAINED_GLASS.pick(net.minecraft.world.item.DyeColor.LIME)) + t.n(Blocks.STAINED_GLASS.pick(net.minecraft.world.item.DyeColor.GREEN));
 		long annexes = ps.stream().filter(p -> p.kind.equals("hotbox_annex")).count(), walks = ps.stream().filter(p -> p.kind.equals("hotbox_walk")).count();
@@ -232,7 +232,7 @@ final class SelfTestFit {
 			treeBushes++;
 			if (Math.abs(q.getX() - o.getX()) <= 18 && Math.abs(q.getZ() - o.getZ()) <= 18 && q.getY() - o.getY() >= -4 && q.getY() - o.getY() <= 3) inReach++;
 		}
-		int voids = 0;
+		int voids = o.getY() - 2 <= l.getMinY() ? 999 : 0;
 		for (int dx = -7; dx <= 7; dx++) for (int dz = -7; dz <= 7; dz++) if (dx * dx + dz * dz <= 49 && l.getBlockState(o.offset(dx, -2, dz)).isAir()) voids++;
 		BlockState altar = l.getBlockState(o.offset(0, 0, 5));
 		check("struct fit: Bonfire Terrace look (stepped seat rings, one lit signal fire, snack altar, every munchfruit in Grumblegut's reach, stocked chest)",
@@ -271,7 +271,7 @@ final class SelfTestFit {
 		List<GhFit.Piece> ps = GhFit.buildPlan(l, "sesh_hut", o);
 		BoundingBox bb = span(ps);
 		Tally t = scan(l, bb);
-		int deck = ps.get(0).o.getY(), ground = l.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, o.getX() + 9, o.getZ() + 9);
+		int deck = ps.get(0).o.getY(), ground = GhFit.live(l).y(o.getX() + 9, o.getZ() + 9) + 1;
 		int bud = countAndClear(l, GreenhazeMobs.Budtender.class, bb);
 		check("struct fit: Sesh Hut look (deck on 9 stilts to their own ground, conical hay roof, ladder, stocked chest, Budtender)",
 			t.n(GreenhazeBlocks.KUSHWOOD_LOG) >= 18 && t.n(Blocks.HAY_BLOCK) >= 20 && t.n(Blocks.LADDER) >= 2 && t.loot("sesh_hut") == 1 && bud >= 1 && deck > o.getY(),

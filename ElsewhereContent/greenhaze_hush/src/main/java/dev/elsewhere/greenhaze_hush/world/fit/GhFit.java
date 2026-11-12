@@ -34,6 +34,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.chunk.ChunkGenerator;
+import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -99,15 +100,21 @@ public final class GhFit {
 		};
 	}
 
-	/** Ground of a live level (dev builds and self-tests only). Loads the chunk: Level.getHeight answers min y for an unloaded one. */
+	/**
+	 * Ground of a live level (dev builds and self-tests only), as the generator sees it: the top terrain block under water, trees and
+	 * plants. Reads the chunk itself (loading it): Level.getHeight answers min y for a chunk that is not yet visible.
+	 */
 	public static Ground live(ServerLevel l) {
 		return new Ground() {
 			public int y(int x, int z) {
-				return l.getChunk(x >> 4, z >> 4).getHeight(Heightmap.Types.OCEAN_FLOOR, x & 15, z & 15);
+				LevelChunk c = l.getChunk(x >> 4, z >> 4);
+				BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos(x, c.getHeight(Heightmap.Types.WORLD_SURFACE, x & 15, z & 15), z);
+				while (p.getY() > l.getMinY() && !ground(c.getBlockState(p))) p.move(Direction.DOWN);
+				return p.getY();
 			}
 
 			public boolean wet(int x, int z) {
-				return l.getChunk(x >> 4, z >> 4).getHeight(Heightmap.Types.WORLD_SURFACE, x & 15, z & 15) > y(x, z);
+				return !l.getChunk(x >> 4, z >> 4).getFluidState(new BlockPos(x, y(x, z) + 1, z)).isEmpty();
 			}
 		};
 	}

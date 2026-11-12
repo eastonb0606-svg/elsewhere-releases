@@ -1,0 +1,9 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhereqa-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere QA client pass",
+	"environment": "*",
+	"entrypoints": { "fabric-client-gametest": ["dev.elsewhereqa.test.QAClientTest", "dev.elsewhereqa.test.ReleaseClientTest", "dev.elsewhereqa.test.ClientCalib", "dev.elsewhereqa.shots.ShotRunner"], "jei_mod_plugin": ["dev.elsewhereqa.test.JeiTestPlugin"] },
+	"depends": { "elsewhereqa": "*", "fabric-client-gametest-api-v1": "*" }
+}

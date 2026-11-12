@@ -1,0 +1,103 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base { archivesName = "elsewhereqa" }
+
+// The mods under test are PREBUILT jars dropped into mods-under-test/ (combined beta jar, Test Meter, Green Leaf).
+// They are loaded at runtime with -Dfabric.addMods, never compiled against: the QA mod only uses registries,
+// commands and reflection, so it works on any build of the beta.
+def mut = file(project.findProperty("qaMods") ?: "mods-under-test").absolutePath
+
+loom {
+	runs {
+		server {
+			property "elsewhereqa.play", (project.findProperty("qaPlay") ?: "true").toString()
+			property "elsewhereqa.exit", "true"
+			// release suite: -PqaSuite=release|upgrade-seed|upgrade-check, -PqaRelease=<comma list of sections>, -PqaVm="-Da=b -Dc=d"
+			if (project.findProperty("qaWatchdog")) property "elsewhereqa.watchdog", project.findProperty("qaWatchdog").toString()
+			if (project.findProperty("qaHit")) property "elsewhereqa.hit", project.findProperty("qaHit").toString()
+			if (project.findProperty("qaSuite")) property "elsewhereqa.suite", project.findProperty("qaSuite").toString()
+			if (project.findProperty("qaRelease")) property "elsewhereqa.release", project.findProperty("qaRelease").toString()
+			if (project.findProperty("qaVm")) project.findProperty("qaVm").toString().split(" ").each { if (it) vmArg it }
+			property "fabric.addMods", mut
+			// -PqaOnly=bosses (skip world checks), -PqaBosses=a,b|none, -PqaShard=i/n
+			if (project.findProperty("qaOnly")) property "elsewhereqa.only", project.findProperty("qaOnly").toString()
+		if (project.findProperty("qaBosses")) property "elsewhereqa.bosses", project.findProperty("qaBosses").toString()
+		if (project.findProperty("qaMaxSites")) property "elsewhereqa.maxSites", project.findProperty("qaMaxSites").toString()
+			if (project.findProperty("qaShard")) property "elsewhereqa.shard", project.findProperty("qaShard").toString()
+			vmArg "-Xmx${project.findProperty("qaHeap") ?: "1536m"}"
+		}
+		client {
+			property "fabric.addMods", mut
+			vmArg "-Xmx2g"
+		}
+	}
+}
+
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhereqa-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+repositories {
+	exclusiveContent {
+		forRepository { maven { name = "BlameJared"; url = "https://maven.blamejared.com/" } }
+		filter { includeGroup "mezz.jei" }
+	}
+}
+
+def jeiVersion = "31.17.0.109"
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	// -Pfapi=0.166.0+26.3 to test another Fabric API
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.findProperty("fapi") ?: project.fabric_api_version}"
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-common-api:${jeiVersion}"
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-fabric-api:${jeiVersion}"
+	gametestCompileOnly "mezz.jei:jei-${project.minecraft_version}-common-api:${jeiVersion}"
+	gametestCompileOnly "mezz.jei:jei-${project.minecraft_version}-fabric-api:${jeiVersion}"
+	// -Pjei: run with JEI loaded
+	if (project.hasProperty("jei")) {
+		runtimeOnly("mezz.jei:jei-${project.minecraft_version}-fabric:${jeiVersion}") { transitive = false }
+	}
+}
+
+afterEvaluate {
+	loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+		vmArg "-Xmx2g"
+		property "fabric.addMods", mut
+		property "elsewhereqa.shots", file((project.findProperty("qaShotDir") ?: "screenshots").toString()).absolutePath
+		property "elsewhereqa.sections", (project.findProperty("qaSections") ?: "").toString()
+		property "elsewhereqa.client", (project.findProperty("qaClient") ?: "legacy").toString()
+			if (project.findProperty("qaGalleryOnly")) property "elsewhereqa.galleryOnly", project.findProperty("qaGalleryOnly").toString()
+		if (project.findProperty("qaWatchdog")) property "elsewhereqa.watchdog", project.findProperty("qaWatchdog").toString()
+		if (project.findProperty("qaBosses")) property "elsewhereqa.bosses", project.findProperty("qaBosses").toString()
+		if (project.findProperty("qaMaxSites")) property "elsewhereqa.maxSites", project.findProperty("qaMaxSites").toString()
+		if (project.findProperty("qaNetherMs")) property "elsewhereqa.netherBudgetMs", project.findProperty("qaNetherMs").toString()
+		if (project.findProperty("qaEndMs")) property "elsewhereqa.endBudgetMs", project.findProperty("qaEndMs").toString()
+		// one-session shot runner (-PqaClient=shots, s-shotrunner): -PqaShotList=<shotlist.json> -PqaShotOnly=<scenes/ranges/lanes> -PqaShotSeed=4242
+		if (project.findProperty("qaShotList")) property "elsewhereqa.shotList", file(project.findProperty("qaShotList").toString()).absolutePath
+		if (project.findProperty("qaShotOnly")) property "elsewhereqa.shotOnly", project.findProperty("qaShotOnly").toString()
+		if (project.findProperty("qaShotSeed")) property "elsewhereqa.shotSeed", project.findProperty("qaShotSeed").toString()
+		// fixed offline dev name for client runs (-PqaUser=...); never a real account
+		if (project.findProperty("qaUser")) programArgs "--username", project.findProperty("qaUser").toString()
+	}
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+	filesMatching("fabric.mod.json") { expand "version": version }
+}
+
+tasks.withType(JavaCompile).configureEach { it.options.release = 25 }
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

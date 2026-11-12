@@ -27,6 +27,8 @@ public final class HrafnholtShore {
 
 	private static final Map<String, Plan> PLANS = new ConcurrentHashMap<>();
 	static final int[] BERTHS = {-7, -14};
+	/** s-asm-court: a naust is dug into the bank; its footprint's ground may stand up to this far above the sea (earth stays over the turf roof). */
+	static final int NAUST_BANK = 12;
 
 	/** Builds the shore road and nausts into the placer's chunk; the caller sets {@code pl.style} to the faction's style. */
 	public static void build(CastleLayout.Placer pl, BlockPos o, int dir, int shore, int sea, CastleLayout.Ground g) {
@@ -35,8 +37,19 @@ public final class HrafnholtShore {
 		pl.ground = g;
 		try {
 			Plan p = plan(pl, o, dir, shore, sea);
-			for (int i = 0; i < p.cells.length; i++) for (int a = -1; a <= 1; a++) for (int b = -1; b <= 1; b++)
-				path(pl, o, dir, p.cells[i][0] + a, p.cells[i][1] + b, o.getY() + p.h[i]);
+			// s-asm-court: every road column is written once, at the height of its nearest road cell (ties: the higher). Stamping the 3-wide
+			// cells in order let a hairpin's later, lower cells overwrite earlier centres 2+ below their planned height (a 2-high step)
+			Map<Long, int[]> cols = new java.util.HashMap<>();
+			for (int i = 0; i < p.cells.length; i++) for (int a = -1; a <= 1; a++) for (int b = -1; b <= 1; b++) {
+				long k = ((long) (p.cells[i][0] + a) << 32) ^ ((p.cells[i][1] + b) & 0xffffffffL);
+				int d = Math.max(Math.abs(a), Math.abs(b));
+				int[] c = cols.get(k);
+				if (c == null || d < c[0] || d == c[0] && p.h[i] > c[1]) cols.put(k, new int[] {d, p.h[i]});
+			}
+			for (Map.Entry<Long, int[]> e : cols.entrySet()) {
+				long k = e.getKey();
+				path(pl, o, dir, (int) (k >> 32), (int) k, o.getY() + e.getValue()[1]);
+			}
 			for (int[] be : p.berths) naust(pl, o, dir, be[0], be[1], sea);
 		} finally {
 			pl.ground = prev;
@@ -114,7 +127,7 @@ public final class HrafnholtShore {
 			boolean ok = true;
 			for (int u = ub - 13; u <= ub - 2 && ok; u++) for (int v = vc - 3; v <= vc + 3 && ok; v++) {
 				int y = gw(g, o, dir, u, v);
-				if (y <= sea || y > sea + 7) ok = false;
+				if (y <= sea || y > sea + NAUST_BANK) ok = false;
 			}
 			if (ok) berths.add(new int[] {vc, ub});
 		}
@@ -180,7 +193,8 @@ public final class HrafnholtShore {
 			if (w[0] < pl.clip.minX() || w[0] > pl.clip.maxX() || w[1] < pl.clip.minZ() || w[1] > pl.clip.maxZ()) continue;
 			int roofY = sea + 3 + (3 - dv);
 			boolean inside = u >= back && u <= front;
-			carve(pl, o, dir, u, v, inside && dv <= 2 ? sea + 1 : roofY, Math.max(roofY, pl.ground.y(w[0], w[1])) + 1);
+			// s-asm-court: dug into the bank: the shed is cleared under its roof and the roof row itself; earth higher up stays over the turf
+			carve(pl, o, dir, u, v, inside && dv <= 2 ? sea + 1 : roofY, roofY);
 			if (inside && dv <= 2) {
 				set(pl, at(o, dir, u, sea, v), floor);
 				down(pl, o, dir, u, v, sea - 1, mc);

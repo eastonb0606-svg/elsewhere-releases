@@ -151,9 +151,11 @@ public final class BlockSink {
 		return water(dx, dz) > ground(dx, dz);
 	}
 
-	/** Natural ground a foundation may rest on: not air, fluid, replaceable, leaves or logs. */
+	/** Natural ground a foundation may rest on: not air, fluid, replaceable, leaves, logs or another structure's woodwork (planks, stairs...). */
 	public static boolean bearing(BlockState s) {
-		return !s.isAir() && !s.canBeReplaced() && s.getFluidState().isEmpty() && !s.is(net.minecraft.tags.BlockTags.LEAVES) && !s.is(net.minecraft.tags.BlockTags.LOGS);
+		return !s.isAir() && !s.canBeReplaced() && s.getFluidState().isEmpty() && !s.is(net.minecraft.tags.BlockTags.LEAVES) && !s.is(net.minecraft.tags.BlockTags.LOGS)
+			&& !s.is(net.minecraft.tags.BlockTags.PLANKS) && !s.is(net.minecraft.tags.BlockTags.WOODEN_STAIRS) && !s.is(net.minecraft.tags.BlockTags.WOODEN_SLABS)
+			&& !s.is(net.minecraft.tags.BlockTags.WOODEN_FENCES) && !s.is(net.minecraft.tags.BlockTags.WOODEN_TRAPDOORS);
 	}
 
 	/**
@@ -217,7 +219,8 @@ public final class BlockSink {
 		if (wet(dx, dz)) return;
 		int g = ground(dx, dz);
 		// the model is interpolated: start from the real top of this column (read inside this chunk only)
-		for (int y = g + 4; y >= g - 8; y--) {
+		// (below the berm's own top: an eave or wall over the column is not the ground)
+		for (int y = Math.min(g + 4, top - 1); y >= g - 8; y--) {
 			BlockPos q = at(dx, y, dz);
 			if (inside(q) && bearing(level.getBlockState(q))) {
 				g = y;

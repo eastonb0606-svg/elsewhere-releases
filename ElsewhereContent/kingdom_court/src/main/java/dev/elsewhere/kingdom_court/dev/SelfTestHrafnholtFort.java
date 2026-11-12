@@ -249,12 +249,14 @@ final class SelfTestHrafnholtFort {
 			for (int g = 0; g < 4; g++) if (ring.open()[g] && Math.abs(HrafnholtFort.gv(g, sx, sz)) <= 2 && HrafnholtFort.gu(g, sx, sz) > 0) gate = true;
 			if (gate) continue;
 			boolean hit = false;
+			// s-asm-court: the palisade is the outer edge of the bank, joined on faces or corners; a ray stepping diagonally between two
+			// corner-joined posts is blocked too (no player or mob passes a corner joint)
+			int px = Integer.MIN_VALUE, pz = 0;
 			for (double r = 31; r <= 37 && !hit; r += 0.5) {
 				int x = (int) Math.round(r * Math.sin(a)), z = (int) Math.round(r * Math.cos(a));
-				for (int y = -2; y <= 30 && !hit; y++) {
-					BlockState s = l.getBlockState(o.offset(x, y, z));
-					hit = s.is(Blocks.SPRUCE_LOG) || s.is(Blocks.DARK_OAK_LOG) || s.is(Blocks.DARK_OAK_PLANKS);
-				}
+				hit = palisade(l, o, x, z) || px != Integer.MIN_VALUE && Math.abs(x - px) == 1 && Math.abs(z - pz) == 1 && palisade(l, o, x, pz) && palisade(l, o, px, z);
+				px = x;
+				pz = z;
 			}
 			if (!hit) {
 				gaps++;
@@ -309,7 +311,10 @@ final class SelfTestHrafnholtFort {
 				queue[qt++] = id;
 			}
 		}
-		int[][] nb = {{1, 0, 0}, {-1, 0, 0}, {0, 1, 0}, {0, -1, 0}, {0, 0, 1}, {0, 0, -1}};
+		// s-asm-court: joined on faces, edges or corners (a stepped stair roof's eaves hang on the course above them, as on every Minecraft roof)
+		List<int[]> nbl = new ArrayList<>();
+		for (int dx = -1; dx <= 1; dx++) for (int dy = -1; dy <= 1; dy++) for (int dz = -1; dz <= 1; dz++) if (dx != 0 || dy != 0 || dz != 0) nbl.add(new int[] {dx, dy, dz});
+		int[][] nb = nbl.toArray(new int[0][]);
 		while (qh < qt) {
 			int id = queue[qh++], x = id / (sy * sz), y = id / sz % sy, z = id % sz;
 			for (int[] d : nb) {
@@ -358,7 +363,11 @@ final class SelfTestHrafnholtFort {
 			}
 			if (got == Integer.MIN_VALUE) {
 				missing++;
-				if (first == null) first = "no road at u " + u + " v " + v;
+				if (first == null) {
+					StringBuilder col = new StringBuilder();
+					for (int d = -3; d <= 3; d++) col.append(d == -3 ? "" : ",").append(l.getBlockState(uv(o, dir, u, o.getY() + plan.h()[i] + d, v)).getBlock().toString().replace("Block{minecraft:", "").replace("}", ""));
+					first = "no road at u " + u + " v " + v + " (cell " + i + " of " + plan.cells().length + ", planned " + plan.h()[i] + "; h-3..h+3: " + col + ")";
+				}
 			} else {
 				if (prev != Integer.MIN_VALUE && Math.abs(got - prev) > 1) steps++;
 				prev = got;
@@ -378,6 +387,15 @@ final class SelfTestHrafnholtFort {
 		}
 		check(tag + ": every planned naust has its boat, turf roof and log slip into the water", ok == plan.berths().size(), ok + " of " + plan.berths().size());
 		nausts += ok;
+	}
+
+	/** s-asm-court: a palisade post or gate-tower timber anywhere in this column (y -2..30). */
+	static boolean palisade(ServerLevel l, BlockPos o, int x, int z) {
+		for (int y = -2; y <= 30; y++) {
+			BlockState s = l.getBlockState(o.offset(x, y, z));
+			if (s.is(Blocks.SPRUCE_LOG) || s.is(Blocks.DARK_OAK_LOG) || s.is(Blocks.DARK_OAK_PLANKS)) return true;
+		}
+		return false;
 	}
 
 	/** True for a column of the shore works (road strip or naust footprint). */

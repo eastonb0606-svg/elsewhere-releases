@@ -1,0 +1,10 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhereqa",
+	"version": "${version}",
+	"name": "Elsewhere QA harness",
+	"description": "Plays the combined Elsewhere beta jar end to end (server) when -Delsewhereqa.play=true.",
+	"environment": "*",
+	"entrypoints": { "main": ["dev.elsewhereqa.QAServer"] },
+	"depends": { "fabricloader": "*", "minecraft": "*", "fabric-api": "*" }
+}

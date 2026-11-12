@@ -20,6 +20,7 @@ final class SelfTestRulerLook {
 	private SelfTestRulerLook() {}
 
 	static final List<HrafnholtBoss> SPAWNED = new ArrayList<>();
+	static int waited;
 
 	static boolean res(String path) {
 		try (InputStream in = SelfTestRulerLook.class.getResourceAsStream("/" + path)) {
@@ -43,6 +44,10 @@ final class SelfTestRulerLook {
 			return 3;   // the first tick runs each boss's own loadout
 		});
 		SelfTest.STEPS.add((srv, l) -> {
+			// the freshly forced chunk takes a few ticks to start ticking entities: wait (bounded) until every boss's own first-tick loadout has run
+			boolean ready = true;
+			for (HrafnholtBoss b : SPAWNED) { boolean any = false; for (EquipmentSlot s : HrafnholtRulerLook.ARMOR) any |= !b.getItemBySlot(s).isEmpty(); ready &= any; }
+			if (!ready && ++waited < 200) return -1;
 			boolean on = HrafnholtRulerLook.ENABLED, noDiamond = true, styled = true, layer = true, kept = true, jarl = false;
 			int metal = 0;
 			StringBuilder bad = new StringBuilder();

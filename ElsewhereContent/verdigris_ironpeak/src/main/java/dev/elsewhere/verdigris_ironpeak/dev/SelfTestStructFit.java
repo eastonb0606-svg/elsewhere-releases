@@ -74,15 +74,6 @@ final class SelfTestStructFit {
 		else if (name.equals("engineers_atoll")) ground = (x, z) -> Math.max(seaTop - 12, seaTop + 3 - Math.max(0, (int) Math.sqrt((x - cx) * (x - cx) + (z - cz) * (z - cz)) - 6)); // an atoll islet
 		else if (name.equals("lighthouse")) ground = (x, z) -> seaTop - 30 + Math.max(0, 22 - (int) Math.sqrt((x - cx) * (x - cx) + (z - cz) * (z - cz))); // a shoal under the tower
 		else ground = (x, z) -> 62 + (cz - z) / 4 + (x - cx) / 6; // sea bed rising to the north
-		// prepare the columns: stone up to the ground, water to the sea line (wet kits), air above
-		for (int x = cx - r; x <= cx + r; x++) for (int z = cz - r; z <= cz + r; z++) {
-			int g = ground.applyAsInt(x, z);
-			for (int y = g - 6; y <= g + 36; y++) {
-				BlockState want = y <= g ? Blocks.STONE.defaultBlockState() : wet && y <= seaTop ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState();
-				BlockPos p = new BlockPos(x, y, z);
-				if (level.getBlockState(p) != want) level.setBlock(p, want, Block.UPDATE_CLIENTS);
-			}
-		}
 		Terrain t = Terrain.synthetic(cx, cz, bp.radius() + 2, ground, wet ? seaTop : Integer.MIN_VALUE);
 		int g0 = ground.applyAsInt(cx, cz);
 		int oy = switch (name) {
@@ -92,6 +83,15 @@ final class SelfTestStructFit {
 			case "tidelock_vault" -> g0;
 			default -> g0 + 1;
 		};
+		// prepare the columns: stone up to the ground, water to the sea line (wet kits), air above
+		for (int x = cx - r; x <= cx + r; x++) for (int z = cz - r; z <= cz + r; z++) {
+			int g = ground.applyAsInt(x, z);
+			for (int y = g - 6, top = Math.max(g + 36, oy + bp.height() + 2); y <= top; y++) {
+				BlockState want = y <= g ? Blocks.STONE.defaultBlockState() : wet && y <= seaTop ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState();
+				BlockPos p = new BlockPos(x, y, z);
+				if (level.getBlockState(p) != want) level.setBlock(p, want, Block.UPDATE_CLIENTS);
+			}
+		}
 		BlockPos o = new BlockPos(cx, oy, cz);
 		RandomSource rnd = RandomSource.create(o.asLong());
 		BlockSink s = new BlockSink(level, o, null, rnd, t);
@@ -176,7 +176,15 @@ final class SelfTestStructFit {
 							break;
 						}
 					}
-				check(feet == 4 && level.getBlockState(o.offset(0, 4, 0)).is(VerdigrisBlocks.VERDIGRIS_GRATING), f("struct fit clockwork_rig: deck at sea level +4, %d of 4 splayed legs reach the sea bed", feet));
+				StringBuilder shortLegs = new StringBuilder();
+				for (int[] l : new int[][] {{-1, -1}, {1, -1}, {-1, 1}, {1, 1}}) {
+					int x = l[0] * 10, z = l[1] * 10, low = Integer.MAX_VALUE;
+					for (int y = 3; y >= -130; y--) if (level.getBlockState(o.offset(x, y, z)).is(VerdigrisBlocks.VERDIGRIS_PIPE)) low = y;
+					int gy = ground.applyAsInt(cx + x, cz + z) - oy;
+					if (low != gy + 1) shortLegs.append(f(" (%d,%d) lowest pipe %s, bed %d, below it %s", x, z, low == Integer.MAX_VALUE ? "none" : String.valueOf(low), gy,
+						low == Integer.MAX_VALUE ? "-" : BuiltInRegistries.BLOCK.getKey(level.getBlockState(o.offset(x, low - 1, z)).getBlock()).getPath()));
+				}
+				check(feet == 4 && level.getBlockState(o.offset(0, 4, 0)).is(VerdigrisBlocks.VERDIGRIS_GRATING), f("struct fit clockwork_rig: deck at sea level +4, %d of 4 splayed legs reach the sea bed%s", feet, shortLegs));
 			}
 			case "engineers_atoll" -> {
 				int deck = 0;

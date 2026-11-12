@@ -108,10 +108,17 @@ public final class SelfTest {
 		});
 		net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(srv -> {
 			if (ran[0]) return;
-			if (++ticks[0] < 400 && !srv.overworld().isPositionEntityTicking(new net.minecraft.core.BlockPos(40, 100, 40))) return;
+			if (++ticks[0] < 400 && !arenaTicking(srv.overworld())) return;
 			ran[0] = true;
+			info("arena: all 16 forced chunks entity-ticking=" + arenaTicking(srv.overworld()) + " after " + ticks[0] + " ticks");
 			run(srv);
 		});
+	}
+
+	/** s-asm-gear3: every forced arena chunk (1..4 x 1..4, blocks 16..79) is entity-ticking. Blocks at x/z 48..79 lie outside the spawn chunks, so 40,100,40 alone is not enough. */
+	static boolean arenaTicking(net.minecraft.server.level.ServerLevel l) {
+		for (int cx = 1; cx <= 4; cx++) for (int cz = 1; cz <= 4; cz++) if (!l.isPositionEntityTicking(new net.minecraft.core.BlockPos(cx * 16 + 8, 100, cz * 16 + 8))) return false;
+		return true;
 	}
 
 	/**
@@ -321,29 +328,29 @@ public final class SelfTest {
 				return loot(s, dr.table(), item);
 			});
 		}
-		dev.elsewhere.gear3.s3.callingtags.CallingTagChecks.run(s); // s-callingtags: calling tags of all 82 GEAR.md items, lang/JEI audit
-		Gear3MechanicTests.run(s);
-		dev.elsewhere.gear3.s3.testmeter.TestMeterChecks.run(s); // s-compat-testmeter (hook added by s-review-gear3): "testmeter: ..." checks for every summon type
-		dev.elsewhere.gear3.s3.echoarrow.EchoArrowSelfTest.run(s); // s-echoarrow: "echo_arrow: ..." checks
-		dev.elsewhere.gear3.s3.galesling.GaleSlingTests.run(s); // s-galesling: "Gale Sling: ..." checks
-		CenserChecks.run(s); // s-censer: "Choirlight Censer: ..." checks
-		dev.elsewhere.gear3.s3.dredge.DredgeSelfTest.run(s); // s-dredge: "Tidebrass Dredge: ..." checks
-		dev.elsewhere.gear3.s3.wolfcall.WolfcallSelfTest.run(s); // s-wolfcall: "Wolf-Call Horn: ..." checks
-		dev.elsewhere.gear3.s3.sickle.LanternSickleSelfTest.run(s); // s-sickle: "Lantern Sickle: ..." checks
-		dev.elsewhere.gear3.dev.SetBonusTestsA.run(s); // s-setbonus-a: "setbonus-a: ..." set/pair bonus checks
-		dev.elsewhere.gear3.s3.prismbow.PrismBowTests.run(s); // s-prismbow: "Prism Bow: ..." checks
-		dev.elsewhere.gear3.s3.harpoon.HarpoonSelfTest.run(s); // s-harpoon: "harpoon_bolt: ..." checks
-		dev.elsewhere.gear3.s3.ascension.AscensionTests.run(s); // s-ascension: "ascension: ..." checks
-		dev.elsewhere.gear3.s3.starpiercer.StarpiercerChecks.run(s); // s-starpiercer: "Starpiercer: ..." checks
-		dev.elsewhere.gear3.setbonus.b.SetBonusTestsB.run(s); // s-setbonus-b: "setbonus-b/Outrider/Steady Aim/Starsight/Zenith/Wolf-Fury/Mead-Horn/Command: ..." checks
-		dev.elsewhere.gear3.s3.pennant.PennantSelfTest.run(s); // s-pennant: "Herdcaller's Pennant: ..." checks
-		dev.elsewhere.gear3.s3.sunglass.SunglassSelfTest.run(s); // s-sunglass: "Sunglass Arrow: ..." checks
-		dev.elsewhere.gear3.s3.miresnare.MireSnareSelfTest.run(s); // s-miresnare: "Mire Snare: ..." checks
-		dev.elsewhere.gear3.s3.mothlight.MothlightSelfTest.run(s); // s-mothlight: "Mothlight: ..." checks
-		dev.elsewhere.gear3.s3.willo.WilloSelfTest.run(s); // s-willolantern: "Will-o'-Lantern: ..." checks
-		dev.elsewhere.gear3.s3.reliquary.ReliquarySelfTest.run(s); // s-reliquary: "Echo Reliquary: ..." checks
-		dev.elsewhere.gear3.s3.totems.TotemTests.run(s); // s-totems: "Totems: ..." checks
-		dev.elsewhere.gear3.s3.waryak.WarYakSelfTest.run(s); // s-waryak: "War-Yak Horn: ..." checks
+		group("CallingTagChecks", () -> dev.elsewhere.gear3.s3.callingtags.CallingTagChecks.run(s)); // s-callingtags: calling tags of all 82 GEAR.md items, lang/JEI audit
+		group("Gear3MechanicTests", () -> Gear3MechanicTests.run(s));
+		group("TestMeterChecks", () -> dev.elsewhere.gear3.s3.testmeter.TestMeterChecks.run(s)); // s-compat-testmeter (hook added by s-review-gear3): "testmeter: ..." checks for every summon type
+		group("EchoArrowSelfTest", () -> dev.elsewhere.gear3.s3.echoarrow.EchoArrowSelfTest.run(s)); // s-echoarrow: "echo_arrow: ..." checks
+		group("GaleSlingTests", () -> dev.elsewhere.gear3.s3.galesling.GaleSlingTests.run(s)); // s-galesling: "Gale Sling: ..." checks
+		group("CenserChecks", () -> CenserChecks.run(s)); // s-censer: "Choirlight Censer: ..." checks
+		group("DredgeSelfTest", () -> dev.elsewhere.gear3.s3.dredge.DredgeSelfTest.run(s)); // s-dredge: "Tidebrass Dredge: ..." checks
+		group("WolfcallSelfTest", () -> dev.elsewhere.gear3.s3.wolfcall.WolfcallSelfTest.run(s)); // s-wolfcall: "Wolf-Call Horn: ..." checks
+		group("LanternSickleSelfTest", () -> dev.elsewhere.gear3.s3.sickle.LanternSickleSelfTest.run(s)); // s-sickle: "Lantern Sickle: ..." checks
+		group("SetBonusTestsA", () -> dev.elsewhere.gear3.dev.SetBonusTestsA.run(s)); // s-setbonus-a: "setbonus-a: ..." set/pair bonus checks
+		group("PrismBowTests", () -> dev.elsewhere.gear3.s3.prismbow.PrismBowTests.run(s)); // s-prismbow: "Prism Bow: ..." checks
+		group("HarpoonSelfTest", () -> dev.elsewhere.gear3.s3.harpoon.HarpoonSelfTest.run(s)); // s-harpoon: "harpoon_bolt: ..." checks
+		group("AscensionTests", () -> dev.elsewhere.gear3.s3.ascension.AscensionTests.run(s)); // s-ascension: "ascension: ..." checks
+		group("StarpiercerChecks", () -> dev.elsewhere.gear3.s3.starpiercer.StarpiercerChecks.run(s)); // s-starpiercer: "Starpiercer: ..." checks
+		group("SetBonusTestsB", () -> dev.elsewhere.gear3.setbonus.b.SetBonusTestsB.run(s)); // s-setbonus-b: "setbonus-b/Outrider/Steady Aim/Starsight/Zenith/Wolf-Fury/Mead-Horn/Command: ..." checks
+		group("PennantSelfTest", () -> dev.elsewhere.gear3.s3.pennant.PennantSelfTest.run(s)); // s-pennant: "Herdcaller's Pennant: ..." checks
+		group("SunglassSelfTest", () -> dev.elsewhere.gear3.s3.sunglass.SunglassSelfTest.run(s)); // s-sunglass: "Sunglass Arrow: ..." checks
+		group("MireSnareSelfTest", () -> dev.elsewhere.gear3.s3.miresnare.MireSnareSelfTest.run(s)); // s-miresnare: "Mire Snare: ..." checks
+		group("MothlightSelfTest", () -> dev.elsewhere.gear3.s3.mothlight.MothlightSelfTest.run(s)); // s-mothlight: "Mothlight: ..." checks
+		group("WilloSelfTest", () -> dev.elsewhere.gear3.s3.willo.WilloSelfTest.run(s)); // s-willolantern: "Will-o'-Lantern: ..." checks
+		group("ReliquarySelfTest", () -> dev.elsewhere.gear3.s3.reliquary.ReliquarySelfTest.run(s)); // s-reliquary: "Echo Reliquary: ..." checks
+		group("TotemTests", () -> dev.elsewhere.gear3.s3.totems.TotemTests.run(s)); // s-totems: "Totems: ..." checks
+		group("WarYakSelfTest", () -> dev.elsewhere.gear3.s3.waryak.WarYakSelfTest.run(s)); // s-waryak: "War-Yak Horn: ..." checks
 	}
 
 	static boolean stats(Gear3Def d, ItemStack st) {

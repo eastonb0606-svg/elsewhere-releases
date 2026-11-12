@@ -25,6 +25,7 @@ final class SelfTestRulerLook {
 	private SelfTestRulerLook() {}
 
 	static final List<AzmarBoss> SPAWNED = new ArrayList<>();
+	static int waited;
 
 	static void add() {
 		SelfTest.STEPS.add((srv, l) -> {
@@ -43,6 +44,10 @@ final class SelfTestRulerLook {
 			return 5;   // first ticks: each boss's own loadout, and the Amir mounts his war camel
 		});
 		SelfTest.STEPS.add((srv, l) -> {
+			// wait (bounded) until every boss's own first-tick loadout has run, instead of trusting a fixed tick count
+			boolean ready = true;
+			for (AzmarBoss b : SPAWNED) { boolean any = false; for (EquipmentSlot s : AzmarRulerLook.ARMOR) any |= !b.getItemBySlot(s).isEmpty(); ready &= any; }
+			if (!ready && ++waited < 200) return -1;
 			boolean on = AzmarRulerLook.ENABLED, noDiamond = true, styled = true, kept = true, sultana = false, heads = true;
 			int metal = 0;
 			StringBuilder bad = new StringBuilder();

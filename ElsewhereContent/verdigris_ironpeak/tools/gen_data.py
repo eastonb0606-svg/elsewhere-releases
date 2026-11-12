@@ -232,7 +232,7 @@ proc("proving_grounds", "proving_grounds", "#elsewhere:is_ironpeak", "surface", 
 sset("proving_grounds", ["elsewhere:proving_grounds"], 32, 12, 71239)
 proc("summit_throne", "summit_throne", "#elsewhere:is_ironpeak", "surface", 1300, 1470, 1)
 sset("summit_thrones", ["elsewhere:summit_throne"], 24, 8, 71240)
-w('data/elsewhere/worldgen/structure/verdigris_shipwreck.json', {"type": "minecraft:shipwreck", "biomes": "#elsewhere:is_verdigris_sea", "is_beached": False, "spawn_overrides": {}, "step": "surface_structures"})
+w('data/elsewhere/worldgen/structure/verdigris_shipwreck.json', {"type": "minecraft:shipwreck", "biomes": "#elsewhere:is_verdigris_sea", "is_beached": False, "spawn_overrides": {}, "step": "underground_structures"})  # 3.0: before the vi structures, which build over a wreck in their footprint
 sset("verdigris_shipwreck_graveyards", ["elsewhere:verdigris_shipwreck"], 8, 3, 71241)
 
 # ---------------------------------------------------------------- attunement, songs

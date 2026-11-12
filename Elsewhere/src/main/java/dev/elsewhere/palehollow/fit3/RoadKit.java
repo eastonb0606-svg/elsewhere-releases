@@ -88,8 +88,16 @@ public final class RoadKit {
 				cells.add(new int[] {x, z, sh});
 			}
 		}
-		for (int k = 1; k < cells.size(); k++) cells.get(k)[2] = Math.max(cells.get(k)[2], cells.get(k - 1)[2] - 2);
-		for (int k = cells.size() - 2; k >= 0; k--) cells.get(k)[2] = Math.max(cells.get(k)[2], cells.get(k + 1)[2] - 2);
+		clamp(cells);
+		if (rift) {
+			// the Return Rift pad is flat and whole-block: every centreline cell within 1 of the middle walks at one even height
+			int[] m = cells.get(cells.size() / 2);
+			int pad = Integer.MIN_VALUE;
+			for (int[] q : cells) if (Math.abs(q[0] - m[0]) <= 1 && Math.abs(q[1] - m[1]) <= 1) pad = Math.max(pad, q[2]);
+			pad = (pad + 1) & ~1;
+			for (int[] q : cells) if (Math.abs(q[0] - m[0]) <= 1 && Math.abs(q[1] - m[1]) <= 1) q[2] = pad;
+			clamp(cells);
+		}
 		int[] data = new int[2 + 3 * cells.size()];
 		data[0] = rift ? 1 : 0;
 		data[1] = cells.size();
@@ -109,6 +117,12 @@ public final class RoadKit {
 		}
 		int mid = cells.get(cells.size() / 2)[2] / 2;
 		out.add(new FitPiece("road", o, 0, mid, new int[] {minX - 3, minZ - 3, maxX + 3, maxZ + 3}, false, seed, data, minS / 2 - 16, maxS / 2 + 6));
+	}
+
+	/** Raises valleys so neighbouring cells differ by at most 2 half-blocks (one block). Only ever raises. */
+	static void clamp(List<int[]> cells) {
+		for (int k = 1; k < cells.size(); k++) cells.get(k)[2] = Math.max(cells.get(k)[2], cells.get(k - 1)[2] - 2);
+		for (int k = cells.size() - 2; k >= 0; k--) cells.get(k)[2] = Math.max(cells.get(k)[2], cells.get(k + 1)[2] - 2);
 	}
 
 	static List<double[]> chaikin(List<double[]> p) {
@@ -168,12 +182,18 @@ public final class RoadKit {
 		int[][] c = cells(p);
 		if (c.length < 2) return;
 		BlockState air = Blocks.AIR.defaultBlockState();
-		// deck cells (3x3 brush around each centreline cell, first assignment wins)
+		// deck cells: a 3x3 brush around each centreline cell; each deck cell takes the height of its NEAREST centreline cell (ties: the
+		// earlier one), so every centreline cell carries its own height and steps run across the road. {@code all} is the whole road's
+		// deck (not clipped to this chunk), for rails and posts at chunk borders.
+		java.util.Set<Long> all = new java.util.HashSet<>();
 		Map<Long, int[]> deck = new HashMap<>();
 		for (int k = 0; k < c.length; k++) for (int ox = -1; ox <= 1; ox++) for (int oz = -1; oz <= 1; oz++) {
-			int x = c[k][0] + ox, z = c[k][1] + oz;
+			int x = c[k][0] + ox, z = c[k][1] + oz, d2 = ox * ox + oz * oz;
+			all.add(BlockPos.asLong(x, 0, z));
 			if (x < w.clip.minX() || x > w.clip.maxX() || z < w.clip.minZ() || z > w.clip.maxZ()) continue;
-			deck.putIfAbsent(BlockPos.asLong(x, 0, z), new int[] {x, z, c[k][2], k, ox == 0 && oz == 0 ? 1 : 0});
+			long key = BlockPos.asLong(x, 0, z);
+			int[] had = deck.get(key);
+			if (had == null || d2 < had[5]) deck.put(key, new int[] {x, z, c[k][2], k, d2 == 0 ? 1 : 0, d2});
 		}
 		int mid = c.length / 2;
 		boolean rift = p.data[0] == 1;
@@ -216,8 +236,8 @@ public final class RoadKit {
 				if (W.soft(b) || y <= dy + 2) w.setW(x, y, z, air);
 			}
 			if (trestle && !centre) {
-				boolean edge = deck.get(BlockPos.asLong(x + 1, 0, z)) == null || deck.get(BlockPos.asLong(x - 1, 0, z)) == null
-					|| deck.get(BlockPos.asLong(x, 0, z + 1)) == null || deck.get(BlockPos.asLong(x, 0, z - 1)) == null;
+				boolean edge = !all.contains(BlockPos.asLong(x + 1, 0, z)) || !all.contains(BlockPos.asLong(x - 1, 0, z))
+					|| !all.contains(BlockPos.asLong(x, 0, z + 1)) || !all.contains(BlockPos.asLong(x, 0, z - 1));
 				if (edge && inner(c, x, z) > 0.9) w.setW(x, dy + 1, z, Blocks.PALE_OAK_FENCE.defaultBlockState());
 			}
 		}
@@ -227,7 +247,7 @@ public final class RoadKit {
 			if (Math.abs(a - b) < 2) continue;
 			int[] lo = a < b ? c[k] : c[k + 1], hi = a < b ? c[k + 1] : c[k];
 			Direction face = Direction.getApproximateNearest(hi[0] - lo[0], 0, hi[1] - lo[1]);
-			if (rift && Math.abs(lo[0] - c[mid][0]) <= 1 && Math.abs(lo[1] - c[mid][1]) <= 1) continue;
+			if (rift && lo[0] == c[mid][0] && lo[1] == c[mid][1]) continue;
 			BlockState st = Blocks.STONE_BRICK_STAIRS.defaultBlockState().setValue(net.minecraft.world.level.block.StairBlock.FACING, face);
 			w.setW(lo[0], Math.floorDiv(lo[2], 2), lo[1], st);
 		}
@@ -238,9 +258,10 @@ public final class RoadKit {
 			double ox = post[1] > 0 ? t[1] : -t[1], oz = post[1] > 0 ? -t[0] : t[0];
 			int x = c[k][0] + (int) Math.round(ox * 2), z = c[k][1] + (int) Math.round(oz * 2);
 			int ax = c[k][0] + (int) Math.round(ox), az = c[k][1] + (int) Math.round(oz);
-			if (deck.containsKey(BlockPos.asLong(x, 0, z)) || inner(c, x, z) < 1.5) {
+			if (all.contains(BlockPos.asLong(x, 0, z)) || inner(c, x, z) < 1.5) {
 				x = c[k][0] + (int) Math.round(ox * 3);
 				z = c[k][1] + (int) Math.round(oz * 3);
+				if (all.contains(BlockPos.asLong(x, 0, z)) || inner(c, x, z) < 1.5) continue;
 			}
 			int base = deckY(c[k][2]) + 1;
 			// the post's foot goes down to its own ground in logs (no floating post beside a trestle)
