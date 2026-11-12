@@ -1,0 +1,442 @@
+{
+  "lanes": {
+    "s_foresight": {
+      "elsewhere:azmar_wazir": [
+        {
+          "file": "s_foresight__duelist_wind_up_particles_any_rival_boss.png",
+          "scene": 452,
+          "line": 504,
+          "check": "OFF: no telegraph particles around the boss (no rings, sparks or weapon trail before the blow; Wazir signal marks, Hrafnholt parry-window/rune flash, Mirewick heron marks also absent); pose and sound still tell; the hit effects when the blow lands still show. ON: all of those visible",
+          "status": "ok",
+          "taken": "20:14:32"
+        },
+        {
+          "file": "s_foresight__ground_patch_pre_arm_ring_duelist_ground.png",
+          "scene": 453,
+          "line": 505,
+          "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
+          "status": "ok",
+          "taken": "20:14:34"
+        }
+      ],
+      "kill switch": []
+    },
+    "s_lod": {
+      "Far soldiers in their baked LOD skin (48-96 blocks, ARMIES 3.7)": [
+        {
+          "file": "s_lod__battle_aldermark_azmar_60_30s.png",
+          "scene": 455,
+          "line": 507,
+          "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
+          "status": "ok",
+          "taken": "20:15:07"
+        }
+      ],
+      "Tier edges (24 / 48 blocks): trims drop, cape stops, nothing pops": [
+        {
+          "file": "s_lod__patrol_8_10s.png",
+          "scene": 456,
+          "line": 508,
+          "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
+          "status": "pending"
+        }
+      ],
+      "300-soldier battle readout with /kingdomlod": [
+        {
+          "file": "s_lod__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 457,
+          "line": 509,
+          "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
+          "status": "pending"
+        }
+      ],
+      "Live soldiers end at 96 blocks, ranks beyond (with s-impostors)": [],
+      "Kill switch client_lod off = 2.1 soldier detail": []
+    },
+    "s_willolantern": {
+      "elsewhere:mirewick_will_o_lantern": [
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_first_person.png",
+          "scene": 461,
+          "line": 513,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_third_person.png",
+          "scene": 461,
+          "line": 513,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_tooltip.png",
+          "scene": 461,
+          "line": 513,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:marsh_wisp": [
+        {
+          "file": "s_willolantern__marsh_wisp_beside_its_owner_at_night_gea.png",
+          "scene": 462,
+          "line": 514,
+          "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
+          "status": "pending"
+        }
+      ],
+      "the wisp's light at night (gear3, wisp-light)": [],
+      "elsewhere:emberfall_rod": [
+        {
+          "file": "s_willolantern__emberfall_rod_first_person.png",
+          "scene": 464,
+          "line": 516,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_third_person.png",
+          "scene": 464,
+          "line": 516,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_in_use_first_person.png",
+          "scene": 464,
+          "line": 516,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_in_use_third_person.png",
+          "scene": 464,
+          "line": 516,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_after_use.png",
+          "scene": 464,
+          "line": 516,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_tooltip.png",
+          "scene": 464,
+          "line": 516,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_hraf": {
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_overview.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_ground.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        }
+      ],
+      "Jarl's longhall inside (Hrafnholt fv 2)": [],
+      "south gate tower and archer stages (Hrafnholt fv 2)": [],
+      "hof, forge and holmgang posts (Hrafnholt fv 2)": [],
+      "shore road and nausts (Hrafnholt fv 2, waterfront realm)": [],
+      "watch-fire cairn (Hrafnholt fv 2)": []
+    },
+    "s_waryak": {
+      "elsewhere:ironpeak_war_yak_horn": [
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person.png",
+          "scene": 471,
+          "line": 523,
+          "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person.png",
+          "scene": 471,
+          "line": 523,
+          "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip.png",
+          "scene": 471,
+          "line": 523,
+          "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person_2.png",
+          "scene": 472,
+          "line": 524,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
+          "scene": 472,
+          "line": 524,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
+          "scene": 472,
+          "line": 524,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
+          "scene": 472,
+          "line": 524,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
+          "scene": 472,
+          "line": 524,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
+          "scene": 472,
+          "line": 524,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:war_yak": [
+        {
+          "file": "s_waryak__war_yak_beside_its_owner_gear3.png",
+          "scene": 473,
+          "line": 525,
+          "check": "a shaggy dark-brown yak a little larger than a cow: low head with a skyiron brow plate, wide cream horns curving up with skyiron caps, shoulder hump, long fur skirt, crimson Ironclan blanket with a frost-grey fringe and a white peak sign on each flank, tufted tail",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__war_yak_charge_gear3.png",
+          "scene": 474,
+          "line": 526,
+          "check": "the head drops to lead with the horns and the legs go into a gallop with hoof dust; the zombies in its path are hit and thrown aside",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__war_yak_charge_gear3_later.png",
+          "scene": 474,
+          "line": 526,
+          "check": "the head drops to lead with the horns and the legs go into a gallop with hoof dust; the zombies in its path are hit and thrown aside",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_music_stems": {
+      "in-game boss music self-test (boss_music, realm guard + phase layers)": [],
+      "elsewhere:mournmaw": [
+        {
+          "file": "s_music_stems__phase_stems_in_a_real_fight_boss_music_p.png",
+          "scene": 476,
+          "line": 528,
+          "check": "by ear: at 66% the theme crossfades on the beat into its louder surge section, at 33% into its hottest \"climax\" bars (no stinger at either), never two tracks fighting; the kill brings in the track's own ending; a boss without a layer at a threshold plays the short phase stinger instead",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:great_hotbox": [
+        {
+          "file": "s_struct_greenhaze__great_hotbox_overview.png",
+          "scene": 477,
+          "line": 529,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__great_hotbox_ground.png",
+          "scene": 477,
+          "line": 529,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:bonfire_terrace": [
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_overview.png",
+          "scene": 478,
+          "line": 530,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_ground.png",
+          "scene": 478,
+          "line": 530,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:fern_terrace_farms": [
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_overview.png",
+          "scene": 479,
+          "line": 531,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_ground.png",
+          "scene": 479,
+          "line": 531,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:munchie_market": [
+        {
+          "file": "s_struct_greenhaze__munchie_market_overview.png",
+          "scene": 480,
+          "line": 532,
+          "check": "a 5-wide souk street of path/gravel between mud-brick curbs that steps with the ground, fern verges, lamp posts every 7, a fire-pit bulge with hay benches; 6 stalls on their own pads facing the street (striped awnings sloping to the street, counters, goods), one Budtender booth with a kushwood gable",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__munchie_market_ground.png",
+          "scene": 480,
+          "line": 532,
+          "check": "a 5-wide souk street of path/gravel between mud-brick curbs that steps with the ground, fern verges, lamp posts every 7, a fire-pit bulge with hay benches; 6 stalls on their own pads facing the street (striped awnings sloping to the street, counters, goods), one Budtender booth with a kushwood gable",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sesh_hut": [
+        {
+          "file": "s_struct_greenhaze__sesh_hut_overview.png",
+          "scene": 481,
+          "line": 533,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__sesh_hut_ground.png",
+          "scene": 481,
+          "line": 533,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lucid_spring": [
+        {
+          "file": "s_struct_greenhaze__lucid_spring_overview.png",
+          "scene": 482,
+          "line": 534,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__lucid_spring_ground.png",
+          "scene": 482,
+          "line": 534,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:listening_engine": [
+        {
+          "file": "s_struct_greenhaze__listening_engine_overview.png",
+          "scene": 483,
+          "line": 535,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__listening_engine_ground.png",
+          "scene": 483,
+          "line": 535,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:choir_geode": [
+        {
+          "file": "s_struct_greenhaze__choir_geode_overview.png",
+          "scene": 484,
+          "line": 536,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__choir_geode_ground.png",
+          "scene": 484,
+          "line": 536,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:silent_monastery": [
+        {
+          "file": "s_struct_greenhaze__silent_monastery_overview.png",
+          "scene": 485,
+          "line": 537,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__silent_monastery_ground.png",
+          "scene": 485,
+          "line": 537,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hanging_undercity": [
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_overview.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_ground.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_asm_court": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_asm_court__castle_aldermark_c_0_2_40_y180.png",
+          "scene": 487,
+          "line": 539,
+          "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
+          "status": "pending"
+        }
+      ],
+      "an Aldermark or Hrafnholt road lamp post beside an embankment, NEW world (fv 2)": [],
+      "a corner tower and a town lamp post, NEW world (fv 2)": []
+    }
+  },
+  "run": "20:15:07",
+  "totals": {
+    "ok": 3,
+    "fail": 0,
+    "manual": 0
+  }
+}
