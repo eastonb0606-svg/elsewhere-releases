@@ -1,0 +1,251 @@
+{
+  "lanes": {
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 26,
+          "line": 37,
+          "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:percolax": [
+        {
+          "file": "anim__percolax_hurt_peak.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:29"
+        },
+        {
+          "file": "anim__percolax_hurt_rest.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:29"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_blocking.png",
+          "scene": 146,
+          "line": 161,
+          "check": "rises to the vanilla blocking spot",
+          "status": "ok",
+          "taken": "23:40:32"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview.png",
+          "scene": 170,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "ok",
+          "taken": "23:40:36"
+        },
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "ok",
+          "taken": "23:40:41"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:solaxis_pyre_cradle": [
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_24_8_0.png",
+          "scene": 284,
+          "line": 323,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_0_3_30.png",
+          "scene": 284,
+          "line": 323,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:tidechain_lash": [
+        {
+          "file": "s_whips__tidechain_lash_first_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "23:40:43"
+        },
+        {
+          "file": "s_whips__tidechain_lash_third_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "23:40:44"
+        },
+        {
+          "file": "s_whips__tidechain_lash_tooltip.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "23:40:45"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:steam_auger": [
+        {
+          "file": "s_p5_tooltips__steam_auger_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "23:40:47"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "23:40:48"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "23:40:49"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "23:40:49"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_after_use.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "23:40:50"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_tooltip.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "23:40:50"
+        }
+      ]
+    },
+    "s_locate": {
+      "explorer map to a rival castle": [
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "ok",
+          "taken": "23:40:52"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "ok",
+          "taken": "23:40:53"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "ok",
+          "taken": "23:40:54"
+        }
+      ]
+    },
+    "s_p7_standing": {
+      "elsewhere:kingdom_market_inspector": [
+        {
+          "file": "s_p7_standing__hostile_trader_dialogue.png",
+          "scene": 446,
+          "line": 496,
+          "check": "red \"Hostile\" segment lit, the marker at the far left, \"Enemy of the Throne\", one red line \"They will not trade with you.\", Wares and Collect order greyed out (tooltips say why), Tribute... and Farewell still work; no price percent shown",
+          "status": "ok",
+          "taken": "23:40:56"
+        }
+      ]
+    },
+    "s_asm_court": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_asm_court__castle_aldermark_c_0_2_40_y180.png",
+          "scene": 488,
+          "line": 540,
+          "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:40:56",
+  "totals": {
+    "ok": 18,
+    "fail": 0,
+    "manual": 0
+  }
+}
