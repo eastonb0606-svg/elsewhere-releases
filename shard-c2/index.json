@@ -1,0 +1,455 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "anim__mournmaw_hurt_peak.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:33:00"
+        },
+        {
+          "file": "anim__mournmaw_hurt_rest.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:33:01"
+        }
+      ],
+      "elsewhere:strawgrim": [
+        {
+          "file": "anim__strawgrim_hurt_peak.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:04"
+        },
+        {
+          "file": "anim__strawgrim_hurt_rest.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:05"
+        }
+      ],
+      "elsewhere:percolax": [
+        {
+          "file": "anim__percolax_hurt_peak.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:08"
+        },
+        {
+          "file": "anim__percolax_hurt_rest.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:09"
+        }
+      ],
+      "elsewhere:thurgrim": [
+        {
+          "file": "anim__thurgrim_hurt_peak.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:12"
+        },
+        {
+          "file": "anim__thurgrim_hurt_rest.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:12"
+        }
+      ],
+      "elsewhere:galvanox": [
+        {
+          "file": "anim__galvanox_hurt_peak.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:16"
+        },
+        {
+          "file": "anim__galvanox_hurt_rest.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:16"
+        }
+      ],
+      "elsewhere:ankhara": [
+        {
+          "file": "anim__ankhara_hurt_peak.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__ankhara_hurt_rest.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:aldermark_masons_chisel": [
+        {
+          "file": "items__aldermark_masons_chisel_held.png",
+          "scene": 113,
+          "line": 129,
+          "check": "icon matches the sprite page (16x16, Mason's Chisel), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_masons_chisel_tooltip.png",
+          "scene": 113,
+          "line": 129,
+          "check": "icon matches the sprite page (16x16, Mason's Chisel), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:proving_grounds": [
+        {
+          "file": "s_struct_verdigris__proving_grounds_s_0_16_34.png",
+          "scene": 155,
+          "line": 172,
+          "check": "round arena ledge cut into the mountain, open cliff edge to the south on a stone foundation, stone-brick spectator tiers climbing the uphill (north) side, sloped banks instead of a cylinder cut, iron-bar rails, 4 red banners, the horn at the north gate",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:clockwork_rig": [
+        {
+          "file": "s_struct_verdigris__clockwork_rig_s_18_2_18.png",
+          "scene": 159,
+          "line": 176,
+          "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_verdigris__clockwork_rig_s_0_10_16.png",
+          "scene": 159,
+          "line": 176,
+          "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lighthouse": [
+        {
+          "file": "s_struct_verdigris__lighthouse_s_30_10_30.png",
+          "scene": 160,
+          "line": 177,
+          "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Ankhara arena seal + burrow trail (elsewhere:sunpit)": [
+        {
+          "file": "s_p13_particles__ankhara_arena_seal_3s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        }
+      ],
+      "Percolax phase-0 smoke hide (elsewhere:percolax)": [
+        {
+          "file": "s_p13_particles__percolax_smoke_hide_3s.png",
+          "scene": 168,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "pending"
+        }
+      ],
+      "verdigris arena seal (elsewhere:lighthouse, Galvanox)": [
+        {
+          "file": "s_p13_particles__verdigris_arena_seal_galvanox.png",
+          "scene": 169,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:sun_chamber": [
+        {
+          "file": "s_struct_overworld__sun_chamber_s_22_3_6.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__sun_chamber_hall_altar_facing_south.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:wreck_ring": [
+        {
+          "file": "s_struct_overworld__wreck_ring_s_26_10_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__wreck_ring_s_0_12_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:duelist_test (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase2.png",
+          "scene": 205,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:lantern_road": [
+        {
+          "file": "s_struct_core__lantern_road_above.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__lantern_road_end_eye_level.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        }
+      ],
+      "Return Rift ring (feature, Pale Hollow)": [
+        {
+          "file": "s_struct_core__return_rift_ring.png",
+          "scene": 214,
+          "line": 244,
+          "check": "5x5 tuff dais under the rift, ring of 8 tuff standing stones each on its own ground (heights differ, stair caps tilted, one lying fallen), no 9x9 air box cut into a slope",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:grunthar": [
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:solaxis_pyre_cradle": [
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_24_8_0.png",
+          "scene": 284,
+          "line": 323,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_0_3_30.png",
+          "scene": 284,
+          "line": 323,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mournmaw_weeping_basin": [
+        {
+          "file": "s_struct_nether__mournmaw_weeping_basin_s_0_16_26.png",
+          "scene": 285,
+          "line": 324,
+          "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_willolantern": {
+      "elsewhere:emberfall_rod": [
+        {
+          "file": "s_willolantern__emberfall_rod_first_person.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_third_person.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_in_use_first_person.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_in_use_third_person.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_after_use.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__emberfall_rod_tooltip.png",
+          "scene": 465,
+          "line": 517,
+          "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:bonfire_terrace": [
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_overview.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_ground.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:fern_terrace_farms": [
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_overview.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_ground.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:choir_geode": [
+        {
+          "file": "s_struct_greenhaze__choir_geode_overview.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__choir_geode_ground.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_bossdrops": {
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        },
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:33:16",
+  "totals": {
+    "ok": 10,
+    "fail": 0,
+    "manual": 0
+  }
+}
