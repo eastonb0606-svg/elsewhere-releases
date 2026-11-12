@@ -1,0 +1,339 @@
+{
+  "lanes": {
+    "s_setbonus_b": {
+      "elsewhere:hrafnholt_wolfskin_boots": [
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_first_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "ok",
+          "taken": "23:14:00"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_third_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "ok",
+          "taken": "23:14:01"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_tooltip.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "ok",
+          "taken": "23:14:02"
+        }
+      ]
+    },
+    "s_routines": {
+      "Mirewick off-time wards": [
+        {
+          "file": "s_routines__mirewick_off_time_wards.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_mirewick could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:14:02"
+        },
+        {
+          "file": "s_routines__mirewick_off_time_wards_5s.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_mirewick could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:14:02"
+        }
+      ]
+    },
+    "s_ascension": {
+      "elsewhere:galeplate_helmet": [
+        {
+          "file": "s_ascension__galeplate_helmet_first_person.png",
+          "scene": 420,
+          "line": 470,
+          "check": "the result slot shows the same helmet with glint; hover it: gold \"Ascendant Galeplate Helmet\", +3.5 Armor Toughness in the stat lines, a gold lore line \"Ascendant: +1 armor toughness ...\"",
+          "status": "ok",
+          "taken": "23:14:03"
+        },
+        {
+          "file": "s_ascension__galeplate_helmet_third_person.png",
+          "scene": 420,
+          "line": 470,
+          "check": "the result slot shows the same helmet with glint; hover it: gold \"Ascendant Galeplate Helmet\", +3.5 Armor Toughness in the stat lines, a gold lore line \"Ascendant: +1 armor toughness ...\"",
+          "status": "ok",
+          "taken": "23:14:04"
+        },
+        {
+          "file": "s_ascension__galeplate_helmet_tooltip.png",
+          "scene": 420,
+          "line": 470,
+          "check": "the result slot shows the same helmet with glint; hover it: gold \"Ascendant Galeplate Helmet\", +3.5 Armor Toughness in the stat lines, a gold lore line \"Ascendant: +1 armor toughness ...\"",
+          "status": "ok",
+          "taken": "23:14:05"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:14:07"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:14:08"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_first_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:14:10"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_third_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:14:12"
+        },
+        {
+          "file": "s_sunglass__sunglass_after_use.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:14:15"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "23:14:16"
+        },
+        {
+          "file": "s_sunglass__sunglass_first_person_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "23:14:17"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "23:14:18"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "23:14:20"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:bramble_totem": [
+        {
+          "file": "s_totems__bramble_totem_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "23:14:22"
+        },
+        {
+          "file": "s_totems__bramble_totem_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "23:14:22"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "23:14:24"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "23:14:26"
+        },
+        {
+          "file": "s_totems__bramble_totem_after_use.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "23:14:28"
+        },
+        {
+          "file": "s_totems__bramble_totem_tooltip.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "23:14:29"
+        }
+      ],
+      "elsewhere:azmar_sunglass_obelisk": [
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_first_person.png",
+          "scene": 438,
+          "line": 488,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_third_person.png",
+          "scene": 438,
+          "line": 488,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_tooltip.png",
+          "scene": 438,
+          "line": 488,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p7_standing": {
+      "elsewhere:court_marshal": [
+        {
+          "file": "s_p7_standing__standing_chip_when_looking_at_a_ruler.png",
+          "scene": 447,
+          "line": 497,
+          "check": "a small crimson/gold chip fades in just under the crosshair within 0.2 s: lantern crest, \"the Lantern Republic of Mirewick\", \"Valued Client · Friendly +45\" and a thin band bar; fades out over 0.2 s on looking away; shows through glass, never through stone; /diplomacy standing mirewick -80, look away for 5 s and back: the chip turns to \"Defaulter · Hostile -80\" with a red \"Attacks you on sight\" line; hidden in any open screen, F1, and with the Elsewhere HUD \"standing\" meter off",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_striking.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_knight_striking_later.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_willolantern": {
+      "elsewhere:mirewick_will_o_lantern": [
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_first_person.png",
+          "scene": 462,
+          "line": 514,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_third_person.png",
+          "scene": 462,
+          "line": 514,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_tooltip.png",
+          "scene": 462,
+          "line": 514,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_waryak": {
+      "elsewhere:ironpeak_war_yak_horn": [
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:14:29",
+  "totals": {
+    "ok": 21,
+    "fail": 2,
+    "manual": 0
+  }
+}
