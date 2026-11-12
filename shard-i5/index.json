@@ -1,0 +1,179 @@
+{
+  "lanes": {
+    "s_p13_particles": {
+      "Ankhara arena seal + burrow trail (elsewhere:sunpit)": [
+        {
+          "file": "s_p13_particles__ankhara_arena_seal_3s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:sun_chamber": [
+        {
+          "file": "s_struct_overworld__sun_chamber_s_22_3_6.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__sun_chamber_hall_altar_facing_south.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer (channel)": [
+        {
+          "file": "s_censer__censer_channel_first_person_1s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "23:48:10"
+        },
+        {
+          "file": "s_censer__censer_channel_third_person_2s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "23:48:11"
+        },
+        {
+          "file": "s_censer__censer_channel_top_3s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "23:48:12"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:eye_of_the_gale": [
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_0_8_26.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_20_10_20.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sickle": {
+      "elsewhere:mirewick_lantern_sickle": [
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person_2.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "ok",
+          "taken": "23:48:14"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person_2.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "ok",
+          "taken": "23:48:17"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_3.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "ok",
+          "taken": "23:48:17"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "elsewhere:hrafnholt_wolfcall_horn": [
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "ok",
+          "taken": "23:48:19"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "ok",
+          "taken": "23:48:20"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "ok",
+          "taken": "23:48:21"
+        }
+      ]
+    },
+    "s_foresight": {
+      "elsewhere:azmar_wazir": [
+        {
+          "file": "s_foresight__ground_patch_pre_arm_ring_duelist_ground.png",
+          "scene": 454,
+          "line": 506,
+          "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
+          "status": "ok",
+          "detail": "move label: Counter-Brew",
+          "taken": "23:48:24"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:choir_geode": [
+        {
+          "file": "s_struct_greenhaze__choir_geode_overview.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__choir_geode_ground.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:48:24",
+  "totals": {
+    "ok": 10,
+    "fail": 0,
+    "manual": 0
+  }
+}
