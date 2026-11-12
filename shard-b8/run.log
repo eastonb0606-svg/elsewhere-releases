@@ -14,3 +14,37 @@ fatal: expected 'acknowledgments', received 'packfile'
 warning: push negotiation failed; proceeding anyway with push
 published 13 PNGs (progress) -> cloud-shots-b8 93208e2
 published 33 PNGs (progress) -> cloud-shots-b8 da2858d
+published 54 PNGs (progress) -> cloud-shots-b8 e233d13
+client rc=0
+[22:03:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__hrafnholt_hersir_move_windup.png: wait_label: no boss bar move label within 90 s
+[22:03:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__hrafnholt_hersir_move_strike.png: wait_label: no boss bar move label within 90 s
+[22:05:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_ames_move_windup.png: wait_label: no boss bar move label within 90 s
+[22:05:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_ames_move_strike.png: wait_label: no boss bar move label within 90 s
+[22:07:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__mirewick_thwaite_bog_drum_call_windup.png: wait_label: no boss bar move label containing 'Bog-Drum Call' within 90 s
+[22:07:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__mirewick_thwaite_bog_drum_call_strike.png: wait_label: no boss bar move label containing 'Bog-Drum Call' within 90 s
+[22:08:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on.png: wait_label: no boss bar move label within 75 s
+[22:08:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on_5s.png: wait_label: no boss bar move label within 75 s
+[22:09:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_routines__mirewick_off_time_wards.png: locate: elsewhere:castle_mirewick could not be located within 100 chunks in any dimension that can hold it
+[22:09:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_routines__mirewick_off_time_wards_5s.png: locate: elsewhere:castle_mirewick could not be located within 100 chunks in any dimension that can hold it
+[22:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 57 ok, 10 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:01:40] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:01:40] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[22:01:40] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[22:01:43] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:01:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] 24 flat-stage scenes, 7 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:01:47] [Worker-Main-2/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+--
+22:12:21Z finished rc=0, 57 PNGs;  TOTAL 57 ok, 10 fail, 0 manual
