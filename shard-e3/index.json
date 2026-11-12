@@ -1,0 +1,327 @@
+{
+  "lanes": {
+    "gear": {
+      "Calling tooltip (moonsilk_robe, sunlance_staff)": [
+        {
+          "file": "gear__calling_tooltip_moonsilk_robe.png",
+          "scene": 10,
+          "line": 15,
+          "check": "purple line \"Caster 100%: spells x1.15, cost x0.90\" (staff) or the Leaning line on the robe; no line on vanilla items",
+          "status": "ok",
+          "taken": "22:57:46"
+        },
+        {
+          "file": "gear__calling_tooltip_sunlance_staff.png",
+          "scene": 10,
+          "line": 15,
+          "check": "purple line \"Caster 100%: spells x1.15, cost x0.90\" (staff) or the Leaning line on the robe; no line on vanilla items",
+          "status": "ok",
+          "taken": "22:57:46"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "anim__mournmaw_hurt_peak.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:57:50"
+        },
+        {
+          "file": "anim__mournmaw_hurt_rest.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:57:51"
+        }
+      ],
+      "elsewhere:rimeback": [
+        {
+          "file": "anim__rimeback_hurt_peak.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:54"
+        },
+        {
+          "file": "anim__rimeback_hurt_rest.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:54"
+        }
+      ],
+      "elsewhere:thurgrim": [
+        {
+          "file": "anim__thurgrim_hurt_peak.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:57"
+        },
+        {
+          "file": "anim__thurgrim_hurt_rest.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:58"
+        }
+      ],
+      "elsewhere:tempestra": [
+        {
+          "file": "anim__tempestra_hurt_peak.png",
+          "scene": 67,
+          "line": 80,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:01"
+        },
+        {
+          "file": "anim__tempestra_hurt_rest.png",
+          "scene": 67,
+          "line": 80,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:01"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:aldermark_parrying_buckler": [
+        {
+          "file": "items__aldermark_parrying_buckler_held.png",
+          "scene": 110,
+          "line": 126,
+          "check": "icon matches the sprite page (16x16, Parrying Buckler), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:02"
+        },
+        {
+          "file": "items__aldermark_parrying_buckler_tooltip.png",
+          "scene": 110,
+          "line": 126,
+          "check": "icon matches the sprite page (16x16, Parrying Buckler), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:03"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Prism beam and Burning Glass beam": [
+        {
+          "file": "s_p13_particles__prism_beam_15.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "ok",
+          "taken": "22:58:06"
+        },
+        {
+          "file": "s_p13_particles__burning_glass_beam_10.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "ok",
+          "taken": "22:58:09"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_sultana (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase2.png",
+          "scene": 203,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "22:58:12"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "kingdom soldier nameplates, Aldermark (POLISH P3; supersedes polish2's 10:05 nameplate scene in INTEGRATION-REQUESTS)": [
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_6.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "22:58:14"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "22:58:15"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "22:58:16"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:grumblegut": [
+        {
+          "file": "s_p2_telegraph__grumblegut_cone_ground_slam_rings_helm_o.png",
+          "scene": 262,
+          "line": 298,
+          "check": "crisp yellow rings and a red cone on the ground, fill grows then the hit lands as it fills; edges pulse faster near the end; no jagged dust, nothing under the floor or floating",
+          "status": "pending"
+        }
+      ],
+      "`/elsewhere_hud telegraphs hidden`, helm ON": [
+        {
+          "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on.png",
+          "scene": 269,
+          "line": 305,
+          "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
+          "status": "pending"
+        },
+        {
+          "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on_5s.png",
+          "scene": 269,
+          "line": 305,
+          "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_first_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_2.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:gale_sling_stone": [
+        {
+          "file": "s_galesling__sling_stone_in_flight_and_impact.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_man_at_arms": [
+        {
+          "file": "s_p10_tabard__tabard_emblems_chest_kingdom_module_clie.png",
+          "scene": 344,
+          "line": 387,
+          "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__tabard_emblems_chest_kingdom_module_clie_later.png",
+          "scene": 344,
+          "line": 387,
+          "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_bossdrops": {
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        },
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:58:16",
+  "totals": {
+    "ok": 18,
+    "fail": 0,
+    "manual": 0
+  }
+}
