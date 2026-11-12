@@ -28,7 +28,7 @@ import net.minecraft.util.RandomSource;
  * Measured like the armies 15 v 15 bench: 40 ticks to close, then 400 measured ticks, added MSPT = minus an idle baseline taken in the same
  * clean arena at the start of the round. {@link #ROUNDS} rounds, interleaved; the median run (by average) counts (ARMIES.md 4.1). Budget
  * per pairing: added average at most 2.0 ms, p95 at most 3.0. Only in the merged build (all four kingdoms loaded); a build with
- * Aldermark alone logs a skip. Writes {@code selftest-armies-pairings.tsv}.
+ * Aldermark alone logs a skip. Writes {@code selftest-armies-pairings.tsv}. Switch: {@code -Delsewhere.armies.pairings.rounds=0} skips it.
  */
 final class ArmiesPairings {
 	private ArmiesPairings() {}
@@ -48,6 +48,13 @@ final class ArmiesPairings {
 	static Factions.Stance before;
 
 	static void build() {
+		if (ROUNDS <= 0) {
+			ArmiesSelfTest.STEPS.add((srv, l) -> {
+				ArmiesSelfTest.info("PAIRINGS skipped (-Delsewhere.armies.pairings.rounds=0)");
+				return 1;
+			});
+			return;
+		}
 		List<Identifier> missing = KINGDOMS.stream().filter(k -> !Factions.exists(k) || ArmyScale.of(k) == null).toList();
 		if (missing.size() == KINGDOMS.size() - 1) {
 			ArmiesSelfTest.STEPS.add((srv, l) -> {

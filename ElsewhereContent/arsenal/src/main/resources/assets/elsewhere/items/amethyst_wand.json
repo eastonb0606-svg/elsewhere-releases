@@ -1,6 +1,19 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "elsewhere:item/amethyst_wand"
+    "type": "minecraft:range_dispatch",
+    "property": "elsewhere:cast_cooldown",
+    "entries": [
+      {
+        "threshold": 0.001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/amethyst_wand_spent"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/amethyst_wand"
+    }
   }
 }

@@ -80,7 +80,7 @@ public final class HoldTheLine {
 		if (on && !was) p.level().playSound(null, p.getX(), p.getY(), p.getZ(), SoundEvents.ARMOR_EQUIP_IRON.value(), SoundSource.PLAYERS, 0.4F, 0.7F);
 	}
 
-	static float damage(LivingEntity victim, DamageSource src, float amount) {
+	public static float damage(LivingEntity victim, DamageSource src, float amount) {
 		if (HOLDING.isEmpty()) return amount;
 		for (ServerPlayer h : HOLDING.values()) {
 			if (h == victim || h.isRemoved() || !h.isAlive() || h.level() != victim.level() || src.getEntity() == h) continue;

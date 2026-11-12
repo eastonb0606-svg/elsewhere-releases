@@ -29,6 +29,7 @@ public final class HrafnholtBosses {
 			if (h.champion()) h.risenType = DuelistContent.registerBoss("hrafnholt_risen_" + h.key, (t, l) -> new HrafnholtBoss(t, l, fh, true), HrafnholtProfiles.of(h, true));
 		}
 		Succession.registerRisen(HrafnholtContent.FACTION, Hrafn.HUNTMASTER.courtSlot);   // the court promotes one seat today; see INTEGRATION-REQUESTS
+		dev.elsewhere.rivals.hrafnholt.rewards.HrafnholtRewards.init();   // 3.0 (s-bossdrops): XP and drops on every death
 	}
 
 	/** Every boss and Risen type registered here. */

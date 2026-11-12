@@ -173,9 +173,9 @@ public final class RivalsTest {
 		dev.elsewhere.kingdom.KingdomPerf.testObservers.clear();
 		for (var e : level.getEntitiesOfClass(net.minecraft.world.entity.Entity.class, new AABB(-9000, -128, -9000, 9000, 400, 9000), x -> true))
 			if (!(e instanceof net.minecraft.world.entity.player.Player)) e.discard();
-		define(HRAF, "Jarldom of Hrafnholt", "{\"type\":\"elsewhere:thrall\",\"count_multiplier\":2.0,\"health\":20.0,\"levy\":{\"fraction\":0.3333,\"weapon\":\"minecraft:stone_axe\"}}", 1.2, 0x202428);
-		define(AZMAR, "Sultanate of Azmar", "{\"type\":\"elsewhere:porter\",\"count_multiplier\":0.5,\"health\":20.0}", 0.75, 0x2BB3A3);
-		define(MIRE, "Lantern Republic of Mirewick", "{\"type\":\"elsewhere:peat_cutter\",\"count_multiplier\":1.0,\"health\":20.0}", 0.9, 0x4F6B3A);
+		define(HRAF, "Jarldom of Hrafnholt", "{\"type\":\"elsewhere:thrall\",\"count_multiplier\":2.0,\"health\":18.0,\"levy\":{\"fraction\":0.3333,\"weapon\":\"minecraft:stone_axe\"}}", 1.2, 0x202428);
+		define(AZMAR, "Sultanate of Azmar", "{\"type\":\"elsewhere:porter\",\"count_multiplier\":0.5,\"health\":18.0}", 0.75, 0x2BB3A3);
+		define(MIRE, "Lantern Republic of Mirewick", "{\"type\":\"elsewhere:peat_cutter\",\"count_multiplier\":1.0,\"health\":18.0}", 0.9, 0x4F6B3A);
 		check("rival factions register through FactionDefs (code-defined, like a rival lane's JSON)", Factions.exists(HRAF) && Factions.exists(AZMAR) && Factions.exists(MIRE), null);
 		VillageLedger ledger = VillageLedger.get(level);
 		ledger.conquestOn = true;
@@ -222,9 +222,9 @@ public final class RivalsTest {
 				&& z.policy().borderOnly() && z.sizeMult() == 0.75, z);
 		check("Mirewick: peat-cutters, integration 10 days, unrest 0.60, 90% army", m.serfKind() == FactionVillages.SerfKind.PEAT_CUTTER && m.policy().integDays() == 10 && m.policy().unrest() == 0.60 && m.sizeMult() == 0.9, m);
 		VH = VillageManager.discover(level, sH, null);
-		// a 10x10 pool of water 30 blocks east of Hrafnholt's village for the waterfront (pier and boathouse) check
-		poolOrigin = VH.center.offset(30, 0, -5);
-		for (int px = 0; px < 10; px++) for (int pz = 0; pz < 10; pz++) level.setBlock(new BlockPos(poolOrigin.getX() + px, -61, poolOrigin.getZ() + pz), Blocks.WATER.defaultBlockState(), 2);
+		// a 16x18 shelving pool 30 blocks east of Hrafnholt's village (1, 2, then 3 deep) for the waterfront (jetty, naust, strand boat) check
+		poolOrigin = VH.center.offset(30, 0, -6);
+		HrafnLooksTest.pool(level, poolOrigin, POOL_X, POOL_Z);
 		poolWater0 = poolWater();
 		VA = VillageManager.discover(level, sA, null);
 		VM = VillageManager.discover(level, sM, null);
@@ -248,11 +248,12 @@ public final class RivalsTest {
 
 	static BlockPos poolOrigin;
 	static int poolWater0;
+	static final int POOL_X = 16, POOL_Z = 18;
 
 	/** Water blocks in the pool and a margin of 8 around it (a flood would raise this). */
 	static int poolWater() {
 		int n = 0;
-		for (int x = -8; x < 18; x++) for (int z = -8; z < 18; z++) for (int y = -63; y <= -58; y++)
+		for (int x = -8; x < POOL_X + 8; x++) for (int z = -8; z < POOL_Z + 8; z++) for (int y = -63; y <= -58; y++)
 			if (level.getBlockState(new BlockPos(poolOrigin.getX() + x, y, poolOrigin.getZ() + z)).is(Blocks.WATER)) n++;
 		return n;
 	}
@@ -366,15 +367,22 @@ public final class RivalsTest {
 			if (e.getValue().written().is(Blocks.SPRUCE_LOG) && e.getValue().original().is(Blocks.WATER)) logsInWater++;
 		}
 		check("Hrafnholt waterfront (16a): a spruce pier of slabs on log pilings and a boathouse beside open water", slabs >= 8 && logsInWater >= 2 && VH.pieces.stream().anyMatch(pc -> pc.type() == RivalPlans.PIER), "slabs " + slabs + " pilings " + logsInWater);
-		check("Hrafnholt waterfront never floods: water in and around the pool is never more than before", poolWater() <= poolWater0 && poolWater() >= poolWater0 - 6, poolWater0 + " -> " + poolWater());
+		int piled = 0;
+		for (var e : VH.journal.long2ObjectEntrySet()) if (e.getValue().original().is(Blocks.WATER)) piled++;
+		check("Hrafnholt waterfront never floods: water in and around the pool is exactly what was there less each pile", poolWater() == poolWater0 - piled, poolWater0 + " -> " + poolWater() + " piles " + piled);
+		HrafnLooksTest.checks(level, VH, poolOrigin, POOL_X, POOL_Z);
 		// Azmar
-		int gold = count(VA, Blocks.GLAZED_TERRACOTTA.yellow()), lapis = count(VA, Blocks.LAPIS_BLOCK), sand = count(VA, Blocks.SANDSTONE), jl = countTag(VA, s -> s.is(Blocks.JUNGLE_LEAVES) && s.getValue(net.minecraft.world.level.block.LeavesBlock.PERSISTENT)), jl2 = count(VA, Blocks.JUNGLE_LOG);
-		check("Azmar: obelisks (gold pyramidion, lapis band) on sandstone", gold >= 2 && lapis >= 2 && sand >= 40, "gold " + gold + " lapis " + lapis + " sandstone " + sand);
+		int gold = count(VA, Blocks.GLAZED_TERRACOTTA.yellow()), lapis = count(VA, Blocks.DYED_TERRACOTTA.pick(net.minecraft.world.item.DyeColor.BLUE)), valuable = count(VA, Blocks.LAPIS_BLOCK) + count(VA, Blocks.GOLD_BLOCK), sand = count(VA, Blocks.SANDSTONE), jl = countTag(VA, s -> s.is(Blocks.JUNGLE_LEAVES) && s.getValue(net.minecraft.world.level.block.LeavesBlock.PERSISTENT)), jl2 = count(VA, Blocks.JUNGLE_LOG);
+		check("Azmar: obelisks (yellow-terracotta pyramidion, blue faience band, no gold or lapis blocks) on sandstone", gold >= 2 && lapis >= 2 && valuable == 0 && sand >= 40, "gold " + gold + " lapis " + lapis + " valuable " + valuable + " sandstone " + sand);
 		check("Azmar: palm-shaded walls (persistent jungle leaves, jungle logs), cyan banners, no blue", jl >= 8 && jl2 >= 3 && banners(VA, net.minecraft.world.item.DyeColor.CYAN) >= 2 && banners(VA, net.minecraft.world.item.DyeColor.BLUE) == 0, "leaves " + jl + " logs " + jl2);
+		AzmarLookTest.village(level, VA, List.of(VH, VM, VF)); // [azmar-look] 3.0 Azmar look (s-vlook-azmar)
+		AzmarLookTest.hillside(level);
+		AzmarLookTest.outpost();
 		// Mirewick
 		int deck = count(VM, Blocks.SMOOTH_STONE), post = count(VM, Blocks.STRIPPED_MANGROVE_LOG), lant = count(VM, Blocks.LANTERN), mud = count(VM, Blocks.GRASS_BLOCK);
 		check("Mirewick: pale-stone quay decks on pillars, lanterns, stone-brick dike", deck >= 20 && post >= 8 && lant >= 3 && mud >= 20, "planks " + deck + " posts " + post + " lanterns " + lant + " mud " + mud);
 		check("Mirewick: purple banners, no blue", banners(VM, net.minecraft.world.item.DyeColor.PURPLE) >= 2 && banners(VM, net.minecraft.world.item.DyeColor.BLUE) == 0, "purple " + banners(VM, net.minecraft.world.item.DyeColor.PURPLE) + " blue " + banners(VM, net.minecraft.world.item.DyeColor.BLUE));
+		MirewickLooksTest.run(level, VM); // [mirewick-look] 3.0 Mirewick look (s-vlook-mire)
 		// never flooding, burning
 		check("no rival style placed or caused any fluid (journals hold no water or lava)", !journalHasFluid(VH) && !journalHasFluid(VA) && !journalHasFluid(VM), null);
 		check("no rival style placed fire", countTag(VH, s -> s.is(net.minecraft.tags.BlockTags.FIRE)) == 0 && countTag(VA, s -> s.is(net.minecraft.tags.BlockTags.FIRE)) == 0 && countTag(VM, s -> s.is(net.minecraft.tags.BlockTags.FIRE)) == 0, null);

@@ -45,7 +45,10 @@ public final class CourtContent {
 		net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback.EVENT.register((d, ctx, env) -> DiplomacyCommand.register(d));
 		CourtCombat.init();
 		CourtLife.init();
+		CourtRoutineAnchors.init(); // s-routines: routine where ids -> castle layout places (ARMIES.md 2.6)
 		dev.elsewhere.kingdom_court.compat.TestMeterOrder.init(); // s-compat-testmeter: 300 HP cap after Test Meter's mob-health bonus
+		dev.elsewhere.kingdom_court.look.AldermarkRulerLook.init(); // s-rulerarmor: B10 Aldermark plate and barding on rulers saved before 3.0
+		dev.elsewhere.kingdom_court.standing.StandingNet.init(); // s-p7-standing: POLISH P7 trader dialogue + Standing chip payloads
 		LOG.info("Elsewhere kingdom court loaded: 6 rulers, {} items", CourtItems.ALL.size());
 	}
 }

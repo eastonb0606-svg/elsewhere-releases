@@ -131,23 +131,37 @@ public final class AnimProbe {
 
 	// ---- the per-boss checks ----
 
-	/** Idle: the pose keeps changing over 4 s with nothing else going on. */
+	/**
+	 * Idle: over 4 s with nothing else going on the pose keeps changing (breathing), and at least two parts take part
+	 * (a body that breathes, not one spinning prop). Reports every part that moves, largest first.
+	 */
 	public <S extends LivingEntityRenderState> float idle(String boss, EntityModel<S> m, Supplier<S> fresh, Consumer<S> base) {
 		float[] first = null;
 		float amp = 0;
-		float[] best = null;
+		float[] per = null;
 		for (int age = 100; age <= 180; age += 3) {
 			S s = fresh.get();
 			s.ageInTicks = age;
 			base.accept(s);
 			float[] p = pose(m, s);
-			if (first == null) first = p;
-			else if (diff(first, p) > amp) {
-				amp = diff(first, p);
-				best = p;
+			if (first == null) {
+				first = p;
+				per = new float[p.length / 10];
+				continue;
 			}
+			amp = Math.max(amp, diff(first, p));
+			for (int i = 0; i < per.length; i++) per[i] = Math.max(per[i], partDiff(first, p, i));
 		}
-		check(boss, "idle", amp >= IDLE_MIN, "amplitude " + f(amp) + " moving " + (best == null ? "[]" : moved(m, first, best)));
+		Map<ModelPart, String> names = names(m.root());
+		List<ModelPart> parts = m.allParts();
+		List<Integer> idx = new ArrayList<>();
+		for (int i = 0; i < per.length; i++) if (per[i] > 0.01F) idx.add(i);
+		float[] pp = per;
+		idx.sort((x, y) -> Float.compare(pp[y], pp[x]));
+		StringBuilder sb = new StringBuilder("[");
+		for (int n = 0; n < Math.min(6, idx.size()); n++) sb.append(n > 0 ? "," : "").append(names.getOrDefault(parts.get(idx.get(n)), "?"));
+		sb.append(idx.size() > 6 ? ",+" + (idx.size() - 6) : "").append(']');
+		check(boss, "idle", amp >= IDLE_MIN && idx.size() >= 2, "amplitude " + f(amp) + ", " + idx.size() + " parts breathing " + sb);
 		return amp;
 	}
 

@@ -58,8 +58,19 @@ public final class SpawnGroups3 {
 	static final Logger LOG = LoggerFactory.getLogger("Elsewhere/spawn_groups/greenhaze_hush");
 	private static boolean done;
 
-	/** One 6.2 row converted in code: the 2.1 count range and the 3.0 one. */
-	public record Size(String id, int oldMin, int oldMax, int newMin, int newMax) {
+	/**
+	 * One 6.2 row converted in code: the 2.1 count range and the 3.0 one. {@code weightFactor} 0 = the head-count formula;
+	 * a swarm-as-one row (6.1 rule 3: one entity draws {@code drawnMean} members on average) gives its weight factor directly.
+	 */
+	public record Size(String id, int oldMin, int oldMax, int newMin, int newMax, double weightFactor, double drawnMean) {
+		Size(final String id, final int oldMin, final int oldMax, final int newMin, final int newMax) {
+			this(id, oldMin, oldMax, newMin, newMax, 0, 0);
+		}
+
+		double factor() {
+			return weightFactor > 0 ? weightFactor : oldMean() / newMean();
+		}
+
 		double oldMean() {
 			return (oldMin + oldMax) / 2.0;
 		}
@@ -81,6 +92,8 @@ public final class SpawnGroups3 {
 				sel -> "elsewhere".equals(sel.getBiomeKey().identifier().getNamespace()) && Groups3Data.BIOMES.contains(sel.getBiomeKey().identifier().getPath()),
 				(sel, ctx) -> apply(sel.getBiomeKey().identifier().getPath(), ctx.getMobSpawnSettings(), ON));
 		Herds3.init();
+		Swarm3.rules(Groups3Data.SWARMS);
+		Swarm3.init();
 		LOG.info("[spawn_groups] greenhaze_hush: {} ({} rows in code, {} JSON rows, {} grouped creatures)", ON ? "on" : "OFF (2.1 groups)",
 			Groups3Data.SIZES.size(), Groups3Data.OLD.size(), Groups3Data.RULES.size());
 	}
@@ -117,7 +130,7 @@ public final class SpawnGroups3 {
 		if (on) {
 			for (Size s : Groups3Data.SIZES) {
 				if (s.id().equals(id) && s.oldMin() == min && s.oldMax() == max) {
-					return new int[] {s.newMin(), s.newMax(), Math.max(1, (int) Math.round(weight * s.oldMean() / s.newMean()))};
+					return new int[] {s.newMin(), s.newMax(), Math.max(1, (int) Math.round(weight * s.factor()))};
 				}
 			}
 			return null;
@@ -168,7 +181,9 @@ public final class SpawnGroups3 {
 			}
 			MobSpawnSettings s = biome.getAttributes().applyModifier(EnvironmentAttributes.NATURAL_MOB_SPAWNS, EnvironmentAttributes.NATURAL_MOB_SPAWNS.defaultValue());
 			for (MobCategory cat : MobCategory.values()) {
-				for (Weighted<MobSpawnSettings.SpawnerData> w : s.getMobsInCategory(cat).unwrap()) {
+				var mobs = s.getMobsInCategory(cat);
+				if (mobs == null) continue; // a biome without entries in this category has no list (s-asm-kingdom 13:20)
+				for (Weighted<MobSpawnSettings.SpawnerData> w : mobs.unwrap()) {
 					Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(w.value().type());
 					int[] want = Groups3Data.TARGET.get(id.getPath());
 					if (!"elsewhere".equals(id.getNamespace()) || want == null) continue;
@@ -194,9 +209,14 @@ public final class SpawnGroups3 {
 		for (Size s : Groups3Data.SIZES) {
 			int[] to = convert("x", s.id(), s.oldMin(), s.oldMax(), 40, true);
 			double before = 40 * s.oldMean(), after = to == null ? -1 : to[2] * s.newMean();
-			if (to == null || to[0] != s.newMin() || to[1] != s.newMax() || Math.abs(after - before) > s.newMean() / 2 + 0.01 || s.newMin() < s.oldMin()) {
-				trip.add(s.id() + " " + before + "->" + after);
+			boolean ok = to != null && to[0] == s.newMin() && to[1] == s.newMax();
+			if (s.drawnMean() > 0) {
+				// swarm-as-one: no more entities than before, at least as many drawn members (a bigger swarm, ARMIES 6.2)
+				ok &= after <= before + 0.01 && to[2] * s.drawnMean() >= before - s.drawnMean(); // within one pick's rounding
+			} else {
+				ok &= Math.abs(after - before) <= s.newMean() / 2 + 0.01 && s.newMin() >= s.oldMin();
 			}
+			if (!ok) trip.add(s.id() + " " + before + "->" + after);
 		}
 		check.accept(trip.isEmpty(), n + "off switch restores exact 2.1 groups; expected head count per pick unchanged " + trip);
 		// 3-5. live groups: a pack forms, a hurt member alerts the pack, a dead leader hands over
@@ -213,6 +233,8 @@ public final class SpawnGroups3 {
 			for (int i = 0; i < 4 && rule != null; i++) {
 				if (type.create(level, EntitySpawnReason.NATURAL) instanceof Mob m) {
 					m.setPos(at.getX() + 0.5 + i * 1.5, at.getY(), at.getZ() + 0.5);
+					m.finalizeSpawn(level, level.getCurrentDifficultyAt(at), EntitySpawnReason.NATURAL, null); // as NaturalSpawner does
+					if (m.isPassenger()) m.stopRiding();
 					m.setNoGravity(true);
 					level.addFreshEntity(m);
 					spawned.add(m);
@@ -225,6 +247,17 @@ public final class SpawnGroups3 {
 			boolean follow = lead != null && pack.stream().filter(m -> m != lead).allMatch(m -> lead.getUUID().equals(Herds3.leaderId(m)) && Herds3.leaderOf(m) == lead
 				&& m.getGoalSelector().getAvailableGoals().stream().anyMatch(g -> g.getGoal() instanceof Herds3.FollowLeader3) == rule.steer());
 			boolean grown = lead != null && (!rule.grow() || lead.getScale() > 1.1F);
+			// a boss add (EntityType.create + addFreshEntity, no finalizeSpawn) spawned in the same tick next to the pack stays out of it
+			boolean addAlone = false;
+			if (type != null && rule != null && type.create(level, EntitySpawnReason.MOB_SUMMONED) instanceof Mob add) {
+				add.setPos(at.getX() + 0.5, at.getY(), at.getZ() + 2.5);
+				add.setNoGravity(true);
+				level.addFreshEntity(add);
+				spawned.add(add);
+				Herds3.join(add, level, rule);
+				addAlone = !Herds3.isLeader(add) && Herds3.leaderId(add) == null;
+			}
+			check.accept(addAlone, n + "a boss add (no finalizeSpawn) never joins or leads a herd");
 			check.accept(pack.size() == 4 && leaders == 1 && follow && grown, n + "a natural pack of " + Groups3Data.TEST_TYPE + " forms one leader + 3 followers (steer "
 				+ (rule == null ? "?" : rule.steer()) + ", leader scale " + (lead == null ? "?" : lead.getScale()) + ")");
 			// the 10-tick decision gate: canUse is evaluated every other tick, so one in five calls decides
@@ -274,6 +307,7 @@ public final class SpawnGroups3 {
 				stripped = m.getScale() < 1.05F && m.entityTags().stream().noneMatch(t -> t.startsWith("elsewhere_herd"));
 			}
 			check.accept(stripped, n + "switched off, a saved leader loses its size and group tags");
+			Swarm3.selfTest(level, at, spawned, check, n);
 		} catch (Throwable t) {
 			check.accept(false, n + "live group test threw " + t);
 			LOG.error("[spawn_groups] self-test", t);

@@ -457,6 +457,8 @@ public final class SelfTest {
 		SelfTestWar.add();
 		SelfTestLongship.add();
 		SelfTestTactics.add();
+		SelfTestHeraldry.add(); // 3.0 P10 emblems + capes
+		SelfTestTownsfolkSkins.run(); // 3.0 townsfolk skins: 36 role textures (s-townsfolk-art; resource reads only)
 	}
 
 	static int benchDead;

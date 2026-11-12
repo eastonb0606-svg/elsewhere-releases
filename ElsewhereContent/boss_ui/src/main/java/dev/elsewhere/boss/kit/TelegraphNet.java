@@ -4,7 +4,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
 import java.util.function.Consumer;
@@ -31,8 +32,9 @@ import org.jspecify.annotations.Nullable;
  * <li>Only players within {@link #SEND_RANGE} blocks of the shape receive it.</li>
  * <li>A player whose client can't take the payload (no boss_ui), or every player while the kill switch is off, gets the
  * old dust particles instead, through the caller's {@code dust} callback (still foresight-gated).</li>
- * <li>{@link #pulse} serves the old "call it every few ticks" API: the first call sends the shape, repeats with the same
- * geometry only refresh it about every 7 ticks (same id, so the client extends it instead of restarting it).</li>
+ * <li>{@link #pulse} serves the old "call it every few ticks" API: the first call sends the shape; later calls for the same
+ * shape re-send it (same id, so the client moves or extends it instead of restarting it) only when it moved or is about to
+ * run out, about every 7 ticks.</li>
  * </ul>
  * Kill switch {@code boss_telegraphs}: {@code config/elsewhere-overhaul3.json} {@code "boss_telegraphs": false} or
  * {@code -Delsewhere.overhaul3.boss_telegraphs=false} brings back the dust telegraphs everywhere.
@@ -60,15 +62,42 @@ public final class TelegraphNet {
 
 	private static boolean registered;
 	private static int nextId = 1;
-	private static final Map<ServerLevel, Map<Long, Live>> LIVE = new WeakHashMap<>();
+	/** A repeat-call shape follows its previous call if it is this close (blocks). */
+	public static final double MATCH = 3.0;
+	private static final Map<ServerLevel, List<Live>> LIVE = new WeakHashMap<>();
 	private static final Map<ServerLevel, long[]> SHOWN_UNTIL = new WeakHashMap<>();
 
 	private static final class Live {
 		final int id;
-		long until;
+		final byte kind;
+		final int flags, rgb;
+		double x, y, z;
+		float a, b, c, d;
+		long until, lastCall = Long.MIN_VALUE;
 
-		Live(int id) {
+		Live(int id, byte kind, int flags, int rgb) {
 			this.id = id;
+			this.kind = kind;
+			this.flags = flags;
+			this.rgb = rgb;
+		}
+
+		/** Same size (the parts of the geometry that don't move with the boss). */
+		boolean sameSize(float na, float nb, float nc, float nd) {
+			return switch (kind) {
+				case RING -> Math.abs(a - na) < 0.05F && Math.abs(b - nb) < 0.05F;
+				case DISC -> Math.abs(a - na) < 0.05F;
+				case CONE -> Math.abs(b - nb) < 0.5F && Math.abs(c - nc) < 0.05F;
+				case LINE -> Math.abs(d - nd) < 0.05F;
+				default -> a == na && b == nb && c == nc && d == nd;
+			};
+		}
+
+		/** A cone that turned more than 2 degrees, or a line whose far end moved more than half a block. */
+		boolean turned(float na, float nb, float nc) {
+			if (kind == CONE) return Math.abs(((na - a) % 360 + 540) % 360 - 180) > 2F;
+			if (kind == LINE) return (na - a) * (na - a) + (nb - b) * (nb - b) + (nc - c) * (nc - c) > 0.25F;
+			return false;
 		}
 	}
 
@@ -170,17 +199,43 @@ public final class TelegraphNet {
 	 */
 	public static void pulse(ServerLevel level, byte kind, int flags, double x, double y, double z, float a, float b, float c, float d,
 			int rgb, @Nullable Consumer<ServerPlayer> dustFallback) {
-		long now = level.getGameTime();
-		Map<Long, Live> m = LIVE.computeIfAbsent(level, k -> new HashMap<>());
-		if (m.size() > 48) m.values().removeIf(l -> l.until < now);
-		long key = key(kind, flags, x, y, z, a, b, c, d, rgb);
-		Live live = m.get(key);
-		boolean fresh = live == null || now > live.until;
-		boolean send = fresh || live.until - now <= REFRESH;
-		if (fresh) {
-			live = new Live(newId());
-			m.put(key, live);
+		pulseAt(level, level.getGameTime(), kind, flags, x, y, z, a, b, c, d, rgb, dustFallback);
+	}
+
+	/**
+	 * {@link #pulse} at a given game time (tests). A call matches the nearest live shape of the same kind, colour and size
+	 * within {@link #MATCH} blocks that wasn't already called this tick: a boss-anchored shape that moves (or a cone that
+	 * turns, a line whose target walks) keeps its id and is re-sent only when it moved, so the client moves it instead of
+	 * leaving a trail. Several marks of one size in one tick stay separate shapes.
+	 */
+	public static void pulseAt(ServerLevel level, long now, byte kind, int flags, double x, double y, double z, float a, float b, float c, float d,
+			int rgb, @Nullable Consumer<ServerPlayer> dustFallback) {
+		List<Live> list = LIVE.computeIfAbsent(level, k -> new ArrayList<>());
+		list.removeIf(l -> l.until < now);
+		Live live = null;
+		double best = MATCH * MATCH;
+		for (Live l : list) {
+			if (l.kind != kind || l.flags != flags || l.rgb != rgb || l.lastCall == now || !l.sameSize(a, b, c, d)) continue;
+			double dsq = (l.x - x) * (l.x - x) + (l.y - y) * (l.y - y) + (l.z - z) * (l.z - z);
+			if (dsq <= best) {
+				best = dsq;
+				live = l;
+			}
 		}
+		boolean fresh = live == null;
+		boolean send = fresh || best > 0.0625 || live.turned(a, b, c) || live.until - now <= REFRESH;
+		if (fresh) {
+			live = new Live(newId(), kind, flags, rgb);
+			list.add(live);
+		}
+		live.lastCall = now;
+		live.x = x;
+		live.y = y;
+		live.z = z;
+		live.a = a;
+		live.b = b;
+		live.c = c;
+		live.d = d;
 		if (send) live.until = now + HOLD;
 		Shape s = send ? new Shape(kind, (byte) (flags | OPEN), live.id, -1, x, y, z, a, b, c, d, 0xFF000000 | rgb, HOLD) : null;
 		boolean attack = (flags & ATTACK) != 0;
@@ -242,8 +297,8 @@ public final class TelegraphNet {
 
 	/** Test hook: how many repeat-call shapes this level tracks. */
 	public static int liveCount(ServerLevel level) {
-		Map<Long, Live> m = LIVE.get(level);
-		return m == null ? 0 : m.size();
+		List<Live> l = LIVE.get(level);
+		return l == null ? 0 : l.size();
 	}
 
 	private static void markShown(ServerLevel level, long until) {
@@ -255,18 +310,6 @@ public final class TelegraphNet {
 		int id = nextId;
 		nextId = nextId >= (1 << 20) ? 1 : nextId + 1;
 		return id;
-	}
-
-	private static long key(byte kind, int flags, double x, double y, double z, float a, float b, float c, float d, int rgb) {
-		long h = kind * 31L + flags;
-		h = h * 1_000_003L + Math.round(x * 4);
-		h = h * 1_000_003L + Math.round(y * 4);
-		h = h * 1_000_003L + Math.round(z * 4);
-		h = h * 1_000_003L + Math.round(a * 8);
-		h = h * 1_000_003L + Math.round(b * 8);
-		h = h * 1_000_003L + Math.round(c * 8);
-		h = h * 1_000_003L + Math.round(d * 8);
-		return h * 1_000_003L + (rgb & 0xFFFFFF);
 	}
 
 	private static boolean readSwitch() {

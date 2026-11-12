@@ -5,7 +5,7 @@
 	"name": "Elsewhere kingdom villages client screenshots",
 	"environment": "*",
 	"entrypoints": {
-		"fabric-client-gametest": ["dev.elsewhere.kingdom_villages.gametest.VillagesScreenshots"]
+		"fabric-client-gametest": ["dev.elsewhere.kingdom_villages.gametest.VillagesScreenshots", "dev.elsewhere.kingdom_villages.gametest.AldLookShots"]
 	},
 	"depends": {
 		"elsewhere_kingdom_villages": "*"

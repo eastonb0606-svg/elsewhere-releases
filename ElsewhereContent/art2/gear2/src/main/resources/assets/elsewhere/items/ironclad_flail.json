@@ -1,6 +1,19 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "elsewhere:item/ironclad_flail"
+    "type": "minecraft:range_dispatch",
+    "property": "elsewhere:attack_charge",
+    "entries": [
+      {
+        "threshold": 0.95,
+        "model": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/ironclad_flail_charged"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/ironclad_flail"
+    }
   }
 }

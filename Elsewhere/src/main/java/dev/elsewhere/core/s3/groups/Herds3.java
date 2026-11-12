@@ -171,6 +171,7 @@ public final class Herds3 {
 			}
 		}
 		if (!leads && leader == null) {
+			if (!spawnedNaturally(m)) return; // boss adds and scripted spawns (no finalizeSpawn) never form herds
 			long now = level.getGameTime();
 			Pack p = OPEN.get(m.getType());
 			if (p != null && p.level() == level && p.time() == now && p.size()[0] < r.max()
@@ -192,6 +193,18 @@ public final class Herds3 {
 			if (r.steer()) addFollowGoal(m, r);
 		}
 		if (r.guard() && m instanceof PathfinderMob pm && !pm.hasHome()) pm.setHomeTo(m.blockPosition(), 10);
+	}
+
+	/** Mob.finalizeSpawn's random follow-range bonus (vanilla, permanent): present on natural, chunk-generation, spawner and egg spawns. */
+	static final Identifier SPAWN_BONUS = Identifier.withDefaultNamespace("random_spawn_bonus");
+
+	/**
+	 * True when {@code finalizeSpawn} ran for this mob: natural packs, chunk generation, spawners and spawn eggs. Boss adds
+	 * are made with {@code EntityType.create} + {@code addFreshEntity}, which skips it, so they keep their boss's brain.
+	 */
+	static boolean spawnedNaturally(final Mob m) {
+		AttributeInstance a = m.getAttribute(Attributes.FOLLOW_RANGE);
+		return a != null && a.hasModifier(SPAWN_BONUS);
 	}
 
 	private static boolean hasRole(final Mob m) {

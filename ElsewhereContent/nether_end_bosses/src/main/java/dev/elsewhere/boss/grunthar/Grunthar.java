@@ -406,7 +406,7 @@ public class Grunthar extends ElsewhereBoss implements LinkedBodies {
 
 	@Override
 	public void rebuildArena(ServerLevel level, BlockPos origin) {
-		GruntharArena.INSTANCE.build(level, origin, level.getRandom());
+		dev.elsewhere.nether_end_bosses.fit3.NetherFit.rebuild(level, "grunthar", origin); // 3.0: the generator that built this arena (2.x or fit3)
 	}
 
 	@Override

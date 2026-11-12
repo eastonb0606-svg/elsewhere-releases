@@ -44,6 +44,14 @@ public class MarshWisp extends MinionEntity {
 			.add(Attributes.FOLLOW_RANGE, 32.0);
 	}
 
+	/** Server, only during its own synchronous recast: the wisp steps out of the spell's way (spell line traces skip spectators). */
+	boolean echoing;
+
+	@Override
+	public boolean isSpectator() {
+		return echoing || super.isSpectator();
+	}
+
 	public @Nullable BlockPos lightPos() {
 		return lightPos;
 	}

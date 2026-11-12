@@ -1,0 +1,139 @@
+{
+  "_doc": "s-galesling: Gale Sling extras (merged by gen_resources.py). files: the whirl item definition (using_item -> use_cycle over 4 frames of 2 ticks, one turn per 0.4 s) replacing the catalogue's plain one, the 4 whirl models, and the pebble item models the slung stone wears (minecraft:item_model on its stack). Textures: tools/gale_sling_art.py. Sounds re-use vanilla events (breeze whirl/shoot, stone/gravel hit).",
+  "lang": {
+    "entity.elsewhere.gale_sling_stone": "Sling Stone",
+    "subtitles.elsewhere.item.gale_sling.whirl": "Sling whirls",
+    "subtitles.elsewhere.item.gale_sling.loose": "Sling looses",
+    "subtitles.elsewhere.entity.gale_sling_stone.hit": "Sling stone strikes"
+  },
+  "sounds": {
+    "item.gale_sling.whirl": {
+      "subtitle": "subtitles.elsewhere.item.gale_sling.whirl",
+      "sounds": [
+        {
+          "name": "minecraft:entity.breeze.whirl",
+          "type": "event",
+          "pitch": 1.4,
+          "volume": 0.6
+        }
+      ]
+    },
+    "item.gale_sling.loose": {
+      "subtitle": "subtitles.elsewhere.item.gale_sling.loose",
+      "sounds": [
+        {
+          "name": "minecraft:entity.breeze.shoot",
+          "type": "event",
+          "pitch": 1.25,
+          "volume": 0.7
+        }
+      ]
+    },
+    "entity.gale_sling_stone.hit": {
+      "subtitle": "subtitles.elsewhere.entity.gale_sling_stone.hit",
+      "sounds": [
+        {
+          "name": "minecraft:block.stone.hit",
+          "type": "event"
+        },
+        {
+          "name": "minecraft:block.gravel.hit",
+          "type": "event"
+        }
+      ]
+    }
+  },
+  "files": {
+    "assets/elsewhere/items/gale_sling.json": {
+      "model": {
+        "type": "minecraft:condition",
+        "property": "minecraft:using_item",
+        "on_false": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/gale_sling"
+        },
+        "on_true": {
+          "type": "minecraft:range_dispatch",
+          "property": "minecraft:use_cycle",
+          "period": 8.0,
+          "scale": 0.125,
+          "entries": [
+            {
+              "threshold": 0.25,
+              "model": {
+                "type": "minecraft:model",
+                "model": "elsewhere:item/gale_sling_whirl_1"
+              }
+            },
+            {
+              "threshold": 0.5,
+              "model": {
+                "type": "minecraft:model",
+                "model": "elsewhere:item/gale_sling_whirl_2"
+              }
+            },
+            {
+              "threshold": 0.75,
+              "model": {
+                "type": "minecraft:model",
+                "model": "elsewhere:item/gale_sling_whirl_3"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "elsewhere:item/gale_sling_whirl_0"
+          }
+        }
+      }
+    },
+    "assets/elsewhere/models/item/gale_sling_whirl_0.json": {
+      "parent": "elsewhere:item/gale_sling",
+      "textures": {
+        "layer0": "elsewhere:item/gale_sling_whirl_0"
+      }
+    },
+    "assets/elsewhere/models/item/gale_sling_whirl_1.json": {
+      "parent": "elsewhere:item/gale_sling",
+      "textures": {
+        "layer0": "elsewhere:item/gale_sling_whirl_1"
+      }
+    },
+    "assets/elsewhere/models/item/gale_sling_whirl_2.json": {
+      "parent": "elsewhere:item/gale_sling",
+      "textures": {
+        "layer0": "elsewhere:item/gale_sling_whirl_2"
+      }
+    },
+    "assets/elsewhere/models/item/gale_sling_whirl_3.json": {
+      "parent": "elsewhere:item/gale_sling",
+      "textures": {
+        "layer0": "elsewhere:item/gale_sling_whirl_3"
+      }
+    },
+    "assets/elsewhere/items/gale_sling_stone.json": {
+      "model": {
+        "type": "minecraft:model",
+        "model": "elsewhere:item/gale_sling_stone"
+      }
+    },
+    "assets/elsewhere/models/item/gale_sling_stone.json": {
+      "parent": "minecraft:item/generated",
+      "textures": {
+        "layer0": "elsewhere:item/gale_sling_stone"
+      }
+    },
+    "assets/elsewhere/items/gale_sling_gravel.json": {
+      "model": {
+        "type": "minecraft:model",
+        "model": "elsewhere:item/gale_sling_gravel"
+      }
+    },
+    "assets/elsewhere/models/item/gale_sling_gravel.json": {
+      "parent": "minecraft:item/generated",
+      "textures": {
+        "layer0": "elsewhere:item/gale_sling_gravel"
+      }
+    }
+  }
+}

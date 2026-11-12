@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "elsewhere:echo_arrow"
+    "elsewhere:echo_arrow",
+    "elsewhere:sunglass_arrow",
+    "elsewhere:tidebrass_harpoon_bolt",
+    "elsewhere:starpiercer_arrow"
   ]
 }

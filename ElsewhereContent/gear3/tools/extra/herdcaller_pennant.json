@@ -1,0 +1,8 @@
+{
+  "_doc": "s-pennant: Herdcaller's Pennant extras (merged by gen_resources.py). lang: the planted standard's entity name and the two overlay messages (no room to plant; switched off by the herdcaller_pennant kill switch). Standard texture: tools/pennant_art.py.",
+  "lang": {
+    "entity.elsewhere.herdcaller_standard": "Herdcaller's Standard",
+    "message.elsewhere.herdcaller_pennant.no_room": "The standard needs solid ground and 3 blocks of room",
+    "message.elsewhere.herdcaller_pennant.disabled": "The Herdcaller's Pennant is switched off on this server"
+  }
+}

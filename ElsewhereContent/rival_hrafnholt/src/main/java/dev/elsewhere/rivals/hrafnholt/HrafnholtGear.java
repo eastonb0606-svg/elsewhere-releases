@@ -60,6 +60,34 @@ public final class HrafnholtGear {
 	static boolean inBonus;
 	public static int ralliesApplied, runeBonuses, peltRages, hornbowSlows;
 
+	/**
+	 * Records a Rune-Axe hit; true on the third hit on one target within {@link #RUNE_WINDOW} (the hits then reset). s-heapleak (3.0 heap
+	 * pass): targets whose hits ran out of the window, and attackers with none left, are dropped when the map grows, so a long session
+	 * keeps only live combos instead of one entry for every mob ever hit.
+	 */
+	public static boolean runeHit(UUID attacker, UUID target, long now) {
+		Map<UUID, List<Long>> per = RUNE_HITS.computeIfAbsent(attacker, k -> new HashMap<>());
+		List<Long> hits = per.computeIfAbsent(target, k -> new ArrayList<>());
+		hits.removeIf(t -> now - t > RUNE_WINDOW);
+		hits.add(now);
+		boolean third = hits.size() >= 3;
+		if (third) hits.clear();
+		if (per.size() > 16) per.values().removeIf(l -> l.isEmpty() || now - l.get(l.size() - 1) > RUNE_WINDOW);
+		if (RUNE_HITS.size() > 64) RUNE_HITS.values().removeIf(m -> m.values().stream().allMatch(l -> l.isEmpty() || now - l.get(l.size() - 1) > RUNE_WINDOW));
+		return third;
+	}
+
+	/** Rune-Axe combo entries currently tracked (attackers, targets); for the self-test. */
+	public static int[] runeTracked() {
+		int t = 0;
+		for (Map<UUID, List<Long>> m : RUNE_HITS.values()) t += m.size();
+		return new int[] {RUNE_HITS.size(), t};
+	}
+
+	public static void runeReset() {
+		RUNE_HITS.clear();
+	}
+
 	/** A planted Raven Banner. */
 	public record Banner(UUID owner, ServerLevel level, BlockPos pos, long expires) {}
 	public static final List<Banner> BANNERS = new ArrayList<>();
@@ -111,11 +139,7 @@ public final class HrafnholtGear {
 		// Skald's Rune-Axe: the third hit on one target within 5 s
 		if (!inBonus && source.getEntity() instanceof LivingEntity atk && source.getDirectEntity() == atk && atk.getMainHandItem().is(HrafnholtItems.RUNE_AXE)) {
 			long now = level.getGameTime();
-			List<Long> hits = RUNE_HITS.computeIfAbsent(atk.getUUID(), k -> new HashMap<>()).computeIfAbsent(target.getUUID(), k -> new ArrayList<>());
-			hits.removeIf(t -> now - t > RUNE_WINDOW);
-			hits.add(now);
-			if (hits.size() >= 3) {
-				hits.clear();
+			if (runeHit(atk.getUUID(), target.getUUID(), now)) {
 				inBonus = true;
 				try {
 					target.hurtServer(level, source, RUNE_BONUS);
@@ -221,6 +245,8 @@ public final class HrafnholtGear {
 		ServerLifecycleEvents.SERVER_STOPPING.register(srv -> {
 			for (Banner b : BANNERS) removeBlock(b);
 			BANNERS.clear();
+			RUNE_HITS.clear();   // s-heapleak: per-server combo state (a single-player client opens many worlds in one JVM)
+			PELT_LAST.clear();
 		});
 	}
 }

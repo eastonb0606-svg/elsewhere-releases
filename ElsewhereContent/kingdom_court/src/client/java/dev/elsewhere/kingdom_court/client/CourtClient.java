@@ -17,5 +17,6 @@ public final class CourtClient implements ClientModInitializer {
 		done = true;
 		for (Ruler r : Ruler.values()) if (r.type != null) net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry.register(r.type, CourtRulerRenderer::new);
 		CourtRulerRenderer.registerCapeLayer();
+		dev.elsewhere.kingdom_court.client.standing.StandingClient.init(); // s-p7-standing: POLISH P7 trader dialogue + Standing chip
 	}
 }

@@ -25,6 +25,8 @@ public class TabardLayer extends RenderLayer<AvatarRenderState, PlayerModel> {
 	public void submit(PoseStack poseStack, SubmitNodeCollector collector, int light, AvatarRenderState state, float yRot, float xRot) {
 		// the vanilla avatar renderer also draws real players: only our soldiers get a tabard
 		if (!(state instanceof KingdomSoldierRenderer.SoldierRenderState s) || !s.showTabard) return;
-		coloredCutoutModelCopyLayerRender(model, TEXTURE, poseStack, collector, light, state, s.tabardColor, 2);
+		// 3.0 P10: under a kingdom emblem the tabard drops its generic tower motif; the emblem is a full-colour overlay on the same model
+		coloredCutoutModelCopyLayerRender(model, s.emblem != null ? dev.elsewhere.kingdom.heraldry.Heraldry.PLAIN_TABARD : TEXTURE, poseStack, collector, light, state, s.tabardColor, 2);
+		if (s.emblem != null) coloredCutoutModelCopyLayerRender(model, s.emblem, poseStack, collector, light, state, s.heraldryTint, 3);
 	}
 }

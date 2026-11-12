@@ -148,6 +148,12 @@ public final class Squad {
 	int morale = 100;
 	@Nullable BlockPos objective;
 	float heading;
+	/**
+	 * 3.0 routines ({@code armies.routine.RoutineDirector}): while set and no enemy is seen, member i stands at spot i facing yaw i
+	 * (feast ring, court lines, sparring pairs...) instead of its formation slot. Not saved; the routine sets it on arrival.
+	 */
+	public @Nullable List<Vec3> activitySpots;
+	public float @Nullable [] activityYaws;
 	// 0.2.0 saved
 	Routine routine = Routine.NONE;
 	@Nullable BlockPos home;
@@ -396,6 +402,18 @@ public final class Squad {
 		dev.elsewhere.kingdom.tactics.TacticsRuntime.tick(level, this, lead, mem, now);
 		if (!KingdomConfig.useFormations) {
 			for (KingdomSoldier s : mem) s.formationTarget = null;
+			return;
+		}
+		List<Vec3> spots = activitySpots;
+		float[] yaws = activityYaws;
+		if (spots != null && yaws != null && !spots.isEmpty() && enemies.isEmpty()) {
+			for (int i = 0; i < mem.size(); i++) {
+				int k = Math.min(i, Math.min(spots.size(), yaws.length) - 1);
+				KingdomSoldier s = mem.get(i);
+				s.formationTarget = spots.get(k);
+				s.formationYaw = yaws[k];
+				s.wallUp = false;
+			}
 			return;
 		}
 		double rad = Math.toRadians(heading);

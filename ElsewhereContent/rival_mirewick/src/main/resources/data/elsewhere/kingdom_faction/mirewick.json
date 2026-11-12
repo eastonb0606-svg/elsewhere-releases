@@ -292,19 +292,22 @@
   "routine": {
    "watch_changes": [7, 19],
    "watch_jitter_min": 30,
+   "watch_sound": "bellman",
    "blocks": [
-    {"from": 0, "to": 6, "activity": "watch", "share": 0.34, "where": "canals"},
-    {"from": 6, "to": 8, "activity": "work", "share": 0.5, "where": "polders"},
-    {"from": 8, "to": 12, "activity": "market", "share": 0.7, "where": "quays"},
-    {"from": 12, "to": 13, "activity": "drill", "share": 0.25, "where": "dike_field"},
-    {"from": 13, "to": 17, "activity": "court", "share": 0.3, "where": "guildhall"},
-    {"from": 17, "to": 18, "activity": "feast", "share": 0.5, "where": "fc_camp"},
-    {"from": 18, "to": 19, "activity": "lamplight", "share": 0.2, "where": "canals"},
-    {"from": 19, "to": 24, "activity": "watch", "share": 0.34, "where": "canals"}
+    {"from": 0, "to": 6, "activity": "watch", "share": 0.34, "where": "canals", "pose": "torch", "sound": "bellman", "sound_hourly": true, "groups": [{"unit": "ranged", "activity": "patrol", "where": "canals", "style": "punts"}], "townsfolk": [{"activity": "lamplight", "where": "canals", "share": 0.03, "pose": "torch", "style": "linkboys"}]},
+    {"from": 6, "to": 8, "activity": "work", "share": 0.5, "where": "polders", "style": "peat", "lights": [{"id": "lantern_posts", "on": false}], "townsfolk": [{"activity": "work", "where": "polders", "share": 0.5, "pose": "work", "style": "peat"}, {"activity": "work", "where": "sluices", "share": 0.05, "pose": "work", "style": "sluices"}]},
+    {"from": 8, "to": 12, "activity": "market", "share": 0.7, "where": "quays", "sound": "bell", "phases": [{"at": 11, "activity": "market", "where": "guildhall", "style": "auction", "sound": "bell"}], "townsfolk": [{"activity": "market", "where": "quays", "share": 0.9, "pose": "carry"}]},
+    {"from": 12, "to": 13, "activity": "drill", "share": 0.25, "where": "dike_field", "style": "half_hearted", "pose": "attention", "sound": "shout", "townsfolk": [{"activity": "market", "where": "quays", "share": 0.4, "pose": "carry"}]},
+    {"from": 13, "to": 17, "activity": "court", "share": 0.3, "where": "guildhall", "style": "council", "townsfolk": [{"activity": "court", "where": "guildhall", "share": 0.4, "pose": "attention", "style": "crowd"}, {"activity": "work", "where": "polders", "share": 0.3, "pose": "work", "style": "peat"}]},
+    {"from": 17, "to": 18, "activity": "feast", "share": 0.5, "where": "fc_camp", "style": "dice", "pose": "sit", "lights": [{"id": "fc_fires", "on": true}], "townsfolk": [{"activity": "feast", "where": "taverns", "share": 0.3, "pose": "drink"}]},
+    {"from": 18, "to": 19, "activity": "lamplight", "share": 0.2, "where": "canals", "style": "linkboys", "pose": "torch", "lights": [{"id": "lantern_posts", "on": true}], "townsfolk": [{"activity": "lamplight", "where": "lantern_posts", "share": 0.05, "pose": "torch", "style": "linkboys"}, {"activity": "feast", "where": "taverns", "share": 0.3, "pose": "drink"}]},
+    {"from": 19, "to": 24, "activity": "watch", "share": 0.34, "where": "canals", "pose": "torch", "groups": [{"unit": "ranged", "activity": "patrol", "where": "canals", "style": "punts"}], "townsfolk": [{"activity": "feast", "where": "taverns", "share": 0.35, "pose": "drink"}]}
    ],
    "events": [
-    {"id": "pay_day", "every_days": 7, "at": 9, "hours": 2, "activity": "market", "where": "counting_house"},
-    {"id": "lantern_fair", "every_days": 8, "at": 19, "hours": 5, "activity": "market", "where": "quays"}
+    {"id": "counting_house_opens", "every_days": 1, "at": 8, "hours": 1, "activity": "market", "where": "counting_house", "share": 0.1, "style": "queue", "sound": "bell"},
+    {"id": "pay_day_brawl", "every_days": 7, "at": 10, "hours": 1, "activity": "spar", "where": "counting_house", "share": 0.5, "style": "brawl", "if": "treasury_low", "sound": "shout", "townsfolk": [{"activity": "tourney", "where": "counting_house", "share": 0.3, "pose": "cheer", "style": "crowd"}]},
+    {"id": "pay_day", "every_days": 7, "at": 9, "hours": 2, "activity": "market", "where": "counting_house", "share": 0.6, "style": "queue", "sound": "bell", "townsfolk": [{"activity": "market", "where": "counting_house", "share": 0.3, "pose": "attention", "style": "queue"}]},
+    {"id": "lantern_fair", "every_days": 8, "at": 19, "hours": 5, "activity": "market", "where": "quays", "share": 0.5, "pose": "torch", "sound": "bell", "fx": "floating_lanterns", "townsfolk": [{"activity": "market", "where": "quays", "share": 0.8, "pose": "torch", "style": "crowd"}]}
    ]
   },
   "units": [

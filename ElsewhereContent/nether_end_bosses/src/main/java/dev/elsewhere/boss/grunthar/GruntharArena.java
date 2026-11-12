@@ -16,6 +16,8 @@ import org.jspecify.annotations.Nullable;
 /**
  * The Treasure Hall: a round bastion-style hall (radius 13, 12 high) of blackstone with four lavafalls behind bars,
  * a gold hoard filling the north half and the Gilded Throne on a dais. Place a gold block on the throne to summon.
+ * No valuable blocks (s-throne B9, same look as the v2 hall in fit3/GruntharHall): the hoard and trims are honeycomb, yellow and
+ * orange terracotta (gilt) and chiseled polished blackstone (piglin faces) instead of gold, raw gold and gilded blackstone.
  */
 public final class GruntharArena implements ArenaBuilder {
 	public static final GruntharArena INSTANCE = new GruntharArena();
@@ -32,7 +34,8 @@ public final class GruntharArena implements ArenaBuilder {
 	public void build(WorldGenLevel level, BlockPos o, RandomSource random) {
 		BlockState bricks = Blocks.POLISHED_BLACKSTONE_BRICKS.defaultBlockState();
 		BlockState cracked = Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS.defaultBlockState();
-		BlockState gilded = Blocks.GILDED_BLACKSTONE.defaultBlockState();
+		BlockState gilded = Blocks.CHISELED_POLISHED_BLACKSTONE.defaultBlockState();
+		BlockState gold = Blocks.DYED_TERRACOTTA.yellow().defaultBlockState(), coin = Blocks.HONEYCOMB_BLOCK.defaultBlockState();
 		BlockState air = Blocks.AIR.defaultBlockState();
 		int y = o.getY();
 		Build.disc(level, o, y - 2, RADIUS + 0.5, Blocks.BLACKSTONE.defaultBlockState());
@@ -43,7 +46,7 @@ public final class GruntharArena implements ArenaBuilder {
 		}
 		Build.disc(level, o, y + HEIGHT, RADIUS + 0.5, Blocks.BLACKSTONE.defaultBlockState());
 		Build.ring(level, o, y - 1, 5.5, 6.5, gilded);
-		Build.ring(level, o, y - 1, 2.0, 2.6, Blocks.GOLD_BLOCK.defaultBlockState());
+		Build.ring(level, o, y - 1, 2.0, 2.6, gold);
 		// basalt pillars and gilded bands
 		for (int i = 0; i < 8; i++) {
 			double a = i * Math.PI / 4 + Math.PI / 8;
@@ -76,7 +79,7 @@ public final class GruntharArena implements ArenaBuilder {
 				int h = (int) Math.round((-dz - 4) / 3.0 + random.nextDouble() * 1.2);
 				for (int k = 0; k < h; k++) {
 					double r = random.nextDouble();
-					BlockState s = r < 0.45 ? Blocks.GOLD_BLOCK.defaultBlockState() : r < 0.7 ? Blocks.RAW_GOLD_BLOCK.defaultBlockState() : r < 0.9 ? gilded : Blocks.GOLD_BLOCK.defaultBlockState();
+					BlockState s = r < 0.45 ? coin : r < 0.75 ? gold : r < 0.9 ? Blocks.DYED_TERRACOTTA.orange().defaultBlockState() : gilded;
 					Build.set(level, o.getX() + dx, y + k, o.getZ() + dz, s);
 				}
 			}
@@ -84,10 +87,10 @@ public final class GruntharArena implements ArenaBuilder {
 		// dais and throne
 		Build.box(level, o.offset(-2, 0, -11), o.offset(2, 1, -7), Blocks.POLISHED_BLACKSTONE.defaultBlockState());
 		Build.box(level, o.offset(-1, 0, -6), o.offset(1, 0, -6), Blocks.POLISHED_BLACKSTONE_BRICK_SLAB.defaultBlockState());
-		Build.box(level, o.offset(-1, 2, -10), o.offset(1, 4, -10), Blocks.GOLD_BLOCK.defaultBlockState());
+		Build.box(level, o.offset(-1, 2, -10), o.offset(1, 4, -10), coin);
 		Build.set(level, o.offset(0, 5, -10), gilded);
-		Build.set(level, o.offset(-1, 2, -9), Blocks.GOLD_BLOCK.defaultBlockState());
-		Build.set(level, o.offset(1, 2, -9), Blocks.GOLD_BLOCK.defaultBlockState());
+		Build.set(level, o.offset(-1, 2, -9), gold);
+		Build.set(level, o.offset(1, 2, -9), gold);
 		Build.set(level, o.offset(THRONE.getX(), THRONE.getY(), THRONE.getZ()), GruntharContent.GILDED_THRONE.defaultBlockState());
 		// entrance (south) with a short corridor
 		for (int r = RADIUS - 1; r <= RADIUS + 5; r++) {

@@ -123,6 +123,8 @@ public final class PGFit {
 					BlockPos q = plats.get(i);
 					out.add(new FitPiece(kind, "platform", o, q.getY(), i, 0, seed, box(q.getX() - 3, q.getY() - 12, q.getZ() - 3, q.getX() + 3, q.getY() + 4, q.getZ() + 3)));
 				}
+				// the eye itself (writes nothing): lets the summon lookup and the wind-charge listener find the site anywhere in the eye, as in 2.x
+				out.add(new FitPiece(kind, "volume", o, oy, 0, 0, seed, box(ox - 24, oy - 30, oz - 24, ox + 24, oy + 34, oz + 24)));
 				int by = oy - 14;
 				out.add(new FitPiece(kind, "basin", o, by, 0, 0, seed, box(ox - 6, by - 13, oz - 6, ox + 6, by + 3, oz + 6)));
 			}

@@ -11,12 +11,11 @@ import net.minecraft.world.level.block.CandleBlock;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.StructurePiece;
 
 /**
  * Hollow Shrine (STRUCTURES.md 4, core): a 7x7 ruin on a 2-step plinth that follows the slope (each step ring underpinned to its own ground),
- * a colonnade of leaning, broken columns with one standing lintel and a hanging lantern, a raised altar with the chest, and a fallen drum
+ * a colonnade of broken columns (some with a tilted, slipped capital: an upside-down stair, never a block in the air) with one standing lintel and a hanging lantern, a raised altar with the chest, and a fallen drum
  * lying on the ground outside. No air box: only the shrine floor is cleared, and the beard blends the hillside into the plinth.
  */
 public final class ShrineKit {
@@ -79,10 +78,6 @@ public final class ShrineKit {
 			int sx = Integer.signum(cx), sz = Integer.signum(cz);
 			for (int k = 1; k <= h; k++) {
 				int lx = cx, lz = cz;
-				if (lean && k == h) {
-					lx += sx;
-					lz += sz;
-				}
 				BlockState s;
 				if (k == 1) s = Blocks.STONE_BRICKS.defaultBlockState();
 				else if (k == h && h == 5 && !lean) s = Blocks.CHISELED_STONE_BRICKS.defaultBlockState();
@@ -112,9 +107,8 @@ public final class ShrineKit {
 		for (int k = 0; k < 3; k++) {
 			int lx = fx + k, lz = fz;
 			if (!w.inCol(lx, lz)) continue;
-			int g = w.l.getHeight(Heightmap.Types.OCEAN_FLOOR_WG, w.f.x(lx, lz), w.f.z(lx, lz)) - 1;
-			int s = w.l.getHeight(Heightmap.Types.WORLD_SURFACE_WG, w.f.x(lx, lz), w.f.z(lx, lz)) - 1;
-			if (s > g || Math.abs(g - (f - 2)) > 6) continue;
+			int g = W.ground(w.l, w.f.x(lx, lz), w.f.z(lx, lz));
+			if (g == Integer.MIN_VALUE || Math.abs(g - (f - 2)) > 6 || !w.get(lx, g + 1, lz).getFluidState().isEmpty()) continue;
 			w.set(lx, g + 1, lz, k == 2 ? w.stair(Blocks.MOSSY_STONE_BRICK_STAIRS, Direction.WEST, false) : k == 1 ? Blocks.CRACKED_STONE_BRICKS.defaultBlockState() : Blocks.MOSSY_STONE_BRICKS.defaultBlockState());
 			if (w.get(lx, g + 2, lz).canBeReplaced()) w.set(lx, g + 2, lz, k == 0 ? Blocks.PALE_MOSS_CARPET.defaultBlockState() : air);
 		}

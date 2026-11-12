@@ -22,7 +22,7 @@ public class SerfRenderer extends HumanoidMobRenderer<Serf, AvatarRenderState, P
 
 	@Override
 	public AvatarRenderState createRenderState() {
-		return new AvatarRenderState();
+		return new dev.elsewhere.kingdom.client.idle.PosedAvatarState(); // 3.0 P9: carries the work-pose track
 	}
 
 	@Override
@@ -30,9 +30,12 @@ public class SerfRenderer extends HumanoidMobRenderer<Serf, AvatarRenderState, P
 		super.extractRenderState(e, state, partialTicks);
 		if (VARIANTS.size() > 1024) VARIANTS.clear();
 		state.id = e.getId();
-		dev.elsewhere.kingdom.client.NpcSkin.apply(state, textureFor(e.variant)); // vanilla AvatarRenderer draws state.skin
-		VARIANTS.put(e.getId(), e.variant);
+		String variant = e.syncedVariant(); // 3.0 P9: the tier is synced now (the plain field is server-only)
+		dev.elsewhere.kingdom.client.NpcSkin.apply(state, textureFor(variant)); // vanilla AvatarRenderer draws state.skin
+		VARIANTS.put(e.getId(), variant);
 		state.showHat = state.showJacket = state.showLeftPants = state.showRightPants = state.showLeftSleeve = state.showRightSleeve = true;
+		if (state instanceof dev.elsewhere.kingdom.client.idle.PosedAvatarState p) // 3.0 P9 serf work animations
+			dev.elsewhere.kingdom.client.idle.IdleAnim.extract(e, p, p, e.workPose(), dev.elsewhere.kingdom.client.idle.IdleAnim.styleOfSerf(variant), this.itemModelResolver);
 	}
 
 	@Override

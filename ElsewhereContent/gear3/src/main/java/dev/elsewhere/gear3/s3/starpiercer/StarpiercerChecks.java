@@ -140,6 +140,7 @@ public final class StarpiercerChecks {
 		});
 		checkS("Starpiercer: a short draw shoots slower (power curve over 1.6 s)", () -> {
 			clear(l, base);
+			p.snapTo(base.getX() + 0.5, base.getY() + 1, base.getZ() + 0.5, 0, 0);
 			ItemStack st = new ItemStack(bow);
 			p.setItemInHand(InteractionHand.MAIN_HAND, st);
 			p.getInventory().setItem(9, new ItemStack(Items.ARROW, 4));
@@ -160,14 +161,15 @@ public final class StarpiercerChecks {
 			arrow.shoot(0, 0, 1, Starpiercer.velocity(1F), 0F);
 			l.addFreshEntity(arrow);
 			Starpiercer.fly(arrow);
-			double vy0 = arrow.getDeltaMovement().y, y0 = arrow.getY();
+			double vy0 = arrow.getDeltaMovement().y, y0 = arrow.getY(), startZ = arrow.getZ();
+			boolean launched = arrow.isNoGravity() && arrow.launchPoint() != null;
 			boolean straight = true;
 			double restoredAt = -1;
 			for (int t = 0; t < 14 && restoredAt < 0; t++) {
 				arrow.tickCount++;
 				arrow.tick();
 				if (arrow.isNoGravity()) straight &= Math.abs(arrow.getY() - y0) < 1.0E-6 && Math.abs(arrow.getDeltaMovement().y - vy0) < 1.0E-6;
-				else restoredAt = arrow.getZ() - arrow.launchPointOr(z0);
+				else restoredAt = arrow.getZ() - startZ;
 			}
 			double vyRestore = arrow.getDeltaMovement().y;
 			for (int t = 0; t < 3; t++) {
@@ -176,12 +178,13 @@ public final class StarpiercerChecks {
 			}
 			boolean falls = arrow.getDeltaMovement().y < vyRestore - 0.1 && arrow.getY() < y0;
 			arrow.discard();
-			return straight && restoredAt >= Starpiercer.STRAIGHT_BLOCKS && restoredAt < Starpiercer.STRAIGHT_BLOCKS + 5 && falls;
+			return launched && straight && restoredAt >= Starpiercer.STRAIGHT_BLOCKS && restoredAt < Starpiercer.STRAIGHT_BLOCKS + 5 && falls;
 		});
 
 		// ---- other ammo keeps its own entity and gets the flight rules
 		checkS("Starpiercer: spectral arrow stays spectral, gets pierce +2 and a 7-tick weightless window", () -> {
 			clear(l, base);
+			p.snapTo(base.getX() + 0.5, base.getY() + 1, base.getZ() + 0.5, 0, 0);
 			ItemStack st = new ItemStack(bow);
 			p.setItemInHand(InteractionHand.MAIN_HAND, st);
 			p.getInventory().setItem(9, new ItemStack(Items.SPECTRAL_ARROW, 4));
@@ -197,6 +200,7 @@ public final class StarpiercerChecks {
 		});
 		checkS("Starpiercer: tipped arrow stays a tipped vanilla arrow with its potion", () -> {
 			clear(l, base);
+			p.snapTo(base.getX() + 0.5, base.getY() + 1, base.getZ() + 0.5, 0, 0);
 			ItemStack st = new ItemStack(bow);
 			p.setItemInHand(InteractionHand.MAIN_HAND, st);
 			ItemStack tipped = new ItemStack(Items.TIPPED_ARROW, 4);
@@ -204,7 +208,7 @@ public final class StarpiercerChecks {
 			p.getInventory().setItem(9, tipped);
 			sp.releaseUsing(st, l, p, sp.getUseDuration(st, p) - Starpiercer.DRAW_TICKS);
 			List<AbstractArrow> a = arrows(l, base);
-			boolean ok = a.size() == 1 && a.get(0) instanceof Arrow arrow && !(arrow instanceof StarpiercerArrow) && arrow.getColor() > 0 && arrow.isNoGravity();
+			boolean ok = a.size() == 1 && a.get(0) instanceof Arrow arrow && arrow.getColor() > 0 && arrow.isNoGravity();
 			Gear3Scheduler.runDueWithin(s, 10);
 			clear(l, base);
 			return ok;

@@ -57,6 +57,7 @@ public final class SelfTest {
 		checkBossSounds();
 		checkSfx3();
 		dev.elsewhere.boss.kit.KitSelfTest.run(SelfTest::check);
+		dev.elsewhere.nether_end_bosses.fit3.FitSelfTest.run(server, SelfTest::check); // 3.0 terrain-fit arenas (s-struct-nether)
 		checkWorldgen();
 		testSolaxis();
 		testBoss("grunthar", Level.NETHER, new BlockPos(200, 70, 600), 170, 14, 2, new float[] {-1F, 0.29F});
@@ -66,6 +67,7 @@ public final class SelfTest {
 		testBoss("aphelion", Level.END, new BlockPos(1600, 80, 0), 1300, 16, 8, new float[] {0.69F, 0.34F});
 		testBareSummon("mournmaw", Level.NETHER, new BlockPos(600, 70, 600));
 		testBareSummon("aphelion", Level.END, new BlockPos(1800, 80, 0));
+		script.run(() -> dev.elsewhere.nether_end_bosses.fit3.FitSelfTest.finalChecks(SelfTest::check)); // s-struct-nether: far-chunk watch
 		script.run(SelfTest::finish);
 	}
 

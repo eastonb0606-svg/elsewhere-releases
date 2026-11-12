@@ -258,27 +258,36 @@ public final class WorldgenCheck {
 
 	// ---- each faction's outpost (and whatever the founding builds with it), then a hamlet ---------------------------
 
-	static @Nullable BlockPos flat(BlockPos around, int radius, int startDir) throws Exception {
+	/** The site the live code would pick near a candidate (Conquest.tryFoundOutpost / tryHamlet): 0 = outpost, 1 = hamlet. */
+	static @Nullable BlockPos siteAt(BlockPos p, int kind, boolean aldermark, BlockPos castle) throws Exception {
+		if (kind == 0 && aldermark && dev.elsewhere.kingdom_villages.s3.ald.AldLook.FORT) return dev.elsewhere.kingdom_villages.s3.ald.AldFort.site(level, p, castle);
+		if (kind == 1 && dev.elsewhere.kingdom_villages.s3.ald.AldLook.HAMLET) return dev.elsewhere.kingdom_villages.s3.ald.AldHamlet.site(level, p);
 		if (flatSpot == null) return null;
+		return flatSpot.invoke(null, level, p, kind == 0 ? 6 : 4) instanceof BlockPos bp ? bp : null;
+	}
+
+	static @Nullable BlockPos flat(BlockPos around, int kind, int startDir, boolean aldermark, BlockPos castle) throws Exception {
 		VillageRecord v = cur;
 		int base = Math.max(v.bounds.getXSpan(), v.bounds.getZSpan()) / 2 + 20;
 		for (int ring = 0; ring < 3; ring++) for (int i = 0; i < 16; i++) {
 			double ang = Math.PI * 2 * ((i + startDir) % 16) / 16.0;
 			int d = base + ring * 14;
 			BlockPos p = around.offset((int) (Math.cos(ang) * d), 0, (int) (Math.sin(ang) * d));
-			if (!level.isLoaded(p)) continue;
-			Object c = flatSpot.invoke(null, level, p, radius);
-			if (c instanceof BlockPos bp) return bp;
+			if (!level.isLoaded(p) || !level.isLoaded(p.offset(32, 0, 32)) || !level.isLoaded(p.offset(-32, 0, -32))) continue;
+			BlockPos c = siteAt(p, kind, aldermark, castle);
+			if (c != null) return c;
 		}
 		return null;
 	}
 
 	static void buildOutpost() throws Exception {
 		VillageRecord v = cur;
-		BlockPos c = flat(v.center, 6, fi * 4);
+		double ang = Math.PI / 2 * fi + 0.4;
+		BlockPos castle = v.center.offset((int) (Math.cos(ang) * 500), 0, (int) (Math.sin(ang) * 500));
+		BlockPos c = flat(v.center, 0, fi * 4, fi == 0, castle);
 		label = SITES.get(si).type() + " village " + v.center.toShortString() + " / " + NAMES[fi] + " outpost";
 		if (c == null) {
-			info(label + ": no flat outpost site within reach (flatSpot); nothing to judge");
+			info(label + ": no outpost site within reach (the live site rule found none); nothing to judge");
 			flatMisses++;
 			next4();
 			return;
@@ -286,8 +295,6 @@ public final class WorldgenCheck {
 		VillageLedger ledger = VillageLedger.get(level);
 		Set<Long> before = new HashSet<>(ledger.sites.keySet());
 		fluidBefore = FitAudit.fluids(level, new BoundingBox(c.getX() - 64, c.getY() - 20, c.getZ() - 64, c.getX() + 64, c.getY() + 20, c.getZ() + 64));
-		double ang = Math.PI / 2 * fi + 0.4;
-		BlockPos castle = c.offset((int) (Math.cos(ang) * 400), 0, (int) (Math.sin(ang) * 400));
 		Conquest.foundOutpost(level, ledger, c, castle, FACTIONS[fi], RandomSource.create(1000L * si + fi), level.getGameTime());
 		pending.clear();
 		for (VillageRecord s : ledger.sites.values()) {
@@ -325,10 +332,10 @@ public final class WorldgenCheck {
 
 	static void buildHamlet() throws Exception {
 		VillageRecord v = cur;
-		BlockPos c = flat(v.center, 4, 8);
+		BlockPos c = flat(v.center, 1, 8, false, v.center.offset(500, 0, 0));
 		label = SITES.get(si).type() + " village " + v.center.toShortString() + " / hamlet";
 		if (c == null) {
-			info(label + ": no flat hamlet site within reach (flatSpot); nothing to judge");
+			info(label + ": no hamlet site within reach (the live site rule found none); nothing to judge");
 			flatMisses++;
 			phase = 8;
 			return;

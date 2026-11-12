@@ -1,0 +1,6 @@
+{
+  "_comment": "s-compat-greenhaze (3.0): Hazeborn Bud rips 1.5x a Green Leaf bud in the Everflow Bong (GearStats.BONG_HAZEBORN_FACTOR) and feeds Green Leaf's high when Green Leaf is installed, so it costs 1.5x Green Leaf 2.1's bud (512 Quanta). Without this it fell to Test Meter's rarity heuristic and was a cheap way round the bud price.",
+  "values": {
+    "elsewhere:hazeborn_bud": 768
+  }
+}

@@ -84,7 +84,7 @@ public final class GalvanoxArena {
 			for (int i = 0; i < RODS; i++) {
 				BlockPos p = rod(s.origin, i);
 				int dx = p.getX() - s.origin.getX(), dz = p.getZ() - s.origin.getZ();
-				s.set(dx, 1, dz, Blocks.COPPER_BLOCK.waxed().unaffected().defaultBlockState());
+				s.set(dx, 1, dz, Blocks.CUT_COPPER.waxed().unaffected().defaultBlockState()); // cut copper pedestal, not a copper storage block (s-throne B9)
 				s.set(dx, 2, dz, Blocks.LIGHTNING_ROD.weathering().unaffected().defaultBlockState());
 			}
 			// The lantern spire.

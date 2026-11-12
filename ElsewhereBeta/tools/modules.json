@@ -42,7 +42,9 @@
       "^dev/elsewhere/stub/summoner/mixin/PlayerAttributesMixin\\.java$",
       "^elsewhere_summoner\\.stub\\.mixins\\.json$"
     ],
-    "jei_compat": [],
+    "jei_compat": [
+      "^dev/elsewhere/compat/jei/dev/JeiDevEntry\\.java$"
+    ],
     "boss_ui": [
       "^dev/elsewhere/boss_ui/DevEntry\\.java$"
     ],
@@ -90,6 +92,9 @@
     ]
   },
   "post_init": {
+    "jei_compat": [
+      "if (Boolean.getBoolean(\"jei.selftest\")) dev.elsewhere.compat.jei.dev.JeiSelfTest.register()"
+    ],
     "petalwind_glasswaste": [
       "net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback.EVENT.register((d, ctx, sel) -> dev.elsewhere.petalwind_glasswaste.DevCommands.register(d))",
       "if (Boolean.getBoolean(\"petalwind_glasswaste.selftest\")) net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(dev.elsewhere.petalwind_glasswaste.SelfTest::start)",

@@ -76,6 +76,11 @@ public final class StarsightPair {
 		return true;
 	}
 
+	/** Self-test: moves every mark {@code ticks} ticks closer to its end (game time does not move in the test). */
+	public static void ageMarksForTest(long ticks) {
+		MARKS.replaceAll((k, until) -> until - ticks);
+	}
+
 	/** Spells.DAMAGE_MULT: +10% x H on a target this caster marked with an arrow. */
 	public static double spellMult(ServerPlayer owner, LivingEntity target) {
 		if (target == null || MARKS.isEmpty()) return 1.0;

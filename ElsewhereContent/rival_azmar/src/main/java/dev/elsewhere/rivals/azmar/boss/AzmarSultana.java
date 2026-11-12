@@ -466,7 +466,7 @@ public final class AzmarSultana extends AzmarBoss {
 			nextReinforce = now + REINFORCE_TICKS;
 		}
 		// halo tell: the winged-scarab halo is drawn behind her while the move winds up
-		if ("halo_flare".equals(action())) AzmarFx.wingedHalo(level, position().add(0, 0.2, 0).subtract(Vec3.directionFromRotation(0, yBodyRot).scale(0.6)), yBodyRot, 1.0);
+		if ("halo_flare".equals(action())) dev.elsewhere.duelist.foresight.Foresight.hint(() -> AzmarFx.wingedHalo(level, position().add(0, 0.2, 0).subtract(Vec3.directionFromRotation(0, yBodyRot).scale(0.6)), yBodyRot, 1.0));   // B5: wind-up hint, foresight gear only
 		if (tp != null && idle() && reader.readDone(now) && !reader.satisfied()) {
 			TacticReader.Counter c = reader.pollCounter();
 			if (c != null) runCounter(level, c);

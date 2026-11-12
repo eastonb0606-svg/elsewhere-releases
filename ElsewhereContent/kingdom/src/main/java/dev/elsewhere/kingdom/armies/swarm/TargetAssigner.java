@@ -127,6 +127,13 @@ public final class TargetAssigner {
 		return p;
 	}
 
+	/** A fresh plan now, replacing the cached one (self-test). */
+	public static Plan planNow(Squad sq, ServerLevel level) {
+		Plan p = decide(sq, level, level.getGameTime());
+		PLANS.put(sq.id(), p);
+		return p;
+	}
+
 	static Plan decide(Squad sq, ServerLevel level, long now) {
 		plans++;
 		Plan plan = new Plan();

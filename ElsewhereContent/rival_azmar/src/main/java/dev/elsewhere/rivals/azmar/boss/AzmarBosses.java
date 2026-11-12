@@ -32,5 +32,6 @@ public final class AzmarBosses {
 		Leaders.register(AzmarContent.FACTION, "marshal", AMIR);
 		Leaders.register(AzmarContent.FACTION, "castellan", WAZIR);
 		Leaders.register(AzmarContent.FACTION, "huntsman", FALCONER);
+		dev.elsewhere.rivals.azmar.rewards.AzmarRewards.init();   // 3.0 (s-bossdrops): XP and drops on every death
 	}
 }

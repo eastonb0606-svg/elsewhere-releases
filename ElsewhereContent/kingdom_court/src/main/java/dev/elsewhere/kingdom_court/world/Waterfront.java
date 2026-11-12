@@ -157,7 +157,7 @@ public final class Waterfront {
 		if (!pl.clip.isInside(p)) return true;
 		BlockState cur = pl.level.getBlockState(p);
 		if (!cur.isAir() && !cur.is(Blocks.WATER)) return false; // only air and plain water are ever replaced
-		pl.level.setBlock(p, block.defaultBlockState(), Block.UPDATE_CLIENTS);
+		pl.level.setBlock(p, Valuables.safe(block.defaultBlockState()), Block.UPDATE_CLIENTS); // s-throne B9: no valuable blocks
 		pl.placed++;
 		return true;
 	}

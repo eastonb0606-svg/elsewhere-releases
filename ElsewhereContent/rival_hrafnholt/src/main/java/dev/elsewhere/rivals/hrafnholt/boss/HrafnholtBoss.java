@@ -329,6 +329,7 @@ public class HrafnholtBoss extends HumanBoss implements Leaders.LeaderBoss {
 			setItemSlot(slots[i], st);
 			setDropChance(slots[i], 0.0F);
 		}
+		dev.elsewhere.rivals.hrafnholt.look.HrafnholtRulerLook.dress(this);   // 3.0 B10 (s-rulerarmor): green-and-brown Viking layer, no cyan diamond
 	}
 
 	// ---- damage --------------------------------------------------------------------------------------------------------------
@@ -730,7 +731,7 @@ public class HrafnholtBoss extends HumanBoss implements Leaders.LeaderBoss {
 			parryReadyAt = now + parryInterval();
 			level.playSound(null, blockPosition(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.HOSTILE, 0.8F, 1.3F);
 		}
-		if (now >= parryStart + 4 && now < parryStart + 10 && now % 2 == 0) level.sendParticles(ParticleTypes.CRIT, getX(), getY() + 1.3, getZ(), 2, 0.3, 0.2, 0.3, 0.05);
+		if (now >= parryStart + 4 && now < parryStart + 10 && now % 2 == 0) dev.elsewhere.duelist.foresight.Foresight.hint(() -> level.sendParticles(ParticleTypes.CRIT, getX(), getY() + 1.3, getZ(), 2, 0.3, 0.2, 0.3, 0.05));   // B5: the parry-window readout is a hint
 		if (riposteTarget != null && now >= riposteAt) {
 			var e = level.getEntity(riposteTarget);
 			riposteTarget = null;
@@ -1276,6 +1277,17 @@ public class HrafnholtBoss extends HumanBoss implements Leaders.LeaderBoss {
 
 	// ---- drops and cleanup ---------------------------------------------------------------------------------------------------------
 
+	/** 3.0 (s-bossdrops): every boss always drops XP (HumanBoss leaves it at 0; each boss sets its own number). Vanilla's always-drop path, so the Chaperon reads it too. */
+	@Override
+	protected int getBaseExperienceReward(ServerLevel level) {
+		return dev.elsewhere.rivals.hrafnholt.rewards.HrafnholtRewards.xp(this);
+	}
+
+	@Override
+	protected boolean isAlwaysExperienceDropper() {
+		return dev.elsewhere.rivals.hrafnholt.rewards.HrafnholtRewards.xp(this) > 0;
+	}
+
 	@Override
 	protected void onDefeated(ServerLevel level, List<ServerPlayer> participants) {
 		DuelBlocks.clearOwner(level, getUUID());
@@ -1288,6 +1300,7 @@ public class HrafnholtBoss extends HumanBoss implements Leaders.LeaderBoss {
 			standardId = null;
 		}
 		if (Leaders.of(this) != null) return;       // the court rolls the faction file's drops (DropRule, Seal, Hacksilver) for its own leaders
+		if (dev.elsewhere.rivals.hrafnholt.rewards.HrafnholtRewards.enabled()) return;   // 3.0 (s-bossdrops): HrafnholtRewards rolls untracked and stale deaths once
 		try {
 			CourtState st = CourtState.get(level.getServer(), HrafnholtContent.FACTION);
 			Ruler slot = Ruler.byKey(h.courtSlot);

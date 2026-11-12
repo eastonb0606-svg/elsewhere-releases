@@ -30,7 +30,11 @@ public final class FitW {
 	private final List<BlockPos> shaped = new ArrayList<>();
 	private final BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos();
 	/** Self-test hooks: writes made, writes dropped by the clip, and writes outside {@link #watch} (should stay 0). */
-	public int writes, clipped, outsideWatch;
+	public int writes, clipped, outsideWatch, valuable;
+	/** "No valuable blocks in structures" (SWARM quality bar): counted on every write, checked by the self-test. */
+	public static final java.util.Set<Block> VALUABLE = java.util.Set.of(Blocks.GOLD_BLOCK, Blocks.RAW_GOLD_BLOCK, Blocks.IRON_BLOCK, Blocks.RAW_IRON_BLOCK,
+		Blocks.DIAMOND_BLOCK, Blocks.EMERALD_BLOCK, Blocks.LAPIS_BLOCK, Blocks.NETHERITE_BLOCK, Blocks.GILDED_BLACKSTONE, Blocks.ANCIENT_DEBRIS,
+		Blocks.RAW_COPPER_BLOCK, Blocks.NETHER_GOLD_ORE, Blocks.NETHER_QUARTZ_ORE);
 	public @Nullable BoundingBox watch;
 
 	public FitW(WorldGenLevel level, @Nullable BoundingBox clip, long seed) {
@@ -58,6 +62,7 @@ public final class FitW {
 		p.set(x, y, z);
 		level.setBlock(p, s, Build.FLAGS);
 		Block b = s.getBlock();
+		if (VALUABLE.contains(b)) valuable++;
 		if (b instanceof CrossCollisionBlock || b instanceof WallBlock || b instanceof StairBlock) {
 			if (worldgen) level.getChunk(p).markPosForPostProcessing(p);
 			else shaped.add(p.immutable());

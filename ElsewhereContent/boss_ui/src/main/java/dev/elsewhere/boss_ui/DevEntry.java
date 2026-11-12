@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 public class DevEntry implements ModInitializer {
 	@Override
 	public void onInitialize() {
+		BossUiContent.init();
 		if (Boolean.getBoolean("boss_ui.selftest")) ServerLifecycleEvents.SERVER_STARTED.register(SelfTest::run);
 	}
 }

@@ -140,42 +140,6 @@
       }
     ]
   },
-  "boss_music.theme.court_castellan.intro": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_castellan_intro",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.court_castellan.loop": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_castellan_loop",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.court_chancellor.intro": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_chancellor_intro",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.court_chancellor.loop": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_chancellor_loop",
-        "stream": true
-      }
-    ]
-  },
   "boss_music.theme.court_huntsman.intro": {
     "category": "music",
     "sounds": [
@@ -244,24 +208,6 @@
     "sounds": [
       {
         "name": "elsewhere:music/boss_court_master_at_arms_loop",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.court_realm.intro": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_realm_intro",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.court_realm.loop": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_realm_loop",
         "stream": true
       }
     ]
@@ -518,24 +464,6 @@
       }
     ]
   },
-  "boss_music.theme.interloper.intro": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_interloper_intro",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.interloper.loop": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_interloper_loop",
-        "stream": true
-      }
-    ]
-  },
   "boss_music.theme.ironpeak.intro": {
     "category": "music",
     "sounds": [
@@ -590,42 +518,6 @@
       }
     ]
   },
-  "boss_music.theme.moorland.intro": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_moorland_intro",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.moorland.loop": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_moorland_loop",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.mystery_bazaar.intro": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_mystery_bazaar_intro",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.mystery_bazaar.loop": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_mystery_bazaar_loop",
-        "stream": true
-      }
-    ]
-  },
   "boss_music.theme.nether.intro": {
     "category": "music",
     "sounds": [
@@ -640,24 +532,6 @@
     "sounds": [
       {
         "name": "elsewhere:music/boss_nether_loop",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.netherworld_shanty.intro": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_netherworld_shanty_intro",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.netherworld_shanty.loop": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_netherworld_shanty_loop",
         "stream": true
       }
     ]
@@ -1009,24 +883,6 @@
     "sounds": [
       {
         "name": "elsewhere:music/boss_clash_defiant_end",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.court_castellan.surge": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_castellan_surge",
-        "stream": true
-      }
-    ]
-  },
-  "boss_music.theme.court_castellan.end": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "elsewhere:music/boss_court_castellan_end",
         "stream": true
       }
     ]
@@ -1522,6 +1378,145 @@
     "sounds": [
       {
         "name": "elsewhere:music/boss_verdigris_end",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.verdigris.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_verdigris_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.achaidh_cheide.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_achaidh_cheide_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.trouble_with_tribals.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_trouble_with_tribals_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.greenhaze.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_greenhaze_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.lord_of_the_land.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_lord_of_the_land_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.frozen_star.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_frozen_star_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.hush.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_hush_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.glasswaste.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_glasswaste_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.darkest_child.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_darkest_child_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.sad_trio.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_sad_trio_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.court_marshal.climax": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_marshal_climax",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.ignosi.intro": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_ignosi_intro",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.ignosi.loop": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_ignosi_loop",
+        "stream": true
+      }
+    ]
+  },
+  "boss_music.theme.ignosi.end": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_ignosi_end",
+        "stream": true
+      }
+    ]
+  },
+  "court_music.realm": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "elsewhere:music/realm_aldermark",
+        "stream": true
+      },
+      {
+        "name": "elsewhere:music/realm_aldermark_lute",
         "stream": true
       }
     ]

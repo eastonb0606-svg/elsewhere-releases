@@ -1,0 +1,11 @@
+{
+  "_doc": "s-totems: entity names and action-bar messages of the three gear3 totems (s3/totems). Merged into en_us.json by gen_resources.py.",
+  "lang": {
+    "entity.elsewhere.bramble_totem": "Bramble Totem",
+    "entity.elsewhere.clockwork_sentry": "Clockwork Sentry",
+    "entity.elsewhere.azmar_sunglass_obelisk": "Azmar Sunglass Obelisk",
+    "message.elsewhere.totem.disabled": "Totems are switched off on this server",
+    "message.elsewhere.totem.no_room": "A totem needs solid ground and room to stand",
+    "message.elsewhere.totem.taken_down": "Took down %s totem(s)"
+  }
+}

@@ -617,7 +617,16 @@ public final class SelfTest {
 		SelfTestTrade.add();
 		SelfTestTestMeter.add(); // s-compat-testmeter: leader cap after Test Meter's ENTITY_LOAD bonus
 		SelfTestCastleFit.add(); // z-castle: fv 2 Mirewick canal and Azmar batter on several seeds' real ground
+		SelfTestLayoutAudit.add(); // s-asm-court: every kingdom's whole fv 2 realm on 3 seeds' real sites (floating, buried, water, valuable, unique)
 		SelfTestAzmarLayout.add(); // s-layout-azmar: Azmar's own fv 2 castle layout on several seeds' real ground
+		SelfTestMireLayout.add(); // s-layout-mire: Mirewick's own fv 2 castle layout on several seeds' real ground
+		SelfTestHrafnholtFort.add(); // s-layout-hraf: Hrafnholt's own fv 2 ring fort and shore (nausts) on several seeds' real ground
+		SelfTestValuables.add(); // s-throne (B9): no valuable block in any realm build, every style, fv 1/2, every switch combination
+		SelfTestRulerLook.add(); // s-rulerarmor (B10): Aldermark plate and barding, no cyan diamond or plain netherite on a ruler
+		SelfTestChancellorStrafe.add(); // s-asm-court: the Chancellor faces its target while it backs away (s-testfix 12:58)
+		SelfTestLocate.add(); // s-locate: /locate and explorer maps find the 4 castles and the waterfront at their saved sites, from any distance
+		SelfTestStanding.add(); // s-p7-standing: POLISH P7 trader dialogue + Standing chip (payload size, prices per culture, query, switches, lang, art)
+		SelfTestHeap.add(); // s-heapleak: realm column memo dropped on server stop (keep last: it clears the memo)
 	}
 
 	/** Kills a ruler the way a player does (die() with a player-attack source fires AFTER_DEATH and the court's death handling). */

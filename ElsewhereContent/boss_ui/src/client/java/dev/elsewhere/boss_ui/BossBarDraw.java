@@ -127,8 +127,9 @@ public final class BossBarDraw {
 
 		// info line: [state chip]   attack / cast   [phase counter]
 		String chip = state != null ? BossBarFx.stateText(state) : null;
-		String counter = fx && phases.length > 0 && tr != null ? BossBarFx.phaseText(tr.phase + 1, phases.length + 1) : null;
-		String attack = !lay.attack().isEmpty() ? lay.attack() : castLay != null ? castLay.name() : "";
+		String counter = fx && phases.length > 0 && tr != null && entry != null && entry.counter() ?BossBarFx.phaseText(tr.phase + 1, phases.length + 1) : null;
+		boolean showAttack = BossBarFx.attackLine();
+		String attack = !showAttack ? "" : !lay.attack().isEmpty() ? lay.attack() : castLay != null ? castLay.name() : "";
 		int attackCol = lay.attack().isEmpty() && cast != null ? castColor(cast) : 0xFFE8D8A8;
 		int chipW = chip != null ? font.width(chip) + 6 : 0, counterW = counter != null ? font.width(counter) : 0;
 		if (chip != null || counter != null || !attack.isEmpty()) {
@@ -143,7 +144,7 @@ public final class BossBarDraw {
 				boolean fits = centerX - aw / 2 >= x + chipW + 4 && centerX + aw / 2 <= x + BAR_W - counterW - 4;
 				if (!fits && (chip != null || counter != null)) y += 10;
 				g.centeredText(font, attack, centerX, y, attackCol);
-				if (lay.attack().isEmpty() && cast != null) {
+				if (lay.attack().isEmpty() && cast != null && showAttack) {
 					// wind-up: a thin fill under the cast name, draining as the cast bar's progress does
 					int ww = aw + 8, wx = centerX - ww / 2;
 					g.fill(wx, y + 9, wx + ww, y + 10, 0xFF2A2430);

@@ -21,7 +21,7 @@
     "elsewhere:azmar_falconer": "elsewhere:boss_music.theme.tabuk",
     "elsewhere:azmar_sultana": "elsewhere:boss_music.theme.return_of_the_mummy",
     "elsewhere:azmar_wazir": "elsewhere:boss_music.theme.ibn_al_noor",
-    "elsewhere:court_castellan": "elsewhere:boss_music.theme.court_castellan",
+    "elsewhere:court_castellan": "elsewhere:boss_music.theme.ignosi",
     "elsewhere:court_chancellor": "elsewhere:boss_music.theme.lord_of_the_land",
     "elsewhere:court_huntsman": "elsewhere:boss_music.theme.court_huntsman",
     "elsewhere:court_king": "elsewhere:boss_music.theme.crossing_the_chasm",
@@ -68,17 +68,14 @@
   },
   "intro_ticks": {
     "elsewhere:boss_music.theme.achaidh_cheide": 912,
-    "elsewhere:boss_music.theme.big_mojo": 886,
+    "elsewhere:boss_music.theme.big_mojo": 830,
     "elsewhere:boss_music.theme.burn_the_world_waltz": 1425,
     "elsewhere:boss_music.theme.burnt_spirit": 445,
     "elsewhere:boss_music.theme.clash_defiant": 1464,
-    "elsewhere:boss_music.theme.court_castellan": 1557,
-    "elsewhere:boss_music.theme.court_chancellor": 965,
     "elsewhere:boss_music.theme.court_huntsman": 1443,
     "elsewhere:boss_music.theme.court_king": 509,
-    "elsewhere:boss_music.theme.court_marshal": 491,
+    "elsewhere:boss_music.theme.court_marshal": 156,
     "elsewhere:boss_music.theme.court_master_at_arms": 333,
-    "elsewhere:boss_music.theme.court_realm": 919,
     "elsewhere:boss_music.theme.crossing_the_chasm": 961,
     "elsewhere:boss_music.theme.curse_of_the_scarab": 3254,
     "elsewhere:boss_music.theme.darkest_child": 1574,
@@ -93,14 +90,10 @@
     "elsewhere:boss_music.theme.halls_of_the_undead": 1030,
     "elsewhere:boss_music.theme.hush": 821,
     "elsewhere:boss_music.theme.ibn_al_noor": 1699,
-    "elsewhere:boss_music.theme.interloper": 1885,
     "elsewhere:boss_music.theme.ironpeak": 434,
     "elsewhere:boss_music.theme.lord_of_the_land": 1188,
     "elsewhere:boss_music.theme.machinations": 184,
-    "elsewhere:boss_music.theme.moorland": 1215,
-    "elsewhere:boss_music.theme.mystery_bazaar": 218,
     "elsewhere:boss_music.theme.nether": 505,
-    "elsewhere:boss_music.theme.netherworld_shanty": 1015,
     "elsewhere:boss_music.theme.night_of_the_owl": 786,
     "elsewhere:boss_music.theme.nightmare_machine": 965,
     "elsewhere:boss_music.theme.ossuary_6_air": 1354,
@@ -117,7 +110,8 @@
     "elsewhere:boss_music.theme.the_complex": 2345,
     "elsewhere:boss_music.theme.trouble_with_tribals": 728,
     "elsewhere:boss_music.theme.tyrant": 1389,
-    "elsewhere:boss_music.theme.verdigris": 101
+    "elsewhere:boss_music.theme.verdigris": 101,
+    "elsewhere:boss_music.theme.ignosi": 367
   },
   "handoff_ramp_ticks": 8,
   "shared_themes": {
@@ -160,16 +154,24 @@
       "surge_ticks": 0.0,
       "end_ticks": 198,
       "loop_phase_ticks": 5.34,
-      "surge_phase_ticks": 0.0
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 213.34,
+          "phase_ticks": 6.038
+        }
+      ]
     },
     "elsewhere:boss_music.theme.big_mojo": {
       "intro": "native",
-      "intro_ticks": 886,
-      "beat_ticks": 14.048,
-      "loop_ticks": 1628.62,
+      "intro_ticks": 830,
+      "beat_ticks": 14.046,
+      "loop_ticks": 617.54,
       "surge_ticks": 0.0,
-      "end_ticks": 69,
-      "loop_phase_ticks": 11.734,
+      "end_ticks": 68,
+      "loop_phase_ticks": 10.24,
       "surge_phase_ticks": 0.0
     },
     "elsewhere:boss_music.theme.burn_the_world_waltz": {
@@ -202,16 +204,6 @@
       "loop_phase_ticks": 3.716,
       "surge_phase_ticks": 0.0
     },
-    "elsewhere:boss_music.theme.court_castellan": {
-      "intro": "native",
-      "intro_ticks": 1557,
-      "beat_ticks": 10.666,
-      "loop_ticks": 1194.38,
-      "surge_ticks": 326.74,
-      "end_ticks": 97,
-      "loop_phase_ticks": 10.448,
-      "surge_phase_ticks": 6.966
-    },
     "elsewhere:boss_music.theme.court_huntsman": {
       "intro": "native",
       "intro_ticks": 1443,
@@ -220,7 +212,15 @@
       "surge_ticks": 310.38,
       "end_ticks": 155,
       "loop_phase_ticks": 8.126,
-      "surge_phase_ticks": 0.464
+      "surge_phase_ticks": 0.464,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 310.38,
+          "phase_ticks": 0.464
+        }
+      ]
     },
     "elsewhere:boss_music.theme.court_king": {
       "intro": "cold",
@@ -234,13 +234,21 @@
     },
     "elsewhere:boss_music.theme.court_marshal": {
       "intro": "native",
-      "intro_ticks": 491,
+      "intro_ticks": 156,
       "beat_ticks": 11.808,
-      "loop_ticks": 2741.68,
+      "loop_ticks": 659.88,
       "surge_ticks": 0.0,
-      "end_ticks": 82,
-      "loop_phase_ticks": 7.662,
-      "surge_phase_ticks": 0.0
+      "end_ticks": 86,
+      "loop_phase_ticks": 7.894,
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 174.8,
+          "phase_ticks": 3.482
+        }
+      ]
     },
     "elsewhere:boss_music.theme.court_master_at_arms": {
       "intro": "native",
@@ -260,7 +268,15 @@
       "surge_ticks": 481.26,
       "end_ticks": 123,
       "loop_phase_ticks": 10.216,
-      "surge_phase_ticks": 2.554
+      "surge_phase_ticks": 2.554,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 481.26,
+          "phase_ticks": 2.554
+        }
+      ]
     },
     "elsewhere:boss_music.theme.curse_of_the_scarab": {
       "intro": "cold",
@@ -280,7 +296,15 @@
       "surge_ticks": 0.0,
       "end_ticks": 157,
       "loop_phase_ticks": 2.786,
-      "surge_phase_ticks": 0.0
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 167.24,
+          "phase_ticks": 6.27
+        }
+      ]
     },
     "elsewhere:boss_music.theme.death_and_axes": {
       "intro": "cold",
@@ -300,7 +324,15 @@
       "surge_ticks": 320.0,
       "end_ticks": 280,
       "loop_phase_ticks": 9.288,
-      "surge_phase_ticks": 4.644
+      "surge_phase_ticks": 4.644,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 320.0,
+          "phase_ticks": 4.644
+        }
+      ]
     },
     "elsewhere:boss_music.theme.end": {
       "intro": "cold",
@@ -330,7 +362,21 @@
       "surge_ticks": 658.32,
       "end_ticks": 72,
       "loop_phase_ticks": 4.266,
-      "surge_phase_ticks": 10.24
+      "surge_phase_ticks": 10.24,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 658.32,
+          "phase_ticks": 10.24
+        },
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 216.7,
+          "phase_ticks": 5.546
+        }
+      ]
     },
     "elsewhere:boss_music.theme.funeral_march_for_brass": {
       "intro": "native",
@@ -340,7 +386,15 @@
       "surge_ticks": 328.6,
       "end_ticks": 247,
       "loop_phase_ticks": 5.108,
-      "surge_phase_ticks": 2.322
+      "surge_phase_ticks": 2.322,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 328.6,
+          "phase_ticks": 2.322
+        }
+      ]
     },
     "elsewhere:boss_music.theme.glasswaste": {
       "intro": "cold",
@@ -350,7 +404,15 @@
       "surge_ticks": 0.0,
       "end_ticks": 128,
       "loop_phase_ticks": 1.626,
-      "surge_phase_ticks": 0.0
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 179.12,
+          "phase_ticks": 4.644
+        }
+      ]
     },
     "elsewhere:boss_music.theme.greenhaze": {
       "intro": "native",
@@ -360,7 +422,15 @@
       "surge_ticks": 0.0,
       "end_ticks": 91,
       "loop_phase_ticks": 0.696,
-      "surge_phase_ticks": 0.0
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 255.74,
+          "phase_ticks": 0.232
+        }
+      ]
     },
     "elsewhere:boss_music.theme.halls_of_the_undead": {
       "intro": "native",
@@ -370,7 +440,15 @@
       "surge_ticks": 300.0,
       "end_ticks": 190,
       "loop_phase_ticks": 12.074,
-      "surge_phase_ticks": 9.288
+      "surge_phase_ticks": 9.288,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 300.0,
+          "phase_ticks": 9.288
+        }
+      ]
     },
     "elsewhere:boss_music.theme.hush": {
       "intro": "native",
@@ -380,7 +458,15 @@
       "surge_ticks": 0.0,
       "end_ticks": 154,
       "loop_phase_ticks": 8.36,
-      "surge_phase_ticks": 0.0
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 351.42,
+          "phase_ticks": 9.288
+        }
+      ]
     },
     "elsewhere:boss_music.theme.ibn_al_noor": {
       "intro": "cold",
@@ -400,7 +486,15 @@
       "surge_ticks": 320.0,
       "end_ticks": 208,
       "loop_phase_ticks": 5.804,
-      "surge_phase_ticks": 9.056
+      "surge_phase_ticks": 9.056,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 320.0,
+          "phase_ticks": 9.056
+        }
+      ]
     },
     "elsewhere:boss_music.theme.lord_of_the_land": {
       "intro": "cold",
@@ -410,7 +504,15 @@
       "surge_ticks": 0.0,
       "end_ticks": 166,
       "loop_phase_ticks": 0.928,
-      "surge_phase_ticks": 0.0
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 171.5,
+          "phase_ticks": 6.966
+        }
+      ]
     },
     "elsewhere:boss_music.theme.machinations": {
       "intro": "cold",
@@ -440,7 +542,15 @@
       "surge_ticks": 564.7,
       "end_ticks": 97,
       "loop_phase_ticks": 7.43,
-      "surge_phase_ticks": 7.662
+      "surge_phase_ticks": 7.662,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 564.7,
+          "phase_ticks": 7.662
+        }
+      ]
     },
     "elsewhere:boss_music.theme.nightmare_machine": {
       "intro": "cold",
@@ -450,7 +560,15 @@
       "surge_ticks": 817.02,
       "end_ticks": 220,
       "loop_phase_ticks": 3.716,
-      "surge_phase_ticks": 6.966
+      "surge_phase_ticks": 6.966,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 817.02,
+          "phase_ticks": 6.966
+        }
+      ]
     },
     "elsewhere:boss_music.theme.ossuary_6_air": {
       "intro": "native",
@@ -470,7 +588,15 @@
       "surge_ticks": 371.84,
       "end_ticks": 280,
       "loop_phase_ticks": 6.502,
-      "surge_phase_ticks": 9.52
+      "surge_phase_ticks": 9.52,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 371.84,
+          "phase_ticks": 9.52
+        }
+      ]
     },
     "elsewhere:boss_music.theme.pale_hollow": {
       "intro": "cold",
@@ -490,7 +616,15 @@
       "surge_ticks": 314.76,
       "end_ticks": 186,
       "loop_phase_ticks": 7.04,
-      "surge_phase_ticks": 5.76
+      "surge_phase_ticks": 5.76,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 314.76,
+          "phase_ticks": 5.76
+        }
+      ]
     },
     "elsewhere:boss_music.theme.petalwind": {
       "intro": "native",
@@ -510,7 +644,15 @@
       "surge_ticks": 412.12,
       "end_ticks": 95,
       "loop_phase_ticks": 3.948,
-      "surge_phase_ticks": 6.734
+      "surge_phase_ticks": 6.734,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 412.12,
+          "phase_ticks": 6.734
+        }
+      ]
     },
     "elsewhere:boss_music.theme.sad_trio": {
       "intro": "native",
@@ -520,7 +662,21 @@
       "surge_ticks": 366.92,
       "end_ticks": 274,
       "loop_phase_ticks": 3.482,
-      "surge_phase_ticks": 1.16
+      "surge_phase_ticks": 1.16,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 366.92,
+          "phase_ticks": 1.16
+        },
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 168.16,
+          "phase_ticks": 7.43
+        }
+      ]
     },
     "elsewhere:boss_music.theme.scheming_weasel": {
       "intro": "native",
@@ -530,7 +686,15 @@
       "surge_ticks": 426.66,
       "end_ticks": 82,
       "loop_phase_ticks": 1.16,
-      "surge_phase_ticks": 5.572
+      "surge_phase_ticks": 5.572,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 426.66,
+          "phase_ticks": 5.572
+        }
+      ]
     },
     "elsewhere:boss_music.theme.southern_gothic": {
       "intro": "native",
@@ -540,7 +704,15 @@
       "surge_ticks": 609.12,
       "end_ticks": 103,
       "loop_phase_ticks": 3.25,
-      "surge_phase_ticks": 5.572
+      "surge_phase_ticks": 5.572,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 609.12,
+          "phase_ticks": 5.572
+        }
+      ]
     },
     "elsewhere:boss_music.theme.stoneworld_battle": {
       "intro": "cold",
@@ -570,7 +742,15 @@
       "surge_ticks": 359.06,
       "end_ticks": 215,
       "loop_phase_ticks": 8.126,
-      "surge_phase_ticks": 4.876
+      "surge_phase_ticks": 4.876,
+      "layers": [
+        {
+          "phase": 0,
+          "name": "surge",
+          "loop_ticks": 359.06,
+          "phase_ticks": 4.876
+        }
+      ]
     },
     "elsewhere:boss_music.theme.trouble_with_tribals": {
       "intro": "native",
@@ -580,7 +760,15 @@
       "surge_ticks": 0.0,
       "end_ticks": 126,
       "loop_phase_ticks": 5.108,
-      "surge_phase_ticks": 0.0
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 205.3,
+          "phase_ticks": 0.928
+        }
+      ]
     },
     "elsewhere:boss_music.theme.tyrant": {
       "intro": "native",
@@ -600,6 +788,24 @@
       "surge_ticks": 0.0,
       "end_ticks": 164,
       "loop_phase_ticks": 5.12,
+      "surge_phase_ticks": 0.0,
+      "layers": [
+        {
+          "phase": 1,
+          "name": "climax",
+          "loop_ticks": 282.36,
+          "phase_ticks": 6.826
+        }
+      ]
+    },
+    "elsewhere:boss_music.theme.ignosi": {
+      "intro": "native",
+      "intro_ticks": 367,
+      "beat_ticks": 9.536,
+      "loop_ticks": 458.46,
+      "surge_ticks": 0.0,
+      "end_ticks": 84,
+      "loop_phase_ticks": 1.16,
       "surge_phase_ticks": 0.0
     }
   },

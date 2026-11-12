@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.levelgen.Heightmap;
 
 /**
  * Return Rift ruin, 3.0 look (STRUCTURES.md 4, core features): a 5x5 tuff dais underpinned to the ground, and a ring of eight standing stones,
@@ -53,15 +52,15 @@ public final class RiftRing {
 			double a = phase + k * Math.PI / 4;
 			int ox = (int) Math.round(Math.cos(a) * RADIUS), oz = (int) Math.round(Math.sin(a) * RADIUS);
 			int x = c.getX() + ox, z = c.getZ() + oz;
-			int g = level.getHeight(Heightmap.Types.OCEAN_FLOOR_WG, x, z) - 1;
-			if (g < c.getY() - 8 || g > c.getY() + 6) continue;
+			int g = W.ground(level, x, z);
+			if (g == Integer.MIN_VALUE || g < c.getY() - 8 || g > c.getY() + 6) continue;
 			Direction out = Direction.getApproximateNearest((float) ox, 0F, (float) oz);
 			if (k == fallen) {
 				// a fallen stone lying outward on its own ground, its broken end a stair
 				for (int i = 0; i < 3; i++) {
 					int fx = x + out.getStepX() * i, fz = z + out.getStepZ() * i;
-					int fg = level.getHeight(Heightmap.Types.OCEAN_FLOOR_WG, fx, fz) - 1;
-					if (Math.abs(fg - g) > 2) break;
+					int fg = W.ground(level, fx, fz);
+					if (fg == Integer.MIN_VALUE || Math.abs(fg - g) > 2) break;
 					BlockState s = i == 2 ? Blocks.TUFF_BRICK_STAIRS.defaultBlockState().setValue(StairBlock.FACING, out.getOpposite()) : i == 1 ? polished : bricks;
 					level.setBlock(new BlockPos(fx, fg + 1, fz), s, Block.UPDATE_CLIENTS);
 				}
@@ -81,7 +80,7 @@ public final class RiftRing {
 				BlockPos q = new BlockPos(sx, g + i, sz);
 				if (slip && i == h) {
 					// a slipped cap rests on the ground or on a brace below it, never in the air
-					for (int j = 1; j <= 4 && open(level.getBlockState(q.below(j))); j++) level.setBlock(q.below(j), bricks, Block.UPDATE_CLIENTS);
+					for (int j = 1; j <= CoreFit.UNDERPIN_CAP && open(level.getBlockState(q.below(j))); j++) level.setBlock(q.below(j), bricks, Block.UPDATE_CLIENTS);
 				}
 				level.setBlock(q, s, Block.UPDATE_CLIENTS);
 			}

@@ -38,7 +38,7 @@ public final class SingleCombat {
 		SetBonuses.DAMAGE.add(SingleCombat::damage);
 	}
 
-	static float damage(LivingEntity victim, DamageSource src, float amount) {
+	public static float damage(LivingEntity victim, DamageSource src, float amount) {
 		Entity by = src.getEntity();
 		if (by instanceof ServerPlayer p && victim != p && !(victim instanceof Player) && !(src.getDirectEntity() instanceof MinionEntity)) {
 			float pw = SetBonuses.power(p, BONUS);

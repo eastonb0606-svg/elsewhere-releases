@@ -111,7 +111,7 @@ public final class VerdigrimArena {
 				int x = pipeX(i);
 				for (int y = 1; y <= pipeHeight(i); y++) s.set(x, y, -14, VerdigrisBlocks.VERDIGRIS_PIPE.defaultBlockState().setValue(RotatedPillarBlock.AXIS, Direction.Axis.Y));
 				s.set(x, pipeHeight(i) + 1, -14, Blocks.COPPER_BULB.waxed().unaffected().defaultBlockState().setValue(CopperBulbBlock.LIT, false));
-				s.set(x, 0, -11, Blocks.COPPER_BLOCK.waxed().unaffected().defaultBlockState());
+				s.set(x, 0, -11, Blocks.CUT_COPPER.waxed().unaffected().defaultBlockState()); // cut copper, not a copper storage block (s-throne B9)
 				s.set(x, 1, -11, Blocks.NOTE_BLOCK.defaultBlockState().setValue(NoteBlock.NOTE, Math.min(24, i * 3)));
 				s.set(x, 1, -13, VerdigrisBlocks.VERDIGRIS_PIPE_JUNCTION.defaultBlockState());
 			}
@@ -122,10 +122,11 @@ public final class VerdigrimArena {
 				s.set(b[0], b[1] - 1, b[2], Blocks.CUT_COPPER.waxed().unaffected().defaultBlockState());
 				s.set(b[0], b[1], b[2], Blocks.BELL.defaultBlockState().setValue(BellBlock.ATTACHMENT, BellAttachType.FLOOR).setValue(BellBlock.FACING, b[0] < 0 ? Direction.EAST : Direction.WEST));
 			}
-			// Conduits on prismarine pedestals.
+			// Breath shrines on prismarine pedestals: a sea lantern where a conduit stood (no valuable blocks, s-throne B9); the boss still grants
+			// Conduit Power near each one during the flood (VerdigrimBoss.conduitBreath reads CONDUITS, not the block).
 			for (int[] c : CONDUITS) {
 				for (int y = 1; y < c[1]; y++) s.set(c[0], y, c[2], Blocks.PRISMARINE_BRICKS.defaultBlockState());
-				s.set(c[0], c[1], c[2], Blocks.CONDUIT.defaultBlockState());
+				s.set(c[0], c[1], c[2], Blocks.SEA_LANTERN.defaultBlockState());
 			}
 			// Pews.
 			for (int z = -2; z <= 10; z += 3) for (int x : new int[] {-8, -7, -6, -5, -4, 4, 5, 6, 7, 8}) {

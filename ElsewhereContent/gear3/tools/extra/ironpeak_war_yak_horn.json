@@ -1,0 +1,83 @@
+{
+  "_doc": "s-waryak: War-Yak Horn extras (merged by gen_resources.py). files: a goat-horn style item definition (using_item -> the tooting model, raised to the mouth while blown) replacing the catalogue's plain one, plus the held and tooting models. sounds: the horn call re-uses vanilla goat horn 'Call' deeper; the War-Yak's voice is the moody cow pitched down (with a ravager growl under the ambient), its charge a high ravager roar and its trample the ravager's attack. lang: the War-Yak's name, subtitles, the switched-off and not-enough-slots messages.",
+  "lang": {
+    "entity.elsewhere.war_yak": "War-Yak",
+    "subtitles.elsewhere.war_yak_horn.call": "War-Yak Horn sounds",
+    "subtitles.elsewhere.war_yak.ambient": "War-Yak grunts",
+    "subtitles.elsewhere.war_yak.hurt": "War-Yak hurts",
+    "subtitles.elsewhere.war_yak.death": "War-Yak dies",
+    "subtitles.elsewhere.war_yak.charge": "War-Yak charges",
+    "subtitles.elsewhere.war_yak.trample": "War-Yak tramples",
+    "message.elsewhere.war_yak.off": "The War-Yak Horn is switched off on this server",
+    "message.elsewhere.war_yak.slots": "A War-Yak needs %s minion slots (you have %s)"
+  },
+  "jei": {
+    "elsewhere:ironpeak_war_yak_horn": [
+      "Hold use for 1 s to call a War-Yak (10 Glimmer). It takes 2 of your minion slots; older minions make room.",
+      "The War-Yak charges every 1.5 s: 9 damage to each of up to 3 mobs in a line, knocking them aside."
+    ]
+  },
+  "sounds": {
+    "item.war_yak_horn.call": {
+      "subtitle": "subtitles.elsewhere.war_yak_horn.call",
+      "sounds": [
+        {"name": "minecraft:item.goat_horn.sound.5", "type": "event", "pitch": 0.7}
+      ]
+    },
+    "entity.war_yak.ambient": {
+      "subtitle": "subtitles.elsewhere.war_yak.ambient",
+      "sounds": [
+        {"name": "minecraft:entity.cow_moody.ambient", "type": "event", "pitch": 0.6, "volume": 0.8},
+        {"name": "minecraft:entity.ravager.ambient", "type": "event", "pitch": 1.25, "volume": 0.5}
+      ]
+    },
+    "entity.war_yak.hurt": {
+      "subtitle": "subtitles.elsewhere.war_yak.hurt",
+      "sounds": [
+        {"name": "minecraft:entity.cow_moody.hurt", "type": "event", "pitch": 0.65}
+      ]
+    },
+    "entity.war_yak.death": {
+      "subtitle": "subtitles.elsewhere.war_yak.death",
+      "sounds": [
+        {"name": "minecraft:entity.cow_moody.death", "type": "event", "pitch": 0.6}
+      ]
+    },
+    "entity.war_yak.step": {
+      "subtitle": "subtitles.block.generic.footsteps",
+      "sounds": [
+        {"name": "minecraft:entity.cow_moody.step", "type": "event", "pitch": 0.8}
+      ]
+    },
+    "entity.war_yak.charge": {
+      "subtitle": "subtitles.elsewhere.war_yak.charge",
+      "sounds": [
+        {"name": "minecraft:entity.ravager.roar", "type": "event", "pitch": 1.35, "volume": 0.8}
+      ]
+    },
+    "entity.war_yak.trample": {
+      "subtitle": "subtitles.elsewhere.war_yak.trample",
+      "sounds": [
+        {"name": "minecraft:entity.ravager.attack", "type": "event", "pitch": 0.9}
+      ]
+    }
+  },
+  "files": {
+    "assets/elsewhere/items/ironpeak_war_yak_horn.json": {
+      "model": {
+        "type": "minecraft:condition",
+        "property": "minecraft:using_item",
+        "on_false": {"type": "minecraft:model", "model": "elsewhere:item/ironpeak_war_yak_horn"},
+        "on_true": {"type": "minecraft:model", "model": "elsewhere:item/ironpeak_war_yak_horn_tooting"}
+      }
+    },
+    "assets/elsewhere/models/item/ironpeak_war_yak_horn.json": {
+      "parent": "minecraft:item/goat_horn",
+      "textures": {"layer0": "elsewhere:item/ironpeak_war_yak_horn"}
+    },
+    "assets/elsewhere/models/item/ironpeak_war_yak_horn_tooting.json": {
+      "parent": "minecraft:item/tooting_goat_horn",
+      "textures": {"layer0": "elsewhere:item/ironpeak_war_yak_horn"}
+    }
+  }
+}

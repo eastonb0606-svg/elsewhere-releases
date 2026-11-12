@@ -878,8 +878,9 @@ public final class SelfTestRivals {
 			}
 			check("palette: every stone brick is replaced one for one (none left)", bricksAfter == 0, bricksAfter);
 			check("palette: stairs keep their facing and shape when the block changes", stairsOk, null);
-			check("pieces: an obelisk (gold, lapis tip) stands at the data coordinates", l.getBlockState(o.offset(28, 5, 28)).is(Blocks.GOLD_BLOCK) && l.getBlockState(o.offset(28, 10, 28)).is(Blocks.LAPIS_BLOCK), l.getBlockState(o.offset(28, 5, 28)));
-			check("pieces: a column with a cap, and a single set block", l.getBlockState(o.offset(-28, 3, 28)).is(Blocks.QUARTZ_PILLAR) && l.getBlockState(o.offset(-28, 6, 28)).is(Blocks.CHISELED_QUARTZ_BLOCK) && l.getBlockState(o.offset(0, 15, 0)).is(Blocks.EMERALD_BLOCK), null);
+			// s-throne (B9): data asking for gold, lapis or emerald gets the lore-fit stand-in (no valuable blocks in structures)
+			check("pieces: an obelisk stands at the data coordinates, gold as yellow terracotta and its lapis tip as blue glazed terracotta", l.getBlockState(o.offset(28, 5, 28)).is(Blocks.DYED_TERRACOTTA.yellow()) && l.getBlockState(o.offset(28, 10, 28)).is(Blocks.GLAZED_TERRACOTTA.blue()), l.getBlockState(o.offset(28, 5, 28)));
+			check("pieces: a column with a cap, and a single set block (emerald as a non-valuable stand-in)", l.getBlockState(o.offset(-28, 3, 28)).is(Blocks.QUARTZ_PILLAR) && l.getBlockState(o.offset(-28, 6, 28)).is(Blocks.CHISELED_QUARTZ_BLOCK) && !l.getBlockState(o.offset(0, 15, 0)).isAir() && !dev.elsewhere.kingdom_court.world.Valuables.isValuable(l.getBlockState(o.offset(0, 15, 0))), l.getBlockState(o.offset(0, 15, 0)));
 			check("pieces outside the castle footprint are skipped", !l.getBlockState(o.offset(40, 1, 1)).is(Blocks.DIAMOND_BLOCK), null);
 			check("a style never changes Aldermark's own castle (no style, same layout)", CastleStyles.of(Factions.ALDERMARK) == null && plain > 5000, plain);
 			CastleStyles.clear(sid);

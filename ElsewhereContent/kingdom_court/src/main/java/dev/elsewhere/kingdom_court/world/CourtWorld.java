@@ -66,6 +66,7 @@ public final class CourtWorld {
 		WATER_PIECE = Registry.register(BuiltInRegistries.STRUCTURE_PIECE, CourtContent.id("castle_aldermark_waterfront_piece"), (StructurePieceType.ContextlessType) WaterPiece::new);
 		Registry.register(BuiltInRegistries.STRUCTURE_PLACEMENT, CourtContent.id("castle_aldermark"), Placement.CODEC);
 		CastleStyles.init();
+		net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STOPPED.register(s -> RealmFit.clearMemo()); // s-heapleak: no realm memo kept across worlds
 	}
 
 	/** Level seed + faction -> that faction's realm site (every faction except Aldermark). */
@@ -179,7 +180,7 @@ public final class CourtWorld {
 			final int fw = tw, fe = te;
 			return Optional.of(new GenerationStub(s, b -> {
 				if (waterfront) {
-					b.addPiece(new WaterPiece(s, w[0], w[1], ctx.chunkGenerator().getSeaLevel(), faction));
+					b.addPiece(new WaterPiece(s, w[0], w[1], ctx.chunkGenerator().getSeaLevel(), faction, RealmFit.ENABLED ? 2 : 1)); // s-layout-hraf: fv 2 = new realm
 					return;
 				}
 				for (CastleLayout.Part p : CastleLayout.Part.values()) b.addPiece(new RealmPiece(p, s, faction, fv, fw, fe));
@@ -292,14 +293,21 @@ public final class CourtWorld {
 		final BlockPos origin;
 		final int dir, shore, sea;
 		final Identifier faction;
+		/** s-layout-hraf: 2 for a new (3.0 fv 2) realm (adds the Hrafnholt shore road and nausts); saved waterfronts read 1 and build as before. */
+		final int fv;
 
 		public WaterPiece(BlockPos origin, int dir, int shore, int sea, Identifier faction) {
+			this(origin, dir, shore, sea, faction, 1);
+		}
+
+		public WaterPiece(BlockPos origin, int dir, int shore, int sea, Identifier faction, int fv) {
 			super(WATER_PIECE, 0, Waterfront.box(origin, dir, shore, sea));
 			this.origin = origin;
 			this.dir = dir;
 			this.shore = shore;
 			this.sea = sea;
 			this.faction = faction;
+			this.fv = fv;
 		}
 
 		public WaterPiece(CompoundTag tag) {
@@ -310,11 +318,13 @@ public final class CourtWorld {
 			this.sea = tag.getIntOr("sea", 63);
 			Identifier f = Identifier.tryParse(tag.getStringOr("faction", Factions.ALDERMARK.toString()));
 			this.faction = f == null ? Factions.ALDERMARK : f;
+			this.fv = tag.getIntOr("fv", 1);
 		}
 
 		@Override
 		protected void addAdditionalSaveData(StructurePieceSerializationContext ctx, CompoundTag tag) {
 			tag.putLong("origin", origin.asLong());
+			if (fv == 2) tag.putInt("fv", 2);
 			tag.putInt("dir", dir);
 			tag.putInt("shore", shore);
 			tag.putInt("sea", sea);
@@ -326,6 +336,10 @@ public final class CourtWorld {
 			CastleLayout.Placer pl = new CastleLayout.Placer(level, chunkBB);
 			CastleStyles.Style st = CastleStyles.of(faction);
 			Waterfront.build(pl, origin, dir, shore, sea, Waterfront.parse(st == null ? null : st.waterfront), (int) (origin.asLong() >>> 3));
+			if (fv == 2 && st != null) { // s-layout-hraf: Hrafnholt's shore road and nausts (HrafnholtShore checks the kit and its kill switch)
+				pl.style = st;
+				HrafnholtShore.build(pl, origin, dir, shore, sea, new RealmFit.HeightField(gen, level.getLevel().getChunkSource().randomState(), level, level.getSeed(), origin, townFloor(origin, true), townFloor(origin, false)));
+			}
 		}
 	}
 

@@ -1,0 +1,183 @@
+{
+  "_doc": "s-whips: whip mechanics extras (merged by gen_resources.py). files: each whip's item definition (minecraft:cooldown -> the cracked-lash model while the 0.5 s crack cooldown runs) and the <id>_crack models (textures: tools/whip_crack.py). sounds: one synthesised crack per whip, two variants each (tools/synth_whips.py). Code: gear3 s3/whips/*, mixin/WhipMixins.java.",
+  "lang": {
+    "subtitles.elsewhere.gear3.whip.thornlash": "Thornlash cracks",
+    "message.elsewhere.whip.thorned": "Thorned: %s (your minions +2 damage)",
+    "subtitles.elsewhere.gear3.whip.tidechain_lash": "Tidechain Lash cracks",
+    "message.elsewhere.whip.shackled": "Shackled: %s (your minions +20%%)",
+    "subtitles.elsewhere.gear3.whip.azmar_sunscourge": "Sunscourge cracks",
+    "message.elsewhere.whip.venom": "Venom: %s (your minions +15%%, ignore 3 armor)",
+    "subtitles.elsewhere.gear3.whip.echo_chord": "Echo Chord cracks",
+    "message.elsewhere.whip.resonant": "Resonant: %s (your minions +25%%)"
+  },
+  "jei": {
+    "elsewhere:thornlash": [
+      "Whip: a hit marks the mob Thorned for 5 s. Your minions switch to it and hit it for +2 damage; ranged minions reach 4 blocks further against it.",
+      "Right-click cracks the whip out to full reach. The mark fades 3 s after your last swing (a hit or a crack), so keep cracking to hold it.",
+      "Whip rules: damage scales with your Summoner Calling, Herd focus never lowers it, and a mob carries one whip mark: the newest replaces the old."
+    ],
+    "elsewhere:tidechain_lash": [
+      "Whip: a hit marks the mob Shackled for 5 s, or 7 s if it is wet (in water or rain). Your minions switch to it and hit it for +20% damage; ranged minions reach 4 blocks further against it.",
+      "Right-click cracks the whip out to full reach. The mark fades 3 s after your last swing (a hit or a crack), so keep cracking to hold it.",
+      "Whip rules: damage scales with your Summoner Calling, Herd focus never lowers it, and a mob carries one whip mark: the newest replaces the old."
+    ],
+    "elsewhere:azmar_sunscourge": [
+      "Whip: a hit marks the mob with Venom for 5 s. Your minions switch to it and hit it for +15% damage and ignore 3 of its armor; ranged minions reach 4 blocks further against it.",
+      "Right-click cracks the whip out to full reach. The mark fades 3 s after your last swing (a hit or a crack), so keep cracking to hold it.",
+      "Whip rules: damage scales with your Summoner Calling, Herd focus never lowers it, and a mob carries one whip mark: the newest replaces the old."
+    ],
+    "elsewhere:echo_chord": [
+      "Whip: a hit marks the mob Resonant for 5 s. Your minions switch to it and hit it for +25% damage; ranged minions reach 4 blocks further against it.",
+      "Right-click cracks the whip out to full reach. The mark fades 3 s after your last swing (a hit or a crack), so keep cracking to hold it.",
+      "Whip rules: damage scales with your Summoner Calling, Herd focus never lowers it, and a mob carries one whip mark: the newest replaces the old."
+    ]
+  },
+  "sounds": {
+    "gear3.whip.thornlash": {
+      "subtitle": "subtitles.elsewhere.gear3.whip.thornlash",
+      "sounds": [
+        {
+          "name": "elsewhere:gear3/whip/thornlash_1"
+        },
+        {
+          "name": "elsewhere:gear3/whip/thornlash_2"
+        }
+      ]
+    },
+    "gear3.whip.tidechain_lash": {
+      "subtitle": "subtitles.elsewhere.gear3.whip.tidechain_lash",
+      "sounds": [
+        {
+          "name": "elsewhere:gear3/whip/tidechain_lash_1"
+        },
+        {
+          "name": "elsewhere:gear3/whip/tidechain_lash_2"
+        }
+      ]
+    },
+    "gear3.whip.azmar_sunscourge": {
+      "subtitle": "subtitles.elsewhere.gear3.whip.azmar_sunscourge",
+      "sounds": [
+        {
+          "name": "elsewhere:gear3/whip/azmar_sunscourge_1"
+        },
+        {
+          "name": "elsewhere:gear3/whip/azmar_sunscourge_2"
+        }
+      ]
+    },
+    "gear3.whip.echo_chord": {
+      "subtitle": "subtitles.elsewhere.gear3.whip.echo_chord",
+      "sounds": [
+        {
+          "name": "elsewhere:gear3/whip/echo_chord_1"
+        },
+        {
+          "name": "elsewhere:gear3/whip/echo_chord_2"
+        }
+      ]
+    }
+  },
+  "files": {
+    "assets/elsewhere/items/thornlash.json": {
+      "model": {
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:cooldown",
+        "entries": [
+          {
+            "threshold": 0.01,
+            "model": {
+              "type": "minecraft:model",
+              "model": "elsewhere:item/thornlash_crack"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/thornlash"
+        }
+      }
+    },
+    "assets/elsewhere/models/item/thornlash_crack.json": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "elsewhere:item/thornlash_crack"
+      }
+    },
+    "assets/elsewhere/items/tidechain_lash.json": {
+      "model": {
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:cooldown",
+        "entries": [
+          {
+            "threshold": 0.01,
+            "model": {
+              "type": "minecraft:model",
+              "model": "elsewhere:item/tidechain_lash_crack"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/tidechain_lash"
+        }
+      }
+    },
+    "assets/elsewhere/models/item/tidechain_lash_crack.json": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "elsewhere:item/tidechain_lash_crack"
+      }
+    },
+    "assets/elsewhere/items/azmar_sunscourge.json": {
+      "model": {
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:cooldown",
+        "entries": [
+          {
+            "threshold": 0.01,
+            "model": {
+              "type": "minecraft:model",
+              "model": "elsewhere:item/azmar_sunscourge_crack"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/azmar_sunscourge"
+        }
+      }
+    },
+    "assets/elsewhere/models/item/azmar_sunscourge_crack.json": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "elsewhere:item/azmar_sunscourge_crack"
+      }
+    },
+    "assets/elsewhere/items/echo_chord.json": {
+      "model": {
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:cooldown",
+        "entries": [
+          {
+            "threshold": 0.01,
+            "model": {
+              "type": "minecraft:model",
+              "model": "elsewhere:item/echo_chord_crack"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/echo_chord"
+        }
+      }
+    },
+    "assets/elsewhere/models/item/echo_chord_crack.json": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "elsewhere:item/echo_chord_crack"
+      }
+    }
+  }
+}

@@ -104,7 +104,8 @@ final class SelfTestStructFit {
 		// valuables, lit campfires, block count in the box
 		int valuable = 0, campfires = 0, blocks = 0;
 		int R = bp.radius();
-		for (int x = -R; x <= R; x++) for (int z = -R; z <= R; z++) for (int y = Math.max(-bp.depth(), level.getMinY() - oy); y <= bp.height(); y++) {
+		int scanFrom = Math.max(-bp.depth(), Math.max(level.getMinY() - oy, t.minGround() - 6 - oy)); // natural ore veins below the prepared ground are not ours
+		for (int x = -R; x <= R; x++) for (int z = -R; z <= R; z++) for (int y = scanFrom; y <= bp.height(); y++) {
 			BlockState b = level.getBlockState(o.offset(x, y, z));
 			if (b.isAir()) continue;
 			String id = BuiltInRegistries.BLOCK.getKey(b.getBlock()).getPath();
@@ -178,7 +179,8 @@ final class SelfTestStructFit {
 				check(feet == 4 && level.getBlockState(o.offset(0, 4, 0)).is(VerdigrisBlocks.VERDIGRIS_GRATING), f("struct fit clockwork_rig: deck at sea level +4, %d of 4 splayed legs reach the sea bed", feet));
 			}
 			case "engineers_atoll" -> {
-				int deck = count(level, o, 21, VerdigrisBlocks.KELPWOOD_PLANKS) - 49;
+				int deck = 0;
+				for (int x = -21; x <= 21; x++) for (int z = -21; z <= 21; z++) for (int y = -8; y <= -1; y++) if (level.getBlockState(o.offset(x, y, z)).is(VerdigrisBlocks.KELPWOOD_PLANKS)) deck++;
 				check(level.getBlockState(o.offset(0, 1, 1)).isAir() && deck >= 9, f("struct fit engineers_atoll: the tidewright's spot is free, a jetty runs out to deep water (%d deck planks)", deck));
 			}
 			case "return_rift_verdigris_sea", "return_rift_ironpeak" -> {

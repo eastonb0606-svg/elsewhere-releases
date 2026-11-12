@@ -254,6 +254,7 @@ final class Conductor {
 			period = plan.loopTicks();
 			phase = plan.loopPhase();
 			state = State.LOOP;
+			busyUntil = Math.max(busyUntil, plan.introTicks() + HANDOFF_RAMP + 1); // the intro's tail still streams until then
 		}
 		for (int i = 0; i < due.size(); i++) {
 			long[] d = due.get(i);

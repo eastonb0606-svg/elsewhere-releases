@@ -1,0 +1,331 @@
+{
+  "item.gale_sling.whirl": {
+    "subtitle": "subtitles.elsewhere.item.gale_sling.whirl",
+    "sounds": [
+      {
+        "name": "minecraft:entity.breeze.whirl",
+        "type": "event",
+        "pitch": 1.4,
+        "volume": 0.6
+      }
+    ]
+  },
+  "item.gale_sling.loose": {
+    "subtitle": "subtitles.elsewhere.item.gale_sling.loose",
+    "sounds": [
+      {
+        "name": "minecraft:entity.breeze.shoot",
+        "type": "event",
+        "pitch": 1.25,
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.gale_sling_stone.hit": {
+    "subtitle": "subtitles.elsewhere.entity.gale_sling_stone.hit",
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.hit",
+        "type": "event"
+      },
+      {
+        "name": "minecraft:block.gravel.hit",
+        "type": "event"
+      }
+    ]
+  },
+  "item.hrafnholt_wolfcall_horn.blow": {
+    "subtitle": "subtitles.elsewhere.hrafnholt_wolfcall_horn.blow",
+    "sounds": [
+      {
+        "name": "minecraft:item.goat_horn.sound.5",
+        "type": "event",
+        "pitch": 0.8
+      }
+    ]
+  },
+  "entity.hrafnholt_warg.howl": {
+    "subtitle": "subtitles.elsewhere.hrafnholt_warg.howl",
+    "sounds": [
+      {
+        "name": "elsewhere:gear3/wolfcall/warg_howl",
+        "attenuation_distance": 48
+      },
+      {
+        "name": "elsewhere:gear3/wolfcall/warg_howl",
+        "pitch": 0.9,
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "entity.hrafnholt_warg.ambient": {
+    "subtitle": "subtitles.elsewhere.hrafnholt_warg.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity.wolf_big.ambient",
+        "type": "event",
+        "pitch": 0.85
+      }
+    ]
+  },
+  "entity.hrafnholt_warg.growl": {
+    "subtitle": "subtitles.elsewhere.hrafnholt_warg.growl",
+    "sounds": [
+      {
+        "name": "minecraft:entity.wolf_big.growl",
+        "type": "event",
+        "pitch": 0.85
+      }
+    ]
+  },
+  "entity.hrafnholt_warg.hurt": {
+    "subtitle": "subtitles.elsewhere.hrafnholt_warg.hurt",
+    "sounds": [
+      {
+        "name": "minecraft:entity.wolf_big.hurt",
+        "type": "event",
+        "pitch": 0.85
+      }
+    ]
+  },
+  "entity.hrafnholt_warg.death": {
+    "subtitle": "subtitles.elsewhere.hrafnholt_warg.death",
+    "sounds": [
+      {
+        "name": "minecraft:entity.wolf_big.death",
+        "type": "event",
+        "pitch": 0.85
+      }
+    ]
+  },
+  "entity.hrafnholt_warg.pant": {
+    "subtitle": "subtitles.elsewhere.hrafnholt_warg.pant",
+    "sounds": [
+      {
+        "name": "minecraft:entity.wolf_big.pant",
+        "type": "event",
+        "pitch": 0.85,
+        "volume": 0.7
+      }
+    ]
+  },
+  "gear3.whip.thornlash": {
+    "subtitle": "subtitles.elsewhere.gear3.whip.thornlash",
+    "sounds": [
+      {
+        "name": "elsewhere:gear3/whip/thornlash_1"
+      },
+      {
+        "name": "elsewhere:gear3/whip/thornlash_2"
+      }
+    ]
+  },
+  "gear3.whip.tidechain_lash": {
+    "subtitle": "subtitles.elsewhere.gear3.whip.tidechain_lash",
+    "sounds": [
+      {
+        "name": "elsewhere:gear3/whip/tidechain_lash_1"
+      },
+      {
+        "name": "elsewhere:gear3/whip/tidechain_lash_2"
+      }
+    ]
+  },
+  "gear3.whip.azmar_sunscourge": {
+    "subtitle": "subtitles.elsewhere.gear3.whip.azmar_sunscourge",
+    "sounds": [
+      {
+        "name": "elsewhere:gear3/whip/azmar_sunscourge_1"
+      },
+      {
+        "name": "elsewhere:gear3/whip/azmar_sunscourge_2"
+      }
+    ]
+  },
+  "gear3.whip.echo_chord": {
+    "subtitle": "subtitles.elsewhere.gear3.whip.echo_chord",
+    "sounds": [
+      {
+        "name": "elsewhere:gear3/whip/echo_chord_1"
+      },
+      {
+        "name": "elsewhere:gear3/whip/echo_chord_2"
+      }
+    ]
+  },
+  "gear3.hurlbat.throw": {
+    "subtitle": "subtitles.elsewhere.gear3.hurlbat.throw",
+    "sounds": [
+      {
+        "name": "minecraft:item.trident.throw",
+        "type": "event",
+        "pitch": 1.4,
+        "volume": 0.8
+      }
+    ]
+  },
+  "gear3.hurlbat.hit": {
+    "subtitle": "subtitles.elsewhere.gear3.hurlbat.hit",
+    "sounds": [
+      {
+        "name": "minecraft:item.trident.hit",
+        "type": "event",
+        "pitch": 1.2
+      },
+      {
+        "name": "minecraft:entity.player.attack.strong",
+        "type": "event",
+        "pitch": 1.1,
+        "volume": 0.6
+      }
+    ]
+  },
+  "gear3.hurlbat.hit_ground": {
+    "subtitle": "subtitles.elsewhere.gear3.hurlbat.hit_ground",
+    "sounds": [
+      {
+        "name": "minecraft:item.trident.hit_ground",
+        "type": "event",
+        "pitch": 1.3
+      },
+      {
+        "name": "minecraft:item.axe.strip",
+        "type": "event",
+        "pitch": 1.4,
+        "volume": 0.5
+      }
+    ]
+  },
+  "gear3.hurlbat.break": {
+    "subtitle": "subtitles.elsewhere.gear3.hurlbat.break",
+    "sounds": [
+      {
+        "name": "minecraft:entity.item.break",
+        "type": "event",
+        "pitch": 0.8
+      }
+    ]
+  },
+  "item.aphelion_starpiercer.shoot": {
+    "sounds": [
+      {
+        "name": "minecraft:item.trident.throw",
+        "type": "event",
+        "pitch": 1.4,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.item.aphelion_starpiercer.shoot"
+  },
+  "item.aphelion_starpiercer.draw_full": {
+    "sounds": [
+      {
+        "name": "minecraft:block.amethyst_block.chime",
+        "type": "event",
+        "pitch": 1.4,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.item.aphelion_starpiercer.draw_full"
+  },
+  "item.aphelion_starpiercer.cancel": {
+    "sounds": [
+      {
+        "name": "minecraft:block.tripwire.detach",
+        "type": "event",
+        "pitch": 0.8,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.item.aphelion_starpiercer.cancel"
+  },
+  "entity.starpiercer_arrow.hit": {
+    "sounds": [
+      {
+        "name": "minecraft:block.amethyst_cluster.break",
+        "type": "event",
+        "pitch": 1.3,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.entity.starpiercer_arrow.hit"
+  },
+  "item.war_yak_horn.call": {
+    "subtitle": "subtitles.elsewhere.war_yak_horn.call",
+    "sounds": [
+      {
+        "name": "minecraft:item.goat_horn.sound.5",
+        "type": "event",
+        "pitch": 0.7
+      }
+    ]
+  },
+  "entity.war_yak.ambient": {
+    "subtitle": "subtitles.elsewhere.war_yak.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity.cow_moody.ambient",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 0.8
+      },
+      {
+        "name": "minecraft:entity.ravager.ambient",
+        "type": "event",
+        "pitch": 1.25,
+        "volume": 0.5
+      }
+    ]
+  },
+  "entity.war_yak.hurt": {
+    "subtitle": "subtitles.elsewhere.war_yak.hurt",
+    "sounds": [
+      {
+        "name": "minecraft:entity.cow_moody.hurt",
+        "type": "event",
+        "pitch": 0.65
+      }
+    ]
+  },
+  "entity.war_yak.death": {
+    "subtitle": "subtitles.elsewhere.war_yak.death",
+    "sounds": [
+      {
+        "name": "minecraft:entity.cow_moody.death",
+        "type": "event",
+        "pitch": 0.6
+      }
+    ]
+  },
+  "entity.war_yak.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      {
+        "name": "minecraft:entity.cow_moody.step",
+        "type": "event",
+        "pitch": 0.8
+      }
+    ]
+  },
+  "entity.war_yak.charge": {
+    "subtitle": "subtitles.elsewhere.war_yak.charge",
+    "sounds": [
+      {
+        "name": "minecraft:entity.ravager.roar",
+        "type": "event",
+        "pitch": 1.35,
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.war_yak.trample": {
+    "subtitle": "subtitles.elsewhere.war_yak.trample",
+    "sounds": [
+      {
+        "name": "minecraft:entity.ravager.attack",
+        "type": "event",
+        "pitch": 0.9
+      }
+    ]
+  }
+}

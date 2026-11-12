@@ -1,0 +1,1 @@
+13:09 s-starpiercer RELEASED gear3/tools/build_catalogue.py (aphelion_starpiercer appended before the calling block; placeholder_tables + entities/aphelion) + catalogue.json/textures/resources (pipeline clean: 68 items, gen_textures --check OK, gen_resources --check 0 stale). Next in the queue: yours

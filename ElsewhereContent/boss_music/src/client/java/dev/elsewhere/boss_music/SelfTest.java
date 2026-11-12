@@ -11,20 +11,32 @@ import net.minecraft.server.packs.resources.Resource;
 /**
  * Dev check ({@code -Dboss_music.selftest=true}, {@code -Dboss_music.selftest.exit=true}): every theme (its intro and its loop event) and stinger in the map
  * has a sounds.json event whose OGG files resolve through the resource manager; every boss id in the map exists in the
- * entity registry (skipped when no other Elsewhere module is loaded). 3.0: every theme has its timing plan and its surge /
- * ending files when the plan names them, a theme is shared only where {@code shared_themes} documents it, and
- * {@link ConductorSim} runs every theme through the transition scenarios. Prints one SELFTEST line.
+ * entity registry (skipped when no other Elsewhere module is loaded). 3.0: every theme has its timing plan and its phase
+ * layer (P12) / ending files when the plan names them, the layers data reads cleanly, a theme is shared only where
+ * {@code shared_themes} documents it, {@link ConductorSim} runs every theme through the transition scenarios, and the boss
+ * bar list is read through the accessor mixin. Prints {@code [boss_music-selftest] PASS|FAIL} lines, a TOTAL line and the
+ * summary SELFTEST line. The in-game part (realm guard, layers on a live sound engine) is {@link InGameTest}.
  */
 final class SelfTest {
 	private SelfTest() {}
 
+	static final String TAG = "[boss_music-selftest] ";
+	private static int pass, fail;
+
+	private static void check(boolean ok, String what) {
+		if (ok) pass++;
+		else fail++;
+		System.out.println(TAG + (ok ? "PASS " : "FAIL ") + what);
+	}
+
 	static void run(Minecraft mc) {
-		int bad = 0, files = 0;
+		int bad = 0, files = 0, filesBad = 0;
+		pass = fail = 0;
 		StringBuilder msg = new StringBuilder();
 		try {
 			BossMusicMap m = BossMusicMap.load(mc);
 			Set<Identifier> events = new HashSet<>();
-			int simChecks = 0, surges = 0, endings = 0;
+			int simChecks = 0, surges = 0, endings = 0, layers = 0;
 			java.util.List<String> sim = new java.util.ArrayList<>();
 			for (Identifier theme : new HashSet<>(m.themes.values())) {
 				events.add(BossMusicMap.introOf(theme));
@@ -39,9 +51,10 @@ final class SelfTest {
 					msg.append("\n  no 3.0 'themes' timing for ").append(theme);
 					continue;
 				}
-				if (plan.hasSurge()) {
-					events.add(theme.withSuffix(".surge"));
-					surges++;
+				for (Conductor.Layer l : plan.layers()) {
+					events.add(Theme.layerOf(theme, l));
+					if (l.phase() == 0) surges++;
+					layers++;
 				}
 				if (plan.hasEnd()) {
 					events.add(theme.withSuffix(".end"));
@@ -66,6 +79,23 @@ final class SelfTest {
 			}
 			bad += sim.size();
 			for (String line : sim.subList(0, Math.min(20, sim.size()))) msg.append("\n  transition: ").append(line);
+			check(sim.isEmpty(), "conductor sim: every theme x " + ConductorSim.SCENARIOS.length + " scenarios (layers on the beat, at most 2 streams, nothing cut, endings whole), "
+				+ sim.size() + " problems");
+			// P12: the layers data reads cleanly (bad entries are dropped by the loader and listed here)
+			bad += m.problems.size();
+			for (String line : m.problems) msg.append("\n  data: ").append(line);
+			check(m.problems.isEmpty(), "phase layers: " + layers + " layers on " + m.plans.size() + " themes read cleanly " + m.problems);
+			// P12: the boss bar list is read through the accessor mixin (no reflection)
+			boolean bars;
+			try {
+				BossMusicService.readBarNames(mc);
+				bars = true;
+			} catch (RuntimeException | LinkageError e) {
+				bars = false;
+				msg.append("\n  boss bar accessor: ").append(e);
+			}
+			if (!bars) bad++;
+			check(bars, "boss bar list read through the BossOverlayAccessor mixin (no reflection)");
 			events.addAll(m.stingers.values());
 			var sounds = mc.getResourceManager().getResourceStack(Identifier.fromNamespaceAndPath("elsewhere", "sounds.json"));
 			com.google.gson.JsonObject all = new com.google.gson.JsonObject();
@@ -77,6 +107,7 @@ final class SelfTest {
 			for (Identifier ev : events) {
 				if (!all.has(ev.getPath())) {
 					bad++;
+					filesBad++;
 					msg.append("\n  no sounds.json event ").append(ev);
 					continue;
 				}
@@ -86,6 +117,7 @@ final class SelfTest {
 					var res = mc.getResourceManager().getResource(file);
 					if (res.isEmpty()) {
 						bad++;
+						filesBad++;
 						msg.append("\n  missing file ").append(file);
 						continue;
 					}
@@ -93,6 +125,7 @@ final class SelfTest {
 						byte[] head = in.readNBytes(4);
 						if (head.length < 4 || head[0] != 'O' || head[1] != 'g' || head[2] != 'g' || head[3] != 'S') {
 							bad++;
+							filesBad++;
 							msg.append("\n  not an OGG ").append(file);
 						}
 					}
@@ -109,13 +142,18 @@ final class SelfTest {
 					}
 				}
 			}
-			BossMusicService.LOGGER.info("SELFTEST boss_music: {} bosses, {} themes ({} surge, {} endings), {} events, {} sound files checked, {} transition ticks simulated, entity registry {}; {} problem(s){}",
-				m.themes.size(), new HashSet<>(m.themes.values()).size(), surges, endings, events.size(), files, simChecks,
+			check(filesBad == 0, "sound events resolve: " + events.size() + " events, " + files + " OGG files (intro, loop, " + layers + " layers, endings, stingers)");
+			if (otherModules) check(missing == 0, "every boss id in boss_music.json is a registered entity (" + missing + " unknown)");
+			check(bad + missing == 0, "boss_music data: " + m.themes.size() + " bosses, " + new HashSet<>(m.themes.values()).size() + " themes");
+			BossMusicService.LOGGER.info("SELFTEST boss_music: {} bosses, {} themes ({} surge, {} phase layers, {} endings), {} events, {} sound files checked, {} transition ticks simulated, entity registry {}; {} problem(s){}",
+				m.themes.size(), new HashSet<>(m.themes.values()).size(), surges, layers, endings, events.size(), files, simChecks,
 				otherModules ? "checked (" + missing + " unknown)" : "skipped (standalone)", bad + missing, msg);
 			if (bad + missing > 0) System.err.println("SELFTEST boss_music FAILED");
 		} catch (Exception e) {
 			BossMusicService.LOGGER.error("SELFTEST boss_music crashed", e);
+			check(false, "static self-test ran without an exception (" + e + ")");
 		}
+		System.out.println(TAG + "TOTAL " + pass + "/" + (pass + fail) + (fail == 0 ? " PASS" : " FAIL"));
 		if (Boolean.getBoolean("boss_music.selftest.exit")) mc.stop();
 	}
 }

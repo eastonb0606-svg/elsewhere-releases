@@ -152,7 +152,8 @@ public class Percolax extends BossEntity {
 
 	/** Dev: build The Great Hotbox here and summon. */
 	public static Percolax buildAndSummon(ServerLevel level, BlockPos origin) {
-		GreenhazeStructures.GREAT_HOTBOX.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
+		if (dev.elsewhere.greenhaze_hush.world.fit.GhFit.LOOKS) dev.elsewhere.greenhaze_hush.world.fit.GhFit.buildPlan(level, "great_hotbox", origin);
+		else GreenhazeStructures.GREAT_HOTBOX.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
 		return summon(level, origin);
 	}
 

@@ -79,6 +79,17 @@ public final class SelfTestIdle {
 			boolean ok = l.addFreshEntity(copy);
 			check("idle: pose restored from the saved routine tag on load", ok && copy.idlePose() == Pose.SIT.id, before + " -> " + copy.idlePose() + (ok ? "" : " (not added)"));
 
+			// townsfolk (s-townsfolk) take routine poses through the same sink (never added to the world: no town, no manager)
+			var tfType = dev.elsewhere.kingdom.armies.townsfolk.TownsfolkManager.TYPE;
+			var tf = tfType == null ? null : tfType.create(l, EntitySpawnReason.COMMAND);
+			if (tf != null) {
+				RoutinePoses.set(tf, Pose.PRAY);
+				boolean prays = tf.idlePose() == Pose.PRAY.id && tf.getPose() != net.minecraft.world.entity.Pose.CROUCHING;
+				RoutinePoses.set(tf, Pose.NONE);
+				check("idle: townsfolk take routine poses on the synced byte", prays && tf.idlePose() == 0, tf.idlePose());
+				tf.discard();
+			} // no townsfolk type (armies off): TownsfolkSelfTest reports that, not this test
+
 			// kill switch: the sink declines, the routine's vanilla fallback applies (crouch for the low poses)
 			IdlePoses.enabled = false;
 			RoutinePoses.set(other, Pose.KNEEL);

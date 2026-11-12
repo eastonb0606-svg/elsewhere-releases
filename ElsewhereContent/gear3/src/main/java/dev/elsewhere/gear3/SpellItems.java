@@ -255,13 +255,16 @@ public final class SpellItems {
 		}
 
 		/** Slowness II 3 s and 3 freeze damage per second for 3 s (1 tick now, then at 1 s and 2 s). */
-		public static void chill(ServerLevel level, ServerPlayer p, LivingEntity t, boolean moonlit) {
+		public static float chill(ServerLevel level, ServerPlayer p, LivingEntity t, boolean moonlit) {
 			t.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 60, 1), p);
 			t.setTicksFrozen(Math.max(t.getTicksFrozen(), 100));
-			Spells.hurt(p, p, t, Spells.damage(p, t, FROST_DPS, false, moonlit));
+			// s-compat-testmeter: every tick is the full spell damage (spell power, Calling, Test Meter half bonus, recast scale), not raw 3
+			final float tick = Spells.damage(p, t, FROST_DPS, false, moonlit);
+			Spells.hurt(p, p, t, tick);
 			for (int s = 1; s <= 2; s++) Gear3Scheduler.after(level.getServer(), s * 20, () -> {
-				if (t.isAlive()) Spells.hurt(p, p, t, FROST_DPS);
+				if (t.isAlive()) Spells.hurt(p, p, t, tick);
 			});
+			return tick;
 		}
 	}
 

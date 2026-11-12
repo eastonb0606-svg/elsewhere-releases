@@ -19,7 +19,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 import java.util.function.Function;
-import javax.imageio.ImageIO;
 import net.fabricmc.fabric.api.entity.FakePlayer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.MinecraftServer;
@@ -145,7 +144,7 @@ public final class MothlightSelfTest {
 			MinionApi.LAST_HIT_DAMAGE + " vs " + want3);
 		check("Mothlight: the hit dusts a non-boss target (Mothdust, 3 s)", target.hasEffect(Mothlight.MOTHDUST) && target.getEffect(Mothlight.MOTHDUST).getDuration() == Mothlight.DUST_TICKS);
 		a.setInvulnerableTime(0);
-		a.hurtServer(l, hit(l, target), 6F);
+		a.hurtServer(l, l.damageSources().generic(), 6F); // not the dusted husk: Mothdust would cut its blow to 5.4
 		Mob target2 = mob(l, EntityTypes.HUSK, 2, -2);
 		double want2 = MinionApi.minionDamage(p, a, target2, 2 * Mothlight.MOTH_DAMAGE);
 		MinionApi.LAST_HIT_DAMAGE = -1F;
@@ -192,6 +191,22 @@ public final class MothlightSelfTest {
 		Mothlight.enabled = true;
 		for (Mob m : new Mob[] {target, target2, pigA, pigB, plain, tall}) m.discard();
 
+		// ---- Sap Tapper offer (core's SapTapper.offers(), through the pseudo mixin): 20 Pale Bark + 4 Moonsilk Thread
+		checkS("Mothlight: the Sap Tapper sells the staff for 20 Pale Bark + 4 Moonsilk Thread", () -> {
+			java.util.List<net.minecraft.world.item.trading.MerchantOffer> offers;
+			try {
+				@SuppressWarnings("unchecked")
+				var o = (java.util.List<net.minecraft.world.item.trading.MerchantOffer>) Class.forName("dev.elsewhere.palehollow.entity.SapTapper").getMethod("offers").invoke(null);
+				offers = o;
+			} catch (ReflectiveOperationException e) {
+				return true; // core without the Sap Tapper: nothing to check
+			}
+			for (var o : offers)
+				if (o.getResult().is(staff) && o.getBaseCostA().is(BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.fromNamespaceAndPath("elsewhere", "pale_bark")))
+					&& o.getBaseCostA().getCount() == Mothlight.TRADE_BARK && o.getCostB().getCount() == Mothlight.TRADE_THREAD) return true;
+			return false;
+		});
+
 		// ---- assets the client needs
 		check("Mothlight: lang for the swarm, Mothdust and the off message", lang("entity.elsewhere.mothlight_swarm") && lang("effect.elsewhere.mothdust")
 			&& lang("message.elsewhere.mothlight_off"));
@@ -213,11 +228,14 @@ public final class MothlightSelfTest {
 		return false;
 	}
 
+	/** PNG size from the IHDR header (no java.desktop on the server). */
 	static boolean png(String path, int w, int h) {
 		try (InputStream in = Mothlight.class.getResourceAsStream("/" + path)) {
 			if (in == null) return false;
-			var img = ImageIO.read(in);
-			return img != null && img.getWidth() == w && img.getHeight() == h;
+			byte[] b = in.readNBytes(24);
+			if (b.length < 24 || b[1] != 'P' || b[2] != 'N' || b[3] != 'G') return false;
+			var buf = java.nio.ByteBuffer.wrap(b);
+			return buf.getInt(16) == w && buf.getInt(20) == h;
 		} catch (Exception e) {
 			return false;
 		}

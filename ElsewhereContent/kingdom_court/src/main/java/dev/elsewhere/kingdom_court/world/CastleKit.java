@@ -255,7 +255,7 @@ public final class CastleKit {
 	}
 
 	public static void castle(CastleLayout.L l) {
-		noGold(l);
+		// no valuable blocks: every Placer write already goes through Valuables.safe (s-throne B9), so the old per-chunk gold scan is gone
 		if (!Overhaul3.CASTLE_KIT) return;
 		Kit k = kitOf(l.p);
 		W w = new W(l, k == Kit.ALDERMARK);
@@ -264,23 +264,6 @@ public final class CastleKit {
 			case HRAFNHOLT -> hrafnholt(w);
 			case AZMAR -> azmar(w);
 			case MIREWICK -> mirewick(w);
-		}
-	}
-
-	/**
-	 * 3.0 "no valuable blocks": new realms (the only starts with a KIT_CASTLE part) turn any gold block the base layout or a faction style
-	 * placed (Aldermark's throne, Azmar's obelisk caps) into yellow terracotta. Runs even with the kit switched off. Chunk-clipped, about 6k
-	 * block reads per chunk, once.
-	 */
-	static void noGold(CastleLayout.L l) {
-		var c = l.p.clip;
-		int x0 = Math.max(l.o.getX() - 36, c.minX()), x1 = Math.min(l.o.getX() + 36, c.maxX());
-		int z0 = Math.max(l.o.getZ() - 36, c.minZ()), z1 = Math.min(l.o.getZ() + 36, c.maxZ());
-		BlockState yellow = Blocks.DYED_TERRACOTTA.pick(DyeColor.YELLOW).defaultBlockState();
-		BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
-		for (int x = x0; x <= x1; x++) for (int z = z0; z <= z1; z++) for (int y = l.o.getY() - 1; y <= l.o.getY() + 30; y++) {
-			if (!c.isInside(x, y, z)) continue;
-			if (l.p.level.getBlockState(m.set(x, y, z)).is(Blocks.GOLD_BLOCK)) l.p.setRaw(x, y, z, yellow);
 		}
 	}
 

@@ -19,7 +19,7 @@ final class Groups3Data {
 	static final Set<String> FOREIGN_IDS = Set.of("docile_scarab", "haze_ferret");
 
 	/** 3.0 group size per creature (ARMIES 6.2 "Proposed"). */
-	static final Map<String, int[]> TARGET = Map.of("creaking_husk", new int[] {2, 3}, "hollow_stag", new int[] {3, 6}, "bog_wight", new int[] {1, 3}, "docile_scarab", new int[] {2, 4}, "haze_ferret", new int[] {2, 3});
+	static final Map<String, int[]> TARGET = Map.of("creaking_husk", new int[] {2, 3}, "hollow_stag", new int[] {3, 6}, "bog_wight", new int[] {1, 3}, "docile_scarab", new int[] {2, 4}, "haze_ferret", new int[] {2, 3}, "eyeblossom_wisp", new int[] {1, 1});
 
 	/** Entries that keep their own size on purpose (a biome-specific pair or crowd that already matches the design). */
 	static final Set<String> KEEP = Set.of();
@@ -29,7 +29,8 @@ final class Groups3Data {
 		new SpawnGroups3.Size("hollow_stag", 1, 3, 3, 6),
 		new SpawnGroups3.Size("bog_wight", 1, 2, 1, 3),
 		new SpawnGroups3.Size("docile_scarab", 1, 2, 2, 4),
-		new SpawnGroups3.Size("haze_ferret", 1, 2, 2, 3));
+		new SpawnGroups3.Size("haze_ferret", 1, 2, 2, 3),
+		new SpawnGroups3.Size("eyeblossom_wisp", 1, 3, 1, 1, 0.666667, 4.5));
 
 	/** Exact 2.1 entries for the off switch: biome, type, 3.0 min/max/weight -> 2.1 min/max/weight (armies lane data, 9.11). */
 	static final List<SpawnGroups3.Old> OLD = List.of(
@@ -46,6 +47,10 @@ final class Groups3Data {
 		new Herds3.Rule("bog_wight", 3, Herds3.Shape.RING, 2.0, 1.0, true, false, Herds3.Alert.HUNT, false, false, false),
 		new Herds3.Rule("docile_scarab", 4, Herds3.Shape.RING, 1.5, 1.0, true, false, Herds3.Alert.FLEE, false, false, false),
 		new Herds3.Rule("haze_ferret", 3, Herds3.Shape.RING, 1.5, 1.0, true, false, Herds3.Alert.FLEE, false, false, false));
+
+	/** Swarm-as-one creatures (6.1 rule 3): id, members min/max, one member's share of the base health, hitbox growth, damage share per member. */
+	static final List<Swarm3.Rule> SWARMS = List.of(
+		new Swarm3.Rule("eyeblossom_wisp", 3, 6, 0.5, 0.8, 1.0 / 2.25));
 
 	/** Self-test: the creature whose live pack is tested, and where (overworld, far from spawn). */
 	static final String TEST_TYPE = "bog_wight";

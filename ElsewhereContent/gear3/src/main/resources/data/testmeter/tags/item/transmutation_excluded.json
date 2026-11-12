@@ -200,6 +200,30 @@
     {
       "id": "elsewhere:tidebrass_dredge",
       "required": false
+    },
+    {
+      "id": "elsewhere:elderbark_mantle",
+      "required": false
+    },
+    {
+      "id": "elsewhere:elderbark_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:elderbark_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:glasswaste_starsight_visor",
+      "required": false
+    },
+    {
+      "id": "elsewhere:glasswaste_prism_mantle",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gear3_forging_template",
+      "required": false
     }
   ]
 }

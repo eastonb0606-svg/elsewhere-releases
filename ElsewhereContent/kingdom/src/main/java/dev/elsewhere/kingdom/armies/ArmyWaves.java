@@ -49,6 +49,33 @@ public final class ArmyWaves {
 	public static final int MAX_BATTLES = 1;
 	public static int started, finished, wavesSpawned, withdrawnWounded, maxLiveSeen;
 
+	/**
+	 * Rank impostors (ARMIES.md 3.5 / 3.6; {@link RankWaves}, kill switch {@code rank_impostors}): when set, each side's reserve stands as ranks
+	 * behind its front, waves break out of them and far squads fold into them. Null keeps the reserve as plain numbers.
+	 */
+	public static @Nullable RankHook rankHook;
+
+	/** How a side's reserve is shown and fielded as rank impostors (see {@link RankWaves}). */
+	public interface RankHook {
+		/** A battle began with both fronts fielded. */
+		void started(ServerLevel lv, Battle b);
+
+		/** Once a second while the battle runs, after the waves. */
+		void tick(ServerLevel lv, Battle b);
+
+		/** A wave of up to {@code n}: heads committed to break out of the ranks (spawned one per tick by the ranks), 0 to spawn at the rear. */
+		int breakOut(ServerLevel lv, Battle b, Side s, int n);
+
+		/** Line relief: true when the wounded soldier was sent back into a rank (his head returns to the reserve either way). */
+		boolean foldWounded(ServerLevel lv, Side s, KingdomSoldier k);
+
+		/** True while this soldier is folded into a far rank (R3), so he still counts as alive. */
+		boolean folded(ServerLevel lv, UUID soldier);
+
+		/** The battle ended (before its squads are dismissed or discarded). */
+		void ended(ServerLevel lv, Battle b, boolean attackerWon, boolean discard);
+	}
+
 	public static final class Side {
 		public final Identifier faction;
 		final @Nullable ArmyScale scale;
@@ -194,6 +221,8 @@ public final class ArmyWaves {
 			end(lv, b, true);
 			BATTLES.remove(b);
 			if (assaultId >= 0) return null;
+		} else if (rankHook != null) {
+			rankHook.started(lv, b);
 		}
 		return b;
 	}
@@ -201,6 +230,14 @@ public final class ArmyWaves {
 	/** Spawns up to {@code n} of this side's reserve at its rear, in squads of up to 10. Returns the number spawned. */
 	static int field(ServerLevel lv, Battle b, Side s, int n) {
 		n = Math.min(n, s.reserve);
+		if (rankHook != null && n > 0) {
+			int broke = rankHook.breakOut(lv, b, s, n);
+			if (broke > 0) {
+				s.reserve -= broke;
+				s.spawned += broke;
+				return broke;
+			}
+		}
 		int made = 0, k = 0;
 		var r = lv.getRandom();
 		while (made < n && k < 6) {
@@ -227,9 +264,11 @@ public final class ArmyWaves {
 	static int alive(ServerLevel lv, Side s) {
 		int c = 0;
 		for (var it = s.soldiers.iterator(); it.hasNext();) {
-			Entity e = lv.getEntity(it.next());
-			if (e == null || !e.isAlive()) it.remove();
-			else c++;
+			UUID id = it.next();
+			Entity e = lv.getEntity(id);
+			if (e != null && e.isAlive()) c++;
+			else if (e == null && rankHook != null && rankHook.folded(lv, id)) c++; // folded into a far rank (R3): alive as a figure
+			else it.remove();
 		}
 		return c;
 	}
@@ -264,6 +303,7 @@ public final class ArmyWaves {
 			}
 			s.nextWave = now + s.intervalTicks(lv.getRandom());
 		}
+		if (rankHook != null) rankHook.tick(lv, b);
 		la = alive(lv, b.a);
 		ld = alive(lv, b.d);
 		maxLiveSeen = Math.max(maxLiveSeen, la + ld);
@@ -280,7 +320,7 @@ public final class ArmyWaves {
 		for (var it = s.soldiers.iterator(); it.hasNext() && n < max;) {
 			Entity e = lv.getEntity(it.next());
 			if (e instanceof KingdomSoldier k && k.isAlive() && k.getHealth() < k.getMaxHealth() * 0.5F && k.getTarget() == null) {
-				k.discard();
+				if (rankHook == null || !rankHook.foldWounded(lv, s, k)) k.discard();
 				it.remove();
 				s.reserve++;
 				s.spawned--;
@@ -300,6 +340,7 @@ public final class ArmyWaves {
 		boolean attackerWon = ld + b.d.reserve <= 0 || (la + b.a.reserve > 0 && ra > rd);
 		b.result = (attackerWon ? "attacker" : "defender") + " won; attacker " + (la + b.a.reserve) + "/" + b.a.heads + " left, defender " + (ld + b.d.reserve) + "/"
 			+ b.d.heads + " left";
+		if (rankHook != null) rankHook.ended(lv, b, attackerWon, discard);
 		KingdomState ks = KingdomState.get(lv);
 		for (Side s : List.of(b.a, b.d)) {
 			for (UUID id : s.squads) {

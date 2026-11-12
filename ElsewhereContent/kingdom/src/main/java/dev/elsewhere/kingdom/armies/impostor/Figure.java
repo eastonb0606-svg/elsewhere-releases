@@ -12,6 +12,8 @@ import org.jspecify.annotations.Nullable;
  * health.
  */
 public final class Figure {
+	/** Health of a fresh figure: "full", whatever the unit's (multiplied) maximum turns out to be when he steps out. */
+	public static final float FULL = 1.0E6F;
 	public final Identifier unit;
 	public float health;
 	public final @Nullable UUID uuid;

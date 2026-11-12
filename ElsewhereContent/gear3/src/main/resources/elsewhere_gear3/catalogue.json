@@ -2,7 +2,9 @@
  "tab_name": "Elsewhere 3.0 Gear",
  "placeholder_tables": [
   "entities/mother_creak",
-  "entities/ossyra"
+  "entities/ossyra",
+  "entities/lithara",
+  "entities/aphelion"
  ],
  "items": [
   {
@@ -2563,6 +2565,262 @@
     "How to get: craft 8 arrows around a Resonant Shard (Hush currency) for 8 Echo Arrows.",
     "Shoot it from any bow, crossbow or dispenser. Where it hits, every mob within 6 blocks glows for 5 s.",
     "It flies and lands silently: no sound, and no vibration for sculk sensors, shriekers or Wardens."
+   ]
+  },
+  {
+   "id": "gale_sling",
+   "name": "Gale Sling",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "gale_sling",
+   "model": "handheld",
+   "stats": {
+    "durability": 384,
+    "repair": "elsewhere:zephyr_feather"
+   },
+   "lore": [
+    "Skirmisher sling",
+    "Hold to whirl, release: a stone for 4 damage (full whirl 0.5 s)",
+    "Ammo: cobblestone or gravel; a wind charge flies as a wind charge"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     " S ",
+     "FFF",
+     "FFF"
+    ],
+    "key": {
+     "S": "minecraft:string",
+     "F": "elsewhere:zephyr_feather"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/breeze_temple_vault",
+     "chance": 0.08
+    }
+   ],
+   "jei": [
+    "How to get: a Windwright (Petalwind kite market) trades it for 6 Zephyr Feathers + 1 String; or craft it from the same; Breeze Temple vaults (8%).",
+    "Hold use to whirl it overhead: a full whirl takes 0.5 s; release to sling. 4 damage at full charge, less if let go early.",
+    "Ammo (a held stack first, then the inventory): cobblestone or gravel, slung as a stone that crumbles where it hits; a wind charge is flung as a wind charge, faster than by hand."
+   ],
+   "calling": [
+    "marksman"
+   ]
+  },
+  {
+   "id": "choirlight_censer",
+   "name": "Choirlight Censer",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "censer",
+   "stats": {
+    "durability": 600
+   },
+   "lore": [
+    "Support censer of the Hush choir (3 Glimmer a second while swung)",
+    "Hold use: other players and your minions within 6 blocks heal 1.5 HP a second, you 0.5",
+    "!You walk at 40% speed while swinging it"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     " N ",
+     "RBR",
+     "GRG"
+    ],
+    "key": {
+     "N": "minecraft:iron_chain",
+     "R": "elsewhere:resonant_shard",
+     "B": "elsewhere:cantors_bell_shard",
+     "G": "minecraft:gold_ingot"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/lithara",
+     "chance": 0.3
+    }
+   ],
+   "jei": [
+    "How to get: Lithara drops it (30%); or craft it from the Mute Archivist's currency: 3 Resonant Shards, a Cantor's Bell Shard (from Lithara), 2 gold ingots and an iron chain.",
+    "Hold use to swing it. Every second it spends 3 Glimmer and heals other players and your own minions and pets within 6 blocks by 1.5 HP, and you by 0.5 HP. You walk at 40% while swinging; it stops when your Glimmer runs out."
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "tidebrass_dredge",
+   "name": "Tidebrass Dredge",
+   "kind": "shovel",
+   "rarity": "epic",
+   "mechanic": "dredge",
+   "stats": {
+    "damage": 6.5,
+    "speed": 1.0,
+    "durability": 2031,
+    "tier": "netherite",
+    "mining_speed": 9.0,
+    "enchantability": 15,
+    "repair": "elsewhere:tidebrass_ingot",
+    "fireproof": 1
+   },
+   "tags": [
+    "minecraft:shovels"
+   ],
+   "lore": [
+    "Tidewright dredging shovel",
+    "Underwater: digs a 3x3 of sand, gravel, clay and mud (sneak: one block)",
+    "Full mining speed underwater, even while swimming"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_shovel",
+    "addition": "elsewhere:tidebrass_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/engineers_atoll",
+     "chance": 0.06
+    }
+   ],
+   "jei": "How to get: forge it at a smithing table from an Elsewhere Forging Template, a Netherite Shovel and a Tidebrass Ingot (the Tidewright's metal: Pearlite from the Tidewright of any Engineer's Atoll, plus copper). Engineer's Atoll chests sometimes hold one (6%). Underwater it digs a 3x3 of sand, gravel, clay and mud at full speed, even while swimming; sneak to dig one block."
+  },
+  {
+   "id": "hrafnholt_wolfcall_horn",
+   "name": "Wolf-Call Horn",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "wolfcall_horn",
+   "stats": {
+    "durability": 128,
+    "repair": "elsewhere:hacksilver"
+   },
+   "lore": [
+    "Warband horn of Hrafnholt (Vanguard + Summoner)",
+    "Blow it (hold use 1 s, 10 Glimmer): a Warg answers, 1 minion slot",
+    "Warg: 26 HP, armor 6, bites for 5 every second",
+    "Howl: +10% attack speed while one of your Wargs is within 8 blocks (x hybrid strength)",
+    "Sneak-use: your Wargs go home"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "BAB",
+     "HGH",
+     " H "
+    ],
+    "key": {
+     "B": "minecraft:bone",
+     "A": "elsewhere:hrafnholt_arm_ring",
+     "H": "elsewhere:hacksilver",
+     "G": "minecraft:goat_horn"
+    }
+   },
+   "jei": [
+    "How to get: Gudrun Ulfhednar (and Risen Gudrun) drops it (30%); Hrafnholt Wolf-Handlers (5%); or craft it: a goat horn bound with 3 Hacksilver, an Arm-Ring and 2 bones.",
+    "Hold use for 1 s to blow it (10 Glimmer, 1 durability): a Warg answers. Each Warg takes one minion slot; at the cap your oldest one leaves. More Wargs out means less Herd focus on your own swings, as with every minion.",
+    "Warg: 26 HP, armor 6, bites for 5 every second, scaled by your minion damage. While a Warg of yours is within 8 blocks you swing 10% faster (times your Vanguard + Summoner hybrid strength). Sneak-use sends the pack home."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "mirewick_lantern_sickle",
+   "name": "Lantern Sickle",
+   "kind": "hoe",
+   "rarity": "uncommon",
+   "mechanic": "lantern_sickle",
+   "stats": {
+    "damage": 3,
+    "speed": 2.5,
+    "durability": 1561,
+    "tier": "diamond",
+    "mining_speed": 8,
+    "enchantability": 12,
+    "repair": "minecraft:diamond,elsewhere:mirewick_scrip"
+   },
+   "tags": [
+    "minecraft:hoes"
+   ],
+   "lore": [
+    "Polder sickle of Mirewick",
+    "Use on a crop: harvests and replants every ripe crop in a 3x3",
+    "Cuts leaves and vines in a 3x3 (sneak: one)"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "DD ",
+     "SLS",
+     " T "
+    ],
+    "key": {
+     "D": "minecraft:diamond",
+     "S": "elsewhere:mirewick_scrip",
+     "L": "minecraft:lantern",
+     "T": "minecraft:stick"
+    }
+   },
+   "jei": "How to get: sold at Mirewick's Scrip-Desk for 24 Lantern Scrip (sells back for 9), or craft it from 2 diamonds, 2 Lantern Scrip, a lantern and a stick. Use it on a ripe crop to harvest and replant every ripe crop in the 3x3 around it (one seed from each crop's drops goes back in the ground); mining a leaf or vine cuts the 3x3 of leaves or vines facing you (sneak to cut one). It tills like any hoe."
+  },
+  {
+   "id": "aphelion_starpiercer",
+   "name": "Starpiercer",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "starpiercer",
+   "stats": {
+    "durability": 1024,
+    "fireproof": 1,
+    "repair": "elsewhere:void_scale"
+   },
+   "tags": [
+    "minecraft:enchantable/bow",
+    "minecraft:enchantable/durability"
+   ],
+   "lore": [
+    "Sniper bow of Aphelion",
+    "Full draw 1.6 s; arrows fly 1.6x faster and pierce 2 more targets",
+    "Arrows fly straight for 32 blocks; sprinting cancels the draw",
+    "Drawing zooms in like a longbow (sneak: closer)"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     " VS",
+     "H S",
+     " VS"
+    ],
+    "key": {
+     "V": "elsewhere:void_scale",
+     "H": "elsewhere:aphelion_heart",
+     "S": "minecraft:string"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/aphelion",
+     "chance": 0.3
+    }
+   ],
+   "jei": [
+    "How to get: Aphelion drops it (30% per kill), or craft it from 2 Void Scales, an Aphelion Heart and 3 String, laid out like a bow.",
+    "A bow with a 1.6 s draw (a chime marks the full draw). Arrows leave 1.6x faster, pierce 2 more targets and fly with no drop for their first 32 blocks.",
+    "Plain arrows become star arrows (they pick up as arrows); tipped, spectral and other special arrows keep their effect. Sprinting cancels the draw. Drawing zooms in: 1.5x at full draw, 2x while sneaking."
+   ],
+   "calling": [
+    "marksman"
    ]
   }
  ]

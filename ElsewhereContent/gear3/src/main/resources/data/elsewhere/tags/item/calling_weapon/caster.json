@@ -10,12 +10,9 @@
     "elsewhere:emberfall_rod",
     "elsewhere:frostwake_scepter",
     "elsewhere:starfall_orrery",
+    "elsewhere:choirlight_censer",
     {
       "id": "elsewhere:prism_bow",
-      "required": false
-    },
-    {
-      "id": "elsewhere:choirlight_censer",
       "required": false
     },
     {

@@ -97,6 +97,7 @@ public class WarYakEntity extends MinionEntity {
 
 	@Override
 	protected void performAttack(ServerLevel level, ServerPlayer owner, LivingEntity target) {
+		if (chargeTicks > 0) return; // a charge is never restarted mid-run (fast attack-speed buffs can't reset its lane)
 		startCharge(level, owner, target);
 	}
 
@@ -225,10 +226,16 @@ public class WarYakEntity extends MinionEntity {
 
 	// ---------------------------------------------------------------- client: hoof dust while charging (client-side particles only)
 
+	/** Client: charge pose blend 0..1 (and last tick's), eased so the head drops and lifts smoothly. */
+	public float chargeAnim, chargeAnimO;
+
 	@Override
 	public void tick() {
 		super.tick();
-		if (level().isClientSide() && isCharging() && (this.tickCount & 1) == 0) {
+		if (!level().isClientSide()) return;
+		chargeAnimO = chargeAnim;
+		chargeAnim = Mth.clamp(chargeAnim + (isCharging() ? 0.34F : -0.2F), 0F, 1F);
+		if (isCharging() && (this.tickCount & 1) == 0) {
 			BlockState under = level().getBlockState(BlockPos.containing(getX(), getY() - 0.2, getZ()));
 			if (!under.isAir()) {
 				for (int i = 0; i < 3; i++) {

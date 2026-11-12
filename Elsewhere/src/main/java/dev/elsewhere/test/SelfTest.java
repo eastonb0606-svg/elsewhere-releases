@@ -116,6 +116,7 @@ public final class SelfTest {
 			return;
 		}
 		AccidentalTrips.playTicksOverride = p -> 100L * 72000L;
+		try { CoreFitSelfTest.run(server, overworld, hollow); } catch (RuntimeException e) { Elsewhere.LOG.error("struct3_core self-test crashed", e); check(false, "struct3_core self-test crashed: " + e); } // 3.0 core structures (s-struct-core), first so other checks can't hide it
 		dev.elsewhere.core.s3.groups.SpawnGroups3.selfTest(server, (ok, what) -> check(ok, what)); // ARMIES 6 spawn groups (s-spawngroups)
 		recipes(server, overworld);
 		worldgen(hollow);

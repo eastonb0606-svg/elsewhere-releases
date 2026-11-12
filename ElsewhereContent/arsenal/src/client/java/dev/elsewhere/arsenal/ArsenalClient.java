@@ -33,6 +33,7 @@ public final class ArsenalClient {
 		ElsewhereHud.init();
 		ElsewhereHud.registerMeter(GlimmerHud.METER, "glimmer");
 		dev.elsewhere.arsenal.client.anim.UseAnims.init(); // P6 weapon use animations (kill switch use_anims)
+		dev.elsewhere.arsenal.client.P5Tooltips.init(); // P5 stat tooltips with Shift detail (kill switch p5_tooltips)
 		ClientPlayNetworking.registerGlobalReceiver(GlimmerPayload.TYPE, (payload, ctx) -> GlimmerHud.receive(payload));
 		EntityRendererRegistry.register(ArsenalEntities.MAGIC_BOLT, MagicBoltRenderer::new);
 		HudElementRegistry.attachElementAfter(VanillaHudElements.FOOD_BAR, ArsenalContent.id("glimmer_bar"), GlimmerHud::render);
@@ -59,18 +60,20 @@ public final class ArsenalClient {
 			Item item = stack.getItem();
 			var mc = Minecraft.getInstance();
 			if (item instanceof CasterItem ci) {
-				lines.add(1, Component.translatable("elsewhere.tooltip." + net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).getPath())
-					.withStyle(ChatFormatting.GRAY));
+				// P5: only arsenal casters have a description key; another module's caster (gear3) showed the raw key here
+				String desc = "elsewhere.tooltip." + net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).getPath();
+				int at = 1;
+				if (net.minecraft.locale.Language.getInstance().has(desc)) lines.add(at++, Component.translatable(desc).withStyle(ChatFormatting.GRAY));
 				if (mc.player != null && Overhaul3.CALLINGS) {
-					if (CALLING_TOOLTIP) lines.add(2, Component.literal(String.format("Caster %d%%: spells x%.2f, cost x%.2f", Math.round(Math.max(Calling.mastery(mc.player, Calling.Path.CASTER),
+					if (CALLING_TOOLTIP) lines.add(Math.min(lines.size(), at++), Component.literal(String.format("Caster %d%%: spells x%.2f, cost x%.2f", Math.round(Math.max(Calling.mastery(mc.player, Calling.Path.CASTER),
 						ci.isStarter() ? Calling.STARTER_MIN_MASTERY : 0F) * 100), Calling.spellMult(mc.player, ci.isStarter()), Calling.costMult(mc.player, ci.isStarter()))).withStyle(ChatFormatting.LIGHT_PURPLE));
-					lines.add(Math.min(lines.size(), CALLING_TOOLTIP ? 3 : 2), Component.translatable("elsewhere.tooltip.cost", dev.elsewhere.arsenal.glimmer.Glimmer.cost(mc.player, ci.rawCost(mc.player), ci.isStarter()))
+					lines.add(Math.min(lines.size(), at), Component.translatable("elsewhere.tooltip.cost", dev.elsewhere.arsenal.glimmer.Glimmer.cost(mc.player, ci.rawCost(mc.player), ci.isStarter()))
 						.withStyle(ChatFormatting.DARK_PURPLE));
 				} else if (mc.player != null) {
 					int c = Calling.casterFor(mc.player, ci.isStarter());
-					lines.add(2, Component.translatable("elsewhere.calling.caster", c, Math.round(Calling.spellDamage(c) * 100),
+					lines.add(Math.min(lines.size(), at), Component.translatable("elsewhere.calling.caster", c, Math.round(Calling.spellDamage(c) * 100),
 						Math.round(Calling.spellCost(c) * 100)).withStyle(ChatFormatting.LIGHT_PURPLE));
-					lines.add(3, Component.translatable("elsewhere.tooltip.cost", dev.elsewhere.arsenal.glimmer.Glimmer.cost(mc.player, ci.rawCost(mc.player), ci.isStarter()))
+					lines.add(Math.min(lines.size(), at + 1), Component.translatable("elsewhere.tooltip.cost", dev.elsewhere.arsenal.glimmer.Glimmer.cost(mc.player, ci.rawCost(mc.player), ci.isStarter()))
 						.withStyle(ChatFormatting.DARK_PURPLE));
 				}
 				if (ci.isStarter() && !Overhaul3.CALLINGS) lines.add(Component.translatable("elsewhere.calling.starter").withStyle(ChatFormatting.DARK_GRAY));
@@ -78,12 +81,14 @@ public final class ArsenalClient {
 				if (!Overhaul3.CALLINGS) lines.add(1, Component.translatable("elsewhere.tooltip.caster_piece").withStyle(ChatFormatting.RED));
 				else if (CALLING_TOOLTIP && mc.player != null) lines.add(1, dev.elsewhere.arsenal.client.CallingPanel.tooltip(mc.player, stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE));
 				if (stack.is(ArsenalItems.tag("set/moonsilk/head")) || stack.is(ArsenalItems.tag("set/moonsilk/chest")) || stack.is(ArsenalItems.tag("set/moonsilk/legs"))
-					|| stack.is(ArsenalItems.tag("set/moonsilk/feet"))) lines.add(Math.min(2, lines.size()), Component.translatable("elsewhere.tooltip.moonlit").withStyle(ChatFormatting.AQUA));
-				if (item == ArsenalItems.STORMSAGE_MANTLE) lines.add(Math.min(2, lines.size()), Component.translatable("elsewhere.tooltip.stormsage_mantle").withStyle(ChatFormatting.AQUA));
+					|| stack.is(ArsenalItems.tag("set/moonsilk/feet"))) lines.add(Math.min(2, lines.size()), Component.translatable("elsewhere.tooltip.moonlit",
+						dev.elsewhere.arsenal.spell.ArsenalTooltips.moonlitArgs()).withStyle(ChatFormatting.AQUA));
+				if (item == ArsenalItems.STORMSAGE_MANTLE) lines.add(Math.min(2, lines.size()), Component.translatable("elsewhere.tooltip.stormsage_mantle",
+					dev.elsewhere.arsenal.spell.ArsenalTooltips.mantleArgs()).withStyle(ChatFormatting.AQUA));
 			} else if (CALLING_TOOLTIP && mc.player != null && dev.elsewhere.arsenal.client.CallingPanel.tooltip(mc.player, stack) != null) {
 				lines.add(Math.min(1, lines.size()), dev.elsewhere.arsenal.client.CallingPanel.tooltip(mc.player, stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE));
 			} else if (item == ArsenalItems.GLIMMER_TONIC || item == ArsenalItems.STRONG_GLIMMER_TONIC) {
-				lines.add(1, Component.translatable("elsewhere.tooltip.tonic", (int) (item == ArsenalItems.GLIMMER_TONIC ? ArsenalStats.TONIC_RESTORE : ArsenalStats.STRONG_TONIC_RESTORE))
+				lines.add(1, Component.translatable("elsewhere.tooltip.tonic", dev.elsewhere.arsenal.spell.ArsenalTooltips.tonicArgs(item))
 					.withStyle(ChatFormatting.LIGHT_PURPLE));
 			}
 		});

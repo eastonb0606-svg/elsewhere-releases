@@ -427,8 +427,13 @@ public final class SelfTest {
 			return 0;
 		});
 		SelfTestSmallest.add();   // s-azmarsize: Azmar is the smallest kingdom in every army size row
+		SelfTestLang.add();       // s-langfix: no registered Elsewhere id lacks an English name
 		SelfTestBosses.add();
 		SelfTestTactics.add();
+		SelfTestPoses.add(); // 3.0 B4 (s-p4-rivalanims)
+		SelfTestForesight.add(); // 3.0 B5 (s-foresight): wind-up hints and the bar move label only with foresight gear
+		SelfTestRulerLook.add(); // 3.0 B10 + K29 (s-rulerarmor): Egyptian armor layer, camel caparison
+		SelfTestRewards.add(); // 3.0 (s-bossdrops): XP and drops on every death
 		STEPS.add((srv, l) -> {
 			clean(l);
 			info("done: " + pass + " pass, " + fail + " fail");

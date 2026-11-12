@@ -175,6 +175,7 @@ public final class SelfTest {
 		for (String a : attrs) if (BuiltInRegistries.ATTRIBUTE.containsKey(dev.elsewhere.arsenal.ArsenalContent.id(a))) found++;
 		check("9 attributes registered", found == 9, found);
 		check("items registered", ArsenalItems.ALL.size() >= 18, ArsenalItems.ALL.size());
+		dev.elsewhere.arsenal.anim.UseAnimChecks.run(SelfTest::check); // s-p6-useanims: swing curves, trails, weapon state models
 		check("magic bolt entity", BuiltInRegistries.ENTITY_TYPE.containsKey(dev.elsewhere.arsenal.ArsenalContent.id("magic_bolt")) && ArsenalEntities.MAGIC_BOLT != null);
 		checkS("effects clarity + dazed", () -> ArsenalEffects.CLARITY != null && ArsenalEffects.DAZED != null);
 		checkS("spell damage type is a projectile", () -> l.registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(Spells.SPELL).is(DamageTypeTags.IS_PROJECTILE));
@@ -190,6 +191,7 @@ public final class SelfTest {
 		l.setThunderLevel(0F);
 		try {
 			arena(server, l, base);
+			SelfTestTooltips.run(l, base); // s-p5-tooltips: tooltip numbers = item stats and real casts
 		} finally {
 			l.setRainLevel(rain0);
 			l.setThunderLevel(thunder0);

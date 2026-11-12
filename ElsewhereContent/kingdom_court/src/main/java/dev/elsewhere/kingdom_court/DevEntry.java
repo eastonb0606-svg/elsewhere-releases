@@ -27,6 +27,7 @@ public class DevEntry implements ModInitializer {
 		}
 		if (Boolean.getBoolean("court.selftest")) {
 			ServerLifecycleEvents.SERVER_STARTED.register(SelfTest::serverStarted);
+			ServerLifecycleEvents.SERVER_STARTED.register(srv -> dev.elsewhere.kingdom_court.dev.SelfTestNameplates.add()); // 3.0 P3 (s-p3-nameplates), after build()
 			ServerTickEvents.START_SERVER_TICK.register(SelfTest::startTick);
 			ServerTickEvents.END_SERVER_TICK.register(SelfTest::endTick);
 		}

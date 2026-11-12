@@ -38,7 +38,7 @@ public final class HirdPair {
 		return pw > 0F ? original * Math.max(0.0, 1.0 - FOCUS_CUT * pw) : original;
 	}
 
-	static void hit(LivingEntity victim, DamageSource src, float taken) {
+	public static void hit(LivingEntity victim, DamageSource src, float taken) {
 		ServerPlayer p = SetBonusesA.meleeBy(victim, src);
 		if (p == null || victim instanceof MinionEntity) return;
 		float pw = SetBonuses.power(p, BONUS);

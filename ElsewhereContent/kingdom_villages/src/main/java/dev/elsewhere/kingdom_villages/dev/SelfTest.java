@@ -638,6 +638,7 @@ public final class SelfTest {
 
 	static void conquest() {
 		VillageLedger l = VillageLedger.get(level);
+		AldLookTest.run(level, B); // s-vlook-ald: 3.0 Aldermark looks (B's rebuild in place, hill village, motte-and-bailey, hamlet)
 		l.outpostsFounded = Conquest.MAX_OUTPOSTS;
 		l.lastOutpostTime = -1_000_000_000L;
 		check("outpost cap: none after 10", !Conquest.mayFound(l, level.getGameTime()), null);
@@ -802,9 +803,30 @@ public final class SelfTest {
 			List.of(UnitTypes.MAN_AT_ARMS, UnitTypes.MAN_AT_ARMS, UnitTypes.KNIGHT, UnitTypes.ARCHER, UnitTypes.ARCHER));
 		KingdomApi.spawnSquad(level, Plans.surface(level, D.center.offset(-20, 0, 0)), Factions.ALDERMARK, Squad.Formation.LINE, UnitTypes.SERGEANT,
 			List.of(UnitTypes.MAN_AT_ARMS, UnitTypes.MAN_AT_ARMS, UnitTypes.CROSSBOWMAN, UnitTypes.ARCHER));
+		// s-siegeperf: the bench always runs the hard case (z-vill: 31 villagers failed the budget, 14-19 passed): top the
+		// three villages up to BENCH_VILLAGERS real AI villagers, the extras in the besieged D and the occupied E
+		AABB all = AABB.of(D.bounds.inflatedBy(32)).minmax(AABB.of(E.bounds.inflatedBy(32)));
+		if (F != null) all = all.minmax(AABB.of(F.bounds.inflatedBy(32)));
+		int have = level.getEntitiesOfClass(Villager.class, all, e -> true).size();
+		for (int i = 0; have < BENCH_VILLAGERS && i < 60; i++) {
+			BlockPos c = (i % 2 == 0 ? D : E).center;
+			Villager v = net.minecraft.world.entity.EntityTypes.VILLAGER.create(level, EntitySpawnReason.NATURAL);
+			if (v == null) break;
+			BlockPos at = Plans.surface(level, c.offset((i * 7) % 29 - 14, 0, (i * 11) % 29 - 14));
+			v.snapTo(at.getX() + 0.5, at.getY(), at.getZ() + 0.5, 0F, 0F);
+			level.addFreshEntity(v);
+			have++;
+		}
+		lodFar = Plans.surface(level, new BlockPos(8, 0, -18 * 16 + 8)); // village F's chunks: forced, far from both observers
+		BrainLodTest.rules();
 		l.dirty();
 		next();
 	}
+
+	/** s-siegeperf: villagers in the full-siege bench (the budget must hold at 31+). */
+	static final int BENCH_VILLAGERS = 32;
+	static int benchVillagers;
+	static BlockPos lodFar;
 
 	static void loadMeasure(MinecraftServer srv) {
 		if (age() % 10 == 0) for (KingdomSoldier ks : level.getEntitiesOfClass(KingdomSoldier.class, AABB.of(D.bounds.inflatedBy(48)), e -> true)) ks.setHealth(ks.getMaxHealth()); // keep the siege alive under golem fire
@@ -819,7 +841,11 @@ public final class SelfTest {
 				int tot = 0;
 				for (var e : level.getEntitiesOfClass(net.minecraft.world.entity.Entity.class, new AABB(-5000, -128, -5000, 5000, 400, 5000), x -> true)) { cen.merge(e.getType().toShortString(), 1, Integer::sum); tot++; }
 				info("PROFILE census " + tot + " entities " + cen + " forced chunks " + level.getForceLoadedChunks().size());
+				benchVillagers = cen.getOrDefault("villager", 0);
+				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.startsRun = 0;
+				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.startsSkipped = 0;
 			}
+			if (age() == 700 && lodFar != null) BrainLodTest.live(level, lodFar); // after the measured window (window 2 is info only)
 			if (age() == 640 || age() == 840 || age() == 1040 || age() == 1240) {
 				List<Long> w = new ArrayList<>(SAMPLES), cw = new ArrayList<>(CPU_SAMPLES);
 				SAMPLES.clear();
@@ -837,6 +863,11 @@ public final class SelfTest {
 						level.getEntitiesOfClass(IronGolem.class, AABB.of(D.bounds.inflatedBy(32)), e -> true).size(), wm, wp, w.size(), VillageManager.meanMs(), BlockWriter.writes));
 					check("load test: siege running and rebuild in progress", D.state == VillageRecord.State.SIEGE && E.state == VillageRecord.State.FORTIFYING && serfsN >= 3, D.state + "/" + E.state + " Ereason=" + E.reason + " Dreason=" + D.reason + " Eassess=" + VillageManager.assessProtection(level, E, true));
 					check("load test: about 20+ real soldiers", KingdomPerf.loaded(level).size() >= 20, KingdomPerf.loaded(level).size());
+					long lr = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.startsRun, ls = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.startsSkipped;
+					info(String.format("SIEGEPERF villagers %d, soldiers %d; villager brain start passes run %d skipped %d (%.0f%% skipped); CPU p95 %.2f mean %.2f; wall p95 %.2f mean %.2f; load %.1f",
+						benchVillagers, KingdomPerf.loaded(level).size(), lr, ls, 100.0 * ls / Math.max(1, lr + ls), cp, cm, wp, wm, loadAvg));
+					check("load test: the full-siege bench runs with 31+ villagers (the hard case)", benchVillagers >= 31, benchVillagers);
+					check("villager brain LOD: siege villagers skip part of their start passes (stagger + LOD active)", ls > 0 && lr > 0, lr + " run / " + ls + " skipped");
 					check("load test: full siege mean MSPT under 10", wm < 10, String.format("%.2f", wm));
 					// lag budget (BUILD-3.0): p95 <= 8 ms. Judged on the server thread's CPU per tick, so other JVMs on the shared iMac
 					// (load 40+ in the merged 4-JVM run: wall p95 29.9) can't fail it; the wall numbers are in the LOAD line above

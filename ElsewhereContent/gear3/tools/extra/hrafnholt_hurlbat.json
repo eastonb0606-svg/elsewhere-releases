@@ -1,0 +1,40 @@
+{
+  "_doc": "s-hurlbat: Hurlbat extras (merged by gen_resources.py). The thrown entity's name, the 4 sound events (vanilla trident and item-break events, pitched up for a lighter axe) with subtitles, and the elsewhere:hurlbat death messages. The damage type, its minecraft damage_type tags and the impact_projectiles entity tag are hand files in src/main/resources/data.",
+  "lang": {
+    "entity.elsewhere.hrafnholt_hurlbat": "Hurlbat",
+    "subtitles.elsewhere.gear3.hurlbat.throw": "Hurlbat thrown",
+    "subtitles.elsewhere.gear3.hurlbat.hit": "Hurlbat strikes",
+    "subtitles.elsewhere.gear3.hurlbat.hit_ground": "Hurlbat bites wood",
+    "subtitles.elsewhere.gear3.hurlbat.break": "Hurlbat shatters",
+    "death.attack.elsewhere.hurlbat": "%1$s was felled by a hurlbat from %2$s",
+    "death.attack.elsewhere.hurlbat.item": "%1$s was felled by %2$s's %3$s"
+  },
+  "sounds": {
+    "gear3.hurlbat.throw": {
+      "subtitle": "subtitles.elsewhere.gear3.hurlbat.throw",
+      "sounds": [
+        {"name": "minecraft:item.trident.throw", "type": "event", "pitch": 1.4, "volume": 0.8}
+      ]
+    },
+    "gear3.hurlbat.hit": {
+      "subtitle": "subtitles.elsewhere.gear3.hurlbat.hit",
+      "sounds": [
+        {"name": "minecraft:item.trident.hit", "type": "event", "pitch": 1.2},
+        {"name": "minecraft:entity.player.attack.strong", "type": "event", "pitch": 1.1, "volume": 0.6}
+      ]
+    },
+    "gear3.hurlbat.hit_ground": {
+      "subtitle": "subtitles.elsewhere.gear3.hurlbat.hit_ground",
+      "sounds": [
+        {"name": "minecraft:item.trident.hit_ground", "type": "event", "pitch": 1.3},
+        {"name": "minecraft:item.axe.strip", "type": "event", "pitch": 1.4, "volume": 0.5}
+      ]
+    },
+    "gear3.hurlbat.break": {
+      "subtitle": "subtitles.elsewhere.gear3.hurlbat.break",
+      "sounds": [
+        {"name": "minecraft:entity.item.break", "type": "event", "pitch": 0.8}
+      ]
+    }
+  }
+}

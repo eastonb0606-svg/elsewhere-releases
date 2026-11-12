@@ -1,0 +1,6 @@
+{
+  "parent": "elsewhere:item/aphelion_starpiercer",
+  "textures": {
+    "layer0": "elsewhere:item/aphelion_starpiercer_pulling_1"
+  }
+}

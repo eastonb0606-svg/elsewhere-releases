@@ -96,7 +96,17 @@ public final class BossBarFx {
 	 * the name and attack line with raw ids replaced by lang names, the state chip (null = none), the cast-bar flag and,
 	 * for the vanilla path, the component to draw instead of the server's (null = draw the server's unchanged).
 	 */
-	public record Layout(BossBarData.Entry entry, String name, String attack, String state, boolean cast, Component vanillaName, List<BossBarData.Entry> owners) {}
+	public record Layout(BossBarData.Entry entry, String name, String attack, String state, boolean cast, Component vanillaName, List<BossBarData.Entry> owners, Component nameOnly) {}
+
+	/**
+	 * Gate for the attack/cast line (B5: wind-up readouts only with foresight gear). Another module sets it once from its
+	 * client init; checked per bar per frame, so it must be cheap (no allocation). Default: always shown.
+	 */
+	public static java.util.function.BooleanSupplier attackLineGate = () -> true;
+
+	public static boolean attackLine() {
+		return attackLineGate.getAsBoolean();
+	}
 
 	private static final Map<String, String> NAMES = new HashMap<>();
 	private static final Map<String, Layout> LAYOUT = new HashMap<>();
@@ -153,7 +163,7 @@ public final class BossBarFx {
 			String body = title.substring(1).trim();
 			String name = BossBarData.label(body, BossBarFx::lang);
 			Component vanilla = name.equals(body) ? null : Component.literal("⚠ " + name);
-			return new Layout(null, name, "", BossBarData.stateOf(body, null), true, vanilla, BossBarData.subOwners(data, title));
+			return new Layout(null, name, "", BossBarData.stateOf(body, null), true, vanilla, BossBarData.subOwners(data, title), null);
 		}
 		BossBarData.Entry e = BossBarData.match(data, title, BossBarFx::nameOf);
 		BossBarData.Split s = e != null ? BossBarData.splitFor(title, nameOf(e.id())) : BossBarData.split(title);
@@ -162,7 +172,8 @@ public final class BossBarFx {
 		String state = BossBarData.stateOf(s.attack(), e);
 		Component vanilla = null;
 		if (!name.equals(s.name()) || !attack.equals(s.attack())) vanilla = Component.literal(name + (attack.isEmpty() ? "" : " · " + attack));
-		return new Layout(e, name, attack, state, false, vanilla, e == null ? BossBarData.subOwners(data, title) : List.of());
+		Component nameOnly = attack.isEmpty() ? null : Component.literal(name);
+		return new Layout(e, name, attack, state, false, vanilla, e == null ? BossBarData.subOwners(data, title) : List.of(), nameOnly);
 	}
 
 	/** Matched boss for a title (cached), or null. */

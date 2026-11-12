@@ -278,6 +278,10 @@ public final class SelfTest {
 		CourtEvents.SUCCESSION.register((srv, f, seat, kind) -> { if (f.equals(MirewickContent.FACTION)) SUCC.add(seat + ":" + kind.name().toLowerCase()); });
 		CourtEvents.DARK_LANTERNS.register((srv, f) -> { if (f.equals(MirewickContent.FACTION)) darkLanterns++; });
 		CourtEvents.FACTION_FALLEN.register((srv, f) -> { if (f.equals(MirewickContent.FACTION)) fallen++; });
+		SelfTestPoses.add(); // 3.0 B4 (s-p4-rivalanims)
+		SelfTestForesight.add(); // 3.0 B5 (s-foresight): wind-up hints and the bar move label only with foresight gear
+		SelfTestRulerLook.add(); // 3.0 B10 (s-rulerarmor): faction armor layer, no cyan diamond
+		SelfTestHeap.add(); // 3.0 heap pass (s-heapleak): squad command state bounded
 
 		STEPS.add((srv, l) -> {
 			for (int cx = -5; cx <= 5; cx++) for (int cz = -6; cz <= 36; cz++) { l.setChunkForced(cx, cz, true); l.getChunk(cx, cz); }
@@ -1438,6 +1442,7 @@ public final class SelfTest {
 			clean(l);
 			return 5;
 		});
+		SelfTestRewards.add(); // 3.0 (s-bossdrops): XP and drops on every death (after the court reset above)
 		STEPS.add((srv, l) -> {
 			check("no server errors counted by the harness", true, "see log scan: 0 ERROR");
 			return 0;

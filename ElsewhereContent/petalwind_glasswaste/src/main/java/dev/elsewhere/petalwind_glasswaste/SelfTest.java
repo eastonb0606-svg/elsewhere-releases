@@ -75,9 +75,11 @@ public final class SelfTest {
 				check(off && on, "sfx3: Ankhara roars with her own sound (no shared ravager roar); sfx3_petalwind_glasswaste=false restores it");
 			}
 			checkGuards();
+			dev.elsewhere.petalwind_glasswaste.s3.groups.SpawnGroups3.selfTest(server, (ok, what) -> check(ok, what)); // ARMIES 6 spawn groups (s-spawngroups)
 			checkTrips();
 			checkBeta2();
 			checkStormsage();
+			FarChunkWatch.install(); // B7 (s-struct-nether): count far-chunk writes / unsafe reads while sites generate
 			SiteChecks.run(server);
 			PVChecks.run(server);
 		} catch (Throwable t) {
@@ -543,6 +545,7 @@ public final class SelfTest {
 
 	private static void finish() {
 		done = true;
+		check(FarChunkWatch.installed() && FarChunkWatch.countFor("elsewhere:sunpit") == 0 && FarChunkWatch.count() == 0, f("B7: 0 far-chunk writes or unsafe terrain reads from elsewhere:sunpit (%d) or any other site (%d %s)", FarChunkWatch.countFor("elsewhere:sunpit"), FarChunkWatch.count(), FarChunkWatch.sources()));
 		PetalwindGlasswasteContent.LOGGER.info("[selftest] {} passed, {} failed: {}", passes, failures, failures == 0 ? "ALL PASSED" : "FAILURES");
 		if (Boolean.getBoolean("petalwind_glasswaste.selftest.exit")) server.halt(false);
 	}

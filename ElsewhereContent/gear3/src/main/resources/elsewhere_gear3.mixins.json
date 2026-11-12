@@ -7,7 +7,25 @@
 		"Gear3WeaponMixins$Bow",
 		"Gear3WeaponMixins$Crossbow",
 		"Gear3AmmoMixin",
-		"Gear3EffectMixin"
+		"Gear3EffectMixin",
+		"galesling.WindwrightTradeMixin",
+		"TidebrassDredgeMixin",
+		"WhipMixins$Ribbon",
+		"WhipMixins$Minions",
+		"WhipMixins$Living",
+		"WhipMixins$Attack",
+		"setbonus.SetBonusMixins$Hurt",
+		"setbonus.SetBonusMixins$Use",
+		"setbonus.SetBonusMixins$Sneak",
+		"setbonus.SetBonusMixins$Cost",
+		"setbonus.SetBonusMixins$Herd",
+		"harpoon.HarpoonBowMixin",
+		"starpiercer.StarpiercerArrowAccess",
+		"sunglass.SunglassArrowMixin",
+		"setbonusb.SetBonusBMixins$Shoot",
+		"reliquary.EchoSilenceMixin",
+		"mothlight.MothdustMixin",
+		"mothlight.SapTapperMothlightMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

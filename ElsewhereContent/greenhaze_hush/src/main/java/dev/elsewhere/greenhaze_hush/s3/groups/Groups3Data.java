@@ -19,14 +19,17 @@ final class Groups3Data {
 	static final Set<String> FOREIGN_IDS = Set.of();
 
 	/** 3.0 group size per creature (ARMIES 6.2 "Proposed"). */
-	static final Map<String, int[]> TARGET = Map.of("munchie_boar", new int[] {3, 5}, "toke_toad", new int[] {4, 7}, "lazy_gorger", new int[] {1, 2}, "ossuary_chorister", new int[] {3, 5});
+	static final Map<String, int[]> TARGET = Map.of("munchie_boar", new int[] {3, 5}, "toke_toad", new int[] {4, 7}, "lazy_gorger", new int[] {1, 2}, "ossuary_chorister", new int[] {3, 5}, "hotbox_smog", new int[] {1, 1}, "shrieker_swarm", new int[] {1, 1});
 
 	/** Entries that keep their own size on purpose (a biome-specific pair or crowd that already matches the design). */
 	static final Set<String> KEEP = Set.of("munchie_groves|lazy_gorger|2|2");
 
 	/** Rows converted in code at biome load (2.1 range -> 3.0 range; weight scaled to keep the expected count). */
 	static final List<SpawnGroups3.Size> SIZES = List.of(
-		new SpawnGroups3.Size("ossuary_chorister", 1, 1, 3, 5));
+		new SpawnGroups3.Size("ossuary_chorister", 1, 1, 3, 5),
+		new SpawnGroups3.Size("hotbox_smog", 3, 3, 1, 1, 1.000000, 3.0),
+		new SpawnGroups3.Size("hotbox_smog", 4, 4, 1, 1, 1.333333, 3.0),
+		new SpawnGroups3.Size("shrieker_swarm", 4, 4, 1, 1, 1.000000, 10.0));
 
 	/** Exact 2.1 entries for the off switch: biome, type, 3.0 min/max/weight -> 2.1 min/max/weight (armies lane data, 9.11). */
 	static final List<SpawnGroups3.Old> OLD = List.of(
@@ -54,6 +57,11 @@ final class Groups3Data {
 		new Herds3.Rule("toke_toad", 7, Herds3.Shape.RING, 2.0, 1.0, true, false, Herds3.Alert.FLEE, false, false, false),
 		new Herds3.Rule("lazy_gorger", 2, Herds3.Shape.PAIR, 2.0, 0.8, true, false, Herds3.Alert.FLEE, false, false, false),
 		new Herds3.Rule("ossuary_chorister", 5, Herds3.Shape.RING, 2.5, 1.0, true, true, Herds3.Alert.HUNT, true, false, false));
+
+	/** Swarm-as-one creatures (6.1 rule 3): id, members min/max, one member's share of the base health, hitbox growth, damage share per member. */
+	static final List<Swarm3.Rule> SWARMS = List.of(
+		new Swarm3.Rule("shrieker_swarm", 8, 12, 1.0 / 3.0, 1.2, 0),
+		new Swarm3.Rule("hotbox_smog", 3, 3, 1.0, 0.6, 0));
 
 	/** Self-test: the creature whose live pack is tested, and where (overworld, far from spawn). */
 	static final String TEST_TYPE = "munchie_boar";

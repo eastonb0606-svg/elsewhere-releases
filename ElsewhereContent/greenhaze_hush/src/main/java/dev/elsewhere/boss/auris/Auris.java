@@ -129,7 +129,9 @@ public class Auris extends BossEntity {
 			StructureStart start = level.structureManager().getStructureWithPieceAt(p.blockPosition(), h -> h.is(ENGINE));
 			if (start != null && start.isValid()) {
 				var bb = start.getBoundingBox();
-				engine = new BlockPos(bb.getCenter().getX(), bb.minY() + 10 - 4, bb.getCenter().getZ());
+				// 3.0 starts name their throne (their box also holds the access tunnel); 2.x starts keep the box rule
+				BlockPos throne = dev.elsewhere.greenhaze_hush.world.fit.GhFit.engineThrone(start);
+				engine = throne != null ? throne : new BlockPos(bb.getCenter().getX(), bb.minY() + 10 - 4, bb.getCenter().getZ());
 			}
 		}
 		if (engine == null) return false;
@@ -154,7 +156,8 @@ public class Auris extends BossEntity {
 
 	/** Dev: build The Listening Engine around this spot and summon. Origin is the funnel's top centre. */
 	public static Auris buildAndSummon(ServerLevel level, BlockPos origin) {
-		HushStructures.LISTENING_ENGINE.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
+		if (dev.elsewhere.greenhaze_hush.world.fit.GhFit.LOOKS) dev.elsewhere.greenhaze_hush.world.fit.GhFit.buildPlan(level, "listening_engine", origin);
+		else HushStructures.LISTENING_ENGINE.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
 		BlockPos throne = origin.below(4);
 		registerEngine(throne);
 		return summon(level, throne);

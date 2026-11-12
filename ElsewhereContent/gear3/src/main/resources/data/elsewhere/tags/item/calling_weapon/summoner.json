@@ -6,6 +6,7 @@
     "elsewhere:azmar_sunscourge",
     "elsewhere:echo_chord",
     "elsewhere:mirewick_lantern_crook",
+    "elsewhere:hrafnholt_wolfcall_horn",
     {
       "id": "elsewhere:mirewick_will_o_lantern",
       "required": false
@@ -36,10 +37,6 @@
     },
     {
       "id": "elsewhere:azmar_sunglass_obelisk",
-      "required": false
-    },
-    {
-      "id": "elsewhere:hrafnholt_wolfcall_horn",
       "required": false
     }
   ]

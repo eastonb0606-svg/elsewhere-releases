@@ -262,7 +262,7 @@ public final class AzmarWazir extends AzmarBoss {
 		pendingSince = level.getGameTime();
 		thrown.add(level.getGameTime() + COUNTER_BREW.windup());          // booked at its splash tick
 		pendingAt = t.position();
-		AzmarFx.glyphCircle(level, pendingAt, 2.0, b.color);
+		dev.elsewhere.duelist.foresight.Foresight.hint(() -> AzmarFx.glyphCircle(level, pendingAt, 2.0, b.color));   // B5: where the bottle lands is a hint, foresight gear only
 		level.playSound(null, blockPosition(), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.HOSTILE, 1.0F, 1.2F);
 	}
 
@@ -463,7 +463,7 @@ public final class AzmarWazir extends AzmarBoss {
 			if (prev != null && prev != ts && g.getLastHurtByMob() instanceof Player) hitTicks.add(now);
 		}
 		// the circle of a bottle in the air stays lit until it lands
-		if (pending != null && "counter_brew".equals(action()) && now % 4 == 0) AzmarFx.glyphCircle(level, pendingAt, 2.0, pending.color);
+		if (pending != null && "counter_brew".equals(action()) && now % 4 == 0) dev.elsewhere.duelist.foresight.Foresight.hint(() -> AzmarFx.glyphCircle(level, pendingAt, 2.0, pending.color));
 		if (pending != null && !"counter_brew".equals(action()) && now - pendingSince > COUNTER_BREW.windup() + 4) pending = null;   // a staggered wind-up drops its bottle (the booking stays: stricter)
 		// idle: he traces glyphs on the ground as he paces
 		if (target != null && idle() && now % 40 == 0 && !veiled()) AzmarFx.glyphCircle(level, position(), 1.0, AzmarFx.TURQUOISE);
@@ -533,7 +533,7 @@ public final class AzmarWazir extends AzmarBoss {
 	private void tickSeal(ServerLevel level, long now) {
 		if (sealWriteAt > 0) {
 			if (now < sealWriteAt) {                                      // the glyphs are written: a ring grows round him
-				if (now % 3 == 0) AzmarFx.glyphCircle(level, position(), 1.0 + SEAL_RADIUS * (1.0 - (sealWriteAt - now) / (double) SEAL_WRITE), AzmarFx.TURQUOISE);
+				if (now % 3 == 0) dev.elsewhere.duelist.foresight.Foresight.hint(() -> AzmarFx.glyphCircle(level, position(), 1.0 + SEAL_RADIUS * (1.0 - (sealWriteAt - now) / (double) SEAL_WRITE), AzmarFx.TURQUOISE));   // B5: the seal's reach before it is written is a hint
 			} else {
 				sealWriteAt = 0;
 				sealCentre = position();
@@ -622,7 +622,7 @@ public final class AzmarWazir extends AzmarBoss {
 			Vec3 behind = position().add(away.normalize().scale(8));
 			reformPoint = behind;
 			reformUntil = now + 40;
-			AzmarFx.glyphCircle(level, behind, 1.5, AzmarFx.AMBER);     // where the Hands re-form: 8 blocks behind him
+			dev.elsewhere.duelist.foresight.Foresight.hint(() -> AzmarFx.glyphCircle(level, behind, 1.5, AzmarFx.AMBER));     // where the Hands re-form: 8 blocks behind him (B5: a hint)
 		}
 		// bad trade: more than 10 percent of his HP lost for less than 3 percent dealt in 120 ticks: Veil away and a white flare
 		if (now - windowStart >= 120) {

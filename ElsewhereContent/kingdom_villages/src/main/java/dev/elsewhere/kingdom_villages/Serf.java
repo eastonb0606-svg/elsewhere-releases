@@ -54,10 +54,57 @@ public class Serf extends PathfinderMob {
 	public boolean levyArmed;
 	private int swingCooldown;
 	private ItemStack carried = ItemStack.EMPTY;
+	// 3.0 polish P9 (s-p9-idle): work pose (IdlePoses.SERF_CARRY / SERF_WORK, 0 = none) and the tier, both synced on change only.
+	// The tier used to be a server-only field, so every client drew the plain serf skin for thralls, porters and peat-cutters.
+	private static final net.minecraft.network.syncher.EntityDataAccessor<Byte> DATA_WORK =
+		net.minecraft.network.syncher.SynchedEntityData.defineId(Serf.class, net.minecraft.network.syncher.EntityDataSerializers.BYTE);
+	private static final net.minecraft.network.syncher.EntityDataAccessor<Byte> DATA_TIER =
+		net.minecraft.network.syncher.SynchedEntityData.defineId(Serf.class, net.minecraft.network.syncher.EntityDataSerializers.BYTE);
+	/** Serf tiers by synced index. */
+	public static final java.util.List<String> TIERS = java.util.List.of("serf", "thrall", "porter", "peat_cutter");
 
 	public Serf(EntityType<? extends Serf> type, Level level) {
 		super(type, level);
 		setPersistenceRequired();
+	}
+
+	@Override
+	protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData.Builder b) {
+		super.defineSynchedData(b);
+		b.define(DATA_WORK, (byte) 0);
+		b.define(DATA_TIER, (byte) 0);
+	}
+
+	/** 3.0 P9: the synced work pose (0 none, {@code IdlePoses.SERF_CARRY} hauling, {@code IdlePoses.SERF_WORK} at the work spot). */
+	public int workPose() {
+		return this.entityData.get(DATA_WORK);
+	}
+
+	public void setWorkPose(int pose) {
+		this.entityData.set(DATA_WORK, (byte) pose);
+	}
+
+	/** The tier as clients see it (skin and work animation). */
+	public String syncedVariant() {
+		int i = this.entityData.get(DATA_TIER);
+		return i >= 0 && i < TIERS.size() ? TIERS.get(i) : "serf";
+	}
+
+	/** Copies {@link #variant} into the synced tier; a no-op when unchanged. Called on load and when a player starts seeing the serf. */
+	public void syncLook() {
+		this.entityData.set(DATA_TIER, (byte) Math.max(0, TIERS.indexOf(variant)));
+	}
+
+	@Override
+	public void startSeenByPlayer(net.minecraft.server.level.ServerPlayer player) {
+		syncLook(); // the spawner sets the variant after construction: sync it before anyone draws the serf (sent with the next data update)
+		super.startSeenByPlayer(player);
+	}
+
+	/** 3.0 P9: the work pose for a serf {@code distSqr} from its work spot: hauling its load there (if it has one), working once there. */
+	public static int workPoseFor(double distSqr, boolean hasLoad) {
+		if (distSqr > 9.0) return hasLoad ? dev.elsewhere.kingdom.idle.IdlePoses.SERF_CARRY : 0;
+		return dev.elsewhere.kingdom.idle.IdlePoses.SERF_WORK;
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -195,6 +242,7 @@ public class Serf extends PathfinderMob {
 		super.readAdditionalSaveData(in);
 		villageId = in.getLongOr("SerfVillage", 0L);
 		variant = in.getStringOr("SerfVariant", "serf");
+		syncLook(); // 3.0 P9: clients see the right tier
 		faction = in.getStringOr("SerfFaction", "");
 		levyArmed = in.getBooleanOr("SerfLevy", false);
 		// Serfs saved by 2.0 (16 HP) or an early 3.0 build (20 HP) take the current profile health once on load
@@ -269,10 +317,13 @@ public class Serf extends PathfinderMob {
 		}
 	}
 
-	/** Walks to {@link #workPos} and swings its arm there, as if carrying and laying blocks. */
+	/**
+	 * Walks to {@link #workPos} and works there. 3.0 P9: the synced work pose (hauling, then the tier's own work loop, animated
+	 * client-side) is set when it changes; with {@code idle_poses} off the serf swings its arm there as before.
+	 */
 	static final class WorkGoal extends Goal {
 		private final Serf serf;
-		private int repath;
+		private int repath, shown = -1;
 
 		WorkGoal(Serf serf) {
 			this.serf = serf;
@@ -285,11 +336,25 @@ public class Serf extends PathfinderMob {
 		}
 
 		@Override
+		public void stop() {
+			shown = -1;
+			serf.setWorkPose(0);
+		}
+
+		@Override
 		public void tick() {
 			BlockPos p = serf.workPos;
 			if (p == null) return;
 			double d = serf.distanceToSqr(p.getX() + 0.5, p.getY(), p.getZ() + 0.5);
 			serf.getLookControl().setLookAt(p.getX() + 0.5, p.getY() + 0.5, p.getZ() + 0.5);
+			boolean poses = dev.elsewhere.kingdom.idle.IdlePoses.enabled;
+			if (poses) {
+				int want = workPoseFor(d, !serf.getMainHandItem().isEmpty());
+				if (want != shown) {
+					shown = want;
+					serf.setWorkPose(want);
+				}
+			}
 			if (d > 9.0) {
 				if (--repath <= 0) {
 					repath = 40 + serf.getRandom().nextInt(20);
@@ -297,7 +362,7 @@ public class Serf extends PathfinderMob {
 				}
 			} else {
 				serf.getNavigation().stop();
-				if (--serf.swingCooldown <= 0) {
+				if (!poses && --serf.swingCooldown <= 0) {
 					serf.swingCooldown = 15 + serf.getRandom().nextInt(10);
 					serf.swingForAttack(InteractionHand.MAIN_HAND);
 				}

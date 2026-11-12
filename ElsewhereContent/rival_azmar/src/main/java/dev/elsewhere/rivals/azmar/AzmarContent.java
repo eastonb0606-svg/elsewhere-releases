@@ -34,6 +34,7 @@ public final class AzmarContent {
 		dev.elsewhere.rivals.azmar.boss.AzmarBosses.init();
 		AzmarWear.init();
 		AzmarTactics.init();
+		dev.elsewhere.rivals.azmar.look.AzmarRulerLook.init(); // s-rulerarmor: B10 Egyptian armor layer and K29 caparison on bosses saved before 3.0
 		LOG.info("Elsewhere Azmar loaded: {} items", AzmarItems.ALL.size());
 	}
 }

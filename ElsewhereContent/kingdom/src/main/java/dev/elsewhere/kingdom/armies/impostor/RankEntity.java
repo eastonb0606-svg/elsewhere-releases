@@ -268,6 +268,16 @@ public class RankEntity extends Entity {
 		return Math.max(0, n - reserved);
 	}
 
+	/** Holds ({@code +1}) or frees ({@code -1}) a slot for a wounded man walking back to this rank. */
+	public void reserveSlot(int delta) {
+		reserved = Math.max(0, reserved + delta);
+		if (delta < 0 && count() == 0 && reserved == 0 && kind == Kind.RESERVE && !level().isClientSide()) discard();
+	}
+
+	public int reservedSlots() {
+		return reserved;
+	}
+
 	/** Figures not already committed to a break-out. */
 	public int available() {
 		return count() - breaking.size();
@@ -426,7 +436,7 @@ public class RankEntity extends Entity {
 				double len = Math.min(d, pace * 10);
 				double nx = getX() + dx / d * len, nz = getZ() + dz / d * len;
 				BlockPos col = BlockPos.containing(nx, getY(), nz);
-				if (!sl.isLoaded(col)) {
+				if (!sl.isLoaded(col) || !sl.isPositionEntityTicking(col)) {
 					// battles never force-load chunks: a rank reaching the edge of the loaded area becomes abstract
 					Ranks.abstractRank(sl, this);
 					return;

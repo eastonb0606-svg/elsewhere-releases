@@ -18,6 +18,7 @@ public class DevEntry implements ModInitializer {
 			ServerTickEvents.END_SERVER_TICK.register(SelfTest::endTick);
 			ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.kingdom.dev.SelfTestPolish::tick);
 			ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.kingdom.dev.SelfTestIdle::tick); // 3.0 P9 idle poses
+			ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.kingdom.dev.SelfTestNameplates::tick); // 3.0 P3 nameplates (s-p3-nameplates)
 		}
 	}
 }

@@ -275,6 +275,7 @@ public final class GreenhazeItems {
 			sl.playSound(null, sp.blockPosition(), SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, 1F, 0.7F);
 			sl.sendParticles(net.minecraft.core.particles.ParticleTypes.CAMPFIRE_COSY_SMOKE, sp.getX(), sp.getEyeY(), sp.getZ(), 12, 0.3, 0.2, 0.3, 0.02);
 			if (!GreenLeafBridge.usable() || !GreenLeafBridge.dose(sp, GearStats.BONG_RIP_HIGH * factor, strain)) Haze.add(sp, GearStats.BONG_RIP_HIGH * factor, true);
+			else GreenLeafBridge.contactAround(sp, factor > 1 ? 2 : 1, strain, GreenhazeItems::immuneToContactHigh); // Hazeborn: contact radius x2
 			sp.getCooldowns().addCooldown(player.getItemInHand(hand), GearStats.BONG_COOLDOWN);
 			GreenhazeTrips.onGreenLeafStyleUse(sp);
 			return InteractionResult.SUCCESS;

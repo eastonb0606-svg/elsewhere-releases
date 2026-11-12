@@ -56,6 +56,7 @@ public final class NetherEndBossesContent {
 
 		// Arenas are structures now (BossArenaStructure + structure_set JSON). The feature type above stays registered for 0.3.0 worlds but nothing places it.
 		BossArenaStructure.init();
+		dev.elsewhere.nether_end_bosses.fit3.NetherFit.init(); // 3.0 terrain-fit arenas (s-struct-nether; kill switch elsewhere.overhaul3.nether_fit)
 
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Reg.id("nether_end_bosses"), FabricCreativeModeTab.builder()
 			.title(Component.translatable("itemGroup.elsewhere.nether_end_bosses"))

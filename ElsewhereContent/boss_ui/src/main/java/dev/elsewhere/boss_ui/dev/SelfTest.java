@@ -55,7 +55,7 @@ public final class SelfTest {
 			check(BossBarData.parse(null).isEmpty() && BossBarData.parse(new JsonObject()).isEmpty(), "missing data falls back to vanilla (empty map)");
 			var one = BossBarData.parse(JsonParser.parseString("{\"bosses\":{\"elsewhere:x\":{\"color\":\"#FFFFFF\",\"phases\":[0.75,0.5,0.25]}}}").getAsJsonObject());
 			check(one.get("elsewhere:x").phases().length == 3 && one.get("elsewhere:x").phases()[2] == 0.25F, "explicit phases parse");
-			check(m.values().stream().allMatch(e -> e.phases().length == 2 && e.phases()[0] == 0.66F), "bosses without phases default to 66/33 notches");
+			SelfTestBossBar.run(server, SelfTest::check); // P1 boss bar v2: real phases, state chips, labels (s-p1-bossbar)
 
 			// P5 tooltips: lines come live from the stack's attribute modifiers
 			var sword = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.NETHERITE_SWORD);
@@ -67,6 +67,7 @@ public final class SelfTest {
 			check(dev.elsewhere.boss_ui.TooltipLines.build(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DIRT), true).isEmpty(), "plain block gets no tooltip lines");
 			var helm = dev.elsewhere.boss_ui.TooltipLines.build(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.NETHERITE_HELMET), true);
 			check(helm.stream().anyMatch(c -> c.getContents() instanceof net.minecraft.network.chat.contents.TranslatableContents t && t.getKey().endsWith("tooltip.armor") && String.valueOf(t.getArgs()[0]).equals("3")), "netherite helmet reads 3 armor live");
+			SelfTestTelegraph.run(server, SelfTest::check); // P2 telegraphs (s-p2-telegraph)
 		} catch (Throwable t) {
 			check(false, "self-test threw " + t);
 			t.printStackTrace();

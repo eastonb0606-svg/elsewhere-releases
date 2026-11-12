@@ -44,6 +44,7 @@ public final class GreenhazeHushContent {
 		FxPrefs.init();
 		BuiltStructure.init();
 		Greenhaze.init();
+		dev.elsewhere.greenhaze_hush.s3.groups.SpawnGroups3.init(); // ARMIES 6 spawn groups (s-spawngroups, key spawn_groups_greenhaze_hush)
 		SignatureGear.init();
 		Hush.init();
 		Telegraph.init();

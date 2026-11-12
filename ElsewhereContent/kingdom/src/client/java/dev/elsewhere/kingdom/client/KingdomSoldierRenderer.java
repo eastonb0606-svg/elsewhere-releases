@@ -44,8 +44,11 @@ public class KingdomSoldierRenderer extends HumanoidMobRenderer<KingdomSoldier, 
 			double t = KingdomClientConfig.tabardDist();
 			s.showTabard = d2 < t * t;
 			SoldierNameplates.apply(e, s);
+			dev.elsewhere.kingdom.client.heraldry.SoldierHeraldry.extract(e, s, partialTicks); // 3.0 P10 kingdom emblem + officer/captain cape
 		}
-		// client LOD ("soldier detail"): drop the costly extras with distance
+		// client LOD ("soldier detail"): drop the costly extras with distance. 3.0: the army render LOD (ARMIES.md 3.7, tiers 24/48/96, nearest
+		// 48 at full detail, baked LOD skins) replaces these 2.1 rules for rank-and-file soldiers; kill switch "client_lod" in elsewhere_armies.json
+		if (!dev.elsewhere.kingdom.client.lod.SoldierLod.apply(e, state)) {
 		double od = KingdomClientConfig.overlayDist(), id = KingdomClientConfig.itemsDist(), ad = KingdomClientConfig.armorDist();
 		boolean overlay = d2 < od * od;
 		state.showHat = state.showJacket = state.showLeftPants = state.showRightPants = state.showLeftSleeve = state.showRightSleeve = overlay;
@@ -56,6 +59,15 @@ public class KingdomSoldierRenderer extends HumanoidMobRenderer<KingdomSoldier, 
 		if (d2 >= ad * ad) {
 			state.headEquipment = state.chestEquipment = state.legsEquipment = state.feetEquipment = ItemStack.EMPTY;
 		}
+		}
+		if (state instanceof SoldierRenderState s) dev.elsewhere.kingdom.client.idle.IdleAnim.extractSoldier(e, s, s, this.itemModelResolver); // 3.0 P9 idle/work poses
+	}
+
+	/** 3.0 army render LOD: rank-and-file soldiers past 96 blocks (x the entity-distance slider) are not drawn; ranks stand in for them. */
+	@Override
+	public boolean shouldRender(KingdomSoldier e, net.minecraft.client.renderer.culling.Frustum culler, double camX, double camY, double camZ, float partialTicks) {
+		if (dev.elsewhere.kingdom.client.lod.SoldierLod.culled(this, e, camX, camY, camZ)) return false;
+		return super.shouldRender(e, culler, camX, camY, camZ, partialTicks);
 	}
 
 	@Override
@@ -88,11 +100,32 @@ public class KingdomSoldierRenderer extends HumanoidMobRenderer<KingdomSoldier, 
 	}
 
 	/** Render state with the soldier's skin and tabard tint. */
-	public static class SoldierRenderState extends AvatarRenderState {
+	public static class SoldierRenderState extends AvatarRenderState implements dev.elsewhere.kingdom.client.idle.IdleAnim.Holder {
+		/** 3.0 P9 idle/work pose track this frame (null = no pose); set by {@code IdleAnim.extractSoldier}. */
+		public dev.elsewhere.kingdom.client.idle.IdleAnim.Track idle;
+
+		@Override
+		public dev.elsewhere.kingdom.client.idle.IdleAnim.Track idleTrack() {
+			return idle;
+		}
+
+		@Override
+		public void idleTrack(dev.elsewhere.kingdom.client.idle.IdleAnim.Track t) {
+			this.idle = t;
+		}
+
+		/** 3.0 P10 heraldry, set by {@code heraldry.SoldierHeraldry.extract}: tabard emblem overlay and cape texture (null = none), their tint, cape LOD and wave inputs. */
+		public Identifier emblem, capeTexture;
+		public int heraldryTint = -1;
+		public boolean capeWave;
+		public float capePhase, capeSpeed, capeWalk;
+
 		public Identifier texture;
 		public int tabardColor = 0xFF2E4C9E;
 		public boolean showTabard = true;
 		/** 3.0 P3 nameplate level of detail this frame (Nameplate.NONE, COMPACT or FULL); set by {@link SoldierNameplates#apply}. */
 		public byte plate;
+		/** 3.0 army render LOD tier drawn this frame (RenderLod.FULL, NEAR or FAR; -1 = LOD off or not applied); set by {@code SoldierLod.apply}. */
+		public int lodTier = -1;
 	}
 }

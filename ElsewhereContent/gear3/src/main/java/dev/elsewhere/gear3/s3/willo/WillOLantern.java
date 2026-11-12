@@ -167,10 +167,13 @@ public final class WillOLantern {
 		if (scale <= 0F) return false;
 		float yRot = owner.getYRot(), xRot = owner.getXRot(), head = owner.getYHeadRot();
 		boolean ok;
+		MarshWisp wisp = from instanceof MarshWisp w ? w : null;
 		try {
+			if (wisp != null) wisp.echoing = true; // never intercepts its own echo
 			aimAt(owner, target.getBoundingBox().getCenter());
 			ok = castScaled(level, owner, caster, new ItemStack(spell), scale);
 		} finally {
+			if (wisp != null) wisp.echoing = false;
 			owner.setYRot(yRot);
 			owner.setXRot(xRot);
 			owner.setYHeadRot(head);
@@ -260,6 +263,8 @@ public final class WillOLantern {
 				hybridM = calling.getMethod("hybrid", Player.class, path, path);
 				pathCaster = path.getField("CASTER").get(null);
 				pathSummoner = path.getField("SUMMONER").get(null);
+				// arsenal's callings switch off: no Callings, so no hybrid penalty either
+				if (!Class.forName("dev.elsewhere.arsenal.Overhaul3").getField("CALLINGS").getBoolean(null)) hybridM = null;
 			} catch (ReflectiveOperationException | RuntimeException e) {
 				hybridM = null;
 			}

@@ -72,7 +72,7 @@ final class ArmiesBeatableRig {
 		final Identifier unit;
 		final KingdomSoldier soldier;
 		final Husk dummy;
-		double own, comp;
+		double own, comp, lastHealth;
 		final Set<UUID> compIds = new HashSet<>();
 		Identifier compType;
 
@@ -95,7 +95,17 @@ final class ArmiesBeatableRig {
 		return faction + "|" + unit;
 	}
 
+	/** Switch: {@code -Delsewhere.armies.beatable=false} skips the rig (test-only code; it runs only under the armies self-test). */
+	static final boolean ENABLED = !"false".equals(System.getProperty("elsewhere.armies.beatable"));
+
 	static void build() {
+		if (!ENABLED) {
+			ArmiesSelfTest.STEPS.add((srv, l) -> {
+				ArmiesSelfTest.info("BEATABLE skipped (-Delsewhere.armies.beatable=false)");
+				return 1;
+			});
+			return;
+		}
 		List<ArmyScale> kingdoms = new ArrayList<>(ArmyScale.all().values());
 		ArmiesSelfTest.STEPS.add((srv, l) -> {
 			RECS.clear();
@@ -199,6 +209,10 @@ final class ArmiesBeatableRig {
 				ln.own = 0;
 				ln.comp = 0;
 				ln.compIds.clear();
+				ln.lastHealth = ln.dummy.getHealth();
+				ArmiesSelfTest.check("the weak-diamond dummy for " + ln.unit.getPath() + " has 20 armor, 8 toughness and Protection I on all four pieces", ln.dummy.getArmorValue() == 20
+					&& Math.abs(ln.dummy.getAttributeValue(Attributes.ARMOR_TOUGHNESS) - 8) < 0.01 && protectionPieces(ln.dummy) == 4,
+					ln.dummy.getArmorValue() + " armor, " + ln.dummy.getAttributeValue(Attributes.ARMOR_TOUGHNESS) + " toughness, " + protectionPieces(ln.dummy) + " pieces");
 			}
 			measuring = true;
 			return 0;
@@ -207,7 +221,10 @@ final class ArmiesBeatableRig {
 			ArmiesSelfTest.STEPS.add((srv, l) -> {
 				for (Lane ln : LANES.values()) {
 					if (ln.soldier.isAlive() && ln.dummy.isAlive() && ln.soldier.getTarget() != ln.dummy) ln.soldier.setTarget(ln.dummy);
-					if (ln.dummy.isAlive() && ln.dummy.getHealth() < 200) ln.dummy.setHealth(ln.dummy.getMaxHealth());
+					if (ln.dummy.isAlive() && ln.dummy.getHealth() < 200) {
+						ln.dummy.setHealth(ln.dummy.getMaxHealth());
+						ln.lastHealth = ln.dummy.getHealth();
+					}
 				}
 				return SLICE;
 			});
@@ -256,21 +273,46 @@ final class ArmiesBeatableRig {
 		return l.addFreshEntity(d) ? d : null;
 	}
 
+	/**
+	 * Damage after armor, Protection and the hurt cooldown, read as the dummy's health loss since its last hit (Fabric's {@code damageTaken} is
+	 * before armor). The dummy has no AI and never heals, so every loss is a hit; it is credited to the lane's soldier (its own swings, arrows,
+	 * bolts, pots and their fire all name it) or to its companions.
+	 */
 	static void onDamage(LivingEntity e, DamageSource src, float base, float taken, boolean blocked) {
 		if (!measuring) return;
 		Lane ln = LANES.get(e.getUUID());
 		if (ln == null) return;
+		double lost = Math.max(0, ln.lastHealth - e.getHealth());
+		ln.lastHealth = e.getHealth();
 		Entity by = src.getEntity();
-		if (by == ln.soldier) ln.own += taken;
+		if (by == ln.soldier) ln.own += lost;
 		else if (by instanceof LivingEntity le && !(le instanceof KingdomSoldier) && !(le instanceof Player) && !(le instanceof Husk)) {
-			ln.comp += taken;
+			ln.comp += lost;
 			ln.compIds.add(le.getUUID());
 			ln.compType = BuiltInRegistries.ENTITY_TYPE.getKey(le.getType());
 		}
 	}
 
+	static int protectionPieces(LivingEntity d) {
+		int n = 0;
+		for (EquipmentSlot slot : new EquipmentSlot[] {EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET}) {
+			ItemStack st = d.getItemBySlot(slot);
+			for (var en : st.getEnchantments().entrySet()) if (en.getKey().is(Enchantments.PROTECTION) && en.getIntValue() == 1) n++;
+		}
+		return n;
+	}
+
 	// ---- 3. the duel ------------------------------------------------------------------------------------------------------------------
+	static final Set<String> DUMPED = new HashSet<>();
+
+	static List<ArmyBeatable.Unit> concat(List<ArmyBeatable.Unit> a, List<ArmyBeatable.Unit> b) {
+		List<ArmyBeatable.Unit> all = new ArrayList<>(a);
+		all.addAll(b);
+		return all;
+	}
+
 	static void verdicts(List<ArmyScale> kingdoms) {
+		DUMPED.clear();
 		for (ArmyScale s : kingdoms) {
 			ArmyBeatable.Result worst = null;
 			Rec worstRec = null;
@@ -286,6 +328,12 @@ final class ArmiesBeatableRig {
 				List<ArmyBeatable.Unit> units = new ArrayList<>(), comps = new ArrayList<>();
 				for (ArmyBeatable.Unit u : r.units()) units.add(u.withDps(DPS.getOrDefault(key(s.faction(), u.id()), -1.0)));
 				for (ArmyBeatable.Unit c : r.companions()) comps.add(c.withDps(COMP_DPS.getOrDefault(key(s.faction(), c.id()), -1.0)));
+				for (ArmyBeatable.Unit u : concat(units, comps)) {
+					if (!DUMPED.add(key(s.faction(), u.id()))) continue;
+					// the duel's inputs, one line per unit type, so a squad can be replayed by hand when tuning data
+					ArmiesSelfTest.info(String.format("BEATABLE unit %s %s: health %.1f armor %.1f toughness %.1f melee %.2f ranged %b block %.2f disables %.1f s measured %.2f/s",
+						s.faction().getPath(), u.id().getPath(), u.health(), u.armor(), u.toughness(), u.melee(), u.ranged(), u.block(), u.disableSecs(), u.measuredDps()));
+				}
 				ArmyBeatable.Result res = ArmyBeatable.duel(units, comps, s.meleeTokens(), s.rangedTokens());
 				ArmiesSelfTest.info(String.format("BEATABLE %s squad %d %s: %s with %.1f of 44 health left after %.0f s, %d/%d killed", s.faction().getPath(), r.rep(), r.makeup(),
 					res.playerWins() ? "won" : "lost", res.playerHealthLeft(), res.seconds(), res.killed(), res.squad() + res.companions()));

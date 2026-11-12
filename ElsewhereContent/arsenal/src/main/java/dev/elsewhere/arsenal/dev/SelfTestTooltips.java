@@ -18,7 +18,6 @@ import java.util.UUID;
 import net.fabricmc.fabric.api.entity.FakePlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.server.level.ServerLevel;
@@ -66,21 +65,21 @@ final class SelfTestTooltips {
 			all.addAll(ArsenalTooltips.of(new ItemStack(i)).detail());
 		}
 		SelfTest.checkS("P5 tooltip: every arsenal P5 line is translated, its %s count matches its arguments, no number is typed into the lang text", () -> {
-			Language lang = Language.getInstance();
+			java.util.Map<String, String> lang = shippedLang("elsewhere.p5.spell");
 			for (Component c : all) {
 				TranslatableContents t = (TranslatableContents) c.getContents();
 				keys.add(t.getKey());
-				int slots = lang.getOrDefault(t.getKey()).replace("%%", "").split("%s", -1).length - 1;
+				int slots = lang.getOrDefault(t.getKey(), "").replace("%%", "").split("%s", -1).length - 1;
 				if (slots != t.getArgs().length) throw new IllegalStateException(t.getKey() + " has " + slots + " slots for " + t.getArgs().length + " args");
 			}
 			String[][] client = {{"elsewhere.tooltip.tonic", "3"}, {"elsewhere.tooltip.moonlit", "1"}, {"elsewhere.tooltip.stormsage_mantle", "1"}};
 			for (String[] kc : client) {
-				int slots = lang.getOrDefault(kc[0]).replace("%%", "").split("%s", -1).length - 1;
+				int slots = lang.getOrDefault(kc[0], "").replace("%%", "").split("%s", -1).length - 1;
 				if (slots != Integer.parseInt(kc[1])) throw new IllegalStateException(kc[0] + " has " + slots + " slots");
 			}
 			for (String k : keys) {
-				if (!lang.has(k)) throw new IllegalStateException("untranslated " + k);
-				if (lang.getOrDefault(k).matches(".*\\d.*")) throw new IllegalStateException("digit in " + k + ": " + lang.getOrDefault(k));
+				if (!lang.containsKey(k)) throw new IllegalStateException("untranslated " + k);
+				if (lang.get(k).matches(".*\\d.*")) throw new IllegalStateException("digit in " + k + ": " + lang.get(k));
 			}
 			return keys.size() > 30;
 		});
@@ -196,6 +195,28 @@ final class SelfTestTooltips {
 	}
 
 	// ------------------------------------------------------------------------------------------------ helpers
+
+	/**
+	 * This module's lang as shipped: of every assets/elsewhere/lang/en_us.json on the classpath (dev runs also carry older
+	 * devlib copies), the first that has {@code probe}, so the check reads the strings this build really ships.
+	 */
+	static java.util.Map<String, String> shippedLang(String probe) {
+		try {
+			var urls = SelfTestTooltips.class.getClassLoader().getResources("assets/elsewhere/lang/en_us.json");
+			while (urls.hasMoreElements()) {
+				try (var in = new java.io.InputStreamReader(urls.nextElement().openStream(), java.nio.charset.StandardCharsets.UTF_8)) {
+					com.google.gson.JsonObject o = com.google.gson.JsonParser.parseReader(in).getAsJsonObject();
+					if (!o.has(probe)) continue;
+					java.util.Map<String, String> m = new java.util.HashMap<>();
+					for (var e : o.entrySet()) m.put(e.getKey(), e.getValue().getAsString());
+					return m;
+				}
+			}
+		} catch (Exception e) {
+			throw new IllegalStateException("lang read failed: " + e);
+		}
+		throw new IllegalStateException("no en_us.json with " + probe);
+	}
 
 	static String id(Item i) {
 		return BuiltInRegistries.ITEM.getKey(i).getPath();

@@ -18,9 +18,9 @@ import org.jspecify.annotations.Nullable;
  * plate from that byte, the synced faction id and, for rulers, the synced custom name ({@link #text}), at the level of
  * detail {@link #lod} picks by distance. Rank and crest icons are glyphs from one tiny bitmap font atlas
  * ({@code assets/elsewhere/font/nameplate.json}, 16x16 cells drawn at text height).
- * <p>Each kingdom has its own crest, rank titles and ruler mark ({@link Kit}): Aldermark's blue heater shield, Hrafnholt's
- * painted round shield, Azmar's golden ankh, Mirewick's lantern (and a chain of office instead of a coronet: the Lantern
- * Republic crowns nobody). Unknown factions get a banner in their tabard colour and the generic titles.
+ * <p>Each kingdom has its own crest, rank titles and ruler mark ({@link Kit}): Aldermark's heater shield (red chief, crown,
+ * tower), Hrafnholt's raven on a round shield, Azmar's winged scarab, Mirewick's lantern (all as on the P10 tabard emblems) (and a chain of office instead of a coronet: the Lantern
+ * Republic crowns nobody), the rebels' torch and the Free Company's crossed swords. Unknown factions get a banner in their tabard colour and the generic titles.
  */
 public final class Nameplate {
 	private Nameplate() {}
@@ -39,9 +39,9 @@ public final class Nameplate {
 
 	// glyphs in the atlas (private use area); row 0 = rank marks, row 1 = crests
 	public static final char G_OFFICER = '', G_CAPTAIN = '', G_CORONET = '', G_CROWN = '', G_CHAIN = '';
-	public static final char C_ALDERMARK = '', C_HRAFNHOLT = '', C_AZMAR = '', C_MIREWICK = '', C_REBELS = '', C_BANNER = '';
+	public static final char C_ALDERMARK = '', C_HRAFNHOLT = '', C_AZMAR = '', C_MIREWICK = '', C_REBELS = '', C_BANNER = '', C_FREE = '';
 	/** Every glyph the plates use (the self-test checks each one is mapped in the font file). */
-	public static final char[] GLYPHS = {G_OFFICER, G_CAPTAIN, G_CORONET, G_CROWN, G_CHAIN, C_ALDERMARK, C_HRAFNHOLT, C_AZMAR, C_MIREWICK, C_REBELS, C_BANNER};
+	public static final char[] GLYPHS = {G_OFFICER, G_CAPTAIN, G_CORONET, G_CROWN, G_CHAIN, C_ALDERMARK, C_HRAFNHOLT, C_AZMAR, C_MIREWICK, C_REBELS, C_BANNER, C_FREE};
 
 	/**
 	 * One kingdom's plate look. {@code crest} is drawn in its own colours, except {@link #C_BANNER}, which takes the tabard
@@ -55,7 +55,9 @@ public final class Nameplate {
 		"hrafnholt", new Kit("hrafnholt", C_HRAFNHOLT, "Hrafnholt", "Hird-Sergeant", "Hird-Captain", "Thane", "High Jarl", G_CORONET, G_CROWN),
 		"azmar", new Kit("azmar", C_AZMAR, "Azmar", "Jemadar", "Qaid", "Amir", "Sultana", G_CORONET, G_CROWN),
 		"mirewick", new Kit("mirewick", C_MIREWICK, "Mirewick", "Reeve", "Ward-Captain", "Magnate", "First Magnate", G_CHAIN, G_CHAIN),
-		"rebels", new Kit("rebels", C_REBELS, "Rebels", "Ringleader", "Rebel Chief", "Rebel Lord", "Rebel King", G_CORONET, G_CROWN));
+		"rebels", new Kit("rebels", C_REBELS, "Rebels", "Ringleader", "Rebel Chief", "Rebel Lord", "Rebel King", G_CORONET, G_CROWN),
+		// neutral sellsword bands: their only officer is the company's captain (an officer unit without the captain ability)
+		"free_company", new Kit("free_company", C_FREE, "Free Company", "Company Captain", "Company Captain", "Company Lord", "Company Lord", G_CORONET, G_CORONET));
 
 	private static final int GOLD = 0xFFD75A, WHITE = 0xFFFFFF, GREY = 0xAAAAAA;
 	private static final Style GLYPH = Style.EMPTY.withFont(FONT).withColor(WHITE);
@@ -74,7 +76,9 @@ public final class Nameplate {
 		if (UnitTypes.CAPTAIN.equals(unitId)) return CAPTAIN;
 		if (UnitTypes.SERGEANT.equals(unitId)) return OFFICER;
 		if (u.ability() == UnitType.Ability.CAPTAIN) return CAPTAIN;
-		return u.officer() ? OFFICER : SOLDIER;
+		if (!u.officer()) return SOLDIER;
+		// an officer unit named as a captain leads its band (the Free Company's free_company_captain has no captain ability)
+		return unitId != null && unitId.getPath().endsWith("captain") ? CAPTAIN : OFFICER;
 	}
 
 	// ---- client: level of detail and text ----------------------------------------------------------------------------

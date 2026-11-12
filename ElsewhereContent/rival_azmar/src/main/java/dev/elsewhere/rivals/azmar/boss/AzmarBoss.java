@@ -183,6 +183,17 @@ public abstract class AzmarBoss extends HumanBoss implements Leaders.LeaderBoss 
 	@Override
 	public void onHolder(boolean holder) {}
 
+	/** 3.0 (s-bossdrops): every boss always drops XP (HumanBoss leaves it at 0; each boss sets its own number). Vanilla's always-drop path, so the Chaperon reads it too. */
+	@Override
+	protected int getBaseExperienceReward(ServerLevel level) {
+		return dev.elsewhere.rivals.azmar.rewards.AzmarRewards.xp(this);
+	}
+
+	@Override
+	protected boolean isAlwaysExperienceDropper() {
+		return dev.elsewhere.rivals.azmar.rewards.AzmarRewards.xp(this) > 0;
+	}
+
 	/** Living Azmar court bosses within 160 blocks, by entity type path ({@code azmar_wazir}...). */
 	public static boolean alive(ServerLevel level, EntityType<? extends Mob> type, Vec3 around) {
 		List<? extends Mob> l = level.getEntitiesOfClass(Mob.class, new net.minecraft.world.phys.AABB(around, around).inflate(160), m -> m.getType() == type && m.isAlive());

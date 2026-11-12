@@ -158,7 +158,7 @@ public final class HushMobs {
 			shriekCooldown = 100;
 			level.playSound(null, blockPosition(), SoundEvents.SCULK_SHRIEKER_SHRIEK, SoundSource.HOSTILE, 1.2F, 1.8F);
 			level.sendParticles(ParticleTypes.SCULK_SOUL, getX(), getY(), getZ(), 4, 0.2, 0.2, 0.2, 0.02);
-			for (ServerPlayer p : level.getEntitiesOfClass(ServerPlayer.class, getBoundingBox().inflate(8))) Resonance.addRaw(p, GearStats.RES_SHRIEKER);
+			for (ServerPlayer p : level.getEntitiesOfClass(ServerPlayer.class, getBoundingBox().inflate(8))) Resonance.addRaw(p, GearStats.RES_SHRIEKER * dev.elsewhere.greenhaze_hush.s3.groups.Swarm3.weight(this)); // a swarm shrieks for the bats it holds (s-spawngroups)
 		}
 
 		@Override

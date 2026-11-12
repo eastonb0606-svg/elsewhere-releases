@@ -41,8 +41,10 @@ import org.jspecify.annotations.Nullable;
  * hour changes and events, never polled), mills about there and takes the activity's pose; a Serf-style zigzag panic when hurt (its
  * neighbours flee too); a look at the nearest player at most once a second. Pushing is evaluated every 4th tick.
  */
-public class Townsfolk extends PathfinderMob {
+public class Townsfolk extends PathfinderMob implements dev.elsewhere.kingdom.idle.IdlePoses.Posable {
 	private static final EntityDataAccessor<String> DATA_LOOK = SynchedEntityData.defineId(Townsfolk.class, EntityDataSerializers.STRING);
+	/** 3.0 P9 (s-p9-idle): the routine pose id, sent only when it changes; animated by the client (IdleAnim). */
+	private static final EntityDataAccessor<Byte> DATA_IDLE = SynchedEntityData.defineId(Townsfolk.class, EntityDataSerializers.BYTE);
 	public static final String DEFAULT_LOOK = "aldermark/peasant/0";
 
 	/** Town key ({@link Towns.Town#key}), empty for a summoned stray. */
@@ -80,11 +82,23 @@ public class Townsfolk extends PathfinderMob {
 	protected void defineSynchedData(final SynchedEntityData.Builder b) {
 		super.defineSynchedData(b);
 		b.define(DATA_LOOK, DEFAULT_LOOK);
+		b.define(DATA_IDLE, (byte) 0);
 	}
 
 	/** {@code "<kingdom>/<role>/<variant>"}, e.g. {@code mirewick/peat_cutter/2} (TOWNSFOLK-IDS.md). */
 	public String look() {
 		return entityData.get(DATA_LOOK);
+	}
+
+	/** 3.0 P9: the synced routine pose id (RoutinePoses.Pose id; 0 = none). */
+	@Override
+	public int idlePose() {
+		return entityData.get(DATA_IDLE);
+	}
+
+	@Override
+	public void setIdlePose(int pose) {
+		entityData.set(DATA_IDLE, (byte) pose);
 	}
 
 	/** Texture of a look: {@code elsewhere:textures/entity/townsfolk/<kingdom>/<role>_<variant>.png}. */
@@ -167,7 +181,7 @@ public class Townsfolk extends PathfinderMob {
 
 	@Override
 	public void remove(Entity.RemovalReason reason) {
-		TownsfolkManager.onRemoved(this);
+		if (!level().isClientSide()) TownsfolkManager.onRemoved(this);
 		super.remove(reason);
 	}
 

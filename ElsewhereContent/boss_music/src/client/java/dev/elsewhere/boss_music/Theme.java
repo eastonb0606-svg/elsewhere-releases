@@ -7,12 +7,19 @@ import net.minecraft.sounds.SoundEvent;
 
 /**
  * One boss theme in the game: binds a {@link Conductor} (the timeline) to real sound instances. Parts are the theme events
- * {@code <theme>.intro}, {@code .loop}, {@code .surge} and {@code .end} from sounds.json; a part the map has no data for is
- * never asked for (no surge -> phase stingers; no end -> victory stinger).
+ * {@code <theme>.intro}, {@code .loop}, {@code .end} and one {@code .<name>} per phase layer (P12; the surge is the layer named
+ * {@code surge}) from sounds.json; a part the map has no data for is never asked for (no layer for a threshold -> phase
+ * stinger; no end -> victory stinger), and a part whose event is missing from sounds.json falls back the same way.
  */
 final class Theme {
 	final Identifier id;
 	private final Conductor conductor;
+	private final java.util.List<Live> voices = new java.util.ArrayList<>();
+
+	/** The sound event of a phase layer: {@code <theme>.<layer name>} (the surge is the layer named {@code surge}). */
+	static Identifier layerOf(Identifier theme, Conductor.Layer layer) {
+		return theme.withSuffix("." + layer.name());
+	}
 
 	Theme(Minecraft mc, Identifier id, BossMusicMap m) {
 		this.id = id;
@@ -22,19 +29,25 @@ final class Theme {
 		final Conductor.Plan p = plan;
 		conductor = new Conductor(plan, new Conductor.Voices() {
 			@Override
-			public Conductor.Voice make(Conductor.Part part) {
+			public Conductor.Voice make(Conductor.Part part, Conductor.Layer layer) {
 				Identifier ev = switch (part) {
 					case INTRO -> BossMusicMap.introOf(id);
 					case LOOP -> BossMusicMap.loopOf(id);
-					case SURGE -> id.withSuffix(".surge");
+					case LAYER -> layerOf(id, layer);
 					case END -> id.withSuffix(".end");
 				};
+				if (mc.getSoundManager().getSoundEvent(ev) == null) { // no sounds.json event: the conductor falls back (stinger), never a silent part
+					BossMusicService.LOGGER.warn("boss music: no sound event {}", ev);
+					return null;
+				}
 				int len = switch (part) {
 					case INTRO -> p.introTicks() + Conductor.HANDOFF_RAMP;
 					case END -> p.endTicks();
 					default -> -1;
 				};
-				return new Live(mc, new FadingMusic(SoundEvent.createVariableRangeEvent(ev), part == Conductor.Part.LOOP || part == Conductor.Part.SURGE), len);
+				Live v = new Live(mc, new FadingMusic(SoundEvent.createVariableRangeEvent(ev), part == Conductor.Part.LOOP || part == Conductor.Part.LAYER), len);
+				voices.add(v);
+				return v;
 			}
 
 			@Override
@@ -77,6 +90,27 @@ final class Theme {
 
 	void stop(Minecraft mc) {
 		conductor.stopNow();
+	}
+
+	/** The phase layer playing now ({@code null} in the intro or loop). For the self-test. */
+	Conductor.Layer layerNow() {
+		int i = conductor.layerNow();
+		return i < 0 ? null : conductor.plan.layers().get(i);
+	}
+
+	Conductor.Plan plan() {
+		return conductor.plan;
+	}
+
+	Conductor.State state() {
+		return conductor.state();
+	}
+
+	/** How many of this theme's parts the sound engine is playing right now (at most 2: a crossfade). For the self-test. */
+	int activeStreams(Minecraft mc) {
+		int n = 0;
+		for (Live v : voices) if (!v.killed && mc.getSoundManager().isActive(v.s)) n++;
+		return n;
 	}
 
 	/** A real sound instance as a conductor voice. A one-shot counts as finished once the engine dropped it after playing. */

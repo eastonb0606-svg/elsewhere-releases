@@ -108,7 +108,12 @@ public final class MirewickTactics {
 		public @Nullable Strategic pending;
 		public long applyAt;
 		public boolean followedOwn;
+		/** Game time of the squad's last decision (s-heapleak: lets {@link #track} drop squads that are gone). */
+		public long seen;
 	}
+
+	/** s-heapleak (3.0 heap pass): GROUPS is pruned of squads idle this long once it holds more than GROUP_CAP (no growth over long sessions). */
+	public static final int GROUP_CAP = 256, GROUP_IDLE_TICKS = 6000;
 
 	public static final Map<UUID, Group> GROUPS = new HashMap<>();
 	public static final List<Pending> HIRES = new ArrayList<>();
@@ -270,13 +275,25 @@ public final class MirewickTactics {
 		return councilCache;
 	}
 
-	/** The squad's current strategic order after delivery delay and the disorganisation roll (called once per decision). */
-	public static Strategic commandOrder(UUID squadId, boolean enemiesInView, long now, RandomSource r) {
+	/**
+	 * The squad's command state, created on its first decision. s-heapleak: squads die, despawn and re-form all session, so once more
+	 * than {@link #GROUP_CAP} are tracked, the ones without a decision for {@link #GROUP_IDLE_TICKS} are dropped (a squad that comes back
+	 * starts a fresh state, as a new squad does). Only runs when the map is over the cap: no per-tick work.
+	 */
+	public static Group track(UUID squadId, long now) {
 		Group g = GROUPS.computeIfAbsent(squadId, k -> {
 			Group n = new Group();
 			n.magnate = groupOf(k);
 			return n;
 		});
+		g.seen = now;
+		if (GROUPS.size() > GROUP_CAP) GROUPS.values().removeIf(x -> now - x.seen > GROUP_IDLE_TICKS);
+		return g;
+	}
+
+	/** The squad's current strategic order after delivery delay and the disorganisation roll (called once per decision). */
+	public static Strategic commandOrder(UUID squadId, boolean enemiesInView, long now, RandomSource r) {
+		Group g = track(squadId, now);
 		Strategic want = strategic(enemiesInView, now);
 		boolean chairGroup = isChairGroup(g.magnate);
 		if (g.pending == null && want != g.current) {

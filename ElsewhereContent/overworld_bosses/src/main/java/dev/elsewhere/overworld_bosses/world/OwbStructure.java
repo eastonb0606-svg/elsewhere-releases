@@ -42,27 +42,30 @@ public class OwbStructure extends Structure {
 			case OwbPiece.SUN_CHAMBER -> {
 				// Under the pyramid's centre (pyramids sit at the chunk's min corner, 21x21).
 				int x = cp.getMinBlockX() + 10, z = cp.getMinBlockZ() + 10;
-				int surface = ctx.chunkGenerator().getFirstOccupiedHeight(x, z, Heightmap.Types.WORLD_SURFACE_WG, ctx.heightAccessor(), ctx.randomState());
+				int surface = OwbFit.exact(ctx, x, z, Heightmap.Types.WORLD_SURFACE_WG);
 				if (surface < sea) return Optional.empty();
-				int top = ctx.chunkGenerator().getFirstOccupiedHeight(x + 16, z, Heightmap.Types.WORLD_SURFACE_WG, ctx.heightAccessor(), ctx.randomState());
+				int top = OwbFit.exact(ctx, x + 16, z, Heightmap.Types.WORLD_SURFACE_WG);
 				int floor = Math.min(30, surface - 36);
 				BlockPos origin = new BlockPos(x, floor + 1, z);
-				// The chamber itself must not sit in a cave biome (dripstone/lush caves under the desert): check it at five depths.
-				for (int dy : GEN3 ? new int[] {2, 8, 16, 24, 30} : new int[] {2, 16, 30}) {
-					if (!ctx.validBiome().test(ctx.biomeResolver().getNoiseBiome(x >> 2, (floor + dy) >> 2, z >> 2))) return Optional.empty();
-				}
-				// 3.0 fit (s-struct-overworld): no cave or aquifer void may cross the hall; the chamber is encapsulated and the shaft kiosk
-				// is a fit piece of its own. Kill switch elsewhere.overhaul3.owb_fit.
+				// 3.0 fit (s-struct-overworld): no cave or aquifer void may cross the hall (STRUCTURES.md 4); where one does, the chamber
+				// tries 3 deeper floors under the same pyramid before the site is dropped, so sun chambers stay as common as in 2.1. The
+				// chamber is encapsulated and the shaft kiosk is a fit piece of its own. Kill switch elsewhere.overhaul3.owb_fit.
 				if (OwbFit.ENABLED) {
-					if (OwbFit.chamberHitsCave(x, z, floor, OwbFit.probe(ctx))) return Optional.empty();
-					return Optional.of(new GenerationStub(new BlockPos(x, surface, z), b -> OwbFit.sun(origin, top).forEach(b::addPiece)));
+					OwbFit.Probe probe = OwbFit.probe(ctx);
+					for (int f : OwbFit.sunFloors(floor)) {
+						if (!this.sunBiome(ctx, x, z, f) || OwbFit.chamberHitsCave(x, z, f, probe)) continue;
+						BlockPos at = new BlockPos(x, f + 1, z);
+						return Optional.of(new GenerationStub(new BlockPos(x, surface, z), b -> OwbFit.sun(at, top).forEach(b::addPiece)));
+					}
+					return Optional.empty();
 				}
+				if (!this.sunBiome(ctx, x, z, floor)) return Optional.empty();
 				// The biome check uses the stub position: keep it on the surface (underground could be a cave biome).
 				return Optional.of(new GenerationStub(new BlockPos(x, surface, z), b -> b.addPiece(new OwbPiece(this.kind, origin, top))));
 			}
 			case OwbPiece.WRECK_RING -> {
 				int x = cp.getMiddleBlockX(), z = cp.getMiddleBlockZ();
-				int floor = ctx.chunkGenerator().getFirstOccupiedHeight(x, z, Heightmap.Types.OCEAN_FLOOR_WG, ctx.heightAccessor(), ctx.randomState());
+				int floor = OwbFit.exact(ctx, x, z, Heightmap.Types.OCEAN_FLOOR_WG);
 				if (floor > sea - 12) return Optional.empty();
 				BlockPos origin = new BlockPos(x, sea + 1, z);
 				if (OwbFit.ENABLED) return Optional.of(new GenerationStub(origin, b -> OwbFit.wreck(x, z, sea, OwbFit.heights(ctx)).forEach(b::addPiece)));
@@ -73,7 +76,7 @@ public class OwbStructure extends Structure {
 				// order fixed per start chunk) with the same fit rules, so its density is back near 2.1 without loosening the fit. 2.1: the middle only.
 				if (GEN3 && OwbPiece.GLACIER_SHELF.equals(this.kind)) return this.glacierSite(ctx);
 				int x = cp.getMiddleBlockX(), z = cp.getMiddleBlockZ();
-				int y = ctx.chunkGenerator().getFirstOccupiedHeight(x, z, Heightmap.Types.WORLD_SURFACE_WG, ctx.heightAccessor(), ctx.randomState());
+				int y = OwbFit.exact(ctx, x, z, Heightmap.Types.WORLD_SURFACE_WG);
 				if (OwbPiece.CROAKING_SHRINE.equals(this.kind)) y = Math.max(y, sea);
 				BlockPos origin = new BlockPos(x, y, z);
 				if (OwbFit.ENABLED) return Optional.of(new GenerationStub(origin, b -> (OwbPiece.CROAKING_SHRINE.equals(this.kind)
@@ -81,6 +84,14 @@ public class OwbStructure extends Structure {
 				return Optional.of(new GenerationStub(origin, b -> b.addPiece(new OwbPiece(this.kind, origin, 0))));
 			}
 		}
+	}
+
+	/** The chamber itself must not sit in a cave biome (dripstone/lush caves under the desert): checked at five depths above its floor. */
+	private boolean sunBiome(GenerationContext ctx, int x, int z, int floor) {
+		for (int dy : GEN3 ? new int[] {2, 8, 16, 24, 30} : new int[] {2, 16, 30}) {
+			if (!ctx.validBiome().test(ctx.biomeResolver().getNoiseBiome(x >> 2, (floor + dy) >> 2, z >> 2))) return false;
+		}
+		return true;
 	}
 
 	/** Candidate centre offsets for the Glacier Shelf: the chunk middle, then the 8 whole-chunk neighbours. */
@@ -92,13 +103,12 @@ public class OwbStructure extends Structure {
 	 */
 	Optional<GenerationStub> glacierSite(GenerationContext ctx) {
 		ChunkPos cp = ctx.chunkPos();
-		var gen = ctx.chunkGenerator();
 		// the 8 neighbours start at an index taken from the start chunk (itself seed-chosen), so the order is deterministic per world
 		int rot = Math.floorMod(cp.x() * 31 + cp.z() * 17, 8);
 		for (int n = 0; n < GLACIER_OFFSETS.length; n++) {
 			int[] off = GLACIER_OFFSETS[n == 0 ? 0 : 1 + (n - 1 + rot) % 8];
 			int x = cp.getMiddleBlockX() + off[0], z = cp.getMiddleBlockZ() + off[1];
-			int y = gen.getFirstOccupiedHeight(x, z, Heightmap.Types.WORLD_SURFACE_WG, ctx.heightAccessor(), ctx.randomState());
+			int y = OwbFit.exact(ctx, x, z, Heightmap.Types.WORLD_SURFACE_WG);
 			// the stub's own biome (findValidGenerationPoint tests it) and the core 10 blocks down
 			if (!ctx.validBiome().test(ctx.biomeResolver().getNoiseBiome(x >> 2, y >> 2, z >> 2))) continue;
 			if (!ctx.validBiome().test(ctx.biomeResolver().getNoiseBiome(x >> 2, (y - 10) >> 2, z >> 2))) continue;
@@ -106,7 +116,7 @@ public class OwbStructure extends Structure {
 			boolean ok = true;
 			for (int dx : new int[] {-16, 0, 16}) {
 				for (int dz : new int[] {-26, -5, 16}) {
-					int g = gen.getFirstOccupiedHeight(x + dx, z + dz, Heightmap.Types.OCEAN_FLOOR_WG, ctx.heightAccessor(), ctx.randomState());
+					int g = OwbFit.exact(ctx, x + dx, z + dz, Heightmap.Types.OCEAN_FLOOR_WG);
 					lo = Math.min(lo, g);
 					hi = Math.max(hi, g);
 					if (hi - lo > 24) { ok = false; break; }

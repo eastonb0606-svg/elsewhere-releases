@@ -222,6 +222,13 @@ public final class GhFit {
 		}
 	}
 
+	/** Dev summon / self-test: plans {@code kind} at walk level {@code o} on the live ground (seed from the position) and builds it. */
+	public static List<Piece> buildPlan(ServerLevel level, String kind, BlockPos o) {
+		List<Piece> pieces = GhPlans.plan(kind, o, o.asLong(), live(level), live(level, true));
+		buildLive(level, pieces);
+		return pieces;
+	}
+
 	/** Builds one planned piece list into a live level (dev summon, self-test): same builders as worldgen. */
 	public static void buildLive(ServerLevel level, List<Piece> pieces) {
 		Out out = Out.live(level);

@@ -164,8 +164,8 @@ public final class AzmarAmir extends AzmarBoss {
 		c.getAttribute(Attributes.MAX_HEALTH).setBaseValue(50.0);
 		c.setHealth(50.0F);
 		c.getAttribute(Attributes.ARMOR).setBaseValue(4.0);
-		c.setItemSlot(EquipmentSlot.SADDLE, new ItemStack(Items.SADDLE));
-		c.setItemSlot(EquipmentSlot.BODY, new ItemStack(Items.GOLDEN_HORSE_ARMOR));         // the gold caparison
+		c.setItemSlot(EquipmentSlot.SADDLE, dev.elsewhere.rivals.azmar.look.AzmarRulerLook.caparison());   // K29: the visible gold-and-lapis caparison (camel_saddle layer)
+		c.setItemSlot(EquipmentSlot.BODY, new ItemStack(Items.GOLDEN_HORSE_ARMOR));         // golden barding: armour value only (a camel draws no body armour)
 		c.setCustomName(Component.literal("War Camel"));
 		c.addTag(dev.elsewhere.rivals.azmar.AzmarSoldiers.ALLY_TAG);
 		c.setPersistenceRequired();

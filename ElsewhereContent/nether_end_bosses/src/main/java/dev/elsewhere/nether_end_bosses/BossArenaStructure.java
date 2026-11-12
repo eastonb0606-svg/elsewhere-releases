@@ -62,6 +62,23 @@ public final class BossArenaStructure extends Structure {
 		RandomSource rnd = context.random();
 		boolean end = boss.equals("ossyra") || boss.equals("aphelion");
 		int r = footRadius(boss);
+		if (dev.elsewhere.nether_end_bosses.fit3.NetherFit.ENABLED) {
+			// 3.0 v2 (s-struct-nether): scored shelf from noise columns, per-chunk fit pieces (fit3)
+			int fy = dev.elsewhere.nether_end_bosses.fit3.FitSite.pick(boss, x, z,
+				(cx, cz) -> context.chunkGenerator().getBaseColumn(cx, cz, context.heightAccessor(), context.randomState()),
+				context.heightAccessor().getMinY(), context.heightAccessor().getMaxY(), rnd);
+			if (fy == dev.elsewhere.nether_end_bosses.fit3.FitSite.NONE) return Optional.empty();
+			int[][] rim = {{0, 0}, {r, 0}, {-r, 0}, {0, r}, {0, -r}};
+			for (int[] c : rim) {
+				var biome = context.biomeResolver().getNoiseBiome((x + c[0]) >> 2, fy >> 2, (z + c[1]) >> 2);
+				if (!context.validBiome().test(biome)) return Optional.empty();
+				// STRUCTURES.md 4: the Matriarch Spire needs solid highlands or midlands (no barrens or small islands)
+				if (boss.equals("ossyra") && !biome.is(net.minecraft.world.level.biome.Biomes.END_HIGHLANDS) && !biome.is(net.minecraft.world.level.biome.Biomes.END_MIDLANDS)) return Optional.empty();
+			}
+			BlockPos o2 = new BlockPos(x, fy, z);
+			long seed2 = rnd.nextLong();
+			return Optional.of(new GenerationStub(o2, b -> b.addPiece(new Piece(boss, o2, seed2, 2))));
+		}
 		// sample columns over the footprint: the centre plus 8 columns on each of two rings (r/2 and r)
 		int n = 17;
 		int[] sx = new int[n], sz = new int[n];
@@ -122,7 +139,7 @@ public final class BossArenaStructure extends Structure {
 		}
 		BlockPos origin = new BlockPos(x, y, z);
 		long seed = rnd.nextLong();
-		return Optional.of(new GenerationStub(origin, b -> b.addPiece(new Piece(boss, origin, seed))));
+		return Optional.of(new GenerationStub(origin, b -> b.addPiece(new Piece(boss, origin, seed, 1))));
 	}
 
 	/** Deepest foundation a nether arena may need under its rim (also the depth it is rejected beyond). */
@@ -202,12 +219,17 @@ public final class BossArenaStructure extends Structure {
 		public final String boss;
 		public final BlockPos origin;
 		private final long seed;
+		/** 1 = 2.x piece (built once from its centre chunk with the 2.x builder), 2 = 3.0 fit piece (written chunk by chunk). */
+		private final int version;
 
-		Piece(String boss, BlockPos origin, long seed) {
-			super(PIECE, 0, new BoundingBox(origin.getX() - 24, origin.getY() - 32, origin.getZ() - 24, origin.getX() + 24, origin.getY() + 32, origin.getZ() + 24));
+		Piece(String boss, BlockPos origin, long seed, int version) {
+			super(PIECE, 0, version >= 2
+				? new BoundingBox(origin.getX() - 23, origin.getY() - 64, origin.getZ() - 23, origin.getX() + 23, origin.getY() + 34, origin.getZ() + 23)
+				: new BoundingBox(origin.getX() - 24, origin.getY() - 32, origin.getZ() - 24, origin.getX() + 24, origin.getY() + 32, origin.getZ() + 24));
 			this.boss = boss;
 			this.origin = origin;
 			this.seed = seed;
+			this.version = version;
 		}
 
 		Piece(CompoundTag tag) {
@@ -215,6 +237,25 @@ public final class BossArenaStructure extends Structure {
 			this.boss = tag.getStringOr("boss", "");
 			this.origin = BlockPos.of(tag.getLongOr("origin", 0L));
 			this.seed = tag.getLongOr("seed", 0L);
+			this.version = tag.getIntOr("v", 1); // saved 2.x pieces have no version: they finish with the 2.x code
+		}
+
+		public long seed() {
+			return seed;
+		}
+
+		public int version() {
+			return version;
+		}
+
+		/** Self-test: a new piece of the given version. */
+		public static Piece of(String boss, BlockPos origin, long seed, int version) {
+			return new Piece(boss, origin, seed, version);
+		}
+
+		/** Self-test: a piece as a 2.x world saved it (no "v" tag). */
+		public static Piece fromTag(CompoundTag tag) {
+			return new Piece(tag);
 		}
 
 		@Override
@@ -222,13 +263,21 @@ public final class BossArenaStructure extends Structure {
 			tag.putString("boss", boss);
 			tag.putLong("origin", origin.asLong());
 			tag.putLong("seed", seed);
+			if (version >= 2) tag.putInt("v", version);
 		}
 
 		@Override
 		public void postProcess(WorldGenLevel level, StructureManager structureManager, ChunkGenerator generator, RandomSource random,
 								BoundingBox chunkBB, ChunkPos chunkPos, BlockPos referencePos) {
+			if (version >= 2) {
+				// 3.0: every chunk writes its own part (reads and writes clipped to chunkBB), foundations per piece part
+				var arena = dev.elsewhere.nether_end_bosses.fit3.NetherFit.ARENAS.get(boss);
+				if (arena == null) return;
+				arena.build(new dev.elsewhere.nether_end_bosses.fit3.FitW(level, chunkBB, seed), origin);
+				return;
+			}
 			if (chunkPos.x() != (origin.getX() >> 4) || chunkPos.z() != (origin.getZ() >> 4)) return;
-			ArenaBuilder builder = ArenaBuilder.BY_BOSS.get(boss);
+			ArenaBuilder builder = dev.elsewhere.nether_end_bosses.fit3.NetherFit.LEGACY.getOrDefault(boss, ArenaBuilder.BY_BOSS.get(boss));
 			if (builder == null) return;
 			builder.build(level, origin, RandomSource.create(seed));
 			foundation(level, boss, origin);

@@ -121,7 +121,8 @@ public class Grumblegut extends BossEntity {
 	public static Grumblegut summon(ServerLevel level, BlockPos center) {
 		ArenaSeal arena = ArenaSeal.create(level, center, 18, 4, 14);
 		Grumblegut boss = GreenhazeEntities.GRUMBLEGUT.create(level, EntitySpawnReason.TRIGGERED);
-		boss.snapTo(center.getX() + 0.5, center.getY() + 1, center.getZ() - 12.5, 0F, 0F);
+		// 3.0: the seat rings follow the ground, so stand on whatever ring is there
+		boss.snapTo(center.getX() + 0.5, dev.elsewhere.greenhaze_hush.world.fit.GhFit.standY(level, center.getX(), center.getY() + 1, center.getZ() - 13), center.getZ() - 12.5, 0F, 0F);
 		boss.setArena(arena);
 		level.addFreshEntity(boss);
 		arena.seal(StubBlocks.ARENA_SEAL);
@@ -130,14 +131,16 @@ public class Grumblegut extends BossEntity {
 		for (int i = 0; i < 2; i++) {
 			GreenhazeMobs.LazyGorger g = GreenhazeEntities.LAZY_GORGER.create(level, EntitySpawnReason.EVENT);
 			if (g == null) continue;
-			g.snapTo(center.getX() + 0.5 + (i == 0 ? 11 : -11), center.getY() + 1, center.getZ() + 6.5, 0F, 0F);
+			int gx = center.getX() + (i == 0 ? 11 : -11);
+			g.snapTo(gx + 0.5, dev.elsewhere.greenhaze_hush.world.fit.GhFit.standY(level, gx, center.getY() + 1, center.getZ() + 6), center.getZ() + 6.5, 0F, 0F);
 			level.addFreshEntity(g);
 		}
 		return boss;
 	}
 
 	public static Grumblegut buildAndSummon(ServerLevel level, BlockPos origin) {
-		GreenhazeStructures.BONFIRE_TERRACE.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
+		if (dev.elsewhere.greenhaze_hush.world.fit.GhFit.LOOKS) dev.elsewhere.greenhaze_hush.world.fit.GhFit.buildPlan(level, "bonfire_terrace", origin);
+		else GreenhazeStructures.BONFIRE_TERRACE.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
 		return summon(level, origin);
 	}
 

@@ -33,6 +33,25 @@ def jitter(c, r, n=5):
 
 
 # ---------------------------------------------------------------- emblems (8 wide x 11 rows; row 11 is the dagged waist, left clear)
+RAVEN = ["...MM...",
+         "..kEM...",
+         "...MMM..",
+         "...MMMM.",
+         "..MMMLM.",
+         "..MMMMLM",
+         "...MMMMM",
+         "...D.D.M",
+         "..DD.DD."]
+
+
+def onto(background, grid, x0):
+    """Paints an emblem grid ('.' = keep) over cape background rows, starting at column x0."""
+    out = []
+    for bg, row in zip(background, grid):
+        out.append("".join(row[x - x0] if x0 <= x < x0 + len(row) and row[x - x0] != "." else c for x, c in enumerate(bg)))
+    return out
+
+
 EMBLEMS = {
     "aldermark": {
         "pal": {"R": "#A3302E", "r": "#7A2321", "Y": "#F0C94A", "y": "#C4962F", "W": "#ECE3C2", "w": "#C9BC8E",
@@ -55,17 +74,8 @@ EMBLEMS = {
     "hrafnholt": {
         "pal": {"M": "#6B4A2B", "D": "#33231A", "L": "#8E6A43", "E": "#D9A23A", "k": "#4A4440", "B": "#4A3420",
                 "I": "#9A9A96"},
-        "front": ["MLMLMLML",
-                  "D......D",
-                  "DD.kDE.D",
-                  "DDLDDDLD",
-                  ".DDDDDD.",
-                  "..DLLD..",
-                  "..DMMD..",
-                  "...DD...",
-                  "..DDDD..",
-                  "..L..L..",
-                  "BBBIIBBB"],
+        # a raven in profile, as on the Norse raven banner: black beak, amber eye, lighter wing feathers, tail, talons
+        "front": ["MLMLMLML"] + RAVEN + ["BBBIIBBB"],
         "back": None,
         "belt_back": "BBBBBBBB",
         "hem": ("#6B4A2B", "#8E6A43", "#553A22"),
@@ -153,6 +163,7 @@ CAPES = {
         "pal": {"T": "#E8D9A0", "t": "#BFA96E", "B": "#2E4C9E", "b": "#243C7E", "h": "#3A5CB4", "Y": "#F0C94A",
                 "y": "#C4962F", "W": "#ECE3C2", "w": "#C9BC8E", "d": "#1A2340"},
         "lining": ("#E2D6B0", "#CBBE92"),
+        "lining_rows": (0,), "lining_cols": (0, 9), "lining_hem": 2,
         "long": ["TTTTTTTTTT",
                  "TBbBhhBbBT",
                  "TBYbYYbYBT",
@@ -183,23 +194,15 @@ CAPES = {
         "pal": {"F": "#7A6650", "f": "#5C4A38", "e": "#9A8468", "G": "#2E5A2C", "g": "#244A23", "h": "#386B35",
                 "M": "#6B4A2B", "L": "#8E6A43", "D": "#33231A", "E": "#D9A23A", "k": "#4A4440"},
         "lining": ("#5A3F25", "#4A3420"),
-        "lining_fur_rows": 2,
+        "lining_rows": (0, 1), "lining_cols": (0, 9),
         "long": ["FeFfFeFFfF",
                  "fFeFfFFeFf",
-                 "MGfGFgGfGM",
-                 "MGD.....DM".replace(".", "G"),
-                 "MDD.kDE.DM".replace(".", "G"),
-                 "MDDLDDDLDM",
-                 "MGDDDDDDGM",
-                 "MGgDLLDgGM",
-                 "MGgDMMDgGM",
-                 "MGhgDDghGM",
-                 "MGgDDDDgGM",
-                 "MGhgLgLhGM",
-                 "MLMLMLMLML",
-                 "MMMMMMMMMM",
-                 "G.GG.GG.GG",
-                 "..G....G.."],
+                 "MGfGFgGfGM"]
+                + onto(["MGghGGhgGM"] * 9, RAVEN, 1)
+                + ["MLMLMLMLML",
+                   "MMMMMMMMMM",
+                   "G.GG.GG.GG",
+                   "..G....G.."],
         "short": ["FeFfFeFFfF",
                   "fFeFfFFeFf",
                   "MGfGFgGfGM",
@@ -215,7 +218,7 @@ CAPES = {
         "pal": {"G": "#E2B240", "g": "#B07F28", "W": "#E9E1CC", "w": "#D2C8B0", "L": "#1F3F8F", "l": "#16245C",
                 "T": "#2BB3A3", "r": "#C8462A", "S": "#7A4E1C", "s": "#A86E28"},
         "lining": ("#1F3F8F", "#1A3678"),
-        "lining_keep": "Gg",  # the gold collar shows on both sides
+        "lining_rows": (0,), "lining_hem": 1,
         "long": ["GGGGGGGGGG",
                  "WwWWwWWwWW",
                  "WwWWrrWwWW",
@@ -243,7 +246,7 @@ CAPES = {
         "pal": {"Y": "#D6A832", "y": "#9E7620", "P": "#5B2A86", "p": "#45206A", "q": "#6E3A9C", "C": "#9E1B32",
                 "c": "#CC3440", "o": "#FFC45A"},
         "lining": ("#9E1B32", "#82162A"),
-        "lining_keep": "Yy",
+        "lining_rows": (0,), "lining_cols": (0, 9), "lining_hem": 2,
         "long": ["YYYYYYYYYY",
                  "YPpPyyPpPY",
                  "YPpYYYYpPY",
@@ -277,8 +280,11 @@ def cape(name, spec, rows):
     grid = cape_grid(rows)
     pal = {k: rgb(v) for k, v in spec["pal"].items()}
     lin_a, lin_b = rgb(spec["lining"][0]), rgb(spec["lining"][1])
-    keep = spec.get("lining_keep", "")
-    fur_rows = spec.get("lining_fur_rows", 0)
+    # the collar, side edging and hem bands wrap round to the inside; the emblem and cloth do not
+    keep_rows = set(spec.get("lining_rows", (0,)))
+    keep_cols = set(spec.get("lining_cols", ()))
+    last = max(y for y, row in enumerate(grid) if row.strip("."))
+    keep_rows |= {last - i for i in range(spec.get("lining_hem", 0))}
     r = random.Random(zlib.crc32(name.encode()) ^ len(rows))
     img = Image.new("RGBA", (32, 16), (0, 0, 0, 0))
     for y, row in enumerate(grid):
@@ -288,10 +294,10 @@ def cape(name, spec, rows):
             img.putpixel((OUTER_U + x, y), jitter(pal[ch], r, 4))
             # lining: the same pixel seen from the front sits at the mirrored column of the lining region
             lx = LINING_U + CAPE_W - 1 - x
-            if ch in keep or y < fur_rows:
+            if y in keep_rows or x in keep_cols:
                 c = pal[ch]
             else:
-                c = lin_a if (x + y) % 3 else lin_b
+                c = lin_b if x % 3 == 1 else lin_a  # soft vertical folds
             img.putpixel((lx, y), jitter(c, r, 3))
     return img
 

@@ -3,7 +3,15 @@
 import glob, json, os, sys, zipfile
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.dirname(HERE)
-info = json.load(open(os.path.join(HERE, 'src/main/resources/assets/elsewhere/jei/info.json')))
+# 3.0: the plugin reads every assets/elsewhere/jei/*.json; gear3's jei_info.json and the gear2/kingdom_lore INTEGRATION files reach
+# info.json at merge (snapshot_extra). Check against that merged view. The server-side JeiSelfTest is the full check (recipes too).
+info = {}
+for f in sorted(glob.glob(os.path.join(HERE, 'src/main/resources/assets/elsewhere/jei/*.json'))) + [os.path.join(CONTENT, 'gear3/src/main/resources/elsewhere_gear3/jei_info.json'), os.path.join(CONTENT, 'gear2/INTEGRATION/jei_info_gear2.json'), os.path.join(CONTENT, 'kingdom_lore/INTEGRATION/jei_info_kingdom.json')]:
+    if os.path.exists(f):
+        for k, v in json.load(open(f)).items():
+            k = k if ':' in k else 'elsewhere:' + k
+            info.setdefault(k, [])
+            info[k] += [l for l in v if l not in info[k]]
 old = json.loads(zipfile.ZipFile(os.path.join(HERE, 'libs/elsewhere-0.3.0-beta.jar')).read('assets/elsewhere/lang/en_us.json'))
 def ids(d):
     return {k.split('.', 2)[2] for k in d if k.startswith(('item.elsewhere.', 'block.elsewhere.')) and k.count('.') == 2}

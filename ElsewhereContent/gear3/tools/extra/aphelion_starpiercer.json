@@ -1,0 +1,187 @@
+{
+ "_doc": "s-starpiercer: the Starpiercer's bow pull stages (item definition over the 1.6 s draw: use_duration scale 1/32; models with the in-hand display of the vanilla bow turned 45 degrees for the upright sprite), its 4 sounds (re-pitched vanilla events) and the arrow entity's name and subtitles. Textures: tools/starpiercer_art.py.",
+ "files": {
+  "assets/elsewhere/items/aphelion_starpiercer.json": {
+   "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:using_item",
+    "on_false": {
+     "type": "minecraft:model",
+     "model": "elsewhere:item/aphelion_starpiercer"
+    },
+    "on_true": {
+     "type": "minecraft:range_dispatch",
+     "property": "minecraft:use_duration",
+     "scale": 0.03125,
+     "entries": [
+      {
+       "threshold": 0.65,
+       "model": {
+        "type": "minecraft:model",
+        "model": "elsewhere:item/aphelion_starpiercer_pulling_1"
+       }
+      },
+      {
+       "threshold": 0.9,
+       "model": {
+        "type": "minecraft:model",
+        "model": "elsewhere:item/aphelion_starpiercer_pulling_2"
+       }
+      }
+     ],
+     "fallback": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/aphelion_starpiercer_pulling_0"
+     }
+    }
+   }
+  },
+  "assets/elsewhere/models/item/aphelion_starpiercer.json": {
+   "parent": "minecraft:item/generated",
+   "textures": {
+    "layer0": "elsewhere:item/aphelion_starpiercer"
+   },
+   "display": {
+    "thirdperson_righthand": {
+     "rotation": [
+      -80,
+      260,
+      -85
+     ],
+     "translation": [
+      -1,
+      -2,
+      2.5
+     ],
+     "scale": [
+      0.9,
+      0.9,
+      0.9
+     ]
+    },
+    "thirdperson_lefthand": {
+     "rotation": [
+      -80,
+      -280,
+      85
+     ],
+     "translation": [
+      -1,
+      -2,
+      2.5
+     ],
+     "scale": [
+      0.9,
+      0.9,
+      0.9
+     ]
+    },
+    "firstperson_righthand": {
+     "rotation": [
+      0,
+      -90,
+      -20
+     ],
+     "translation": [
+      1.13,
+      3.2,
+      1.13
+     ],
+     "scale": [
+      0.68,
+      0.68,
+      0.68
+     ]
+    },
+    "firstperson_lefthand": {
+     "rotation": [
+      0,
+      90,
+      20
+     ],
+     "translation": [
+      1.13,
+      3.2,
+      1.13
+     ],
+     "scale": [
+      0.68,
+      0.68,
+      0.68
+     ]
+    }
+   }
+  },
+  "assets/elsewhere/models/item/aphelion_starpiercer_pulling_0.json": {
+   "parent": "elsewhere:item/aphelion_starpiercer",
+   "textures": {
+    "layer0": "elsewhere:item/aphelion_starpiercer_pulling_0"
+   }
+  },
+  "assets/elsewhere/models/item/aphelion_starpiercer_pulling_1.json": {
+   "parent": "elsewhere:item/aphelion_starpiercer",
+   "textures": {
+    "layer0": "elsewhere:item/aphelion_starpiercer_pulling_1"
+   }
+  },
+  "assets/elsewhere/models/item/aphelion_starpiercer_pulling_2.json": {
+   "parent": "elsewhere:item/aphelion_starpiercer",
+   "textures": {
+    "layer0": "elsewhere:item/aphelion_starpiercer_pulling_2"
+   }
+  }
+ },
+ "sounds": {
+  "item.aphelion_starpiercer.shoot": {
+   "sounds": [
+    {
+     "name": "minecraft:item.trident.throw",
+     "type": "event",
+     "pitch": 1.4,
+     "volume": 1.0
+    }
+   ],
+   "subtitle": "subtitles.elsewhere.item.aphelion_starpiercer.shoot"
+  },
+  "item.aphelion_starpiercer.draw_full": {
+   "sounds": [
+    {
+     "name": "minecraft:block.amethyst_block.chime",
+     "type": "event",
+     "pitch": 1.4,
+     "volume": 1.0
+    }
+   ],
+   "subtitle": "subtitles.elsewhere.item.aphelion_starpiercer.draw_full"
+  },
+  "item.aphelion_starpiercer.cancel": {
+   "sounds": [
+    {
+     "name": "minecraft:block.tripwire.detach",
+     "type": "event",
+     "pitch": 0.8,
+     "volume": 1.0
+    }
+   ],
+   "subtitle": "subtitles.elsewhere.item.aphelion_starpiercer.cancel"
+  },
+  "entity.starpiercer_arrow.hit": {
+   "sounds": [
+    {
+     "name": "minecraft:block.amethyst_cluster.break",
+     "type": "event",
+     "pitch": 1.3,
+     "volume": 1.0
+    }
+   ],
+   "subtitle": "subtitles.elsewhere.entity.starpiercer_arrow.hit"
+  }
+ },
+ "lang": {
+  "entity.elsewhere.starpiercer_arrow": "Starpiercer Arrow",
+  "subtitles.elsewhere.item.aphelion_starpiercer.shoot": "Starpiercer looses",
+  "subtitles.elsewhere.item.aphelion_starpiercer.draw_full": "Starpiercer fully drawn",
+  "subtitles.elsewhere.item.aphelion_starpiercer.cancel": "Starpiercer draw slackens",
+  "subtitles.elsewhere.entity.starpiercer_arrow.hit": "Starpiercer Arrow hits"
+ }
+}

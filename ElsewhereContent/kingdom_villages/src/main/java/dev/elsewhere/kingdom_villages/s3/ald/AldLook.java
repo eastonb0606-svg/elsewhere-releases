@@ -36,7 +36,7 @@ public final class AldLook {
 
 	public static final int FOUNDATION_CAP = 12;
 
-	static boolean on(String key) {
+	public static boolean on(String key) {
 		return !"false".equalsIgnoreCase(System.getProperty("elsewhere.overhaul3." + key, "true"));
 	}
 

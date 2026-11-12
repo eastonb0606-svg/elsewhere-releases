@@ -7,9 +7,13 @@ base {
 }
 
 loom {
+	// 3.0 s-p5-tooltips: client source set (src/client/java; entry dev.elsewhere.gear2.client.Gear2Client).
+	splitEnvironmentSourceSets()
+
 	mods {
 		"elsewhere_gear2" {
 			sourceSet sourceSets.main
+			sourceSet sourceSets.client
 		}
 	}
 

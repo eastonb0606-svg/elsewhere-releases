@@ -1,0 +1,9 @@
+{
+  "_doc": "s-willolantern: Marsh Wisp entity name and the Will-o'-Lantern's overlay messages (dev.elsewhere.gear3.s3.willo). The wisp's recast list is the hand-made item tag elsewhere:wisp_recast.",
+  "lang": {
+    "entity.elsewhere.marsh_wisp": "Marsh Wisp",
+    "message.elsewhere.will_o_lantern.off": "The Will-o'-Lantern is switched off on this server.",
+    "message.elsewhere.will_o_lantern.echo": "Your Marsh Wisp will echo %s",
+    "message.elsewhere.will_o_lantern.nothing": "Cast a damage spell and your Marsh Wisp will echo it"
+  }
+}

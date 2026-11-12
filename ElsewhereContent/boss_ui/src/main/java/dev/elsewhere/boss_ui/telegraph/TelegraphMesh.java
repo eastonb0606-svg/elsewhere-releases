@@ -133,6 +133,11 @@ public final class TelegraphMesh {
 		q += strip(out, cx, cy + 0.01, cz, ux, uy, uz, vx, vz, 0, len, -w / 2, -w / 2 + e, edge);
 		q += strip(out, cx, cy + 0.01, cz, ux, uy, uz, vx, vz, 0, len, w / 2 - e, w / 2, edge);
 		q += strip(out, cx, cy + 0.01, cz, ux, uy, uz, vx, vz, len - e, len, -w / 2 + e, w / 2 - e, edge);
+		if (Math.abs(dy) > 0.5) {
+			// an airborne beam: a second ribbon at right angles (side = u x v) so it reads from every angle
+			double sx = uy * vz * w / 2, sy = (uz * vx - ux * vz) * w / 2, sz = -uy * vx * w / 2;
+			q += quad(out, cx - sx, cy - sy, cz - sz, cx + sx, cy + sy, cz + sz, cx + dx + sx, cy + dy + sy, cz + dz + sz, cx + dx - sx, cy + dy - sy, cz + dz - sz, edge);
+		}
 		return q;
 	}
 

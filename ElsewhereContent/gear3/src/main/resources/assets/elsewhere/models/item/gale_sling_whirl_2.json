@@ -1,0 +1,6 @@
+{
+  "parent": "elsewhere:item/gale_sling",
+  "textures": {
+    "layer0": "elsewhere:item/gale_sling_whirl_2"
+  }
+}

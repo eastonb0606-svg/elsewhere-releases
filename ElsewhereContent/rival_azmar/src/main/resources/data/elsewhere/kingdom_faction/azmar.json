@@ -248,19 +248,23 @@
   "routine": {
    "watch_changes": [0, 3, 6, 9, 12, 15, 18, 21],
    "watch_jitter_min": 0,
+   "watch_sound": "brass",
    "blocks": [
-    {"from": 0, "to": 5, "activity": "watch", "share": 0.34, "where": "temple"},
-    {"from": 5, "to": 6, "activity": "temple", "share": 0.3, "where": "temple_steps"},
-    {"from": 6, "to": 9, "activity": "drill", "share": 0.6, "where": "parade_ground"},
-    {"from": 9, "to": 11, "activity": "court", "share": 0.3, "where": "palace_gate"},
-    {"from": 11, "to": 15, "activity": "siesta", "share": 0.7, "where": "shade"},
-    {"from": 15, "to": 20, "activity": "market", "share": 0.7, "where": "bazaar"},
-    {"from": 20, "to": 24, "activity": "watch", "share": 0.34, "where": "avenue"}
+    {"from": 0, "to": 5, "activity": "temple", "share": 0.34, "where": "temple", "style": "vigil", "pose": "torch", "groups": [{"unit": "mounted", "activity": "patrol", "where": "river"}]},
+    {"from": 5, "to": 6, "activity": "temple", "share": 0.3, "where": "temple_steps", "style": "dawn_rite", "sound": "chant", "townsfolk": [{"activity": "temple", "where": "temple_steps", "share": 0.4, "pose": "pray", "style": "dawn_rite"}]},
+    {"from": 6, "to": 9, "activity": "drill", "share": 0.6, "where": "parade_ground", "style": "rank_blocks", "pose": "attention", "sound": "drum", "townsfolk": [{"activity": "work", "where": "bazaar", "share": 0.3, "pose": "carry", "style": "porters"}]},
+    {"from": 9, "to": 11, "activity": "court", "share": 0.3, "where": "palace_gate", "style": "diwan", "townsfolk": [{"activity": "court", "where": "palace_gate", "share": 0.4, "pose": "attention", "style": "crowd"}, {"activity": "work", "where": "diwan", "share": 0.1, "pose": "work", "style": "scribes"}]},
+    {"from": 11, "to": 15, "activity": "siesta", "share": 0.7, "where": "shade", "townsfolk": [{"activity": "siesta", "where": "shade", "share": 0.15, "pose": "lounge"}]},
+    {"from": 15, "to": 20, "activity": "market", "share": 0.7, "where": "bazaar", "pose": "attention", "sound": "brass", "townsfolk": [{"activity": "market", "where": "bazaar", "share": 0.9, "pose": "carry"}]},
+    {"from": 20, "to": 24, "activity": "temple", "share": 0.2, "where": "temple", "style": "vigil", "pose": "torch", "townsfolk": [{"activity": "temple", "where": "temple", "share": 0.1, "pose": "pray", "style": "vigil"}]}
    ],
    "events": [
-    {"id": "sun_procession", "every_days": 5, "at": 12, "hours": 1, "activity": "procession", "where": "avenue"},
-    {"id": "review_of_the_ranks", "every_days": 7, "at": 8, "hours": 2, "activity": "muster", "where": "parade_ground"},
-    {"id": "flood_festival", "every_days": 10, "at": 19, "hours": 4, "activity": "procession", "where": "river"}
+    {"id": "caravan", "every_days": 1, "at": 16, "hours": 4, "activity": "caravan", "where": "caravanserai", "share": 0.15, "pose": "carry", "sound": "brass", "groups": [{"unit": "mounted", "activity": "caravan", "where": "caravanserai", "pose": "attention"}], "phases": [{"at": 19, "activity": "caravan", "where": "road", "style": "depart", "pose": "carry"}], "townsfolk": [{"activity": "caravan", "where": "caravanserai", "share": 0.15, "pose": "carry"}]},
+    {"id": "sunset_audience", "every_days": 1, "at": 18, "hours": 1, "activity": "court", "where": "palace", "share": 0.25, "style": "court", "sound": "brass", "lights": [{"id": "avenue_lamps", "on": true}], "townsfolk": [{"activity": "court", "where": "palace_gate", "share": 0.2, "pose": "attention", "style": "crowd"}]},
+    {"id": "lamps_out", "every_days": 1, "at": 6, "hours": 1, "activity": "watch", "where": "post", "share": 0.0, "lights": [{"id": "avenue_lamps", "on": false}]},
+    {"id": "sun_procession", "every_days": 5, "at": 12, "hours": 1, "activity": "procession", "where": "avenue", "share": 0.85, "pose": "attention", "sound": "brass", "townsfolk": [{"activity": "procession", "where": "avenue", "share": 0.7, "pose": "cheer", "style": "crowd"}]},
+    {"id": "review_of_the_ranks", "every_days": 7, "at": 8, "hours": 2, "activity": "muster", "where": "parade_ground", "share": 1.0, "style": "review", "sound": "brass", "townsfolk": [{"activity": "muster", "where": "parade_ground", "share": 0.4, "pose": "cheer", "style": "crowd"}]},
+    {"id": "flood_festival", "every_days": 10, "at": 19, "hours": 4, "activity": "procession", "where": "river", "share": 0.6, "pose": "torch", "sound": "chant", "fx": "lamp_boats", "townsfolk": [{"activity": "procession", "where": "river", "share": 0.6, "pose": "torch", "style": "crowd"}]}
    ]
   },
   "units": [

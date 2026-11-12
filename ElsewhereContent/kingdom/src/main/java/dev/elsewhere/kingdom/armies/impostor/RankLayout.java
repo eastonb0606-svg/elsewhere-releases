@@ -79,7 +79,8 @@ public final class RankLayout {
 			}
 		}
 		if (jitter > 0) {
-			float j = Math.min(jitter, 1.0F) * 0.5F;
+			// never so much that two men stand inside each other (bodies are 0.6 wide)
+			float j = Math.min(Math.min(jitter, 1.0F) * 0.5F, Math.max(0F, (sp - 0.65F) * 0.5F));
 			for (int i = 0; i < slots; i++) {
 				out[2 * i] += (hash01(seed, i * 2) - 0.5F) * 2 * j;
 				out[2 * i + 1] += (hash01(seed, i * 2 + 1) - 0.5F) * 2 * j;

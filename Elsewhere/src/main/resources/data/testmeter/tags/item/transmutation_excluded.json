@@ -26,10 +26,6 @@
       "required": false
     },
     {
-      "id": "elsewhere:attuned_wayfinder",
-      "required": false
-    },
-    {
       "id": "elsewhere:avalanche_horn",
       "required": false
     },
@@ -43,10 +39,6 @@
     },
     {
       "id": "elsewhere:blossom_seal_charm",
-      "required": false
-    },
-    {
-      "id": "elsewhere:boss_altar",
       "required": false
     },
     {
@@ -667,6 +659,46 @@
     },
     {
       "id": "elsewhere:duel_block",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_upgrade_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:climber_upgrade_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_armor_trim_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galvanic_upgrade_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushweave_upgrade_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:summit_armor_trim_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunburst_armor_trim_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_upgrade_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tidal_armor_trim_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tidebrass_upgrade_smithing_template",
       "required": false
     }
   ]

@@ -135,7 +135,7 @@ public final class Conquest {
 			double td = territoryDist(level, ledger, p, castle, realm.faction().toString());
 			if (td < 300 || td > 800) continue;
 			if (!freshChunk(level, ledger, p)) continue;
-			BlockPos c = flatSpot(level, p, 6);
+			BlockPos c = FactionVillages.of(realm.faction()).isAldermark() && dev.elsewhere.kingdom_villages.s3.ald.AldLook.FORT ? dev.elsewhere.kingdom_villages.s3.ald.AldFort.site(level, p, castle) : flatSpot(level, p, 6); // s-vlook-ald
 			if (c == null) continue;
 			return foundOutpost(level, ledger, c, castle, realm.faction(), rnd, now);
 		}
@@ -148,14 +148,15 @@ public final class Conquest {
 
 	public static VillageRecord foundOutpost(ServerLevel level, VillageLedger ledger, BlockPos c, BlockPos castle, Identifier faction, RandomSource rnd, long now) {
 		Profile prof = FactionVillages.of(faction);
-		VillageRecord s = newSite(ledger, VillageRecord.Kind.OUTPOST, c, new BoundingBox(c.getX() - 6, c.getY() - 1, c.getZ() - 6, c.getX() + 6, c.getY() + 8, c.getZ() + 6));
+		dev.elsewhere.kingdom_villages.s3.ald.AldFort.Plan fort = prof.isAldermark() && dev.elsewhere.kingdom_villages.s3.ald.AldLook.FORT ? dev.elsewhere.kingdom_villages.s3.ald.AldFort.plan(level, c, castle) : null; // s-vlook-ald: motte-and-bailey
+		VillageRecord s = newSite(ledger, VillageRecord.Kind.OUTPOST, fort != null ? fort.yard() : c, fort != null ? fort.box() : new BoundingBox(c.getX() - 6, c.getY() - 1, c.getZ() - 6, c.getX() + 6, c.getY() + 8, c.getZ() + 6));
 		s.castle = castle;
 		s.owner = faction.toString();
 		s.state = VillageRecord.State.OCCUPIED;
 		s.builtAt = now;
 		Direction gate = Direction.getApproximateNearest((double) (castle.getX() - c.getX()), 0.0, (double) (castle.getZ() - c.getZ()));
-		for (VillageRecord.Op op : prof.isAldermark() ? Plans.outpost(c, gate) : RivalPlans.outpost(prof, c, gate)) BlockWriter.write(level, s, BlockPos.of(op.pos()), op.state());
-		s.hint = prof.isAldermark() ? c.offset(-1, 6, -1) : RivalPlans.hintPos(prof, c);
+		for (VillageRecord.Op op : fort != null ? fort.ops() : prof.isAldermark() ? Plans.outpost(c, gate) : RivalPlans.outpost(prof, c, gate)) BlockWriter.write(level, s, BlockPos.of(op.pos()), op.state());
+		s.hint = fort != null ? fort.flag() : prof.isAldermark() ? c.offset(-1, 6, -1) : RivalPlans.hintPos(prof, c);
 		if (faction.equals(Factions.ALDERMARK)) {
 			ledger.outpostsFounded++;
 			ledger.lastOutpostTime = now;
@@ -165,7 +166,7 @@ public final class Conquest {
 		}
 		ledger.dirty();
 		// royal road from the gate toward the castle
-		newRoad(level, ledger, c.relative(gate, 6), castle, true);
+		newRoad(level, ledger, fort != null ? fort.roadStart() : c.relative(gate, 6), castle, true);
 		if (rnd.nextInt(4) == 0) tryHamlet(level, ledger, c, castle, rnd);
 		return s;
 	}
@@ -205,6 +206,7 @@ public final class Conquest {
 			if (s.forceDead >= s.forceSpawned && s.state == VillageRecord.State.OCCUPIED) {
 				// captured: the Aldermark banner comes down and a white one goes up
 				BlockPos b = s.center.offset(-1, 6, -1);
+				if (s.hint != null && s.owner.equals(Factions.ALDERMARK.toString()) && !(level.getBlockState(b).getBlock() instanceof net.minecraft.world.level.block.BannerBlock)) b = s.hint; // s-vlook-ald: the fort's flag
 				if (level.isLoaded(b) && level.getBlockState(b).getBlock() instanceof net.minecraft.world.level.block.BannerBlock) BlockWriter.write(level, s, b, Blocks.BANNER.white().defaultBlockState());
 				s.state = VillageRecord.State.LIBERATED;
 				for (ServerPlayer p : level.players())
@@ -222,15 +224,17 @@ public final class Conquest {
 		double d = 30 + rnd.nextInt(21);
 		BlockPos p = outpost.offset((int) (Math.cos(away) * d), 0, (int) (Math.sin(away) * d));
 		if (!freshChunk(level, ledger, p) && !ledger.sites.isEmpty() && RealmLocator.horizontal(p, outpost) < 20) return null;
-		BlockPos c = flatSpot(level, p, 4);
+		BlockPos c = dev.elsewhere.kingdom_villages.s3.ald.AldLook.HAMLET ? dev.elsewhere.kingdom_villages.s3.ald.AldHamlet.site(level, p) : flatSpot(level, p, 4); // s-vlook-ald
 		if (c == null) return null;
 		return buildHamlet(level, ledger, c, castle, rnd);
 	}
 
 	public static VillageRecord buildHamlet(ServerLevel level, VillageLedger ledger, BlockPos c, BlockPos castle, RandomSource rnd) {
-		VillageRecord s = newSite(ledger, VillageRecord.Kind.HAMLET, c, new BoundingBox(c.getX() - 5, c.getY() - 1, c.getZ() - 5, c.getX() + 5, c.getY() + 4, c.getZ() + 5));
+		dev.elsewhere.kingdom_villages.s3.ald.AldHamlet.Plan hp = dev.elsewhere.kingdom_villages.s3.ald.AldLook.HAMLET ? dev.elsewhere.kingdom_villages.s3.ald.AldHamlet.plan(level, c, rnd) : null; // s-vlook-ald: burnt farmstead per column
+		if (hp != null) c = hp.refuge();
+		VillageRecord s = newSite(ledger, VillageRecord.Kind.HAMLET, c, hp != null ? hp.box() : new BoundingBox(c.getX() - 5, c.getY() - 1, c.getZ() - 5, c.getX() + 5, c.getY() + 4, c.getZ() + 5));
 		s.state = VillageRecord.State.FREE;
-		for (VillageRecord.Op op : Plans.hamlet(c, rnd)) BlockWriter.write(level, s, BlockPos.of(op.pos()), op.state());
+		for (VillageRecord.Op op : hp != null ? hp.ops() : Plans.hamlet(c, rnd)) BlockWriter.write(level, s, BlockPos.of(op.pos()), op.state());
 		String dir = direction(c, castle);
 		int n = 1 + rnd.nextInt(2);
 		for (int i = 0; i < n; i++) {

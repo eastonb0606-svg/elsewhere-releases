@@ -1,0 +1,13 @@
+{
+ "army.battle_din": {
+  "subtitle": "subtitles.elsewhere.army.battle_din",
+  "sounds": [
+   {"name": "minecraft:entity.player.attack.strong", "type": "event", "pitch": 0.7, "volume": 0.6},
+   {"name": "minecraft:item.shield.block", "type": "event", "pitch": 0.75, "volume": 0.5},
+   {"name": "minecraft:entity.player.attack.knockback", "type": "event", "pitch": 0.7, "volume": 0.55},
+   {"name": "minecraft:entity.player.attack.sweep", "type": "event", "pitch": 0.7, "volume": 0.45},
+   {"name": "minecraft:entity.player.hurt", "type": "event", "pitch": 0.8, "volume": 0.35},
+   {"name": "minecraft:entity.arrow.hit", "type": "event", "pitch": 0.8, "volume": 0.4}
+  ]
+ }
+}

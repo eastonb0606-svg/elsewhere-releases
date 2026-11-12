@@ -6,7 +6,8 @@
 		"VillageAbstractVillagerMixin",
 		"VillageVillagerMixin",
 		"VillageBlockItemMixin",
-		"VillageFarmlandMixin"
+		"VillageFarmlandMixin",
+		"VillageBrainLodMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

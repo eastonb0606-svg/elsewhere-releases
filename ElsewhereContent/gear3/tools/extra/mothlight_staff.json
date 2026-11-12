@@ -1,0 +1,8 @@
+{
+  "_doc": "s-mothlight: Mothlight Swarm entity name, the Mothdust effect and the staff's kill-switch message (dev.elsewhere.gear3.s3.mothlight). Textures: tools/mothlight_art.py.",
+  "lang": {
+    "entity.elsewhere.mothlight_swarm": "Mothlight Swarm",
+    "effect.elsewhere.mothdust": "Mothdust",
+    "message.elsewhere.mothlight_off": "The Mothlight Staff is switched off on this server."
+  }
+}

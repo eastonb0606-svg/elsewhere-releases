@@ -31,6 +31,7 @@ public final class AzmarGear {
 	}
 
 	public static void wear(Mob m, EquipmentSlot slot, ItemStack s) {
+		dev.elsewhere.rivals.azmar.look.AzmarRulerLook.restyle(s);   // 3.0 B10 (s-rulerarmor): Egyptian gold-and-lapis layer instead of vanilla metal
 		m.setItemSlot(slot, s);
 		m.setDropChance(slot, 0.0F);
 	}

@@ -1,0 +1,6 @@
+{
+  "_doc": "s-sunglass: Sunglass Arrow extras (merged by gen_resources.py). The entity name (death messages, /summon, Jade); item name, lore and JEI lines come from the catalogue entry in build_catalogue.py. Code: dev.elsewhere.gear3.s3.sunglass.",
+  "lang": {
+    "entity.elsewhere.sunglass_arrow": "Sunglass Arrow"
+  }
+}

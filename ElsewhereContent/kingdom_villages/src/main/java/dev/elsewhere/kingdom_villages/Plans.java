@@ -98,6 +98,7 @@ public final class Plans {
 	public record Fortify(List<VillageRecord.Op> ops, @Nullable BlockPos coffer, @Nullable BlockPos towerTop, @Nullable BlockPos taxPost) {}
 
 	public static Fortify fortify(ServerLevel level, VillageRecord r, RandomSource rnd) {
+		if (dev.elsewhere.kingdom_villages.s3.ald.AldLook.REBUILD) return dev.elsewhere.kingdom_villages.s3.ald.AldRebuild.fortify(level, r, rnd); // s-vlook-ald 3.0
 		List<VillageRecord.Op> first = new ArrayList<>(), ops = new ArrayList<>();
 		BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
 		Set<Long> used = new HashSet<>();

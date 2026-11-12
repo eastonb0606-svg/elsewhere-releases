@@ -62,6 +62,7 @@ public final class DuelistContent {
 		ServerLivingEntityEvents.ALLOW_DEATH.register((entity, source, amount) -> !(entity instanceof HumanBoss b) || !b.onLethal(source, amount));
 		dev.elsewhere.duelist.identity.BossIdentity.init();
 		dev.elsewhere.duelist.compat.TestMeterOrder.init(); // s-compat-testmeter: 300 HP cap after Test Meter's mob-health bonus
+		dev.elsewhere.duelist.foresight.Foresight.init(); // s-foresight B5: attack hints only for foresight gear
 	}
 
 	/**

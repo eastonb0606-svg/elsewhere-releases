@@ -61,7 +61,10 @@ public final class ReturnRiftStub {
 		Blueprint.register("return_rift_ironpeak", ruin(Blocks.STAINED_GLASS.pick(net.minecraft.world.item.DyeColor.LIGHT_BLUE).defaultBlockState(), Blocks.POLISHED_ANDESITE.defaultBlockState(), Blocks.STONE_BRICKS.defaultBlockState()));
 	}
 
-	/** A 7x7 ruin: beacon on an iron base (beam in the dimension colour), cracked pillars, and the rift beside the beam. */
+	/**
+	 * A 7x7 ruin: a sea-lantern hearth under tinted glass on a pillar-stone base, cracked pillars, and the rift beside it. No beacon and no iron
+	 * base (no valuable blocks in structures, s-throne B9): the tall beam is the Return Rift's own (the core block entity draws it).
+	 */
 	private static Blueprint ruin(BlockState glass, BlockState floor, BlockState pillar) {
 		return new Blueprint() {
 			public int radius() {
@@ -78,8 +81,8 @@ public final class ReturnRiftStub {
 					s.set(x, -1, z, floor);
 					for (int y = 0; y <= 5; y++) s.set(x, y, z, Blocks.AIR.defaultBlockState());
 				}
-				s.fill(-1, -2, -1, 1, -2, 1, Blocks.IRON_BLOCK);
-				s.set(0, -1, 0, Blocks.BEACON);
+				s.fill(-1, -2, -1, 1, -2, 1, pillar);
+				s.set(0, -1, 0, Blocks.SEA_LANTERN);
 				s.set(0, 0, 0, glass);
 				for (int[] c : new int[][] {{-3, -3}, {3, -3}, {-3, 3}, {3, 3}}) {
 					int h = 2 + r.nextInt(3);

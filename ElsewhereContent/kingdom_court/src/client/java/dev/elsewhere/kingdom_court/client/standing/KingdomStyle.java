@@ -4,6 +4,7 @@ import dev.elsewhere.kingdom_court.CourtContent;
 import dev.elsewhere.kingdom_court.api.Diplomacy;
 import dev.elsewhere.kingdom_court.standing.StandingText;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.Identifier;
 
 /**
@@ -82,7 +83,7 @@ public enum KingdomStyle {
 	}
 
 	/** The kingdom's display name for a faction id ("Jarldom of Hrafnholt"); a faction that is none of the four shows its own path. */
-	public static Component name(String factionId) {
+	public static MutableComponent name(String factionId) {
 		String k = StandingText.kingdom(factionId);
 		if (k != null) return Component.translatable(StandingText.kingdomKey(k));
 		String p = StandingText.ledgerPath(factionId).replace('_', ' ');
@@ -90,11 +91,11 @@ public enum KingdomStyle {
 	}
 
 	/** This kingdom's name for a Standing band ("Shield-friend"). */
-	public Component bandTitle(String band) {
+	public MutableComponent bandTitle(String band) {
 		return Component.translatable(StandingText.titleKey(key, band));
 	}
 
-	public Component motto() {
+	public MutableComponent motto() {
 		return Component.translatable(StandingText.mottoKey(key));
 	}
 

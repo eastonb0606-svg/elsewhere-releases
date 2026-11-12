@@ -211,20 +211,22 @@
   "routine": {
    "watch_changes": [6, 12, 18, 22, 2],
    "watch_jitter_min": 0,
+   "watch_sound": "bell",
    "blocks": [
-    {"from": 0, "to": 5, "activity": "sleep", "share": 0.67, "where": "barracks"},
-    {"from": 5, "to": 6, "activity": "work", "share": 0.5, "where": "kitchens"},
-    {"from": 6, "to": 9, "activity": "drill", "share": 0.5, "where": "yard"},
-    {"from": 9, "to": 12, "activity": "market", "share": 0.6, "where": "square"},
-    {"from": 12, "to": 13, "activity": "court", "share": 0.3, "where": "hall"},
-    {"from": 13, "to": 17, "activity": "work", "share": 0.6, "where": "fields"},
-    {"from": 17, "to": 18, "activity": "feast", "share": 0.5, "where": "hall"},
-    {"from": 18, "to": 22, "activity": "watch", "share": 0.34, "where": "walls"},
-    {"from": 22, "to": 24, "activity": "sleep", "share": 0.67, "where": "barracks"}
+    {"from": 0, "to": 5, "activity": "sleep", "share": 0.67, "where": "barracks", "rest": {"activity": "watch", "where": "post", "pose": "torch"}},
+    {"from": 5, "to": 6, "activity": "temple", "share": 0.4, "where": "chapel", "style": "matins", "sound": "bell", "townsfolk": [{"activity": "work", "where": "kitchens", "share": 0.4, "pose": "work", "style": "cookfires"}, {"activity": "temple", "where": "chapel", "share": 0.3, "pose": "pray", "style": "matins"}]},
+    {"from": 6, "to": 9, "activity": "drill", "share": 0.5, "where": "yard", "style": "line_drill", "sound": "shout", "groups": [{"unit": "mounted", "activity": "drill", "where": "quintain", "style": "quintain"}, {"unit": "ranged", "activity": "drill", "where": "butts", "style": "butts"}], "townsfolk": [{"activity": "work", "where": "fields", "share": 0.4}, {"activity": "work", "where": "workshops", "share": 0.2, "pose": "work", "style": "smithy"}]},
+    {"from": 9, "to": 12, "activity": "market", "share": 0.6, "where": "square", "pose": "attention", "townsfolk": [{"activity": "market", "where": "square", "share": 0.7, "pose": "carry"}, {"activity": "court", "where": "square", "share": 0.05, "pose": "attention", "style": "crier"}]},
+    {"from": 12, "to": 13, "activity": "court", "share": 0.3, "where": "hall", "style": "court", "sound": "bell", "townsfolk": [{"activity": "court", "where": "hall", "share": 0.2, "pose": "attention"}, {"activity": "market", "where": "square", "share": 0.3, "pose": "carry"}]},
+    {"from": 13, "to": 17, "activity": "work", "share": 0.5, "where": "fields", "sound": "anvil", "townsfolk": [{"activity": "work", "where": "fields", "share": 0.5, "pose": "work"}, {"activity": "work", "where": "workshops", "share": 0.2, "pose": "work", "style": "smithy"}]},
+    {"from": 17, "to": 18, "activity": "feast", "share": 0.5, "where": "hall", "sound": "bell", "townsfolk": [{"activity": "feast", "where": "tavern", "share": 0.4, "pose": "drink"}, {"activity": "temple", "where": "chapel", "share": 0.2, "pose": "pray", "style": "vespers"}]},
+    {"from": 18, "to": 22, "activity": "watch", "share": 0.34, "where": "walls", "townsfolk": [{"activity": "feast", "where": "tavern", "share": 0.3, "pose": "drink"}]},
+    {"from": 22, "to": 24, "activity": "sleep", "share": 0.67, "where": "barracks", "rest": {"activity": "watch", "where": "post", "pose": "torch"}}
    ],
    "events": [
-    {"id": "muster_day", "every_days": 7, "at": 10, "hours": 3, "activity": "muster", "where": "tilting_field"},
-    {"id": "harvest_fair", "every_days": 8, "at": 9, "hours": 8, "activity": "tourney", "where": "lists"}
+    {"id": "muster_day", "every_days": 7, "at": 10, "hours": 3, "activity": "muster", "where": "tilting_field", "share": 1.0, "style": "inspection", "sound": "war_horn", "phases": [{"at": 11, "activity": "muster", "where": "tilting_field", "style": "mock_charge", "pose": "attention", "sound": "war_horn"}, {"at": 12, "activity": "muster", "where": "tilting_field", "style": "inspection", "sound": "drum"}], "townsfolk": [{"activity": "tourney", "where": "tilting_field", "share": 0.5, "pose": "cheer", "style": "crowd"}]},
+    {"id": "harvest_fair", "every_days": 8, "at": 9, "hours": 8, "activity": "tourney", "where": "lists", "share": 0.35, "style": "crowd", "sound": "cheer", "groups": [{"unit": "mounted", "activity": "tourney", "where": "lists", "style": "joust", "pose": "attention"}, {"unit": "ranged", "activity": "drill", "where": "butts", "style": "butts"}], "townsfolk": [{"activity": "tourney", "where": "lists", "share": 0.5, "pose": "cheer", "style": "crowd"}, {"activity": "feast", "where": "lists", "share": 0.1, "pose": "cheer", "style": "minstrels"}, {"activity": "market", "where": "square", "share": 0.3, "pose": "carry"}]},
+    {"id": "road_patrol", "every_days": 1, "at": 8, "hours": 8, "activity": "patrol", "where": "road", "share": 0.12, "sound": "horn", "groups": [{"unit": "mounted", "activity": "patrol", "where": "road"}]}
    ]
   },
   "units": [

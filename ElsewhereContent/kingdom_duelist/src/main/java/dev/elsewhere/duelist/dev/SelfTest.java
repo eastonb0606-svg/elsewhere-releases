@@ -59,6 +59,7 @@ public final class SelfTest {
 		SelfTestIdentity.add(h);
 		SelfTestAnim.add(h);
 		SelfTestPose.add(h);
+		SelfTestForesight.add(h); // s-foresight B5
 		h.test("telegraph audit and arena restored").run(() -> {}).check("every wind-up obeys the telegraph rule (" + Telegraph.audit.size() + " logged)", () -> {
 			for (Object[] a : Telegraph.audit) {
 				Telegraph.Weight w = (Telegraph.Weight) a[1];

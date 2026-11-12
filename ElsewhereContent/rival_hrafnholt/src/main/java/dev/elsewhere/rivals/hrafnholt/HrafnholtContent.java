@@ -29,6 +29,7 @@ public final class HrafnholtContent {
 		HrafnholtUnits.init();
 		dev.elsewhere.rivals.hrafnholt.boss.HrafnholtBosses.init();
 		dev.elsewhere.rivals.hrafnholt.tactics.HrafnholtTactics.init();
+		dev.elsewhere.rivals.hrafnholt.look.HrafnholtRulerLook.init(); // s-rulerarmor: B10 faction armor layer on bosses saved before 3.0
 		LOG.info("Elsewhere Hrafnholt loaded: {} items", HrafnholtItems.ALL.size());
 	}
 }

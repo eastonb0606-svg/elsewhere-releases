@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "elsewhere:amethyst_wand", "required": false},
+    {"id": "elsewhere:sunlance_staff", "required": false},
+    {"id": "elsewhere:stormcoil_staff", "required": false},
+    {"id": "elsewhere:sculk_resonator", "required": false},
+    {"id": "elsewhere:emberfall_rod", "required": false}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "lang": {
+    "entity.elsewhere.echo_knight": "Echo Knight",
+    "message.elsewhere.echo_reliquary.slots": "The Echo Knight needs %s minion slots; you have %s.",
+    "message.elsewhere.echo_reliquary.off": "The Echo Reliquary is switched off on this server."
+  }
+}

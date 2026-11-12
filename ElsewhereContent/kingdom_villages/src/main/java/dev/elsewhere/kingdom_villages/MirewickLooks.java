@@ -6,6 +6,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -52,6 +53,8 @@ public final class MirewickLooks {
 	public static final int QUAY = 31;
 	/** Lanterns per village, besides the border-hint post (STRUCTURES 5: lanterns are the signature, budgeted). */
 	public static final int MAX_LANTERNS = 16;
+	/** Plan cap: the full-village restyle (windows, shutters, cornice, roof trim) plus quays, so a big village never loses its signature. */
+	public static final int MAX_OPS = 6000;
 	static final int NONE = Integer.MIN_VALUE;
 
 	static BlockState purple() {
@@ -75,6 +78,17 @@ public final class MirewickLooks {
 	/** The last canal quay: its box, the water top y it stands on, and how many edge blocks it planned. */
 	public static @Nullable BoundingBox lastQuay;
 	public static int lastQuayWater = NONE, lastQuayEdges, lastLanterns;
+
+	/** What one plan built, kept per village id (the self-test reads its own village's even if another Mirewick plan ran since). */
+	public record Plan(List<int[][]> legs, int @Nullable [] hut, @Nullable BoundingBox quay, int quayWater, int quayEdges, int lanterns) {}
+
+	/** The plans of this session by village id (bounded: the oldest are dropped past 64). */
+	public static final Map<Long, Plan> plans = new java.util.LinkedHashMap<>(16, 0.75f, false) {
+		@Override
+		protected boolean removeEldestEntry(Map.Entry<Long, Plan> e) {
+			return size() > 64;
+		}
+	};
 
 	// ---- the house restyle (RivalPlans.style for Mirewick) ---------------------------------------------------------------
 
@@ -133,15 +147,16 @@ public final class MirewickLooks {
 		sluiceHouse(b);
 		boardwalk(b);
 		peatStack(c);
-		BlockPos hs = RivalPlans.hintSpot(c);
+		quay(b); // before the dike, so a shore at the village edge becomes quay, not bank
+		BlockPos hs = hintSpot(c);
 		if (hs != null) {
 			for (VillageRecord.Op op : RivalPlans.lanternPostOps(hs)) c.add(BlockPos.of(op.pos()), op.state());
 			c.hint = hs.above(5);
 		}
 		RivalPlans.houseBanners(c);
 		dike(b);
-		quay(b);
 		lastLanterns = b.lanterns;
+		plans.put(c.r.id, new Plan(List.copyOf(lastLegs), lastHut, lastQuay, lastQuayWater, lastQuayEdges, lastLanterns));
 	}
 
 	// ---- houses: crimson eaves and ridge on the slate roof, gilt cornice and finials ----------------------------------------
@@ -181,7 +196,7 @@ public final class MirewickLooks {
 			for (int y = b.minY(); y <= b.maxY(); y++) for (int x = b.minX(); x <= b.maxX(); x++) for (int z = b.minZ(); z <= b.maxZ(); z++) {
 				BlockPos p = new BlockPos(x, y, z);
 				BlockState o = orig(c, p);
-				if (roof(o)) {
+				if (roof(o) && y >= b.minY() + 3) { // the roof field; stair chairs and slab tables (floor + 1..2) are furniture, not roof
 					roofs.add(p);
 					lo = Math.min(lo, y);
 					hi = Math.max(hi, y);
@@ -241,9 +256,22 @@ public final class MirewickLooks {
 		return natural(g) ? top.getY() + 1 : NONE;
 	}
 
-	/** Air the plan may fill: loaded, in the village footprint, not already planned. */
+	/**
+	 * Open space: air, or (inside a writable box only, as BlockWriter allows) a single-block replaceable plant or snow layer, so short
+	 * grass in a real village never blocks a stilt or a post. Never a fluid, never half of a tall plant (that would leave the other half).
+	 */
+	static boolean open(BlockState s, boolean inBox) {
+		return s.isAir() || inBox && s.canBeReplaced() && s.getFluidState().isEmpty() && !(s.getBlock() instanceof DoublePlantBlock);
+	}
+
+	/** Open space the plan may fill: loaded, in the village footprint, not already planned. */
 	static boolean free(RivalPlans.Ctx c, BlockPos p) {
-		return c.level.isLoaded(p) && c.r.insideFootprint(p, BlockWriter.UP) && !c.used.contains(p.asLong()) && c.level.getBlockState(p).isAir();
+		return c.level.isLoaded(p) && c.r.insideFootprint(p, BlockWriter.UP) && !c.used.contains(p.asLong()) && open(c.level.getBlockState(p), c.r.insidePieces(p));
+	}
+
+	/** Open space the quay may fill outside the village pieces (it lies in the quay's own box, which the plan adds, as Hrafnholt's pier does). */
+	static boolean air(RivalPlans.Ctx c, BlockPos p) {
+		return c.level.isLoaded(p) && !c.used.contains(p.asLong()) && open(c.level.getBlockState(p), true);
 	}
 
 	static void column(RivalPlans.Ctx c, int x, int z, int from, int to, BlockState s) {
@@ -254,30 +282,35 @@ public final class MirewickLooks {
 
 	static void sluiceHouse(B b) {
 		RivalPlans.Ctx c = b.c;
+		for (int tries = 0; tries < 160; tries++) if (trySite(b, c.bell.offset(c.rnd.nextInt(41) - 20, 0, c.rnd.nextInt(41) - 20))) return;
+		// no random hit (a tight village): scan every site ring by ring out from the bell, so a village with any room always gets its post
+		for (int r = 0; r <= 32; r++) for (int dx = -r; dx <= r; dx++) for (int dz = -r; dz <= r; dz++)
+			if (Math.max(Math.abs(dx), Math.abs(dz)) == r && trySite(b, c.bell.offset(dx, 0, dz))) return;
+	}
+
+	/** A 3x3 of open natural ground (spread at most 2) with clear air to the roof and a stair flight down to the ground on one side. */
+	static boolean trySite(B b, BlockPos t) {
+		RivalPlans.Ctx c = b.c;
 		ServerLevel level = c.level;
-		for (int tries = 0; tries < 160; tries++) {
-			BlockPos t = c.bell.offset(c.rnd.nextInt(41) - 20, 0, c.rnd.nextInt(41) - 20);
-			int[] fl = new int[9];
-			int mx = Integer.MIN_VALUE, mn = Integer.MAX_VALUE;
-			boolean ok = true;
-			for (int i = 0; i < 9 && ok; i++) {
-				int f = floor(level, t.getX() + i % 3 - 1, t.getZ() + i / 3 - 1, false);
-				if (f == NONE) ok = false;
-				fl[i] = f;
-				mx = Math.max(mx, f);
-				mn = Math.min(mn, f);
-			}
-			if (!ok || mx - mn > 2) continue;
-			int deck = mx + 2;
-			for (int i = 0; i < 9 && ok; i++) for (int y = fl[i]; y <= deck + 5 && ok; y++) ok = free(c, new BlockPos(t.getX() + i % 3 - 1, y, t.getZ() + i / 3 - 1));
-			if (!ok) continue;
-			for (Direction d : Direction.Plane.HORIZONTAL) {
-				List<int[]> flight = flight(c, t, d, deck);
-				if (flight == null) continue;
-				hut(b, t, deck, fl, d, flight);
-				return;
-			}
+		int[] fl = new int[9];
+		int mx = Integer.MIN_VALUE, mn = Integer.MAX_VALUE;
+		for (int i = 0; i < 9; i++) {
+			int f = floor(level, t.getX() + i % 3 - 1, t.getZ() + i / 3 - 1, false);
+			if (f == NONE) return false;
+			fl[i] = f;
+			mx = Math.max(mx, f);
+			mn = Math.min(mn, f);
 		}
+		if (mx - mn > 2) return false;
+		int deck = mx + 2;
+		for (int i = 0; i < 9; i++) for (int y = fl[i]; y <= deck + 5; y++) if (!free(c, new BlockPos(t.getX() + i % 3 - 1, y, t.getZ() + i / 3 - 1))) return false;
+		for (Direction d : Direction.Plane.HORIZONTAL) {
+			List<int[]> flight = flight(c, t, d, deck);
+			if (flight == null) continue;
+			hut(b, t, deck, fl, d, flight);
+			return true;
+		}
+		return false;
 	}
 
 	/** Stairs from the hut's door side down to the ground: a landing level with the deck, then one step down per block until a step rests on the ground. */
@@ -513,13 +546,37 @@ public final class MirewickLooks {
 		int[] n = {0};
 		RivalPlans.perimeter(c, (ground, nearGate) -> {
 			if (nearGate) return;
+			for (VillageRecord.Piece pc : c.r.pieces) // the canal quay's own box is waterfront, not village edge: no bank ring around it
+				if (pc.type() == QUAY && ground.getX() >= pc.box().minX() && ground.getX() <= pc.box().maxX() && ground.getZ() >= pc.box().minZ() && ground.getZ() <= pc.box().maxZ()) return;
 			n[0]++;
-			if (n[0] % 9 == 0 && b.lamp()) {
+			if (n[0] % 9 == 0 && postClear(c, ground.above()) && b.lamp()) {
 				for (VillageRecord.Op op : RivalPlans.lanternPostOps(ground.above())) c.add(BlockPos.of(op.pos()), op.state());
 				return;
 			}
 			c.add(ground.above(), of(Blocks.GRASS_BLOCK));
 		});
+	}
+
+	/** The six cells of a lantern post standing on {@code g} are unplanned (nothing of the hut, a lamp or the quay in the way). */
+	static boolean postClear(RivalPlans.Ctx c, BlockPos g) {
+		for (int h = 0; h <= 5; h++) if (c.used.contains(g.above(h).asLong())) return false;
+		return true;
+	}
+
+	/** {@link RivalPlans#hintSpot}, but only where the whole border post fits around what this plan already placed. */
+	static @Nullable BlockPos hintSpot(RivalPlans.Ctx c) {
+		BlockPos[] best = {null};
+		double[] bd = {Double.MAX_VALUE};
+		BlockPos target = c.r.castle != null ? c.r.castle : c.r.center;
+		RivalPlans.perimeter(c, (ground, near) -> {
+			if (near || !postClear(c, ground.above())) return;
+			double d = ground.distSqr(target);
+			if (d < bd[0]) {
+				bd[0] = d;
+				best[0] = ground.above();
+			}
+		});
+		return best[0];
 	}
 
 	// ---- canal quay on a real shore ------------------------------------------------------------------------------------------
@@ -560,10 +617,10 @@ public final class MirewickLooks {
 			int f = floor(level, l.getX(), l.getZ(), true);
 			if (f == NONE || f - 1 < w0 || f - 1 > w0 + 2) continue;
 			int qy = Math.max(w0 + 1, f - 1);
-			if (qy == f && !free(c, new BlockPos(l.getX(), qy, l.getZ()))) continue;
+			if (qy == f && !air(c, new BlockPos(l.getX(), qy, l.getZ()))) continue;
 			BlockPos in = l.relative(d, -1);
 			int fi = floor(level, in.getX(), in.getZ(), true), iy = NONE;
-			if (fi != NONE && RivalPlans.waterTop(level, in.getX(), in.getZ()) == NONE && (fi - 1 == qy || fi == qy && free(c, new BlockPos(in.getX(), qy, in.getZ())))) iy = qy;
+			if (fi != NONE && RivalPlans.waterTop(level, in.getX(), in.getZ()) == NONE && (fi - 1 == qy || fi == qy && air(c, new BlockPos(in.getX(), qy, in.getZ())))) iy = qy;
 			edges.add(new int[] {l.getX(), l.getZ(), qy, v, iy});
 		}
 		if (edges.size() < 5) return false;
@@ -573,7 +630,7 @@ public final class MirewickLooks {
 			BlockPos p = new BlockPos(e[0], e[2], e[1]);
 			placed.add(p);
 			c.add(p, of(Blocks.QUARTZ_BRICKS));
-			if (e[3] % 3 == 0 && free(c, p.above())) {
+			if (e[3] % 3 == 0 && air(c, p.above())) {
 				c.add(p.above(), of(Blocks.CRIMSON_FENCE)); // bollard
 				placed.add(p.above());
 			}
@@ -587,7 +644,7 @@ public final class MirewickLooks {
 		for (int[] e : List.of(edges.get(0), edges.get(edges.size() - 1))) {
 			if (e[4] == NONE) continue;
 			BlockPos in = new BlockPos(e[0], e[2], e[1]).relative(d, -1);
-			if (!free(c, in.above()) || !free(c, in.above(2)) || !free(c, in.above(3)) || !b.lamp()) continue;
+			if (!air(c, in.above()) || !air(c, in.above(2)) || !air(c, in.above(3)) || !b.lamp()) continue;
 			c.add(in.above(), of(Blocks.CRIMSON_FENCE));
 			c.add(in.above(2), of(Blocks.CRIMSON_FENCE));
 			c.add(in.above(3), of(Blocks.LANTERN));
@@ -604,7 +661,7 @@ public final class MirewickLooks {
 				int f = floor(level, p.getX(), p.getZ(), false);
 				if (f == NONE || fs != NONE && f != fs || Math.abs(f - (mid[2] + 1)) > 1) ok = false;
 				fs = f;
-				for (int h = 0; h <= 3 && ok; h++) ok = free(c, p.atY(f + h));
+				for (int h = 0; h <= 3 && ok; h++) ok = air(c, p.atY(f + h));
 			}
 			if (ok) for (int u = 0; u <= 1; u++) for (int v = -1; v <= 1; v++) {
 				BlockPos p = m0.relative(d, -u).relative(side, v).atY(fs);

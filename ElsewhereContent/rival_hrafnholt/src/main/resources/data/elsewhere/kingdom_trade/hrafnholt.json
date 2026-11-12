@@ -123,6 +123,12 @@
    "price": 4,
    "count": 8,
    "tier": "smith"
+  },
+  {
+   "item": "elsewhere:hrafnholt_hurlbat",
+   "price": 12,
+   "count": 8,
+   "tier": "thing"
   }
  ]
 }

@@ -37,7 +37,7 @@ public final class GlyphmailPair {
 		SetBonuses.SPELL_COST.add(GlyphmailPair::costMult);
 	}
 
-	static void hit(LivingEntity victim, DamageSource src, float taken) {
+	public static void hit(LivingEntity victim, DamageSource src, float taken) {
 		ServerPlayer p = SetBonusesA.meleeBy(victim, src);
 		if (p == null) return;
 		float pw = SetBonuses.power(p, BONUS);

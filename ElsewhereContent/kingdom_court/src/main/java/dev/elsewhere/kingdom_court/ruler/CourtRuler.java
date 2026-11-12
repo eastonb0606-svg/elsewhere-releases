@@ -154,6 +154,14 @@ public class CourtRuler extends KingdomSoldier {
 		}
 		for (EquipmentSlot s : EquipmentSlot.values()) setDropChance(s, 0.0F);
 		if (crowned) wearCrown();
+		dev.elsewhere.kingdom_court.look.AldermarkRulerLook.dress(this);   // 3.0 B10 (s-rulerarmor): Aldermark blue-and-cream plate instead of cyan diamond / netherite
+	}
+
+	/** 3.0 B10 (s-rulerarmor): the lancer Marshal's warhorse wears Aldermark barding instead of cyan diamond horse armour. */
+	@Override
+	protected void spawnMount(ServerLevel level) {
+		super.spawnMount(level);
+		if (getVehicle() != null) dev.elsewhere.kingdom_court.look.AldermarkRulerLook.dressMount(getVehicle());
 	}
 
 	void wearCrown() {
@@ -167,10 +175,20 @@ public class CourtRuler extends KingdomSoldier {
 		setDropChance(EquipmentSlot.HEAD, 0.0F);
 	}
 
+	/**
+	 * 3.0 polish P3 nameplate rank (kingdom {@code Nameplate}): 4 = sovereign (the King, or a crowned Lord), 3 = lord.
+	 * Overrides {@code KingdomSoldier.nameplateRank()} in kingdom 3.0 builds (no {@code @Override}, so this file still
+	 * compiles against an older kingdom jar). Resynced through {@code setFaction(factionId())} on a crown change and after load.
+	 */
+	protected int nameplateRank() {
+		return crowned || ruler == Ruler.KING ? 4 : 3;
+	}
+
 	/** Succession: this Lord takes the throne (+15% max health, +10% damage, the crown, the King's leap and cleave). */
 	public void setCrowned(boolean c) {
 		if (c == crowned) return;
 		crowned = c;
+		setFaction(factionId()); // resyncs the nameplate rank (lord <-> sovereign); the faction itself is unchanged
 		AttributeInstance hp = getAttribute(Attributes.MAX_HEALTH);
 		AttributeInstance dmg = getAttribute(Attributes.ATTACK_DAMAGE);
 		if (c) {
@@ -310,6 +328,7 @@ public class CourtRuler extends KingdomSoldier {
 		crowned = in.getIntOr("court_crowned", 0) == 1;
 		long h = in.getLongOr("court_home", Long.MIN_VALUE);
 		home = h == Long.MIN_VALUE ? null : BlockPos.of(h);
+		setFaction(factionId()); // P3: super's load synced the nameplate before the crown was read
 	}
 
 	// ---- damage ------------------------------------------------------------------------------------------------------
@@ -709,6 +728,7 @@ public class CourtRuler extends KingdomSoldier {
 			}
 			sound(level, SoundEvents.CHORUS_FRUIT_TELEPORT, 1.0F, 0.8F);
 		} else if (d2 < 16) {
+			lookAt(t, 30F, 30F); // s-asm-court: strafe is relative to the body yaw; face the target so "back away" means away from it
 			getMoveControl().strafe(-0.6F, 0.0F);
 		}
 		if (cdB <= 0 && d2 < 24 * 24) {
@@ -799,6 +819,7 @@ public class CourtRuler extends KingdomSoldier {
 		horse.setPersistenceRequired();
 		horse.setItemSlot(EquipmentSlot.SADDLE, new ItemStack(Items.SADDLE));
 		horse.setItemSlot(EquipmentSlot.BODY, new ItemStack(Items.DIAMOND_HORSE_ARMOR));
+		dev.elsewhere.kingdom_court.look.AldermarkRulerLook.dressMount(horse);   // 3.0 B10 (s-rulerarmor): Aldermark barding
 		horse.getAttribute(Attributes.MAX_HEALTH).setBaseValue(40.0);
 		horse.setHealth(40F);
 		horse.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.3);

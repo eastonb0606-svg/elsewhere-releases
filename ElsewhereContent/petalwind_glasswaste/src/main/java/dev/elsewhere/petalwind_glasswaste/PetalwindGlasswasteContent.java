@@ -40,6 +40,7 @@ public final class PetalwindGlasswasteContent {
 		PetalwindItems.init();
 		GlasswasteItems.init();
 		ModEntities.initSpawnEggs();
+		dev.elsewhere.petalwind_glasswaste.s3.groups.SpawnGroups3.init(); // ARMIES 6 spawn groups (s-spawngroups, key spawn_groups_petalwind_glasswaste)
 		SignatureGearStub.init();
 		ModWorldgen.init();
 		CreativeTabs.init();

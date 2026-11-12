@@ -21,5 +21,5 @@
 		"java": ">=25",
 		"fabric-api": "*"
 	},
-	"mixins": [{"config": "elsewhere_kingdom_idle.mixins.json", "environment": "client"}]
+	"mixins": [{"config": "elsewhere_kingdom_idle.mixins.json", "environment": "client"}, {"config": "elsewhere_kingdom_lod.mixins.json", "environment": "client"}]
 }

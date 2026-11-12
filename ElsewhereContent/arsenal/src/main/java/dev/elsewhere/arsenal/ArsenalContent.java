@@ -29,5 +29,6 @@ public final class ArsenalContent {
 		ArsenalLoot.init();
 		dev.elsewhere.arsenal.spell.GlimmerMotes.init();
 		dev.elsewhere.arsenal.spell.RepeaterItem.init();
+		dev.elsewhere.arsenal.compat.TestMeterKills.init(); // s-compat-testmeter: Elsewhere bosses score as bosses in Test Meter
 	}
 }

@@ -423,7 +423,7 @@ public final class HrafnholtProfiles {
 			push(b, t, 2.0);
 		} else hit(b, t, 16F, DamageCaps.MINOR);
 		if (n == 1) {                                                        // the rune flashes 12 ticks before beat 3
-			level.sendParticles(ParticleTypes.END_ROD, b.getX(), b.getY() + 1.5, b.getZ(), 10, 0.3, 0.3, 0.3, 0.05);
+			dev.elsewhere.duelist.foresight.Foresight.hint(() -> level.sendParticles(ParticleTypes.END_ROD, b.getX(), b.getY() + 1.5, b.getZ(), 10, 0.3, 0.3, 0.3, 0.05));   // B5: the rune flash is a hint; the bell is for everyone
 			level.playSound(null, b.blockPosition(), SoundEvents.BELL_BLOCK, SoundSource.HOSTILE, 1.2F, 1.4F);
 		}
 		b.bump("verse_beat");

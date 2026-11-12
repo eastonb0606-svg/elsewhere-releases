@@ -56,7 +56,8 @@ public final class FitBuilders {
 			}
 			case PGStructures.EYE -> {
 				if (p.part.equals("basin")) eyeBasin(w, p);
-				else eyePlatform(w, p);
+				else if (p.part.equals("platform")) eyePlatform(w, p);
+				// "volume": the eye's air, nothing to write
 			}
 			default -> {
 			}
@@ -111,6 +112,7 @@ public final class FitBuilders {
 				w.foundation(x, z, oy, brick, cut, sst, 12);
 			} else {
 				int top = w.surface(x, z, oy + 20, oy - 14);
+				if (top >= oy + 20) continue; // ground taller than the scan: leave it whole rather than leave a cap hanging
 				if (top < oy - 1 && (c == 16 || (c == 17 && top < oy - 3))) {
 					// stepped batter at the plinth foot where the ground falls away (no sheer face)
 					int sy = c == 16 ? oy - 1 : oy - 3;
@@ -217,6 +219,9 @@ public final class FitBuilders {
 				boolean ring = (r >= Sunpit.OUTER_IN && r <= Sunpit.OUTER_OUT) || (r >= Sunpit.MID_IN && r <= Sunpit.MID_OUT);
 				w.set(x, oy - 2, z, ring ? magma : sst);
 				w.set(x, oy - 1, z, ring ? sand : smooth);
+				// cave air over the arena floor: vanilla's dead-bush and cactus patches place only into plain air, so no plant (and no cactus) grows in Ankhara's
+				// arena, also from a neighbouring chunk's decoration; it is air to players, light and heightmaps
+				if (ring) w.set(x, oy, z, Blocks.CAVE_AIR.defaultBlockState());
 			} else {
 				w.set(x, oy - 2, z, sst);
 				w.set(x, oy - 1, z, smooth);

@@ -115,6 +115,7 @@ public class VillagesScreenshots implements FabricClientGameTest {
 		if (faction.equals(Factions.ALDERMARK)) RealmLocator.testRealm = castle;
 		else RealmLocator.testRealms.put(faction, castle);
 		record = VillageManager.discover(level, start, null);
+		if (idx == 1 && record != null) dev.elsewhere.kingdom_villages.dev.HrafnLooksTest.pool(level, record.center.offset(30, 0, -6), 16, 18); // Hrafnholt's waterfront water (s-vlook-hraf)
 		VillageManager.testObservers.add(Vec3.atCenterOf(c));
 	}
 
@@ -155,6 +156,15 @@ public class VillagesScreenshots implements FabricClientGameTest {
 			if (found != null) SHOTS.add(new Shot(label[k], found, k == 0 ? 20 : 14, k == 0 ? 8 : 5, 200 + 60 * k));
 		}
 		if (idx > 0 && r.hint != null) SHOTS.add(new Shot("border_hint", r.hint.below(2), 11, 3, 150));
+		var hr = idx == 1 ? dev.elsewhere.kingdom_villages.HrafnLooks.report(r.id) : null; // 3.0 Hrafnholt look (s-vlook-hraf): one shot per feature
+		if (hr != null) {
+			SHOTS.removeIf(sh -> sh.name().equals("longhall"));
+			for (var e : hr.spots.entrySet()) {
+				if (e.getKey().equals("raven_post")) continue; // the border_hint shot
+				boolean big = e.getKey().equals("longhall") || e.getKey().equals("boathouse") || e.getKey().equals("pier") || e.getKey().equals("water_gate");
+				SHOTS.add(new Shot(e.getKey(), e.getValue(), big ? 22 : 13, big ? 9 : 5, 210));
+			}
+		}
 		if (idx == 3 && r.towerTop != null) SHOTS.add(new Shot("sluice_house", r.towerTop.below(3), 14, 5, 20));
 		state = 1;
 	}

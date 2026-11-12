@@ -1,6 +1,14 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "elsewhere:item/mirrorglass_prism"
+    "type": "minecraft:condition",
+    "property": "elsewhere:channeling",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/mirrorglass_prism_channel"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/mirrorglass_prism"
+    }
   }
 }

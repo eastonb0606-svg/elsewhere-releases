@@ -25,6 +25,7 @@ public class BossUiClient implements ClientModInitializer {
 		ElsewhereHud.init();
 		ElsewhereHud.registerMeter("bossbars", "bossbars");
 		PolishTooltips.init();
+		dev.elsewhere.boss_ui.telegraph.TelegraphClient.init(); // P2 telegraphs (s-p2-telegraph)
 	}
 
 	/** Data from the resource manager (resource packs may override boss_bars.json); re-read when the manager changes. */

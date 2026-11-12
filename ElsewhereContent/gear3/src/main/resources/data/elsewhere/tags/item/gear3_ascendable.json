@@ -1,0 +1,63 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:galeplate_helmet",
+    "elsewhere:galeplate_chestplate",
+    "elsewhere:galeplate_leggings",
+    "elsewhere:galeplate_boots",
+    "elsewhere:hrafnholt_hearthguard_helm",
+    "elsewhere:hrafnholt_hearthguard_greaves",
+    "elsewhere:hrafnholt_hearthguard_boots",
+    "elsewhere:hrafnholt_ulfhednar_mask",
+    "elsewhere:hrafnholt_ulfhednar_breeches",
+    "elsewhere:azmar_glyphmail_hood",
+    "elsewhere:azmar_glyphmail_hauberk",
+    "elsewhere:aldermark_outrider_chaps",
+    "elsewhere:aldermark_outrider_boots",
+    "elsewhere:ridgewatch_hood",
+    "elsewhere:ridgewatch_coat",
+    "elsewhere:ridgewatch_leggings",
+    "elsewhere:ridgewatch_boots",
+    "elsewhere:glasswaste_starsight_visor",
+    "elsewhere:glasswaste_prism_mantle",
+    "elsewhere:azmar_falconer_kilt",
+    "elsewhere:sunscribe_hood",
+    "elsewhere:sunscribe_robe",
+    "elsewhere:sunscribe_leggings",
+    "elsewhere:sunscribe_boots",
+    "elsewhere:mirewick_lamplighter_hood",
+    "elsewhere:mirewick_lamplighter_coat",
+    "elsewhere:elderbark_mantle",
+    "elsewhere:elderbark_leggings",
+    "elsewhere:elderbark_boots",
+    "elsewhere:court_marshals_helm",
+    "elsewhere:court_marshals_tabard",
+    "elsewhere:court_marshals_tassets",
+    "elsewhere:hrafnholt_hird_leggings",
+    "elsewhere:hrafnholt_hird_boots",
+    {
+      "id": "elsewhere:azmar_sandrunner_sandals",
+      "required": false
+    },
+    {
+      "id": "elsewhere:elder_bark_crown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hearth_ward_mail",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_warmarshal_spurs",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_ulfhednar_pelt",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_wolfskin_boots",
+      "required": false
+    }
+  ]
+}

@@ -102,7 +102,8 @@ public final class EchoArrowSelfTest {
 
 		checkS(P + "in #minecraft:arrows: bows and crossbows load it", () -> st.is(ItemTags.ARROWS)
 			&& ((ProjectileWeaponItem) Items.BOW).getAllSupportedProjectiles().test(st) && ((ProjectileWeaponItem) Items.CROSSBOW).getAllSupportedProjectiles().test(st));
-		checkS(P + "Marksman calling item (#elsewhere:calling_weapon/marksman)", () -> dev.elsewhere.arsenal.spell.Calling.itemPath(st) == dev.elsewhere.arsenal.spell.Calling.Path.MARKSMAN);
+		// ammo carries no calling tag (gear3/tools/calling_tags.py, s-callingtags): an off-hand stack must not count as a Marksman piece
+		checkS(P + "ammo: no calling path (calling_tags.py lists it as [])", () -> dev.elsewhere.arsenal.spell.Calling.itemPath(st) == null);
 		checkS(P + "stacks to 64", () -> st.getOrDefault(DataComponents.MAX_STACK_SIZE, 1) == 64);
 		checkS(P + "recipe: 8 arrows around a Resonant Shard make 8", () -> {
 			JsonObject r = json("data/elsewhere/recipe/echo_arrow.json");

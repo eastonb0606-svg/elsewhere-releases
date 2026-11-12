@@ -38,13 +38,14 @@ import org.jspecify.annotations.Nullable;
  * lifted for the whip's own hit ({@link #liftHerdFocus}).</li>
  * </ul>
  * Event-driven only: hooks run on a hit, a use, a minion hit or a damage calculation; nothing ticks or scans.
- * <p><b>Kill switch</b> {@code whip_mechanics}: {@link #ENABLED} (JVM flag {@code -Delsewhere.whip_mechanics=false}). Off,
+ * <p><b>Kill switch</b> {@code whip_mechanics}: {@link #ENABLED} (key {@code whip_mechanics} in {@code config/elsewhere-overhaul3.json} or
+ * {@code -Delsewhere.overhaul3.whip_mechanics=false}, read once on the server). Off,
  * the four whips fall back to the Gale Ribbon's tag rules and every hook passes through.
  */
 public final class Gear3Whips {
 	private Gear3Whips() {}
 
-	public static final boolean ENABLED = !"false".equals(System.getProperty("elsewhere.whip_mechanics"));
+	public static final boolean ENABLED = dev.elsewhere.arsenal.Overhaul3.on("whip_mechanics");
 	/** Summoner's Herd focus attack-damage modifier (SummonerPerks.HERD_FOCUS). */
 	public static final Identifier HERD_FOCUS = Identifier.fromNamespaceAndPath("elsewhere", "herd_focus");
 

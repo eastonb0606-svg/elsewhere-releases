@@ -41,7 +41,7 @@ import net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStruct
  * block-entity budgets, same result in two chunk orders;</li>
  * <li>{@code owb_fit nbt}: piece NBT round trip, new piece type id, the 2.x piece types still registered;</li>
  * <li>{@code owb_fit planner}: real noise on 3 seeds: every start is fit pieces, covers its start chunk, the plateau cut/fill stays within
- * 12, walks at most 20, planning time per site, kill switch gives the frozen pieces, sun_chamber survival after the cave rule;</li>
+ * 12, walks at most 20, noise samples per site (HeightField budget), kill switch gives the frozen pieces, sun_chamber survival after the cave rule;</li>
  * <li>{@code owb_fit world}: generated sites in the test world: trigger block placed, and the Beardifier carries the shelf's beard and
  * the chamber's encapsulation (the mixin is live).</li>
  * </ul>
@@ -188,7 +188,8 @@ public final class FitSelfTest {
 			}
 		}
 		check(valuable == 0, f("owb_fit synthetic %s: no valuable blocks (%d)", name, valuable));
-		check(lit == 0, f("owb_fit synthetic %s: no lit campfires (%d)", name, lit));
+		int braziers = name.startsWith("glacier") ? Blueprints.CAMPFIRES.length : 0;
+		check(lit == braziers, f("owb_fit synthetic %s: lit campfires only as the fight's braziers (%d, expected %d)", name, lit, braziers));
 		check(floating == 0, f("owb_fit synthetic %s: nothing floating: %d of %d columns unsupported%s", name, floating, lowest.size(), firstFloat));
 		check(leaks == 0, f("owb_fit synthetic %s: placed water enclosed (%d open faces)", name, leaks));
 		check(lights <= 40 && bes <= 10, f("owb_fit synthetic %s: budgets: %d light sources (<= 40), %d block entities (<= 10)", name, lights, bes));
@@ -215,7 +216,8 @@ public final class FitSelfTest {
 		World sw = new World((x, z) -> x > 22 ? 64 : 61, 63, Blocks.MUD.defaultBlockState(), Blocks.MUD.defaultBlockState());
 		List<StructurePiece> sp = OwbFit.shrine(0, 0, 63, sw.heights());
 		OwbFitPiece sc = (OwbFitPiece) sp.get(0);
-		java.util.function.Predicate<BlockState> plank = s -> s.is(Blocks.MANGROVE_PLANKS) || s.is(Blocks.STRIPPED_MANGROVE_LOG) || s.is(Blocks.MANGROVE_STAIRS);
+		java.util.function.Predicate<BlockState> plank = s -> s.is(Blocks.MANGROVE_PLANKS) || s.is(Blocks.STRIPPED_MANGROVE_LOG) || s.is(Blocks.MANGROVE_STAIRS)
+			|| s.is(Blocks.MANGROVE_SLAB); // deck, walk and roof boards between piles and posts
 		site("croaking_shrine (wet)", sp, sw, sc.o.offset(Blueprints.SHRINE_CAULDRON), OwbBlocks.GULPMOTHER_SHRINE_CAULDRON, sc.o.offset(3, 0, 3), plank, true);
 		OwbFitPiece east = (OwbFitPiece) sp.get(1);
 		check(sc.o.getY() == 64 && east.prof.length < OwbFit.WALK_MAX && east.prof[east.prof.length - 1] == 64,
@@ -291,7 +293,8 @@ public final class FitSelfTest {
 				}
 				Structure st = set.structures().get(0).structure().value();
 				int sites = 0, legacySites = 0, fitStarts = 0, covered = 0, badFit = 0, longWalk = 0, killOk = 0;
-				long nanos = 0;
+				long nanos = 0, samples = 0;
+				int maxSamples = 0;
 				for (long seed : new long[] {1001L, 2002L, 3003L}) {
 					var rs = net.minecraft.world.level.levelgen.RandomState.create(reg.lookupOrThrow(Registries.NOISE), seed, nb.generatorSettings().value());
 					for (int rx = -6; rx < 6; rx++) for (int rz = -6; rz < 6; rz++) {
@@ -306,11 +309,26 @@ public final class FitSelfTest {
 							if (old.get().getPiecesBuilder().build().pieces().stream().allMatch(q -> q instanceof OwbPiece)) killOk++;
 						}
 						OwbFit.ENABLED = true;
-						long t0 = System.nanoTime();
-						var stub = st.findValidGenerationPoint(ctx);
-						if (stub.isEmpty()) continue;
-						List<StructurePiece> pieces = stub.get().getPiecesBuilder().build().pieces();
-						nanos += System.nanoTime() - t0;
+						// site rule plus plan, the best of 3 runs (each run plans afresh: a new HeightField), and its noise samples
+						List<StructurePiece> pieces = null;
+						long best = Long.MAX_VALUE;
+						int smp = 0;
+						for (int rep = 0; rep < 3; rep++) {
+							int[] cnt = OwbFit.SAMPLES.get();
+							cnt[0] = 0;
+							long t0 = System.nanoTime();
+							var stub = st.findValidGenerationPoint(ctx);
+							List<StructurePiece> ps = stub.isEmpty() ? null : stub.get().getPiecesBuilder().build().pieces();
+							long dt = System.nanoTime() - t0;
+							if (ps == null) break;
+							pieces = ps;
+							best = Math.min(best, dt);
+							smp = cnt[0];
+						}
+						if (pieces == null) continue;
+						nanos += best;
+						samples += smp;
+						maxSamples = Math.max(maxSamples, smp);
 						sites++;
 						if (!pieces.isEmpty() && pieces.stream().allMatch(q -> q instanceof OwbFitPiece)) fitStarts++;
 						BoundingBox all = null;
@@ -326,12 +344,16 @@ public final class FitSelfTest {
 						for (StructurePiece q : pieces) if (q instanceof OwbFitPiece fp && fp.part.equals(OwbFit.WALK) && fp.prof.length > OwbFit.WALK_MAX) longWalk++;
 					}
 				}
-				double ms = sites == 0 ? 0 : nanos / 1e6 / sites;
-				OverworldBossesContent.LOGGER.info("[selftest] owb_fit planner {}: {} sites (2.1 code {}), {} ms per site", kind, sites, legacySites, String.format(Locale.ROOT, "%.2f", ms));
+				double ms = sites == 0 ? 0 : nanos / 1e6 / sites, avg = sites == 0 ? 0 : (double) samples / sites;
+				OverworldBossesContent.LOGGER.info("[selftest] owb_fit planner {}: {} sites (2.1 code {}), {} ms per site for {} noise samples ({} ms per sample on this machine)",
+					kind, sites, legacySites, String.format(Locale.ROOT, "%.2f", ms), String.format(Locale.ROOT, "%.1f", avg),
+					String.format(Locale.ROOT, "%.3f", avg == 0 ? 0 : ms / avg));
 				check(sites == fitStarts && sites == covered, f("owb_fit planner %s: %d of %d starts are fit pieces, %d cover their start chunk", kind, fitStarts, sites, covered));
 				check(badFit == 0 && longWalk == 0, f("owb_fit planner %s: plateau cut/fill <= 12 (%d over), walks <= %d (%d over)", kind, badFit, OwbFit.WALK_MAX, longWalk));
 				check(killOk == legacySites, f("owb_fit planner %s: kill switch off gives the frozen 2.x piece (%d of %d)", kind, killOk, legacySites));
-				check(ms <= 8.0, f("owb_fit planner %s: %.2f ms planning per site (budget 8)", kind, ms));
+				// planner cost as the HeightField budget (STRUCTURES.md 2.3: about 80 samples, at most 250 per normal site); deterministic, where
+				// wall-clock ms depend on the machine's load (logged above)
+				check(avg <= 80 && maxSamples <= 250, f("owb_fit planner %s: %.1f noise samples per site, %d at most (HeightField budget about 80, at most 250)", kind, avg, maxSamples));
 				if (kind.equals(OwbPiece.SUN_CHAMBER)) {
 					check(legacySites == 0 || sites * 100 >= legacySites * 70, f("owb_fit planner sun_chamber: %d of %d sites survive the cave rule (>= 70%%)", sites, legacySites));
 				} else {
@@ -346,6 +368,9 @@ public final class FitSelfTest {
 	// ---- generated sites in the test world -------------------------------------------------------------------------------------
 
 	private static void world(ServerLevel level) {
+		boolean access = OwbBeardifierAccessCheck.applied();
+		boolean hook = java.util.Arrays.stream(Beardifier.class.getDeclaredMethods()).anyMatch(m -> m.getName().contains("owbFitBeards"));
+		check(access && hook, f("owb_fit world: Beardifier mixins applied (accessor %s, return-value hook %s)", access, hook));
 		var reg = level.registryAccess().lookupOrThrow(Registries.STRUCTURE);
 		for (String kind : OwbWorldgen.KINDS) {
 			var holder = reg.get(OwbWorldgen.key(kind));
@@ -381,6 +406,12 @@ public final class FitSelfTest {
 				boolean has = OwbBeards.rules(b).stream().anyMatch(r -> r.box().equals(beard) && r.terrainAdjustment() == core.adapt);
 				check(has, f("owb_fit world %s: the Beardifier carries the piece's %s rule (mixin live)", kind, core.adapt.getSerializedName()));
 			}
+		}
+	}
+
+	private static final class OwbBeardifierAccessCheck {
+		static boolean applied() {
+			return dev.elsewhere.overworld_bosses.fit3.mixin.OwbBeardifierAccess.class.isAssignableFrom(Beardifier.class);
 		}
 	}
 

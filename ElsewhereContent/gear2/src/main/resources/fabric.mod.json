@@ -10,6 +10,9 @@
 	"entrypoints": {
 		"main": [
 			"dev.elsewhere.gear2.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.gear2.client.Gear2Client"
 		]
 	},
 	"depends": {

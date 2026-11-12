@@ -381,6 +381,25 @@ public final class GreenhazeMobs {
 			return SoundEvents.FROG_AMBIENT;
 		}
 
+		// ARMIES 6.2 toad chorus (s-spawngroups): one sound emitter per chorus. Followers croak through their leader, which
+		// croaks louder (1.8 volume), and twice as often at dusk. Kill switch spawn_groups_greenhaze_hush (off: every toad croaks as in 2.1).
+		@Override
+		public void playAmbientSound() {
+			if (dev.elsewhere.greenhaze_hush.s3.groups.SpawnGroups3.ON && dev.elsewhere.greenhaze_hush.s3.groups.Herds3.leaderId(this) != null) return;
+			if (dev.elsewhere.greenhaze_hush.s3.groups.Herds3.isLeader(this)) {
+				playSound(getAmbientSound(), 1.8F, getVoicePitch()); // the chorus: louder, heard twice as far
+				return;
+			}
+			super.playAmbientSound();
+		}
+
+		@Override
+		public int getAmbientSoundInterval() {
+			if (!dev.elsewhere.greenhaze_hush.s3.groups.Herds3.isLeader(this)) return super.getAmbientSoundInterval();
+			long t = level().getOverworldClockTime() % 24000L;
+			return t >= 11500L && t <= 14000L ? Math.max(20, super.getAmbientSoundInterval() / 2) : super.getAmbientSoundInterval();
+		}
+
 		@Override
 		protected SoundEvent getHurtSound(DamageSource s) {
 			return SoundEvents.FROG_HURT;

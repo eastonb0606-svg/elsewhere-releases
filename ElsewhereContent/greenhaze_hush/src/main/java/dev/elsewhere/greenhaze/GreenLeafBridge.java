@@ -30,7 +30,7 @@ public final class GreenLeafBridge {
 	private static @Nullable Field highField, pendingField;
 	/** Green Leaf 2.1+ API: high(ServerPlayer), dose(ServerPlayer, double, String), lower(ServerPlayer, double). */
 	private static boolean apiLooked;
-	private static @Nullable Method apiHigh, apiDose, apiLower;
+	private static @Nullable Method apiHigh, apiDose, apiLower, apiContactRadius, apiContactAmount;
 
 	public static boolean loaded() {
 		if (loaded == null) loaded = FabricLoader.getInstance().isModLoaded(MOD_ID);
@@ -106,8 +106,10 @@ public final class GreenLeafBridge {
 			apiHigh = api.getMethod("high", ServerPlayer.class);
 			apiDose = api.getMethod("dose", ServerPlayer.class, double.class, String.class);
 			apiLower = api.getMethod("lower", ServerPlayer.class, double.class);
+			apiContactRadius = api.getMethod("contactRadius");
+			apiContactAmount = api.getMethod("contactAmount");
 		} catch (Throwable t) {
-			apiHigh = apiDose = apiLower = null; // an older Green Leaf: the field path below still works
+			apiHigh = apiDose = apiLower = apiContactRadius = apiContactAmount = null; // an older Green Leaf: the field path below still works
 		}
 	}
 
@@ -189,6 +191,31 @@ public final class GreenLeafBridge {
 		} catch (Throwable t) {
 			return false;
 		}
+	}
+
+	/**
+	 * Second-hand smoke from a hit {@code smoker} just took, like Green Leaf's own bong: every other player within Green Leaf's
+	 * contact radius (times {@code radiusFactor}) catches one contact hit in {@code strain}, unless {@code immune} says no
+	 * (Frond set, Hotbox Visor). Players are the only targets: mobs, soldiers and townsfolk have no high. Returns how many.
+	 */
+	public static int contactAround(ServerPlayer smoker, double radiusFactor, @Nullable String strain, java.util.function.Predicate<ServerPlayer> immune) {
+		if (!usable()) return 0;
+		double radius = 4, amount = 1.5;
+		if (hasApi() && apiContactRadius != null && apiContactAmount != null) {
+			try {
+				radius = ((Number) apiContactRadius.invoke(null)).doubleValue();
+				amount = ((Number) apiContactAmount.invoke(null)).doubleValue();
+			} catch (Throwable t) {
+				// keep Green Leaf's defaults
+			}
+		}
+		double r = radius * radiusFactor;
+		int reached = 0;
+		for (ServerPlayer other : smoker.level().players()) {
+			if (other == smoker || other.isSpectator() || other.distanceToSqr(smoker) > r * r || immune.test(other)) continue;
+			if (dose(other, amount, strain)) reached++;
+		}
+		return reached;
 	}
 
 	public static boolean usable() {

@@ -190,6 +190,7 @@ public final class SelfTest {
 		try {
 			p.snapTo(base.getX() + 0.5, base.getY(), base.getZ() + 0.5, 0, 0);
 			body(server, l, p, base);
+			SelfTestTooltips.run(l, p); // s-p5-tooltips: tooltip numbers = item stats and the real hooks
 			wait[0] = 0;
 		} catch (Throwable t) {
 			check("selftest crashed (sync part)", false, t);
@@ -248,6 +249,7 @@ public final class SelfTest {
 
 		// ---------------------------------------------------------------- shared
 		check("all 22 gear2 items registered", Gear2Items.ALL.size() == 22, Gear2Items.ALL.size());
+		dev.elsewhere.gear2.anim.UseAnimAssets.run(SelfTest::check); // s-p6-useanims: flail/rapier weapon state models
 		checkS("every item has a name, item model and a non-missing texture", () -> {
 			for (Item i : Gear2Items.ALL) {
 				String path = BuiltInRegistries.ITEM.getKey(i).getPath();

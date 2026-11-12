@@ -95,7 +95,7 @@ public final class UlfhednarWolfFury {
 
 	/** The Mead-Horn of the Hall: +3 Fury stacks (for 4 s, like hit stacks); the set's strength if worn, else the base 4% each. */
 	public static int grant(ServerPlayer p, int stacks) {
-		if (!SET.enabled()) return 0;
+		if (SET == null || !SET.enabled()) return 0; // SetBonusesB not initialised, or kill switch off
 		return add(p, stacks, Math.max(1F, SetBonuses.power(p, SET)));
 	}
 

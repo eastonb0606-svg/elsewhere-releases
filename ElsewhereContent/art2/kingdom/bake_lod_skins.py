@@ -5,14 +5,16 @@ One 64x64 player-layout texture per unit type: the unit's skin with its armour (
 armor_dye, chainmail/iron/gold and mod equipment assets), the unit's first trim pattern in its trim material and the
 faction's tabard colour painted into the skin's OUTER layer (hat, jacket, sleeves, pants), which the player model draws
 slightly inflated, like armour. At 48-96 blocks the client draws a soldier with this one texture and no armour, trim,
-tabard or held-item passes (banners and spears excepted). All 66 units also go into one 1024x1024 atlas (16 x 16 slots
-of 64x64) for the rank impostors.
+tabard or held-item passes (banners and spears excepted). The rank impostors (ARMIES.md 3.6) draw one layer only, so each
+unit also gets a FLAT copy (outer layer composited onto the inner layer, outer layer cleared); the flat copies also go into one
+1024x1024 atlas (16 x 16 slots of 64x64).
 
 Usage (from anywhere; reads the module sources and the loom client jar, writes into the kingdom module):
     python3 -I art2/kingdom/bake_lod_skins.py [--preview DIR]
 Outputs:
     kingdom/src/main/resources/assets/elsewhere/textures/entity/kingdom/lod/<unit>.png   (66)
-    kingdom/src/main/resources/assets/elsewhere/textures/entity/kingdom/lod/atlas.png    (1024x1024)
+    kingdom/src/main/resources/assets/elsewhere/textures/entity/kingdom/lod/flat/<unit>.png  (66, one layer, for ranks)
+    kingdom/src/main/resources/assets/elsewhere/textures/entity/kingdom/lod/atlas.png    (1024x1024, the flat copies)
     kingdom/src/main/resources/assets/elsewhere/lod/lod_skins.json                       (index the client reads)
 Re-run whenever a unit's skin, armour, dye, trim or faction tabard colour changes.
 """
@@ -263,6 +265,28 @@ def faction_colors():
     return unit_faction, colors
 
 
+# inner-layer UV origins in the 64x64 player skin, matching PARTS' outer-layer origins
+INNER = {"head": (0, 0), "body": (16, 16), "right_arm": (40, 16), "left_arm": (32, 48), "right_leg": (0, 16), "left_leg": (16, 48)}
+
+
+def flatten(skin):
+    """One-layer copy for the rank impostors: each part's outer box composited over its inner box, then the outer layer cleared."""
+    flat = skin.copy()
+    for part, (iu, iv) in INNER.items():
+        _, (w, h, d), _, (ou, ov) = PARTS[part]
+        inner, outer = faces(iu, iv, w, h, d), faces(ou, ov, w, h, d)
+        for name, box in inner.items():
+            region = flat.crop(box)
+            region.alpha_composite(skin.crop(outer[name]))
+            flat.paste(region, box[:2])
+    clear = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
+    for part in INNER:
+        _, (w, h, d), _, (ou, ov) = PARTS[part]
+        for box in faces(ou, ov, w, h, d).values():
+            flat.paste(clear.crop((0, 0, box[2] - box[0], box[3] - box[1])), box[:2])
+    return flat
+
+
 def main():
     preview = None
     if "--preview" in sys.argv:
@@ -270,7 +294,7 @@ def main():
         os.makedirs(preview, exist_ok=True)
     unit_faction, colors = faction_colors()
     units = sorted(p for p in glob.glob(os.path.join(CONTENT, "*/src/main/resources/data/elsewhere/kingdom_unit/*.json")) if "/build/" not in p)
-    os.makedirs(OUT_TEX, exist_ok=True)
+    os.makedirs(os.path.join(OUT_TEX, "flat"), exist_ok=True)
     os.makedirs(os.path.dirname(OUT_IDX), exist_ok=True)
     atlas = Image.new("RGBA", (64 * ATLAS_COLS, 64 * ATLAS_COLS), (0, 0, 0, 0))
     index = []
@@ -293,13 +317,17 @@ def main():
         paint_tabard(skin, color)
         out = os.path.join(OUT_TEX, f"{name}.png")
         skin.save(out)
-        atlas.paste(skin, ((slot % ATLAS_COLS) * 64, (slot // ATLAS_COLS) * 64))
+        flat = flatten(skin)
+        flat.save(os.path.join(OUT_TEX, "flat", f"{name}.png"))
+        atlas.paste(flat, ((slot % ATLAS_COLS) * 64, (slot // ATLAS_COLS) * 64))
         armor = unit.get("armor") or {}
         index.append({"unit": f"elsewhere:{name}", "skin": unit["skin"], "baked": f"elsewhere:textures/entity/kingdom/lod/{name}.png",
+                      "flat": f"elsewhere:textures/entity/kingdom/lod/flat/{name}.png",
                       "slot": slot, "faction": f"elsewhere:{fac}" if fac else None, "tabard": f"#{color:06X}",
                       "armor": [armor.get("head"), armor.get("chest"), armor.get("legs"), armor.get("feet")]})
         if preview:
             skin.resize((256, 256), Image.NEAREST).save(os.path.join(preview, f"{name}.png"))
+            flat.resize((256, 256), Image.NEAREST).save(os.path.join(preview, f"{name}_flat.png"))
     atlas.save(os.path.join(OUT_TEX, "atlas.png"))
     json.dump({"atlas": "elsewhere:textures/entity/kingdom/lod/atlas.png", "atlas_size": 64 * ATLAS_COLS, "slot_size": 64,
                "columns": ATLAS_COLS, "skins": index}, open(OUT_IDX, "w"), indent=1)

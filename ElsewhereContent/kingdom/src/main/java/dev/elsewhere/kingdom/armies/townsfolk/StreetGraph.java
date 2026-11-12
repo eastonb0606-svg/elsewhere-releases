@@ -159,11 +159,11 @@ public final class StreetGraph {
 		final int radius, spacing;
 		final long day;
 		private final List<int[]> cand = new ArrayList<>();
-		private int ci, ei;
+		private int ci, ei, ej;
 		private final List<int[]> nodes = new ArrayList<>(); // x, y, z, flags
 		private List<List<Integer>> links;
 		int unloaded;
-		long nanos;
+		long nanos, maxStepNanos;
 
 		Builder(String key, BlockPos center, int radius, long day) {
 			this.key = key;
@@ -179,6 +179,13 @@ public final class StreetGraph {
 
 		/** Works for at most {@code budgetNanos}; returns the finished graph, or null while work remains. */
 		@Nullable StreetGraph step(ServerLevel lv, long budgetNanos) {
+			long s0 = System.nanoTime();
+			StreetGraph g = stepInner(lv, budgetNanos);
+			maxStepNanos = Math.max(maxStepNanos, System.nanoTime() - s0);
+			return g;
+		}
+
+		private @Nullable StreetGraph stepInner(ServerLevel lv, long budgetNanos) {
 			long t0 = System.nanoTime();
 			while (ci < cand.size() && nodes.size() < MAX_NODES) {
 				int[] c = cand.get(ci++);
@@ -195,21 +202,23 @@ public final class StreetGraph {
 			}
 			double link = spacing * 1.5 + 0.01;
 			while (ei < nodes.size()) {
-				int i = ei++;
-				int[] a = nodes.get(i);
-				for (int j = i + 1; j < nodes.size(); j++) {
+				int[] a = nodes.get(ei);
+				if (ej <= ei) ej = ei + 1;
+				while (ej < nodes.size()) {
+					int j = ej++;
 					int[] b = nodes.get(j);
 					double dx = a[0] - b[0], dz = a[2] - b[2];
 					if (dx * dx + dz * dz > link * link || Math.abs(a[1] - b[1]) > 3) continue;
 					if (walkable(lv, a, b)) {
-						links.get(i).add(j);
-						links.get(j).add(i);
+						links.get(ei).add(j);
+						links.get(j).add(ei);
+					}
+					if (System.nanoTime() - t0 > budgetNanos) { // resumes at the next pair: no tick does more than one segment past the budget
+						nanos += System.nanoTime() - t0;
+						return null;
 					}
 				}
-				if (System.nanoTime() - t0 > budgetNanos) {
-					nanos += System.nanoTime() - t0;
-					return null;
-				}
+				ei++;
 			}
 			nanos += System.nanoTime() - t0;
 			int n = nodes.size();
@@ -253,7 +262,7 @@ public final class StreetGraph {
 			int flags = 0;
 			for (Direction d : Direction.Plane.HORIZONTAL)
 				for (int r = 1; r <= 2 && flags == 0; r++)
-					if (lv.getBlockState(feet.relative(d, r)).is(BlockTags.DOORS)) flags |= DOOR;
+					if (lv.isLoaded(feet.relative(d, r)) && lv.getBlockState(feet.relative(d, r)).is(BlockTags.DOORS)) flags |= DOOR; // never load a neighbour chunk (s-review-kingdom)
 			return new int[] {x, fy, z, flags};
 		}
 

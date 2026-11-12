@@ -412,7 +412,7 @@ public final class MagnateProfiles {
 				marks[i] = ground(level, c.add(Math.cos(ang) * 3.0, 0, Math.sin(ang) * 3.0));
 			}
 			for (int tick = 0; tick < 20; tick += 2) Timers.after(level.getServer(), tick, () -> {
-				for (Vec3 m : marks) level.sendParticles(ParticleTypes.CRIT, m.x, m.y + 0.1, m.z, 2, 0.5, 0.0, 0.5, 0.0);
+				dev.elsewhere.duelist.foresight.Foresight.hint(() -> { for (Vec3 m : marks) level.sendParticles(ParticleTypes.CRIT, m.x, m.y + 0.1, m.z, 2, 0.5, 0.0, 0.5, 0.0); });   // B5: the landing marks are a hint
 			});
 			Timers.after(level.getServer(), 20, () -> {
 				if (!b.isAlive()) return;

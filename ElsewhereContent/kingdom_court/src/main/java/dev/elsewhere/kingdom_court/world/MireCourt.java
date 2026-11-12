@@ -145,13 +145,15 @@ final class MireCourt {
 			gold = st(Blocks.DYED_TERRACOTTA.pick(DyeColor.YELLOW)), air = st(Blocks.AIR), floor = st(Blocks.MANGROVE_PLANKS),
 			glass = st(Blocks.STAINED_GLASS_PANE.pick(DyeColor.PURPLE)), post = Blocks.CRIMSON_STEM.defaultBlockState().setValue(RotatedPillarBlock.AXIS, Direction.Axis.Y);
 		Direction out = front > 0 ? Direction.SOUTH : Direction.NORTH;
+		// crimson-stem quoins only under the slate roofs (odd houses); the crimson-roofed ones get purple quoins, so purple leads crimson
+		BlockState quoin = (java.util.Arrays.asList(HOUSES).indexOf(h) & 1) == 1 ? post : purple;
 		for (int x = x0; x <= x1; x++) for (int z = z0; z <= z1; z++) {
 			boolean edge = x == x0 || x == x1 || z == z0 || z == z1, corner = (x == x0 || x == x1) && (z == z0 || z == z1);
 			w.s(x, -1, z, edge ? calcite : floor);
 			for (int y = 0; y <= eave; y++) {
 				BlockState b;
 				if (!edge) b = y % 4 == 3 ? floor : air;
-				else if (corner) b = z == zf ? post : quartz;
+				else if (corner) b = z == zf ? quoin : quartz;
 				else if (z == zf) b = y % 4 == 3 ? purple : calcite;
 				else b = y % 4 == 3 ? purple : quartz;
 				w.s(x, y, z, b);

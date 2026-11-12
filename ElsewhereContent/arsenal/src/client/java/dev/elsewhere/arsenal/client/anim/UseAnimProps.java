@@ -40,7 +40,7 @@ public final class UseAnimProps {
 			ConditionalPropsAccessor.elsewhere$idMapper().put(ArsenalContent.id("lunge_ready"), LungeReady.CODEC);
 			ConditionalPropsAccessor.elsewhere$idMapper().put(ArsenalContent.id("channeling"), Channeling.CODEC);
 		} catch (Throwable t) {
-			// accessor mixin not applied: the weapons keep their plain models (logged, never a crash)
+			// accessor mixin not applied: logged; the weapon item models then fail to load (missing model), never a crash
 			System.err.println("[elsewhere] weapon item-model properties not registered: " + t);
 		}
 	}

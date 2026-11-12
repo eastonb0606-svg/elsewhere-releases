@@ -2,6 +2,7 @@ package dev.elsewhere.gear3.setbonus.b;
 
 import dev.elsewhere.gear3.setbonus.SetBonuses;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
@@ -47,6 +48,7 @@ public final class SetBonusesB {
 		// arrows loosed by a set wearer: Outrider (sprinting) and Steady Aim (still or sneaking full draw) fix their bonus on the
 		// arrow as a tag, read when it hits (the same pattern as arsenal's Marksman tag)
 		ServerEntityEvents.ENTITY_LOAD.register(SetBonusesB::onEntityLoad);
+		ServerLifecycleEvents.SERVER_STOPPING.register(s -> lastLoosed = null); // never keep a closed world's entity alive
 	}
 
 	static void onEntityLoad(Entity e, ServerLevel level) {
@@ -55,8 +57,13 @@ public final class SetBonusesB {
 		onLoose(p, arrow);
 	}
 
+	/** The last arrow a set wearer loosed (self-test reads it). */
+	public static AbstractArrow lastLoosed;
+
 	/** An arrow a player just loosed (also called by the self-test). */
 	public static void onLoose(ServerPlayer p, AbstractArrow arrow) {
+		if (SetBonuses.mask(p) == 0L) return;
+		lastLoosed = arrow;
 		OutriderPair.onLoose(p, arrow);
 		RidgewatchSteadyAim.onLoose(p, arrow);
 	}

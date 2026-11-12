@@ -3,6 +3,7 @@
 	"package": "dev.elsewhere.boss_music.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
+		"BossOverlayAccessor",
 		"MusicManagerMixin",
 		"SoundManagerMixin",
 		"SoundVolumeAccessor"

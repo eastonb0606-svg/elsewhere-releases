@@ -297,7 +297,26 @@ public final class SelfTest {
 		}
 		dev.elsewhere.gear3.s3.callingtags.CallingTagChecks.run(s); // s-callingtags: calling tags of all 82 GEAR.md items, lang/JEI audit
 		Gear3MechanicTests.run(s);
+		dev.elsewhere.gear3.s3.testmeter.TestMeterChecks.run(s); // s-compat-testmeter (hook added by s-review-gear3): "testmeter: ..." checks for every summon type
 		dev.elsewhere.gear3.s3.echoarrow.EchoArrowSelfTest.run(s); // s-echoarrow: "echo_arrow: ..." checks
+		dev.elsewhere.gear3.s3.galesling.GaleSlingTests.run(s); // s-galesling: "Gale Sling: ..." checks
+		CenserChecks.run(s); // s-censer: "Choirlight Censer: ..." checks
+		dev.elsewhere.gear3.s3.dredge.DredgeSelfTest.run(s); // s-dredge: "Tidebrass Dredge: ..." checks
+		dev.elsewhere.gear3.s3.wolfcall.WolfcallSelfTest.run(s); // s-wolfcall: "Wolf-Call Horn: ..." checks
+		dev.elsewhere.gear3.s3.sickle.LanternSickleSelfTest.run(s); // s-sickle: "Lantern Sickle: ..." checks
+		dev.elsewhere.gear3.dev.SetBonusTestsA.run(s); // s-setbonus-a: "setbonus-a: ..." set/pair bonus checks
+		dev.elsewhere.gear3.s3.prismbow.PrismBowTests.run(s); // s-prismbow: "Prism Bow: ..." checks
+		dev.elsewhere.gear3.s3.harpoon.HarpoonSelfTest.run(s); // s-harpoon: "harpoon_bolt: ..." checks
+		dev.elsewhere.gear3.s3.ascension.AscensionTests.run(s); // s-ascension: "ascension: ..." checks
+		dev.elsewhere.gear3.s3.starpiercer.StarpiercerChecks.run(s); // s-starpiercer: "Starpiercer: ..." checks
+		dev.elsewhere.gear3.setbonus.b.SetBonusTestsB.run(s); // s-setbonus-b: "setbonus-b/Outrider/Steady Aim/Starsight/Zenith/Wolf-Fury/Mead-Horn/Command: ..." checks
+		dev.elsewhere.gear3.s3.pennant.PennantSelfTest.run(s); // s-pennant: "Herdcaller's Pennant: ..." checks
+		dev.elsewhere.gear3.s3.sunglass.SunglassSelfTest.run(s); // s-sunglass: "Sunglass Arrow: ..." checks
+		dev.elsewhere.gear3.s3.miresnare.MireSnareSelfTest.run(s); // s-miresnare: "Mire Snare: ..." checks
+		dev.elsewhere.gear3.s3.mothlight.MothlightSelfTest.run(s); // s-mothlight: "Mothlight: ..." checks
+		dev.elsewhere.gear3.s3.willo.WilloSelfTest.run(s); // s-willolantern: "Will-o'-Lantern: ..." checks
+		dev.elsewhere.gear3.s3.reliquary.ReliquarySelfTest.run(s); // s-reliquary: "Echo Reliquary: ..." checks
+		dev.elsewhere.gear3.s3.totems.TotemTests.run(s); // s-totems: "Totems: ..." checks
 	}
 
 	static boolean stats(Gear3Def d, ItemStack st) {

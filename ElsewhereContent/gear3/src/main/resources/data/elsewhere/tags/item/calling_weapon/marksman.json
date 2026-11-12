@@ -1,16 +1,10 @@
 {
   "replace": false,
   "values": [
-    {
-      "id": "elsewhere:aphelion_starpiercer",
-      "required": false
-    },
+    "elsewhere:gale_sling",
+    "elsewhere:aphelion_starpiercer",
     {
       "id": "elsewhere:hrafnholt_hurlbat",
-      "required": false
-    },
-    {
-      "id": "elsewhere:gale_sling",
       "required": false
     },
     {

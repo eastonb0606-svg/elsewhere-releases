@@ -1,0 +1,43 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:using_item",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/gale_sling"
+    },
+    "on_true": {
+      "type": "minecraft:range_dispatch",
+      "property": "minecraft:use_cycle",
+      "period": 8.0,
+      "scale": 0.125,
+      "entries": [
+        {
+          "threshold": 0.25,
+          "model": {
+            "type": "minecraft:model",
+            "model": "elsewhere:item/gale_sling_whirl_1"
+          }
+        },
+        {
+          "threshold": 0.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "elsewhere:item/gale_sling_whirl_2"
+          }
+        },
+        {
+          "threshold": 0.75,
+          "model": {
+            "type": "minecraft:model",
+            "model": "elsewhere:item/gale_sling_whirl_3"
+          }
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "elsewhere:item/gale_sling_whirl_0"
+      }
+    }
+  }
+}

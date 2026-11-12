@@ -2,6 +2,7 @@ package dev.elsewhere.gear3.s3.sunglass;
 
 import dev.elsewhere.gear3.Gear3Content;
 import dev.elsewhere.gear3.Gear3Items;
+import dev.elsewhere.gear3.Gear3Mechanics;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -21,14 +22,14 @@ import net.minecraft.world.level.block.DispenserBlock;
  * <ul>
  * <li>Glass: the arrow flies straight through every block in {@link #PASSES} ({@code #elsewhere:sunglass_arrow_passes}: glass blocks,
  * stained and tinted glass, glass panes) and stops at the first other block or entity. Done inside the arrow's own movement
- * ({@code mixin/SunglassArrowMixin}: its flight ray and its "am I inside a block" check skip glass), so nothing scans or polls.</li>
+ * ({@code dev.elsewhere.gear3.mixin.sunglass.SunglassArrowMixin}: its flight ray and its "am I inside a block" check skip glass), so nothing scans or polls.</li>
  * <li>Fire: a hit that deals damage sets the target alight for {@link #FIRE_SECONDS} s.</li>
  * <li>Undead ({@code #minecraft:undead}): the hit deals x{@link #UNDEAD_MULT}.</li>
  * <li>Bows, crossbows (it is in {@code #minecraft:arrows}) and dispensers shoot it; it picks up as a Sunglass Arrow.</li>
  * </ul>
  * Item {@code elsewhere:sunglass_arrow} comes from the gear3 catalogue (mechanic "sunglass_arrow" = {@link SunglassArrowItem}); this
- * class registers the entity type {@code elsewhere:sunglass_arrow} and the dispenser behaviour. Merge entry: {@link #init()} from
- * Gear3Content. Client: {@code SunglassRenderers.init()} from Gear3Client. Self-test: {@link SunglassSelfTest}.
+ * class registers the entity type {@code elsewhere:sunglass_arrow}, that factory and the dispenser behaviour. Merge entry: {@link #init()} from
+ * Gear3Content, before Gear3Items.init(). Client: {@code SunglassRenderers.init()} from Gear3Client. Self-test: {@link SunglassSelfTest}.
  * Kill switch: key {@code sunglass_arrow} in {@code config/elsewhere-overhaul3.json} (or {@code -Delsewhere.overhaul3.sunglass_arrow=false}):
  * off = the item and entity stay registered (worlds keep loading, stacks stay valid) but it flies and hits like a plain arrow
  * (glass stops it, no fire, no undead bonus, no trail). The state rides on the arrow as synced entity data, so a client with
@@ -50,6 +51,10 @@ public final class SunglassArrows {
 	public static EntityType<SunglassArrow> TYPE;
 	private static boolean done;
 
+	/**
+	 * Called from Gear3Content BEFORE {@code Gear3Items.init()}: registers the entity type and puts the "sunglass_arrow" mechanic
+	 * factory, which builds the {@link SunglassArrowItem} and gives it the dispenser's projectile behaviour (so no Gear3Mechanics edit).
+	 */
 	public static void init() {
 		if (done) return;
 		done = true;
@@ -57,8 +62,11 @@ public final class SunglassArrows {
 		// same size, tracking range and update rate as the vanilla arrow and spectral arrow
 		TYPE = Registry.register(BuiltInRegistries.ENTITY_TYPE, key, EntityType.Builder.<SunglassArrow>of(SunglassArrow::new, MobCategory.MISC)
 			.noLootTable().sized(0.5F, 0.5F).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build(key));
-		Item item = item();
-		if (item != null) DispenserBlock.registerProjectileBehavior(item);
+		Gear3Mechanics.FACTORIES.put(ID, props -> {
+			SunglassArrowItem item = new SunglassArrowItem(props);
+			DispenserBlock.registerProjectileBehavior(item);
+			return item;
+		});
 	}
 
 	/** The catalogue item, or null when the catalogue has none. */

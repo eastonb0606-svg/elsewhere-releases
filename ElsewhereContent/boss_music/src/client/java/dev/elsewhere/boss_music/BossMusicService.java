@@ -1,12 +1,12 @@
 package dev.elsewhere.boss_music;
 
-import java.lang.reflect.Field;
+import dev.elsewhere.boss_music.mixin.BossOverlayAccessor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.components.BossHealthOverlay;
 import net.minecraft.client.gui.components.LerpingBossEvent;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -19,11 +19,13 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Client-side boss music. While a boss from {@code boss_music.json} is within range and fighting (its boss bar is on
- * screen, or it has been hurt), its theme runs on a {@link Conductor}: the track's own intro once, then its loop; the first
- * phase threshold crossfades on the beat into the theme's surge section (or plays the phase stinger on the beat), the kill
- * brings in the track's own ending on the beat, and fleeing or dying fades out (flee on the beat, defeat slowly). Vanilla
- * music is paused and kingdom realm music is held off ({@link RealmGuard}). A second boss's theme waits until the first has
- * left. Everything plays in the MUSIC category, so the Music slider applies. Boss scan every 5 ticks; no packets.
+ * screen, or it has been hurt), its theme runs on a {@link Conductor}: the track's own intro once, then its loop; each phase
+ * threshold crossfades on the beat into the theme's phase layer for it (P12 phase stems; the surge is the first one) or
+ * plays the phase stinger on the beat, the kill brings in the track's own ending on the beat, and fleeing or dying fades
+ * out (flee on the beat, defeat slowly). Vanilla music is paused and kingdom realm music is held off ({@link RealmGuard}).
+ * A second boss's theme waits until the first has left. Everything plays in the MUSIC category, so the Music slider
+ * applies. No packets and no world scans: boss candidates come from the client's entity load/unload events, checked every
+ * 5 ticks only while one is loaded (the tracked boss's health is read every tick for the thresholds).
  */
 public final class BossMusicService {
 	static final Logger LOGGER = LoggerFactory.getLogger("elsewhere_boss_music");
@@ -35,8 +37,9 @@ public final class BossMusicService {
 	private static Identifier themeId;
 	private static int trackedId = -1;
 	private static boolean[] fired = new boolean[0];
-	private static Field barsField;
-	private static boolean barsLooked;
+	/** Loaded client entities whose type has a theme (kept by {@link #onLoad}/{@link #onUnload}; usually empty). */
+	private static final Set<LivingEntity> candidates = java.util.Collections.newSetFromMap(new java.util.IdentityHashMap<>());
+	private static final List<String> barNames = new ArrayList<>();
 
 	/** True while a boss theme is playing or fading out: vanilla/other music stays paused. */
 	public static boolean suppressVanilla() {
@@ -57,9 +60,19 @@ public final class BossMusicService {
 		themeId = null;
 		pendingId = null;
 		trackedId = -1;
+		candidates.clear();
 		RealmGuard.reset();
 		map = null;
 		if (join) map = BossMusicMap.load(mc);
+	}
+
+	/** Client entity load: remember it if its type has a theme. */
+	static void onLoad(Entity e) {
+		if (e instanceof LivingEntity le && map().themes.containsKey(BuiltInRegistries.ENTITY_TYPE.getKey(le.getType()))) candidates.add(le);
+	}
+
+	static void onUnload(Entity e) {
+		if (e instanceof LivingEntity le) candidates.remove(le);
 	}
 
 	private static Identifier pendingId;
@@ -92,6 +105,7 @@ public final class BossMusicService {
 				themeId = null;
 			}
 		}
+		if (theme == null && trackedId < 0 && candidates.isEmpty()) return; // no boss loaded nearby: nothing to do
 		if (mc.player.isDeadOrDying()) {
 			if (theme != null) theme.defeat(); // slow defeat fade
 			pendingId = null;
@@ -118,14 +132,18 @@ public final class BossMusicService {
 			} else if (tracked == null || tracked.isRemoved()) { // reset, despawn or out of tracking range
 				if (theme != null) theme.flee();
 				trackedId = -1;
+				tracked = null;
 			}
 		}
 
+		boolean scan = ++scanClock >= 5;
+		if (scan) scanClock = 0;
 		LivingEntity boss;
-		if (tracked instanceof LivingEntity le && !le.isRemoved() && ++scanClock % 5 != 0 && le.distanceTo(mc.player) <= m.range + 8) {
+		if (!scan && tracked instanceof LivingEntity le && !le.isRemoved() && le.distanceTo(mc.player) <= m.range + 8) {
 			boss = le; // between scans (every 5 ticks) the tracked boss stays chosen
+		} else if (!scan) {
+			return; // nothing tracked: the next scan decides (at most 4 ticks away)
 		} else {
-			scanClock = 0;
 			boss = findBoss(mc, m, tracked);
 		}
 		if (boss == null) {
@@ -172,6 +190,15 @@ public final class BossMusicService {
 		return pendingId;
 	}
 
+	/** The theme playing now (or null). For the self-test. */
+	static Theme theme() {
+		return theme;
+	}
+
+	static Identifier themeId() {
+		return themeId;
+	}
+
 	private static void sting(Minecraft mc, BossMusicMap m, String which) {
 		Identifier id = m.stingers.get(which);
 		if (id == null) return;
@@ -180,20 +207,27 @@ public final class BossMusicService {
 
 	private static LivingEntity findBoss(Minecraft mc, BossMusicMap m, Entity tracked) {
 		var player = mc.player;
-		double r = m.range + 8; // look a little wider; the tracked boss gets hysteresis below
 		LivingEntity best = null;
 		double bestD = Double.MAX_VALUE;
-		List<String> bars = null;
-		for (Entity e : mc.level.getEntities((Entity) null, player.getBoundingBox().inflate(r), x -> x instanceof LivingEntity)) {
-			if (!(e instanceof LivingEntity le) || le.isDeadOrDying()) continue;
+		boolean barsRead = false;
+		for (var it = candidates.iterator(); it.hasNext(); ) {
+			LivingEntity le = it.next();
+			if (le.isRemoved() || le.level() != mc.level) { // left without an unload event (level change): drop it
+				it.remove();
+				continue;
+			}
+			if (le.isDeadOrDying()) continue;
 			Identifier key = BuiltInRegistries.ENTITY_TYPE.getKey(le.getType());
 			if (!m.themes.containsKey(key)) continue;
 			double d = le.distanceTo(player);
-			if (d > (e == tracked ? m.range + 8 : m.range)) continue;
-			if (bars == null) bars = barNames(mc);
+			if (d > (le == tracked ? m.range + 8 : m.range)) continue; // the tracked boss gets a little hysteresis
+			if (!barsRead) {
+				readBarNames(mc);
+				barsRead = true;
+			}
 			boolean fighting = le.getHealth() < le.getMaxHealth() - 0.01F
-				|| bars.contains(le.getName().getString()) || bars.contains(le.getType().getDescription().getString());
-			if (!fighting && e != tracked) continue;
+				|| barNames.contains(le.getName().getString()) || barNames.contains(le.getType().getDescription().getString());
+			if (!fighting && le != tracked) continue;
 			if (d < bestD) {
 				bestD = d;
 				best = le;
@@ -202,22 +236,12 @@ public final class BossMusicService {
 		return best;
 	}
 
-	/** Names of the boss bars currently on screen (the bar list is a private field of the overlay). */
-	@SuppressWarnings("unchecked")
-	private static List<String> barNames(Minecraft mc) {
-		List<String> out = new ArrayList<>();
-		try {
-			if (!barsLooked) {
-				barsLooked = true;
-				barsField = BossHealthOverlay.class.getDeclaredField("events");
-				barsField.setAccessible(true);
-			}
-			if (barsField == null || mc.gui == null || mc.gui.hud == null) return out;
-			Map<UUID, LerpingBossEvent> ev = (Map<UUID, LerpingBossEvent>) barsField.get(mc.gui.hud.getBossOverlay());
-			for (LerpingBossEvent e : ev.values()) out.add(e.getName().getString());
-		} catch (ReflectiveOperationException | RuntimeException e) {
-			barsField = null; // fall back to the "has been hurt" test
-		}
-		return out;
+	/** Names of the boss bars currently on screen, through the {@link BossOverlayAccessor} mixin (P12: no reflection). */
+	static List<String> readBarNames(Minecraft mc) {
+		barNames.clear();
+		if (mc.gui == null || mc.gui.hud == null) return barNames;
+		Map<UUID, LerpingBossEvent> ev = ((BossOverlayAccessor) mc.gui.hud.getBossOverlay()).elsewhere$getEvents();
+		for (LerpingBossEvent e : ev.values()) barNames.add(e.getName().getString());
+		return barNames;
 	}
 }

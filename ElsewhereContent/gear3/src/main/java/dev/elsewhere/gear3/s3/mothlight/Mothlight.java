@@ -3,6 +3,7 @@ package dev.elsewhere.gear3.s3.mothlight;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import dev.elsewhere.gear3.Gear3Content;
+import dev.elsewhere.gear3.Gear3Mechanics;
 import dev.elsewhere.stub.arsenal.BossCheck;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -23,10 +24,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 
 /**
  * Mothlight Staff (GEAR.md A5, Summoner / Swarm, G3): "1 slot = 3 moths, 6 HP each, 1.5 dmg per 0.75 s; moth hits: target
- * -10% damage 3 s (non-boss)". Source: Selenne 30% (loot hook) and a Pale Bark + Moonsilk Thread recipe (gear3 catalogue).
+ * -10% damage 3 s (non-boss)". Source: Selenne 30% (loot hook), the Sap Tapper
+ * (20 Pale Bark + 4 Moonsilk Thread, {@link #addSapTapperOffer}) and a recipe (gear3 catalogue).
  * <ul>
  * <li>The staff is a summoner {@code MinionStaffItem} ({@link MothlightStaffItem}): the 1 s call, 10 Glimmer and 1 durability,
  * sneak-use sends the moths home. It is in {@code #elsewhere:calling_weapon/summoner} (tools/calling_tags.py).</li>
@@ -37,7 +42,7 @@ import net.minecraft.world.entity.MobCategory;
  * does 10% less ({@link #outgoing}, called from {@code mixin.mothlight.MothdustMixin} on the server damage entry point).</li>
  * </ul>
  * Nothing here ticks or scans: the swarm is an ordinary minion (summoner AI), the dust is a timed mob effect, and the damage hook
- * is one effect lookup per hit. Merge entry: {@link #init()} from Gear3Content. Client: {@code s3.mothlight.client.MothlightClient}.
+ * is one effect lookup per hit. Merge entry: {@link #init()} from Gear3Content, before Gear3Items.init() (it puts the staff's factory). Client: {@code s3.mothlight.client.MothlightClient}.
  * Kill switch: key {@code mothlight_staff} in {@code config/elsewhere-overhaul3.json} (or {@code -Delsewhere.overhaul3.mothlight_staff=false}):
  * off = item, entity and effect stay registered (worlds keep loading), but the staff calls nothing and Mothdust does nothing.
  */
@@ -72,9 +77,11 @@ public final class Mothlight {
 		}
 	}
 
+	/** Merge entry, called from Gear3Content.init() BEFORE Gear3Items.init(): the "mothlight_staff" factory, the swarm type, Mothdust. */
 	public static void init() {
 		if (done) return;
 		done = true;
+		Gear3Mechanics.FACTORIES.put(STAFF_ID, MothlightStaffItem::new);
 		Identifier sid = Gear3Content.id(SWARM_ID);
 		if (BuiltInRegistries.ENTITY_TYPE.containsKey(sid)) {
 			@SuppressWarnings("unchecked")
@@ -111,6 +118,21 @@ public final class Mothlight {
 		if (!enabled || MOTHDUST == null || amount <= 0F || victim.level().isClientSide()) return amount;
 		if (source.getEntity() instanceof LivingEntity by && by != victim && by.hasEffect(MOTHDUST)) return amount * DUST_FACTOR;
 		return amount;
+	}
+
+	/** Sap Tapper price (GEAR.md): 20 Pale Bark + 4 Moonsilk Thread; 3 per restock (the tapper restocks twice a day per player). */
+	public static final int TRADE_BARK = 20, TRADE_THREAD = 4, TRADE_USES = 3;
+
+	/** Appends the staff to the Sap Tapper's offers (mixin.mothlight.SapTapperMothlightMixin); no-op when off or an item is missing. */
+	public static void addSapTapperOffer(java.util.List<MerchantOffer> offers) {
+		if (!enabled || offers == null) return;
+		var bark = BuiltInRegistries.ITEM.getOptional(Identifier.fromNamespaceAndPath("elsewhere", "pale_bark"));
+		var thread = BuiltInRegistries.ITEM.getOptional(Identifier.fromNamespaceAndPath("elsewhere", "moonsilk_thread"));
+		var staff = BuiltInRegistries.ITEM.getOptional(Gear3Content.id(STAFF_ID));
+		if (bark.isEmpty() || thread.isEmpty() || staff.isEmpty()) return;
+		for (MerchantOffer o : offers) if (o.getResult().is(staff.get())) return;
+		offers.add(new MerchantOffer(new ItemCost(bark.get(), TRADE_BARK), java.util.Optional.of(new ItemCost(thread.get(), TRADE_THREAD)),
+			new ItemStack(staff.get()), TRADE_USES, 15, 0.05F));
 	}
 
 	/** Same rule as arsenal's / summoner's Overhaul3.on: JVM flag, then config/elsewhere-overhaul3.json, default on. */

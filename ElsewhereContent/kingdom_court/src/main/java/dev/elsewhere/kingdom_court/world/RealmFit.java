@@ -30,6 +30,26 @@ public final class RealmFit {
 	static final Map<String, Map<Long, Integer>> MEMO = new ConcurrentHashMap<>();
 
 	/**
+	 * s-heapleak (3.0 heap pass): drops every realm's column memo. Called on SERVER_STOPPED ({@link CourtWorld#init}): the memo is keyed by
+	 * seed, so without this a single-player client kept every world's realms (about 13k columns each) for as long as the game ran.
+	 */
+	public static void clearMemo() {
+		MEMO.clear();
+	}
+
+	/** Memoized columns over all realms (self-test). */
+	public static int memoColumns() {
+		int n = 0;
+		for (Map<Long, Integer> m : MEMO.values()) n += m.size();
+		return n;
+	}
+
+	/** Realms with a memo (self-test). */
+	public static int memoRealms() {
+		return MEMO.size();
+	}
+
+	/**
 	 * Generator-only ground: the first air above terrain or water ({@code WORLD_SURFACE_WG}, so roads and walls bridge a pond instead of
 	 * sinking into it), exact per column, deterministic for every chunk (never reads the WorldGenLevel).
 	 */

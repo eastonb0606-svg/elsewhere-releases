@@ -8,7 +8,9 @@
 		"PlayerLethalGuardMixin",
 		"LivingEntityUseMixin",
 		"WardenTargetMixin",
-		"LivingEntityVisibilityMixin"
+		"LivingEntityVisibilityMixin",
+		"GhBeardifierMixin",
+		"GhBeardifierAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

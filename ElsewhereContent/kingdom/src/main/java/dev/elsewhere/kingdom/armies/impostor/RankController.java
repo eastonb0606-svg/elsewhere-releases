@@ -20,8 +20,11 @@ public interface RankController {
 	/** A queued figure could not break out (the caps are full): its head goes back to the reserve and the figure stays. */
 	void breakFailed(ServerLevel lv, RankEntity r, Figure f);
 
-	/** A figure died inside the rank (rank dice, a stray arrow, a blast). */
-	void figureDied(ServerLevel lv, RankEntity r, Figure f);
+	/** A figure died inside the rank (rank dice, a stray arrow, a blast). {@code committed}: it was queued to break out (its head already left the reserve). */
+	void figureDied(ServerLevel lv, RankEntity r, Figure f, boolean committed);
+
+	/** A figure was wounded inside the rank (its {@link Figure#health} already lowered). */
+	default void figureWounded(ServerLevel lv, RankEntity r, Figure f) {}
 
 	/** A player hit a folded rank: bring its soldiers back now. True when they are real again. */
 	boolean unfold(ServerLevel lv, RankEntity r);

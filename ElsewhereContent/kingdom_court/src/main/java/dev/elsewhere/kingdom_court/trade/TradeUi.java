@@ -104,6 +104,7 @@ public final class TradeUi {
 			return;
 		}
 		menu(p, n);
+		dev.elsewhere.kingdom_court.standing.TraderDialogue.open(p, n); // s-p7-standing: POLISH P7 dialogue screen over this chat menu
 	}
 
 	static void menu(ServerPlayer p, DiplomatNpc n) {

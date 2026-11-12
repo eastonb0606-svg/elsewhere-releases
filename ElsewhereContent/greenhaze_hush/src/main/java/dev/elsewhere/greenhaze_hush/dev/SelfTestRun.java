@@ -67,6 +67,7 @@ public final class SelfTestRun {
 			check("sfx3: wind-ups only on real attacks (Sonic Boom yes; Deafened/Vent opened/Chewing no)", dev.elsewhere.greenhaze_hush.Sfx3.isAttack("Sonic Boom") && dev.elsewhere.greenhaze_hush.Sfx3.isAttack("Couch Slam: jump!") && !dev.elsewhere.greenhaze_hush.Sfx3.isAttack("Deafened! Strike now") && !dev.elsewhere.greenhaze_hush.Sfx3.isAttack("Vent opened!") && !dev.elsewhere.greenhaze_hush.Sfx3.isAttack("Chewing: belly exposed!"), "");
 			check("sfx3: kill switch sfx3_greenhaze_hush=false falls back to 2.x", off, "");
 		}
+		dev.elsewhere.greenhaze_hush.s3.groups.SpawnGroups3.selfTest(server, (ok, what) -> check(what, ok, "")); // ARMIES 6 spawn groups (s-spawngroups)
 		if (gh == null || hu == null) { finish(server); return; }
 		for (ServerLevel l : new ServerLevel[]{gh, hu}) {
 			try {

@@ -3,6 +3,7 @@ package dev.elsewhere.gear3.setbonus.a;
 import dev.elsewhere.gear3.Gear3Content;
 import dev.elsewhere.gear3.setbonus.SetBonus;
 import dev.elsewhere.gear3.setbonus.SetBonuses;
+import dev.elsewhere.gear3.minion.MinionSlots;
 import dev.elsewhere.minion.MinionEntity;
 import dev.elsewhere.minion.MinionManager;
 import java.util.HashSet;
@@ -25,7 +26,8 @@ import net.minecraft.world.entity.player.Player;
 /**
  * Elderbark Regalia (mantle, leggings, boots + the summoner module's Elder Bark Crown), <b>Greater Bond</b> (GEAR.md A5,
  * Elite): your 2-slot minions (War-Yak, Echo Reliquary) have +30% max health and deal +15% damage. A 2-slot minion is a
- * minion whose entity type is in {@code #elsewhere:two_slot_minions} (or added to {@link #TWO_SLOT} by its owner lane).
+ * minion whose {@link MinionSlots} weight is 2 or more (War-Yak), or whose entity type is in {@code #elsewhere:two_slot_minions}
+ * or added to {@link #TWO_SLOT} by its owner lane (Echo Knight).
  * The health modifier is set when such a minion joins the world and when the set turns on or off (health keeps its
  * fraction); the damage is one multiply on the minion's hit. Nothing ticks.
  */
@@ -55,7 +57,7 @@ public final class GreaterBond {
 	}
 
 	public static boolean twoSlot(Entity e) {
-		return e instanceof MinionEntity && (TWO_SLOT.contains(e.getType()) || e.getType().builtInRegistryHolder().is(TWO_SLOT_TAG));
+		return e instanceof MinionEntity && (MinionSlots.weight(e) >= 2.0 || TWO_SLOT.contains(e.getType()) || e.getType().builtInRegistryHolder().is(TWO_SLOT_TAG));
 	}
 
 	static void changed(ServerPlayer p, boolean on) {
@@ -76,7 +78,7 @@ public final class GreaterBond {
 		if (m.isAlive()) m.setHealth(Math.max(1F, Math.min(m.getMaxHealth(), frac * m.getMaxHealth())));
 	}
 
-	static float damage(LivingEntity victim, DamageSource src, float amount) {
+	public static float damage(LivingEntity victim, DamageSource src, float amount) {
 		if (victim instanceof Player || !(src.getDirectEntity() instanceof MinionEntity m) || !twoSlot(m) || !(src.getEntity() instanceof ServerPlayer o)) return amount;
 		float pw = SetBonuses.power(o, BONUS);
 		return pw > 0F ? amount * (1F + DAMAGE * pw) : amount;

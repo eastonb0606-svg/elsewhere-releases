@@ -1,0 +1,238 @@
+{
+ "elsewhere:azmar_armor_trim_smithing_template": [
+  "Armor trim template: applies the Azmar scarab-wing trim to any trimmable armor with a trim material.",
+  "How to get: the Counting-Table; copy it with 7 Diamonds and a Lapis Block (makes 2)."
+ ],
+ "elsewhere:azmar_banner_pattern": [
+  "Banner pattern: the winged scarab holding a sun disc.",
+  "How to get: the Counting-Table."
+ ],
+ "elsewhere:azmar_commission_slip": [
+  "Proof of an order at Azmar's Royal Workshop: pay half, collect the masterwork after 3 in-game days and pay the rest.",
+  "Only the buyer can collect it, and the finished item carries your name in its lore."
+ ],
+ "elsewhere:azmar_composite_bow": [
+  "Composite Bow: a recurved bow, vanilla bow stats.",
+  "How to get: Azmar Bowmen (4%); the Counting-Table."
+ ],
+ "elsewhere:azmar_copper_khopesh": [
+  "Copper Khopesh: copper-sword stats, a sickle blade that hooks a raised shield down (3 s, once per 6 s).",
+  "How to get: Azmar Spearguards and Sun-Guards drop it rarely (4%); the Counting-Table sells it."
+ ],
+ "elsewhere:azmar_dinar": [
+  "Azmar Dinar: the Sultanate's gold coin. Dropped by Azmar soldiers (1-3), officers (4-8), Lords (16-32) and the Sultana (80-96).",
+  "How to get: Azmar drops; spend it at the Counting-Table in a liberated Azmar village."
+ ],
+ "elsewhere:azmar_falcon_helm": [
+  "Falcon Helm: leather-cap values.",
+  "How to get: Royal Falconer Leyla Dunmar's guard and the Falconer drop it."
+ ],
+ "elsewhere:azmar_falconers_gauntlet": [
+  "Falconer's Gauntlet: right-click to send a falcon at the target in view: Glowing 8 s and 3 damage, 20 s cooldown.",
+  "How to get: Royal Falconer Leyla Dunmar (DropRule)."
+ ],
+ "elsewhere:azmar_fire_pot": [
+  "Faience Fire Pot: throw for 6 damage and a 3x3 ground fire for 3 s (2 per second). It never spreads and never burns blocks.",
+  "How to get: Naffatun drop them; the Counting-Table sells 4 for 20 Dinars."
+ ],
+ "elsewhere:azmar_gilded_khopesh": [
+  "Gilded Khopesh: iron-sword stats with the shield hook.",
+  "How to get: dropped by Azmar officers (Jemadar, Qaid)."
+ ],
+ "elsewhere:azmar_horned_scarab_crown": [
+  "Horned-Scarab War-Crown: iron-helmet values.",
+  "How to get: dropped by Amir Tariq Vashti (50%)."
+ ],
+ "elsewhere:azmar_ibis_crest": [
+  "Ibis Crest: a scribe's helmet, +25% experience from villager trades.",
+  "How to get: Grand Wazir Idris Halvane (DropRule)."
+ ],
+ "elsewhere:azmar_jackal_helm": [
+  "Jackal Helm: chainmail-helmet values, rendered on the head (not painted on the skin).",
+  "How to get: Jackal Guards of the Sultana drop it 2% of the time."
+ ],
+ "elsewhere:azmar_letter_of_credit": [
+  "Dinars deposited at any Azmar treasury (the Envoy, the Market Inspector, the Caravan Master) can be drawn at any other.",
+  "The Sultanate keeps the balance, not the paper: you keep it if you die or lose the letter. Use the letter to read your balance."
+ ],
+ "elsewhere:azmar_nemes_of_the_uraeus": [
+  "Nemes of the Uraeus: helmet 3/2/0.1 with the Uraeus Ward (10% less damage by day in the open, +1% per Lord Seal up to 12%).",
+  "How to get: the Sultana Nahira Zahr-Qadir (DropRule)."
+ ],
+ "elsewhere:azmar_sandrunner_sandals": [
+  "Sandrunner Sandals: boots 3/2/0, +10% speed on sand, red sand and terracotta, fall damage -2.",
+  "How to get: Amir Tariq Vashti (DropRule)."
+ ],
+ "elsewhere:azmar_scarab_spear": [
+  "Scarab-Head Spear: a diamond-spear-class lance with a gilded scarab head.",
+  "How to get: Camel Lancers and Pikemen (4%); the Counting-Table."
+ ],
+ "elsewhere:azmar_seal_amir": [
+  "Lord Seal of Azmar (amir): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ],
+ "elsewhere:azmar_seal_falconer": [
+  "Lord Seal of Azmar (falconer): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ],
+ "elsewhere:azmar_seal_sultana": [
+  "Lord Seal of Azmar (sultana): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ],
+ "elsewhere:azmar_seal_wazir": [
+  "Lord Seal of Azmar (wazir): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ],
+ "elsewhere:azmar_sunplate_cuirass": [
+  "Sunplate Cuirass: iron-chestplate values in linen and gold.",
+  "How to get: Hajib Rustam Qalat drops it 20% of the time."
+ ],
+ "elsewhere:azmar_twin_khopesh": [
+  "Twinblade Khopesh: the Sand-Dancers' paired blades; iron stats, quick, with the shield hook.",
+  "How to get: Ustad Zayan Sorel drops it 20% of the time; Sand-Dancers 4%."
+ ],
+ "elsewhere:azmar_winged_scarab_standard": [
+  "Winged-Scarab Standard: plant it for Absorption I within 16 blocks (refreshed every 10 s).",
+  "How to get: the Sultana drops it half of the time."
+ ],
+ "elsewhere:hacksilver": [
+  "Cut silver ring pieces, weighed rather than counted. Spend them with the Silver-Weigher of a liberated Hrafnholt town.",
+  "How to get: Hrafnholt soldiers drop 1 to 3, officers 4 to 8, Lords 16 to 32, the High Jarl 80 to 96 on his first defeat. Thralls drop none."
+ ],
+ "elsewhere:hrafnholt_arm_ring": [
+  "Hrafnholt's ring-money. The Jarl gives one for every 5 deeds: killing an enemy of Hrafnholt near its realm, or winning a duel.",
+  "Top-tier goods (Seals, the Raven Banner, the best cosmetics) cost Arm-Rings only, and carrying a ring takes 10 percent off every price.",
+  "The Smith cuts a ring into 8 Hacksilver. If the Jarl is dead, the senior champion gives the rings."
+ ],
+ "elsewhere:hrafnholt_armor_trim_smithing_template": [
+  "Hrafnholt Armor Trim",
+  "How to get: Hird-Captains drop it 8 percent of the time; the Silver-Weigher sells it for 40 Hacksilver."
+ ],
+ "elsewhere:hrafnholt_banner_pattern": [
+  "Hrafnholt Banner Pattern",
+  "How to get: Raven-Bearers drop it; the Silver-Weigher sells a copy for 40 Hacksilver."
+ ],
+ "elsewhere:hrafnholt_fur_collar_dye": [
+  "Dyes a collar the grey of a winter wolf. Sold by the Silver-Weigher.",
+  "Part of the Jarldom of Hrafnholt."
+ ],
+ "elsewhere:hrafnholt_hearth_ward_mail": [
+  "Immune to freezing, 10 percent less fire damage, 5 percent slower. One armor point below netherite.",
+  "How to get: Hallwarden Torvald Eikrem."
+ ],
+ "elsewhere:hrafnholt_hornbow": [
+  "Full draw in 0.85 seconds. Arrows slow what they hit for 2 seconds. Shorter-lived than netherite gear, and no Infinity.",
+  "How to get: Huntmaster Eydis Nordvik."
+ ],
+ "elsewhere:hrafnholt_iron_crown": [
+  "Wolf-Rally: 8 percent less damage taken while a tamed wolf is within 16 blocks. Plus 1 percent per Lord Seal you carry, up to 12 percent. As good as netherite on armor and knockback, one toughness less.",
+  "How to get: the High Jarl Halvard Ironbrow drops it (DropRule: 100 percent first kill, 67 percent repeat, plus pity)."
+ ],
+ "elsewhere:hrafnholt_raven_banner": [
+  "Plant it: Speed I for 30 seconds to you and your allies within 16 blocks. One banner per player; it burns down after 30 seconds.",
+  "How to get: the High Jarl drops it as his second item."
+ ],
+ "elsewhere:hrafnholt_raven_shield": [
+  "A cosmetic shield-plaque painted with the raven. Sold by the Silver-Weigher.",
+  "Part of the Jarldom of Hrafnholt."
+ ],
+ "elsewhere:hrafnholt_seal_chief": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Gudrun Ulfhednar.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_hallwarden": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Hallwarden Torvald Eikrem.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_hersir": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Hersir Sigrun Askeland.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_huntmaster": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Huntmaster Eydis Nordvik.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_jarl": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of High Jarl Halvard Ironbrow.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_skald": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Weapon-Skald Ulfar Brandsson.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_skalds_rune_axe": [
+  "The third hit on one target within 5 seconds deals 3 extra damage and more knockback. One damage and 331 durability short of netherite.",
+  "How to get: Weapon-Skald Ulfar Brandsson."
+ ],
+ "elsewhere:hrafnholt_ulfhednar_pelt": [
+  "Pelt-Rage: below 30 percent health, Strength I for 6 seconds, once per 2 minutes. Two armor and two toughness under netherite.",
+  "How to get: Gudrun Ulfhednar."
+ ],
+ "elsewhere:hrafnholt_wolfpelt_blanket": [
+  "A wolf-pelt blanket for a Wolf-Rider's horse. Sold by the Silver-Weigher.",
+  "Part of the Jarldom of Hrafnholt."
+ ],
+ "elsewhere:hrafnholt_wolfskin_boots": [
+  "No slipping on ice, 10 percent faster on snow and powder snow, no powder-snow freeze. Less toughness than netherite boots, and no knockback resistance.",
+  "How to get: Hersir Sigrun Askeland."
+ ],
+ "elsewhere:mirewick_almoners_cowl": [
+  "Dropped by Lord Almoner Cuthbert Ames. Beneficial potions you drink last 10% longer."
+ ],
+ "elsewhere:mirewick_armor_trim_smithing_template": [
+  "Dropped by Mirewick Wardmen (captains), 8%. Duplicate with diamonds and mud bricks."
+ ],
+ "elsewhere:mirewick_banner_pattern": [
+  "Dropped by Lantern-Bearers (standard-bearers). Adds the Mirewick lantern to a banner."
+ ],
+ "elsewhere:mirewick_debt_collectors_leggings": [
+  "Dropped by Ottoline Marrow, Magnate of the Counting-House (100% on a first kill, then 67%). No slowdown from cobweb or mud."
+ ],
+ "elsewhere:mirewick_dikewardens_brigandine": [
+  "Dropped by Dikemaster Hilde Sorrel. Netherite-level armor while in water or rain, weaker when dry."
+ ],
+ "elsewhere:mirewick_fen_marshals_waders": [
+  "Dropped by Fen-Marshal Garrick Thwaite. Depth Strider II equivalent; no slowdown from soul sand."
+ ],
+ "elsewhere:mirewick_fowlers_marshbow": [
+  "Dropped by Wildfowler Wren Tolliver. Arrows keep their speed underwater and float on the surface."
+ ],
+ "elsewhere:mirewick_lantern_coronet": [
+  "Dropped by whichever Magnate holds the Chair when killed (first kill 100%). Night Vision in swamps and underwater."
+ ],
+ "elsewhere:mirewick_lantern_shield": [
+  "A shield that blocks like the vanilla one (336 durability, an axe disables it), sold at Mirewick's Scrip-Desk."
+ ],
+ "elsewhere:mirewick_loan_note": [
+  "A Counting-House loan: up to 64 Scrip (more at higher Standing) at 25 percent interest, due in 7 in-game days.",
+  "Overdue: Standing -20, and Marrow's debt-collectors hunt you inside Mirewick's realm. If they kill you, your Scrip pays the debt."
+ ],
+ "elsewhere:mirewick_marsh_lantern_standard": [
+  "50% from the Chair-holder. Plant it for Water Breathing and Dolphin's Grace within 16 blocks."
+ ],
+ "elsewhere:mirewick_oilcloth_dye": [
+  "A cosmetic dye sold at Mirewick's Scrip-Desk."
+ ],
+ "elsewhere:mirewick_reedcutter_pike": [
+  "20% from Pikemaster Dunstan Reeve, the keep's elite captain. +0.75 blocks of reach."
+ ],
+ "elsewhere:mirewick_scrip": [
+  "The currency of the Lantern Republic of Mirewick. Dropped by Mirewick soldiers (1-3), officers (4-8), Magnates (16-32) and the Chair (64 treasury plus more).",
+  "Spent at Mirewick's Scrip-Desk shop. The Clerk of the Counting-House also exchanges any currency into Scrip at 4:3, and Scrip into other currencies 1:1 while you are Friendly."
+ ],
+ "elsewhere:mirewick_seal_ames": [
+  "A Lord Seal dropped by Lord Almoner Cuthbert Ames. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_marrow": [
+  "A Lord Seal dropped by Ottoline Marrow. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_sorrel": [
+  "A Lord Seal dropped by Dikemaster Hilde Sorrel. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_thwaite": [
+  "A Lord Seal dropped by Fen-Marshal Garrick Thwaite. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_tolliver": [
+  "A Lord Seal dropped by Wildfowler Wren Tolliver. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ]
+}

@@ -696,6 +696,18 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 
 	// ---- misc -----------------------------------------------------------------------------------------------------
 
+	/** 3.0 swarm-as-one (armies key {@code swarm}): in R2 the push query runs every 2nd tick; off or in R0-R1 it is vanilla. */
+	@Override
+	protected void pushEntities() {
+		if (dev.elsewhere.kingdom.armies.swarm.SwarmPush.mayPushNow(this)) super.pushEntities();
+	}
+
+	/** 3.0 swarm-as-one: allied soldiers in R1-R2 don't push each other (enemies, mounts, players and mobs still do). */
+	@Override
+	protected void doPush(Entity entity) {
+		if (!dev.elsewhere.kingdom.armies.swarm.SwarmPush.skip(this, entity)) super.doPush(entity);
+	}
+
 	@Override
 	public boolean removeWhenFarAway(double distSqr) {
 		return false;

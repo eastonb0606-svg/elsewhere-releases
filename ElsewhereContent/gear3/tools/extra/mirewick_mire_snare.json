@@ -1,0 +1,9 @@
+{
+  "_doc": "s-miresnare: the placed Mire Snare block, the Snared effect and the mire_snare damage type's death messages (dev.elsewhere.gear3.s3.miresnare). The item's own name, lore and JEI line come from its catalogue entry.",
+  "lang": {
+    "block.elsewhere.mirewick_mire_snare": "Mire Snare",
+    "effect.elsewhere.mire_snared": "Snared",
+    "death.attack.elsewhere.mire_snare": "%1$s was caught in a Mire Snare",
+    "death.attack.elsewhere.mire_snare.player": "%1$s was caught in a Mire Snare while fighting %2$s"
+  }
+}

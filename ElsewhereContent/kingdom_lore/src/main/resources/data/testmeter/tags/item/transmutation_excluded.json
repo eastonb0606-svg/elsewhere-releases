@@ -62,10 +62,6 @@
       "required": false
     },
     {
-      "id": "elsewhere:crown_of_aldermark",
-      "required": false
-    },
-    {
       "id": "elsewhere:fletchers_bundle",
       "required": false
     },
@@ -130,15 +126,7 @@
       "required": false
     },
     {
-      "id": "elsewhere:royal_coffer",
-      "required": false
-    },
-    {
       "id": "elsewhere:sergeants_horn",
-      "required": false
-    },
-    {
-      "id": "elsewhere:sovereigns_standard",
       "required": false
     },
     {
@@ -155,10 +143,6 @@
     },
     {
       "id": "elsewhere:village_royal_purse",
-      "required": false
-    },
-    {
-      "id": "elsewhere:village_siege_fire",
       "required": false
     },
     {

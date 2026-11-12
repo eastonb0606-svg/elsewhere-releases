@@ -55,8 +55,8 @@ public final class TelegraphStore {
 					double w = Math.max(0.5, d);
 					minX = Math.min(x, x + a) - w;
 					maxX = Math.max(x, x + a) + w;
-					minY = Math.min(y, y + b) - 0.5;
-					maxY = Math.max(y, y + b) + 0.5;
+					minY = Math.min(y, y + b) - w;
+					maxY = Math.max(y, y + b) + w;
 					minZ = Math.min(z, z + c) - w;
 					maxZ = Math.max(z, z + c) + w;
 					return;

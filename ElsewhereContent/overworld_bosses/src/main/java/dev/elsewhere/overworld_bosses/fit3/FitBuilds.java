@@ -35,7 +35,9 @@ public final class FitBuilds {
 		int x = o.getX(), z = o.getZ(), g = o.getY() - 1;
 		return switch (kind + "/" + part) {
 			case "croaking_shrine/walk" -> lineBox(o, a, 16, 16 + Math.max(1, b), min(prof, g) - 15, max(prof, g) + 4);
-			case "glacier_shelf/core" -> new BoundingBox(x - 18, g - 15, z - 17, x + 18, g + 13, z + 18);
+			// the shelf and the chamber carry a noise rule that reaches 12 past its box: their piece box includes that reach, so every chunk the
+			// rule touches holds a reference to the start (vanilla inflates beard structures the same way)
+			case "glacier_shelf/core" -> new BoundingBox(x - 30, g - 15, z - 29, x + 30, g + 13, z + 30);
 			case "glacier_shelf/slope" -> new BoundingBox(x - 16, g - 30, z - 28, x + 16, g + 15, z - 18);
 			case "glacier_shelf/buttress" -> {
 				double ang = Math.PI * 2 * a / 8, c = Math.cos(ang), s = Math.sin(ang);
@@ -44,7 +46,7 @@ public final class FitBuilds {
 				yield new BoundingBox(Math.min(x0, x1) - 2, g - b - 22, Math.min(z0, z1) - 2, Math.max(x0, x1) + 2, g + 3, Math.max(z0, z1) + 2);
 			}
 			case "glacier_shelf/stair" -> lineBox(o, a, 17, 19 + Math.max(1, b), min(prof, g) - 13, max(prof, g) + 5);
-			case "sun_chamber/core" -> new BoundingBox(x - 13, g - 5, z - 13, x + 13, g + 17, z + 13);
+			case "sun_chamber/core" -> new BoundingBox(x - 25, g - 16, z - 25, x + 25, g + 26, z + 25);
 			case "sun_chamber/shaft" -> new BoundingBox(x + 11, g - 1, z - 2, x + 18, Math.max(b, g + 8) + 7, z + 2);
 			case "wreck_ring/core" -> new BoundingBox(x - 19, g - 1, z - 19, x + 19, g + 15, z + 19);
 			case "wreck_ring/stack" -> new BoundingBox(at.getX() - 1, at.getY() - 6, at.getZ() - 1, at.getX() + 1, g - 1, at.getZ() + 1);
@@ -322,10 +324,11 @@ public final class FitBuilds {
 				if (d > 17.3 && dz > -12 && !inGate(p.a, dx, dz) && hash(o, dx, 3, dz, 33) < 0.45) s.set(x, g + 1, z, Blocks.PACKED_ICE.defaultBlockState());
 			}
 		}
-		// braziers: unlit campfires on stone-brick pedestals (lit ones would smoke all day); light comes from rim lanterns
+		// the 4 braziers stay LIT campfires: they are Rimeback's mechanic (phase 3 blizzard shelter, Campfire Stomp puts them out); the
+		// only lit campfires in any boss site. Other light comes from rim lanterns.
 		for (int[] c : Blueprints.CAMPFIRES) {
 			s.set(o.getX() + c[0], g + 1, o.getZ() + c[2], Blocks.STONE_BRICKS.defaultBlockState());
-			s.set(o.getX() + c[0], g + 2, o.getZ() + c[2], Blocks.CAMPFIRE.defaultBlockState().setValue(CampfireBlock.LIT, false));
+			s.set(o.getX() + c[0], g + 2, o.getZ() + c[2], Blocks.CAMPFIRE.defaultBlockState().setValue(CampfireBlock.LIT, true));
 		}
 		for (int i = 0; i < 6; i++) {
 			double a = Math.PI * 2 * i / 6 + Math.PI / 6;
@@ -622,7 +625,7 @@ public final class FitBuilds {
 				double n = hash(o, dx, 0, dz, 42);
 				BlockState plank = n < 0.55 ? Blocks.SPRUCE_PLANKS.defaultBlockState() : n < 0.85 ? Blocks.DARK_OAK_PLANKS.defaultBlockState() : Blocks.OAK_PLANKS.defaultBlockState();
 				boolean beam = (dx == 0 || dz == 0 || dx == dz || dx == -dz);
-				if (n > 0.975 && d > 7) continue;
+				if (n > 0.975 && d > 7 && d < 10) continue; // a few gaps between planks, never under the hulls, rails or lanterns
 				s.set(x, deck, z, beam ? log(Blocks.STRIPPED_SPRUCE_LOG, Math.abs(dx) >= Math.abs(dz) ? Direction.Axis.X : Direction.Axis.Z) : plank);
 				if (d > edge - 1.0 && hash(o, dx, 1, dz, 43) < 0.6) s.set(x, deck + 1, z, Blocks.SPRUCE_FENCE.defaultBlockState());
 				if (d < 6.5 && hash(o, dx, 2, dz, 44) < 0.35) s.set(x, deck + 1, z, Blocks.SPRUCE_FENCE.defaultBlockState());

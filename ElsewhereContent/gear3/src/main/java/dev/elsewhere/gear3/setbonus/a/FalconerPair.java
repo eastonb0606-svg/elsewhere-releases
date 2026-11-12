@@ -67,7 +67,7 @@ public final class FalconerPair {
 		return mk != null && mk[1] > target.level().getGameTime();
 	}
 
-	static float damage(LivingEntity victim, DamageSource src, float amount) {
+	public static float damage(LivingEntity victim, DamageSource src, float amount) {
 		if (victim instanceof Player || !(src.getEntity() instanceof ServerPlayer p)) return amount;
 		Entity direct = src.getDirectEntity();
 		boolean arrow = arrow(direct), minion = direct instanceof MinionEntity;
@@ -79,7 +79,7 @@ public final class FalconerPair {
 		return amount;
 	}
 
-	static void hit(LivingEntity victim, DamageSource src, float taken) {
+	public static void hit(LivingEntity victim, DamageSource src, float taken) {
 		if (victim instanceof Player || !victim.isAlive() || !(src.getEntity() instanceof ServerPlayer p)) return;
 		Entity direct = src.getDirectEntity();
 		boolean arrow = arrow(direct), minion = direct instanceof MinionEntity;

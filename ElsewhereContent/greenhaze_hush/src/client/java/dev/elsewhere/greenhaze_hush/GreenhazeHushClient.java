@@ -102,7 +102,7 @@ public final class GreenhazeHushClient {
 			c, new HoglinModel(c.bakeLayer(ModelLayers.HOGLIN)), 0.7F, "munchie_boar", HoglinRenderState::new, 0.85F));
 		EntityRendererRegistry.register(GreenhazeEntities.TOKE_TOAD, c -> new Simple<GreenhazeMobs.TokeToad, FrogRenderState, FrogModel>(
 			c, new FrogModel(c.bakeLayer(ModelLayers.FROG)), 0.3F, "toke_toad", FrogRenderState::new, 2.4F));
-		EntityRendererRegistry.register(GreenhazeEntities.HOTBOX_SMOG, c -> new SmogRenderer(c));
+		EntityRendererRegistry.register(GreenhazeEntities.HOTBOX_SMOG, c -> new Swarm3Renderers.SmogBankRenderer(c)); // swarm-as-one smog bank (s-spawngroups; a plain smog draws as 2.1)
 		EntityRendererRegistry.register(GreenhazeEntities.PARANOIA_SHADE, c -> new Simple<GreenhazeMobs.ParanoiaShade, VexRenderState, VexModel>(
 			c, new VexModel(c.bakeLayer(ModelLayers.VEX)), 0.0F, "paranoia_shade", VexRenderState::new, 1.0F) {
 			@Override
@@ -132,8 +132,7 @@ public final class GreenhazeHushClient {
 
 		EntityRendererRegistry.register(HushEntities.ECHO_STALKER, c -> new Simple<HushMobs.EchoStalker, EndermanRenderState, EndermanModel<EndermanRenderState>>(
 			c, new EndermanModel<>(c.bakeLayer(ModelLayers.ENDERMAN)), 0.5F, "echo_stalker", EndermanRenderState::new, 1.25F));
-		EntityRendererRegistry.register(HushEntities.SHRIEKER_SWARM, c -> new Simple<HushMobs.ShriekerSwarm, BatRenderState, BatModel>(
-			c, new BatModel(c.bakeLayer(ModelLayers.BAT)), 0.2F, "shrieker_swarm", BatRenderState::new, 1.5F));
+		EntityRendererRegistry.register(HushEntities.SHRIEKER_SWARM, c -> new Swarm3Renderers.ShriekerSwarmRenderer(c)); // swarm-as-one, 8-12 bats (s-spawngroups; a plain one draws as 2.1)
 		EntityRendererRegistry.register(HushEntities.OSSUARY_CHORISTER, c -> new Simple<HushMobs.OssuaryChorister, SkeletonRenderState, SkeletonModel<SkeletonRenderState>>(
 			c, new SkeletonModel<>(c.bakeLayer(ModelLayers.SKELETON)), 0.5F, "ossuary_chorister", SkeletonRenderState::new, 1.2F));
 		EntityRendererRegistry.register(HushEntities.CATALYST_MIMIC, c -> new Simple<HushMobs.CatalystMimic, ShulkerRenderState, ShulkerModel>(

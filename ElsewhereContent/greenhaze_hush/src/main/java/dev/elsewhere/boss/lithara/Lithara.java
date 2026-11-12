@@ -165,7 +165,8 @@ public class Lithara extends BossEntity {
 	}
 
 	public static Lithara buildAndSummon(ServerLevel level, BlockPos origin) {
-		HushStructures.CHOIR_GEODE.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
+		if (dev.elsewhere.greenhaze_hush.world.fit.GhFit.LOOKS) dev.elsewhere.greenhaze_hush.world.fit.GhFit.buildPlan(level, "choir_geode", origin);
+		else HushStructures.CHOIR_GEODE.build(Sink.live(level), origin, RandomSource.create(origin.asLong()));
 		return summon(level, origin);
 	}
 

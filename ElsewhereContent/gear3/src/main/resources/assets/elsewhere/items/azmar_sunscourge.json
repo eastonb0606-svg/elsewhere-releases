@@ -1,6 +1,19 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "elsewhere:item/azmar_sunscourge"
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:cooldown",
+    "entries": [
+      {
+        "threshold": 0.01,
+        "model": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/azmar_sunscourge_crack"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/azmar_sunscourge"
+    }
   }
 }

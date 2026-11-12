@@ -16,6 +16,7 @@ HANDHELD = {"sword", "axe", "pickaxe", "shovel", "hoe"}
 sys.path.insert(0, HERE)  # -I drops the script dir from sys.path; shield3d.py sits next to this file
 import shield3d  # noqa: E402
 import calling_tags  # noqa: E402  (s-callingtags: tools/calling_tags.py)
+import bow_models  # noqa: E402  (s-prismbow: tools/bow_models.py, upright-sprite bows)
 _SPRITES_PATH = os.path.join(os.path.dirname(os.path.dirname(MOD)), "Ideas", "overhaul", "sprites.json")
 SPRITES = json.load(open(_SPRITES_PATH, encoding="utf-8")) if os.path.exists(_SPRITES_PATH) else {}
 OUT = {}  # relative path under RES -> text
@@ -107,7 +108,12 @@ def main():
         ids.add(i)
         kind = it.get("kind", "plain")
         parent = "minecraft:item/handheld" if it.get("model", "handheld" if kind in HANDHELD else "generated") == "handheld" else "minecraft:item/generated"
-        if kind == "shield":
+        if it.get("model") == "bow":
+            # bow with vanilla pull stages (s-prismbow): item definition, base model with display fixed for an upright sprite,
+            # 3 pulling models; the pull frame textures come from the item's own art tool. tools/bow_models.py
+            for rel, obj in bow_models.models(i, it.get("bow")).items():
+                put(rel, obj)
+        elif kind == "shield":
             # 3D shield (element model in vanilla ShieldModel space + vanilla display, blocking model on using_item): tools/shield3d.py
             for rel, obj in shield3d.models(i, SPRITES.get(i, {}).get("template", "shield")).items():
                 put(rel, obj)
@@ -171,6 +177,7 @@ def main():
     for tb in cat.get("placeholder_tables", []):
         put(f"data/elsewhere/loot_table/{tb}.json", {"type": "minecraft:chest" if tb.startswith("chests/") else "minecraft:entity", "pools": []})
     extra_lang_jei(lang, jei, own)  # s-setbonus-a: tools/extra/*.json fragments, and hand-added lang keys survive a regen
+    extra_files_sounds()  # s-galesling: tools/extra/*.json "files" (item definitions, extra models) and "sounds"
     put("assets/elsewhere/lang/en_us.json", lang)
     put("elsewhere_gear3/jei_info.json", jei)
     if errs:

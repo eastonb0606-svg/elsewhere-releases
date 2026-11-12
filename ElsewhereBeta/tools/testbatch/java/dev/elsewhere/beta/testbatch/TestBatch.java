@@ -42,7 +42,7 @@ import org.slf4j.LoggerFactory;
  * Either way the batch goes on with the next module.</li>
  * <li>Isolation between modules: chunks the module force-loaded are released, every non-player entity is discarded,
  * and with {@code elsewhere.testbatch.flatReset=<r>} (superflat worlds) the overworld chunks within r chunks of 0,0 are
- * put back to the world's flat layers.</li>
+ * put back to the world's flat layers. Each module starts at the fresh world's time of day, with the weather cycle reset.</li>
  * </ol>
  * Log markers: {@code [testbatch] BEGIN <id>}, {@code [testbatch] END <id> <DONE|CRASH|TIMEOUT> <s>s}, and
  * {@code [testbatch] FINISHED} at the end (tools/testbatch/summary.py splits the log on them). No per-tick cost when off:
@@ -65,6 +65,7 @@ public final class TestBatch {
 	private static int gap = GAP_TICKS, total, index;
 	private static long batchStart;
 	private static int flatReset;
+	private static long clockStart = -1;
 	private static BlockState[] flatLayers;
 	private static final Mod PROBE = new Mod("(probe)", 0);
 	private static int probeHits;
@@ -134,6 +135,7 @@ public final class TestBatch {
 			serverUp = true;
 			batchStart = System.nanoTime();
 			if (flatReset > 0) flatLayers = sampleFlatLayers(srv.overworld());
+			clockStart = srv.overworld().getOverworldClockTime();
 			LOG.info("[testbatch] PLAN {} module(s): {}{}", total, String.join(",", QUEUE),
 				flatReset > 0 ? " | flat reset r=" + flatReset + " layers=" + (flatLayers == null ? "none (not a flat world)" : flatLayers.length) : "");
 		});
@@ -217,10 +219,11 @@ public final class TestBatch {
 		if (allowHalt || !serverUp) return false;
 		Mod m = current;
 		String from = caller();
-		if (m == null || m.done) {
+		if (m == null) {
 			LOG.warn("[testbatch] halt outside a running module (from {}): stopping; not run: {}", from, String.join(",", QUEUE));
 			return false;
 		}
+		if (m.done) return true; // a second done signal from the module that is ending
 		m.done = true;
 		m.haltFrom = from;
 		return true;
@@ -271,6 +274,7 @@ public final class TestBatch {
 		current = m;
 		index++;
 		LOG.info("[testbatch] BEGIN {} ({}/{}, timeout {} s)", id, index, total, timeout);
+		freshDay(srv);
 		setProp(m, id + ".selftest", "true");
 		setProp(m, id + ".selftest.exit", "true");
 		String flags = System.getProperty("elsewhere.testbatch.flags." + id, "");
@@ -290,14 +294,18 @@ public final class TestBatch {
 		LOG.info("[testbatch] {} hooks: {} start, {} tick (gated), {} other{}", id, m.starting.size() + m.started.size(), m.tickHooks,
 			m.otherHooks, m.savedProps.size() > 2 ? " | flags " + flags : "");
 		if (m.done) return;
+		if (m.starting.isEmpty() && m.started.isEmpty() && m.tickHooks == 0) {
+			m.crash("hook registration", new IllegalStateException("the hook registered no start or tick listener"));
+			return;
+		}
+		capturing = m; // listeners that the start hooks register belong to this module too
 		try {
-			for (ServerLifecycleEvents.ServerStarting l : m.starting) l.onServerStarting(srv);
-			for (ServerLifecycleEvents.ServerStarted l : m.started) {
-				if (m.done) break;
-				l.onServerStarted(srv);
-			}
+			for (int i = 0; i < m.starting.size() && !m.done; i++) m.starting.get(i).onServerStarting(srv);
+			for (int i = 0; i < m.started.size() && !m.done; i++) m.started.get(i).onServerStarted(srv);
 		} catch (Throwable t) {
 			m.crash("server-started hook", t);
+		} finally {
+			capturing = null;
 		}
 	}
 
@@ -356,6 +364,21 @@ public final class TestBatch {
 			unforced, discarded, reset, (System.nanoTime() - t0) / 1_000_000);
 	}
 
+	/**
+	 * Every module starts at the time of day and weather of a fresh world (as in its own boot): the overworld clock goes
+	 * back to its value at server start and the weather cycle restarts clear. Tactics and spawns depend on day/night.
+	 */
+	private static void freshDay(MinecraftServer srv) {
+		try {
+			ServerLevel ow = srv.overworld();
+			if (clockStart >= 0) srv.registryAccess().get(net.minecraft.world.clock.WorldClocks.OVERWORLD)
+				.ifPresent(h -> ow.clockManager().setTotalTicks(h, clockStart));
+			ow.resetWeatherCycle();
+		} catch (Throwable t) {
+			LOG.error("[testbatch] could not reset the clock/weather: {}", t.toString(), t);
+		}
+	}
+
 	/** The flat world's layer column (bottom up) at 0,0 before any module ran; null if it is not a flat world. */
 	private static BlockState[] sampleFlatLayers(ServerLevel level) {
 		List<BlockState> out = new ArrayList<>();
@@ -371,13 +394,21 @@ public final class TestBatch {
 		return out.isEmpty() ? null : out.toArray(new BlockState[0]);
 	}
 
-	/** Puts every block of the overworld chunks within flatReset chunks of 0,0 back to the flat layers. */
+	/**
+	 * Puts every block back to the flat layers in the overworld chunks within flatReset chunks of 0,0 (loaded if needed)
+	 * and in every other overworld chunk still loaded (the module's force-loaded chunks are only released, not yet
+	 * unloaded, when this runs), so a module's roads, castles or arenas never reach the next module.
+	 */
 	private static int resetFlat(ServerLevel level) {
 		int n = 0, min = level.getMinY();
 		BlockState air = net.minecraft.world.level.block.Blocks.AIR.defaultBlockState();
 		int flags = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE | Block.UPDATE_SUPPRESS_DROPS;
 		BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos();
-		for (int cx = -flatReset; cx <= flatReset; cx++) for (int cz = -flatReset; cz <= flatReset; cz++) {
+		java.util.LinkedHashSet<Long> todo = new java.util.LinkedHashSet<>();
+		for (int cx = -flatReset; cx <= flatReset; cx++) for (int cz = -flatReset; cz <= flatReset; cz++) todo.add(net.minecraft.world.level.ChunkPos.pack(cx, cz));
+		level.getChunkSource().chunkMap.forEachReadyToSendChunk(c -> todo.add(c.getPos().pack()));
+		for (long key : todo) {
+			int cx = net.minecraft.world.level.ChunkPos.getX(key), cz = net.minecraft.world.level.ChunkPos.getZ(key);
 			LevelChunk c = level.getChunk(cx, cz);
 			LevelChunkSection[] secs = c.getSections();
 			for (int si = 0; si < secs.length; si++) {

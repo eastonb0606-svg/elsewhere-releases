@@ -1,6 +1,5 @@
 package dev.elsewhere.gear3.s3.reliquary;
 
-import dev.elsewhere.gear3.s3.slots.MinionSlotWeights;
 import dev.elsewhere.minion.MinionEntity;
 import java.util.function.Supplier;
 import net.minecraft.core.particles.ParticleTypes;
@@ -21,7 +20,7 @@ import net.minecraft.world.level.Level;
 
 /**
  * The Echo Knight (Echo Reliquary): the echo of a Mute Order knight. A ground minion on the summoner framework
- * ({@link MinionEntity}: owner, targeting, fervor timer, no griefing, not saved). 2 slots ({@code MinionSlotWeights}),
+ * ({@link MinionEntity}: owner, targeting, fervor timer, no griefing, not saved). 2 slots (gear3 {@code MinionSlots}),
  * 60 HP, armor 16, 10 damage every 1.2 s; its blows ignore 40% of armor on top of the minion rule.
  * Silent: no sounds ({@code setSilent}), no step sounds or step vibrations ({@code MovementEmission.NONE}), every
  * vibration it is the source of is dampened (sculk sensors, shriekers and Wardens ignore it), and the damage
@@ -33,8 +32,6 @@ public class EchoKnight extends MinionEntity {
 	public static final Identifier PIERCE_ID = EchoReliquary.id("echo_knight_armor_pierce");
 	/** Self-test: damage vibrations this class kept from being emitted. */
 	public static int silencedHits;
-
-	private boolean weightCheckDue;
 
 	public EchoKnight(EntityType<? extends EchoKnight> type, Level level) {
 		super(type, level);
@@ -127,23 +124,5 @@ public class EchoKnight extends MinionEntity {
 			return false;
 		}
 		return true;
-	}
-
-	// ---------------------------------------------------------------- 2 slots
-
-	/** Once a second (the minion's own upkeep tick): re-check the owner's slot weights at the end of this tick. */
-	@Override
-	protected void minionSecond(ServerLevel level, ServerPlayer owner) {
-		weightCheckDue = true;
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-		if (weightCheckDue && !this.level().isClientSide()) {
-			weightCheckDue = false;
-			ServerPlayer owner = ownerPlayer();
-			if (owner != null && !this.isRemoved()) MinionSlotWeights.enforce(owner);
-		}
 	}
 }

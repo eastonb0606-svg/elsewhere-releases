@@ -454,4 +454,76 @@ final class SelfTestIdentity {
 		for (BossIdentity c : BossIdentity.all()) if (c.generic().contains(generic)) n++;
 		return n;
 	}
+
+	// ---- packed audit fixtures (tools/pack_audit_fixtures.py) -----------------------------------------------------
+
+	private static final String PACKED = "/elsewhere_duelist/dev/audit_fixtures.json.gz";
+	private static final java.util.regex.Pattern SAFE_NAME = java.util.regex.Pattern.compile("[A-Za-z0-9_.-]+");
+
+	/** The fixture sets packed into the jar ({"format":1,"sets":{set:{"expected","files":{name:text}}}}), or null. */
+	static @org.jspecify.annotations.Nullable JsonObject packedFixtures() {
+		try (var in = SelfTestIdentity.class.getResourceAsStream(PACKED)) {
+			if (in == null) return null;
+			try (var r = new java.io.InputStreamReader(new java.util.zip.GZIPInputStream(in), java.nio.charset.StandardCharsets.UTF_8)) {
+				JsonObject o = JsonParser.parseReader(r).getAsJsonObject();
+				return o.has("sets") && o.get("sets").isJsonObject() ? o : null;
+			}
+		} catch (java.io.IOException | RuntimeException e) {
+			System.out.println("[duelist-selftest] INFO packed fixtures unreadable: " + e);
+			return null;
+		}
+	}
+
+	/** Null when the packed sets equal the fixture directory file for file (expected.txt as the verdict), else the first difference. */
+	static @org.jspecify.annotations.Nullable String packedDiff(JsonObject packed, Path root) {
+		JsonObject sets = packed.getAsJsonObject("sets");
+		try (var list = Files.list(root)) {
+			List<Path> dirs = list.filter(Files::isDirectory).sorted().toList();
+			Set<String> names = new java.util.TreeSet<>();
+			for (Path d : dirs) names.add(d.getFileName().toString());
+			if (!names.equals(new java.util.TreeSet<>(sets.keySet()))) return "set names " + names.size() + " on disk, " + sets.size() + " packed";
+			for (Path d : dirs) {
+				String s = d.getFileName().toString();
+				JsonObject e = sets.getAsJsonObject(s);
+				if (!Files.readString(d.resolve("expected.txt")).trim().equals(e.get("expected").getAsString())) return s + ": expected verdict";
+				JsonObject files = e.getAsJsonObject("files");
+				Map<String, String> disk = new TreeMap<>();
+				try (var fl = Files.list(d)) {
+					for (Path f : fl.filter(Files::isRegularFile).toList()) {
+						String fn = f.getFileName().toString();
+						if (!fn.equals("expected.txt") && !fn.equals(".DS_Store")) disk.put(fn, Files.readString(f));
+					}
+				}
+				if (!disk.keySet().equals(new java.util.TreeSet<>(files.keySet()))) return s + ": file list";
+				for (var f : disk.entrySet()) if (!f.getValue().equals(files.get(f.getKey()).getAsString())) return s + "/" + f.getKey() + ": content";
+			}
+		} catch (java.io.IOException | RuntimeException e) {
+			return "unreadable: " + e;
+		}
+		return null;
+	}
+
+	/** Writes the packed sets to a fresh temp directory laid out like audit_fixtures/ (names checked: no paths). */
+	static Path unpack(JsonObject packed) throws java.io.IOException {
+		Path tmp = Files.createTempDirectory("duelist-audit-fixtures");
+		for (var s : packed.getAsJsonObject("sets").entrySet()) {
+			if (!SAFE_NAME.matcher(s.getKey()).matches()) throw new java.io.IOException("bad set name " + s.getKey());
+			JsonObject e = s.getValue().getAsJsonObject();
+			Path d = Files.createDirectory(tmp.resolve(s.getKey()));
+			Files.writeString(d.resolve("expected.txt"), e.get("expected").getAsString() + "\n");
+			for (var f : e.getAsJsonObject("files").entrySet()) {
+				if (!SAFE_NAME.matcher(f.getKey()).matches() || f.getKey().equals("expected.txt")) throw new java.io.IOException("bad file name " + f.getKey());
+				Files.writeString(d.resolve(f.getKey()), f.getValue().getAsString());
+			}
+		}
+		return tmp;
+	}
+
+	private static void deleteTree(Path root) {
+		try (var walk = Files.walk(root)) {
+			for (Path p : walk.sorted(java.util.Comparator.reverseOrder()).toList()) Files.deleteIfExists(p);
+		} catch (java.io.IOException e) {
+			System.out.println("[duelist-selftest] INFO temp fixtures not removed: " + e);
+		}
+	}
 }

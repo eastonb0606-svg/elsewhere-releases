@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.BannerBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CrossCollisionBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.LanternBlock;
@@ -62,7 +63,8 @@ public final class HrafnLooks {
 	/** Plan cap for a Hrafnholt rebuild (the 2.1 cap of {@link RivalPlans#MAX_FORTIFY} would cut the palisade). */
 	public static final int MAX_OPS = 7000;
 	public static final int MAX_BANNERS = 12;
-	static final int MAX_PLINTH = 4, NONE = Integer.MIN_VALUE;
+	/** Plinth spread (keeps every member within FitAudit.TIE of its footing) and deepest jetty pile. */
+	static final int MAX_PLINTH = 3, MAX_PILE = 6, NONE = Integer.MIN_VALUE;
 
 	/** What the last plan of a village built (screenshots and self-test; not saved). */
 	public static final class Report {
@@ -316,7 +318,10 @@ public final class HrafnLooks {
 		}
 	}
 
-	/** Ground of every cell of the hall's plan and its 2-cell apron, or null when any is not open natural ground. Index [i + 2][j + hm + 2]. */
+	/**
+	 * Ground of every cell of the hall's plan and its 2-cell apron, or null when a plan or inner-apron cell is not open natural ground (an
+	 * outer-apron cell may be a path or field: {@link #NONE}, left as it is). Index [i + 2][j + hm + 2].
+	 */
 	static int[][] groundMap(B b, Hall h) {
 		int[][] g = new int[h.len + 4][2 * h.hm + 5];
 		for (int i = -2; i <= h.len + 1; i++) for (int j = -(h.hm + 2); j <= h.hm + 2; j++) {
@@ -324,14 +329,15 @@ public final class HrafnLooks {
 			if (h.dist(i, j) > 2) continue;
 			BlockPos q = h.at(i, j, 0);
 			int y = ground(b, q.getX(), q.getZ());
-			if (y == NONE) return null;
+			if (y == NONE && h.dist(i, j) == 2) continue;
+			if (y == NONE || nextToDoor(b, q.getX(), y, q.getZ())) return null;
 			g[i + 2][j + h.hm + 2] = y;
 		}
 		return g;
 	}
 
 	static void longhall(B b) {
-		int[][] sizes = {{15, 7}, {11, 5}};
+		int[][] sizes = {{15, 7}, {11, 5}, {9, 5}};
 		for (int[] sz : sizes) {
 			Hall best = null;
 			int[][] bestG = null;
@@ -425,7 +431,7 @@ public final class HrafnLooks {
 				}
 			} else {
 				int top = floor - 1 - d;
-				if (gy >= top) continue;
+				if (gy == NONE || gy >= top) continue;
 				BlockPos q0 = h.at(i, j, gy);
 				BlockState own = b.level.getBlockState(q0), under = b.level.getBlockState(q0.below());
 				BlockState topS = natural(own) ? own.getBlock().defaultBlockState() : st(Blocks.GRASS_BLOCK);
@@ -496,6 +502,7 @@ public final class HrafnLooks {
 			for (int k = 1; k <= 2; k++) {
 				int i = dr[0] + dr[2] * k, j = dr[1] + dr[3] * k;
 				int gy = g[i + 2][j + hm + 2];
+				if (gy == NONE) break;
 				int stepY = floor - k;
 				int top = Math.max(gy, floor - 1 - k);
 				if (top != stepY - 1) break;
@@ -520,6 +527,13 @@ public final class HrafnLooks {
 		BlockPos fb = h.at(-1, 0, floor + 3), bb = h.at(len, 0, floor + 3);
 		p.put(p.group(), fb, wallBanner(b, fb, id.getOpposite()));
 		p.put(p.group(), bb, wallBanner(b, bb, id));
+		// planned grass under a planned block (porch posts, steps) would die to dirt and outlive a restore: plan earth there instead
+		for (var e : p.ops.entrySet()) {
+			BlockPos q = BlockPos.of(e.getKey());
+			long below = BlockPos.asLong(q.getX(), q.getY() - 1, q.getZ());
+			BlockState u = p.ops.get(below);
+			if (u != null && u.is(Blocks.GRASS_BLOCK)) p.ops.put(below, st(Blocks.DIRT));
+		}
 		return p;
 	}
 
@@ -546,7 +560,7 @@ public final class HrafnLooks {
 					if (i != h.len / 2 || j != 0) rep.open.add(new BlockPos(q.getX(), floor + 1, q.getZ()));
 					reserve(b, q.getX(), q.getZ(), floor, floor + 1);
 				}
-			} else reserve(b, q.getX(), q.getZ(), gy + 1, floor + 2);
+			} else if (gy != NONE) reserve(b, q.getX(), q.getZ(), gy + 1, floor + 2);
 		}
 	}
 
@@ -652,7 +666,7 @@ public final class HrafnLooks {
 			for (int dx = -4; dx <= 4 && ok; dx++) for (int dz = -4; dz <= 4 && ok; dz++) {
 				if (dx * dx + dz * dz > 20) continue;
 				int gy = ground(b, s.getX() + dx, s.getZ() + dz);
-				if (gy == NONE || !writable(b, new BlockPos(s.getX() + dx, gy + 1, s.getZ() + dz))) {
+				if (gy == NONE || !writable(b, new BlockPos(s.getX() + dx, gy + 1, s.getZ() + dz)) || nextToDoor(b, s.getX() + dx, gy, s.getZ() + dz)) {
 					ok = false;
 					break;
 				}
@@ -722,7 +736,7 @@ public final class HrafnLooks {
 				if (Math.max(Math.abs(dx), Math.abs(dz)) != r) continue;
 				int x = f.getX() + dx, z = f.getZ() + dz;
 				int gy = ground(b, x, z);
-				if (gy == NONE) continue;
+				if (gy == NONE || nextToDoor(b, x, gy, z)) continue;
 				boolean roadside = false;
 				for (Direction d : Direction.Plane.HORIZONTAL) if (isPath(b, x + d.getStepX(), z + d.getStepZ())) roadside = true;
 				if (!roadside) continue;
@@ -769,7 +783,7 @@ public final class HrafnLooks {
 			int z = ez + side.getStepZ() * (out + c) + along.getStepZ() * (slide - 3 + a);
 			if (x >= hb.minX() && x <= hb.maxX() && z >= hb.minZ() && z <= hb.maxZ()) return false;
 			int gy = ground(b, x, z);
-			if (gy == NONE || !writable(b, new BlockPos(x, gy + 1, z))) return false;
+			if (gy == NONE || !writable(b, new BlockPos(x, gy + 1, z)) || nextToDoor(b, x, gy, z)) return false;
 			g[a][c] = gy;
 			max = Math.max(max, gy);
 			min = Math.min(min, gy);
@@ -834,6 +848,13 @@ public final class HrafnLooks {
 
 	// ---- palisade -----------------------------------------------------------------------------------------------------
 
+	/** A door beside the column (at the two heights a palisade log would stand in front of): that column stays open. */
+	static boolean nextToDoor(B b, int x, int top, int z) {
+		for (Direction d : Direction.Plane.HORIZONTAL) for (int dy = 1; dy <= 2; dy++)
+			if (b.level.getBlockState(new BlockPos(x + d.getStepX(), top + dy, z + d.getStepZ())).getBlock() instanceof DoorBlock) return true;
+		return false;
+	}
+
 	static boolean inVillageColumn(VillageRecord r, int x, int z) {
 		for (VillageRecord.Piece pc : r.pieces) {
 			if (pc.type() == RivalPlans.PIER) continue;
@@ -868,7 +889,7 @@ public final class HrafnLooks {
 					gates.put(key, top);
 					continue;
 				}
-				if (!natural(g) || !writable(b, new BlockPos(x, top + 1, z))) continue;
+				if (!natural(g) || !writable(b, new BlockPos(x, top + 1, z)) || nextToDoor(b, x, top, z)) continue;
 				boolean nearGate = false;
 				for (Direction d : Direction.Plane.HORIZONTAL) if (isPath(b, x + d.getStepX(), z + d.getStepZ())) nearGate = true;
 				(nearGate ? posts : wall).put(key, top);
@@ -967,10 +988,7 @@ public final class HrafnLooks {
 
 	/** Top water source y of an open-water column, else {@link #NONE}. */
 	static int wtop(B b, int x, int z) {
-		if (!b.level.isLoaded(new BlockPos(x, b.c.bell.getY(), z))) return NONE;
-		int y = b.level.getHeight(Heightmap.Types.WORLD_SURFACE, x, z) - 1;
-		BlockState s = b.level.getBlockState(new BlockPos(x, y, z));
-		return s.is(Blocks.WATER) && s.getFluidState().isSource() ? y : NONE;
+		return b.level.isLoaded(new BlockPos(x, b.c.bell.getY(), z)) ? RivalPlans.waterTop(b.level, x, z) : NONE;
 	}
 
 	/** Water depth below {@code wy} down to a solid bed (1-14), else {@link #NONE} (too deep, or weed or air under). */
@@ -995,7 +1013,8 @@ public final class HrafnLooks {
 	}
 
 	static @Nullable BlockPos waterfront(B b) {
-		for (VillageRecord.Piece pc : b.c.r.pieces) if (pc.type() == RivalPlans.PIER) return null;
+		// one waterfront per village: a pier built before (2.1 or an earlier plan) stays, and the water gate opens toward it
+		for (VillageRecord.Piece pc : b.c.r.pieces) if (pc.type() == RivalPlans.PIER) return pc.box().getCenter();
 		BlockPos ctr = b.c.r.center;
 		for (int rad = 6; rad <= 48; rad += 2) for (Direction d : Direction.Plane.HORIZONTAL) for (int lat = -12; lat <= 12; lat += 4) {
 			BlockPos base = ctr.relative(d, rad).relative(d.getClockWise(), lat);
@@ -1021,7 +1040,7 @@ public final class HrafnLooks {
 			boolean ok = true;
 			for (int v = -1; v <= 1 && ok; v++) {
 				int x = X.applyAsInt(u, v), z = Z.applyAsInt(u, v);
-				ok = wtop(b, x, z) == wy && (dep[u][v + 2] = depth(b, x, z, wy)) != NONE;
+				ok = wtop(b, x, z) == wy && (dep[u][v + 2] = depth(b, x, z, wy)) != NONE && dep[u][v + 2] <= MAX_PILE;
 			}
 			if (!ok) break;
 			len = u + 1;
@@ -1034,7 +1053,7 @@ public final class HrafnLooks {
 			head = true;
 			for (int u = len - 2; u < len && head; u++) for (int v = -2; v <= 2 && head; v += 4) {
 				int x = X.applyAsInt(u, v), z = Z.applyAsInt(u, v);
-				head = wtop(b, x, z) == wy && (dep[u][v + 2] = depth(b, x, z, wy)) != NONE;
+				head = wtop(b, x, z) == wy && (dep[u][v + 2] = depth(b, x, z, wy)) != NONE && dep[u][v + 2] <= MAX_PILE;
 			}
 		}
 		Part p = new Part();
@@ -1074,9 +1093,11 @@ public final class HrafnLooks {
 			}
 		}
 		// 3. a boat drawn up on the strand, mast stepped, green-and-brown sail
+		// (the far side first; on the naust's side only behind its back eave)
 		Part boat = null;
-		for (int s : hs != 0 ? new int[] {-hs} : new int[] {-1, 1}) {
-			for (int u0 = -7; u0 >= -11 && boat == null; u0--) boat = strandBoat(b, X, Z, sd, d, s, u0);
+		for (int s : hs != 0 ? new int[] {-hs, hs} : new int[] {-1, 1}) {
+			int from = s == hs ? -9 : -7;
+			for (int u0 = from; u0 >= from - 4 && boat == null; u0--) boat = strandBoat(b, X, Z, sd, d, s, u0);
 			if (boat != null) break;
 		}
 		// commit: jetty, naust, boat; then the pier box over all of it (the writer lets piles replace water only inside it)

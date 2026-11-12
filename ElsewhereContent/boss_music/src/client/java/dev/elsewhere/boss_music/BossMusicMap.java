@@ -30,6 +30,42 @@ public final class BossMusicMap {
 	public boolean summonStinger = false;
 	public int fleeTicks = 50, defeatTicks = 80;
 
+	/** Data problems found while reading (bad {@code layers} entries are dropped and listed here for the self-test). */
+	public final List<String> problems = new java.util.ArrayList<>();
+
+	/**
+	 * P12 phase stems: {@code "layers": [{"phase": 0, "name": "surge", "loop_ticks": 320.5, "phase_ticks": 3.2}, ...]}. Each
+	 * entry is a seamless loop {@code <theme>.<name>} the theme crossfades into on the beat when health crosses threshold
+	 * {@code phase}. An entry with a bad name, an unknown threshold, a loop of 1 s or less or a threshold already taken is
+	 * dropped (and reported by the self-test).
+	 */
+	private List<Conductor.Layer> layers(Identifier theme, com.google.gson.JsonElement el) {
+		List<Conductor.Layer> out = new java.util.ArrayList<>();
+		if (!el.isJsonArray()) {
+			problems.add(theme + ": 'layers' is not a list");
+			return out;
+		}
+		java.util.Set<Integer> taken = new java.util.HashSet<>();
+		for (var x : el.getAsJsonArray()) {
+			try {
+				JsonObject l = x.getAsJsonObject();
+				int phase = l.get("phase").getAsInt();
+				String name = l.get("name").getAsString();
+				float len = l.get("loop_ticks").getAsFloat();
+				float ph = l.has("phase_ticks") ? l.get("phase_ticks").getAsFloat() : 0F;
+				String why = !name.matches("[a-z0-9_]+") || name.equals("intro") || name.equals("loop") || name.equals("end") ? "bad name '" + name + "'"
+					: phase < 0 || phase >= phases.length ? "threshold " + phase + " not in phase_thresholds"
+					: len <= 20 ? "loop_ticks " + len + " too short"
+					: !taken.add(phase) ? "second layer for threshold " + phase : null;
+				if (why != null) problems.add(theme + " layer: " + why);
+				else out.add(new Conductor.Layer(phase, name, len, ph));
+			} catch (RuntimeException ex) {
+				problems.add(theme + " layer unreadable: " + ex);
+			}
+		}
+		return out;
+	}
+
 	/** The one-shot intro event of a theme. */
 	public static Identifier introOf(Identifier theme) {
 		return theme.withSuffix(".intro");
@@ -67,9 +103,15 @@ public final class BossMusicMap {
 				if (o.has("themes")) {
 					for (var e : o.getAsJsonObject("themes").entrySet()) {
 						JsonObject t = e.getValue().getAsJsonObject();
-						m.plans.put(Identifier.parse(e.getKey()), new Conductor.Plan(t.get("intro_ticks").getAsInt(), "cold".equals(t.get("intro").getAsString()),
-							t.get("beat_ticks").getAsFloat(), t.get("loop_ticks").getAsFloat(), t.get("surge_ticks").getAsFloat(), t.get("end_ticks").getAsInt(),
-							t.has("loop_phase_ticks") ? t.get("loop_phase_ticks").getAsFloat() : 0F, t.has("surge_phase_ticks") ? t.get("surge_phase_ticks").getAsFloat() : 0F));
+						Identifier tid = Identifier.parse(e.getKey());
+						int intro = t.get("intro_ticks").getAsInt(), end = t.get("end_ticks").getAsInt();
+						boolean cold = "cold".equals(t.get("intro").getAsString());
+						float beat = t.get("beat_ticks").getAsFloat(), loop = t.get("loop_ticks").getAsFloat(), surge = t.get("surge_ticks").getAsFloat();
+						float loopPhase = t.has("loop_phase_ticks") ? t.get("loop_phase_ticks").getAsFloat() : 0F;
+						float surgePhase = t.has("surge_phase_ticks") ? t.get("surge_phase_ticks").getAsFloat() : 0F;
+						m.plans.put(tid, t.has("layers")
+							? new Conductor.Plan(intro, cold, beat, loop, surge, end, loopPhase, surgePhase, m.layers(tid, t.get("layers")))
+							: new Conductor.Plan(intro, cold, beat, loop, surge, end, loopPhase, surgePhase));
 					}
 				}
 				if (o.has("shared_themes")) {

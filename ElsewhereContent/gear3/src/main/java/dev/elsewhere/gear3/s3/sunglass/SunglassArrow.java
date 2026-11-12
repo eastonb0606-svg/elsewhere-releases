@@ -23,7 +23,7 @@ import org.jspecify.annotations.Nullable;
 
 /**
  * The Sunglass Arrow in flight (see {@link SunglassArrows} for the rules). The glass pass-through and the undead bonus are applied
- * by {@code mixin/SunglassArrowMixin} inside the vanilla arrow code (its flight ray, its inside-a-block check and its damage call);
+ * by {@code dev.elsewhere.gear3.mixin.sunglass.SunglassArrowMixin} inside the vanilla arrow code (its flight ray, its inside-a-block check and its damage call);
  * the fire is {@link #doPostHurtEffects}. Server extras: one soft amethyst chime when the arrow really crosses glass in a tick.
  * Client extra: a sparse small-flame trail while it flies (client-side particles, culled by the particle engine).
  */

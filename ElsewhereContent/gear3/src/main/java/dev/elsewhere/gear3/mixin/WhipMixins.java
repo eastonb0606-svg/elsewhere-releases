@@ -41,10 +41,14 @@ public final class WhipMixins {
 			if (Gear3Whips.ENABLED) WhipTags.onRibbonTag(owner, target);
 		}
 
-		/** Whip tag bonus time (Marshal's Command): the Ribbon's tag is stamped that much later, so it lasts and idles longer. */
+		/**
+		 * Whip tag bonus time (Marshal's Command): the Ribbon's tag is stamped that much later, so it lasts and idles longer.
+		 * A set-bonus API, so it stays on with the whip_mechanics kill switch off (then every whip is a Gale Ribbon again and
+		 * still gets the Command's +3 s). 0 when no set bonus is registered or worn.
+		 */
 		@ModifyExpressionValue(method = "tag", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerLevel;getGameTime()J"))
 		private static long gear3$bonusTime(long now, @Local(argsOnly = true) ServerPlayer owner) {
-			return Gear3Whips.ENABLED ? now + WhipTags.bonusTicks(owner) : now;
+			return now + WhipTags.bonusTicks(owner);
 		}
 
 		/** A gear3 mark counts as the owner's whip tag (ranged minions +4 range against it). */

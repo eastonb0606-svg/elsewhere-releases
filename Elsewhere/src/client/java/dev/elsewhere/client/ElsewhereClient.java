@@ -42,7 +42,7 @@ public final class ElsewhereClient implements ClientModInitializer {
 		ModelLayerRegistry.registerModelLayer(Renderers.RIFT, RiftModel::createBodyLayer);
 
 		EntityRendererRegistry.register(ModEntities.CREAKING_HUSK, Renderers.Husk::new);
-		EntityRendererRegistry.register(ModEntities.EYEBLOSSOM_WISP, Renderers.Wisp::new);
+		EntityRendererRegistry.register(ModEntities.EYEBLOSSOM_WISP, dev.elsewhere.client.render.WispSwarmRenderer::new); // swarm-as-one (s-spawngroups; a plain wisp draws as 2.1)
 		EntityRendererRegistry.register(ModEntities.MOTHER_CREAK, Renderers.Mother::new);
 		EntityRendererRegistry.register(ModEntities.SELENNE, Renderers.SelenneR::new);
 		EntityRendererRegistry.register(ModEntities.ROOT_SPIKE, Renderers.Spike::new);

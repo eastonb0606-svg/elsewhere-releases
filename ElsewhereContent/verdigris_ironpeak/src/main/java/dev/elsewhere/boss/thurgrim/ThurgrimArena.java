@@ -44,14 +44,15 @@ public final class ThurgrimArena {
 			for (int i = 0; i < OBELISKS; i++) {
 				BlockPos p = obelisk(s.origin, i);
 				int dx = p.getX() - s.origin.getX(), dz = p.getZ() - s.origin.getZ();
-				for (int y = 1; y <= 6; y++) s.set(dx, y, dz, y == 6 ? Blocks.IRON_BLOCK.defaultBlockState() : Blocks.POLISHED_DEEPSLATE.defaultBlockState());
+				// copper conductor cap under the rod, not an iron block (no valuable blocks in structures, s-throne B9)
+				for (int y = 1; y <= 6; y++) s.set(dx, y, dz, y == 6 ? Blocks.CUT_COPPER.waxed().unaffected().defaultBlockState() : Blocks.POLISHED_DEEPSLATE.defaultBlockState());
 				s.set(dx, 7, dz, Blocks.LIGHTNING_ROD.weathering().unaffected().defaultBlockState());
 			}
 			// Throne at the north edge, drum in front of it.
 			for (int x = -2; x <= 2; x++) {
 				s.set(x, 1, -14, IronpeakBlocks.FROSTGRANITE_BRICKS.defaultBlockState());
 				s.set(x, 2, -15, IronpeakBlocks.FROSTGRANITE_BRICKS.defaultBlockState());
-				s.set(x, 3, -15, Math.abs(x) == 2 ? Blocks.IRON_BLOCK.defaultBlockState() : IronpeakBlocks.FROSTGRANITE_BRICKS.defaultBlockState());
+				s.set(x, 3, -15, Math.abs(x) == 2 ? IronpeakBlocks.POLISHED_FROSTGRANITE.defaultBlockState() : IronpeakBlocks.FROSTGRANITE_BRICKS.defaultBlockState());
 			}
 			s.set(0, 1, -13, IronpeakBlocks.POLISHED_FROSTGRANITE_STAIRS.defaultBlockState());
 			s.set(DRUM[0], DRUM[1], DRUM[2], IronpeakBlocks.SUMMIT_WAR_DRUM.defaultBlockState());

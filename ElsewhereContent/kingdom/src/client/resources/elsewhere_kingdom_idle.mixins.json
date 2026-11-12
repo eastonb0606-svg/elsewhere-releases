@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.kingdom.idlemixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"HumanoidModelIdleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -124,12 +124,9 @@ public final class GreenhazeLooks {
 			if (rr > R + 0.6 && rr <= R + 1.6) o.set(new BlockPos(wx, y0 + 4, wz), stair(Blocks.TUFF_BRICK_STAIRS, f.dir(toward(-lx, -lz)), true));
 		}
 		// 3. the cupola over the oculus: bamboo posts, a mosaic cap and a shroomlight glow
-		int top = y0 + 14;
 		for (int lx = -2; lx <= 2; lx++) for (int lz = -2; lz <= 2; lz++) {
 			if (Math.abs(lx) == 2 && Math.abs(lz) == 2) continue;
-			BlockPos p = f.at(lx, 14, lz);
 			if (Math.abs(lx) == 1 && Math.abs(lz) == 1) f.set(o, lx, 14, lz, st(Blocks.BAMBOO_FENCE));
-			if (Math.abs(lx) <= 1 && Math.abs(lz) <= 1 && !(lx == 0 && lz == 0) && (Math.abs(lx) + Math.abs(lz) == 1)) o.set(p, AIR);
 			f.set(o, lx, 15, lz, lx == 0 && lz == 0 ? st(Blocks.SHROOMLIGHT) : slab(Blocks.BAMBOO_MOSAIC_SLAB, false));
 		}
 		f.set(o, 0, 16, 0, st(Blocks.BAMBOO_FENCE));
@@ -144,8 +141,6 @@ public final class GreenhazeLooks {
 				int px = vx + (Math.abs(s) > 0.5 ? k : 0), pz = vz + (Math.abs(s) > 0.5 ? 0 : k);
 				for (int t = -1; t <= 2; t++) if (t != 0) f.set(o, px + (int) Math.round(c * t), dy, pz + (int) Math.round(s * t), AIR);
 				f.set(o, px, dy, pz, st(GreenhazeBlocks.HOTBOX_VENT));
-				// a tuff frame around each vent
-				if (k != 0 && (dy == 6 || dy == 8)) continue;
 			}
 			for (int k = -2; k <= 2; k += 4) for (int dy = 5; dy <= 9; dy++) {
 				int px = vx + (Math.abs(s) > 0.5 ? k : 0), pz = vz + (Math.abs(s) > 0.5 ? 0 : k);
@@ -160,7 +155,7 @@ public final class GreenhazeLooks {
 		for (int i = 1; i < 6; i++) {
 			double a = Math.PI / 2 + i * Math.PI / 3;
 			double c = Math.cos(a), s = Math.sin(a);
-			Direction out = f.dir(toward(c, s));
+			Direction out = toward(c, s);
 			for (int k = -1; k <= 1; k++) {
 				int sx = (int) Math.round(c * 9.5 - s * k), sz = (int) Math.round(s * 9.5 + c * k);
 				int bx = (int) Math.round(c * 10.6 - s * k), bz = (int) Math.round(s * 10.6 + c * k);
@@ -199,11 +194,14 @@ public final class GreenhazeLooks {
 			}
 		}
 		f.set(o, 0, 3, R + 3, st(Blocks.LANTERN).setValue(LanternBlock.HANGING, true));
+		// the doorman's stocked chest at the porch steps (outside the Percolax seal, where 2.x kept it)
+		f.set(o, 1, 0, R + 3, st(Blocks.CHEST).setValue(ChestBlock.FACING, Direction.WEST));
+		o.loot(f.at(1, 0, R + 3), GreenhazeStructures.HOTBOX_LOOT, sd ^ 0x5EEDL);
 		// 7. the altar on its chiseled dais
 		f.set(o, 0, 0, 0, st(GreenhazeBlocks.HOTBOX_ALTAR));
 	}
 
-	/** A small ribbed glass annex dome on its own floor: role 0 = the doorman's stash (loot), 1 = the chill-out lounge. */
+	/** A small ribbed glass annex dome on its own floor: role 0 = the doorman's store, 1 = the chill-out lounge. */
 	static void annex(Piece pc, Out o) {
 		Frame f = pc.frame();
 		int ra = pc.p(0), role = pc.p(1), y0 = f.oy();
@@ -247,9 +245,8 @@ public final class GreenhazeLooks {
 			}
 		}
 		if (role == 0) {
-			// the doorman's stash: loot chest, a barrel of supplies, lantern on a hay bale, a moss bench
-			f.set(o, 2, 0, -1, st(Blocks.CHEST).setValue(ChestBlock.FACING, f.dir(Direction.WEST)));
-			o.loot(f.at(2, 0, -1), GreenhazeStructures.HOTBOX_LOOT, sd ^ 0x5EEDL);
+			// the doorman's store: barrels of supplies, lantern on a hay bale, a moss bench (the stocked chest stays by the main door, as in 2.x)
+			f.set(o, 2, 0, -1, st(Blocks.BARREL));
 			f.set(o, 2, 0, 1, st(Blocks.BARREL));
 			f.set(o, -2, 0, -1, st(Blocks.HAY_BLOCK));
 			f.set(o, -2, 1, -1, st(Blocks.LANTERN));
@@ -330,7 +327,7 @@ public final class GreenhazeLooks {
 			double theta = Math.atan2(lz, lx);
 			int sec = sector(theta), k = ring(r);
 			int lvl = level(pc, sec, Math.min(k, 4));
-			boolean aisle = ang(theta + Math.PI / 4, Math.PI / 2) < Math.PI / 4 - 1.25 / Math.max(r, 1) ? false : ang(theta, Math.PI / 2) * r < 1.6;
+			boolean aisle = r > 3.3 && ang(theta, Math.PI / 2) * r < 1.6;
 			int wy = y0 + lvl;
 			if (r > 20) {
 				// rim retaining wall where the hillside stands above the promenade (no cut slope left raw)
@@ -351,13 +348,10 @@ public final class GreenhazeLooks {
 			if (g >= wy) clear(o, wx, wy, g, wz);
 			soft(o, wx, wy, wy + 4, wz);
 			// seat riser: the first block of a raised ring is a mud-brick stair facing out (sit facing the fire); aisles get plain steps
-			if (k >= 1 && k <= 5) {
-				int inner = level(pc, sec, Math.max(0, Math.min(k, 4) - 1));
-				double rIn = k == 5 ? 18 : 8 + 2.5 * (k - 1);
-				if (lvl > inner && r - rIn <= 1.0) {
-					o.set(new BlockPos(wx, wy - 1, wz), aisle ? stair(Blocks.MUD_BRICK_STAIRS, f.dir(toward(lx, lz)), false) : mudB);
-					if (!aisle) o.set(new BlockPos(wx, wy - 1, wz), stair(Blocks.MUD_BRICK_STAIRS, f.dir(toward(lx, lz)), false));
-				}
+			if (k >= 1 && k <= 4) {
+				int inner = level(pc, sec, k - 1);
+				double rIn = 8 + 2.5 * (k - 1);
+				if (lvl > inner && r - rIn <= 1.0) o.set(new BlockPos(wx, wy - 1, wz), stair(Blocks.MUD_BRICK_STAIRS, f.dir(toward(lx, lz)), false));
 			}
 		}
 		// the bonfire: a mud-brick ring wall, criss-crossed jungle-log pyre round a magma heart, one flame on top (one lit campfire only)
@@ -403,7 +397,7 @@ public final class GreenhazeLooks {
 			f.set(o, px, lv + 1, pz, st(Blocks.LANTERN));
 		}
 		int cx = 16, cz = -4, clv = level(pc, sector(Math.atan2(cz, cx)), 4);
-		f.set(o, cx, clv, cz, st(Blocks.CHEST).setValue(ChestBlock.FACING, f.dir(Direction.WEST)));
+		f.set(o, cx, clv, cz, st(Blocks.CHEST).setValue(ChestBlock.FACING, Direction.WEST));
 		o.loot(f.at(cx, clv, cz), GreenhazeStructures.TERRACE_LOOT, sd ^ 0xB0BL);
 	}
 
@@ -464,12 +458,10 @@ public final class GreenhazeLooks {
 			boolean path = Math.abs(across) <= 1;
 			clear(o, x, t, t + 4, z);
 			if (path) {
-				int down = terrace(pc, x - ux, z - uz);
-				BlockState surf = down < t ? stair(Blocks.MUD_BRICK_STAIRS, toward(ux, uz), false) : st(Blocks.GRAVEL);
-				o.set(new BlockPos(x, t - 1, z), down < t ? mudB : surf);
-				if (down < t) o.set(new BlockPos(x, t - 1, z), mudB);
-				if (down < t && inFarm(pc, x - ux, z - uz)) o.set(new BlockPos(x - ux, down, z - uz), stair(Blocks.MUD_BRICK_STAIRS, toward(ux, uz), false));
+				o.set(new BlockPos(x, t - 1, z), Math.abs(across) == 1 ? mudB : st(Blocks.COARSE_DIRT));
 				underpin(o, x, t - 2, z, mudB, packed, 8);
+				int up = terrace(pc, x + ux, z + uz);
+				if (up > t && inFarm(pc, x + ux, z + uz)) o.set(new BlockPos(x, t, z), stair(Blocks.MUD_BRICK_STAIRS, toward(ux, uz), false));
 				continue;
 			}
 			if (edge) {
@@ -513,7 +505,7 @@ public final class GreenhazeLooks {
 			boolean corner = Math.abs(dx) == 1 && Math.abs(dz) == 1;
 			int behind = dx * ux + dz * uz;
 			if (corner) for (int h = 0; h <= (behind > 0 ? 2 : 1); h++) o.set(new BlockPos(x, st0 + h, z), pillar(GreenhazeBlocks.KUSHWOOD_LOG, Direction.Axis.Y));
-			o.set(new BlockPos(x, st0 + (behind > 0 ? 3 : behind == 0 ? 3 : 2), z), behind == 0 ? slab(GreenhazeBlocks.KUSHWOOD_SLAB, false) : stair(GreenhazeBlocks.KUSHWOOD_STAIRS, back.getOpposite(), false));
+			o.set(new BlockPos(x, st0 + (behind > 0 ? 3 : behind == 0 ? 3 : 2), z), behind == 0 ? slab(GreenhazeBlocks.KUSHWOOD_SLAB, false) : stair(GreenhazeBlocks.KUSHWOOD_STAIRS, back, false));
 		}
 		o.set(new BlockPos(sx, st0, sz), st(Blocks.CHEST).setValue(ChestBlock.FACING, back.getOpposite()));
 		o.loot(new BlockPos(sx, st0, sz), GreenhazeMarket.FARM_LOOT, sd ^ 0xFA4L);
@@ -602,22 +594,20 @@ public final class GreenhazeLooks {
 			for (int h = 0; h <= 3; h++) f.set(o, lx, h, -2, pillar(Blocks.STRIPPED_BAMBOO_BLOCK, Direction.Axis.Y));
 		}
 		DyeColor[] c = STRIPES[col];
-		for (int lx = -hw - (role == 1 ? 0 : 0); lx <= hw; lx++) {
+		for (int lx = -hw; lx <= hw; lx++) {
 			BlockState stripe = wool(c[Math.floorMod(lx, 2)]);
 			f.set(o, lx, 4, -2, stripe);
 			f.set(o, lx, 4, -1, stripe);
 			f.set(o, lx, 3, 0, stripe);
 			f.set(o, lx, 3, 1, stripe);
 			f.set(o, lx, 3, 2, stripe);
-			f.set(o, lx, 2, 3, Blocks.CARPET.pick(c[Math.floorMod(lx, 2)]).defaultBlockState()); // valance resting on nothing is avoided below
 		}
-		for (int lx = -hw; lx <= hw; lx++) f.set(o, lx, 2, 3, AIR);
 		// counter (upside-down spruce stairs) with goods, shelves behind
 		for (int lx = -hw + 1; lx <= hw - 1; lx++) f.set(o, lx, 0, 2, stair(Blocks.SPRUCE_STAIRS, Direction.NORTH, true));
 		BlockState[] goods = {st(Blocks.CAKE), st(Blocks.POTTED_FERN), st(Blocks.MELON), st(Blocks.PUMPKIN), st(Blocks.HAY_BLOCK)};
 		f.set(o, -1, 1, 2, goods[Math.floorMod((int) sd, goods.length)]);
 		f.set(o, 1, 1, 2, goods[Math.floorMod((int) (sd >> 8), goods.length)]);
-		f.set(o, -hw + 1, 0, -1, role == 2 ? st(Blocks.CHEST).setValue(ChestBlock.FACING, f.dir(Direction.SOUTH)) : st(Blocks.BARREL));
+		f.set(o, -hw + 1, 0, -1, role == 2 ? st(Blocks.CHEST).setValue(ChestBlock.FACING, Direction.SOUTH) : st(Blocks.BARREL));
 		if (role == 2) o.loot(f.at(-hw + 1, 0, -1), GreenhazeMarket.MARKET_LOOT, sd ^ 0x3A2L);
 		f.set(o, hw - 1, 0, -1, Math.floorMod(sd, 2) == 0 ? st(Blocks.CAULDRON) : st(Blocks.COMPOSTER));
 		f.set(o, 0, 0, -2, st(Blocks.HAY_BLOCK));
@@ -695,7 +685,7 @@ public final class GreenhazeLooks {
 		f.set(o, 0, 4, 0, st(Blocks.LANTERN).setValue(LanternBlock.HANGING, true));
 		// inside: rug, chest, cauldron, Budtender
 		for (int lx = -1; lx <= 1; lx++) for (int lz = -1; lz <= 1; lz++) f.set(o, lx, 0, lz, st(Blocks.MOSS_CARPET));
-		f.set(o, 1, 0, -2, st(Blocks.CHEST).setValue(ChestBlock.FACING, f.dir(Direction.SOUTH)));
+		f.set(o, 1, 0, -2, st(Blocks.CHEST).setValue(ChestBlock.FACING, Direction.SOUTH));
 		o.loot(f.at(1, 0, -2), GreenhazeStructures.SESH_HUT_LOOT, sd ^ 0x5E5L);
 		f.set(o, -2, 0, 0, st(Blocks.CAULDRON));
 		f.set(o, -1, 0, -2, st(Blocks.POTTED_FERN));
@@ -761,7 +751,7 @@ public final class GreenhazeLooks {
 			if (o.has(x, z)) {
 				if (lv < prev || last) {
 					// weir or the soak pit at the end
-					o.set(new BlockPos(x, prev, z), last ? st(Blocks.GRAVEL) : st(Blocks.MOSSY_COBBLESTONE_SLAB));
+					o.set(new BlockPos(x, prev, z), last ? st(Blocks.GRAVEL) : st(Blocks.MOSSY_COBBLESTONE));
 					for (int y = lv; y < prev; y++) o.set(new BlockPos(x, y, z), st(Blocks.MOSSY_COBBLESTONE));
 					underpin(o, x, Math.min(lv, prev) - 1, z, st(Blocks.MOSSY_COBBLESTONE), st(Blocks.COBBLESTONE), 8);
 					soft(o, x, prev + 1, prev + 3, z);
@@ -799,7 +789,7 @@ public final class GreenhazeLooks {
 		}
 	}
 
-	/** Pool cell: within r 6.5 where the stored hollow lattice is below the spill level, and always the inner r 2.5. */
+	/** Pool cell: always the inner r 2.5; out to r 6.5 where the stored ground lattice, plus a bowl slope, stays under the water line. */
 	static boolean inPool(Piece pc, int x, int z) {
 		int dx = x - pc.o.getX(), dz = z - pc.o.getZ();
 		double r = Math.sqrt(dx * dx + dz * dz);
@@ -807,7 +797,8 @@ public final class GreenhazeLooks {
 		if (r > 6.5) return false;
 		int n = pc.p(2 + pc.p(1) + 3);
 		if (n <= 0) return r <= 4;
-		return lat(pc, 2 + pc.p(1), x, z) <= pc.o.getY() - 0.4 + 0.6 * hash(pc.seed, x, 9, z);
+		// a bowl: the edge sits near r 4.5 on level ground, wider in a hollow, tighter on a rise; ragged by a stable hash
+		return lat(pc, 2 + pc.p(1), x, z) + 0.5 * (r - 4.5) <= pc.o.getY() + 0.6 * (hash(pc.seed, x, 9, z) - 0.5);
 	}
 
 	// ============================================================================================ Return rift (dev module only)

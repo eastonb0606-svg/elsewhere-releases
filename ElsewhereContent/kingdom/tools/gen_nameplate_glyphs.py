@@ -4,8 +4,9 @@
 Writes src/main/resources/assets/elsewhere/textures/font/nameplate.png (8 x 2 cells of 16 x 16, drawn at text height
 by assets/elsewhere/font/nameplate.json) and, if a path is given as the first argument, an 8x preview on a dark background (not shipped).
 Row 0 (U+E000..): officer chevrons, captain star, lord coronet, sovereign crown, Mirewick chain of office.
-Row 1 (U+E010..): crests: Aldermark heater shield, Hrafnholt round shield, Azmar ankh, Mirewick lantern, rebels torch,
-generic banner (white: the game tints it with the faction's tabard colour).
+Row 1 (U+E010..): crests echoing the P10 tabard emblems: Aldermark heater shield (red chief, crown, tower), Hrafnholt
+round shield with a raven, Azmar winged scarab under a sun disc, Mirewick lantern, rebels torch,
+generic banner (white: the game tints it with the faction's tabard colour), Free Company crossed swords.
 Glyph content stays in rows 0-13 of each cell (cap height of the default font at 2x) so icons sit on the baseline.
 Run: _tools/venv/bin/python -I kingdom/tools/gen_nameplate_glyphs.py
 """
@@ -161,7 +162,7 @@ def chain(c):
 # ---- row 1: crests --------------------------------------------------------------------------------------------------
 
 def heater(c, field, field_hi, border, charge):
-    """Aldermark: heater shield, blue field, cream border and cross."""
+    """Heater shield: field with an upper-left highlight, 1px border, an optional cross in `charge` (Aldermark: none, field colour)."""
     def inside(x, y):
         if y < 1 or y > 14 or x < 2 or x > 13:
             return False
@@ -298,13 +299,99 @@ def banner(c):
             c.px(x, y, shade if (x == 12 or x == 3 or y == 2) else white)
 
 
+def crossed_swords(c):
+    """Free Company: two crossed steel swords, points up, gold guards and pommels (sellswords)."""
+    steel_hi, steel_sh, grip = hexc("E9EDF2"), hexc("8E97A3"), hexc("6B4A2B")
+    # blade A: point top-left (1,1) to the guard at (9,9); blade B mirrored (point top-right)
+    for i in range(9):
+        for (x, y, d) in ((1 + i, 1 + i, 1), (14 - i, 1 + i, -1)):
+            c.px(x, y, steel_hi)
+            c.px(x + d, y, steel_sh)
+    for (gx, d) in ((9, 1), (6, -1)):
+        # guard across the blade (anti-diagonal), 5 px
+        for k in (-2, -1, 0, 1, 2):
+            c.px(gx + k, 10 - k if d == 1 else 10 + k, GOLD if abs(k) < 2 else GOLD_SH)
+        # grip and pommel continue the blade line
+        c.px(gx + 1 * d, 11, grip)
+        c.px(gx + 2 * d, 12, grip)
+        c.px(gx + 3 * d, 13, GOLD_HI)
+
+
+def tower_charge(c):
+    """Aldermark's charge on the heater shield (as on its tabard emblem, s-p10): a red chief with a gold crown over a cream tower."""
+    red, cream, door, crown_c = hexc("B23A3A"), hexc("F1EAD0"), hexc("2A2A3A"), hexc("F2C14E")
+    for y in (2, 3, 4):
+        for x in range(3, 13):
+            if c.get(x, y)[:3] != hexc("E8D9A0")[:3] and c.get(x, y)[3] > 0:
+                c.px(x, y, red)
+    c.rect(6, 3, 9, 3, crown_c)
+    for x in (6, 9):
+        c.px(x, 2, crown_c)
+    c.px(7, 2, hexc("FFE58A"))
+    c.px(8, 2, hexc("FFE58A"))
+    # tower: merlons, battlement, body, door
+    for x in (5, 7, 8, 10):
+        c.px(x, 5, cream)
+    c.rect(5, 6, 10, 6, cream)
+    c.rect(6, 7, 9, 12, cream)
+    c.rect(7, 11, 8, 12, door)
+    c.px(9, 8, hexc("D8CFAE"))
+    c.px(9, 9, hexc("D8CFAE"))
+
+
+def raven_shield(c):
+    """Hrafnholt: round green shield, dark rim, a brown raven in profile (the Norse raven banner of its tabard emblem)."""
+    cx, cy, r = 7.5, 7.0, 6.9
+    green, green_hi, rim = hexc("3F8A3A"), hexc("57A851"), hexc("4A3018")
+    for y in range(C):
+        for x in range(C):
+            dx, dy = x + 0.5 - cx, y + 0.5 - cy
+            d = math.hypot(dx, dy)
+            if d <= r:
+                col = rim if d > r - 1.2 else (green_hi if (d > r - 2.3 and dx < 0 and dy < 0) else green)
+                c.px(x, y, col)
+    raven, beak, eye = hexc("6B4A2B"), hexc("3A2A1C"), hexc("E8D9A0")
+    body = {
+        3: (6, 7), 4: (5, 8), 5: (6, 8), 6: (6, 9), 7: (5, 10), 8: (6, 11), 9: (7, 11), 10: (9, 12),
+    }
+    for y, (x0, x1) in body.items():
+        c.rect(x0, y, x1, y, raven)
+    c.px(4, 4, beak)
+    c.px(3, 4, beak)
+    c.px(6, 4, eye)
+    c.px(8, 11, beak)  # legs
+    c.px(10, 11, beak)
+    c.px(9, 7, hexc("8A6440"))  # wing highlight
+    c.px(10, 8, hexc("8A6440"))
+
+
+def scarab(c):
+    """Azmar: a winged scarab under a sun disc (its tabard emblem), gold wings, lapis and teal body."""
+    for y in range(C):
+        for x in range(C):
+            if math.hypot(x + 0.5 - 8.0, y + 0.5 - 3.0) <= 2.5:
+                c.px(x, y, hexc("FFD75A") if x < 8 and y < 3 else hexc("F2C14E"))
+    wings = {6: (3, 12), 7: (1, 14), 8: (1, 14), 9: (2, 13), 10: (4, 11)}
+    for y, (x0, x1) in wings.items():
+        for x in range(x0, x1 + 1):
+            c.px(x, y, GOLD_HI if y == 6 else (GOLD if (x + y) % 3 else GOLD_SH))
+    for y in range(C):
+        for x in range(C):
+            v = ((x + 0.5 - 8.0) / 2.1) ** 2 + ((y + 0.5 - 9.5) / 3.3) ** 2
+            if v <= 1.0:
+                c.px(x, y, hexc("2BB3A3") if (x < 8 and y < 9) else hexc("1F3F8F"))
+    c.rect(7, 6, 8, 6, hexc("1F3F8F"))  # head
+    c.px(6, 13, hexc("1F3F8F"))
+    c.px(9, 13, hexc("1F3F8F"))
+
+
 def main():
     img = Image.new("RGBA", (8 * C, 2 * C), (0, 0, 0, 0))
     row0 = [chevrons, star, coronet, crown, chain]
     for i, f in enumerate(row0):
         f(Cell(img, i, 0))
-    heater_args = (hexc("3A5FB8"), hexc("5A80D6"), hexc("E8D9A0"), hexc("E8D9A0"))
-    row1 = [lambda c: heater(c, *heater_args), round_shield, ankh, lantern, torch, banner]
+    heater_args = (hexc("3A5FB8"), hexc("5A80D6"), hexc("E8D9A0"), hexc("3A5FB8"))  # plain field: the tower is the charge
+    row1 = [lambda c: (heater(c, *heater_args), tower_charge(c)), raven_shield, scarab, lantern, torch, banner, crossed_swords]
     for i, f in enumerate(row1):
         f(Cell(img, i, 1))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

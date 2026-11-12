@@ -85,7 +85,8 @@ public final class SelfTest {
 		int loaded = loadedChunks(server);
 		// spawn chunks stay; everything the test generated unloads within a few hundred ticks (budgeted unloads per tick)
 		int limit = chunksBase + (chunksPeak - chunksBase) / 10 + 50;
-		if (drainTicks < 1200 && (drainTicks % 20 != 0 || loaded > limit)) return;
+		// at most 1000 ticks: a server with pause-when-empty-seconds=60 stops ticking (and this hook) at 1200 empty ticks
+		if (drainTicks < 1000 && (drainTicks % 20 != 0 || loaded > limit)) return;
 		int drainTicks0 = drainTicks;
 		drainTicks = -1;
 		long after = usedAfterGc();
@@ -116,6 +117,7 @@ public final class SelfTest {
 		chunksBase = loadedChunks(server);
 		try {
 			checkRegistry();
+			dev.elsewhere.verdigris_ironpeak.s3.groups.SpawnGroups3.selfTest(server, (ok, what) -> check(ok, what)); // ARMIES 6 spawn groups (s-spawngroups)
 			checkLoot(server);
 			checkArsenal();
 			checkBeta2(server);

@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import dev.elsewhere.gear3.Gear3Content;
 import dev.elsewhere.gear3.Gear3Items;
+import dev.elsewhere.gear3.Gear3Mechanics;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
@@ -82,6 +83,11 @@ public final class Hurlbats {
 
 	private static boolean done;
 	private static Boolean enabled;
+
+	/** Catalogue mechanic "hurlbat" -> {@link HurlbatItem}. Called from Gear3Content.init() before Gear3Items.init() registers the catalogue. */
+	public static void putFactory() {
+		Gear3Mechanics.FACTORIES.put("hurlbat", HurlbatItem::new);
+	}
 
 	public static void init() {
 		if (done) return;

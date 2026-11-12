@@ -157,26 +157,29 @@ public final class SwingCurves {
 		return s == Style.FLAIL ? EDGE_FLAIL : EDGE_BLADE;
 	}
 
-	/** {@code minecraft:item/handheld} first-person right-hand display transform, then the model's -0.5 centring. */
-	public static Matrix4f handheldFirstPerson(Matrix4f m) {
-		return m.translate(1.13F / 16F, 3.2F / 16F, 1.13F / 16F).rotateXYZ(0F, rad(-90F), rad(25F)).scale(0.68F).translate(-0.5F, -0.5F, -0.5F);
+	/**
+	 * {@code minecraft:item/handheld} first-person display transform as {@code ItemTransform.apply} does it, then the
+	 * model's -0.5 centring. The left-hand entry is the mirrored JSON plus the left-hand fix, which nets the same
+	 * rotation with the x translation negated.
+	 */
+	public static Matrix4f handheldFirstPerson(Matrix4f m, boolean left) {
+		return m.translate((left ? -1.13F : 1.13F) / 16F, 3.2F / 16F, 1.13F / 16F).rotateXYZ(0F, rad(-90F), rad(25F)).scale(0.68F).translate(-0.5F, -0.5F, -0.5F);
 	}
 
-	/** {@code minecraft:item/handheld} third-person right-hand display transform, then the model's -0.5 centring. */
+	/** {@code minecraft:item/handheld} third-person display transform (either hand: the left-hand fix cancels the mirrored JSON). */
 	public static Matrix4f handheldThirdPerson(Matrix4f m) {
 		return m.translate(0F, 4F / 16F, 0.5F / 16F).rotateXYZ(0F, rad(-90F), rad(55F)).scale(0.85F).translate(-0.5F, -0.5F, -0.5F);
 	}
 
 	/** Writes sample {@code i} (inner xyz, outer xyz) of matrix {@code m} into {@code out}. */
-	private static void edgePoints(Matrix4f m, float[] e, boolean mirror, Scratch sc, float[] out, int i) {
+	private static void edgePoints(Matrix4f m, float[] e, Scratch sc, float[] out, int i) {
 		m.transformPosition(sc.a.set(e[0], e[1], 0.5F));
 		m.transformPosition(sc.b.set(e[2], e[3], 0.5F));
-		float f = mirror ? -1F : 1F;
 		int o = i * 6;
-		out[o] = sc.a.x * f;
+		out[o] = sc.a.x;
 		out[o + 1] = sc.a.y;
 		out[o + 2] = sc.a.z;
-		out[o + 3] = sc.b.x * f;
+		out[o + 3] = sc.b.x;
 		out[o + 4] = sc.b.y;
 		out[o + 5] = sc.b.z;
 	}
@@ -190,13 +193,13 @@ public final class SwingCurves {
 		if (!s.trails() || n < 2) return 0;
 		float[] e = edge(s);
 		int count = 0;
-		for (int k = 0; count < n && k < n + 12; k++) {
+		for (int k = 0; k < n; k++) {
 			float pk = p - k * TRAIL_STEP;
 			if (pk > trailEnd(s)) continue;
 			if (pk < trailStart(s)) break;
-			firstPersonPose(s, pk, 1, sc.v, sc.t, sc.q);
-			handheldFirstPerson(sc.m.translation(sc.t).rotate(sc.q));
-			edgePoints(sc.m, e, invert < 0, sc, out, count++);
+			firstPersonPose(s, pk, invert, sc.v, sc.t, sc.q);
+			handheldFirstPerson(sc.m.translation(sc.t).rotate(sc.q), invert < 0);
+			edgePoints(sc.m, e, sc, out, count++);
 		}
 		return count >= 2 ? count : 0;
 	}
@@ -216,18 +219,20 @@ public final class SwingCurves {
 		float[] e = edge(s);
 		float[] a = sc.v;
 		int count = 0;
-		for (int k = 0; count < n && k < n + 12; k++) {
+		for (int k = 0; k < n; k++) {
 			float pk = p - k * TRAIL_STEP;
 			if (pk > trailEnd(s)) continue;
 			if (pk < trailStart(s)) break;
 			thirdPerson(s, pk, headPitchRad, a);
-			float bodyY = a[3];
-			// right arm pivot (-5, 2, 0), swung round with the body as in vanilla's attack animation; then ItemInHandLayer
-			sc.m.translation(-(float) Math.cos(bodyY) * 5F / 16F, (2F + (crouching ? 3.2F : 0F)) / 16F, (float) Math.sin(bodyY) * 5F / 16F)
-				.rotate(sc.q.rotationZYX(a[2], a[1] + bodyY, a[0]))
-				.rotateX(rad(-90F)).rotateY(rad(180F)).translate(1F / 16F, 2F / 16F, -10F / 16F);
+			float side = leftArm ? -1F : 1F;
+			float bodyY = a[3] * side;
+			// arm pivot (-5, 2, 0) right / (5, 2, 0) left, swung round with the body as in vanilla's attack animation and
+			// UseAnims.thirdPersonSwing; then ItemInHandLayer's hand offset and the item's display transform
+			sc.m.translation(-side * (float) Math.cos(bodyY) * 5F / 16F, (2F + (crouching ? 3.2F : 0F)) / 16F, side * (float) Math.sin(bodyY) * 5F / 16F)
+				.rotate(sc.q.rotationZYX(a[2] * side, a[1] * side + bodyY, a[0]))
+				.rotateX(rad(-90F)).rotateY(rad(180F)).translate(side / 16F, 2F / 16F, -10F / 16F);
 			handheldThirdPerson(sc.m);
-			edgePoints(sc.m, e, leftArm, sc, out, count++);
+			edgePoints(sc.m, e, sc, out, count++);
 		}
 		return count >= 2 ? count : 0;
 	}

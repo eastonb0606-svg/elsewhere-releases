@@ -164,6 +164,7 @@ public class MagnateBoss extends HumanBoss implements Leaders.LeaderBoss {
 			setItemSlot(slots[i], st);
 			setDropChance(slots[i], 0.0F);
 		}
+		dev.elsewhere.rivals.mirewick.look.MirewickRulerLook.dress(this);   // 3.0 B10 (s-rulerarmor): purple, crimson and gold layer, no cyan diamond
 		// the court names an heir (same surname, new first name) before this first-tick loadout runs: keep that name
 		if (getCustomName() == null) setCustomName(Component.translatable(m.nameKey()));
 		if (chair && lanternLit && m != Magnate.SORREL && getOffhandItem().isEmpty()) setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(Items.LANTERN));
@@ -884,5 +885,16 @@ public class MagnateBoss extends HumanBoss implements Leaders.LeaderBoss {
 		DuelBlocks.clearOwner(level, getUUID());
 		if (!chair && !chairAtDeath) return;
 		MagnateDrops.chairTable(level, this, participants);
+	}
+
+	/** 3.0 (s-bossdrops): every boss always drops XP (HumanBoss leaves it at 0; each boss sets its own number). Vanilla's always-drop path, so the Chaperon reads it too. */
+	@Override
+	protected int getBaseExperienceReward(ServerLevel level) {
+		return dev.elsewhere.rivals.mirewick.rewards.MirewickRewards.xp(this, chair || chairAtDeath);
+	}
+
+	@Override
+	protected boolean isAlwaysExperienceDropper() {
+		return dev.elsewhere.rivals.mirewick.rewards.MirewickRewards.xp(this, chair || chairAtDeath) > 0;
 	}
 }

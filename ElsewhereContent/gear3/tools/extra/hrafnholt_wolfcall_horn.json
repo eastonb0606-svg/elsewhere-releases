@@ -1,0 +1,119 @@
+{
+  "_doc": "s-wolfcall: Wolf-Call Horn extras (merged by gen_resources.py). files: a goat-horn style item definition (using_item -> the tooting model, so the horn is raised to the mouth while blown) replacing the catalogue's plain one, the held and tooting models. sounds: the horn blast re-uses vanilla goat horn 'Call' a little deeper; the Warg's howl is our own sounds/gear3/wolfcall/warg_howl.ogg (tools/wolfcall_assets.py), its other voices re-pitch vanilla big-wolf events. lang: the Warg's name, subtitles and the switched-off message.",
+  "lang": {
+    "entity.elsewhere.hrafnholt_warg": "Warg",
+    "subtitles.elsewhere.hrafnholt_wolfcall_horn.blow": "Wolf-Call Horn sounds",
+    "subtitles.elsewhere.hrafnholt_warg.howl": "Warg howls",
+    "subtitles.elsewhere.hrafnholt_warg.ambient": "Warg barks",
+    "subtitles.elsewhere.hrafnholt_warg.growl": "Warg growls",
+    "subtitles.elsewhere.hrafnholt_warg.hurt": "Warg hurts",
+    "subtitles.elsewhere.hrafnholt_warg.death": "Warg dies",
+    "subtitles.elsewhere.hrafnholt_warg.pant": "Warg pants",
+    "message.elsewhere.hrafnholt_wolfcall_horn.disabled": "The Wolf-Call Horn is switched off on this server"
+  },
+  "sounds": {
+    "item.hrafnholt_wolfcall_horn.blow": {
+      "subtitle": "subtitles.elsewhere.hrafnholt_wolfcall_horn.blow",
+      "sounds": [
+        {
+          "name": "minecraft:item.goat_horn.sound.5",
+          "type": "event",
+          "pitch": 0.8
+        }
+      ]
+    },
+    "entity.hrafnholt_warg.howl": {
+      "subtitle": "subtitles.elsewhere.hrafnholt_warg.howl",
+      "sounds": [
+        {
+          "name": "elsewhere:gear3/wolfcall/warg_howl",
+          "attenuation_distance": 48
+        },
+        {
+          "name": "elsewhere:gear3/wolfcall/warg_howl",
+          "pitch": 0.9,
+          "attenuation_distance": 48
+        }
+      ]
+    },
+    "entity.hrafnholt_warg.ambient": {
+      "subtitle": "subtitles.elsewhere.hrafnholt_warg.ambient",
+      "sounds": [
+        {
+          "name": "minecraft:entity.wolf_big.ambient",
+          "type": "event",
+          "pitch": 0.85
+        }
+      ]
+    },
+    "entity.hrafnholt_warg.growl": {
+      "subtitle": "subtitles.elsewhere.hrafnholt_warg.growl",
+      "sounds": [
+        {
+          "name": "minecraft:entity.wolf_big.growl",
+          "type": "event",
+          "pitch": 0.85
+        }
+      ]
+    },
+    "entity.hrafnholt_warg.hurt": {
+      "subtitle": "subtitles.elsewhere.hrafnholt_warg.hurt",
+      "sounds": [
+        {
+          "name": "minecraft:entity.wolf_big.hurt",
+          "type": "event",
+          "pitch": 0.85
+        }
+      ]
+    },
+    "entity.hrafnholt_warg.death": {
+      "subtitle": "subtitles.elsewhere.hrafnholt_warg.death",
+      "sounds": [
+        {
+          "name": "minecraft:entity.wolf_big.death",
+          "type": "event",
+          "pitch": 0.85
+        }
+      ]
+    },
+    "entity.hrafnholt_warg.pant": {
+      "subtitle": "subtitles.elsewhere.hrafnholt_warg.pant",
+      "sounds": [
+        {
+          "name": "minecraft:entity.wolf_big.pant",
+          "type": "event",
+          "pitch": 0.85,
+          "volume": 0.7
+        }
+      ]
+    }
+  },
+  "files": {
+    "assets/elsewhere/items/hrafnholt_wolfcall_horn.json": {
+      "model": {
+        "type": "minecraft:condition",
+        "property": "minecraft:using_item",
+        "on_false": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/hrafnholt_wolfcall_horn"
+        },
+        "on_true": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/hrafnholt_wolfcall_horn_tooting"
+        }
+      }
+    },
+    "assets/elsewhere/models/item/hrafnholt_wolfcall_horn.json": {
+      "parent": "minecraft:item/goat_horn",
+      "textures": {
+        "layer0": "elsewhere:item/hrafnholt_wolfcall_horn"
+      }
+    },
+    "assets/elsewhere/models/item/hrafnholt_wolfcall_horn_tooting.json": {
+      "parent": "minecraft:item/tooting_goat_horn",
+      "textures": {
+        "layer0": "elsewhere:item/hrafnholt_wolfcall_horn"
+      }
+    }
+  }
+}

@@ -324,18 +324,20 @@
   "routine": {
    "watch_changes": [6, 18],
    "watch_jitter_min": 0,
+   "watch_sound": "horn",
    "blocks": [
-    {"from": 0, "to": 5, "activity": "sleep", "share": 0.8, "where": "longhall"},
-    {"from": 5, "to": 8, "activity": "work", "share": 0.6, "where": "jetty"},
-    {"from": 8, "to": 11, "activity": "spar", "share": 0.5, "where": "yard"},
-    {"from": 11, "to": 14, "activity": "work", "share": 0.6, "where": "shipyard"},
-    {"from": 14, "to": 17, "activity": "spar", "share": 0.4, "where": "thing_stone"},
-    {"from": 17, "to": 21, "activity": "feast", "share": 0.8, "where": "longhall"},
-    {"from": 21, "to": 24, "activity": "watch", "share": 0.3, "where": "shore"}
+    {"from": 0, "to": 5, "activity": "sleep", "share": 0.8, "where": "longhall", "rest": {"activity": "watch", "where": "hall_door", "pose": "torch"}},
+    {"from": 5, "to": 8, "activity": "work", "share": 0.6, "where": "jetty", "style": "fishing", "townsfolk": [{"activity": "work", "where": "jetty", "share": 0.35, "pose": "carry", "style": "fishing"}, {"activity": "work", "where": "fields", "share": 0.45, "pose": "work", "style": "thralls"}]},
+    {"from": 8, "to": 11, "activity": "spar", "share": 0.5, "where": "yard", "style": "pairs", "sound": "cheer", "groups": [{"unit": "ranged", "activity": "patrol", "where": "road", "style": "hunt"}], "townsfolk": [{"activity": "tourney", "where": "wrestling_ring", "share": 0.35, "pose": "cheer", "style": "crowd"}, {"activity": "work", "where": "fields", "share": 0.3, "pose": "work", "style": "thralls"}]},
+    {"from": 11, "to": 14, "activity": "work", "share": 0.6, "where": "shipyard", "style": "tar", "sound": "anvil", "rest": {"activity": "watch", "where": "post"}, "townsfolk": [{"activity": "work", "where": "shipyard", "share": 0.4, "pose": "work", "style": "tar"}, {"activity": "work", "where": "forge", "share": 0.15, "pose": "work", "style": "smithy"}]},
+    {"from": 14, "to": 17, "activity": "spar", "share": 0.4, "where": "holmgang_ring", "style": "holmgang", "sound": "cheer", "townsfolk": [{"activity": "tourney", "where": "thing_stone", "share": 0.5, "pose": "cheer", "style": "crowd"}, {"activity": "feast", "where": "thing_stone", "share": 0.05, "pose": "cheer", "style": "skald"}]},
+    {"from": 17, "to": 21, "activity": "feast", "share": 0.8, "where": "longhall", "sound": "horn", "townsfolk": [{"activity": "feast", "where": "longhall", "share": 0.8, "pose": "drink"}]},
+    {"from": 21, "to": 24, "activity": "watch", "share": 0.3, "where": "shore", "lights": [{"id": "bonfire", "on": true}], "townsfolk": [{"activity": "feast", "where": "longhall", "share": 0.3, "pose": "drink"}]}
    ],
    "events": [
-    {"id": "thing", "every_days": 6, "at": 14, "hours": 3, "activity": "court", "where": "thing_stone"},
-    {"id": "blot", "every_days": 9, "at": 19, "hours": 4, "activity": "feast", "where": "grove"}
+    {"id": "night_raid", "every_days": 1, "at": 18, "hours": 3, "activity": "muster", "where": "strand", "share": 0.15, "style": "board", "if": "raid_pending", "sound": "horn"},
+    {"id": "thing", "every_days": 6, "at": 14, "hours": 3, "activity": "court", "where": "thing_stone", "share": 0.6, "style": "council", "sound": "horn", "phases": [{"at": 15, "activity": "spar", "where": "holmgang_ring", "style": "holmgang", "sound": "cheer"}], "townsfolk": [{"activity": "court", "where": "thing_stone", "share": 0.7, "pose": "attention", "style": "crowd"}]},
+    {"id": "blot", "every_days": 9, "at": 19, "hours": 4, "activity": "feast", "where": "grove", "share": 0.9, "style": "crowd", "pose": "cheer", "sound": "horn", "fx": "bonfire", "lights": [{"id": "bonfire", "on": true}], "phases": [{"at": 22, "activity": "muster", "where": "strand", "style": "board", "share": 0.2, "sound": "horn"}], "townsfolk": [{"activity": "feast", "where": "grove", "share": 0.9, "pose": "cheer", "style": "crowd"}]}
    ]
   },
   "units": [

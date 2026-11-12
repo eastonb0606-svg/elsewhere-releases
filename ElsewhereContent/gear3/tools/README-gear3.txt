@@ -25,3 +25,7 @@ Shields (kind "shield"): shield3d.py makes them real 3D shields: a 32x32 item/<i
 Run python as  ROOT/_tools/venv/bin/python -I <script>.   Both scripts take --check.
 Calling tags (s-callingtags): tools/calling_tags.py CALLING is the one table for all 82 GEAR.md ids. build_catalogue.py sets each item's
   "calling"/caster_trinket from it (don't write "calling" by hand); gen_resources.py adds not-yet-catalogued ids as required:false.
+tools/extra/*.json fragments may also hold (s-galesling): "files": {"assets/... or data/... path": json} (written and tracked
+  like any generated file; a path the catalogue also makes, e.g. assets/elsewhere/items/<id>.json, is replaced: use it for
+  animated item definitions and extra models) and "sounds": {event path: sounds.json entry}, merged into the generated
+  assets/elsewhere/sounds.json (keys already in that file are kept). Register the SoundEvent in Java; subtitles go in "lang".

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "elsewhere:item/hushward_bell_ringing"
+  }
+}

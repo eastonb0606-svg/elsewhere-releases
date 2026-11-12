@@ -407,7 +407,7 @@ public final class AzmarFalconer extends AzmarBoss {
 			for (int i = 0; i < STORM_FALCONS; i++) Timers.after(level.getServer(), i * 20, () -> stormDive(level, target));
 			Timers.after(level.getServer(), (STORM_FALCONS - 1) * 20 + 30, () -> halfDodgeUntil = level.getGameTime() + 200);
 		});
-		if (t != null) level.sendParticles(STYLE.particle(), getX(), getY() + 2.4, getZ(), 12, 0.4, 0.3, 0.4, 0.02);
+		if (t != null) dev.elsewhere.duelist.foresight.Foresight.hint(() -> level.sendParticles(STYLE.particle(), getX(), getY() + 2.4, getZ(), 12, 0.4, 0.3, 0.4, 0.02));   // B5: wind-up hint, foresight gear only
 	}
 
 	private void stormDive(ServerLevel level, @Nullable LivingEntity target) {
@@ -419,7 +419,7 @@ public final class AzmarFalconer extends AzmarBoss {
 		stormFalcons.add(f);
 		stormSpawned++;
 		Vec3 start = f.position();
-		for (int tk = 0; tk < 24; tk += 4) Timers.after(level.getServer(), tk, () -> { if (f.isAlive()) AzmarFx.falconStreak(level, start, lock.add(0, 0.5, 0)); });   // the streak is drawn 24 ticks ahead
+		for (int tk = 0; tk < 24; tk += 4) Timers.after(level.getServer(), tk, () -> { if (f.isAlive()) dev.elsewhere.duelist.foresight.Foresight.hint(() -> AzmarFx.falconStreak(level, start, lock.add(0, 0.5, 0))); });   // the streak is drawn 24 ticks ahead (B5: a hint, foresight gear only)
 		Timers.after(level.getServer(), 24, () -> {
 			if (!f.isAlive()) return;                                   // a falcon shot down in its wind-up never lands
 			f.snapTo(lock.x, lock.y + 0.8, lock.z, f.getYRot(), 0F);

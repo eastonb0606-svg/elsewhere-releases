@@ -34,9 +34,10 @@ public final class ReturnRift {
 				s.foundation(x, y - 2, z, 5, wall, 6);
 				s.clearAbove(x, y, z, 5, 5);
 				s.disc(x, y - 1, z, 5, floor);
-				// beacon on a 3x3 iron base, sunk into the floor
-				s.fill(x - 1, y - 2, z - 1, x + 1, y - 2, z + 1, Blocks.IRON_BLOCK.defaultBlockState());
-				s.set(x, y - 1, z, Blocks.BEACON.defaultBlockState());
+				// a shroomlight hearth on a 3x3 wall-stone base under the tinted glass, sunk into the floor. No beacon and no iron base (no
+				// valuable blocks in structures, s-throne B9); in the merged jar the core Return Rift draws its own tall beam.
+				s.fill(x - 1, y - 2, z - 1, x + 1, y - 2, z + 1, wall);
+				s.set(x, y - 1, z, Blocks.SHROOMLIGHT.defaultBlockState());
 				s.set(x, y, z, beamGlass);
 				// broken ring of pillars
 				for (int i = 0; i < 8; i++) {

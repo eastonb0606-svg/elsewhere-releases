@@ -165,6 +165,7 @@ public final class ArmiesSelfTest {
 	}
 
 	static void build() {
+		STEPS.add((srv, l) -> { for (var r : dev.elsewhere.kingdom.armies.lod.LodSelfTest.run()) check(r.name(), r.ok(), r.detail()); return 1; }); // s-lod: client render LOD rules + bench (ARMIES.md 3.7)
 		// ---- data -----------------------------------------------------------------------------------------------------------------
 		STEPS.add((srv, l) -> {
 			check("armies overhaul is on (config/elsewhere_armies.json)", ArmiesConfig.enabled, null);
@@ -212,7 +213,9 @@ public final class ArmiesSelfTest {
 		bench("32 v 32 biggest 3.0 battle (tactics, all full AI)", 32, 12, 5.0, 8.0, true);
 		waves();
 		routine();
-		beatable();
+		RoutineSelfTest.build(); // per-kingdom routines: day schedules, muster, work, salute, night, lantern wave, kill switch (s-routines)
+		ArmiesBeatableRig.build(); // every kingdom: full squads, measured damage, duel (s-benches)
+		ArmiesPairings.build(); // 15 v 15 for every kingdom pairing, merged build (s-benches)
 		SwarmSelfTest.build(); // swarm-as-one checks and the swarm off/on 32 v 32 bench (s-swarm1)
 	}
 
@@ -247,7 +250,14 @@ public final class ArmiesSelfTest {
 				s[0], added, s[1], addedP95, s[2], s[3], total, ArmyWaves.wavesSpawned, wb == null ? 0 : wb.a.waves(), wb == null ? 0 : wb.d.waves(), ArmyWaves.maxLiveSeen,
 				wb == null ? 0 : wb.a.reserve, wb == null ? 0 : wb.d.reserve, wb == null ? 0 : wb.a.lost, wb == null ? 0 : wb.d.lost, ArmyWaves.withdrawnWounded));
 			check("150 v 150 waves: added MSPT average <= 5.0 ms and p95 <= 8.0 ms", s[3] >= 1500 && added <= 5.0 && addedP95 <= 8.0, String.format("avg %.2f p95 %.2f", added, addedP95));
+			// a wave needs casualties (a front below the trigger), and how many soldiers die in 80 s varies from run to run: keep the battle
+			// running (not measured) up to 2 more minutes until two waves have arrived, so the check below tests the wave logic, not the dice
+			return ArmyWaves.wavesSpawned >= 2 ? 1 : 2400;
+		});
+		STEPS.add((srv, l) -> {
 			check("150 v 150 waves: live soldiers never exceed the area cap (" + KingdomConfig.maxRealSoldiersPerArea + ")", ArmyWaves.maxLiveSeen <= KingdomConfig.maxRealSoldiersPerArea, ArmyWaves.maxLiveSeen);
+			int total = wb == null ? 0 : wb.a.spawned + wb.d.spawned;
+			info("waves after the extension: " + ArmyWaves.wavesSpawned + " waves, " + total + " fielded, lost " + (wb == null ? 0 : wb.a.lost) + " + " + (wb == null ? 0 : wb.d.lost));
 			int budget = wb == null ? 0 : wb.a.front() + wb.d.front();
 			check("150 v 150 waves: reinforcement waves arrive and more soldiers fight than the live budget holds (" + budget + ")", ArmyWaves.wavesSpawned >= 2 && total > budget,
 				ArmyWaves.wavesSpawned + " waves, " + total + " fielded");
@@ -310,47 +320,7 @@ public final class ArmiesSelfTest {
 		});
 	}
 
-	// ---- squads stay beatable (RIVALS-DECISIONS 19, item 12) ----------------------------------------------------------------------
-	static final java.util.Map<ArmyScale, List<List<KingdomSoldier>>> BEAT = new java.util.LinkedHashMap<>();
-
-	static void beatable() {
-		STEPS.add((srv, l) -> {
-			clean(l);
-			BEAT.clear();
-			int k = 0;
-			for (ArmyScale s : ArmyScale.all().values()) {
-				List<List<KingdomSoldier>> reps = new ArrayList<>();
-				for (int rep = 0; rep < 3; rep++) {
-					List<KingdomSoldier> sq = KingdomApi.spawnSquad(l, at(-60 + k * 10, 60), s.faction(), Squad.Formation.LINE, UnitTypes.SERGEANT,
-						dev.elsewhere.kingdom.ArmyComposer.members(l.getRandom(), s.squadSize() - 1, false, s.faction()));
-					k++;
-					if (!sq.isEmpty()) reps.add(sq);
-				}
-				BEAT.put(s, reps);
-			}
-			return 10; // equipment attribute modifiers (weapon damage, armor) apply on the soldiers' first ticks
-		});
-		STEPS.add((srv, l) -> {
-			for (var e : BEAT.entrySet()) {
-				ArmyScale s = e.getKey();
-				ArmyBeatable.Result worst = null;
-				for (List<KingdomSoldier> sq : e.getValue()) {
-					List<ArmyBeatable.Unit> units = new ArrayList<>();
-					for (KingdomSoldier x : sq) units.add(ArmyBeatable.Unit.of(x));
-					ArmyBeatable.Result r = ArmyBeatable.duel(units, s.meleeTokens(), s.rangedTokens());
-					if (worst == null || !r.playerWins() || (worst.playerWins() && r.playerHealthLeft() < worst.playerHealthLeft())) worst = r;
-				}
-				final ArmyBeatable.Result w = worst;
-				check("a full " + s.unitName() + " of " + s.squadSize() + " (" + s.faction() + ", tokens " + s.meleeTokens() + "/" + s.rangedTokens()
-					+ ") is beatable by one player in Protection I diamond with a Sharpness I sword", w != null && w.playerWins(),
-					w == null ? "no squad spawned" : String.format("worst of %d: %s with %.1f of 44 health left after %.0f s, %d/%d killed", e.getValue().size(),
-						w.playerWins() ? "won" : "lost", w.playerHealthLeft(), w.seconds(), w.killed(), w.squad()));
-			}
-			BEAT.clear();
-			clean(l);
-			return 5;
-		});
-	}
+	// ---- squads stay beatable (RIVALS-DECISIONS 19, item 12): ArmiesBeatableRig, every kingdom, measured damage ---------------------
 
 	static void bench(String name, int perSide, int gap, double maxAvg, double maxP95, boolean big) {
 		STEPS.add((srv, l) -> {

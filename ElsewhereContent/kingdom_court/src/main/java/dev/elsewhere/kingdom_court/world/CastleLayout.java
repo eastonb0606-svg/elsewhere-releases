@@ -135,16 +135,17 @@ public final class CastleLayout {
 			this.clip = clip;
 		}
 
+		// s-throne (B9): every write passes Valuables.safe, so no realm path (fv 1/2, saved starts, any kit or fit switch) places a valuable block
 		void set(int x, int y, int z, BlockState s) {
 			if (!clip.isInside(x, y, z)) return;
-			level.setBlock(new BlockPos(x, y, z), style == null ? s : style.map(s), Block.UPDATE_CLIENTS);
+			level.setBlock(new BlockPos(x, y, z), Valuables.safe(style == null ? s : style.map(s)), Block.UPDATE_CLIENTS);
 			placed++;
 		}
 
 		/** Unmapped write (extra pieces already name their blocks). */
 		void setRaw(int x, int y, int z, BlockState s) {
 			if (!clip.isInside(x, y, z)) return;
-			level.setBlock(new BlockPos(x, y, z), s, Block.UPDATE_CLIENTS);
+			level.setBlock(new BlockPos(x, y, z), Valuables.safe(s), Block.UPDATE_CLIENTS);
 			placed++;
 		}
 
@@ -152,7 +153,7 @@ public final class CastleLayout {
 			if (!clip.isInside(x, y, z)) return;
 			BlockPos p = new BlockPos(x, y, z);
 			if (!level.getBlockState(p).isAir() && level.getBlockState(p).getFluidState().isEmpty()) return;
-			level.setBlock(p, style == null ? s : style.map(s), Block.UPDATE_CLIENTS);
+			level.setBlock(p, Valuables.safe(style == null ? s : style.map(s)), Block.UPDATE_CLIENTS);
 			placed++;
 		}
 
@@ -254,6 +255,8 @@ public final class CastleLayout {
 
 	public static void build(Part part, BlockPos origin, Placer placer) {
 		if (AzmarCastle.build(part, origin, placer)) return; // s-layout-azmar: Azmar's own fv 2 layout (CASTLE, DUNGEON, WALL, KIT_CASTLE)
+		if (MireLayout.build(part, origin, placer)) return; // s-layout-mire: Mirewick's own fv 2 layout (CASTLE, WALL, KIT_CASTLE, ROAD)
+		if (HrafnholtFort.build(part, origin, placer)) return; // s-layout-hraf: Hrafnholt's own fv 2 ring fort (CASTLE, WALL, KIT_CASTLE)
 		switch (part) {
 			case CASTLE -> {
 				castle(new L(origin, placer));
@@ -522,6 +525,8 @@ public final class CastleLayout {
 	 */
 	static void roadFit(L l) {
 		Ground g = l.p.ground;
+		// s-asm-court: a 5-wide apron at the floor in front of the 5-wide gate, so its outer leaves never open into earth (the road is 3 wide)
+		for (int x = -2; x <= 2; x++) for (int z = 31; z <= 32; z++) pathAt(l, x, z, 0);
 		for (int s = -1; s <= 1; s += 2) {
 			int tx = s * TOWN_DX;
 			int tf = g.floor(s < 0 ? Part.TOWN_WEST : Part.TOWN_EAST, g.y(l.o.getX() + tx, l.o.getZ() + TOWN_DZ)) - l.o.getY();
@@ -537,6 +542,7 @@ public final class CastleLayout {
 				int y = Math.max(l.gy(x, z), h[i]);
 				l.b(x, y, z, Blocks.STONE_BRICK_WALL);
 				l.b(x, y + 1, z, Blocks.LANTERN);
+				l.foundation(x, z, x, z, y - 1, Blocks.DIRT); // s-asm-court: underpin the post like the embankment it stands beside
 			}
 		}
 	}
@@ -783,8 +789,8 @@ public final class CastleLayout {
 		// dais and throne
 		l.fill(-4, 0, -25, 4, 0, -23, Blocks.POLISHED_BLACKSTONE_BRICKS);
 		l.b(0, 1, -24, Blocks.DARK_OAK_STAIRS.defaultBlockState().setValue(StairBlock.FACING, Direction.NORTH));
-		// 3.0: no valuable blocks in new realms (fv 2 here; new fv 1 starts are converted by CastleKit). Saved 2.x starts keep their gold.
-		Block throne = l.p.ground != null ? Blocks.DYED_TERRACOTTA.yellow() : Blocks.GOLD_BLOCK;
+		// 3.0 (B9): the throne is yellow terracotta on every path (fv 1, fv 2, saved starts, any switch); never gold
+		Block throne = Blocks.DYED_TERRACOTTA.yellow();
 		l.b(-1, 1, -24, throne);
 		l.b(1, 1, -24, throne);
 		for (int x = -5; x <= 5; x += 2) if (x != -1 && x != 1) l.b(x, 4, -25, Blocks.WALL_BANNER.blue().defaultBlockState().setValue(WallBannerBlock.FACING, Direction.SOUTH));

@@ -3,6 +3,7 @@
 	"package": "dev.elsewhere.duelist.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
+		"ForesightParticleMixin",
 		"LivingEntityInvoker",
 		"MobAccessor"
 	],

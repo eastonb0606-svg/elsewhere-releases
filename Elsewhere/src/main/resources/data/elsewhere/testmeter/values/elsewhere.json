@@ -29,6 +29,16 @@
   "elsewhere:heartwood_log": 32,
   "elsewhere:kelpwood_log": 32,
   "elsewhere:skyblossom_log": 32,
-  "elsewhere:kelpwood_planks": 8
+  "elsewhere:kelpwood_planks": 8,
+  "elsewhere:amberstill_upgrade_smithing_template": 57376,
+  "elsewhere:climber_upgrade_smithing_template": 57345,
+  "elsewhere:gale_armor_trim_smithing_template": 57345,
+  "elsewhere:galvanic_upgrade_smithing_template": 2008192,
+  "elsewhere:hushweave_upgrade_smithing_template": 1204224,
+  "elsewhere:summit_armor_trim_smithing_template": 57345,
+  "elsewhere:sunburst_armor_trim_smithing_template": 57345,
+  "elsewhere:sunwright_upgrade_smithing_template": 57424,
+  "elsewhere:tidal_armor_trim_smithing_template": 57472,
+  "elsewhere:tidebrass_upgrade_smithing_template": 57472
  }
 }

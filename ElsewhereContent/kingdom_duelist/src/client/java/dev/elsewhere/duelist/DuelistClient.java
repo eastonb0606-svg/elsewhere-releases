@@ -18,6 +18,7 @@ public final class DuelistClient {
 		DuelistContent.init();
 		for (EntityType<? extends HumanBoss> t : DuelistContent.BOSS_TYPES) registerRenderer(t);
 		EntityRendererRegistry.register(DuelistContent.PROJECTILE, ThrownItemRenderer::new);
+		dev.elsewhere.duelist.foresight.ForesightClient.init(); // s-foresight B5: the server's foresight flag
 		// 3.0 B4 phase aura: 26.3 draws every boss's AvatarRenderState on the vanilla avatar renderers, so the layer goes there (bosses only, see PhaseAuraLayer)
 		net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.EVENT.register((type, renderer, helper, ctx) -> {
 			if (type == net.minecraft.world.entity.EntityTypes.PLAYER && renderer.getModel() instanceof net.minecraft.client.model.player.PlayerModel)

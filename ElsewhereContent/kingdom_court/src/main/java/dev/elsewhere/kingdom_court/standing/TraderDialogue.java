@@ -27,11 +27,15 @@ public final class TraderDialogue {
 
 	/** Dev only: right-clicks that reached the dialogue hook (the self-test checks the hook fires once per menu and never on a haggle). */
 	public static int attempts;
+	/** Dev only: of those, the ones the kill switch let through (the self-test proves {@code trader_screen} off stops every one). */
+	public static int passedSwitch;
 
 	/** Sends the dialogue to a real player whose client can show it. Returns true when a payload was sent. */
 	public static boolean open(ServerPlayer p, DiplomatNpc n) {
 		attempts++;
-		if (!Overhaul3.TRADER_SCREEN || p instanceof FakePlayer || n.isRemoved()) return false;
+		if (!Overhaul3.TRADER_SCREEN) return false;
+		passedSwitch++;
+		if (p instanceof FakePlayer || n.isRemoved()) return false;
 		try {
 			if (!ServerPlayNetworking.canSend(p, StandingNet.TraderOpen.TYPE)) return false;
 			ServerPlayNetworking.send(p, snapshot(p, n));

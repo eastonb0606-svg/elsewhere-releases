@@ -356,7 +356,7 @@ public class Solaxis extends ElsewhereBoss {
 
 	@Override
 	public void rebuildArena(ServerLevel level, BlockPos origin) {
-		SolaxisArena.INSTANCE.build(level, origin, level.getRandom());
+		dev.elsewhere.nether_end_bosses.fit3.NetherFit.rebuild(level, "solaxis", origin); // 3.0: the generator that built this arena (2.x or fit3)
 	}
 
 	@Override

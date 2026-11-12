@@ -366,7 +366,7 @@ public class Mournmaw extends ElsewhereBoss {
 
 	@Override
 	public void rebuildArena(ServerLevel level, BlockPos origin) {
-		MournmawArena.INSTANCE.build(level, origin, level.getRandom());
+		dev.elsewhere.nether_end_bosses.fit3.NetherFit.rebuild(level, "mournmaw", origin); // 3.0: the generator that built this arena (2.x or fit3)
 	}
 
 	@Override

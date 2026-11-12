@@ -202,6 +202,13 @@ public final class MireLayout {
 			for (int i = 0; i < n; i++) s[i] = Math.max(s[i], s[(i - 1 + n) % n] - 1);
 			for (int i = n - 1; i >= 0; i--) s[i] = Math.max(s[i], s[(i + 1) % n] - 1);
 		}
+		// the gate front (quay strip) stays on the yard floor, so the court's wall-top anchors (+-12, 9, 29) and the gate stairs hold on any
+		// ground; the neighbours then step down to it at most 1 per sample (both directions, cyclic)
+		for (int i = 0; i < n; i++) if (quayZone((int) Math.round(SAMPLES[i][0]), (int) Math.round(SAMPLES[i][1]))) s[i] = 0;
+		for (int rep = 0; rep < 2; rep++) {
+			for (int i = 0; i < n; i++) s[i] = Math.min(s[i], s[(i - 1 + n) % n] + 1);
+			for (int i = n - 1; i >= 0; i--) s[i] = Math.min(s[i], s[(i + 1) % n] + 1);
+		}
 		byte[] wet = new byte[n], ditch = new byte[n];
 		for (int i = 0; i < n; i++) {
 			boolean w = true, d = true;
@@ -292,5 +299,17 @@ public final class MireLayout {
 		CastleKit.Canal c = CastleKit.canal(o, g, style);
 		if (c != null && c.at(x) && (z == 35 || z == 36) && (y == c.water() - o.getY() || y == c.water() - o.getY() - 1)) return true;
 		return MireOutworks.ditchWater(o, g, x, y, z);
+	}
+
+	/** Self-test: the ravelin's base level (local), or Integer.MIN_VALUE when the ground skips it (water, or a spread over 5). */
+	public static int ravelinBase(BlockPos o, CastleLayout.Ground g) {
+		CastleLayout.Placer pl = new CastleLayout.Placer(null, new net.minecraft.world.level.levelgen.structure.BoundingBox(0, 0, 0, 0, 0, 0));
+		pl.ground = g;
+		return MireOutworks.ravelinBase(new CastleLayout.L(o, pl));
+	}
+
+	/** Self-test: the south quay strip (no batter, moat or ditch there). */
+	public static boolean quay(int x, int z) {
+		return quayZone(x, z);
 	}
 }

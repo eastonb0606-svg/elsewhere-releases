@@ -56,6 +56,7 @@ public final class BuiltStructure extends Structure {
 		TYPE = Registry.register(BuiltInRegistries.STRUCTURE_TYPE, Reg.id("greenhaze_hush_built"), () -> CODEC);
 		PIECE = Registry.register(BuiltInRegistries.STRUCTURE_PIECE, Reg.id("greenhaze_hush_built_piece"),
 			(StructurePieceType) (ctx, tag) -> new Piece(tag));
+		dev.elsewhere.greenhaze_hush.world.fit.GhFit.init();
 	}
 
 	@Override
@@ -98,6 +99,14 @@ public final class BuiltStructure extends Structure {
 		}
 		BlockPos origin = new BlockPos(x, floor, z);
 		long seed = context.random().nextLong();
+		if (dev.elsewhere.greenhaze_hush.world.fit.GhFit.LOOKS && dev.elsewhere.greenhaze_hush.world.fit.GhPlans.has(kind)) {
+			// 3.0 looks (STRUCTURES.md 2.5): small pieces on their own ground, planned in the stub so /locate never pays for the samples
+			BlockPos walk = anchor.equals("fixed") || anchor.equals("cave_floor") ? origin : origin.above();
+			return Optional.of(new GenerationStub(origin, b -> {
+				for (var pc : dev.elsewhere.greenhaze_hush.world.fit.GhPlans.plan(kind, walk, seed, dev.elsewhere.greenhaze_hush.world.fit.GhFit.gen(context),
+					dev.elsewhere.greenhaze_hush.world.fit.GhFit.gen(context, true))) b.addPiece(pc);
+			}));
+		}
 		return Optional.of(new GenerationStub(origin, b -> b.addPiece(new Piece(kind, origin, seed, bp))));
 	}
 

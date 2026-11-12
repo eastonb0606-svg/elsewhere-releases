@@ -62,7 +62,7 @@ public final class AldRebuild {
 	public static final int TOWER_HEIGHT = 15;
 
 	/** Self-test readouts of the last plan. */
-	public static int lastExits, lastGatehouses, lastWallCells, lastTowerGround = Integer.MIN_VALUE, lastBestGround = Integer.MIN_VALUE;
+	public static int lastExits, lastGatehouses, lastWallCells, lastChimneys, lastFlags, lastTents, lastTowerGround = Integer.MIN_VALUE, lastBestGround = Integer.MIN_VALUE;
 	public static @Nullable BlockPos lastTower;
 	public static final List<BlockPos> lastGates = new ArrayList<>();
 
@@ -148,6 +148,22 @@ public final class AldRebuild {
 		return new Plans.Fortify(out, coffer, towerTop, bell);
 	}
 
+	/**
+	 * True when the village's writer will accept a new block at {@code p}: inside a piece box, or air within the footprint at most
+	 * {@link BlockWriter#UP} above a piece. Every column is checked whole before it is planned, so a refused bottom block can never
+	 * leave the blocks above it floating.
+	 */
+	static boolean writable(ServerLevel level, VillageRecord r, BlockPos p) {
+		if (!level.isLoaded(p)) return false;
+		if (r.insidePieces(p)) return true;
+		return level.getBlockState(p).isAir() && r.insideFootprint(p, BlockWriter.UP);
+	}
+
+	static boolean writable(ServerLevel level, VillageRecord r, int x, int y0, int y1, int z) {
+		for (int y = y0; y <= y1; y++) if (!writable(level, r, new BlockPos(x, y, z))) return false;
+		return true;
+	}
+
 	static boolean inAnyColumn(VillageRecord r, int x, int z) {
 		for (VillageRecord.Piece p : r.pieces) {
 			BoundingBox b = p.box();
@@ -170,6 +186,20 @@ public final class AldRebuild {
 		return null;
 	}
 
+	/**
+	 * The new owner's signature after a cosmetic swap (Aldermark and the default shapes): a flag pole on a stone footing, the
+	 * banner on the pole (the 2.1 swap put a lone banner one block above the ground, which could not stand). {@code spot} is the
+	 * free air cell on the ground.
+	 */
+	public static List<VillageRecord.Op> flagPostOps(BlockPos spot, net.minecraft.world.item.DyeColor color) {
+		List<VillageRecord.Op> ops = new ArrayList<>();
+		ops.add(new VillageRecord.Op(spot.asLong(), AldLook.bricks(spot.getX(), spot.getY(), spot.getZ())));
+		ops.add(new VillageRecord.Op(spot.above().asLong(), Blocks.SPRUCE_FENCE.defaultBlockState()));
+		ops.add(new VillageRecord.Op(spot.above(2).asLong(), Blocks.SPRUCE_FENCE.defaultBlockState()));
+		ops.add(new VillageRecord.Op(spot.above(3).asLong(), Blocks.BANNER.pick(color).defaultBlockState()));
+		return ops;
+	}
+
 	// ---- watchtower ---------------------------------------------------------------------------------------------------
 
 	record Spot(int x, int z, int floor, int low, int dist) {}
@@ -178,10 +208,11 @@ public final class AldRebuild {
 	static @Nullable BlockPos tower(ServerLevel level, VillageRecord r, BlockPos bell, Set<Long> used, AldOps o, int[] banners) {
 		lastTower = null;
 		lastTowerGround = lastBestGround = Integer.MIN_VALUE;
+		r.pieces.removeIf(p -> p.type() == TOWER_PIECE); // a re-fortified town plans its tower afresh
 		List<Spot> cands = new ArrayList<>();
 		for (int x = bell.getX() - 28; x <= bell.getX() + 28; x += 2) for (int z = bell.getZ() - 28; z <= bell.getZ() + 28; z += 2) {
 			boolean ok = true;
-			for (int dx = -2; dx <= 2 && ok; dx++) for (int dz = -2; dz <= 2 && ok; dz++) ok = inAnyColumn(r, x + dx, z + dz);
+			for (int dx = -1; dx <= 1 && ok; dx++) for (int dz = -1; dz <= 1 && ok; dz++) ok = inAnyColumn(r, x + dx, z + dz);
 			if (!ok) continue;
 			int lo = Integer.MAX_VALUE, hi = Integer.MIN_VALUE;
 			for (int dx = -1; dx <= 1 && ok; dx++) for (int dz = -1; dz <= 1 && ok; dz++) {
@@ -230,7 +261,7 @@ public final class AldRebuild {
 		BlockPos toward = r.castle != null ? r.castle : bell;
 		o.set(cx, top + 1, cz, Blocks.BANNER.blue().defaultBlockState().setValue(BannerBlock.ROTATION, AldLook.rotationToward(new BlockPos(cx, top, cz), toward)));
 		banners[0]++;
-		for (int dx = -2; dx <= 2; dx++) for (int dz = -2; dz <= 2; dz++) used.add(BlockPos.asLong(cx + dx, f + 1, cz + dz));
+		for (int dx = -2; dx <= 2; dx++) for (int dz = -2; dz <= 2; dz++) used.add(BlockPos.asLong(cx + dx, AldLook.ground(level, cx + dx, cz + dz) + 1, cz + dz));
 		// the tower's own box: its spire rises above the village's pieces (same columns, so the village's outer edge is unchanged)
 		r.pieces.add(new VillageRecord.Piece(new BoundingBox(cx - 2, pick.low() + 1, cz - 2, cx + 2, top + 2, cz + 2), TOWER_PIECE));
 		return new BlockPos(cx, f + 7, cz);
@@ -316,7 +347,7 @@ public final class AldRebuild {
 				BlockState gs = level.getBlockState(gp);
 				if (gs.is(Blocks.DIRT_PATH)) {
 					if (AldLook.clear(level, x, g + 1, g + 3, z)) cells.put(col(x, z), new Cell(x, z, g, true));
-				} else if (AldLook.natural(gs) && gs.isFaceSturdy(level, gp, Direction.UP) && AldLook.clear(level, x, g + 1, g + 4, z)) {
+				} else if (AldLook.natural(gs) && gs.isFaceSturdy(level, gp, Direction.UP) && AldLook.clear(level, x, g + 1, g + 4, z) && writable(level, r, x, g + 1, g + 4, z)) {
 					cells.put(col(x, z), new Cell(x, z, g, AldLook.nearDoor(level, x, g, z)));
 				}
 			}
@@ -431,8 +462,8 @@ public final class AldRebuild {
 		for (Cell c : posts) h = Math.max(h, c.g);
 		h += 4;
 		// everything must fit: clear above the path up to the cap, inside the village's footprint
-		for (Cell c : comp) if (!AldLook.clear(level, c.x, c.g + 1, h + 1, c.z) || !r.insideFootprint(new BlockPos(c.x, h + 2, c.z), BlockWriter.UP)) return false;
-		for (Cell c : posts) if (!AldLook.clear(level, c.x, c.g + 1, h + 2, c.z) || !r.insideFootprint(new BlockPos(c.x, h + 2, c.z), BlockWriter.UP)) return false;
+		for (Cell c : comp) if (!AldLook.clear(level, c.x, c.g + 1, h + 1, c.z) || !writable(level, r, c.x, h - 1, h + 1, c.z)) return false;
+		for (Cell c : posts) if (!AldLook.clear(level, c.x, c.g + 1, h + 2, c.z) || !writable(level, r, c.x, c.g + 1, h + 2, c.z)) return false;
 		for (Cell c : posts) {
 			gatePosts.add(col(c.x, c.z));
 			AldLook.clearPlantTop(level, o, c.x, c.g + 1, c.z);
@@ -496,13 +527,14 @@ public final class AldRebuild {
 			boolean alongX = rnd.nextBoolean();
 			if (tent(level, r, used, o, x, z, alongX)) tents++;
 		}
+		lastTents = tents;
 	}
 
 	static boolean spotOk(ServerLevel level, VillageRecord r, Set<Long> used, int x, int z, int height) {
 		if (!AldLook.buildable(level, x, z, height)) return false;
 		int g = AldLook.ground(level, x, z);
 		if (used.contains(BlockPos.asLong(x, g + 1, z)) || AldLook.nearDoor(level, x, g, z)) return false;
-		for (int h = 1; h <= height; h++) if (!r.insideFootprint(new BlockPos(x, g + h, z), BlockWriter.UP)) return false;
+		if (!writable(level, r, x, g + 1, g + height, z)) return false;
 		return r.insidePieces(new BlockPos(x, g + 1, z)) || r.insidePieces(new BlockPos(x, g, z));
 	}
 
@@ -581,6 +613,7 @@ public final class AldRebuild {
 			ridge.sort(Comparator.comparingInt(a -> alongX ? a[0] : a[1]));
 			int[] a = ridge.get(0), e = ridge.get(ridge.size() - 1);
 			if (chimneys < MAX_CHIMNEYS && freeAbove(level, r, a[0], best, a[1], 3)) {
+				o.set(a[0], best, a[1], AldLook.bricks(a[0], best, a[1])); // through the ridge
 				o.set(a[0], best + 1, a[1], AldLook.bricks(a[0], best + 1, a[1]));
 				o.set(a[0], best + 2, a[1], AldLook.bricks(a[0], best + 2, a[1]));
 				o.loose(new BlockPos(a[0], best + 3, a[1]), Blocks.STONE_BRICK_WALL.defaultBlockState());
@@ -594,6 +627,8 @@ public final class AldRebuild {
 				banners[0]++;
 			}
 		}
+		lastChimneys = chimneys;
+		lastFlags = flags;
 	}
 
 	static boolean freeAbove(ServerLevel level, VillageRecord r, int x, int top, int z, int n) {

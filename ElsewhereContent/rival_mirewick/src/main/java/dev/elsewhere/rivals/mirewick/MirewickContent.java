@@ -33,10 +33,12 @@ public final class MirewickContent {
 		MirewickItems.init();
 		MirewickUnits.init();
 		MagnateBoss.init();
+		dev.elsewhere.rivals.mirewick.rewards.MirewickRewards.init(); // 3.0 (s-bossdrops): XP and drops on every death
 		MirewickPassives.init();
 		MirewickLoot.init();
 		MirewickCommands.init();
 		dev.elsewhere.rivals.mirewick.tactics.MirewickTactics.init();
+		dev.elsewhere.rivals.mirewick.look.MirewickRulerLook.init(); // s-rulerarmor: B10 faction armor layer on Magnates saved before 3.0
 		ServerLifecycleEvents.SERVER_STARTED.register(TempBlocks::purgeOnStart);
 		ServerLifecycleEvents.SERVER_STOPPING.register(TempBlocks::purgeAll);
 		ServerTickEvents.END_SERVER_TICK.register(srv -> {

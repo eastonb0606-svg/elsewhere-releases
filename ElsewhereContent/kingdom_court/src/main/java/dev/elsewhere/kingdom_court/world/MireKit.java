@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.state.properties.SlabType;
  * gables with purple courses, gilt copings and clock, its slate roof and the lantern belfry; slate or crimson roofs (alternating) and stepped,
  * neck or bell front gables with gilt finials and hoist beams on the ten canal houses; stepped-gable roofs on the Guildhall, the sluice house,
  * barracks, arsenal and gatehouse; the stables' open gable; the polder windmill on the north bastion; lantern posts on the other bastion tips;
- * z-castle's terrain-safe quay canal ({@link CastleKit#canalFit}) and the lantern causeway over it. Also the 3.0 no-gold pass.
+ * z-castle's terrain-safe quay canal ({@link CastleKit#canalFit}) and the lantern causeway over it. No valuable blocks: every write passes Valuables.safe (Placer).
  */
 final class MireKit {
 	private MireKit() {}
@@ -28,7 +28,6 @@ final class MireKit {
 		GOLD = st(Blocks.DYED_TERRACOTTA.pick(DyeColor.YELLOW)), TILES = st(Blocks.DEEPSLATE_TILES), CRIMSON = st(Blocks.CRIMSON_PLANKS), AIR = st(Blocks.AIR);
 
 	static void build(CastleLayout.L l) {
-		CastleKit.noGold(l);
 		CastleKit.W w = new CastleKit.W(l, false);
 		MireLayout.Plan plan = MireLayout.plan(l.o, l.p.ground);
 		countingHouse(w);

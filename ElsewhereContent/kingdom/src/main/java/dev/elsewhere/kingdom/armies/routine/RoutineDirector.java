@@ -119,10 +119,15 @@ public final class RoutineDirector {
 	}
 
 	public static void reset() {
+		resetForTests();
+		RoutineAnchors.clear();
+	}
+
+	/** Drops every queued job and activity (the self-tests' clean-up; squads and entities are removed by the caller). */
+	public static void resetForTests() {
 		JOBS.clear();
 		LIGHTS.clear();
 		ACTIVE.clear();
-		RoutineAnchors.clear();
 	}
 
 	/** True while the timer queue or the sweep has work (the tick hook runs {@link #tick20} only then). */
@@ -236,7 +241,7 @@ public final class RoutineDirector {
 	}
 
 	/** Queues a wave of light changes: 4 places every second, nearest the first one first (a lamplighter's round). */
-	static void lights(ServerLevel lv, Identifier f, RoutinePlan.Light l) {
+	public static void lights(ServerLevel lv, Identifier f, RoutinePlan.Light l) {
 		List<BlockPos> all = new ArrayList<>(RoutineAnchors.all(lv, f, l.id()));
 		if (all.isEmpty()) return;
 		BlockPos first = all.get(0);
@@ -320,8 +325,11 @@ public final class RoutineDirector {
 				if (s != null) target = s;
 			}
 		}
+		// nothing changes for this squad (another kingdom-wide trigger, e.g. the road patrol coming home): keep it as it is
+		Active cur = ACTIVE.get(q.id());
+		if (cur != null && cur.a.equals(a) && cur.anchor.equals(target) && !p.watch().contains(hour)) return true;
 		// leave the previous activity: stand up, wake, drop the spots and poses
-		if (ACTIVE.containsKey(q.id())) clearActivity(lv, q);
+		if (cur != null) clearActivity(lv, q);
 		boolean anyResting = false;
 		for (KingdomSoldier s : mem) anyResting |= s.isResting();
 		if (lead instanceof KingdomSoldier lk && lk.isResting()) anyResting = true;

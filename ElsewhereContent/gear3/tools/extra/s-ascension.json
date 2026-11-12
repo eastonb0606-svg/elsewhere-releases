@@ -1,0 +1,7 @@
+{
+  "_doc": "s-ascension: the Ascendant name pattern (%s = the piece's own name) and the lore line an Ascendant piece gains (gear3/s3/ascension/Ascension.java).",
+  "lang": {
+    "item.elsewhere.gear3_ascension_shard.ascendant": "Ascendant %s",
+    "item.elsewhere.gear3_ascension_shard.ascended_lore": "Ascendant: +1 armor toughness; a full Ascendant set raises its set bonus to II"
+  }
+}

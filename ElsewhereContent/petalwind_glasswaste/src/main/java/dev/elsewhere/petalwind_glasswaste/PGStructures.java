@@ -19,7 +19,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -359,24 +358,35 @@ public final class PGStructures {
 				rearmStart(l, b.arenaCenter());
 			}
 		});
-		ServerTickEvents.END_SERVER_TICK.register(server -> {
-			if (server.getTickCount() % 2 != 0) return;
-			ServerLevel level = server.getLevel(PetalwindDimension.LEVEL);
-			if (level == null || level.players().isEmpty()) return;
-			for (ServerPlayer p : level.players()) {
-				Site piece = pieceAt(level, p.blockPosition(), EYE);
-				if (piece != null) eyeTick(level, piece.center(), p);
-			}
+		// 3.0 (no per-tick polling): a wind charge counts when it is launched inside an Eye site and its straight flight crosses the eye
+		net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
+			if (!(entity instanceof WindCharge c) || !level.dimension().equals(PetalwindDimension.LEVEL)) return;
+			Site site = pieceAt(level, c.blockPosition(), EYE);
+			if (site == null) return;
+			BlockPos center = site.center();
+			AABB eye = eyeBox(center);
+			net.minecraft.world.phys.Vec3 from = c.position(), v = c.getDeltaMovement();
+			boolean crosses = eye.contains(from) || (v.lengthSqr() > 1.0E-6 && eye.clip(from, from.add(v.normalize().scale(48))).isPresent());
+			if (crosses) eyeCharge(level, center, c.getUUID(), c.getOwner() instanceof ServerPlayer sp ? sp : null);
 		});
 	}
 
+	/** The eye: where a thrown wind charge must pass to count toward waking Tempestra. */
+	static AABB eyeBox(BlockPos center) {
+		return new AABB(center).inflate(8, 0, 8).expandTowards(0, -16, 0).expandTowards(0, 8, 0);
+	}
+
+	/** Counts every wind charge now inside the eye (self-test entry; play goes through the ENTITY_LOAD listener). */
 	static void eyeTick(ServerLevel level, BlockPos center, @Nullable ServerPlayer player) {
+		for (WindCharge c : level.getEntitiesOfClass(WindCharge.class, eyeBox(center))) eyeCharge(level, center, c.getUUID(), player);
+	}
+
+	/** One charge into the eye: three different charges within 10 s wake Tempestra (unless she is up or the arena is re-arming). */
+	static void eyeCharge(ServerLevel level, BlockPos center, UUID charge, @Nullable ServerPlayer player) {
 		long now = level.getGameTime();
 		Map<UUID, Long> seen = CHARGES.computeIfAbsent(center.asLong(), k -> new LinkedHashMap<>());
 		seen.values().removeIf(t -> now - t > CHARGE_WINDOW);
-		for (WindCharge c : level.getEntitiesOfClass(WindCharge.class, new AABB(center).inflate(8, 0, 8).expandTowards(0, -16, 0).expandTowards(0, 8, 0))) {
-			seen.putIfAbsent(c.getUUID(), now);
-		}
+		seen.putIfAbsent(charge, now);
 		if (seen.size() < CHARGES_NEEDED) return;
 		seen.clear();
 		if (!level.getEntitiesOfClass(Tempestra.class, new AABB(center).inflate(80)).isEmpty()) return;

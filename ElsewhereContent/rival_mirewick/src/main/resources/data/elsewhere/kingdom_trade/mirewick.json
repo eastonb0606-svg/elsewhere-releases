@@ -96,6 +96,18 @@
      "count": 20
     }
    ]
+  },
+  {
+   "item": "elsewhere:mirewick_lantern_sickle",
+   "price": 24,
+   "tier": "market",
+   "sell": 9
+  },
+  {
+   "item": "elsewhere:mirewick_mire_snare",
+   "price": 6,
+   "tier": "market",
+   "sell": 2
   }
  ],
  "auction": [

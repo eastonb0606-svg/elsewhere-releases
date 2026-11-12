@@ -22,6 +22,10 @@
 		"fabric-api": "*"
 	},
 	"mixins": [
-		"elsewhere_gear3.mixins.json"
+		"elsewhere_gear3.mixins.json",
+		{
+			"config": "elsewhere_gear3.client.mixins.json",
+			"environment": "client"
+		}
 	]
 }

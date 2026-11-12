@@ -57,7 +57,7 @@ public final class Swarm {
 		done = true;
 		load();
 		active = armiesEnabled && configured && !otherSelfTest;
-		SwarmCommands.init();
+		if (armiesEnabled) SwarmCommands.init();
 		KingdomContent.LOG.info("Armies swarm-as-one is {} (config/elsewhere_armies.json key \"swarm\")", active ? "on" : "off");
 	}
 

@@ -1,0 +1,77 @@
+{
+  "lang": {
+    "setbonus.elsewhere.command": "Command",
+    "setbonus.elsewhere.command.detail1": "Your whip tags last 3 s longer, and your Herdcaller's Standard reaches 8 blocks further.",
+    "setbonus.elsewhere.command.detail2": "Needs the Marshal's Helm, Tabard and Tassets with the Warmarshal's Spurs.",
+    "setbonus.elsewhere.outrider": "Outrider's Charge",
+    "setbonus.elsewhere.outrider.detail1": "Melee hits made while sprinting, and arrows loosed while sprinting, deal +10% damage. Never against players.",
+    "setbonus.elsewhere.outrider.detail2": "Needs the Outrider Chaps and Boots. Scales with your Vanguard and Marksman strength.",
+    "setbonus.elsewhere.steady_aim": "Steady Aim",
+    "setbonus.elsewhere.steady_aim.detail1": "Sneak, or hold still for 1 s while drawing: a full-draw bow shot flies with no spread and deals +30%.",
+    "setbonus.elsewhere.steady_aim.detail2": "Needs all four Ridgewatch pieces. Bows only, never against players.",
+    "setbonus.elsewhere.starsight": "Starsight",
+    "setbonus.elsewhere.starsight.detail1": "Arrow hits refund 1 Glimmer (once per arrow) and mark the target for 4 s: your spells deal +10% to it.",
+    "setbonus.elsewhere.starsight.detail2": "Needs the Starsight Visor and Prism Mantle. Scales with your Marksman and Caster strength.",
+    "setbonus.elsewhere.zenith": "Zenith",
+    "setbonus.elsewhere.zenith.detail1": "Under open daylight sky: spells cost 25% less Glimmer and Glimmer refills 25% faster.",
+    "setbonus.elsewhere.zenith.detail2": "At night: -10% spell power, under a roof too.",
+    "setbonus.elsewhere.zenith.detail3": "Needs all four Sunscribe pieces.",
+    "setbonus.elsewhere.wolf_fury": "Wolf-Fury",
+    "setbonus.elsewhere.wolf_fury.detail1": "Melee hits give a Fury stack (max 5, gone 4 s after your last hit): +4% attack speed each.",
+    "setbonus.elsewhere.wolf_fury.detail2": "At 5 stacks, melee hits heal 10% of the damage dealt (5% against bosses). The Mead-Horn grants 3 stacks.",
+    "setbonus.elsewhere.wolf_fury.detail3": "Needs the Ulfhednar Mask, Pelt and Breeches with the Wolfskin Boots. Never against players."
+  },
+  "jei": {
+    "elsewhere:court_marshals_helm": [
+      "Set bonus Command (with the Warmarshal's Spurs): your whip tags last 3 s longer and your Herdcaller's Standard reaches 8 blocks further."
+    ],
+    "elsewhere:court_marshals_tabard": [
+      "Set bonus Command (with the Warmarshal's Spurs): your whip tags last 3 s longer and your Herdcaller's Standard reaches 8 blocks further."
+    ],
+    "elsewhere:court_marshals_tassets": [
+      "Set bonus Command (with the Warmarshal's Spurs): your whip tags last 3 s longer and your Herdcaller's Standard reaches 8 blocks further."
+    ],
+    "elsewhere:aldermark_outrider_chaps": [
+      "Pair bonus Outrider's Charge (chaps + boots): melee hits and arrows made while sprinting deal +10%; scales with Vanguard and Marksman strength."
+    ],
+    "elsewhere:aldermark_outrider_boots": [
+      "Pair bonus Outrider's Charge (chaps + boots): melee hits and arrows made while sprinting deal +10%; scales with Vanguard and Marksman strength."
+    ],
+    "elsewhere:ridgewatch_hood": [
+      "Set bonus Steady Aim (all 4 Ridgewatch pieces): sneaking, or holding still for 1 s while drawing, a full-draw bow shot flies with no spread and deals +30%."
+    ],
+    "elsewhere:ridgewatch_coat": [
+      "Set bonus Steady Aim (all 4 Ridgewatch pieces): sneaking, or holding still for 1 s while drawing, a full-draw bow shot flies with no spread and deals +30%."
+    ],
+    "elsewhere:ridgewatch_leggings": [
+      "Set bonus Steady Aim (all 4 Ridgewatch pieces): sneaking, or holding still for 1 s while drawing, a full-draw bow shot flies with no spread and deals +30%."
+    ],
+    "elsewhere:ridgewatch_boots": [
+      "Set bonus Steady Aim (all 4 Ridgewatch pieces): sneaking, or holding still for 1 s while drawing, a full-draw bow shot flies with no spread and deals +30%."
+    ],
+    "elsewhere:glasswaste_starsight_visor": [
+      "Pair bonus Starsight (visor + mantle): arrow hits refund 1 Glimmer and mark the target for 4 s, and your spells deal +10% to it; scales with Marksman and Caster strength."
+    ],
+    "elsewhere:glasswaste_prism_mantle": [
+      "Pair bonus Starsight (visor + mantle): arrow hits refund 1 Glimmer and mark the target for 4 s, and your spells deal +10% to it; scales with Marksman and Caster strength."
+    ],
+    "elsewhere:sunscribe_hood": [
+      "Set bonus Zenith (all 4 Sunscribe pieces): under open daylight sky spells cost 25% less and Glimmer refills 25% faster; at night -10% spell power."
+    ],
+    "elsewhere:sunscribe_robe": [
+      "Set bonus Zenith (all 4 Sunscribe pieces): under open daylight sky spells cost 25% less and Glimmer refills 25% faster; at night -10% spell power."
+    ],
+    "elsewhere:sunscribe_leggings": [
+      "Set bonus Zenith (all 4 Sunscribe pieces): under open daylight sky spells cost 25% less and Glimmer refills 25% faster; at night -10% spell power."
+    ],
+    "elsewhere:sunscribe_boots": [
+      "Set bonus Zenith (all 4 Sunscribe pieces): under open daylight sky spells cost 25% less and Glimmer refills 25% faster; at night -10% spell power."
+    ],
+    "elsewhere:hrafnholt_ulfhednar_mask": [
+      "Set bonus Wolf-Fury (with the Ulfhednar Pelt and Wolfskin Boots): melee hits give Fury stacks (max 5, 4 s), +4% attack speed each; at 5 stacks hits heal 10% of the damage (5% vs bosses)."
+    ],
+    "elsewhere:hrafnholt_ulfhednar_breeches": [
+      "Set bonus Wolf-Fury (with the Ulfhednar Pelt and Wolfskin Boots): melee hits give Fury stacks (max 5, 4 s), +4% attack speed each; at 5 stacks hits heal 10% of the damage (5% vs bosses)."
+    ]
+  }
+}

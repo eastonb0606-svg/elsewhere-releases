@@ -2,12 +2,12 @@
 # Remote half of tools/testbatch.sh (runs inside the heavy.sh slot, in the tree copy that holds server-launch.txt):
 #   zsh tb_run.sh <port0> <profile>=<mod,mod,...> [<profile>=<mods> ...]
 # profile world: the default world (noise overworld, structures, survival/easy), as the old modtests groups a/b.
-# profile flat:  superflat plains, no structures, no monster spawning (the kingdom lanes' world), as modtests-kingdom.
+# profile flat*: superflat plains (any profile name starting with flat, e.g. flat2 for a second flat JVM), no structures, no monster spawning (the kingdom lanes' world), as modtests-kingdom.
 # One JVM per profile runs its modules one after another (-Delsewhere.testbatch). If that JVM dies mid-batch, the
 # module it was running is recorded as JVM-DIED and a new boot (same world) goes on with the modules not yet run.
 # Env: JH (JDK home), TB_XMX (heap, default 2560m), TB_TIMEOUT (s per module, default 1200), TB_FLATR (flat reset
 # radius in chunks, default 8), TB_JD ("-Dk=v ..." for every JVM), TB_FLAGS ("mod:k=v;k=v|mod2:k=v": per-module -D),
-# TB_PAR=1 (run the profiles in parallel: one JVM each at the same time).
+# TB_PAR=1 (run the profiles in parallel: one JVM each at the same time; 0 or unset = one after another).
 setopt null_glob
 P=$1; shift
 M=${0:A:h}; cd $M || exit 1
@@ -26,14 +26,14 @@ runprofile() { # <profile> <mods> <port>
     print -r -- "online-mode=false"; print -r -- "server-port=$port"; print -r -- "query.port=$port"; print -r -- "level-name=world_tb_$prof"
     print -r -- "max-tick-time=-1"; print -r -- "pause-when-empty-seconds=0"; print -r -- "enable-status=false"; print -r -- "spawn-protection=0"
     print -r -- "motd=Elsewhere test batch $prof"
-    if [ $prof = flat ]; then
+    if [[ $prof == flat* ]]; then
       print -r -- "level-type=minecraft:flat"; print -r -- "generator-settings=$GEN"; print -r -- "generate-structures=false"
       print -r -- "spawn-monsters=false"; print -r -- "view-distance=6"; print -r -- "simulation-distance=6"
     else
       print -r -- "gamemode=survival"; print -r -- "difficulty=easy"
     fi
   } > $d/server.properties
-  local extra=(); [ $prof = flat ] && extra+=(-Delsewhere.testbatch.flatReset=${TB_FLATR:-8})
+  local extra=(); [[ $prof == flat* ]] && extra+=(-Delsewhere.testbatch.flatReset=${TB_FLATR:-8})
   : > $d/batch.txt
   while [ -n "$todo" ]; do
     boot=$((boot + 1)); t0=$(date +%s)
@@ -62,7 +62,7 @@ runprofile() { # <profile> <mods> <port>
 pids=(); i=0
 for spec in "$@"; do
   prof=${spec%%=*}; mods=${spec#*=}
-  if [ -n "$TB_PAR" ]; then runprofile $prof $mods $((P + i)) & pids+=($!); else runprofile $prof $mods $((P + i)); fi
+  if [ "${TB_PAR:-0}" != 0 ]; then runprofile $prof $mods $((P + i)) & pids+=($!); else runprofile $prof $mods $((P + i)); fi
   i=$((i + 1))
 done
 for p in $pids; do wait $p; done

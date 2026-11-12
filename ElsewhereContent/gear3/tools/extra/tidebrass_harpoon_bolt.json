@@ -1,0 +1,6 @@
+{
+  "_doc": "s-harpoon: the flying Harpoon Bolt's entity name (merged by gen_resources.py). Entity texture: tools/harpoon_bolt_entity.py. The crossbow-only item tag and the minecraft:arrows entity tag line are catalogue tags / a hand tag file.",
+  "lang": {
+    "entity.elsewhere.tidebrass_harpoon_bolt": "Harpoon Bolt"
+  }
+}

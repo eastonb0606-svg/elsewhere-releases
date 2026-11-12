@@ -42,8 +42,8 @@ public final class PhaseAuraLayer extends RenderLayer<AvatarRenderState, PlayerM
 	public PhaseAuraLayer(RenderLayerParent<AvatarRenderState, PlayerModel> parent) {
 		super(parent);
 		// outer armour is inflated by 1.0, so the glyph shell sits just outside it and the swirl a little further out
-		this.glyphs = new PlayerModel(LayerDefinition.create(PlayerModel.createMesh(new CubeDeformation(1.08F), false), 64, 64).bakeRoot(), false);
-		this.swirl = new PlayerModel(LayerDefinition.create(PlayerModel.createMesh(new CubeDeformation(1.35F), false), 64, 64).bakeRoot(), false);
+		this.glyphs = new PlayerModel(LayerDefinition.create(PlayerModel.createMesh(new CubeDeformation(1.15F), false), 64, 64).bakeRoot(), false);
+		this.swirl = new PlayerModel(LayerDefinition.create(PlayerModel.createMesh(new CubeDeformation(1.40F), false), 64, 64).bakeRoot(), false);
 	}
 
 	/** Texture paths, for the self-test and the shot list. */

@@ -104,7 +104,6 @@ public final class FitBuilds {
 	// ------------------------------------------------------------------------------------------------ site choice (new starts only)
 
 	static final int[][] OFFSETS = {{0, 0}, {8, 0}, {-8, 0}, {0, 8}, {0, -8}, {12, 12}, {-12, 12}, {12, -12}, {-12, -12}};
-	static final int[][] NEAR = {{0, 0}, {6, 0}, {-6, 0}, {0, 6}, {0, -6}};
 
 	public static Optional<Structure.GenerationStub> findGenerationPoint(ProceduralStructure st, Structure.GenerationContext ctx) {
 		String name = st.blueprint();
@@ -134,17 +133,18 @@ public final class FitBuilds {
 		String name = st.blueprint();
 		int lo = st.minHeight(), hi = st.maxHeight();
 		GenFit.Limits lim = switch (name) {
-			case "clan_hold" -> GenFit.Limits.surface(9, 7, 6, 15, lo, hi);
-			case "climbers_cairn" -> GenFit.Limits.surface(3, 3, 4, 0, lo, hi);
-			case "engineers_atoll" -> GenFit.Limits.surface(5, 3, 4, 45, lo, hi);
-			case "proving_grounds" -> GenFit.Limits.surface(14, 6, 8, 10, lo, hi);
-			case "summit_throne" -> GenFit.Limits.surface(14, 6, 8, 10, lo, hi);
-			case "drowned_cathedral" -> new GenFit.Limits(16, 4, 8, 15, lo, hi, true);
-			case "tidelock_vault" -> new GenFit.Limits(6, 5, 4, 15, lo, hi, true);
-			default -> GenFit.Limits.surface(5, 3, 4, 10, lo, hi);
+			// the 2.x/3.0 GenFit limits (cut 6, fill 8; the foundation ladder takes the fill), so density and map targets stay as before
+			case "clan_hold" -> GenFit.Limits.surface(7, 6, 8, 15, lo, hi);
+			case "climbers_cairn" -> GenFit.Limits.surface(3, 6, 8, 15, lo, hi);
+			case "engineers_atoll" -> GenFit.Limits.surface(5, 6, 8, 45, lo, hi);
+			case "proving_grounds", "summit_throne" -> GenFit.Limits.surface(12, 6, 8, 15, lo, hi);
+			// the sea-bed spread test over the nave's 12-block core; buttresses and the foundation carry the rest to the bed
+			case "drowned_cathedral" -> new GenFit.Limits(12, 6, 8, 15, lo, hi, true);
+			case "tidelock_vault" -> new GenFit.Limits(5, 6, 8, 15, lo, hi, true);
+			default -> GenFit.Limits.surface(4, 6, 8, 15, lo, hi);
 		};
 		boolean highPoint = name.equals("climbers_cairn") || name.equals("summit_throne");
-		int[][] offs = highPoint ? NEAR : OFFSETS;
+		int[][] offs = OFFSETS;
 		GenFit.Site best = null;
 		int bestScore = Integer.MAX_VALUE;
 		for (int[] o : offs) {
@@ -154,7 +154,7 @@ public final class FitBuilds {
 				// a high point: the highest floor wins (a rock top for the cairn, the true summit cap for the throne)
 				case "climbers_cairn", "summit_throne" -> -4 * s.floor() + s.range();
 				// earth-sheltered: a moderate slope to cut the hall into
-				case "clan_hold" -> 3 * Math.abs(s.range() - 4) + s.wetPct() / 10 + s.score() % 8;
+				case "clan_hold" -> 3 * Math.abs(s.range() - 4) + s.wetPct() / 10 + (Math.abs(o[0]) + Math.abs(o[1])) / 8;
 				// ground rising to the north: seating (proving grounds) or the buried back (vault) goes uphill
 				case "proving_grounds", "tidelock_vault" -> s.score() - 2 * Math.max(-6, Math.min(6, northRise(ctx, s.x(), s.z(), lim.radius())));
 				default -> s.score();
@@ -163,7 +163,7 @@ public final class FitBuilds {
 				best = s;
 				bestScore = score;
 			}
-			if (!highPoint && !name.equals("clan_hold") && s.range() <= 2 && s.wetPct() == 0) break;
+			if (!highPoint && !name.equals("clan_hold") && s.range() <= 2 && (lim.underwater() || s.wetPct() == 0)) break;
 		}
 		if (best == null) return null;
 		return new int[] {best.x(), best.floor() + st.yOffset(), best.z()};
@@ -219,7 +219,7 @@ public final class FitBuilds {
 				int TR = GalvanoxArena.TOWER_RADIUS;
 				for (int x = -TR; x <= TR; x++) for (int z = -TR; z <= TR; z++) {
 					double d = Math.sqrt(x * x + z * z);
-					if (d > TR - 1.2 && d <= TR + 0.3 && !(x == 0 && z >= TR - 1)) out.add(new int[] {x, -1, z});
+					if (d > TR - 1.2 && d <= TR + 0.3 && !(z == 0 && x >= TR - 1)) out.add(new int[] {x, -1, z});
 				}
 			}
 			default -> {}
@@ -507,9 +507,10 @@ public final class FitBuilds {
 			for (int y = deck - 1; y > deck - 128; y--) {
 				int o = Math.min(10, 5 + (deck - y) / 6);
 				int x = l[0] * o, z = l[1] * o;
-				if (y < s.ground(x, z) + 1) break;
+				if (y < s.ground(x, z) - 8) break;
 				BlockPos p = s.at(x, y, z);
-				if (s.inside(p) && y < deck - 1 && BlockSink.bearing(s.level.getBlockState(p))) break;
+				if (!s.inside(p)) continue;
+				if (y < deck - 1 && BlockSink.bearing(s.level.getBlockState(p))) break;
 				s.set(x, y, z, pipe(Direction.Axis.Y));
 				if (o != prev) s.set(l[0] * prev, y, l[1] * prev, VerdigrisBlocks.VERDIGRIS_PIPE_JUNCTION.defaultBlockState());
 				prev = o;
@@ -719,8 +720,8 @@ public final class FitBuilds {
 			if (Math.abs(Math.toDegrees(a) - 90) < 16) continue; // the south doors
 			for (int t = 1; t <= 4; t++) {
 				int top = 13 - 3 * t;
-				for (double da : new double[] {-0.05, 0.05}) {
-					int x = (int) Math.round(Math.cos(a + da) * (R + 0.5 + t)), z = (int) Math.round(Math.sin(a + da) * (R + 0.5 + t));
+				for (double da : new double[] {-0.05, 0, 0.05}) {
+					int x = (int) Math.round(Math.cos(a + da) * (R + 1.5 + t)), z = (int) Math.round(Math.sin(a + da) * (R + 1.5 + t));
 					for (int y = top - 1; y >= -3; y--) s.set(x, y, z, y % 4 == 0 ? st(Blocks.PRISMARINE_BRICKS) : st(Blocks.DARK_PRISMARINE));
 					s.set(x, top, z, stair(Blocks.PRISMARINE_BRICK_STAIRS, outward(-x, -z), false));
 					s.underpin(x, -4, z, st(Blocks.PRISMARINE_BRICKS), st(Blocks.TUFF), st(Blocks.COBBLED_DEEPSLATE), 12);
@@ -736,7 +737,7 @@ public final class FitBuilds {
 		int TR = GalvanoxArena.TOWER_RADIUS, R = GalvanoxArena.RADIUS;
 		BlockState white = st(Blocks.CALCITE), teal = Blocks.CUT_COPPER.weathering().oxidized().defaultBlockState();
 		int sea = s.water(0, 0);
-		int landing = Math.max(sea + 1, s.ground(0, TR + 2) + 1);
+		int landing = Math.max(sea + 1, s.ground(TR + 2, 0) + 1);
 		// 1. the sea stack: rubble from the bed up past the waterline, widest at the water, every column on its own ground
 		for (int x = -TR - 4; x <= TR + 4; x++) for (int z = -TR - 4; z <= TR + 4; z++) {
 			double d = Math.sqrt(x * x + z * z);
@@ -760,10 +761,9 @@ public final class FitBuilds {
 			s.set(0, y, TR - 1, white);
 		}
 		for (int x = -TR; x <= TR; x++) for (int z = -TR; z <= TR; z++) if (x * x + z * z <= (TR - 1.2) * (TR - 1.2)) s.set(x, landing - 1, z, st(VerdigrisBlocks.RIVETED_VERDIGRIS_PLATE));
-		// the sea door on the south side and its plated landing
-		for (int y = landing; y <= landing + 1; y++) for (int z = TR - 1; z <= TR; z++) s.set(0, y, z, Blocks.AIR.defaultBlockState());
-		s.set(0, landing, TR - 2, Blocks.LADDER.defaultBlockState().setValue(LadderBlock.FACING, Direction.NORTH));
-		for (int x = -1; x <= 1; x++) for (int z = TR + 1; z <= TR + 3; z++) {
+		// the sea door on the east side (the ladder's wall stays whole) and its plated landing
+		for (int y = landing; y <= landing + 1; y++) for (int x = TR - 1; x <= TR; x++) s.set(x, y, 0, Blocks.AIR.defaultBlockState());
+		for (int z = -1; z <= 1; z++) for (int x = TR + 1; x <= TR + 3; x++) {
 			s.set(x, landing - 1, z, st(VerdigrisBlocks.RIVETED_VERDIGRIS_PLATE));
 			s.hollow(x, landing, z);
 			s.hollow(x, landing + 1, z);

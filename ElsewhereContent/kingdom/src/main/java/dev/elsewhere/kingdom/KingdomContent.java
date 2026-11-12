@@ -57,6 +57,7 @@ public final class KingdomContent {
 			Factions.clearStanceOverrides();
 		});
 		dev.elsewhere.kingdom.armies.Armies.init(); // 3.0 epic armies (kill switch: config/elsewhere_armies.json)
+		dev.elsewhere.kingdom.armies.impostor.Ranks.init(); // 3.0 rank impostors, ARMIES.md 3.6 (kill switch: rank_impostors in config/elsewhere_armies.json), s-impostors
 		dev.elsewhere.kingdom.idle.IdlePoses.init(); // 3.0 polish P9 idle/work poses (kill switch: idle_poses in config/elsewhere_armies.json)
 		LOG.info("Elsewhere kingdom base loaded: {} soldier types", KingdomEntities.TYPES.size());
 	}

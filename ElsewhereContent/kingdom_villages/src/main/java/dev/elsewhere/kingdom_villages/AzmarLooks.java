@@ -58,8 +58,8 @@ public final class AzmarLooks {
 
 	/** VillageRecord piece type of the compound wall, gate obelisks and wall palms (the writable boxes the plan adds). */
 	public static final int WALL = 21;
-	/** Block budget of one Azmar rebuild: no more than Aldermark's ({@link Plans#MAX_FORTIFY}), far under the rivals' cap. */
-	public static final int MAX_OPS = 2600;
+	/** Block budget of one Azmar rebuild: under the rivals' cap ({@link RivalPlans#MAX_FORTIFY}); the compound is small, so it rarely binds. */
+	public static final int MAX_OPS = 3600;
 	/** Compound radius bounds (Chebyshev, around the bell). */
 	public static final int MIN_R = 12, MAX_R = 22;
 	/** Wall courses before growth: a sandstone plinth and two mud-brick courses, then the cap (the undulation adds or takes one). */
@@ -75,7 +75,9 @@ public final class AzmarLooks {
 		public final long id;
 		public int radius, compound, outskirts, flattened, windCatchers, awnings, gates, pylons, palms, obelisks, ops, footprint;
 		public boolean truncated;
-		public @Nullable BlockPos tower;
+		public @Nullable BlockPos tower, bell;
+		/** The compound's house boxes (restyled; the outskirts are not). */
+		public final List<BoundingBox> houses = new ArrayList<>();
 		/** {x, z, ground y, courses, pylon 1/0} per wall column, in ring order. */
 		public final List<int[]> wall = new ArrayList<>();
 		/** {minX, minZ, maxX, maxZ, eaves y, maxY} per flattened house. */
@@ -250,17 +252,19 @@ public final class AzmarLooks {
 		// 1. the palm wall round the compound, its pylon gates and the obelisk pair at the main gate (the border hint)
 		wall(c);
 		// 2. inside: the archer's watch tower, a market awning by the bell and a palm court
-		BlockPos t = Plans.freeArea(level, r, c.bell, Math.max(4, c.R - 4), 3, 8, c.used, rnd);
+		BlockPos t = freeSpot(c, 5, c.R - 3, 8);
 		if (t != null) tower(c, t);
-		BlockPos m = Plans.freeArea(level, r, c.bell, 9, 3, 4, c.used, rnd);
+		BlockPos m = freeSpot(c, 3, 9, 4);
 		if (m != null) awning(c, m, 0, true);
 		for (int i = 0; i < 2; i++) {
-			BlockPos pt = Plans.freeArea(level, r, c.bell, 10, 3, 8, c.used, rnd);
+			BlockPos pt = freeSpot(c, 4 + 2 * i, c.R - 3, 8);
 			if (pt == null) break;
-			palm(c, pt, 4 + (hash(pt.getX(), 0, pt.getZ()) & 1));
+			int trunk = 4 + (hash(pt.getX(), 0, pt.getZ()) & 1);
+			addPiece(c.r, new BoundingBox(pt.getX() - 3, pt.getY() - 1, pt.getZ() - 3, pt.getX() + 3, pt.getY() + trunk + 2, pt.getZ() + 3)); // room for the fronds
+			palm(c, pt, trunk);
 		}
-		if (c.hint == null) { // no gate faced the realm: a lone obelisk in the court
-			BlockPos ob = Plans.freeArea(level, r, c.bell, Math.max(4, c.R - 3), 3, OBELISK + 2, c.used, rnd);
+		if (c.hint == null) { // no gate could take an obelisk: a lone one in the court
+			BlockPos ob = freeSpot(c, 4, c.R - 3, OBELISK + 2);
 			if (ob != null) {
 				for (VillageRecord.Op o : obeliskOps(ob, OBELISK)) c.add(BlockPos.of(o.pos()), o.state());
 				c.hint = ob.above(OBELISK);
@@ -277,9 +281,9 @@ public final class AzmarLooks {
 			if (top <= pc.box().maxY() + 2) c.soft(new BlockPos(ctr.getX(), top, ctr.getZ()), RivalPlans.banner(p, 0));
 		}
 		// 4. restyle the compound (mud brick, sandstone, lapis-tiled well), repair burned blocks in the outskirts, last so a cap cuts it first
+		for (long top : c.tops) c.add(BlockPos.of(top), AIR); // before the restyle, so a truncated plan never leaves half a plant
 		for (VillageRecord.Piece pc : inner) restyle(c, pc, true);
 		for (VillageRecord.Piece pc : outer) restyle(c, pc, false);
-		for (long top : c.tops) c.add(BlockPos.of(top), AIR);
 		List<VillageRecord.Op> ops = new ArrayList<>(c.ops);
 		ops.removeIf(o -> !r.insideFootprint(BlockPos.of(o.pos()), BlockWriter.UP));
 		if (ops.size() > MAX_OPS) {
@@ -289,6 +293,8 @@ public final class AzmarLooks {
 		c.st.ops = ops.size();
 		c.st.tower = c.towerTop;
 		c.st.footprint = (2 * c.R + 1) * (2 * c.R + 1);
+		c.st.bell = c.bell;
+		for (VillageRecord.Piece pc : inner) if (pc.type() == VillageRecord.HOUSE) c.st.houses.add(pc.box());
 		lastHint = c.hint;
 		lastStats = c.st;
 		return new Plans.Fortify(ops, null, c.towerTop, c.bell);
@@ -383,11 +389,18 @@ public final class AzmarLooks {
 		c.st.gates = runs.size();
 		BlockPos target = c.r.castle != null ? c.r.castle : VillageManager.edgeToward(c.level, c.r);
 		runs.sort((a, b) -> Double.compare(mid(cells, a).distSqr(target), mid(cells, b).distSqr(target)));
-		// the obelisk pair first: it is the hint, and the soldiers picket there by day
-		if (!runs.isEmpty()) gateObelisks(c, cells, runs.get(0), target);
+		// the obelisk pair first: it is the hint, and the soldiers picket there by day (the next gate takes any the main one could not)
+		List<BlockPos> tips = new ArrayList<>();
+		for (int[] run : runs) {
+			if (tips.size() >= 2) break;
+			gateObelisks(c, cells, run, tips);
+		}
+		tips.sort((a, b) -> Double.compare(a.distSqr(target), b.distSqr(target)));
+		if (!tips.isEmpty()) c.hint = tips.get(0);
 		// the wall itself, column by column on its own ground
 		int[] box = null;
 		int side = -1, idx = 0;
+		List<Cell> palms = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
 			Cell cl = cells.get(i);
 			if (cl.kind() != WALLC) {
@@ -404,6 +417,7 @@ public final class AzmarLooks {
 			int x = cl.x(), z = cl.z(), g = cl.g();
 			Direction out = cl.out();
 			boolean py = pylon[i];
+			for (int h = H0 + 3; py && h <= H0 + 4; h++) if (!isSoft(c.at(new BlockPos(x, g + h, z)))) py = false; // no room: a plain column
 			int courses = py ? H0 + 3 : H0 + undulate(x, z);
 			if (py) c.st.pylons++;
 			for (int h = 1; h <= courses; h++) {
@@ -412,7 +426,7 @@ public final class AzmarLooks {
 			}
 			c.soft(new BlockPos(x, g + courses + 1, z), py ? s(Blocks.CUT_SANDSTONE) : wallCap());
 			c.st.wall.add(new int[] {x, z, g, courses, py ? 1 : 0});
-			int lo = g, hi = g + courses + 2;
+			int lo = g, hi = g + courses + 5; // room for the three growth courses and a lamp
 			// batter: a sloped mud-brick skirt at the outer foot (never onto a path, a field or a house)
 			int ox = x + out.getStepX(), oz = z + out.getStepZ();
 			boolean batter = false;
@@ -438,10 +452,11 @@ public final class AzmarLooks {
 				box[4] = Math.max(box[4], hi);
 				box[5] = Math.max(box[5], Math.max(z, oz));
 			}
-			// a palm every seventh column, just inside the wall
-			if (!py && idx % 7 == 0) wallPalm(c, cl);
+			// a palm every seventh column, just inside the wall (planted once the whole wall stands, so no frond takes a course)
+			if (!py && idx % 7 == 0) palms.add(cl);
 		}
 		if (box != null) addPiece(c.r, new BoundingBox(box[0], box[1], box[2], box[3], box[4], box[5]));
+		for (Cell cl : palms) wallPalm(c, cl);
 	}
 
 	static BlockPos mid(List<Cell> cells, int[] run) {
@@ -450,13 +465,12 @@ public final class AzmarLooks {
 	}
 
 	/** Two obelisks flanking the main gate outside the wall; the one nearer the realm carries the border hint. */
-	static void gateObelisks(Ctx c, List<Cell> cells, int[] run, BlockPos target) {
+	static void gateObelisks(Ctx c, List<Cell> cells, int[] run, List<BlockPos> tips) {
 		Cell first = cells.get(run[0]);
 		Direction out = first.out(), along = out.getClockWise();
 		BlockPos m = mid(cells, run);
 		int half = (run[1] - run[0] + 2) / 2;
-		List<BlockPos> tips = new ArrayList<>();
-		for (int s = -1; s <= 1; s += 2) {
+		for (int s = -1; s <= 1 && tips.size() < 2; s += 2) {
 			for (int o : new int[] {3, 4, 2}) {
 				int cx = m.getX() + along.getStepX() * s * (half + 3) + out.getStepX() * o;
 				int cz = m.getZ() + along.getStepZ() * s * (half + 3) + out.getStepZ() * o;
@@ -467,8 +481,38 @@ public final class AzmarLooks {
 				}
 			}
 		}
-		tips.sort((a, b) -> Double.compare(a.distSqr(target), b.distSqr(target)));
-		if (!tips.isEmpty()) c.hint = tips.get(0);
+	}
+
+	/**
+	 * A 3x3 of level natural ground in the compound (not a house, street, path or field), open to the sky for {@code height}, searched
+	 * ring by ring from the bell between {@code minD} and {@code maxD}; its box joins the wall pieces. Returns the air cell above its centre.
+	 */
+	static @Nullable BlockPos freeSpot(Ctx c, int minD, int maxD, int height) {
+		for (int d = minD; d <= maxD; d++) for (int dx = -d; dx <= d; dx++) for (int dz = -d; dz <= d; dz++) {
+			if (Math.max(Math.abs(dx), Math.abs(dz)) != d) continue;
+			int x = c.bell.getX() + dx, z = c.bell.getZ() + dz;
+			if (!c.level.isLoaded(new BlockPos(x, c.bell.getY(), z))) continue;
+			int gy = ground(c.level, x, z).getY();
+			boolean ok = true;
+			for (int a = -1; a <= 1 && ok; a++) for (int b = -1; b <= 1 && ok; b++) {
+				int qx = x + a, qz = z + b;
+				if (!c.level.isLoaded(new BlockPos(qx, gy, qz)) || inBuilding(c.r, qx, qz) || inType(c.r, qx, qz, VillageRecord.STREET)) {
+					ok = false;
+					break;
+				}
+				BlockPos g = ground(c.level, qx, qz);
+				BlockState gs = c.at(g);
+				if (g.getY() != gy || !natural(gs) || gs.is(Blocks.DIRT_PATH) || gs.is(Blocks.FARMLAND)) {
+					ok = false;
+					break;
+				}
+				for (int h = 1; h <= height && ok; h++) if (c.used.contains(g.above(h).asLong()) || !c.at(g.above(h)).isAir()) ok = false;
+			}
+			if (!ok) continue;
+			addPiece(c.r, new BoundingBox(x - 1, gy, z - 1, x + 1, gy + height, z + 1));
+			return new BlockPos(x, gy + 1, z);
+		}
+		return null;
 	}
 
 	/**
@@ -497,7 +541,7 @@ public final class AzmarLooks {
 				if (c.used.contains(q.asLong()) || !isSoft(c.at(q))) return null;
 			}
 		}
-		addPiece(c.r, new BoundingBox(cx - 1, gmin - 1, cz - 1, cx + 1, y0 + 1, cz + 1));
+		addPiece(c.r, new BoundingBox(cx - 1, gmin - 1, cz - 1, cx + 1, y0 + height + 1, cz + 1));
 		for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++)
 			for (int y = gy[(dx + 1) * 3 + dz + 1] + 1; y < y0; y++) c.soft(new BlockPos(cx + dx, y, cz + dz), s(Blocks.SANDSTONE));
 		BlockPos base = new BlockPos(cx, y0, cz);
@@ -517,7 +561,7 @@ public final class AzmarLooks {
 			BlockPos q = ig.above(h);
 			if (c.used.contains(q.asLong()) || !isSoft(c.at(q))) return;
 		}
-		addPiece(c.r, new BoundingBox(ix - 3, ig.getY() - 1, iz - 3, ix + 3, ig.getY() + 1, iz + 3));
+		addPiece(c.r, new BoundingBox(ix - 3, ig.getY() - 1, iz - 3, ix + 3, ig.getY() + trunk + 3, iz + 3));
 		palm(c, ig.above(), trunk);
 	}
 
@@ -803,7 +847,6 @@ public final class AzmarLooks {
 		if (orig.is(Blocks.COBBLESTONE_SLAB) || orig.is(Blocks.MOSSY_COBBLESTONE_SLAB)) return Blocks.SANDSTONE_SLAB.withPropertiesOf(orig);
 		if (orig.is(Blocks.COBBLESTONE_WALL) || orig.is(Blocks.MOSSY_COBBLESTONE_WALL)) return Blocks.SANDSTONE_WALL.withPropertiesOf(orig);
 		if (orig.is(Blocks.GLASS_PANE) || orig.is(Blocks.GLASS)) return s(Blocks.SANDSTONE_WALL); // no glass in Azmar: a stone grille
-		if (orig.is(BlockTags.CROPS)) return orig.getBlock().defaultBlockState();
 		return null;
 	}
 

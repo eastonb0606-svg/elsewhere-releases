@@ -1,6 +1,35 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "elsewhere:item/sculk_resonator"
+    "type": "minecraft:condition",
+    "property": "elsewhere:channeling",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/sculk_resonator"
+    },
+    "on_true": {
+      "type": "minecraft:range_dispatch",
+      "property": "elsewhere:channel_time",
+      "scale": 0.04,
+      "entries": [
+        {
+          "threshold": 0.4,
+          "model": {
+            "type": "minecraft:model",
+            "model": "elsewhere:item/sculk_resonator_charging_1"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "elsewhere:item/sculk_resonator_charged"
+          }
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "elsewhere:item/sculk_resonator_charging_0"
+      }
+    }
   }
 }

@@ -18,6 +18,7 @@ public final class Armies {
 		done = true;
 		ArmiesConfig.load();
 		ArmyScale.init();
+		dev.elsewhere.kingdom.armies.townsfolk.TownsfolkContent.init(); // s-townsfolk: entity always registered; key "townsfolk" (and "enabled") switch it
 		if (!ArmiesConfig.enabled) {
 			ArmyCaps.restoreIfOurs();
 			KingdomContent.LOG.info("Armies 3.0 overhaul is off (config/elsewhere_armies.json)");

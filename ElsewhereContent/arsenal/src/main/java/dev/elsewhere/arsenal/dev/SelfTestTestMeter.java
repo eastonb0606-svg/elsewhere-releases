@@ -2,6 +2,7 @@ package dev.elsewhere.arsenal.dev;
 
 import com.mojang.authlib.GameProfile;
 import dev.elsewhere.arsenal.compat.TestMeterCompat;
+import dev.elsewhere.arsenal.compat.TestMeterKills;
 import dev.elsewhere.arsenal.spell.MagicBolt;
 import dev.elsewhere.arsenal.spell.Spells;
 import java.util.UUID;
@@ -56,6 +57,15 @@ final class SelfTestTestMeter {
 		SelfTest.check("testmeter: Test Meter leaves an owned non-projectile hit (minion style) unscaled", TestMeterCompat.outgoingFactor(Spells.source(l, pig, p)) == 1F,
 			TestMeterCompat.outgoingFactor(Spells.source(l, pig, p)));
 		SelfTest.check("testmeter: pre-compensation divides by Test Meter's own factor for this source", Math.abs(TestMeterCompat.preCompensate(Spells.source(l, bolt, p), d) * boltFactor - d) < 1e-3);
+
+		// boss kills: Test Meter knows only the dragon, the Wither and the Warden as 12-point bosses; Elsewhere bosses get the rest added
+		var wither = EntityTypes.WITHER.create(l, EntitySpawnReason.COMMAND);
+		SelfTest.check("testmeter: boss rule: a Wither (#c:bosses) is a boss, a pig is not", wither != null && TestMeterKills.isBoss(wither) && !TestMeterKills.isBoss(pig));
+		if (wither != null) wither.discard();
+		double before = TestMeterKills.pending(p), missing = TestMeterKills.missing(pig), added = TestMeterKills.credit(p, pig), after = TestMeterKills.pending(p);
+		SelfTest.check("testmeter: a boss kill tops Test Meter's kill points up to 12 (" + (tm ? "Test Meter alone scores this kill " + (12 - missing) + ", +" + added : "no-op without Test Meter") + ")",
+			tm ? missing >= 9.0 - 1e-9 && missing <= 11.8 + 1e-9 && Math.abs(added - missing) < 1e-9 && Math.abs(after - before - missing) < 1e-6 : missing == 0 && added == 0 && before == -1,
+			before + " -> " + after);
 		pig.discard();
 	}
 

@@ -1,30 +1,61 @@
 {
-  "_doc": "Data-driven boss bars, keyed by boss entity id. color = bar fill; icon = 16x16 texture; sub = lowercase substrings of OTHER boss-bar titles that are drawn as sub-bars under this boss (tentacles, plates, rider/mount). Bosses not listed here keep the vanilla bar. Per-player switch: /elsewhere_hud bossbars <auto|always|hidden>.",
+  "_doc": "Data-driven boss bars, keyed by boss entity id. color = bar fill; icon = 16x16 texture; sub = lowercase substrings of OTHER boss-bar titles that are drawn under this boss (tentacles, plates, rider/mount; the overworld bosses' ⚠ cast bar becomes the attack line with its wind-up fill); phases = HP fractions where the boss's phases start, copied from its phaseThresholds() (notches, phase flash, phase counter); states = title token -> state chip (invulnerable, enraged, vulnerable, warded; built-in words cover the rest); transition = invulnerable phase-transition ticks (default 40, every boss family); counter = false hides the phase counter when phases are not all HP thresholds. Bosses not listed here keep the vanilla bar. Per-player switch: /elsewhere_hud bossbars <auto|always|hidden>.",
   "bosses": {
     "elsewhere:gulpmother": {
       "icon": "elsewhere:textures/gui/boss_icons/gulpmother.png",
-      "color": "#6FA84A"
+      "color": "#6FA84A",
+      "phases": [
+        0.6,
+        0.3
+      ],
+      "sub": [
+        "⚠"
+      ]
     },
     "elsewhere:strawgrim": {
       "icon": "elsewhere:textures/gui/boss_icons/strawgrim.png",
-      "color": "#D9822B"
+      "color": "#D9822B",
+      "phases": [
+        0.65,
+        0.3
+      ],
+      "sub": [
+        "⚠"
+      ]
     },
     "elsewhere:neferkhet": {
       "icon": "elsewhere:textures/gui/boss_icons/neferkhet.png",
-      "color": "#D8B54A"
+      "color": "#D8B54A",
+      "phases": [
+        0.6,
+        0.3
+      ],
+      "sub": [
+        "⚠"
+      ]
     },
     "elsewhere:rimeback": {
       "icon": "elsewhere:textures/gui/boss_icons/rimeback.png",
       "color": "#8FD3F0",
       "sub": [
-        "plate"
+        "plate",
+        "⚠"
+      ],
+      "phases": [
+        0.6,
+        0.3
       ]
     },
     "elsewhere:vorlagh": {
       "icon": "elsewhere:textures/gui/boss_icons/vorlagh.png",
       "color": "#2E7FA8",
       "sub": [
-        "tentacle"
+        "tentacle",
+        "⚠"
+      ],
+      "phases": [
+        0.6,
+        0.3
       ]
     },
     "elsewhere:grunthar": {
@@ -32,65 +63,121 @@
       "color": "#E0B03A",
       "sub": [
         "ashtusk"
-      ]
+      ],
+      "phases": [
+        0.3
+      ],
+      "counter": false
     },
     "elsewhere:solaxis": {
       "icon": "elsewhere:textures/gui/boss_icons/solaxis.png",
       "color": "#FF7A1A",
       "sub": [
         "supernova"
+      ],
+      "phases": [
+        0.66,
+        0.33
       ]
     },
     "elsewhere:mournmaw": {
       "icon": "elsewhere:textures/gui/boss_icons/mournmaw.png",
-      "color": "#7FC8E8"
+      "color": "#7FC8E8",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:ossyra": {
       "icon": "elsewhere:textures/gui/boss_icons/ossyra.png",
       "color": "#B070E0",
       "sub": [
         "shulkling"
+      ],
+      "phases": [
+        0.65,
+        0.3
       ]
     },
     "elsewhere:aphelion": {
       "icon": "elsewhere:textures/gui/boss_icons/aphelion.png",
-      "color": "#7A4FD0"
+      "color": "#7A4FD0",
+      "phases": [
+        0.7,
+        0.35
+      ]
     },
     "elsewhere:tempestra": {
       "icon": "elsewhere:textures/gui/boss_icons/tempestra.png",
-      "color": "#9FD8FF"
+      "color": "#9FD8FF",
+      "phases": [
+        0.65,
+        0.3
+      ]
     },
     "elsewhere:ankhara": {
       "icon": "elsewhere:textures/gui/boss_icons/ankhara.png",
-      "color": "#E8C060"
+      "color": "#E8C060",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:heliodor": {
       "icon": "elsewhere:textures/gui/boss_icons/heliodor.png",
-      "color": "#FFE27A"
+      "color": "#FFE27A",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:kazehana": {
       "icon": "elsewhere:textures/gui/boss_icons/kazehana.png",
-      "color": "#F4A6C8"
+      "color": "#F4A6C8",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:auris": {
       "icon": "elsewhere:textures/gui/boss_icons/auris.png",
-      "color": "#9CD08F"
+      "color": "#9CD08F",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:grumblegut": {
       "icon": "elsewhere:textures/gui/boss_icons/grumblegut.png",
-      "color": "#8A6A3A"
+      "color": "#8A6A3A",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:lithara": {
       "icon": "elsewhere:textures/gui/boss_icons/lithara.png",
-      "color": "#6FC0A0"
+      "color": "#6FC0A0",
+      "phases": [
+        0.65,
+        0.3
+      ]
     },
     "elsewhere:percolax": {
       "icon": "elsewhere:textures/gui/boss_icons/percolax.png",
-      "color": "#C07AA0"
+      "color": "#C07AA0",
+      "phases": [
+        0.65,
+        0.3
+      ]
     },
     "elsewhere:galvanox": {
       "icon": "elsewhere:textures/gui/boss_icons/galvanox.png",
-      "color": "#5FB0D8"
+      "color": "#5FB0D8",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:hrolf": {
       "icon": "elsewhere:textures/gui/boss_icons/hrolf.png",
@@ -98,23 +185,43 @@
       "sub": [
         "rider",
         "mount"
+      ],
+      "phases": [
+        0.5,
+        0.2
       ]
     },
     "elsewhere:thurgrim": {
       "icon": "elsewhere:textures/gui/boss_icons/thurgrim.png",
-      "color": "#A0A0B0"
+      "color": "#A0A0B0",
+      "phases": [
+        0.65,
+        0.35
+      ]
     },
     "elsewhere:verdigrim": {
       "icon": "elsewhere:textures/gui/boss_icons/verdigrim.png",
-      "color": "#4FA880"
+      "color": "#4FA880",
+      "phases": [
+        0.65,
+        0.3
+      ]
     },
     "elsewhere:selenne": {
       "icon": "elsewhere:textures/gui/boss_icons/selenne.png",
-      "color": "#C8D0F0"
+      "color": "#C8D0F0",
+      "phases": [
+        0.6,
+        0.3
+      ]
     },
     "elsewhere:mother_creak": {
       "icon": "elsewhere:textures/gui/boss_icons/mother_creak.png",
-      "color": "#8A5A3A"
+      "color": "#8A5A3A",
+      "phases": [],
+      "states": {
+        "❤": "warded"
+      }
     }
   }
 }

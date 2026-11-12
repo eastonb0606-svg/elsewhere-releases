@@ -29,6 +29,7 @@ import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.npc.villager.AbstractVillager;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge;
@@ -75,8 +76,10 @@ public final class GaleSlingTests {
 				&& near(GaleSling.power(20), 1.0) && near(GaleSling.power(5), 0.41667) && GaleSling.power(1) < GaleSling.MIN_POWER && GaleSling.power(2) >= GaleSling.MIN_POWER,
 				GaleSling.power(5));
 			check("Gale Sling: 4 damage at full charge, scaled by charge", near(GaleSling.stoneDamage(1.0F), 4.0) && near(GaleSling.stoneDamage(0.5F), 2.0));
-			check("Gale Sling: repairable with its repair tag (Zephyr Feather)", st.isValidRepairItem(new ItemStack(Items.STICK)) == false
-				&& st.getMaxDamage() > 0);
+			boolean feather = BuiltInRegistries.ITEM.containsKey(GaleSling.ZEPHYR_FEATHER);
+			check("Gale Sling: 384 durability, repaired with Zephyr Feathers (repairs_gale_sling tag), not with sticks", st.getMaxDamage() == 384
+				&& !st.isValidRepairItem(new ItemStack(Items.STICK))
+				&& (!feather || st.isValidRepairItem(new ItemStack(BuiltInRegistries.ITEM.getValue(GaleSling.ZEPHYR_FEATHER)))), st.getMaxDamage());
 			info("Gale Sling: arsenal 3.0 Marksman multiplier " + (GaleSling.marksmanLinked() ? "linked (x" + GaleSling.marksmanMult(p) + " for this player)"
 				: "not in this environment (2.0 devlib): stones use x1.0"));
 
@@ -163,6 +166,7 @@ public final class GaleSlingTests {
 				Mob husk = EntityTypes.HUSK.create(l, EntitySpawnReason.COMMAND);
 				husk.snapTo(base.getX() - 4.5, base.getY(), base.getZ() + 0.5, 0, 0);
 				husk.setNoAi(true);
+				husk.getAttribute(Attributes.ARMOR).setBaseValue(0.0); // a husk's natural 2 armor would make the hit 3.94
 				l.addFreshEntity(husk);
 				made.add(husk);
 				float hp = husk.getHealth();

@@ -205,7 +205,9 @@ final class Gear3MechanicTests {
 		for (int i = 0; i < 2 && hit == 0; i++) hit = SpellItems.EmberfallRod.burst(l, p, ember.position(), false);
 		check("Emberfall Rod: burst hits the mob and sets it on fire", hit >= 1 && ember.isOnFire(), hit);
 		LivingEntity frost = husk(l, new Vec3(base.getX() + 0.5, base.getY(), base.getZ() - 8.5));
-		SpellItems.FrostwakeScepter.chill(l, p, frost, false);
+		float frostTick = SpellItems.FrostwakeScepter.chill(l, p, frost, false);
+		float frostWant = dev.elsewhere.arsenal.spell.Spells.damage(p, frost, SpellItems.FROST_DPS, false, false);
+		check("Frostwake: every freeze tick is the full spell damage (spell power, Calling, Test Meter half bonus), not a raw 3 (s-compat-testmeter)", Math.abs(frostTick - frostWant) < 1e-3F, frostTick + " vs " + frostWant);
 		check("Frostwake: Slowness II and frozen", frost.hasEffect(MobEffects.SLOWNESS) && frost.getEffect(MobEffects.SLOWNESS).getAmplifier() == 1 && frost.getTicksFrozen() > 0);
 		check("Frostwake: two more freeze ticks queued", Gear3Scheduler.pending() == 2, Gear3Scheduler.pending());
 		Gear3Scheduler.flush(s);
@@ -214,5 +216,7 @@ final class Gear3MechanicTests {
 		for (LivingEntity e : new LivingEntity[] {target, dummy, ember, frost, star}) e.discard();
 		p.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
 		SelfTest.info("mechanic blocks done");
+		WhipTests.run(s); // s-whips: "<whip id>: ..." and "whips: ..." checks
+		dev.elsewhere.gear3.s3.hurlbat.HurlbatSelfTest.run(s); // s-hurlbat: "hurlbat: ..." checks
 	}
 }

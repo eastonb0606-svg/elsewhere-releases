@@ -129,9 +129,12 @@ public final class RoutinePlan {
 	/** True when something changes for squads of this kingdom at {@code hour}: a watch change, a block or event start, end or phase. */
 	public static boolean trigger(Plan p, long day, int hour) {
 		if (p.watch.contains(hour)) return true;
-		for (Step b : p.blocks) if (b.from == hour || b.to == hour) return true;
+		for (Step b : p.blocks) {
+			if (b.from == hour || b.to == hour) return true;
+			for (Phase ph : b.phases) if (ph.at == hour) return true;
+		}
 		for (Step e : p.events) {
-			if (!e.on(day)) continue;
+			if (!e.on(day) || e.a.share() <= 0 && e.groups.isEmpty() && e.phases.isEmpty()) continue; // lights-only events move nobody
 			if (e.from == hour || e.to == hour) return true;
 			for (Phase ph : e.phases) if (ph.at == hour) return true;
 		}
@@ -169,8 +172,11 @@ public final class RoutinePlan {
 		Step b = block(p, hour);
 		if (b != null) {
 			Assignment a = assignment(b, kind, hour);
-			if (roll(sid, day, hour) < a.share()) return new Choice(b, a);
-			if (b.rest != null) return new Choice(b, b.rest);
+			// one roll per block, re-rolled at each watch change inside it (the relief), so other triggers never reshuffle a block
+			int rh = b.from;
+			for (int w : p.watch) if (w > b.from && w <= hour) rh = Math.max(rh, w);
+			if (roll(sid, day, rh) < a.share()) return new Choice(b, a.activity().equals("watch") ? watch(hour) : a);
+			if (b.rest != null) return new Choice(b, b.rest.activity().equals("watch") && b.rest.pose() == Pose.NONE ? watch(hour) : b.rest);
 		}
 		return new Choice(null, watch(hour));
 	}
@@ -189,7 +195,7 @@ public final class RoutinePlan {
 		return new RoutineEvents.Hour(p.faction, day, hour, ev.isEmpty() ? null : ev.get(0).id, main, List.copyOf(tf), p.watch.contains(hour));
 	}
 
-	public static @Nullable RoutineEvents.Hour hour(Identifier faction, long day, int hour) {
+	public static RoutineEvents.@Nullable Hour hour(Identifier faction, long day, int hour) {
 		Plan p = of(faction);
 		return p == null ? null : hour(p, null, day, hour);
 	}

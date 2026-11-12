@@ -329,7 +329,12 @@ public final class SelfTest {
 			check("sfx3: Ulfhednar rage no longer uses the ender dragon growl; sfx3_rival_hrafnholt=false restores 2.x", on && off, null);
 			return 0;
 		});
+		SelfTestPoses.add(); // 3.0 B4 (s-p4-rivalanims)
+		SelfTestForesight.add(); // 3.0 B5 (s-foresight): wind-up hints and the bar move label only with foresight gear
+		SelfTestRulerLook.add(); // 3.0 B10 (s-rulerarmor): faction armor layer, no cyan diamond
+		SelfTestHeap.add(); // 3.0 heap pass (s-heapleak): Rune-Axe combo state bounded
 		SelfTestBosses.build();
+		SelfTestRewards.add(); // 3.0 (s-bossdrops): XP and drops on every death
 	}
 
 	static KingdomSoldier BERSERKER, HANDLER;

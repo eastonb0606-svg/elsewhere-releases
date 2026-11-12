@@ -62,6 +62,7 @@ public final class WorldgenCheck {
 				for (int cz = (site.getZ() - 48) >> 4; cz <= (site.getZ() + 56) >> 4; cz++) l.setChunkForced(cx, cz, true);
 		}
 		if (tick == 900) report(srv, l);
+		if (tick == 1250) SelfTestLocate.worldgen(srv, l); // s-locate: /locate of every realm structure, production path, start in the located chunk
 		if (tick == 1300) finish2(srv, l);
 	}
 

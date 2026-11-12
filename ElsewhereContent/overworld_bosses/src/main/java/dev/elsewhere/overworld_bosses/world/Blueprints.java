@@ -231,14 +231,15 @@ public final class Blueprints {
 			}
 			s.set(o.getX() + idol[0], f + idol[1], o.getZ() + idol[2], OwbBlocks.NEFERKHET_SUN_IDOL.defaultBlockState());
 		}
-		// Sarcophagi along the east and west walls: base + gold/lapis lid (the lid is removed when they open).
+		// Sarcophagi along the east and west walls: base + gilt (yellow terracotta) and lapis-faience (blue terracotta) lid, removed when they
+		// open. No valuable blocks in structures (s-throne B9; same blocks as the fit3 sun chamber).
 		for (int[] sc : SARCOPHAGI) {
 			int sx = sc[0] < 0 ? -1 : 1;
 			for (int ax = 0; ax <= 1; ax++) {
 				for (int az = -1; az <= 1; az++) {
 					int x = o.getX() + sc[0] + sx * ax, z = o.getZ() + az;
 					s.set(x, f + 1, z, smooth);
-					s.set(x, f + 2, z, az == 0 ? Blocks.GOLD_BLOCK.defaultBlockState() : Blocks.LAPIS_BLOCK.defaultBlockState());
+					s.set(x, f + 2, z, az == 0 ? Blocks.DYED_TERRACOTTA.yellow().defaultBlockState() : Blocks.DYED_TERRACOTTA.blue().defaultBlockState());
 				}
 			}
 		}
@@ -299,7 +300,7 @@ public final class Blueprints {
 		int r = Math.max(Math.abs(dx), Math.abs(dz));
 		if (r <= 1) return Blocks.CHISELED_SANDSTONE.defaultBlockState();
 		if (r == 3 || r == 7) return Blocks.DYED_TERRACOTTA.blue().defaultBlockState();
-		if (r == 4 && (dx == 0 || dz == 0)) return Blocks.GOLD_BLOCK.defaultBlockState();
+		if (r == 4 && (dx == 0 || dz == 0)) return Blocks.DYED_TERRACOTTA.yellow().defaultBlockState(); // gilt inlay, not gold (s-throne B9)
 		return (dx + dz & 1) == 0 ? Blocks.SMOOTH_SANDSTONE.defaultBlockState() : Blocks.CUT_SANDSTONE.defaultBlockState();
 	}
 

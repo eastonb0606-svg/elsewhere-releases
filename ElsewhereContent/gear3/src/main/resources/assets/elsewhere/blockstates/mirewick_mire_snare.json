@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "sprung=false": {
+      "model": "elsewhere:block/mirewick_mire_snare"
+    },
+    "sprung=true": {
+      "model": "elsewhere:block/mirewick_mire_snare_sprung"
+    }
+  }
+}

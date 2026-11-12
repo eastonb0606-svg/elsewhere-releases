@@ -56,7 +56,7 @@ public final class TownsfolkManager {
 
 	// counters (self-test, /kingdom townsfolk)
 	public static long evaluations, spawned, foldedFar, foldedHome, foldedOther, replans, deaths, graphsBuilt, chunkEvents, hourEvents;
-	public static double lastBuildMs;
+	public static double lastBuildMs, lastBuildMaxStepMs;
 
 	private static long lastHour = Long.MIN_VALUE;
 	private static boolean dirty;
@@ -76,26 +76,50 @@ public final class TownsfolkManager {
 		PENDING.clear();
 		BUILDS.clear();
 		testObservers.clear();
+		testHour = -1;
+		testDay = -1;
 		TownsfolkRoutineLink.clearCache();
 		Towns.reset();
 	}
 
+	/** Self-test clock override (-1 = the world clock). */
+	static int testHour = -1;
+	static long testDay = -1;
+
 	public static long day(ServerLevel lv) {
-		return Math.floorDiv(lv.getOverworldClockTime(), 24000L);
+		return testDay >= 0 ? testDay : Math.floorDiv(lv.getOverworldClockTime(), 24000L);
 	}
 
 	/** In-game hour 0-23 (tick 0 is 06:00). */
 	public static int hour(ServerLevel lv) {
-		return (int) Math.floorMod(Math.floorDiv(lv.getOverworldClockTime(), 1000L) + 6, 24L);
+		return testHour >= 0 ? testHour : (int) Math.floorMod(Math.floorDiv(lv.getOverworldClockTime(), 1000L) + 6, 24L);
 	}
 
+	/** A number that changes exactly when the in-game hour does. */
+	static long hourIndex(ServerLevel lv) {
+		return testHour >= 0 ? testDay * 24 + testHour : Math.floorDiv(lv.getOverworldClockTime(), 1000L);
+	}
+
+	private static boolean failed;
+
 	static void tick(MinecraftServer srv) {
+		try {
+			tickInner(srv);
+		} catch (RuntimeException e) {
+			// never take the server down for townsfolk: fold them and log once; the next event tries again
+			if (!failed) dev.elsewhere.kingdom.KingdomContent.LOG.error("Townsfolk tick failed; townsfolk folded", e);
+			failed = true;
+			foldAll("error");
+		}
+	}
+
+	static void tickInner(MinecraftServer srv) {
 		ServerLevel lv = srv.overworld();
 		if (!TownsfolkConfig.active()) {
 			if (liveTotal() > 0 || !PENDING.isEmpty()) foldAll("switched off");
 			return;
 		}
-		long h = Math.floorDiv(lv.getOverworldClockTime(), 1000L);
+		long h = hourIndex(lv);
 		if (h != lastHour) {
 			boolean first = lastHour == Long.MIN_VALUE;
 			lastHour = h;
@@ -182,6 +206,7 @@ public final class TownsfolkManager {
 	/** One evaluation pass over the towns (on a player-moved or hour event; also called by the self-test). */
 	public static void evaluate(ServerLevel lv) {
 		dirty = false;
+		if (!TownsfolkConfig.active()) return;
 		evaluations++;
 		List<Vec3> obs = observers(lv);
 		Towns.refresh(lv);
@@ -265,6 +290,7 @@ public final class TownsfolkManager {
 		if (g == null) return;
 		it.remove();
 		lastBuildMs = b.nanos / 1e6;
+		lastBuildMaxStepMs = b.maxStepNanos / 1e6;
 		if (g.size() < 3) {
 			// mostly unloaded or no streets: try again on a later evaluation (the old graph, if any, stays)
 			if (b.unloaded > 0) dirty = true;
@@ -314,7 +340,7 @@ public final class TownsfolkManager {
 		if (f == null) return null;
 		var rnd = lv.getRandom();
 		int hour = hour(lv);
-		f.setup(t.key, t.faction, k.pickOutdoors(rnd.nextDouble(), hour), rnd.nextInt(TownsfolkRoles.VARIANTS));
+		f.setup(t.key, k.faction(), k.pickOutdoors(rnd.nextDouble(), hour), rnd.nextInt(TownsfolkRoles.VARIANTS)); // the kingdom's skins, also for a sub-faction
 		f.snapTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, rnd.nextFloat() * 360F, 0F);
 		if (!lv.addFreshEntity(f)) return null;
 		t.live.add(f);

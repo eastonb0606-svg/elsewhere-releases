@@ -51,6 +51,7 @@ public final class V2Content {
 			MobCategory.CREATURE, ModEntities.DOCILE_SCARAB, 6, 1, 2);
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(biome("kush_canopy"), biome("indica_hollows"), biome("sativa_highlands"), biome("munchie_groves"),
 			biome("hazebottom_swamp")), MobCategory.CREATURE, ModEntities.HAZE_FERRET, 6, 1, 2);
+		dev.elsewhere.core.s3.groups.SpawnGroups3.init(); // ARMIES 6: 3.0 group sizes + herds (s-spawngroups, key spawn_groups_core)
 
 		// ---- fishing
 		CATCHES.put("pale_hollow", new Catch("pale_hollow", ModItems.GHOSTFIN, ModItems.MUSIC_DISC_PALE_LIGHT));

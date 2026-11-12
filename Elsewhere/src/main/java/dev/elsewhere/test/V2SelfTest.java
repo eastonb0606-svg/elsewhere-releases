@@ -277,6 +277,35 @@ final class V2SelfTest {
 			for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) hollow.getChunk((p.getX() >> 4) + dx, (p.getZ() >> 4) + dz, ChunkStatus.FULL, true);
 			var start = hollow.getChunk(p.getX() >> 4, p.getZ() >> 4, ChunkStatus.FULL, true).getStartForStructure(holder.get().value());
 			check(start != null && start.isValid(), name + " generates its structure start");
+			if (start != null && start.getPieces().get(0) instanceof dev.elsewhere.palehollow.fit3.FitPiece fit) {
+				// 3.0 fit starts (core_fit): the same promises, checked at the new layouts' own spots (CoreFitSelfTest measures the fit)
+				switch (name) {
+					case "hollow_shrine" -> check(hollow.getBlockState(dev.elsewhere.palehollow.fit3.ShrineKit.chest(fit)).is(Blocks.CHEST), "Hollow Shrine has its chest on the altar, origin " + fit.origin.toShortString());
+					case "drowned_chapel" -> {
+						var east = (dev.elsewhere.palehollow.fit3.FitPiece) start.getPieces().get(1);
+						boolean altar = hollow.getBlockState(dev.elsewhere.palehollow.fit3.ChapelKit.altarChest(east)).is(Blocks.CHEST);
+						int soul = (hollow.getBlockState(dev.elsewhere.palehollow.fit3.ChapelKit.lantern(east, -1)).is(Blocks.SOUL_LANTERN) ? 1 : 0) + (hollow.getBlockState(dev.elsewhere.palehollow.fit3.ChapelKit.lantern(east, 1)).is(Blocks.SOUL_LANTERN) ? 1 : 0);
+						check(altar && soul == 2, "Drowned Chapel has its altar chest and lanterns (origin " + fit.origin.toShortString() + ") [altar chest " + altar + ", soul lanterns " + soul + "]");
+					}
+					default -> {
+						var bb = fit.getBoundingBox();
+						for (int cx = bb.minX() >> 4; cx <= bb.maxX() >> 4; cx++) for (int cz = bb.minZ() >> 4; cz <= bb.maxZ() >> 4; cz++) hollow.getChunk(cx, cz, ChunkStatus.FULL, true);
+						int lanterns = 0, rift = 0;
+						for (int x = bb.minX(); x <= bb.maxX(); x++) for (int z = bb.minZ(); z <= bb.maxZ(); z++) for (int y = bb.minY(); y <= bb.maxY(); y++) {
+							BlockState s = hollow.getBlockState(new BlockPos(x, y, z));
+							if (s.is(Blocks.LANTERN)) lanterns++;
+							if (s.is(ModBlocks.RETURN_RIFT)) rift++;
+						}
+						check(lanterns >= 4, "Lantern Road has lantern posts: " + lanterns);
+						check(PHSites.roadHasRift(fit.origin) == (rift > 0), "Lantern Road Return Rift follows the every-third rule (rift blocks " + rift + ")");
+						LanternEvent.begin(hollow, fit.origin.getX(), fit.origin.getZ(), null);
+						for (int i = 0; i < 1400 && LanternEvent.active() > 0; i++) LanternEvent.tickWalks();
+						BlockPos c = LanternEvent.chestOf(hollow, fit.origin.getX(), fit.origin.getZ());
+						check(LanternEvent.active() == 0 && hollow.getBlockState(c).is(Blocks.CHEST), "Lantern Procession: spirits walk the contour road, then leave a resin chest at its end " + c.toShortString());
+					}
+				}
+				continue;
+			}
 			if (start == null || !(start.getPieces().get(0) instanceof PHSites.Piece piece)) continue;
 			int chests = 0, lanterns = 0, rift = 0, mantleChest = 0;
 			for (int x = -15; x <= 15; x++) for (int z = -15; z <= 15; z++) for (int y = -8; y <= 8; y++) {

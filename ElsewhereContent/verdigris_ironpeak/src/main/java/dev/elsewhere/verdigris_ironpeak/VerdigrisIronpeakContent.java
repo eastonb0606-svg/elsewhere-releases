@@ -76,6 +76,7 @@ public final class VerdigrisIronpeakContent {
 		SignatureGear.init();
 		ReturnRiftStub.init();
 		VerdigrisEntities.init();
+		dev.elsewhere.verdigris_ironpeak.s3.groups.SpawnGroups3.init(); // ARMIES 6 spawn groups (s-spawngroups, key spawn_groups_verdigris_ironpeak)
 		IronpeakEntities.init();
 		VerdigrimEntities.init();
 		GalvanoxEntities.init();

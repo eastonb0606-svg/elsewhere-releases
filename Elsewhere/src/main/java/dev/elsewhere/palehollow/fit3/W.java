@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 
 /**
@@ -77,6 +78,20 @@ public final class W {
 	}
 
 	/** Air, fluid, plants, snow layers, leaves: what an underpin may fill and a soft clear may remove. */
+	/**
+	 * y of the top real ground block in a column: from the worldgen heightmap down through leaves, plants and air (a neighbour's tree canopy is
+	 * never ground). {@link Integer#MIN_VALUE} when the column is a tree trunk or no ground is found within 24 blocks.
+	 */
+	public static int ground(WorldGenLevel l, int x, int z) {
+		BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos(x, l.getHeight(Heightmap.Types.OCEAN_FLOOR_WG, x, z) - 1, z);
+		for (int i = 0; i < 24 && m.getY() > l.getMinY(); i++, m.move(Direction.DOWN)) {
+			BlockState s = l.getBlockState(m);
+			if (s.is(BlockTags.LOGS)) return Integer.MIN_VALUE;
+			if (!open(s)) return m.getY();
+		}
+		return Integer.MIN_VALUE;
+	}
+
 	public static boolean open(BlockState s) {
 		return s.isAir() || !s.getFluidState().isEmpty() || s.canBeReplaced() || s.is(BlockTags.LEAVES);
 	}

@@ -3,7 +3,7 @@ package dev.elsewhere.gear3.s3.reliquary;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import dev.elsewhere.gear3.Gear3Content;
-import dev.elsewhere.gear3.s3.slots.MinionSlotWeights;
+import dev.elsewhere.gear3.minion.MinionSlots;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -44,8 +44,8 @@ public final class EchoReliquary {
 	public static final int TRADE_RESONANT_SHARDS = 32, TRADE_BELL_SHARDS = 1, TRADE_USES = 1, TRADE_XP = 30;
 	public static final float TRADE_PRICE_MULT = 0.05F;
 
-	/** Kill switch {@code echo_reliquary} (default on); read once at class load, nothing polls. */
-	public static final boolean ON = on("echo_reliquary");
+	/** Kill switch {@code echo_reliquary} (default on); read once at class load, nothing polls (the self-test flips it). */
+	public static boolean enabled = on("echo_reliquary");
 
 	public static EntityType<EchoKnight> ECHO_KNIGHT;
 	private static boolean done;
@@ -54,11 +54,15 @@ public final class EchoReliquary {
 		return Gear3Content.id(path);
 	}
 
-	/** Called once from Gear3Mechanics.init(): entity type, attributes, 2-slot weight, trade hook. */
+	/**
+	 * Called once from Gear3Content.init(), BEFORE Gear3Items.init(): puts the "echo_reliquary" item factory, then the
+	 * entity type, attributes, 2-slot weight and trade hook (none of these need the item to exist yet).
+	 */
 	@SuppressWarnings("unchecked")
 	public static void init() {
 		if (done) return;
 		done = true;
+		dev.elsewhere.gear3.Gear3Mechanics.FACTORIES.put(ITEM_ID, EchoReliquaryItem::new);
 		Identifier rid = id(ENTITY_ID);
 		if (BuiltInRegistries.ENTITY_TYPE.containsKey(rid)) {
 			ECHO_KNIGHT = (EntityType<EchoKnight>) BuiltInRegistries.ENTITY_TYPE.getValue(rid);
@@ -68,8 +72,9 @@ public final class EchoReliquary {
 				EntityType.Builder.of(EchoKnight::new, MobCategory.MISC).sized(0.7F, 2.2F).eyeHeight(1.95F).clientTrackingRange(10).noSave().noLootTable().build(key));
 			FabricDefaultAttributeRegistry.register(ECHO_KNIGHT, EchoKnight.createAttributes());
 		}
-		MinionSlotWeights.register(ECHO_KNIGHT, SLOTS);
-		MinionSlotWeights.init();
+		MinionSlots.init(); // s-waryak's weighted slots (mixin on MinionManager.enforceSlots); idempotent
+		MinionSlots.setWeight(ECHO_KNIGHT, SLOTS);
+		dev.elsewhere.gear3.setbonus.a.GreaterBond.TWO_SLOT.add(ECHO_KNIGHT); // Elderbark set: buffs 2-slot minions
 		ReliquaryTrade.init();
 	}
 

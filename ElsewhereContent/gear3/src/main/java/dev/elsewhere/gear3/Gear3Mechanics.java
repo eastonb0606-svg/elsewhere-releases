@@ -26,9 +26,17 @@ public final class Gear3Mechanics {
 		FACTORIES.put("frostwake", SpellItems.FrostwakeScepter::new);
 		FACTORIES.put("orrery", SpellItems.StarfallOrrery::new);
 		FACTORIES.put("mead_horn", MeadHornItem::new);
-		FACTORIES.put("whip", dev.elsewhere.summoner.GaleRibbonItem::new);
+		FACTORIES.put("whip", dev.elsewhere.gear3.s3.whips.WhipItem::new); // s-whips: own marks per whip (Thorned/Shackled/Venom/Resonant), crack, lash swing
 		FACTORIES.put("crook", dev.elsewhere.summoner.HerdingCrookItem::new);
 		FACTORIES.put("echo_arrow", dev.elsewhere.gear3.s3.echoarrow.EchoArrowItem::new); // s-echoarrow
+		FACTORIES.put("gale_sling", dev.elsewhere.gear3.s3.galesling.GaleSlingItem::new); // s-galesling
+		FACTORIES.put("censer", dev.elsewhere.gear3.s3.censer.ChoirlightCenser::new); // s-censer
+		FACTORIES.put("dredge", dev.elsewhere.gear3.s3.dredge.TidebrassDredgeItem::new); // s-dredge
+		FACTORIES.put("wolfcall_horn", dev.elsewhere.gear3.s3.wolfcall.WolfcallHornItem::new); // s-wolfcall
+		FACTORIES.put("lantern_sickle", dev.elsewhere.gear3.s3.sickle.LanternSickleItem::new); // s-sickle
+		FACTORIES.put("prism_bow", dev.elsewhere.gear3.s3.prismbow.PrismBowItem::new); // s-prismbow
+		FACTORIES.put("harpoon_bolt", dev.elsewhere.gear3.s3.harpoon.HarpoonBoltItem::new); // s-harpoon
+		FACTORIES.put("totem", dev.elsewhere.gear3.s3.totems.TotemItem::new); // s-totems: bramble_totem, clockwork_sentry, azmar_sunglass_obelisk
 	}
 
 	public static void init() {

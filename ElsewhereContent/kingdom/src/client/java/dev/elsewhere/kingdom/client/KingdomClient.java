@@ -28,8 +28,14 @@ public final class KingdomClient implements ClientModInitializer {
 		ModelLayerRegistry.registerModelLayer(TABARD, () -> LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(1.08F), 0.0F), 64, 32));
 		// 26.3 draws every AvatarRenderState with vanilla's AvatarRenderer, so our layers go onto it (see AvatarLayers)
 		AvatarLayers.add((parent, models) -> new TabardLayer(parent, models));
+		dev.elsewhere.kingdom.client.heraldry.SoldierHeraldry.init(); // 3.0 P10 cape model layers + cape layer
+		dev.elsewhere.kingdom.client.idle.IdleClient.init(); // 3.0 P9 idle/work pose props
+		dev.elsewhere.kingdom.client.lod.ArmyLodClient.init(); // 3.0 army render LOD (ARMIES.md 3.7), s-lod
 		for (EntityType<? extends KingdomSoldier> t : KingdomEntities.TYPES.keySet()) registerSoldierRenderer(t);
 		EntityRendererRegistry.register(KingdomEntities.LONGSHIP, HrafnholtLongshipRenderer::new);
+		if (dev.elsewhere.kingdom.armies.townsfolk.TownsfolkManager.TYPE != null) EntityRendererRegistry.register(dev.elsewhere.kingdom.armies.townsfolk.TownsfolkManager.TYPE, TownsfolkRenderer::new); // s-townsfolk
+		RoutineFxClient.init(); // s-routines: festival lights (Lantern Fair, Festival of the Flood, Blót), client-side
+		dev.elsewhere.kingdom.client.impostor.RankClient.init(); // 3.0 rank impostors (ARMIES.md 3.6), s-impostors
 	}
 
 	/** Registers the soldier renderer (player model, armor, held items, tinted tabard) for a soldier type, e.g. a Lord. */

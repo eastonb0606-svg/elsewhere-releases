@@ -76,6 +76,7 @@ public final class RivalPlans {
 				if (orig.is(Blocks.COBBLESTONE_WALL)) return Blocks.SANDSTONE_WALL.withPropertiesOf(orig);
 			}
 			case MIREWICK -> {
+				if (MirewickLooks.ON) return MirewickLooks.style(orig, y, box, rnd); // 3.0 look (s-vlook-mire); below: the 2.1 look when switched off
 				// the polder republic: pale stone with purple and crimson, gold accents (no valuable blocks)
 				if (orig.is(BlockTags.PLANKS)) return low ? (rnd.nextInt(8) == 0 ? state(Blocks.CALCITE) : state(Blocks.QUARTZ_BRICKS)) : (rnd.nextInt(6) == 0 ? state(Blocks.DYED_TERRACOTTA.purple()) : state(Blocks.MANGROVE_PLANKS));
 				if (orig.is(BlockTags.LOGS)) return Blocks.MANGROVE_LOG.withPropertiesOf(orig);
@@ -125,6 +126,11 @@ public final class RivalPlans {
 	}
 
 	public static Plans.Fortify fortify(ServerLevel level, VillageRecord r, RandomSource rnd, Profile p) {
+		if (p.shape() == Shape.AZMAR && AzmarLooks.ON) { // 3.0 look (s-vlook-azmar): a small walled compound; the 2.1 rebuild below is the kill-switch path
+			Plans.Fortify f = AzmarLooks.fortify(level, r, rnd, p);
+			lastHint = AzmarLooks.lastHint;
+			return f;
+		}
 		Ctx c = new Ctx(level, r, rnd, p);
 		List<VillageRecord.Op> first = new ArrayList<>();
 		BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
@@ -156,13 +162,16 @@ public final class RivalPlans {
 		switch (p.shape()) {
 			case HRAFNHOLT -> hrafnholt(c);
 			case AZMAR -> azmar(c);
-			case MIREWICK -> mirewick(c);
+			case MIREWICK -> {
+				if (MirewickLooks.ON) MirewickLooks.build(c);
+				else mirewick(c);
+			}
 			default -> {}
 		}
 		lastHint = c.hint;
 		first.addAll(c.ops);
 		first.removeIf(o -> !r.insideFootprint(BlockPos.of(o.pos()), BlockWriter.UP));
-		int cap = p.shape() == Shape.HRAFNHOLT && HrafnLooks.ON ? HrafnLooks.MAX_OPS : MAX_FORTIFY;
+		int cap = p.shape() == Shape.HRAFNHOLT && HrafnLooks.ON ? HrafnLooks.MAX_OPS : p.shape() == Shape.MIREWICK && MirewickLooks.ON ? MirewickLooks.MAX_OPS : MAX_FORTIFY;
 		if (first.size() > cap) first = new ArrayList<>(first.subList(0, cap));
 		return new Plans.Fortify(first, coffer, c.towerTop, bell);
 	}
@@ -415,10 +424,11 @@ public final class RivalPlans {
 	}
 
 	public static List<VillageRecord.Op> obeliskOps(BlockPos g, int height) {
+		if (AzmarLooks.ON) return AzmarLooks.obeliskOps(g, height); // 3.0 obelisk (s-vlook-azmar)
 		List<VillageRecord.Op> out = new ArrayList<>();
 		for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) out.add(new VillageRecord.Op(g.offset(dx, 0, dz).asLong(), state(Blocks.CUT_SANDSTONE)));
 		for (int h = 1; h < height; h++) {
-			BlockState s = h == height / 2 ? state(Blocks.CHISELED_SANDSTONE) : h == height / 2 + 2 ? state(Blocks.LAPIS_BLOCK) : state(Blocks.SANDSTONE);
+			BlockState s = h == height / 2 ? state(Blocks.CHISELED_SANDSTONE) : h == height / 2 + 2 ? state(Blocks.DYED_TERRACOTTA.pick(net.minecraft.world.item.DyeColor.BLUE)) : state(Blocks.SANDSTONE);
 			out.add(new VillageRecord.Op(g.above(h).asLong(), s));
 		}
 		out.add(new VillageRecord.Op(g.above(height).asLong(), state(Blocks.GLAZED_TERRACOTTA.yellow())));
@@ -427,6 +437,7 @@ public final class RivalPlans {
 
 	/** Palm: jungle-log trunk, persistent jungle leaves (they never decay). */
 	public static List<VillageRecord.Op> palmOps(BlockPos g, int trunk) {
+		if (AzmarLooks.ON) return AzmarLooks.palmOps(g, trunk); // 3.0 date palm (s-vlook-azmar)
 		List<VillageRecord.Op> out = new ArrayList<>();
 		BlockState leaves = Blocks.JUNGLE_LEAVES.defaultBlockState().setValue(LeavesBlock.PERSISTENT, true);
 		for (int h = 0; h < trunk; h++) out.add(new VillageRecord.Op(g.above(h).asLong(), state(Blocks.JUNGLE_LOG)));
@@ -694,6 +705,7 @@ public final class RivalPlans {
 
 	/** Rival outpost: a ring of the faction's fence, a tower platform on its footing, a banner and the faction's border hint. */
 	public static List<VillageRecord.Op> outpost(Profile p, BlockPos c, Direction gate) {
+		if (p.shape() == Shape.AZMAR && AzmarLooks.ON) return AzmarLooks.outpost(p, c, gate); // 3.0 Migdol (s-vlook-azmar)
 		List<VillageRecord.Op> ops = new ArrayList<>();
 		Set<Long> used = new HashSet<>();
 		BlockState fence = switch (p.shape()) {
@@ -757,7 +769,10 @@ public final class RivalPlans {
 				case AZMAR -> ops.addAll(obeliskOps(spot, 5));
 				case HRAFNHOLT -> ops.addAll(ravenPostOps(spot, now));
 				case MIREWICK -> ops.addAll(lanternPostOps(spot));
-				default -> ops.add(new VillageRecord.Op(spot.above().asLong(), Blocks.BANNER.pick(now.banner()).defaultBlockState()));
+				default -> {
+					if (dev.elsewhere.kingdom_villages.s3.ald.AldLook.REBUILD) ops.addAll(dev.elsewhere.kingdom_villages.s3.ald.AldRebuild.flagPostOps(spot, now.banner())); // s-vlook-ald: a standing flag pole
+					else ops.add(new VillageRecord.Op(spot.above().asLong(), Blocks.BANNER.pick(now.banner()).defaultBlockState()));
+				}
 			}
 		}
 		if (now.shape() == Shape.AZMAR) {
@@ -786,6 +801,7 @@ public final class RivalPlans {
 
 	/** Ops for growth step {@code step} (1..9): the ring wall gains a course (1-3), then a palm and lantern column each (4-6), then an obelisk and gate pillars (7-9). */
 	public static List<VillageRecord.Op> growth(ServerLevel level, VillageRecord r, Profile p, int step, RandomSource rnd) {
+		if (p.shape() == Shape.AZMAR && AzmarLooks.ON) return AzmarLooks.growth(level, r, p, step, rnd); // 3.0 compound-wall growth (s-vlook-azmar)
 		Ctx c = new Ctx(level, r, rnd, p);
 		c.bell = Plans.surface(level, r.center);
 		if (step <= 3) {

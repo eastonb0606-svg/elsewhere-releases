@@ -134,6 +134,7 @@ public final class StandingNet {
 		PayloadTypeRegistry.clientboundPlay().register(Reply.TYPE, Reply.CODEC);
 		PayloadTypeRegistry.serverboundPlay().register(Query.TYPE, Query.CODEC);
 		ServerPlayNetworking.registerGlobalReceiver(Query.TYPE, (payload, ctx) -> StandingQuery.handle(ctx.player(), payload.entity()));
+		StandingCommand.register();
 	}
 
 	/** Cuts a faction id to what the codecs accept. */

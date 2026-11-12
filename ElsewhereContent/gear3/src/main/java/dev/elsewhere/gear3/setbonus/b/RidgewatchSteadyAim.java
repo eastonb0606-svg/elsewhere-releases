@@ -74,6 +74,11 @@ public final class RidgewatchSteadyAim {
 		DRAWS.put(p.getUUID(), new Draw(p.level().getGameTime(), p.position()));
 	}
 
+	/** Self-test: a draw that began {@code ticksAgo} ticks ago at the player's current position (game time does not move in the test). */
+	public static void startDrawForTest(ServerPlayer p, long ticksAgo) {
+		DRAWS.put(p.getUUID(), new Draw(p.level().getGameTime() - ticksAgo, p.position()));
+	}
+
 	/** Pure rule: drawn for at least 1 s without moving more than 0.1 block. */
 	public static boolean stillSince(long startTick, Vec3 startPos, long now, Vec3 pos) {
 		return now - startTick >= STILL_TICKS && pos.distanceToSqr(startPos) <= STILL_DIST_SQ;

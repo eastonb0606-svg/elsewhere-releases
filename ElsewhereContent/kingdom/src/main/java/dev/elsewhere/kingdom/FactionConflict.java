@@ -37,6 +37,20 @@ public final class FactionConflict {
 
 	private static final Map<UUID, Long> COOLDOWN = new HashMap<>();
 
+	/**
+	 * Puts a squad on the clash cooldown. s-heapleak (3.0 heap pass): expired cooldowns are dropped once more than 256 are held, so a long
+	 * session keeps only squads still cooling down instead of one entry for every squad that ever clashed.
+	 */
+	public static void cooldown(UUID squad, long now) {
+		COOLDOWN.put(squad, now + COOLDOWN_TICKS);
+		if (COOLDOWN.size() > 256) COOLDOWN.values().removeIf(t -> t <= now);
+	}
+
+	/** Squads on the clash cooldown map (self-test). */
+	public static int cooldownEntries() {
+		return COOLDOWN.size();
+	}
+
 	/** One resolved clash. {@code lossesA/B} are soldiers killed, {@code sizeA/B} the squad sizes before the fight. */
 	public record Record(long time, Identifier factionA, Identifier factionB, Identifier winner, int sizeA, int sizeB, int lossesA, int lossesB, long seed, BlockPos at) {
 		public static final Codec<Record> CODEC = RecordCodecBuilder.create(i -> i.group(
@@ -139,8 +153,8 @@ public final class FactionConflict {
 		st.clashes.add(rec);
 		while (st.clashes.size() > MAX_RECORDS) st.clashes.remove(0);
 		st.clashCount++;
-		COOLDOWN.put(a.id, now + COOLDOWN_TICKS);
-		COOLDOWN.put(b.id, now + COOLDOWN_TICKS);
+		cooldown(a.id, now);
+		cooldown(b.id, now);
 		for (Squad q : new Squad[] {a, b}) if (q.virtualMembers.isEmpty()) st.removeSquad(q);
 		st.setDirty();
 		resolved++;

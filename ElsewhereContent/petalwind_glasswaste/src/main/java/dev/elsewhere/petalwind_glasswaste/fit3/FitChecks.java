@@ -106,6 +106,7 @@ public final class FitChecks {
 			case PGStructures.SUNPIT -> {
 				int bowlR = ps.stream().filter(p -> p.part.equals("bowl")).mapToInt(p -> p.param).findFirst().orElse(FitBuilders.BOWL_R);
 				int maxStep = 0, shaped = 0, notOpen = 0, overhang = 0;
+				String firstShut = "";
 				for (int i = 0; i < 16; i++) {
 					double ang = Math.PI * 2 * i / 16 + 0.11;
 					int prev = Integer.MIN_VALUE;
@@ -128,12 +129,12 @@ public final class FitChecks {
 					if (dx * dx + dz * dz > 400) continue;
 					for (int dy = 0; dy <= 8; dy++) {
 						var st = level.getBlockState(new BlockPos(ox + dx, oy + dy, oz + dz));
-						if (!st.isAir() && !st.is(Blocks.GLASS)) notOpen++;
+						if (!st.isAir() && !st.is(Blocks.GLASS) && notOpen++ == 0) firstShut = st.getBlock().getDescriptionId() + " at " + dx + "," + dy + "," + dz;
 					}
 				}
 				ck.check(maxStep <= 1 && overhang == 0 && notOpen == 0, String.format(
-					"fit3 sunpit: the crater is a sand slope at the angle of repose (%d cut cells on 16 rays, largest step %d, %d overhanging blocks, no vertical cut), open to the sky over the arena (%d blocks above the floor)",
-					shaped, maxStep, overhang, notOpen));
+					"fit3 sunpit: the crater is a sand slope at the angle of repose (%d cut cells on 16 rays, largest step %d, %d overhanging blocks, no vertical cut), open to the sky over the arena (%d blocks above the floor %s)",
+					shaped, maxStep, overhang, notOpen, firstShut));
 				boolean rings = level.getBlockState(new BlockPos(ox + 18, oy - 2, oz)).is(Blocks.MAGMA_BLOCK) && level.getBlockState(new BlockPos(ox + 18, oy - 1, oz)).is(Blocks.SAND);
 				ck.check(rings, "fit3 sunpit: Ankhara's collapse rings keep their 2.x layers (sand over magma)");
 			}
@@ -204,7 +205,7 @@ public final class FitChecks {
 		return switch (kind) {
 			case PGStructures.ZIGGURAT, PGStructures.BREEZE -> 2;
 			case PGStructures.SUNPIT -> 5;
-			case PGStructures.EYE -> 9;
+			case PGStructures.EYE -> 10;
 			default -> ps.size(); // pagoda: core plus the court cells that have ground
 		};
 	}

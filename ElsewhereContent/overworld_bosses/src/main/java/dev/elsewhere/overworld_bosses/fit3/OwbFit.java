@@ -65,48 +65,104 @@ public final class OwbFit {
 		boolean open(int x, int y, int z);
 	}
 
-	public static Heights heights(Structure.GenerationContext ctx) {
-		var gen = ctx.chunkGenerator();
-		var ha = ctx.heightAccessor();
-		var rs = ctx.randomState();
-		return new Heights() {
-			@Override
-			public int ground(int x, int z) {
-				return gen.getFirstOccupiedHeight(x, z, Heightmap.Types.OCEAN_FLOOR_WG, ha, rs);
-			}
+	/** Noise samples (height queries and base columns) taken on this thread: the planner's cost, read by the self-test. */
+	public static final ThreadLocal<int[]> SAMPLES = ThreadLocal.withInitial(() -> new int[1]);
 
-			@Override
-			public int surface(int x, int z) {
-				return gen.getFirstOccupiedHeight(x, z, Heightmap.Types.WORLD_SURFACE_WG, ha, rs);
-			}
-		};
+	/** One exact, counted generator height (the site rules' own probes). */
+	public static int exact(Structure.GenerationContext ctx, int x, int z, Heightmap.Types type) {
+		SAMPLES.get()[0]++;
+		return ctx.chunkGenerator().getFirstOccupiedHeight(x, z, type, ctx.heightAccessor(), ctx.randomState());
 	}
 
-	/** One base column per probed (x, z), read only for the few columns the chamber check needs. */
+	/**
+	 * STRUCTURES.md 2.3 HeightField: ground and surface sampled lazily on a 4-block lattice, memoised per start (one instance per plan, never
+	 * shared between threads), bilinear between lattice points. The noise itself is interpolated over 4-block cells, so this keeps the shape
+	 * while a 20-block boardwalk costs 5 samples instead of 20.
+	 */
+	public static Heights heights(Structure.GenerationContext ctx) {
+		return new Field(ctx);
+	}
+
+	static final class Field implements Heights {
+		private final Structure.GenerationContext ctx;
+		private final it.unimi.dsi.fastutil.longs.Long2IntOpenHashMap ground = new it.unimi.dsi.fastutil.longs.Long2IntOpenHashMap(),
+			surface = new it.unimi.dsi.fastutil.longs.Long2IntOpenHashMap();
+
+		Field(Structure.GenerationContext ctx) {
+			this.ctx = ctx;
+			this.ground.defaultReturnValue(Integer.MIN_VALUE);
+			this.surface.defaultReturnValue(Integer.MIN_VALUE);
+		}
+
+		private int sample(it.unimi.dsi.fastutil.longs.Long2IntOpenHashMap m, Heightmap.Types type, int x, int z) {
+			long k = ((long) x << 32) ^ (z & 0xFFFFFFFFL);
+			int v = m.get(k);
+			if (v == Integer.MIN_VALUE) {
+				v = exact(this.ctx, x, z, type);
+				m.put(k, v);
+			}
+			return v;
+		}
+
+		private int at(it.unimi.dsi.fastutil.longs.Long2IntOpenHashMap m, Heightmap.Types type, int x, int z) {
+			int x0 = x & ~3, z0 = z & ~3, fx = x & 3, fz = z & 3;
+			double v00 = sample(m, type, x0, z0);
+			if (fx == 0 && fz == 0) return (int) v00;
+			if (fz == 0) return (int) Math.floor(lerp(v00, sample(m, type, x0 + 4, z0), fx / 4.0) + 0.5);
+			double v01 = sample(m, type, x0, z0 + 4);
+			if (fx == 0) return (int) Math.floor(lerp(v00, v01, fz / 4.0) + 0.5);
+			double v10 = sample(m, type, x0 + 4, z0), v11 = sample(m, type, x0 + 4, z0 + 4);
+			return (int) Math.floor(lerp(lerp(v00, v10, fx / 4.0), lerp(v01, v11, fx / 4.0), fz / 4.0) + 0.5);
+		}
+
+		private static double lerp(double a, double b, double t) {
+			return a + (b - a) * t;
+		}
+
+		@Override
+		public int ground(int x, int z) {
+			return at(this.ground, Heightmap.Types.OCEAN_FLOOR_WG, x, z);
+		}
+
+		@Override
+		public int surface(int x, int z) {
+			return at(this.surface, Heightmap.Types.WORLD_SURFACE_WG, x, z);
+		}
+	}
+
+	/** One base column per probed (x, z), memoised for the plan (the chamber check reads 5 columns at up to 4 depths). */
 	public static Probe probe(Structure.GenerationContext ctx) {
 		var gen = ctx.chunkGenerator();
 		return new Probe() {
-			int cx = Integer.MIN_VALUE, cz;
-			net.minecraft.world.level.NoiseColumn col;
+			final it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.world.level.NoiseColumn> cols =
+				new it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<>();
 
 			@Override
 			public boolean open(int x, int y, int z) {
-				if (x != this.cx || z != this.cz || this.col == null) {
-					this.col = gen.getBaseColumn(x, z, ctx.heightAccessor(), ctx.randomState());
-					this.cx = x;
-					this.cz = z;
-				}
-				var s = this.col.getBlock(y);
+				var col = this.cols.computeIfAbsent(((long) x << 32) ^ (z & 0xFFFFFFFFL), k -> {
+					SAMPLES.get()[0]++;
+					return gen.getBaseColumn(x, z, ctx.heightAccessor(), ctx.randomState());
+				});
+				var s = col.getBlock(y);
 				return s.isAir() || !s.getFluidState().isEmpty();
 			}
 		};
 	}
 
+	/** Nearest multiple of 4 (a HeightField lattice line). */
+	static int snap4(double v) {
+		return (int) Math.round(v / 4.0) * 4;
+	}
+
 	// ---- planning -------------------------------------------------------------------------------------------------------------
 
-	/** 13-column lattice over a disc of radius r: centre, 4 on the axes at r, 4 diagonals at r*0.7, 4 half-way on the axes. */
+	/**
+	 * 13-column lattice over a disc of radius r: centre, 4 on the axes at r, 4 diagonals at r*0.7, 4 half-way on the axes; offsets snapped
+	 * to the 4-block HeightField lattice, so each point is one sample.
+	 */
 	static int[] lattice(int x, int z, int r, Heights h) {
-		int d = (int) Math.round(r * 0.7), m = r / 2;
+		int d = snap4(r * 0.7), m = snap4(r / 2.0);
+		r = snap4(r);
 		int[][] pts = {{0, 0}, {r, 0}, {-r, 0}, {0, r}, {0, -r}, {d, d}, {-d, d}, {d, -d}, {-d, -d}, {m, 0}, {-m, 0}, {0, m}, {0, -m}};
 		int[] out = new int[pts.length];
 		for (int i = 0; i < pts.length; i++) out[i] = h.ground(x + pts[i][0], z + pts[i][1]);
@@ -140,7 +196,7 @@ public final class OwbFit {
 		for (int s = 0; s < WALK_MAX; s++) {
 			int cx = x + DIRS[dir][0] * (16 + s), cz = z + DIRS[dir][1] * (16 + s);
 			int ground = h.ground(cx, cz);
-			boolean wet = ground < sea && h.surface(cx, cz) > ground;
+			boolean wet = ground < sea; // below sea level in a swamp: water (or a hole the walk bridges on piles)
 			int want = wet ? sea : ground;
 			if (!wet && want > prev + 1 && s >= 2) { n = s; break; } // a bank too steep to climb: the walk ends at its foot
 			int y = Math.max(prev - 1, Math.min(prev + 1, want));
@@ -161,10 +217,10 @@ public final class OwbFit {
 		int floor = hi - lo > 24 ? (hi + lo) / 2 : Math.max(hi - CAP, Math.min(lo + CAP, median(lat)));
 		BlockPos o = new BlockPos(x, floor, z);
 		int g = floor - 1;
-		// the entrance faces downhill: E, S or W, whichever side's ground is lowest (ties go south)
-		int best = 1, bestY = h.ground(x, z + 21);
+		// the entrance faces downhill: E, S or W, whichever side's ground is lowest (ties go south); read just past the rim, on the lattice
+		int best = 1, bestY = h.ground(x, z + 20);
 		for (int dir : new int[] {0, 2}) {
-			int y = h.ground(x + DIRS[dir][0] * 21, z + DIRS[dir][1] * 21);
+			int y = h.ground(x + DIRS[dir][0] * 20, z + DIRS[dir][1] * 20);
 			if (y < bestY) { best = dir; bestY = y; }
 		}
 		List<StructurePiece> out = new ArrayList<>();
@@ -175,7 +231,7 @@ public final class OwbFit {
 			double a = Math.PI * 2 * i / 8;
 			int rx = (int) Math.round(Math.cos(a) * 19), rz = (int) Math.round(Math.sin(a) * 19);
 			if (rz < -12 || i == best * 2) continue; // not on the north slope, not across the entrance stair
-			int drop = floor - h.ground(x + rx, z + rz);
+			int drop = floor - h.ground(x + snap4(rx), z + snap4(rz)); // the rim's nearest lattice point
 			if (drop > 2) out.add(new OwbFitPiece(OwbPiece.GLACIER_SHELF, BUTTRESS, o, o.offset(rx, 0, rz), i, Math.min(drop, 14), new int[0], TerrainAdjustment.NONE));
 		}
 		int[] prof = stairProfile(x, z, best, g, h);
@@ -203,6 +259,11 @@ public final class OwbFit {
 		out.add(new OwbFitPiece(OwbPiece.SUN_CHAMBER, CORE, origin, origin, 0, top, new int[0], TerrainAdjustment.ENCAPSULATE));
 		out.add(new OwbFitPiece(OwbPiece.SUN_CHAMBER, SHAFT, origin, new BlockPos(origin.getX() + 16, top, origin.getZ()), 0, top, new int[0], TerrainAdjustment.NONE));
 		return out;
+	}
+
+	/** Chamber floors tried under one pyramid: the 2.1 depth, then 3 deeper, so a cave at one depth does not lose the site. */
+	public static int[] sunFloors(int floor) {
+		return new int[] {floor, floor - 7, floor - 14, floor - 21};
 	}
 
 	/** True when a cave or aquifer void crosses the chamber's hall (5 columns, floor to roof). */

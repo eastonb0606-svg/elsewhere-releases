@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "elsewhere:mirewick_mire_snare",
+            "state": {
+              "sprung": "false"
+            }
+          },
+          "name": "elsewhere:mirewick_mire_snare"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "elsewhere:blocks/mirewick_mire_snare"
+}

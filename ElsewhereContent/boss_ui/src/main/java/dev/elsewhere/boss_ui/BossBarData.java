@@ -18,9 +18,10 @@ public final class BossBarData {
 	/**
 	 * One boss: entity id ({@code elsewhere:strawgrim}), icon texture id, bar colour (RGB), sub-bar title keywords, the HP
 	 * fractions where its phases start (copied from the boss's own {@code phaseThresholds()}), title tokens that name a
-	 * state chip ({@code states}: lowercase token to state) and the invulnerable phase-transition length in ticks.
+	 * state chip ({@code states}: lowercase token to state), the invulnerable phase-transition length in ticks, and whether
+	 * the phase counter is shown ({@code counter: false} for bosses whose phases are not all HP thresholds, e.g. Grunthar).
 	 */
-	public record Entry(String id, String icon, int color, List<String> sub, float[] phases, Map<String, String> states, int transition) {
+	public record Entry(String id, String icon, int color, List<String> sub, float[] phases, Map<String, String> states, int transition, boolean counter) {
 		public String path() { return id.substring(id.indexOf(':') + 1); }
 	}
 
@@ -54,7 +55,8 @@ public final class BossBarData {
 				if (STATES.contains(st)) states.put(s.getKey().toLowerCase(Locale.ROOT), st);
 			}
 			int transition = o.has("transition") ? o.get("transition").getAsInt() : DEFAULT_TRANSITION;
-			out.put(e.getKey(), new Entry(e.getKey(), o.has("icon") ? o.get("icon").getAsString() : "", color, List.copyOf(sub), phases, Map.copyOf(states), transition));
+			boolean counter = !o.has("counter") || o.get("counter").getAsBoolean();
+			out.put(e.getKey(), new Entry(e.getKey(), o.has("icon") ? o.get("icon").getAsString() : "", color, List.copyOf(sub), phases, Map.copyOf(states), transition, counter));
 		}
 		return out;
 	}

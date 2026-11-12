@@ -154,6 +154,7 @@ final class SelfTestBosses {
 	}
 
 	static void build() {
+		SelfTestHpCap.add(); // 3.0 final review B8 (s-dataclean): every faction file's human bosses at most 300 HP, Serf tier 18
 		registration();
 		loadouts();
 		phasesCap();
