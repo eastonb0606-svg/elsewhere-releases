@@ -834,3 +834,58 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:21:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__azmar_glyphmail_hauberk_front.png: 
 [20:21:19] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
 [20:21:19] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:21:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__azmar_glyphmail_hauberk_side.png: 
+[20:21:20] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:21:20] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:21:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__azmar_glyphmail_hauberk_tooltip.png: 
+[20:21:21] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:21:21] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:21:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 82 (items | elsewhere:azmar_glyphmail_hauberk) done in 3495 ms
+[20:21:21] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[20:21:21] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:21:21] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:21:22] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:21:22] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Outrider Chaps]
+[20:21:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__aldermark_outrider_chaps_front.png: 
+[20:21:23] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:21:23] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:21:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__aldermark_outrider_chaps_side.png: 
+[20:21:24] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:21:24] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:21:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__aldermark_outrider_chaps_tooltip.png: 
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:21:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 83 (items | elsewhere:aldermark_outrider_chaps) done in 3738 ms
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Outrider Boots]
+[20:21:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__aldermark_outrider_boots_front.png: 
+[20:21:26] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:21:26] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:21:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__aldermark_outrider_boots_side.png: 
+[20:21:28] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:21:28] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:21:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__aldermark_outrider_boots_tooltip.png: 
+[20:21:28] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:21:29] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:21:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 84 (items | elsewhere:aldermark_outrider_boots) done in 3381 ms
+[20:21:29] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:21:29] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:21:29] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:21:29] [Server thread/INFO] (Minecraft) Stopping server
+[20:21:29] [Server thread/INFO] (Minecraft) Saving players
+[20:21:29] [Server thread/INFO] (Minecraft) Saving worlds
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:21:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:21:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 92 ok, 10 fail, 0 manual
+[20:21:29] [Render thread/INFO] (Minecraft) Stopping!

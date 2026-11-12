@@ -845,21 +845,24 @@
           "scene": 82,
           "line": 98,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:19"
         },
         {
           "file": "items__azmar_glyphmail_hauberk_side.png",
           "scene": 82,
           "line": 98,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:20"
         },
         {
           "file": "items__azmar_glyphmail_hauberk_tooltip.png",
           "scene": 82,
           "line": 98,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:21"
         }
       ],
       "elsewhere:aldermark_outrider_chaps": [
@@ -868,21 +871,24 @@
           "scene": 83,
           "line": 99,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:23"
         },
         {
           "file": "items__aldermark_outrider_chaps_side.png",
           "scene": 83,
           "line": 99,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:24"
         },
         {
           "file": "items__aldermark_outrider_chaps_tooltip.png",
           "scene": 83,
           "line": 99,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:25"
         }
       ],
       "elsewhere:aldermark_outrider_boots": [
@@ -891,28 +897,31 @@
           "scene": 84,
           "line": 100,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:26"
         },
         {
           "file": "items__aldermark_outrider_boots_side.png",
           "scene": 84,
           "line": 100,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:28"
         },
         {
           "file": "items__aldermark_outrider_boots_tooltip.png",
           "scene": 84,
           "line": 100,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:28"
         }
       ]
     }
   },
-  "run": "20:21:18",
+  "run": "20:21:29",
   "totals": {
-    "ok": 83,
+    "ok": 92,
     "fail": 10,
     "manual": 0
   }
