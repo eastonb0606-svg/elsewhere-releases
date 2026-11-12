@@ -1,0 +1,642 @@
+{
+  "lanes": {
+    "s_layout_azmar": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_layout_azmar__castle_azmar_c_0_14_62_y180.png",
+          "scene": 408,
+          "line": 458,
+          "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_40_60_50_y140.png",
+          "scene": 409,
+          "line": 459,
+          "check": "49 x 50 palm-wall enclosure (Aldermark's curtain is 61 x 61) with an undulating top; one processional axis: pylons, palm court with two lapis pools, hypostyle hall (raised nave roof), throne hall with a roof kiosk, naos to the west, mud-brick palace with kiosk and striped awning to the east; terraces stepping up north; nothing floating at the edges",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_5_10_y180.png",
+          "scene": 410,
+          "line": 460,
+          "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle façade, scarab over its door",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_2_3_y180.png",
+          "scene": 411,
+          "line": 461,
+          "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_3_16_y180.png",
+          "scene": 412,
+          "line": 462,
+          "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_vlook_ald": {
+      "villages_aldermark_overview + villages_aldermark_overview_street + villages_aldermark_palisade (kingdom_villages VillagesScreenshots client gametest, Aldermark village after its rebuild)": [],
+      "ald_hill_village_overview + ald_hill_village_tower + ald_hill_village_gatehouse + ald_hill_village_palisade_slope (kingdom_villages AldLookShots client gametest)": [],
+      "ald_hill_outpost_overview + ald_hill_outpost_gate (AldLookShots)": [],
+      "ald_hamlet_farmstead (AldLookShots)": [],
+      "kill switches": []
+    },
+    "s_ascension": {
+      "elsewhere:gear3_ascension_shard": [
+        {
+          "file": "s_ascension__gear3_ascension_shard_first_person.png",
+          "scene": 418,
+          "line": 468,
+          "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
+          "status": "ok",
+          "taken": "20:05:29"
+        },
+        {
+          "file": "s_ascension__gear3_ascension_shard_third_person.png",
+          "scene": 418,
+          "line": 468,
+          "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
+          "status": "ok",
+          "taken": "20:05:30"
+        },
+        {
+          "file": "s_ascension__gear3_ascension_shard_tooltip.png",
+          "scene": 418,
+          "line": 468,
+          "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
+          "status": "ok",
+          "taken": "20:05:30"
+        }
+      ],
+      "elsewhere:galeplate_helmet": [
+        {
+          "file": "s_ascension__galeplate_helmet_first_person.png",
+          "scene": 419,
+          "line": 469,
+          "check": "the result slot shows the same helmet with glint; hover it: gold \"Ascendant Galeplate Helmet\", +3.5 Armor Toughness in the stat lines, a gold lore line \"Ascendant: +1 armor toughness ...\"",
+          "status": "ok",
+          "taken": "20:05:33"
+        },
+        {
+          "file": "s_ascension__galeplate_helmet_third_person.png",
+          "scene": 419,
+          "line": 469,
+          "check": "the result slot shows the same helmet with glint; hover it: gold \"Ascendant Galeplate Helmet\", +3.5 Armor Toughness in the stat lines, a gold lore line \"Ascendant: +1 armor toughness ...\"",
+          "status": "ok",
+          "taken": "20:05:34"
+        },
+        {
+          "file": "s_ascension__galeplate_helmet_tooltip.png",
+          "scene": 419,
+          "line": 469,
+          "check": "the result slot shows the same helmet with glint; hover it: gold \"Ascendant Galeplate Helmet\", +3.5 Armor Toughness in the stat lines, a gold lore line \"Ascendant: +1 armor toughness ...\"",
+          "status": "ok",
+          "taken": "20:05:34"
+        }
+      ],
+      "Full Ascendant Galeplate set worn (gear3)": []
+    },
+    "s_pennant": {
+      "elsewhere:herdcaller_pennant": [
+        {
+          "file": "s_pennant__herdcaller_pennant_first_person.png",
+          "scene": 421,
+          "line": 471,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "ok",
+          "taken": "20:05:36"
+        },
+        {
+          "file": "s_pennant__herdcaller_pennant_third_person.png",
+          "scene": 421,
+          "line": 471,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "ok",
+          "taken": "20:05:37"
+        },
+        {
+          "file": "s_pennant__herdcaller_pennant_tooltip.png",
+          "scene": 421,
+          "line": 471,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "ok",
+          "taken": "20:05:37"
+        }
+      ],
+      "Standard planted (gear3)": [],
+      "elsewhere:rootling": [
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3.png",
+          "scene": 423,
+          "line": 473,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "fail",
+          "detail": "view: target is gone before the camera was placed",
+          "taken": "20:05:37"
+        },
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3_later.png",
+          "scene": 423,
+          "line": 473,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "fail",
+          "detail": "view: target is gone before the camera was placed",
+          "taken": "20:05:37"
+        }
+      ],
+      "Standard comes down (gear3)": []
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person.png",
+          "scene": 425,
+          "line": 475,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "ok",
+          "taken": "20:05:38"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person.png",
+          "scene": 425,
+          "line": 475,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "ok",
+          "taken": "20:05:39"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip.png",
+          "scene": 425,
+          "line": 475,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "ok",
+          "taken": "20:05:40"
+        },
+        {
+          "file": "s_sunglass__sunglass_first_person_2.png",
+          "scene": 426,
+          "line": 476,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "20:05:41"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_2.png",
+          "scene": 426,
+          "line": 476,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "20:05:42"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_first_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "20:05:42"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_third_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "20:05:43"
+        },
+        {
+          "file": "s_sunglass__sunglass_after_use.png",
+          "scene": 426,
+          "line": 476,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "20:05:44"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_2.png",
+          "scene": 426,
+          "line": 476,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "20:05:44"
+        },
+        {
+          "file": "s_sunglass__sunglass_first_person_3.png",
+          "scene": 427,
+          "line": 477,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "20:05:46"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_3.png",
+          "scene": 427,
+          "line": 477,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "20:05:47"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_3.png",
+          "scene": 427,
+          "line": 477,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "20:05:47"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:skyiron_ingot": [
+        {
+          "file": "s_compat_transmute__skyiron_ingot_first_person.png",
+          "scene": 428,
+          "line": 478,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "ok",
+          "taken": "20:05:49"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_third_person.png",
+          "scene": 428,
+          "line": 478,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "ok",
+          "taken": "20:05:49"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_tooltip.png",
+          "scene": 428,
+          "line": 478,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "ok",
+          "taken": "20:05:50"
+        }
+      ],
+      "elsewhere:boss_token": [
+        {
+          "file": "s_compat_transmute__boss_token_first_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "ok",
+          "taken": "20:05:51"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_third_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "ok",
+          "taken": "20:05:52"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_tooltip.png",
+          "scene": 429,
+          "line": 479,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "ok",
+          "taken": "20:05:53"
+        }
+      ],
+      "elsewhere:frostgranite": [
+        {
+          "file": "s_compat_transmute__frostgranite_first_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "Frostgranite page shows a stone-like price (64 Quanta or less, not ~1M); Skyiron Ingot shows 1,147,904 Quanta; the template has no Transmutation page (excluded)",
+          "status": "ok",
+          "taken": "20:05:54"
+        },
+        {
+          "file": "s_compat_transmute__frostgranite_third_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "Frostgranite page shows a stone-like price (64 Quanta or less, not ~1M); Skyiron Ingot shows 1,147,904 Quanta; the template has no Transmutation page (excluded)",
+          "status": "ok",
+          "taken": "20:05:54"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "Calling panel (moonsilk + sunlance_staff)": [
+        {
+          "file": "s_compat_greenhaze__calling_panel_caster.png",
+          "scene": 431,
+          "line": 481,
+          "check": "the Calling panel starts below the Green Leaf meter (panel top y 32, meter 4-26): no overlap, both fully readable; without Green Leaf the panel sits at y 6 as before",
+          "status": "ok",
+          "taken": "20:05:58"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom.png",
+          "scene": 432,
+          "line": 482,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png",
+          "scene": 432,
+          "line": 482,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:everflow_bong": [
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person.png",
+          "scene": 433,
+          "line": 483,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person.png",
+          "scene": 433,
+          "line": 483,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person_2.png",
+          "scene": 434,
+          "line": 484,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person_2.png",
+          "scene": 434,
+          "line": 484,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_tooltip.png",
+          "scene": 434,
+          "line": 484,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:bramble_totem": [
+        {
+          "file": "s_totems__bramble_totem_first_person.png",
+          "scene": 435,
+          "line": 485,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_third_person.png",
+          "scene": 435,
+          "line": 485,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_first_person.png",
+          "scene": 435,
+          "line": 485,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_third_person.png",
+          "scene": 435,
+          "line": 485,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_after_use.png",
+          "scene": 435,
+          "line": 485,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_tooltip.png",
+          "scene": 435,
+          "line": 485,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:clockwork_sentry": [
+        {
+          "file": "s_totems__clockwork_sentry_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__clockwork_sentry_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__clockwork_sentry_tooltip.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sunglass_obelisk": [
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_first_person.png",
+          "scene": 437,
+          "line": 487,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_third_person.png",
+          "scene": 437,
+          "line": 487,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_tooltip.png",
+          "scene": 437,
+          "line": 487,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rank impostors behind a 150-a-side wave battle (Aldermark v Hrafnholt)": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 438,
+          "line": 488,
+          "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
+          "status": "pending"
+        }
+      ],
+      "Kingdom rank shapes side by side (Azmar v Mirewick)": [
+        {
+          "file": "s_impostors__battle_azmar_mirewick_110_30s.png",
+          "scene": 439,
+          "line": 489,
+          "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
+          "status": "pending"
+        }
+      ],
+      "Break-out moment": [],
+      "Ranks marching and fighting by dice at distance": [],
+      "Rout at the end of a battle": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 442,
+          "line": 492,
+          "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p7_standing": {
+      "elsewhere:kingdom_lawspeaker": [
+        {
+          "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on.png",
+          "scene": 443,
+          "line": 493,
+          "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
+          "status": "pending"
+        },
+        {
+          "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on_later.png",
+          "scene": 443,
+          "line": 493,
+          "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
+          "status": "pending"
+        }
+      ],
+      "Trader dialogue in the other three kingdoms": [],
+      "elsewhere:kingdom_market_inspector": [
+        {
+          "file": "s_p7_standing__hostile_trader_dialogue.png",
+          "scene": 445,
+          "line": 495,
+          "check": "red \"Hostile\" segment lit, the marker at the far left, \"Enemy of the Throne\", one red line \"They will not trade with you.\", Wares and Collect order greyed out (tooltips say why), Tribute... and Farewell still work; no price percent shown",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:court_marshal": [
+        {
+          "file": "s_p7_standing__standing_chip_when_looking_at_a_ruler.png",
+          "scene": 446,
+          "line": 496,
+          "check": "a small crimson/gold chip fades in just under the crosshair within 0.2 s: lantern crest, \"the Lantern Republic of Mirewick\", \"Valued Client · Friendly +45\" and a thin band bar; fades out over 0.2 s on looking away; shows through glass, never through stone; /diplomacy standing mirewick -80, look away for 5 s and back: the chip turns to \"Defaulter · Hostile -80\" with a red \"Attacks you on sight\" line; hidden in any open screen, F1, and with the Elsewhere HUD \"standing\" meter off",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_reliquary": [
+        {
+          "file": "s_reliquary__echo_reliquary_held.png",
+          "scene": 447,
+          "line": 497,
+          "check": "icon: a dark iron reliquary orb with echo-teal glass; name in epic purple; lore: a grey first line \"Reliquary of the Mute Order (Summoner, Elite)\", blue stat lines, and a red last line \"Takes 2 minion slots\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_reliquary_tooltip.png",
+          "scene": 447,
+          "line": 497,
+          "check": "icon: a dark iron reliquary orb with echo-teal glass; name in epic purple; lore: a grey first line \"Reliquary of the Mute Order (Summoner, Elite)\", blue stat lines, and a red last line \"Takes 2 minion slots\"",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner.png",
+          "scene": 448,
+          "line": 498,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png",
+          "scene": 448,
+          "line": 498,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_knight_striking.png",
+          "scene": 449,
+          "line": 499,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_knight_striking_later.png",
+          "scene": 449,
+          "line": 499,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_foresight": {
+      "elsewhere:azmar_sultana": [
+        {
+          "file": "s_foresight__boss_bar_during_a_wind_up_azmar_sultana.png",
+          "scene": 450,
+          "line": 502,
+          "check": "the bar shows her name ONLY: no \" · <move>\" after it, no boss_ui attack/cast line under the bar",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:stormcrest_helm": [
+        {
+          "file": "s_foresight__stormcrest_helm_first_person.png",
+          "scene": 451,
+          "line": 503,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        },
+        {
+          "file": "s_foresight__stormcrest_helm_third_person.png",
+          "scene": 451,
+          "line": 503,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        },
+        {
+          "file": "s_foresight__stormcrest_helm_tooltip.png",
+          "scene": 451,
+          "line": 503,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:05:58",
+  "totals": {
+    "ok": 30,
+    "fail": 2,
+    "manual": 0
+  }
+}
