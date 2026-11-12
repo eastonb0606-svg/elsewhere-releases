@@ -7,7 +7,9 @@
           "scene": 249,
           "line": 279,
           "check": "\"Dropped by: Highland Yak\" (creatures that have a spawn egg, e.g. `elsewhere:bog_wight`, also show the egg slot top right); drops in the grid with chance tooltips",
-          "status": "pending"
+          "status": "manual",
+          "detail": "not automatable: JEI recipe-lookup GUI (R on the item) cannot be opened by any ShotRunner step",
+          "taken": "22:59:15"
         }
       ],
       "elsewhere:hacksilver": [
@@ -16,14 +18,18 @@
           "scene": 251,
           "line": 281,
           "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
-          "status": "pending"
+          "status": "manual",
+          "detail": "not automatable: JEI recipe page (R on the item, Test Meter category) has no ShotRunner step; shots would only show a held item, not the check",
+          "taken": "22:59:15"
         },
         {
           "file": "s_compat_jei__hacksilver_third_person.png",
           "scene": 251,
           "line": 281,
           "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
-          "status": "pending"
+          "status": "manual",
+          "detail": "not automatable: JEI recipe page (R on the item, Test Meter category) has no ShotRunner step; shots would only show a held item, not the check",
+          "taken": "22:59:15"
         }
       ],
       "elsewhere:azmar_dinar": [
@@ -32,14 +38,18 @@
           "scene": 252,
           "line": 282,
           "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
-          "status": "pending"
+          "status": "manual",
+          "detail": "not automatable: JEI info pages need the JEI overlay opened with the I/R keys in a real client; no ShotRunner step can press them",
+          "taken": "22:59:15"
         },
         {
           "file": "s_compat_jei__azmar_dinar_third_person.png",
           "scene": 252,
           "line": 282,
           "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
-          "status": "pending"
+          "status": "manual",
+          "detail": "not automatable: JEI info pages need the JEI overlay opened with the I/R keys in a real client; no ShotRunner step can press them",
+          "taken": "22:59:15"
         }
       ]
     },
@@ -104,14 +114,16 @@
           "scene": 258,
           "line": 291,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:39"
         },
         {
           "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
           "scene": 258,
           "line": 291,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:14"
         }
       ],
       "Thoughts in chat": [
@@ -120,22 +132,26 @@
           "scene": 260,
           "line": 293,
           "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
-          "status": "pending"
+          "status": "manual",
+          "detail": "not automatable: the (you think) line comes from the external /high mod at a random moment within 2.5 min and chat fades after 10 s, so a fixed-time shot cannot catch it",
+          "taken": "22:59:15"
         },
         {
           "file": "s_greenhaze_rework__thoughts_in_chat_5s.png",
           "scene": 260,
           "line": 293,
           "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
-          "status": "pending"
+          "status": "manual",
+          "detail": "not automatable: the (you think) line comes from the external /high mod at a random moment within 2.5 min and chat fades after 10 s, so a fixed-time shot cannot catch it",
+          "taken": "22:59:15"
         }
       ]
     }
   },
-  "run": "22:58:12",
+  "run": "22:59:15",
   "totals": {
-    "ok": 6,
+    "ok": 8,
     "fail": 0,
-    "manual": 0
+    "manual": 7
   }
 }

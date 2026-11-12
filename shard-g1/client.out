@@ -573,3 +573,41 @@ Caused by: java.lang.IllegalStateException: Tried to access entity ID before ID 
 	at knot//net.minecraft.client.renderer.entity.EntityRenderDispatcher.extractEntity(EntityRenderDispatcher.java:128)
 	... 17 more
 [22:58:13] [Server thread/INFO] (Minecraft) System chat: Set high to 95% for 1 player(s).
+[22:58:39] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[22:58:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_greenhaze_rework__hallucinated_mobs.png: 
+[22:59:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_greenhaze_rework__hallucinated_mobs_5s.png: 
+[22:59:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 258 (s_greenhaze_rework | Hallucinated mobs) done in 62478 ms
+[22:59:14] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:59:14] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:59:14] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:59:14] [Server thread/INFO] (Minecraft) Stopping server
+[22:59:14] [Server thread/INFO] (Minecraft) Saving players
+[22:59:14] [Server thread/INFO] (Minecraft) Saving worlds
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:59:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:59:15] [Render thread/INFO] (ClientLifecycleHandler) Stopping JEI
+[22:59:15] [Render thread/INFO] (JeiStarter) Stopping JEI
+[22:59:15] [Render thread/INFO] (PluginCaller) Sending Runtime Unavailable...
+[22:59:15] [Render thread/INFO] (FabricGuiPlugin) Stopping JEI GUI
+[22:59:15] [Render thread/INFO] (PluginCaller) Sending Runtime Unavailable took 559.5 microseconds
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_compat_jei__jei_category_elsewhere_loot_a_creature_p.png: not automatable: JEI recipe-lookup GUI (R on the item) cannot be opened by any ShotRunner step
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_compat_jei__hacksilver_first_person.png: not automatable: JEI recipe page (R on the item, Test Meter category) has no ShotRunner step; shots would only show a held item, not the check
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_compat_jei__hacksilver_third_person.png: not automatable: JEI recipe page (R on the item, Test Meter category) has no ShotRunner step; shots would only show a held item, not the check
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_compat_jei__azmar_dinar_first_person.png: not automatable: JEI info pages need the JEI overlay opened with the I/R keys in a real client; no ShotRunner step can press them
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_compat_jei__azmar_dinar_third_person.png: not automatable: JEI info pages need the JEI overlay opened with the I/R keys in a real client; no ShotRunner step can press them
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_greenhaze_rework__thoughts_in_chat.png: not automatable: the (you think) line comes from the external /high mod at a random moment within 2.5 min and chat fades after 10 s, so a fixed-time shot cannot catch it
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_greenhaze_rework__thoughts_in_chat_5s.png: not automatable: the (you think) line comes from the external /high mod at a random moment within 2.5 min and chat fades after 10 s, so a fixed-time shot cannot catch it
+[22:59:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 8 ok, 0 fail, 7 manual
+[22:59:15] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 3m 11s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
