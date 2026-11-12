@@ -98,7 +98,7 @@ public final class GearV2 {
 				if (tick > 0) stack.hurtAndBreak(1, sp, hand);
 			}
 			SpellLines.Line line = SpellLines.trace(level, sp, PRISM_RANGE, 1, false);
-			if (tick % 2 == 0) SpellLines.particles(level, line.start().add(0, -0.2, 0), line.end(), ParticleTypes.END_ROD, 1.2); // P13: end rods linger 3 s; was every tick at 0.8
+			if (tick % 2 == 0) SpellLines.particles(level, SpellLines.handStart(sp), line.end(), ParticleTypes.END_ROD, 1.2); // P13: end rods linger 3 s; was every tick at 0.8
 			LivingEntity t = null;
 			for (LivingEntity c : line.targets()) if (!(Spells.friendly(sp, c) && !(c instanceof Player))) t = c;
 			if (t == null) {

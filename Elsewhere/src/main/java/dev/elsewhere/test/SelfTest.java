@@ -857,8 +857,11 @@ public final class SelfTest {
 		var offers = dev.elsewhere.palehollow.entity.SapTapper.offers();
 		boolean staff = dev.elsewhere.palehollow.ArsenalLinks.item(dev.elsewhere.palehollow.entity.SapTapper.STAFF_ID).isPresent()
 			&& dev.elsewhere.palehollow.ArsenalLinks.item(dev.elsewhere.palehollow.ArsenalLinks.MOONSILK_THREAD).isPresent();
-		check(offers.size() == (staff ? 4 : 3) && offers.stream().noneMatch(o -> o.getResult().isEmpty()),
-			"Sap Tapper offers " + offers.size() + " trades (Rootcall Staff " + (staff ? "sold, 1 per player" : "absent in this build, skipped") + ")");
+		// gear3 (merged jar) legitimately appends the Mothlight Staff offer (SapTapperMothlightMixin, GEAR.md A5); count it when present
+		boolean moth = net.minecraft.core.registries.BuiltInRegistries.ITEM.containsKey(net.minecraft.resources.Identifier.fromNamespaceAndPath("elsewhere", "mothlight_staff"))
+			&& !"false".equalsIgnoreCase(System.getProperty("elsewhere.overhaul3.mothlight_staff"));
+		check(offers.size() == (staff ? 4 : 3) + (moth ? 1 : 0) && offers.stream().noneMatch(o -> o.getResult().isEmpty()),
+			"Sap Tapper offers " + offers.size() + " trades (Rootcall Staff " + (staff ? "sold, 1 per player" : "absent in this build, skipped") + (moth ? ", Mothlight Staff from gear3" : "") + ")");
 		check(offers.get(0).getBaseCostA().count() == 12 && offers.get(0).getMaxUses() == 16, "Sap Tapper: 12 resin clumps -> 1 emerald, 16 per restock");
 		if (staff) check(offers.get(3).getMaxUses() == 1 && offers.get(3).getBaseCostA().count() == 30, "Sap Tapper: Rootcall Staff for 30 Pale Bark + 2 Moonsilk Thread, one use");
 		var reg = hollow.registryAccess().lookupOrThrow(net.minecraft.core.registries.Registries.STRUCTURE);

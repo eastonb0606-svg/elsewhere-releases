@@ -121,7 +121,10 @@ public final class SelfTest {
 
 		// trades by id
 		var ww = ModEntities.WINDWRIGHT.create(level, net.minecraft.world.entity.EntitySpawnReason.COMMAND);
-		int wwExpected = 3 + (ArsenalHooks.item("gale_rapier").isPresent() ? 1 : 0) + (ArsenalHooks.item("gale_ribbon").isPresent() ? 1 : 0) + (ArsenalHooks.item("kitestring_staff").isPresent() ? 1 : 0) + (ArsenalHooks.item("bell_of_the_flock").isPresent() ? 1 : 0);
+		int wwExpected = 3 + (ArsenalHooks.item("gale_rapier").isPresent() ? 1 : 0) + (ArsenalHooks.item("gale_ribbon").isPresent() ? 1 : 0) + (ArsenalHooks.item("kitestring_staff").isPresent() ? 1 : 0) + (ArsenalHooks.item("bell_of_the_flock").isPresent() ? 1 : 0)
+			// gear3 (merged jar) appends the Gale Sling offer in WindwrightTradeMixin (GEAR.md A5)
+			+ (net.minecraft.core.registries.BuiltInRegistries.ITEM.containsKey(net.minecraft.resources.Identifier.fromNamespaceAndPath("elsewhere", "gale_sling"))
+				&& !"false".equalsIgnoreCase(System.getProperty("elsewhere.overhaul3.gale_sling_trade")) ? 1 : 0);
 		check(ww != null && nonMap(ww.getOffers()) == wwExpected && ww.getOffers().stream().noneMatch(o -> o.getResult().isEmpty()),
 			f("Windwright: %d trades (Kitestring Staff %s, Bell of the Flock %s)", ww == null ? -1 : ww.getOffers().size(),
 				ArsenalHooks.item("kitestring_staff").isPresent() ? "sold" : "absent, skipped", ArsenalHooks.item("bell_of_the_flock").isPresent() ? "sold" : "absent, skipped"));

@@ -26,6 +26,11 @@ public final class CallingPanel {
 		if (p == null) return;
 		Font font = mc.font;
 		int x = 6, y = dev.elsewhere.arsenal.CallingPanelLayout.top(), w = 164, rowH = 12; // below Green Leaf's high meter when it is loaded
+		// boss bars are drawn top centre and their icons reach 22 px left of the bar: when the panel would run into them, drop it below the bars
+		int bars = bossBars(mc);
+		if (bars > 0 && x + w + 3 > mc.getWindow().getGuiScaledWidth() / 2 - 91 - 24) {
+			y = Math.max(y, Math.min(12 + 44 * bars, mc.getWindow().getGuiScaledHeight() / 2 + 8));
+		}
 		g.fill(x - 3, y - 3, x + w + 3, y + 14 + 4 * rowH, 0xA0101018);
 		g.text(font, "Callings", x, y, 0xFFE8E0FF, true);
 		y += 12;
@@ -37,6 +42,26 @@ public final class CallingPanel {
 			g.fill(bx, y + 2, bx + bw, y + 7, 0xFF2A2A33);
 			g.fill(bx, y + 2, bx + Math.round(bw * m), y + 7, COLORS[path.ordinal()]);
 			y += rowH;
+		}
+	}
+
+	private static java.lang.reflect.Field barsField;
+	private static boolean barsFieldTried;
+
+	/** Number of boss bars on screen (vanilla overlay's map, read once by reflection; 0 if it cannot be read). */
+	static int bossBars(Minecraft mc) {
+		try {
+			if (!barsFieldTried) {
+				barsFieldTried = true;
+				barsField = net.minecraft.client.gui.components.BossHealthOverlay.class.getDeclaredField("events");
+				barsField.setAccessible(true);
+			}
+			if (barsField == null) return 0;
+			Object o = barsField.get(mc.gui.hud.getBossOverlay());
+			return o instanceof java.util.Map<?, ?> m ? m.size() : 0;
+		} catch (ReflectiveOperationException | RuntimeException e) {
+			barsField = null;
+			return 0;
 		}
 	}
 

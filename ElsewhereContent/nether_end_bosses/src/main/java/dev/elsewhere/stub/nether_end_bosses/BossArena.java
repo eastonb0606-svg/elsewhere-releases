@@ -117,6 +117,27 @@ public final class BossArena {
 		return n;
 	}
 
+	/** First few blocks that differ from the snapshot, as "x y z was X now Y" (self-test diagnostics). */
+	public String diffDetail(ServerLevel level, int max) {
+		if (snapshot == null) return "no snapshot";
+		StringBuilder sb = new StringBuilder();
+		int n = 0;
+		BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
+		for (int y = minY; y <= maxY && n < max; y++) {
+			for (int z = center.getZ() - radius; z <= center.getZ() + radius && n < max; z++) {
+				for (int x = center.getX() - radius; x <= center.getX() + radius && n < max; x++) {
+					BlockState cur = level.getBlockState(pos.set(x, y, z));
+					BlockState was = snapshot[index(x, y, z)];
+					if (differs(cur, was)) {
+						sb.append(x).append(' ').append(y).append(' ').append(z).append(" was ").append(was).append(" now ").append(cur).append("; ");
+						n++;
+					}
+				}
+			}
+		}
+		return sb.toString();
+	}
+
 	/** Fills the air on the arena's rim with the translucent seal. Returns how many seal blocks were placed. */
 	public int seal(ServerLevel level, int maxBlocks) {
 		if (voidArena) return 0; // void arenas rely on the return-to-the-ledge rule instead of a wall

@@ -268,7 +268,7 @@ public class RimebackEntity extends ElsewhereBoss {
 		this.waveZ += 0.75;
 		BossArena a = this.arena;
 		// P13: the wall is drawn every 2nd tick (z spread widened to cover the 1.5-block step), was every tick
-		if (this.tickCount % 2 == 0) for (int dx = -a.radius; dx <= a.radius; dx += 2) {
+		if (this.tickCount % 2 == 0) for (int dx = -a.radius; dx <= a.radius; dx += 1) { // 1-block columns with 0.8 x spread: no stripes between them
 			double x = a.center.getX() + dx + 0.5;
 			sl.sendParticles(new BlockParticleOption(ParticleTypes.FALLING_DUST, Blocks.SNOW_BLOCK.defaultBlockState()), x, a.floorY + 2.5, this.waveZ, 2, 0.8, 1.2, 0.55, 0.0);
 			sl.sendParticles(ParticleTypes.SNOWFLAKE, x, a.floorY + 1.5, this.waveZ, 2, 0.8, 0.8, 0.55, 0.05);

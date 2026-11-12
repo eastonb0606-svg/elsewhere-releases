@@ -227,7 +227,7 @@ public class ShotRunner implements FabricClientGameTest {
 			case "anchor_from_log" -> anchorFromLog(a.get(1).getAsString(), a.get(2).getAsString());
 			case "locate", "locate_near" -> locate(ctx, a.get(1).getAsString(), op.equals("locate_near"));
 			case "summon" -> summon(ctx, a);
-			case "view" -> view(ctx, a.get(1).getAsDouble(), a.get(2).getAsDouble(), a.get(3).getAsDouble());
+			case "view" -> view(ctx, a.get(1).getAsDouble(), a.get(2).getAsDouble(), a.get(3).getAsDouble(), a.size() > 4 && "ground".equals(a.get(4).getAsString()));
 			case "look_target" -> lookTarget(ctx);
 			case "camera" -> {
 				String m = a.get(1).getAsString();
@@ -314,6 +314,13 @@ public class ShotRunner implements FabricClientGameTest {
 				e.discard();
 			}
 		});
+		if (flatWorld) {
+			// leftover stages (glass arenas, walls, pillars) from the previous scene would show up behind this one: clear everything above the ground
+			// within 40 blocks, in layers small enough for /fill (81 x 81 x 4 = 26244 <= 32768)
+			for (int y0 = groundY; y0 < groundY + 32; y0 += 4) {
+				server.runCommand(String.format(Locale.ROOT, "fill -40 %d -40 40 %d 40 minecraft:air", y0, y0 + 3));
+			}
+		}
 		server.runCommand("clear @a");
 		server.runCommand("effect clear @a");
 		server.runCommand("gamemode " + mode + " @a");
@@ -321,6 +328,13 @@ public class ShotRunner implements FabricClientGameTest {
 			ServerPlayer p = player(s);
 			p.getInventory().setSelectedSlot(0);
 			p.setHealth(p.getMaxHealth());
+			// clean player: no stuck arrows / bee stingers, no fire, no hurt flash, no fall damage carried over
+			p.setArrowCount(0);
+			p.setStingerCount(0);
+			p.clearFire();
+			p.hurtTime = 0;
+			p.fallDistance = 0;
+			p.setDeltaMovement(Vec3.ZERO);
 			boolean fly = p.getAbilities().instabuild || p.isSpectator();
 			p.getAbilities().flying = fly && !flatWorld;
 			p.onUpdateAbilities();
@@ -564,7 +578,7 @@ public class ShotRunner implements FabricClientGameTest {
 	}
 
 	/** Puts the camera (the player) in front of the target, `angle` degrees off its facing, distance max(min, mult x height). */
-	private void view(final ClientGameTestContext ctx, final double mult, final double min, final double angle) {
+	private void view(final ClientGameTestContext ctx, final double mult, final double min, final double angle, final boolean ground) {
 		UUID id = target;
 		if (id == null) {
 			throw new SceneFail("view before summon");
@@ -575,8 +589,19 @@ public class ShotRunner implements FabricClientGameTest {
 				return null;
 			}
 			ServerPlayer p = player(s);
+			if (ground && flatWorld) {
+				// opt-in: a boss that is hovering above the flat ground (it was summoned, then NoAI froze it mid-air) is put back on it
+				LOG.info("[shots] view ground: {} y={} groundY={} noGravity={}", e.getType(), e.getY(), groundY, e.isNoGravity());
+				if (e.getY() > groundY + 0.5) {
+					e.setNoGravity(false);
+					e.snapTo(e.getX(), groundY, e.getZ(), e.getYRot(), e.getXRot());
+					e.setDeltaMovement(Vec3.ZERO);
+				}
+			}
 			double h = Math.max(0.5, e.getBbHeight());
-			double d = Math.max(min, mult * h);
+			// wide bodies (ashtusk: 3 wide, ~7 long): frame the length, not just the height
+			double extent = e.getBbWidth() >= 2.0F ? Math.max(h, 2.2 * e.getBbWidth()) : h;
+			double d = Math.max(min, mult * extent);
 			double yaw = Math.toRadians(e.getYRot() + angle);
 			double cx = e.getX() - Math.sin(yaw) * d, cz = e.getZ() + Math.cos(yaw) * d;
 			boolean walk = !p.getAbilities().mayfly && !p.isSpectator();
@@ -926,7 +951,7 @@ public class ShotRunner implements FabricClientGameTest {
 			a.add(id);
 			a.add("{NoAI:1b,PersistenceRequired:1b}");
 			summon(ctx, a);
-			view(ctx, 1.6, 5.0, 35.0);
+			view(ctx, 1.6, 5.0, 35.0, false);
 			chunks(ctx);
 			ctx.waitTicks(20);
 		} else if (BuiltInRegistries.ITEM.containsKey(k)) {

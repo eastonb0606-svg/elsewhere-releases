@@ -274,8 +274,7 @@ public class Percolax extends BossEntity {
 				hideTicks--;
 				boolean ember = (hideTicks / 20) % 3 == 0;
 				entityData.set(EMBER, ember);
-				if (ember) addEffect(new MobEffectInstance(MobEffects.GLOWING, 25, 0, false, false));
-				if (hideTicks % 2 == 0) level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, getX(), getY() + 3, getZ(), 6, 2, 2.5, 2, 0.01); // P13: every 2nd tick (cosy smoke lives 4-6 s, the cloud stays thick)
+				level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, getX(), getY() + 3, getZ(), 6, 1.6, 3.0, 1.6, 0.01); // every tick: thick cloud that buries the glass body; the ember glow is drawn by the renderer, no whole-body outline // P13: every 2nd tick (cosy smoke lives 4-6 s, the cloud stays thick)
 				if (hideTicks == 0) { entityData.set(HIDDEN, false); entityData.set(EMBER, false); }
 			} else if (ready("hide") && busy == 0) {
 				hideTicks = 120;

@@ -434,7 +434,7 @@ public final class SelfTest {
 				check(fight[0].minionCount(lv[0]) == 0, id + ": minions cleaned up");
 				int diff = fight[0].arena.diff(lv[0]);
 				// Aphelion: surviving end crystals keep re-lighting the fire under themselves (vanilla End behaviour)
-				check(diff == 0 || id.equals("aphelion") && diff <= 4, id + ": arena restored after the win (" + diff + " blocks differ)");
+				check(diff == 0 || id.equals("aphelion") && diff <= 4, id + ": arena restored after the win (" + diff + " blocks differ)" + (diff == 0 ? "" : " :: " + fight[0].arena.diffDetail(lv[0], 6)));
 				check(p[0].getAttribute(Attributes.GRAVITY).getModifier(StubFramework.FIGHT_GRAVITY) == null, id + ": fight gravity cleared after the fight");
 				clearLoot(lv[0], fight[0].arena.box());
 				ChunkPos c = ChunkPos.containing(origin);

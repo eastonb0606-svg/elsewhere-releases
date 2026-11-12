@@ -52,7 +52,7 @@ public final class BrainLod {
 	 * villager forgets an unreachable POI exactly when vanilla would. At most {@link #WALK_SEARCHES_PER_TICK} villager walk
 	 * searches start per server tick; a villager over the budget keeps its walk target and searches on a later pass.
 	 */
-	public static final int FUTILE_MEMO = 40, WALK_SEARCHES_PER_TICK = 3;
+	public static final int FUTILE_MEMO = 40, WALK_SEARCHES_PER_TICK = 3, WALK_SEARCHES_SIEGE = 2; // fx-siegep95: while a siege runs 2 (path finding was 15% of the top-5% ticks vs 7% of an average one)
 	public static long walkSearches, walkSearchesSaved, walkSearchesDeferred;
 	public static int maxWalkSearchesInTick;
 	private static long budgetTick = Long.MIN_VALUE;
@@ -61,7 +61,7 @@ public final class BrainLod {
 	/** One villager walk search this tick, or false when the per-tick budget is used up (try again on a later pass). */
 	public static boolean tryWalkSearch(long gameTime) {
 		roll(gameTime);
-		if (budgetUsed >= WALK_SEARCHES_PER_TICK || searchesUsed >= SEARCHES_PER_TICK) {
+		if (budgetUsed >= (siegeActive ? WALK_SEARCHES_SIEGE : WALK_SEARCHES_PER_TICK) || searchesUsed >= sharedCap()) {
 			walkSearchesDeferred++;
 			return false;
 		}
@@ -77,7 +77,9 @@ public final class BrainLod {
 	 * ({@link #startPassTick} is that pass's game time, MIN_VALUE outside it). Over the budget the search waits for the
 	 * villager's next start pass, its own schedule untouched.
 	 */
-	public static final int POI_SEARCHES_PER_TICK = 3;
+	public static final int POI_SEARCHES_PER_TICK = 3, POI_SEARCHES_SIEGE = 1; // fx-siegep95: while a siege runs 1 (AcquirePoi was 13% of the top-5% ticks)
+	/** Set every tick by the villages manager: some village is in SIEGE (the tighter search budgets apply only then). */
+	public static boolean siegeActive;
 	public static long poiSearches, poiSearchesDeferred;
 	public static int maxPoiSearchesInTick;
 	public static long startPassTick = Long.MIN_VALUE;
@@ -91,7 +93,7 @@ public final class BrainLod {
 			return false; // siege shelter: no POI acquisition until the siege ends
 		}
 		roll(startPassTick);
-		if (poiUsed >= POI_SEARCHES_PER_TICK || searchesUsed >= SEARCHES_PER_TICK) {
+		if (poiUsed >= (siegeActive ? POI_SEARCHES_SIEGE : POI_SEARCHES_PER_TICK) || searchesUsed >= sharedCap()) {
 			poiSearchesDeferred++;
 			return false;
 		}
@@ -121,7 +123,8 @@ public final class BrainLod {
 	 * so one tick never stacks both bursts (3 + 3 path searches were the siege bench's slowest ticks). Bench demand is about
 	 * 2.3 searches a tick, so a deferred search runs on the villager's next start pass.
 	 */
-	public static final int SEARCHES_PER_TICK = Integer.MAX_VALUE; // fx-siegeperf: shared cap measured no gain (8.59 ms vs 7.75 without); off, own caps only
+	public static final int SEARCHES_PER_TICK = 2; // fx-siegep95: during a siege walk + POI searches share 2 a tick; a deferred search retries on the villager's next start pass
+	private static int sharedCap() { return siegeActive ? SEARCHES_PER_TICK : Integer.MAX_VALUE; }
 	private static int searchesUsed;
 
 	private static void roll(long tick) {

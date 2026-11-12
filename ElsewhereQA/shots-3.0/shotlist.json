@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 16:24",
+ "generated": "2026-11-12 16:49",
  "scenes": [
   {
    "n": 1,
@@ -503,6 +503,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -517,7 +521,7 @@
     ],
     [
      "wait",
-     120
+     660
     ],
     [
      "client_set",
@@ -547,7 +551,8 @@
     }
    ],
    "check": "top-left box \"Callings\": Caster Primary with a full bar, Vanguard/Marksman/Summoner Open with short bars; text readable, nothing overlapping the hotbar or the Glimmer bar",
-   "setup": "survival player in flat daylight, full Moonsilk set + Sunlance Staff in main hand, panel shown (`CallingPanel.shown = true`); ready-made scene: `ArsenalScreenshots.calling()` in arsenal's client gametest (env `ARSENAL_CALLING_ONLY=1` runs only it, shot `arsenal_calling_panel_caster`)"
+   "setup": "survival player in flat daylight, full Moonsilk set + Sunlance Staff in main hand, panel shown (`CallingPanel.shown = true`); ready-made scene: `ArsenalScreenshots.calling()` in arsenal's client gametest (env `ARSENAL_CALLING_ONLY=1` runs only it, shot `arsenal_calling_panel_caster`)",
+   "override": "hud.json"
   },
   {
    "n": 10,
@@ -569,6 +574,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -583,7 +592,7 @@
     ],
     [
      "wait",
-     100
+     660
     ],
     [
      "inventory",
@@ -624,7 +633,8 @@
     }
    ],
    "check": "purple line \"Caster 100%: spells x1.15, cost x0.90\" (staff) or the Leaning line on the robe; no line on vanilla items",
-   "setup": "same player, inventory open, cursor over the Moonsilk Robe and then the Sunlance Staff"
+   "setup": "same player, inventory open, cursor over the Moonsilk Robe and then the Sunlance Staff",
+   "override": "hud.json"
   },
   {
    "n": 11,
@@ -646,6 +656,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -660,7 +674,7 @@
     ],
     [
      "wait",
-     120
+     660
     ],
     [
      "chat",
@@ -672,7 +686,7 @@
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "shot",
@@ -690,7 +704,8 @@
     }
    ],
    "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
-   "setup": "same player types `/calling` with chat visible"
+   "setup": "same player types `/calling` with chat visible",
+   "override": "hud.json"
   },
   {
    "n": 12,
@@ -1699,6 +1714,13 @@
     ],
     [
      "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
      100
     ],
     [
@@ -1714,7 +1736,7 @@
    ],
    "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
    "setup": "C+(52, +40, 52) yaw 135 pitch 32",
-   "override": "shard-3.out.json"
+   "override": "castles.json"
   },
   {
    "n": 27,
@@ -1761,6 +1783,13 @@
     ],
     [
      "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
      100
     ],
     [
@@ -1775,6 +1804,13 @@
      0.0,
      -90.0,
      12.0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
     ],
     [
      "chunks"
@@ -1800,7 +1836,7 @@
    ],
    "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
    "setup": "C+(0, +22, 82) yaw 180 pitch 14; C+(-70, +18, 0) yaw -90 pitch 12",
-   "override": "shard-4.out.json"
+   "override": "castles.json"
   },
   {
    "n": 28,
@@ -1837,10 +1873,17 @@
      "tp",
      "anchor",
      0,
-     75,
-     150,
+     60,
+     100,
      180,
-     32
+     30
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
     ],
     [
      "chunks"
@@ -1857,10 +1900,17 @@
      "tp",
      "anchor",
      -88.5,
-     26,
+     34,
      52.5,
      180,
-     26
+     28
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
     ],
     [
      "chunks"
@@ -1877,10 +1927,17 @@
      "tp",
      "anchor",
      88.5,
-     26,
+     34,
      52.5,
      180,
-     26
+     28
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
     ],
     [
      "chunks"
@@ -1910,7 +1967,7 @@
    ],
    "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
    "setup": "C+(0, +75, 150) yaw 180 pitch 32; C+(-/+88.5, +26, 52.5) yaw 180 pitch 26",
-   "override": "shard-5.out.json"
+   "override": "castles.json"
   },
   {
    "n": 29,
@@ -3475,7 +3532,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -3488,12 +3546,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -3501,7 +3559,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -3519,7 +3577,8 @@
     }
    ],
    "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:solaxis,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:solaxis,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 46,
@@ -3561,7 +3620,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -3574,12 +3634,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -3587,7 +3647,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -3605,7 +3665,8 @@
     }
    ],
    "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:grunthar,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:grunthar,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 47,
@@ -3647,7 +3708,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -3660,12 +3722,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -3673,7 +3735,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -3691,7 +3753,8 @@
     }
    ],
    "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:ashtusk,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:ashtusk,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 48,
@@ -3733,7 +3796,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -3746,12 +3810,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -3759,7 +3823,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -3777,7 +3841,8 @@
     }
    ],
    "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:mournmaw,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:mournmaw,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 49,
@@ -3819,7 +3884,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -3832,12 +3898,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -3845,7 +3911,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -3863,7 +3929,8 @@
     }
    ],
    "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:ossyra,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:ossyra,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 50,
@@ -3905,7 +3972,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -3918,12 +3986,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -3931,7 +3999,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -3949,7 +4017,8 @@
     }
    ],
    "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:aphelion,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:aphelion,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 51,
@@ -3991,7 +4060,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4001,11 +4071,14 @@
      20
     ],
     [
+     "look_target"
+    ],
+    [
      "kill"
     ],
     [
      "wait",
-     15
+     14
     ],
     [
      "shot",
@@ -4019,7 +4092,8 @@
     }
    ],
    "check": "legs splayed and head sagging while it tips over",
-   "setup": "summon, then `/kill @e[type=elsewhere:ashtusk,limit=1]`, shoot 15 ticks after"
+   "setup": "summon, then `/kill @e[type=elsewhere:ashtusk,limit=1]`, shoot 15 ticks after",
+   "override": "harness.json"
   },
   {
    "n": 52,
@@ -4061,7 +4135,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4074,12 +4149,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4087,7 +4162,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4105,7 +4180,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:gulpmother,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:gulpmother,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 53,
@@ -4147,7 +4223,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4160,12 +4237,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4173,7 +4250,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4191,7 +4268,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:strawgrim,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:strawgrim,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 54,
@@ -4233,7 +4311,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4246,12 +4325,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4259,7 +4338,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4277,7 +4356,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:neferkhet,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:neferkhet,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 55,
@@ -4319,7 +4399,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4332,12 +4413,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4345,7 +4426,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4363,7 +4444,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:rimeback,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:rimeback,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 56,
@@ -4405,7 +4487,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4418,12 +4501,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4431,7 +4514,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4449,7 +4532,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:vorlagh,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:vorlagh,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 57,
@@ -4491,7 +4575,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4504,12 +4589,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4517,7 +4602,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4535,7 +4620,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:percolax,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:percolax,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 58,
@@ -4577,7 +4663,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4590,12 +4677,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4603,7 +4690,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4621,7 +4708,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:grumblegut,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:grumblegut,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 59,
@@ -4663,7 +4751,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4676,12 +4765,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4689,7 +4778,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4707,7 +4796,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:auris,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:auris,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 60,
@@ -4749,7 +4839,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4762,12 +4853,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4775,7 +4866,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4793,7 +4884,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:lithara,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:lithara,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 61,
@@ -4835,7 +4927,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4848,12 +4941,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4861,7 +4954,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4879,7 +4972,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:thurgrim,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:thurgrim,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 62,
@@ -4921,7 +5015,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -4934,12 +5029,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -4947,7 +5042,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -4965,7 +5060,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:hrolf,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:hrolf,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 63,
@@ -5007,7 +5103,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5020,12 +5117,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5033,7 +5130,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5051,7 +5148,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:grimhorn,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:grimhorn,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 64,
@@ -5093,7 +5191,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5106,12 +5205,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5119,7 +5218,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5137,7 +5236,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:verdigrim,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:verdigrim,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 65,
@@ -5179,7 +5279,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5192,12 +5293,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5205,7 +5306,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5223,7 +5324,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:galvanox,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:galvanox,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 66,
@@ -5265,7 +5367,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5278,12 +5381,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5291,7 +5394,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5309,7 +5412,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:kazehana,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:kazehana,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 67,
@@ -5351,7 +5455,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5364,12 +5469,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5377,7 +5482,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5395,7 +5500,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:tempestra,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:tempestra,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 68,
@@ -5437,7 +5543,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5450,12 +5557,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5463,7 +5570,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5481,7 +5588,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:heliodor,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:heliodor,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 69,
@@ -5523,7 +5631,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5536,12 +5645,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5549,7 +5658,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5567,7 +5676,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:ankhara,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:ankhara,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 70,
@@ -5609,7 +5719,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5622,12 +5733,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5635,7 +5746,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5653,7 +5764,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:mother_creak,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:mother_creak,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 71,
@@ -5695,7 +5807,8 @@
      "view",
      1.6,
      5.0,
-     35.0
+     35.0,
+     "ground"
     ],
     [
      "chunks"
@@ -5708,12 +5821,12 @@
      "look_target"
     ],
     [
-     "damage",
-     1
+     "cmd",
+     "time set 6000"
     ],
     [
-     "wait",
-     4
+     "damage",
+     1
     ],
     [
      "shot",
@@ -5721,7 +5834,7 @@
     ],
     [
      "wait",
-     7
+     6
     ],
     [
      "shot",
@@ -5739,7 +5852,8 @@
     }
    ],
    "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:selenne,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)"
+   "setup": "summon on flat ground (NoAI so it holds still) or in its arena, camera at a three-quarter angle about 1.6 x its height away; `/damage @e[type=elsewhere:selenne,limit=1] 1 minecraft:generic`, shoot 1 tick after (peak) and 8 ticks after (rest)",
+   "override": "harness.json"
   },
   {
    "n": 72,
@@ -11702,6 +11816,14 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
@@ -11732,7 +11854,7 @@
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "shot",
@@ -11746,7 +11868,8 @@
     }
    ],
    "check": "a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
-   "setup": "shield in the off hand, first person, looking at the horizon, not using"
+   "setup": "shield in the off hand, first person, looking at the horizon, not using",
+   "override": "itemsa.json"
   },
   {
    "n": 139,
@@ -11830,6 +11953,14 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
@@ -11860,7 +11991,7 @@
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "use_down"
@@ -11884,7 +12015,8 @@
     }
    ],
    "check": "the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
-   "setup": "same, hold use for 1 s"
+   "setup": "same, hold use for 1 s",
+   "override": "itemsa.json"
   },
   {
    "n": 141,
@@ -12167,6 +12299,14 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
@@ -12197,7 +12337,7 @@
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "shot",
@@ -12211,7 +12351,8 @@
     }
    ],
    "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
-   "setup": "as the first line"
+   "setup": "as the first line",
+   "override": "itemsa.json"
   },
   {
    "n": 146,
@@ -12226,6 +12367,14 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
@@ -12256,7 +12405,7 @@
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "use_down"
@@ -12280,7 +12429,8 @@
     }
    ],
    "check": "rises to the vanilla blocking spot",
-   "setup": "as the second line"
+   "setup": "as the second line",
+   "override": "itemsa.json"
   },
   {
    "n": 147,
@@ -13501,7 +13651,7 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-20"
+     "tp @s ^ ^12 ^-20 ~ 31"
     ],
     [
      "wait",
@@ -13543,7 +13693,8 @@
     }
    ],
    "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
-   "setup": "flat plains, `/time set 6000`, `/kingdom armies battle azmar aldermark 60`, fly 12 up and 20 back facing the Azmar rear; shot 1 at +10 s (fronts engaged), shot 2 when the bell rings (about +30-45 s, F3 open)"
+   "setup": "flat plains, `/time set 6000`, `/kingdom armies battle azmar aldermark 60`, fly 12 up and 20 back facing the Azmar rear; shot 1 at +10 s (fronts engaged), shot 2 when the bell rings (about +30-45 s, F3 open)",
+   "override": "castles.json"
   },
   {
    "n": 165,
@@ -13647,20 +13798,27 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "locate",
-     "elsewhere:glacier_shelf"
+     "cmd",
+     "effect give @s regeneration infinite 255 true"
     ],
     [
-     "tp",
-     "anchor",
-     22,
-     6,
-     0,
-     90,
-     10
+     "cmd",
+     "elsewhere_dev boss rimeback"
     ],
     [
      "chunks"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:rimeback,limit=1] store result entity @s Health float 1 run attribute @s minecraft:max_health get 0.5"
+    ],
+    [
+     "cmd",
+     "tp @s ~ ~2 ~18 180 8"
     ],
     [
      "wait",
@@ -13672,7 +13830,7 @@
     ],
     [
      "wait",
-     200
+     60
     ],
     [
      "shot",
@@ -13691,7 +13849,8 @@
    ],
    "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
    "setup": "Rimeback fight, trigger the avalanche; side view from the arena wall, shot when the wave is mid-arena",
-   "note": "two timed shots of the started fight; the avalanche is not forced"
+   "note": "two timed shots of the started fight; the avalanche is not forced",
+   "override": "vfx.json"
   },
   {
    "n": 167,
@@ -13918,6 +14077,10 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player]"
+    ],
+    [
+     "cmd",
      "elsewhere_dev boss galvanox"
     ],
     [
@@ -13949,7 +14112,7 @@
    "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
    "setup": "Percolax: shot 3 s into \"Hides in the smoke\"; any verdigris boss (Galvanox) at fight start from the arena edge",
    "note": "fight started by walking in",
-   "override": "shard-5.out.json"
+   "override": "vfx.json"
   },
   {
    "n": 170,
@@ -14341,11 +14504,11 @@
     [
      "tp",
      "anchor",
-     0.0,
-     6.0,
-     48.0,
-     180.0,
-     14.0
+     26.0,
+     5.0,
+     42.0,
+     140.0,
+     16.0
     ],
     [
      "chunks"
@@ -14379,7 +14542,7 @@
    ],
    "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
    "setup": "run `/gamerule sendCommandFeedback false` before the `/gamemode spectator` switch (or wait 12 s or press F1) so no chat line is captured; player alive (the 08:54 lane-rv-mirelook castle views were the You Died! screen)",
-   "override": "shard-4.out.json"
+   "override": "castles.json"
   },
   {
    "n": 175,
@@ -14754,12 +14917,16 @@
      "elsewhere:choirlight_censer"
     ],
     [
-     "camera",
-     "front"
+     "cmd",
+     "tp @s ~ ~ ~ 0 0"
     ],
     [
      "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "summon minecraft:item_display ~-1.3 ~1.3 ~1.5 {item:{id:\"elsewhere:choirlight_censer\",count:1},item_display:\"fixed\",billboard:\"vertical\",transformation:{left_translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[2.2f,2.2f,2.2f],right_rotation:[0f,0f,0f,1f]}}"
+    ],
+    [
+     "camera",
+     "front"
     ],
     [
      "wait",
@@ -14768,6 +14935,10 @@
     [
      "shot",
      "choirlight_censer_held"
+    ],
+    [
+     "cmd",
+     "kill @e[type=minecraft:item_display]"
     ],
     [
      "camera",
@@ -14801,7 +14972,8 @@
    ],
    "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, cursor on the censer; then survival, censer in the main hand, third person front, noon",
-   "note": "survival inventory tooltip (not the creative tab)"
+   "note": "survival inventory tooltip (not the creative tab)",
+   "override": "vfx.json"
   },
   {
    "n": 180,
@@ -14838,9 +15010,9 @@
     [
      "summon",
      "minecraft:wolf",
-     "{Health:8f,PersistenceRequired:1b}",
-     0,
-     3
+     "{Health:8f,PersistenceRequired:1b,NoAI:1b}",
+     1.5,
+     2.6
     ],
     [
      "tp",
@@ -14850,6 +15022,18 @@
      0,
      0,
      10
+    ],
+    [
+     "cmd",
+     "execute as @e[type=minecraft:wolf,distance=..12] run data modify entity @s Owner set from entity @p UUID"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=minecraft:wolf,distance=..12] run attribute @s minecraft:max_health base set 40"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=minecraft:wolf,distance=..12] run data modify entity @s Health set value 8f"
     ],
     [
      "use_down"
@@ -14868,7 +15052,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "tp @s ~ ~ ~ 0 28"
     ],
     [
      "wait",
@@ -14879,12 +15063,16 @@
      "censer_channel_third_person_2s"
     ],
     [
+     "cmd",
+     "attribute @s minecraft:gravity base set 0"
+    ],
+    [
      "camera",
-     "first"
+     "back"
     ],
     [
      "cmd",
-     "tp @s ~ ~8 ~ 0 90"
+     "tp @s ~ ~7 ~ 0 65"
     ],
     [
      "wait",
@@ -14896,6 +15084,14 @@
     ],
     [
      "use_up"
+    ],
+    [
+     "cmd",
+     "attribute @s minecraft:gravity base set 0.08"
+    ],
+    [
+     "camera",
+     "first"
     ]
    ],
    "shots": [
@@ -14914,7 +15110,8 @@
    ],
    "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
    "setup": "survival flat world, noon, full Glimmer; a tamed wolf hurt to 8 HP 3 blocks away; hold use with the censer: shot 1 first person at +1 s, shot 2 third person front at +2 s, shot 3 from 8 up looking down at +3 s",
-   "note": "wolf hurt to 8 HP but untamed; Glimmer as the survival player has it"
+   "note": "wolf hurt to 8 HP but untamed; Glimmer as the survival player has it",
+   "override": "vfx.json"
   },
   {
    "n": 181,
@@ -16912,7 +17109,7 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 18000"
     ],
     [
      "cmd",
@@ -16928,6 +17125,10 @@
      "{PersistenceRequired:1b}"
     ],
     [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!elsewhere:hrafnholt_jarl,distance=..40]"
+    ],
+    [
      "hurt_to",
      0.58
     ],
@@ -16942,10 +17143,18 @@
     ],
     [
      "wait",
-     30
+     40
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:hrafnholt_jarl,distance=..40] run data merge entity @s {NoAI:1b}"
     ],
     [
      "look_target"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -16960,7 +17169,8 @@
    ],
    "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
    "setup": "each at 60% HP (`/damage` to just under the first phase line), night or a dark room, 4 blocks away",
-   "note": "daytime (moonlight tinted the rival model), 58% HP"
+   "note": "daytime (moonlight tinted the rival model), 58% HP",
+   "override": "harness.json"
   },
   {
    "n": 203,
@@ -16975,7 +17185,7 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 18000"
     ],
     [
      "cmd",
@@ -16991,8 +17201,12 @@
      "{PersistenceRequired:1b}"
     ],
     [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!elsewhere:azmar_sultana,distance=..40]"
+    ],
+    [
      "hurt_to",
-     0.58
+     0.42
     ],
     [
      "view",
@@ -17005,10 +17219,18 @@
     ],
     [
      "wait",
-     30
+     40
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:azmar_sultana,distance=..40] run data merge entity @s {NoAI:1b}"
     ],
     [
      "look_target"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -17023,7 +17245,8 @@
    ],
    "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
    "setup": "each at 60% HP (`/damage` to just under the first phase line), night or a dark room, 4 blocks away",
-   "note": "daytime (moonlight tinted the rival model), 58% HP"
+   "note": "daytime (moonlight tinted the rival model), 58% HP",
+   "override": "harness.json"
   },
   {
    "n": 204,
@@ -17038,7 +17261,7 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 18000"
     ],
     [
      "cmd",
@@ -17054,8 +17277,12 @@
      "{PersistenceRequired:1b}"
     ],
     [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!elsewhere:mirewick_ames,distance=..40]"
+    ],
+    [
      "hurt_to",
-     0.58
+     0.42
     ],
     [
      "view",
@@ -17068,10 +17295,18 @@
     ],
     [
      "wait",
-     30
+     40
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:mirewick_ames,distance=..40] run data merge entity @s {NoAI:1b}"
     ],
     [
      "look_target"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -17086,7 +17321,8 @@
    ],
    "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
    "setup": "each at 60% HP (`/damage` to just under the first phase line), night or a dark room, 4 blocks away",
-   "note": "daytime (moonlight tinted the rival model), 58% HP"
+   "note": "daytime (moonlight tinted the rival model), 58% HP",
+   "override": "harness.json"
   },
   {
    "n": 205,
@@ -17101,7 +17337,7 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 18000"
     ],
     [
      "cmd",
@@ -17117,6 +17353,10 @@
      "{PersistenceRequired:1b}"
     ],
     [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!elsewhere:duelist_test,distance=..40]"
+    ],
+    [
      "hurt_to",
      0.58
     ],
@@ -17131,10 +17371,18 @@
     ],
     [
      "wait",
-     30
+     40
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:duelist_test,distance=..40] run data merge entity @s {NoAI:1b}"
     ],
     [
      "look_target"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -17149,7 +17397,8 @@
    ],
    "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
    "setup": "each at 60% HP (`/damage` to just under the first phase line), night or a dark room, 4 blocks away",
-   "note": "daytime (moonlight tinted the rival model), 58% HP"
+   "note": "daytime (moonlight tinted the rival model), 58% HP",
+   "override": "harness.json"
   },
   {
    "n": 206,
@@ -17227,7 +17476,7 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 18000"
     ],
     [
      "cmd",
@@ -17241,6 +17490,10 @@
      "summon",
      "elsewhere:azmar_sultana",
      "{PersistenceRequired:1b}"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!elsewhere:azmar_sultana,distance=..40]"
     ],
     [
      "hurt_to",
@@ -17257,10 +17510,18 @@
     ],
     [
      "wait",
-     30
+     40
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:azmar_sultana,distance=..40] run data merge entity @s {NoAI:1b}"
     ],
     [
      "look_target"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -17275,7 +17536,8 @@
    ],
    "check": "",
    "setup": "an energy swirl like a charged creeper wraps the body on top of the glyphs: Hrafnholt pale-blue sleet streaks, Azmar gold heat-shimmer waves with blue motes, Mirewick violet mist with crimson sparks, Aldermark white-gold diagonal stripes; it follows the move poses; gone beyond 32 blocks (glyphs beyond 48)",
-   "note": "daytime (moonlight tinted the rival model), 18% HP"
+   "note": "daytime (moonlight tinted the rival model), 18% HP",
+   "override": "harness.json"
   },
   {
    "n": 208,
@@ -17941,14 +18203,14 @@
     ],
     [
      "wait",
-     25
+     6
     ],
     [
      "use_up"
     ],
     [
      "wait",
-     3
+     6
     ],
     [
      "shot",
@@ -17991,7 +18253,8 @@
     }
    ],
    "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
-   "setup": "flat daylight, fire a full-draw bow at a stone wall 12 blocks away; third person F5, one shot mid-flight, one of the arrow stuck in the wall from 2 blocks"
+   "setup": "flat daylight, fire a full-draw bow at a stone wall 12 blocks away; third person F5, one shot mid-flight, one of the arrow stuck in the wall from 2 blocks",
+   "override": "vfx.json"
   },
   {
    "n": 218,
@@ -18085,7 +18348,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~8 ~-10 0 35"
+     "tp @s ~ ~8 ~6 0 40"
     ],
     [
      "wait",
@@ -18103,7 +18366,8 @@
     }
    ],
    "check": "hit husk and the one 4 away have the white Glowing outline (lasts 5 s), the one 9 away does not; a teal sculk ring at the hit point and vibration lines to each glowing husk (sound is not shot-checkable: silence is covered by the self-test sculk-sensor check)",
-   "setup": "night, flat; /summon husk x3 in a line at 0, 4 and 9 blocks from the target husk (NoAI), shoot the first husk from 15 blocks; shot within 1 s of the hit, camera 8 up, 10 back"
+   "setup": "night, flat; /summon husk x3 in a line at 0, 4 and 9 blocks from the target husk (NoAI), shoot the first husk from 15 blocks; shot within 1 s of the hit, camera 8 up, 10 back",
+   "override": "vfx.json"
   },
   {
    "n": 219,
@@ -18853,10 +19117,21 @@
     ],
     [
      "wait",
-     60
+     45
     ],
     [
      "look_target"
+    ],
+    [
+     "cmd",
+     "tp @s ^ ^4 ^-8"
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -18887,7 +19162,7 @@
    "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
    "setup": "survival player on flat ground in plains, noon, `/summon elsewhere:hrafnholt_hersir` 12 blocks away and let her close in; camera 10 up and 10 back, shoot 3 frames 1 s apart while she circles (Marrow `elsewhere:mirewick_marrow` the same, at chain range)",
    "note": "generic: entity hrafnholt_hersir, 1 setup command(s); framing approximate",
-   "override": "shard-1.out.json"
+   "override": "harness.json"
   },
   {
    "n": 225,
@@ -18909,6 +19184,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -18918,19 +19197,48 @@
     ],
     [
      "cmd",
-     "kingdom patrol 8"
-    ],
-    [
-     "wait",
-     100
+     "effect give @s regeneration infinite 255 true"
     ],
     [
      "cmd",
-     "tp @s ^ ^ ^-6"
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_captain",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
+     0,
+     5
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_sergeant",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
+     -2,
+     5
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_man_at_arms",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
+     2,
+     5
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "chunks"
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "shot",
@@ -18938,11 +19246,11 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^ ^-6"
+     "tp @s ^ ^ ^-0.5"
     ],
     [
      "wait",
-     20
+     10
     ],
     [
      "shot",
@@ -18950,11 +19258,11 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^ ^-6"
+     "tp @s ^ ^ ^-0.5"
     ],
     [
      "wait",
-     20
+     10
     ],
     [
      "shot",
@@ -18977,7 +19285,8 @@
    ],
    "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
    "setup": "flat world, noon, clear, F1 off, survival; `KingdomApi.spawnSoldier(level, UnitTypes.CAPTAIN / SERGEANT / MAN_AT_ARMS, Factions.ALDERMARK, pos, null)` side by side 2 apart, 5 blocks in front of the player, player facing them at eye level",
-   "note": "an Aldermark patrol of 8 (/kingdom patrol 8) at 6, 12 and 18 blocks; not KingdomApi.spawnSoldier per rank"
+   "note": "an Aldermark patrol of 8 (/kingdom patrol 8) at 6, 12 and 18 blocks; not KingdomApi.spawnSoldier per rank",
+   "override": "hud.json"
   },
   {
    "n": 226,
@@ -18999,6 +19308,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -19008,19 +19321,48 @@
     ],
     [
      "cmd",
-     "kingdom patrol 8"
-    ],
-    [
-     "wait",
-     100
+     "effect give @s regeneration infinite 255 true"
     ],
     [
      "cmd",
-     "tp @s ^ ^ ^-6"
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_captain",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
+     0,
+     6
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_sergeant",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
+     -2,
+     6
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_man_at_arms",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
+     2,
+     6
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "chunks"
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "shot",
@@ -19067,7 +19409,8 @@
    ],
    "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
    "setup": "same three soldiers; player steps back to 12 blocks (shot 1), then 18 blocks (shot 2)",
-   "note": "an Aldermark patrol of 8 (/kingdom patrol 8) at 6, 12 and 18 blocks; not KingdomApi.spawnSoldier per rank"
+   "note": "an Aldermark patrol of 8 (/kingdom patrol 8) at 6, 12 and 18 blocks; not KingdomApi.spawnSoldier per rank",
+   "override": "hud.json"
   },
   {
    "n": 227,
@@ -19089,6 +19432,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -19105,29 +19452,29 @@
      "effect give @s saturation infinite 255 true"
     ],
     [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
+    ],
+    [
      "summon",
      "elsewhere:kingdom_captain",
      "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
      0,
-     6
+     7
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_sergeant",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
+     -2,
+     7
     ],
     [
      "summon",
      "elsewhere:kingdom_man_at_arms",
      "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
-     -3,
-     6
-    ],
-    [
-     "summon",
-     "elsewhere:kingdom_man_at_arms",
-     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
-     3,
-     6
-    ],
-    [
-     "cmd",
-     "fill -1 -60 3 1 -58 3 minecraft:stone"
+     2,
+     7
     ],
     [
      "tp",
@@ -19137,6 +19484,10 @@
      0,
      0,
      2
+    ],
+    [
+     "cmd",
+     "fill ~-1 ~ ~4 ~1 ~2 ~4 minecraft:stone"
     ],
     [
      "chunks"
@@ -19151,24 +19502,18 @@
     ],
     [
      "cmd",
-     "fill -1 -60 3 1 -58 3 minecraft:air"
+     "fill ~-1 ~ ~4 ~1 ~2 ~4 minecraft:air"
     ],
     [
      "cmd",
      "time set 18000"
     ],
     [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
+     "summon",
+     "elsewhere:kingdom_man_at_arms",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\",KingdomResting:1b}",
      1,
-     0,
-     2
+     5
     ],
     [
      "wait",
@@ -19192,7 +19537,7 @@
    "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
    "setup": "same scene at 6 blocks; place a 3-high stone wall between player and the captain (shot 1); `/time set 18000` and let the Aldermark night routine rest a soldier (or set it resting), shot 2 at 5 blocks",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-2.out.json"
+   "override": "hud.json"
   },
   {
    "n": 228,
@@ -19214,6 +19559,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -19223,19 +19572,41 @@
     ],
     [
      "cmd",
-     "kingdom patrol 8"
-    ],
-    [
-     "wait",
-     100
+     "effect give @s regeneration infinite 255 true"
     ],
     [
      "cmd",
-     "tp @s ^ ^ ^-6"
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_captain",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:hrafnholt\"}",
+     -1,
+     5
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_sergeant",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:hrafnholt\"}",
+     1,
+     5
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "shot",
@@ -19243,11 +19614,29 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^ ^-6"
+     "kill @e[type=elsewhere:kingdom_captain]"
+    ],
+    [
+     "cmd",
+     "kill @e[type=elsewhere:kingdom_sergeant]"
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_captain",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:azmar\"}",
+     -1,
+     5
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_sergeant",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:azmar\"}",
+     1,
+     5
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "shot",
@@ -19255,11 +19644,29 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^ ^-6"
+     "kill @e[type=elsewhere:kingdom_captain]"
+    ],
+    [
+     "cmd",
+     "kill @e[type=elsewhere:kingdom_sergeant]"
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_captain",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:mirewick\"}",
+     -1,
+     5
+    ],
+    [
+     "summon",
+     "elsewhere:kingdom_sergeant",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:mirewick\"}",
+     1,
+     5
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "shot",
@@ -19282,7 +19689,8 @@
    ],
    "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
    "setup": "merged jar; for each of `elsewhere:hrafnholt`, `elsewhere:azmar`, `elsewhere:mirewick` spawn a CAPTAIN and a SERGEANT 5 blocks ahead (base unit ids; the faction roster swaps in its own unit), one shot per kingdom",
-   "note": "an Aldermark patrol of 8 (/kingdom patrol 8) at 6, 12 and 18 blocks; not KingdomApi.spawnSoldier per rank"
+   "note": "an Aldermark patrol of 8 (/kingdom patrol 8) at 6, 12 and 18 blocks; not KingdomApi.spawnSoldier per rank",
+   "override": "hud.json"
   },
   {
    "n": 229,
@@ -20826,7 +21234,7 @@
      true
     ],
     [
-     "cmd",
+     "player_cmd",
      "kill @e[type=elsewhere:azmar_soldier]"
     ],
     [
@@ -20850,7 +21258,7 @@
    ],
    "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
    "setup": "creative, flat noon; open the Kingdom tab and hover each of the 7 trader/diplomat eggs (shot each tooltip, or one shot per egg via /give + hotbar name), then the Azmar tab's soldier egg; place it and look at the spawned soldier with F3 off and crosshair on it, then kill it with /kill @e[type=elsewhere:azmar_soldier] with chat open",
-   "override": "shard-2.out.json"
+   "override": "hud.json"
   },
   {
    "n": 243,
@@ -21161,7 +21569,8 @@
      "view",
      0.0,
      8.0,
-     90.0
+     90.0,
+     "ground"
     ],
     [
      "chunks"
@@ -21176,10 +21585,6 @@
     [
      "damage",
      "1"
-    ],
-    [
-     "wait",
-     1
     ],
     [
      "shot",
@@ -21210,7 +21615,7 @@
    "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
    "setup": "`elsewhere:strawgrim` NoAI on flat ground, camera exactly side-on (90 degrees to its facing) 8 blocks away; `/damage @e[type=elsewhere:strawgrim,limit=1] 1 minecraft:generic`, shoot 1 tick after",
    "note": "generic: entity strawgrim, 1 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "harness.json"
   },
   {
    "n": 247,
@@ -21510,16 +21915,8 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "fill ~-8 ~ ~12 ~8 ~6 ~12 minecraft:stone_bricks"
-    ],
-    [
-     "cmd",
-     "fill ~-8 ~ ~12 ~-8 ~8 ~12 minecraft:oak_log"
-    ],
-    [
-     "cmd",
-     "fill ~8 ~ ~12 ~8 ~8 ~12 minecraft:oak_log"
+     "player_cmd",
+     "greenleaf effects full"
     ],
     [
      "tp",
@@ -21564,7 +21961,7 @@
    "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
    "setup": "`/high set @s 95`, wait 8 s, shot",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-6.out.json"
+   "override": "greenhaze.json"
   },
   {
    "n": 257,
@@ -21610,11 +22007,19 @@
      "fly"
     ],
     [
+     "cmd",
+     "high set @s 70"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
      "chat",
      true
     ],
     [
-     "cmd",
+     "player_cmd",
      "greenleaf effects reduced"
     ],
     [
@@ -21632,6 +22037,10 @@
     [
      "shot",
      "accessibility_greenleaf_effects_reduced_5s"
+    ],
+    [
+     "player_cmd",
+     "greenleaf effects full"
     ]
    ],
    "shots": [
@@ -21647,7 +22056,7 @@
    "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
    "setup": "same scene as above, chat visible for the first shot, one shot each",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "shard-1.out.json"
+   "override": "greenhaze.json"
   },
   {
    "n": 258,
@@ -21677,15 +22086,15 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "effect give @s regeneration infinite 255 true"
-    ],
-    [
-     "cmd",
-     "effect give @s saturation infinite 255 true"
-    ],
-    [
      "fly"
+    ],
+    [
+     "player_cmd",
+     "greenleaf gags on"
+    ],
+    [
+     "player_cmd",
+     "greenleaf effects full"
     ],
     [
      "cmd",
@@ -21745,15 +22154,15 @@
     ],
     [
      "cmd",
-     "summon minecraft:zombie 6.5 -60 11.5 {NoAI:1b,PersistenceRequired:1b,active_effects:[{id:\"minecraft:fire_resistance\",duration:1000000}]}"
+     "summon minecraft:zombie 6.5 -60 11.5 {NoAI:1b,PersistenceRequired:1b,equipment:{head:{id:\"minecraft:iron_helmet\",count:1}}}"
     ],
     [
      "cmd",
-     "summon minecraft:zombie -5.5 -60 14.5 {NoAI:1b,PersistenceRequired:1b,active_effects:[{id:\"minecraft:fire_resistance\",duration:1000000}]}"
+     "summon minecraft:zombie -5.5 -60 14.5 {NoAI:1b,PersistenceRequired:1b,equipment:{head:{id:\"minecraft:iron_helmet\",count:1}}}"
     ],
     [
      "cmd",
-     "summon minecraft:zombie -2.5 -60 14.5 {NoAI:1b,PersistenceRequired:1b,active_effects:[{id:\"minecraft:fire_resistance\",duration:1000000}]}"
+     "summon minecraft:zombie -2.5 -60 14.5 {NoAI:1b,PersistenceRequired:1b,equipment:{head:{id:\"minecraft:iron_helmet\",count:1}}}"
     ],
     [
      "cmd",
@@ -21781,7 +22190,7 @@
     ],
     [
      "wait",
-     400
+     500
     ],
     [
      "shot",
@@ -21809,7 +22218,7 @@
    "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
    "setup": "plains, ring of NoAI mobs 6-8 blocks out: 6 cows, 4 pigs, 4 sheep, 3 zombies, plus 1 cow named \"Bessie\" with a name tag; `/high set @s 95`, wait 20 s, shot facing the ring (repeat once 35 s later: tricks change every 30 s)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-2.out.json"
+   "override": "greenhaze.json"
   },
   {
    "n": 259,
@@ -21974,6 +22383,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -21990,11 +22403,24 @@
      "effect give @s saturation infinite 255 true"
     ],
     [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "summon",
      "elsewhere:grumblegut",
      "{PersistenceRequired:1b}",
      0,
      8
+    ],
+    [
+     "hurt_to",
+     0.2
     ],
     [
      "tp",
@@ -22013,8 +22439,13 @@
      "chunks"
     ],
     [
+     "wait_label",
+     2400,
+     "Slam"
+    ],
+    [
      "wait",
-     80
+     6
     ],
     [
      "shot",
@@ -22030,7 +22461,7 @@
    "check": "crisp yellow rings and a red cone on the ground, fill grows then the hit lands as it fills; edges pulse faster near the end; no jagged dust, nothing under the floor or floating",
    "setup": "third person F5 behind the player, pitch 35, wait for the slam (two yellow rings) and the red cone",
    "note": "generic: entity grumblegut; framing approximate",
-   "override": "shard-5.out.json"
+   "override": "hud.json"
   },
   {
    "n": 263,
@@ -22100,11 +22531,83 @@
    "line": 300,
    "lane": "s_p2_telegraph",
    "item": "elsewhere:lithara",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "the red rings fire only on Lithara's wrong-note resonance blast (pillar sequence in her fight), not triggerable by command"
+     "reset",
+     "survival"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
+     "gui",
+     true
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s regeneration infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "summon",
+     "elsewhere:lithara",
+     "{PersistenceRequired:1b}",
+     0,
+     10
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     45
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait_label",
+     3600,
+     ""
+    ],
+    [
+     "wait",
+     8
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "shot",
+     "lithara_triple_rings_6_12_18_falling_roc"
     ]
    ],
    "shots": [
@@ -22116,7 +22619,7 @@
    "check": "three red rings and yellow circles drawn as clean bands, all visible at once, none missing",
    "setup": "stand 10 blocks away, pitch 45",
    "note": "generic: entity lithara; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "hud.json"
   },
   {
    "n": 265,
@@ -22138,6 +22641,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -22152,6 +22659,19 @@
     [
      "cmd",
      "effect give @s regeneration infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "summon",
@@ -22170,8 +22690,13 @@
      "chunks"
     ],
     [
+     "wait_label",
+     2400,
+     "Breath"
+    ],
+    [
      "wait",
-     120
+     6
     ],
     [
      "look_target"
@@ -22190,7 +22715,7 @@
    "check": "ONE yellow cone that turns with the breath (no stacked or trailing copies)",
    "setup": "stand in front, wait for the breath wind-up",
    "note": "generic: entity rimeback; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "hud.json"
   },
   {
    "n": 266,
@@ -22212,6 +22737,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -22228,6 +22757,15 @@
      "effect give @s saturation infinite 255 true"
     ],
     [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "summon",
      "elsewhere:verdigrim",
      "{PersistenceRequired:1b}"
@@ -22242,13 +22780,14 @@
      "chunks"
     ],
     [
-     "wait",
-     20
-    ],
-    [
      "wait_label",
      2400,
      ""
+    ],
+    [
+     "equip",
+     "armor.head",
+     "minecraft:air"
     ],
     [
      "wait",
@@ -22279,7 +22818,7 @@
    "check": "the yellow shockwave ring travels outward smoothly (attack, not a hint, so it shows without the helm); one ring, no trail of old rings",
    "setup": "stand 8 blocks from the organ during a low-pipe note",
    "note": "generic: entity verdigrim; framing approximate",
-   "override": "shard-2.out.json"
+   "override": "hud.json"
   },
   {
    "n": 267,
@@ -22290,7 +22829,7 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "survival"
     ],
     [
      "cmd",
@@ -22301,16 +22840,37 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
     [
      "cmd",
-     "difficulty normal"
+     "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
-     "elsewhere_dev boss aphelion arena"
+     "effect give @s regeneration infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "cmd",
+     "elsewhere_dev boss aphelion"
     ],
     [
      "wait",
@@ -22354,7 +22914,7 @@
    "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
    "setup": "look at the column from 15 blocks",
    "note": "generic: entity aphelion; framing approximate",
-   "override": "shard-3.out.json"
+   "override": "hud.json"
   },
   {
    "n": 268,
@@ -22393,6 +22953,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -22405,9 +22969,26 @@
      "effect give @s regeneration infinite 255 true"
     ],
     [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "summon",
      "elsewhere:grumblegut",
      "{PersistenceRequired:1b}"
+    ],
+    [
+     "hurt_to",
+     0.2
     ],
     [
      "view",
@@ -22424,8 +23005,8 @@
     ],
     [
      "wait_label",
-     1500,
-     ""
+     2400,
+     "Slam"
     ],
     [
      "wait",
@@ -22467,7 +23048,7 @@
    "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
    "setup": "grumblegut slam",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-4.out.json"
+   "override": "hud.json"
   },
   {
    "n": 270,
@@ -22570,7 +23151,7 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-24"
+     "tp @s ^ ^10 ^-18 ~ 30"
     ],
     [
      "wait",
@@ -22592,7 +23173,8 @@
     }
    ],
    "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
-   "setup": "creative, flat field; `/kingdom armies battle aldermark mirewick 32`, then fly 40 blocks off sideways (R1 ring) and watch the first clash from above"
+   "setup": "creative, flat field; `/kingdom armies battle aldermark mirewick 32`, then fly 40 blocks off sideways (R1 ring) and watch the first clash from above",
+   "override": "harness.json"
   },
   {
    "n": 273,
@@ -22627,6 +23209,10 @@
     [
      "chat",
      true
+    ],
+    [
+     "cmd",
+     "gamerule send_command_feedback true"
     ],
     [
      "cmd",
@@ -22677,6 +23263,10 @@
      "kingdom armies battle stop"
     ],
     [
+     "cmd",
+     "gamerule send_command_feedback false"
+    ],
+    [
      "chat",
      false
     ]
@@ -22694,7 +23284,7 @@
    "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
    "setup": "op, after any big battle (e.g. the armies 32 v 32)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "harness.json"
   },
   {
    "n": 274,
@@ -22716,12 +23306,25 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
     [
      "cmd",
      "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "cmd",
@@ -22786,7 +23389,7 @@
    "check": "the bar reads \"Test Duelist Ruler \u00b7 Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
    "setup": "merged jar, flat world, Auto bar mode; `/bossbar add elsewhere:t \"Test Duelist Ruler \u00b7 glyph_flare\"`, `/bossbar set elsewhere:t players @a`; shoot. Then the same on the MacBook client if the lead allows one run",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "shard-6.out.json"
+   "override": "hud.json"
   },
   {
    "n": 275,
@@ -22883,6 +23486,15 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "tp",
      "stage",
      0,
@@ -22947,7 +23559,7 @@
      "boss_bar_v2_state_chips"
     ],
     [
-     "cmd",
+     "player_cmd",
      "elsewhere_hud bossbars always"
     ],
     [
@@ -22977,6 +23589,22 @@
     [
      "shot",
      "boss_bar_v2_state_chips_5s"
+    ],
+    [
+     "player_cmd",
+     "elsewhere_hud bossbars auto"
+    ],
+    [
+     "cmd",
+     "bossbar remove elsewhere:p"
+    ],
+    [
+     "cmd",
+     "bossbar remove elsewhere:c"
+    ],
+    [
+     "cmd",
+     "bossbar remove elsewhere:r"
     ]
    ],
    "shots": [
@@ -22992,7 +23620,7 @@
    "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"\u2756 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
    "setup": "merged jar, Auto mode; `/bossbar add elsewhere:p \"Percolax, the Hotbox Colossus  \u00bb  Coughing fit! Core exposed\"`, `/bossbar add elsewhere:c \"Mother Creak, the Elder Heartwood  \u2764\u2764\u2764\"` (players @a for both); shoot; then `/elsewhere_hud bossbars always`, `/bossbar add elsewhere:r \"Test Duelist Ruler \u00b7 Last Stand\"`, shoot",
    "note": "generic: commands only, 4 setup command(s); framing approximate",
-   "override": "shard-1.out.json"
+   "override": "hud.json"
   },
   {
    "n": 277,
@@ -23287,9 +23915,26 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
+     "cmd",
+     "fill ~-4 ~ ~6 ~4 ~4 ~6 minecraft:oak_planks"
+    ],
+    [
+     "subtitles",
+     false
+    ],
+    [
      "hold",
      "mainhand",
      "elsewhere:hrafnholt_hurlbat"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "wait",
@@ -23301,11 +23946,7 @@
     ],
     [
      "camera",
-     "front"
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "back"
     ],
     [
      "wait",
@@ -23320,46 +23961,98 @@
      "first"
     ],
     [
+     "subtitles",
+     true
+    ],
+    [
      "use_down"
     ],
     [
      "wait",
-     15
+     2
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     14
+    ],
+    [
+     "tp",
+     "stage",
+     -3,
+     0,
+     4,
+     -70.7,
+     0
+    ],
+    [
+     "wait",
+     4
     ],
     [
      "shot",
      "hrafnholt_hurlbat_in_use_first_person_2"
     ],
     [
-     "camera",
-     "front"
+     "subtitles",
+     false
     ],
     [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "camera",
+     "back"
     ],
     [
      "wait",
-     5
+     8
     ],
     [
      "shot",
      "hrafnholt_hurlbat_in_use_third_person_2"
     ],
     [
-     "use_up"
-    ],
-    [
      "camera",
      "first"
     ],
     [
-     "wait",
+     "tp",
+     "stage",
+     -2,
+     0,
+     5,
+     -70.2,
      10
+    ],
+    [
+     "wait",
+     6
     ],
     [
      "shot",
      "hrafnholt_hurlbat_after_use_2"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     5,
+     0,
+     0
+    ],
+    [
+     "wait",
+     12
     ],
     [
      "inventory",
@@ -23405,7 +24098,8 @@
    ],
    "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
    "setup": "throw level into an oak-plank wall from 6 blocks, shot from the side and from behind",
-   "note": "generic: item hrafnholt_hurlbat; framing approximate"
+   "note": "generic: item hrafnholt_hurlbat; framing approximate",
+   "override": "itemsb.json"
   },
   {
    "n": 281,
@@ -23437,14 +24131,14 @@
     [
      "hold",
      "mainhand",
-     "elsewhere:hrafnholt_hurlbat"
+     "elsewhere:hrafnholt_hurlbat 8"
     ],
     [
      "summon",
      "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
-     0,
-     5
+     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:400}],Health:400f}",
+     3,
+     7
     ],
     [
      "tp",
@@ -23487,7 +24181,7 @@
     ],
     [
      "wait",
-     5
+     3
     ],
     [
      "use_down"
@@ -23505,20 +24199,14 @@
     ],
     [
      "wait",
-     30
+     16
     ],
     [
-     "hold",
-     "mainhand",
-     "elsewhere:hrafnholt_hurlbat"
+     "look_target"
     ],
     [
      "camera",
      "back"
-    ],
-    [
-     "wait",
-     5
     ],
     [
      "use_down"
@@ -23528,15 +24216,57 @@
      2
     ],
     [
+     "use_up"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
      "shot",
      "hrafnholt_hurlbat_in_use_third_person_3"
+    ],
+    [
+     "wait",
+     16
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "use_up"
     ],
     [
      "wait",
-     40
+     16
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     2
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     16
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     2
+    ],
+    [
+     "use_up"
     ],
     [
      "camera",
@@ -23547,19 +24277,16 @@
     ],
     [
      "wait",
-     5
+     6
     ],
     [
      "shot",
      "hrafnholt_hurlbat_after_use_3"
     ],
     [
-     "close"
-    ],
-    [
      "hold",
      "mainhand",
-     "elsewhere:hrafnholt_hurlbat"
+     "elsewhere:hrafnholt_hurlbat 8"
     ],
     [
      "inventory",
@@ -23606,67 +24333,18 @@
    "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
    "setup": "`/summon husk ~ ~ ~5 {NoAI:1b}`, survival, throw until one breaks and one survives",
    "note": "generic: item hrafnholt_hurlbat, 1 setup command(s); framing approximate",
-   "override": "shard-3.out.json"
+   "override": "itemsb.json"
   },
   {
    "n": 282,
    "line": 318,
    "lane": "s_hurlbat",
    "item": "elsewhere:hrafnholt_hurlbat",
-   "world": "flat",
+   "world": "none",
    "steps": [
     [
-     "reset",
-     "creative"
-    ],
-    [
-     "cmd",
-     "time set 6000"
-    ],
-    [
-     "cmd",
-     "weather clear"
-    ],
-    [
-     "gui",
-     true
-    ],
-    [
-     "cmd",
-     "effect give @s resistance infinite 255 true"
-    ],
-    [
-     "hold",
-     "mainhand",
-     "elsewhere:hrafnholt_hurlbat"
-    ],
-    [
-     "wait",
-     10
-    ],
-    [
-     "shot",
-     "hrafnholt_hurlbat_first_person_5"
-    ],
-    [
-     "camera",
-     "front"
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
-    ],
-    [
-     "wait",
-     10
-    ],
-    [
-     "shot",
-     "hrafnholt_hurlbat_third_person_5"
-    ],
-    [
-     "camera",
-     "first"
+     "manual",
+     "JEI/recipe-viewer page (U key) is not driven by ShotRunner: needs a manual shot with JEI loaded"
     ]
    ],
    "shots": [
@@ -23681,7 +24359,8 @@
    ],
    "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
    "setup": "`U` on the Hurlbat, page through",
-   "note": "generic: item hrafnholt_hurlbat; framing approximate"
+   "note": "generic: item hrafnholt_hurlbat; framing approximate",
+   "override": "itemsb.json"
   },
   {
    "n": 283,
@@ -24217,13 +24896,56 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
+     "cmd",
+     "effect give @s water_breathing infinite 0 true"
+    ],
+    [
+     "cmd",
+     "effect give @s haste infinite 255 true"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-3 ~2 ~4 ~-1 ~10 minecraft:water"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~2 ~4 ~-4 ~10 minecraft:sand"
+    ],
+    [
+     "cmd",
+     "setblock ~1 ~-4 ~7 minecraft:gravel"
+    ],
+    [
+     "cmd",
+     "setblock ~-1 ~-4 ~5 minecraft:clay"
+    ],
+    [
      "hold",
      "mainhand",
      "elsewhere:tidebrass_dredge"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     -3,
+     3,
+     0,
+     28
+    ],
+    [
+     "chunks"
+    ],
+    [
      "wait",
-     10
+     25
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     6
     ],
     [
      "shot",
@@ -24231,15 +24953,11 @@
     ],
     [
      "camera",
-     "front"
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "back"
     ],
     [
      "wait",
-     10
+     6
     ],
     [
      "shot",
@@ -24281,7 +24999,8 @@
    ],
    "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
    "setup": "survival, a 9x9 pool 3 deep over a sand floor with a gravel and a clay block in it; stand on the floor, eyes under water, look straight down, break one sand block with the dredge; shot 1 first person mid-break, shot 2 first person just after, shot 3 from 6 up looking down",
-   "note": "generic: item tidebrass_dredge; framing approximate"
+   "note": "generic: item tidebrass_dredge; framing approximate",
+   "override": "itemsb.json"
   },
   {
    "n": 290,
@@ -24292,7 +25011,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -24311,29 +25030,96 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
+     "cmd",
+     "effect give @s water_breathing infinite 0 true"
+    ],
+    [
+     "cmd",
+     "effect give @s haste infinite 255 true"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-3 ~2 ~4 ~-1 ~10 minecraft:water"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~2 ~4 ~-4 ~10 minecraft:sand"
+    ],
+    [
+     "cmd",
+     "setblock ~1 ~-4 ~7 minecraft:gravel"
+    ],
+    [
+     "cmd",
+     "setblock ~-1 ~-4 ~5 minecraft:clay"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-3 ~10 ~4 ~-1 ~10 minecraft:sand"
+    ],
+    [
+     "cmd",
+     "fill ~5 ~-1 ~3 ~7 ~-1 ~5 minecraft:sand"
+    ],
+    [
      "hold",
      "mainhand",
      "elsewhere:tidebrass_dredge"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     -3,
+     7,
+     0,
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
      "wait",
-     10
+     25
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     6
     ],
     [
      "shot",
      "tidebrass_dredge_first_person_2"
     ],
     [
-     "camera",
-     "front"
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "tp",
+     "stage",
+     6,
+     0,
+     1,
+     0,
+     28
     ],
     [
      "wait",
-     10
+     15
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "wait",
+     6
     ],
     [
      "shot",
@@ -24375,7 +25161,8 @@
    ],
    "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
    "setup": "same pool, swim to a sand wall at eye height (not touching the floor) and break one block; then on dry land break one sand block",
-   "note": "generic: item tidebrass_dredge; framing approximate"
+   "note": "generic: item tidebrass_dredge; framing approximate",
+   "override": "itemsb.json"
   },
   {
    "n": 291,
@@ -24403,7 +25190,7 @@
     [
      "hold",
      "mainhand",
-     "elsewhere:gale_sling"
+     "elsewhere:gale_sling[minecraft:damage=100]"
     ],
     [
      "camera",
@@ -24453,7 +25240,8 @@
    ],
    "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, cursor on the Gale Sling next to a vanilla bow; then survival, sling in the main hand, third person front, noon",
-   "note": "survival inventory tooltip (not the creative tab)"
+   "note": "survival inventory tooltip (not the creative tab)",
+   "override": "itemsb.json"
   },
   {
    "n": 292,
@@ -24476,20 +25264,20 @@
     ],
     [
      "gui",
-     false
+     true
     ],
     [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "give @s minecraft:cobblestone 16"
-    ],
-    [
      "hold",
      "mainhand",
      "elsewhere:gale_sling"
+    ],
+    [
+     "cmd",
+     "give @s minecraft:cobblestone 16"
     ],
     [
      "tp",
@@ -24530,10 +25318,6 @@
     [
      "shot",
      "gale_sling_third_person"
-    ],
-    [
-     "camera",
-     "first"
     ],
     [
      "camera",
@@ -24582,14 +25366,6 @@
      "gale_sling_after_use"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
-     "gui",
-     true
-    ],
-    [
      "inventory",
      "mainhand"
     ],
@@ -24603,10 +25379,6 @@
     ],
     [
      "close"
-    ],
-    [
-     "gui",
-     false
     ]
    ],
    "shots": [
@@ -24638,7 +25410,7 @@
    "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
    "setup": "survival, 16 cobblestone in the hotbar, hold use for 1 s, shots at about 0.1, 0.25 and 0.5 s and while still held at 1 s",
    "note": "generic: item gale_sling; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "itemsb.json"
   },
   {
    "n": 293,
@@ -24824,20 +25596,20 @@
      "effect give @s saturation infinite 255 true"
     ],
     [
-     "cmd",
-     "give @s minecraft:cobblestone 16"
-    ],
-    [
      "hold",
      "mainhand",
      "elsewhere:gale_sling"
     ],
     [
+     "cmd",
+     "give @s minecraft:cobblestone 16"
+    ],
+    [
      "summon",
      "minecraft:husk",
      "{NoAI:1b,PersistenceRequired:1b}",
-     0,
-     10
+     4,
+     8
     ],
     [
      "tp",
@@ -24860,6 +25632,9 @@
      10
     ],
     [
+     "look_target"
+    ],
+    [
      "use_down"
     ],
     [
@@ -24871,7 +25646,7 @@
     ],
     [
      "wait",
-     5
+     4
     ],
     [
      "shot",
@@ -24887,7 +25662,7 @@
    "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
    "setup": "flat field, a husk with NoAI 10 blocks away, full 0.5 s whirl then release at it; then a gravel shot at a stone wall",
    "note": "generic: entity gale_sling_stone; framing approximate",
-   "override": "shard-5.out.json"
+   "override": "itemsb.json"
   },
   {
    "n": 295,
@@ -24986,14 +25761,14 @@
     ],
     [
      "camera",
-     "first"
+     "back"
     ],
     [
      "use_up"
     ],
     [
      "wait",
-     8
+     3
     ],
     [
      "shot",
@@ -25002,6 +25777,10 @@
     [
      "camera",
      "first"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "inventory",
@@ -25048,7 +25827,7 @@
    "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
    "setup": "survival, a wind charge in the off hand, cobblestone in the inventory; whirl 0.5 s and release at a block 8 away",
    "note": "generic: item gale_sling; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "itemsb.json"
   },
   {
    "n": 296,
@@ -25098,6 +25877,110 @@
      0
     ],
     [
+     "wait",
+     5
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:windwright,limit=1,sort=nearest] run execute unless data entity @s Offers.Recipes[0].sell{id:\"elsewhere:gale_sling\"} run data remove entity @s Offers.Recipes[0]"
+    ],
+    [
      "look_target"
     ],
     [
@@ -25135,7 +26018,7 @@
    "check": "an offer of 6 Zephyr Feathers + 1 String for a Gale Sling (4 uses); with -Delsewhere.overhaul3.gale_sling_trade=false a newly summoned Windwright has no sling offer",
    "setup": "Petalwind kite market (or /summon elsewhere:windwright), open its trade screen",
    "note": "generic: entity windwright; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "itemsb.json"
   },
   {
    "n": 297,
@@ -28006,7 +28889,13 @@
     ],
     [
      "camera",
-     "back"
+     "first"
+    ],
+    [
+     "view",
+     0.0,
+     6.0,
+     90.0
     ],
     [
      "wait",
@@ -28057,7 +28946,7 @@
    "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
    "setup": "flat stone ground, `/summon husk ~ ~ ~10 {NoAI:0b}` (or a zombie), survival with a loaded crossbow, shoot it from 10 blocks; shot ~0.3 s after the hit from the side, camera 6 back",
    "note": "generic: item tidebrass_harpoon_bolt, 1 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "itemsa.json"
   },
   {
    "n": 324,
@@ -28147,20 +29036,72 @@
      3
     ],
     [
+     "use_down"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
      "shot",
      "tidebrass_harpoon_bolt_first_person_4"
     ],
     [
-     "camera",
-     "front"
+     "use_down"
     ],
     [
      "wait",
-     8
+     30
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     3
     ],
     [
      "shot",
      "tidebrass_harpoon_bolt_third_person_4"
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     3
     ],
     [
      "camera",
@@ -28281,7 +29222,7 @@
    "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
    "setup": "a 2-deep pool 12 long, a drowned or a husk standing in the water 10 blocks away, fire the crossbow level across the water from the bank; shot while the bolt is underwater",
    "note": "generic: item tidebrass_harpoon_bolt; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "itemsa.json"
   },
   {
    "n": 325,
@@ -28961,7 +29902,7 @@
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "shot",
@@ -29019,7 +29960,8 @@
    ],
    "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
    "setup": "survival, hover the flail (gear2 client `Gear2Client.forceShift` for the second shot)",
-   "note": "generic: item ironclad_flail; framing approximate"
+   "note": "generic: item ironclad_flail; framing approximate",
+   "override": "itemsa.json"
   },
   {
    "n": 342,
@@ -29055,7 +29997,7 @@
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "shot",
@@ -29167,7 +30109,8 @@
    ],
    "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
    "setup": "hover (a) a Steam Auger after mining a few blocks, Shift; (b) a Void Tether Spool before and after Sneak+use; (c) a Galvanic Coilmail chestplate; (d) an Amberstill helmet",
-   "note": "generic: item steam_auger; framing approximate"
+   "note": "generic: item steam_auger; framing approximate",
+   "override": "itemsa.json"
   },
   {
    "n": 343,
@@ -29359,6 +30302,14 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
@@ -29439,7 +30390,7 @@
    "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
    "setup": "flat daylight, soldier detail medium (`/kingdomdetail medium`); in a row 2 blocks apart: `/summon elsewhere:kingdom_man_at_arms ~ ~ ~4 {NoAI:1b,Rotation:[180f,0f],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}`, then the same with `elsewhere:hrafnholt`, `elsewhere:azmar`, `elsewhere:mirewick` (rival modules loaded); camera 4 blocks in front at chest height",
    "note": "generic: entity kingdom_man_at_arms, 2 setup command(s); framing approximate",
-   "override": "shard-2.out.json"
+   "override": "itemsa.json"
   },
   {
    "n": 345,
@@ -29468,6 +30419,14 @@
     [
      "reset",
      "creative"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
     ],
     [
      "cmd",
@@ -29552,7 +30511,7 @@
    "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
    "setup": "four `/summon elsewhere:kingdom_captain ~ ~ ~4 {NoAI:1b,Rotation:[0f,0f],KingdomUnit:\"elsewhere:captain\",KingdomFaction:\"elsewhere:<kingdom>\"}` 2 blocks apart, backs to the camera; shot from 4 blocks behind, then one from the side",
    "note": "generic: entity kingdom_captain, 1 setup command(s); framing approximate",
-   "override": "shard-3.out.json"
+   "override": "itemsa.json"
   },
   {
    "n": 347,
@@ -29656,6 +30615,14 @@
      600
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_captain,limit=1,sort=random] at @s run tp @p ^ ^1.5 ^-6 facing entity @s"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "shot",
      "battle_aldermark_hrafnholt_30_30s"
     ],
@@ -29671,7 +30638,8 @@
     }
    ],
    "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
-   "setup": "flat plains, `/time set 6000`, `/kingdom armies battle aldermark hrafnholt 30`; F5 side view of a walking captain or sergeant about 8 blocks away, two shots 10 ticks apart, then one of an idle one"
+   "setup": "flat plains, `/time set 6000`, `/kingdom armies battle aldermark hrafnholt 30`; F5 side view of a walking captain or sergeant about 8 blocks away, two shots 10 ticks apart, then one of an idle one",
+   "override": "itemsa.json"
   },
   {
    "n": 349,
@@ -29683,6 +30651,14 @@
     [
      "reset",
      "survival"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
     ],
     [
      "cmd",
@@ -29712,8 +30688,8 @@
     [
      "view",
      0.0,
-     10.0,
-     150.0
+     6.0,
+     160.0
     ],
     [
      "chunks"
@@ -29762,7 +30738,7 @@
    "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
    "setup": "one NoAI Aldermark captain; camera at 10, 30 and 40 blocks (medium detail), then `/kingdomdetail low` at 8 blocks",
    "note": "generic: entity kingdom_captain, 1 setup command(s); framing approximate",
-   "override": "shard-4.out.json"
+   "override": "itemsa.json"
   },
   {
    "n": 350,
@@ -29774,6 +30750,14 @@
     [
      "reset",
      "creative"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,distance=..80]"
+    ],
+    [
+     "cmd",
+     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
     ],
     [
      "cmd",
@@ -29809,7 +30793,7 @@
      "view",
      2.2,
      4.0,
-     35.0
+     160.0
     ],
     [
      "chunks"
@@ -29850,7 +30834,7 @@
    "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
    "setup": "with kingdom_court loaded: `/summon elsewhere:kingdom_captain ~ ~ ~4 {NoAI:1b,KingdomUnit:\"elsewhere:captain\",KingdomFaction:\"elsewhere:aldermark_remnant\"}`; then any court ruler at its castle",
    "note": "generic: entity kingdom_captain, 1 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "itemsa.json"
   },
   {
    "n": 351,
@@ -30356,7 +31340,7 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "survival"
     ],
     [
      "cmd",
@@ -30367,12 +31351,60 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "gamerule send_command_feedback true"
+    ],
+    [
      "gui",
-     false
+     true
+    ],
+    [
+     "chat",
+     true
     ],
     [
      "cmd",
      "effect give @s night_vision infinite 1 true"
+    ],
+    [
+     "cmd",
+     "locate structure elsewhere:castle_azmar"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "cmd",
+     "locate structure elsewhere:castle_hrafnholt"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "cmd",
+     "locate structure elsewhere:castle_mirewick"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "cmd",
+     "locate structure elsewhere:castle_aldermark"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "shot",
+     "castle_azmar_overview"
     ],
     [
      "locate",
@@ -30381,11 +31413,11 @@
     [
      "tp",
      "anchor",
-     26.83,
-     16.0,
-     26.83,
-     135,
-     25
+     0.0,
+     3.0,
+     0.0,
+     180,
+     10
     ],
     [
      "chunks"
@@ -30395,26 +31427,20 @@
      100
     ],
     [
-     "chunks"
-    ],
-    [
-     "shot",
-     "castle_azmar_overview"
-    ],
-    [
-     "tp_downhill",
-     24
-    ],
-    [
-     "chunks"
+     "cmd",
+     "locate structure elsewhere:castle_azmar"
     ],
     [
      "wait",
-     60
+     40
     ],
     [
      "shot",
      "castle_azmar_ground"
+    ],
+    [
+     "chat",
+     false
     ]
    ],
    "shots": [
@@ -30429,7 +31455,8 @@
    ],
    "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
    "setup": "normal survival world with structures on, op player at spawn, chat open, run the 4 commands one after another",
-   "note": "generic: structure castle_azmar; framing approximate"
+   "note": "generic: structure castle_azmar; framing approximate",
+   "override": "castles.json"
   },
   {
    "n": 358,
@@ -31201,7 +32228,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -31222,7 +32249,11 @@
     [
      "hold",
      "mainhand",
-     "elsewhere:mirewick_mire_snare"
+     "elsewhere:mirewick_mire_snare 8"
+    ],
+    [
+     "cmd",
+     "item replace entity @s hotbar.6 with elsewhere:mirewick_mire_snare 8"
     ],
     [
      "wait",
@@ -31284,7 +32315,8 @@
    ],
    "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, hover elsewhere:mirewick_mire_snare",
-   "note": "generic: item mirewick_mire_snare; framing approximate"
+   "note": "generic: item mirewick_mire_snare; framing approximate",
+   "override": "itemsb.json"
   },
   {
    "n": 373,
@@ -31295,7 +32327,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -31314,9 +32346,32 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "hold",
-     "mainhand",
-     "elsewhere:mirewick_mire_snare"
+     "cmd",
+     "fill ~3 ~-2 ~3 ~5 ~-2 ~5 minecraft:stone"
+    ],
+    [
+     "cmd",
+     "fill ~3 ~-1 ~3 ~5 ~-1 ~5 minecraft:water"
+    ],
+    [
+     "cmd",
+     "setblock ~ ~ ~5 elsewhere:mirewick_mire_snare"
+    ],
+    [
+     "cmd",
+     "setblock ~4 ~-1 ~4 elsewhere:mirewick_mire_snare[waterlogged=true]"
+    ],
+    [
+     "tp",
+     "stage",
+     1,
+     0,
+     1,
+     -21.8,
+     21
+    ],
+    [
+     "chunks"
     ],
     [
      "wait",
@@ -31328,11 +32383,7 @@
     ],
     [
      "camera",
-     "front"
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "back"
     ],
     [
      "wait",
@@ -31347,19 +32398,21 @@
      "first"
     ],
     [
-     "inventory",
-     "mainhand"
+     "tp",
+     "stage",
+     1,
+     0,
+     2,
+     -28.1,
+     28
     ],
     [
      "wait",
-     5
+     8
     ],
     [
      "shot",
      "mirewick_mire_snare_tooltip_2"
-    ],
-    [
-     "close"
     ]
    ],
    "shots": [
@@ -31378,7 +32431,8 @@
    ],
    "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
    "setup": "flat world, noon; place one snare on grass and one in a 1-deep water pool (stone floor) 3 blocks east; F5 third person 3 blocks away, 30 degrees down",
-   "note": "generic: item mirewick_mire_snare; framing approximate"
+   "note": "generic: item mirewick_mire_snare; framing approximate",
+   "override": "itemsb.json"
   },
   {
    "n": 374,
@@ -31389,7 +32443,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -31405,31 +32459,22 @@
     ],
     [
      "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
      "effect give @s night_vision infinite 1 true"
     ],
     [
      "cmd",
-     "effect give @s resistance infinite 255 true"
-    ],
-    [
-     "hold",
-     "mainhand",
-     "elsewhere:mirewick_mire_snare"
+     "setblock ~2 ~ ~4 elsewhere:mirewick_mire_snare"
     ],
     [
      "summon",
      "minecraft:husk",
      "{PersistenceRequired:1b}",
-     0,
-     5
-    ],
-    [
-     "wait",
-     30
-    ],
-    [
-     "cmd",
-     "execute as @e[type=minecraft:husk,distance=..40] run data merge entity @s {NoAI:1b}"
+     2,
+     1
     ],
     [
      "tp",
@@ -31441,11 +32486,19 @@
      0
     ],
     [
+     "wait",
+     5
+    ],
+    [
+     "cmd",
+     "tp @e[type=minecraft:husk,limit=1,sort=nearest] ~2 ~ ~4"
+    ],
+    [
      "look_target"
     ],
     [
      "wait",
-     10
+     6
     ],
     [
      "shot",
@@ -31453,15 +32506,11 @@
     ],
     [
      "camera",
-     "front"
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "back"
     ],
     [
      "wait",
-     10
+     4
     ],
     [
      "shot",
@@ -31472,23 +32521,15 @@
      "first"
     ],
     [
-     "cmd",
-     "time set 6000"
-    ],
-    [
-     "inventory",
-     "mainhand"
+     "look_target"
     ],
     [
      "wait",
-     5
+     30
     ],
     [
      "shot",
      "mirewick_mire_snare_tooltip_3"
-    ],
-    [
-     "close"
     ]
    ],
    "shots": [
@@ -31507,7 +32548,8 @@
    ],
    "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
    "setup": "flat world, night; /summon husk 4 blocks from an armed snare and let it walk in (or /tp it onto the snare); shot at +0.3 s and at +2 s from 4 blocks",
-   "note": "generic: item mirewick_mire_snare; framing approximate"
+   "note": "generic: item mirewick_mire_snare; framing approximate",
+   "override": "itemsb.json"
   },
   {
    "n": 375,
@@ -32879,15 +33921,11 @@
     ],
     [
      "camera",
-     "front"
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "first"
     ],
     [
      "wait",
-     12
+     30
     ],
     [
      "shot",
@@ -32925,7 +33963,8 @@
    ],
    "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, cursor on the staff; then survival, staff in the main hand, third person front, noon",
-   "note": "survival inventory tooltip (not the creative tab)"
+   "note": "survival inventory tooltip (not the creative tab)",
+   "override": "itemsa.json"
   },
   {
    "n": 403,
@@ -33685,10 +34724,10 @@
      "tp",
      "anchor",
      0.0,
-     16.0,
-     66.0,
+     13.0,
+     48.0,
      180.0,
-     8.0
+     9.0
     ],
     [
      "chunks"
@@ -33712,7 +34751,8 @@
     }
    ],
    "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
-   "setup": "tp C+(0, +14, 62) yaw 180 pitch 8"
+   "setup": "tp C+(0, +14, 62) yaw 180 pitch 8",
+   "override": "castles.json"
   },
   {
    "n": 410,
@@ -33743,7 +34783,7 @@
     ],
     [
      "locate",
-     "elsewhere:castle_aldermark"
+     "elsewhere:castle_azmar"
     ],
     [
      "tp",
@@ -33776,7 +34816,8 @@
     }
    ],
    "check": "49 x 50 palm-wall enclosure (Aldermark's curtain is 61 x 61) with an undulating top; one processional axis: pylons, palm court with two lapis pools, hypostyle hall (raised nave roof), throne hall with a roof kiosk, naos to the west, mud-brick palace with kiosk and striped awning to the east; terraces stepping up north; nothing floating at the edges",
-   "setup": "tp C+(40, +60, 50) yaw 140 pitch 45"
+   "setup": "tp C+(40, +60, 50) yaw 140 pitch 45",
+   "override": "castles.json"
   },
   {
    "n": 411,
@@ -33807,14 +34848,14 @@
     ],
     [
      "locate",
-     "elsewhere:castle_aldermark"
+     "elsewhere:castle_azmar"
     ],
     [
      "tp",
      "anchor",
      0.0,
-     7.0,
-     14.0,
+     5.0,
+     10.0,
      180.0,
      10.0
     ],
@@ -33840,7 +34881,8 @@
     }
    ],
    "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle fa\u00e7ade, scarab over its door",
-   "setup": "tp C+(0, +5, 10) yaw 180 pitch 10"
+   "setup": "tp C+(0, +5, 10) yaw 180 pitch 10",
+   "override": "castles.json"
   },
   {
    "n": 412,
@@ -33871,14 +34913,14 @@
     ],
     [
      "locate",
-     "elsewhere:castle_aldermark"
+     "elsewhere:castle_azmar"
     ],
     [
      "tp",
      "anchor",
      0.0,
-     4.0,
-     1.0,
+     2.0,
+     -3.0,
      180.0,
      -15.0
     ],
@@ -33904,7 +34946,8 @@
     }
    ],
    "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
-   "setup": "tp C+(0, +2, -3) yaw 180 pitch -15"
+   "setup": "tp C+(0, +2, -3) yaw 180 pitch -15",
+   "override": "castles.json"
   },
   {
    "n": 413,
@@ -33935,14 +34978,14 @@
     ],
     [
      "locate",
-     "elsewhere:castle_aldermark"
+     "elsewhere:castle_azmar"
     ],
     [
      "tp",
      "anchor",
      0.0,
-     5.0,
-     -12.0,
+     3.0,
+     -16.0,
      180.0,
      0.0
     ],
@@ -33968,7 +35011,8 @@
     }
    ],
    "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
-   "setup": "tp C+(0, +3, -16) yaw 180 pitch 0"
+   "setup": "tp C+(0, +3, -16) yaw 180 pitch 0",
+   "override": "castles.json"
   },
   {
    "n": 414,
@@ -34985,6 +36029,15 @@
      "survival"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "cmd",
      "time set 6000"
     ],
@@ -35001,9 +36054,8 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "hold",
-     "mainhand",
-     "elsewhere:skyiron_ingot"
+     "cmd",
+     "testo give @s transmutation_tablet"
     ],
     [
      "cmd",
@@ -35014,12 +36066,34 @@
      10
     ],
     [
+     "use_down"
+    ],
+    [
      "wait",
-     10
+     6
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
      "skyiron_ingot_first_person"
+    ],
+    [
+     "close"
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:skyiron_ingot"
+    ],
+    [
+     "wait",
+     5
     ],
     [
      "camera",
@@ -35073,7 +36147,8 @@
    ],
    "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
    "setup": "survival, craft the table (obsidian corners, amethyst shards, diamonds, eye of ender) and place it, `/give @s elsewhere:skyiron_ingot 2`, open the table, put both ingots in the burn slot",
-   "note": "generic: item skyiron_ingot, 1 setup command(s); framing approximate"
+   "note": "generic: item skyiron_ingot, 1 setup command(s); framing approximate",
+   "override": "greenhaze.json"
   },
   {
    "n": 430,
@@ -35084,7 +36159,16 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "cmd",
@@ -35103,17 +36187,46 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "hold",
-     "mainhand",
-     "elsewhere:boss_token"
+     "cmd",
+     "testo give @s transmutation_tablet"
+    ],
+    [
+     "cmd",
+     "give @s elsewhere:boss_token 2"
     ],
     [
      "wait",
      10
     ],
     [
+     "use_down"
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
      "shot",
      "boss_token_first_person"
+    ],
+    [
+     "close"
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:boss_token"
+    ],
+    [
+     "wait",
+     5
     ],
     [
      "camera",
@@ -35167,7 +36280,8 @@
    ],
    "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
    "setup": "same table, try `elsewhere:boss_token`, then `elsewhere:climber_upgrade_smithing_template`, then `elsewhere:aldermark_oath_ring`",
-   "note": "generic: item boss_token; framing approximate"
+   "note": "generic: item boss_token; framing approximate",
+   "override": "greenhaze.json"
   },
   {
    "n": 431,
@@ -35256,6 +36370,19 @@
      "survival"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player]"
+    ],
+    [
      "cmd",
      "time set 6000"
     ],
@@ -35275,6 +36402,10 @@
      "hold",
      "mainhand",
      "elsewhere:sunlance_staff"
+    ],
+    [
+     "cmd",
+     "high set @s 90"
     ],
     [
      "wait",
@@ -35308,7 +36439,8 @@
     }
    ],
    "check": "the Calling panel starts below the Green Leaf meter (panel top y 32, meter 4-26): no overlap, both fully readable; without Green Leaf the panel sits at y 6 as before",
-   "setup": "Elsewhere + Green Leaf 2.1.0 loaded; toggle the Calling panel on with its key (or set CallingPanel.shown in the shot runner), smoke a joint until the meter reads Baked; GUI scale 2, 1920x1080, no screen open"
+   "setup": "Elsewhere + Green Leaf 2.1.0 loaded; toggle the Calling panel on with its key (or set CallingPanel.shown in the shot runner), smoke a joint until the meter reads Baked; GUI scale 2, 1920x1080, no screen open",
+   "override": "greenhaze.json"
   },
   {
    "n": 433,
@@ -35320,6 +36452,15 @@
     [
      "reset",
      "creative"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "cmd",
@@ -35356,12 +36497,20 @@
      20
     ],
     [
-     "cmd",
+     "player_cmd",
      "greenleaf effects full"
     ],
     [
+     "player_cmd",
+     "greenleaf gags on"
+    ],
+    [
+     "cmd",
+     "high set @s 95"
+    ],
+    [
      "wait",
-     40
+     400
     ],
     [
      "look_target"
@@ -35394,7 +36543,8 @@
    ],
    "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
    "setup": "Green Leaf 2.1.0, /greenleaf effects full, high 90+ (several joints); stand in an Aldermark village next to soldiers and townsfolk, then in a boss arena with the bar up; one shot each",
-   "note": "generic: entity townsfolk, 1 setup command(s); framing approximate"
+   "note": "generic: entity townsfolk, 1 setup command(s); framing approximate",
+   "override": "greenhaze.json"
   },
   {
    "n": 434,
@@ -35406,6 +36556,15 @@
     [
      "reset",
      "creative"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "cmd",
@@ -35469,7 +36628,8 @@
    ],
    "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
    "setup": "both mods + JEI; open JEI, search \"bud\", then open the info page of elsewhere:everflow_bong and elsewhere:hazeborn_bud",
-   "note": "generic: item everflow_bong; framing approximate"
+   "note": "generic: item everflow_bong; framing approximate",
+   "override": "greenhaze.json"
   },
   {
    "n": 435,
@@ -35481,6 +36641,15 @@
     [
      "reset",
      "creative"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "cmd",
@@ -35499,6 +36668,10 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
+     "cmd",
+     "give @s greenleaf:sativa_bud 4"
+    ],
+    [
      "hold",
      "mainhand",
      "elsewhere:everflow_bong"
@@ -35506,6 +36679,20 @@
     [
      "wait",
      10
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     200
     ],
     [
      "shot",
@@ -35563,7 +36750,8 @@
    ],
    "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
    "setup": "Green Leaf 2.1.0; in the Greenhaze, rip the Everflow Bong with a sativa bud, wait 10 s",
-   "note": "generic: item everflow_bong; framing approximate"
+   "note": "generic: item everflow_bong; framing approximate",
+   "override": "greenhaze.json"
   },
   {
    "n": 436,
@@ -36015,7 +37203,7 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-24"
+     "tp @s ^ ^20 ^-30 ~ 30"
     ],
     [
      "wait",
@@ -36037,7 +37225,8 @@
     }
    ],
    "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
-   "setup": "flat open grass, noon; stand at the battle point, /kingdom armies battle aldermark hrafnholt 150; wait 15 s, fly 30 blocks up and back (F1), one wide shot of both armies, then /kingdom armies ranks"
+   "setup": "flat open grass, noon; stand at the battle point, /kingdom armies battle aldermark hrafnholt 150; wait 15 s, fly 30 blocks up and back (F1), one wide shot of both armies, then /kingdom armies ranks",
+   "override": "castles.json"
   },
   {
    "n": 440,
@@ -36071,7 +37260,7 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-24"
+     "tp @s ^ ^4 ^-26 ~ 8"
     ],
     [
      "wait",
@@ -36093,7 +37282,8 @@
     }
    ],
    "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
-   "setup": "as above with /kingdom armies battle azmar mirewick 110; shot from 25 blocks to one side at head height"
+   "setup": "as above with /kingdom armies battle azmar mirewick 110; shot from 25 blocks to one side at head height",
+   "override": "castles.json"
   },
   {
    "n": 441,
@@ -36161,11 +37351,11 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-24"
+     "tp @s ^ ^12 ^-24 ~ 27"
     ],
     [
      "wait",
-     600
+     3600
     ],
     [
      "shot",
@@ -36183,7 +37373,8 @@
     }
    ],
    "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
-   "setup": "/kingdom armies battle aldermark hrafnholt 30, stand by and let it run to its end (2-4 min)"
+   "setup": "/kingdom armies battle aldermark hrafnholt 30, stand by and let it run to its end (2-4 min)",
+   "override": "castles.json"
   },
   {
    "n": 444,
@@ -36782,7 +37973,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -36793,6 +37984,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -36801,13 +37996,49 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "hold",
-     "mainhand",
+     "cmd",
+     "effect give @s regeneration infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "equip",
+     "armor.head",
      "elsewhere:stormcrest_helm"
     ],
     [
      "wait",
      10
+    ],
+    [
+     "summon",
+     "elsewhere:azmar_sultana",
+     "{PersistenceRequired:1b}",
+     0,
+     8
+    ],
+    [
+     "view",
+     1.6,
+     5.0,
+     35.0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait_label",
+     2400,
+     ""
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "look_target"
     ],
     [
      "shot",
@@ -36818,12 +38049,17 @@
      "front"
     ],
     [
-     "cmd",
-     "tp @s ~ ~ ~ ~40 ~"
+     "wait",
+     100
+    ],
+    [
+     "wait_label",
+     2400,
+     ""
     ],
     [
      "wait",
-     10
+     4
     ],
     [
      "shot",
@@ -36834,19 +38070,24 @@
      "first"
     ],
     [
-     "inventory",
-     "mainhand"
+     "wait",
+     100
+    ],
+    [
+     "wait_label",
+     2400,
+     ""
     ],
     [
      "wait",
-     5
+     4
+    ],
+    [
+     "look_target"
     ],
     [
      "shot",
      "stormcrest_helm_tooltip"
-    ],
-    [
-     "close"
     ]
    ],
    "shots": [
@@ -36865,7 +38106,8 @@
    ],
    "check": "the bar reads \"<name> \u00b7 <move name>\" and the boss_ui attack line shows; it clears when the move lands",
    "setup": "same scene and wait",
-   "note": "generic: item stormcrest_helm; framing approximate"
+   "note": "generic: item stormcrest_helm; framing approximate",
+   "override": "hud.json"
   },
   {
    "n": 453,
@@ -36950,6 +38192,10 @@
      "weather clear"
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "gui",
      true
     ],
@@ -36964,6 +38210,19 @@
     [
      "cmd",
      "effect give @s regeneration infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "summon",
@@ -36982,8 +38241,13 @@
      "chunks"
     ],
     [
+     "wait_label",
+     2400,
+     ""
+    ],
+    [
      "wait",
-     100
+     6
     ],
     [
      "look_target"
@@ -37002,7 +38266,7 @@
    "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
    "setup": "stand 5 blocks from where it lands, shot right as it lands",
    "note": "generic: entity azmar_wazir; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "hud.json"
   },
   {
    "n": 455,
@@ -37053,7 +38317,7 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-24"
+     "tp @s ^ ^3 ^-55 ~ 4"
     ],
     [
      "wait",
@@ -37075,7 +38339,8 @@
     }
    ],
    "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
-   "setup": "flat plains, `/time set 6000`, Soldier detail Medium, render distance 12; `/kingdom patrol 8` for each kingdom near its village (or `/kingdom armies battle aldermark azmar 60`), fly 60 blocks off at soldier height, shot 1 plain, shot 2 with F1 at the same spot"
+   "setup": "flat plains, `/time set 6000`, Soldier detail Medium, render distance 12; `/kingdom patrol 8` for each kingdom near its village (or `/kingdom armies battle aldermark azmar 60`), fly 60 blocks off at soldier height, shot 1 plain, shot 2 with F1 at the same spot",
+   "override": "castles.json"
   },
   {
    "n": 457,
@@ -37109,7 +38374,7 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^2 ^-12"
+     "tp @s ^ ^2 ^-30 ~ 3"
     ],
     [
      "wait",
@@ -37127,7 +38392,8 @@
     }
    ],
    "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
-   "setup": "stand by a trimmed, caped officer (`/kingdom patrol 8`, the leader), walk slowly backwards from 18 to 54 blocks; shots at 20, 30 and 52 blocks"
+   "setup": "stand by a trimmed, caped officer (`/kingdom patrol 8`, the leader), walk slowly backwards from 18 to 54 blocks; shots at 20, 30 and 52 blocks",
+   "override": "castles.json"
   },
   {
    "n": 458,
@@ -37161,15 +38427,39 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-30"
+     "tp @s ^ ^12 ^-30 ~ 22"
     ],
     [
      "wait",
      600
     ],
     [
+     "chat",
+     true
+    ],
+    [
+     "player_cmd",
+     "kingdomlod"
+    ],
+    [
+     "f3",
+     true
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
      "shot",
      "battle_aldermark_hrafnholt_150_30s"
+    ],
+    [
+     "f3",
+     false
+    ],
+    [
+     "chat",
+     false
     ],
     [
      "cmd",
@@ -37183,7 +38473,8 @@
     }
    ],
    "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
-   "setup": "`/kingdom armies battle aldermark hrafnholt 150`, fly 12 up and 30 back facing the lines, wait 20 s, run `/kingdomlod`, F3 open"
+   "setup": "`/kingdom armies battle aldermark hrafnholt 150`, fly 12 up and 30 back facing the lines, wait 20 s, run `/kingdomlod`, F3 open",
+   "override": "castles.json"
   },
   {
    "n": 459,
@@ -37704,11 +38995,11 @@
     [
      "tp",
      "anchor",
-     60.0,
-     40.0,
-     60.0,
+     36.0,
+     32.0,
+     36.0,
      135.0,
-     25.0
+     32.0
     ],
     [
      "chunks"
@@ -37725,10 +39016,10 @@
      "tp",
      "anchor",
      0.0,
-     8.0,
-     56.0,
+     22.0,
+     48.0,
      180.0,
-     8.0
+     20.0
     ],
     [
      "chunks"
@@ -37755,7 +39046,7 @@
    "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
    "setup": "new world, /locate structure elsewhere:castle_hrafnholt, tp 60 blocks south-east of the site 40 up, look at the centre",
    "note": "generic: structure castle_hrafnholt; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "castles.json"
   },
   {
    "n": 467,
@@ -39266,8 +40557,8 @@
     ],
     [
      "view",
-     1.6,
-     5.0,
+     1.4,
+     8.4,
      35.0
     ],
     [
@@ -39279,14 +40570,11 @@
     ],
     [
      "cmd",
-     "summon elsewhere:mirewick_tolliver ~ ~ ~6"
+     "damage @e[type=elsewhere:mirewick_tolliver,limit=1,sort=nearest] 100000 minecraft:player_attack by @s"
     ],
     [
      "wait",
-     40
-    ],
-    [
-     "look_target"
+     8
     ],
     [
      "shot",
@@ -39295,9 +40583,6 @@
     [
      "wait",
      60
-    ],
-    [
-     "look_target"
     ],
     [
      "shot",
@@ -39316,7 +40601,8 @@
    ],
    "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
    "setup": "flat world, survival, netherite sword + Strength II; `/summon elsewhere:mirewick_tolliver ~ ~ ~6`, kill it; shot within 1 s of death, F1, looking at the spot; repeat with `elsewhere:azmar_sultana` and `elsewhere:hrafnholt_jarl`",
-   "note": "generic: entity mirewick_tolliver, 1 setup command(s); framing approximate"
+   "note": "generic: entity mirewick_tolliver, 1 setup command(s); framing approximate",
+   "override": "vfx.json"
   },
   {
    "n": 492,

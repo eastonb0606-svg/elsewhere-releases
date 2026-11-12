@@ -213,7 +213,7 @@ trinket("aldermark_oath_ring", "Oath Ring", "rare", ["Vanguard trinket of Alderm
         shaped([" G ", "GDG", " G "], {"G": "minecraft:gold_ingot", "D": "minecraft:diamond"}, "misc"), [{"table": "chests/kingdom_armory", "chance": 0.08}])
 trinket("aldermark_quickdraw_quiver", "Quickdraw Quiver", "rare", ["Skirmisher trinket of Aldermark (off hand or hotbar)", "Bow and crossbow draw time -15%"],
         shaped(["LSL", "LAL", "LLL"], {"L": "minecraft:leather", "S": "minecraft:string", "A": "minecraft:arrow"}, "misc"), [{"table": "chests/kingdom_armory", "chance": 0.08}])
-trinket("mirewick_fowlers_bandolier", "Fowler's Bandolier", "rare", ["Trapper trinket of Mirewick (off hand or hotbar)", "Tipped, spectral and special arrows (Echo, Sunglass, Harpoon Bolt) are not used up 40% of the time"],
+trinket("mirewick_fowlers_bandolier", "Fowler's Bandolier", "rare", ["Trapper trinket of Mirewick", "Works from the off hand or hotbar", "Tipped, spectral and special arrows", "(Echo, Sunglass, Harpoon Bolt)", "are not used up 40% of the time"],
         shaped(["LSL", "ASA", "LLL"], {"L": "minecraft:leather", "S": "minecraft:string", "A": "minecraft:spectral_arrow"}, "misc"), [{"table": "chests/mirewick_courier", "chance": 0.08}])
 trinket("hush_binding_sigil", "Binding Sigil", "epic", ["Control trinket (off hand or hotbar)", "Slowness, Weakness, Blindness, Mining Fatigue, Nausea, Darkness and Levitation you apply last 30% longer on non-bosses"],
         shaped(["RER", "ECE", "RER"], {"R": "elsewhere:resonant_shard", "E": "minecraft:ender_pearl", "C": "minecraft:amethyst_shard"}, "misc"), [{"table": "chests/silent_monastery", "chance": 0.08}])

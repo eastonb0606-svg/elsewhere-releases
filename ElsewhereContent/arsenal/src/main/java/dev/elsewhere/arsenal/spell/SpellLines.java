@@ -47,6 +47,14 @@ public final class SpellLines {
 			|| st.getBlock().getDescriptionId().contains("glass");
 	}
 
+	/** Beam origin at the held-item hand (right and below the eye) so a first-person beam reads as a line, not a blob on the view axis. */
+	public static Vec3 handStart(LivingEntity e) {
+		Vec3 look = e.getLookAngle().normalize();
+		Vec3 right = look.cross(new Vec3(0, 1, 0));
+		right = right.lengthSqr() < 1.0E-4 ? new Vec3(1, 0, 0) : right.normalize();
+		return e.getEyePosition().add(look.scale(0.7)).add(right.scale(0.45)).add(0, -0.4, 0);
+	}
+
 	public static void particles(ServerLevel level, Vec3 a, Vec3 b, ParticleOptions particle, double step) {
 		Vec3 d = b.subtract(a);
 		double len = d.length();

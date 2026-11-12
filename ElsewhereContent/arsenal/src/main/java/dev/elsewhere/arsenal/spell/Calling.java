@@ -401,6 +401,11 @@ public final class Calling {
 				recompute(p, false);
 				}
 		});
+		// a settled change must reach the client (panel, tooltips) without waiting for some other code to read the state
+		net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(server -> {
+			if (server.getTickCount() % 20 != 0) return;
+			for (ServerPlayer sp : server.getPlayerList().getPlayers()) state(sp);
+		});
 		ServerPlayConnectionEvents.JOIN.register((h, sender, server) -> {
 			recompute(h.player, true);
 			sync(h.player, state(h.player));

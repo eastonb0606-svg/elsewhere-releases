@@ -31,13 +31,20 @@ public class BurningGlassItem extends SpyglassItem {
 		LivingEntity target = Dmg.lookTarget(user, GearStats.BURNING_GLASS_RANGE);
 		Vec3 eye = user.getEyePosition();
 		Vec3 end = target != null ? target.getBoundingBox().getCenter() : eye.add(user.getLookAngle().scale(8));
-		if (held % 4 == 0) beam(server, eye.add(user.getLookAngle().scale(0.6)), end); // P13: every 4th tick, was 3rd (end rods linger 3 s)
+		if (held % 4 == 0) beam(server, hand(user), end); // P13: every 4th tick, was 3rd (end rods linger 3 s)
 		if (target != null && held % 20 == 0) {
 			float dps = Math.min(GearStats.BURNING_GLASS_MAX_DPS, GearStats.BURNING_GLASS_MIN_DPS + held / 20.0F);
 			target.hurtServer(server, Dmg.fire(server, user), dps);
 			target.igniteForSeconds(2.0F);
 			stack.hurtAndBreak(1, user, user.getUsedItemHand() == net.minecraft.world.InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
 		}
+	}
+
+	private static Vec3 hand(LivingEntity e) {
+		Vec3 look = e.getLookAngle().normalize();
+		Vec3 right = look.cross(new Vec3(0, 1, 0));
+		right = right.lengthSqr() < 1.0E-4 ? new Vec3(1, 0, 0) : right.normalize();
+		return e.getEyePosition().add(look.scale(0.7)).add(right.scale(0.45)).add(0, -0.4, 0);
 	}
 
 	public static void beam(ServerLevel level, Vec3 from, Vec3 to) {

@@ -19,12 +19,15 @@ final class SiegeSampler {
 	static volatile boolean inTick, running;
 	static final Map<String, Integer> INCL = new HashMap<>(), SELF = new HashMap<>();
 	static int samples;
+	static volatile int tickId;
+	static final Map<Integer, List<Set<String>>> PER_TICK = new HashMap<>();
 
 	static synchronized void start(Thread serverThread) {
 		server = serverThread;
 		INCL.clear();
 		SELF.clear();
 		samples = 0;
+		PER_TICK.clear();
 		if (running) return;
 		running = true;
 		Thread t = new Thread(SiegeSampler::loop, "elsewhere-siege-sampler");
@@ -39,7 +42,7 @@ final class SiegeSampler {
 	private static void loop() {
 		while (running) {
 			try {
-				Thread.sleep(4);
+				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				return;
 			}
@@ -54,6 +57,7 @@ final class SiegeSampler {
 					String k = name(st[i]);
 					if (seen.add(k)) INCL.merge(k, 1, Integer::sum);
 				}
+				PER_TICK.computeIfAbsent(tickId, k -> new ArrayList<>()).add(seen);
 				for (StackTraceElement e : st) {
 					String c = e.getClassName();
 					if (c.startsWith("java.") || c.startsWith("jdk.") || c.startsWith("sun.")) continue;
@@ -82,6 +86,20 @@ final class SiegeSampler {
 		SELF.entrySet().stream().sorted((a, c) -> c.getValue() - a.getValue()).limit(25)
 			.forEach(e -> s.append(' ').append(e.getKey()).append('=').append(e.getValue() * 100 / n).append('%'));
 		out.add(s.toString());
+		// top 5% ticks by sample count: where do the spikes go
+		List<Map.Entry<Integer, List<Set<String>>>> ticks = new ArrayList<>(PER_TICK.entrySet());
+		ticks.sort((a, c) -> c.getValue().size() - a.getValue().size());
+		int top = Math.max(1, ticks.size() / 20), tot = 0;
+		Map<String, Integer> hot = new HashMap<>();
+		for (int i = 0; i < top && i < ticks.size(); i++) for (Set<String> ss : ticks.get(i).getValue()) {
+			tot++;
+			for (String k : ss) hot.merge(k, 1, Integer::sum);
+		}
+		StringBuilder h = new StringBuilder("SAMPLER top-5% ticks (" + top + " of " + ticks.size() + ", " + tot + " samples, sizes " + ticks.get(0).getValue().size() + ".." + ticks.get(Math.min(top, ticks.size()) - 1).getValue().size() + "); inclusive:");
+		final int tt = Math.max(1, tot);
+		hot.entrySet().stream().filter(e -> e.getValue() * 100 / tt >= 3 && e.getValue() * 100 / tt <= 95).sorted((a, c) -> c.getValue() - a.getValue()).limit(60)
+			.forEach(e -> h.append(' ').append(e.getKey()).append('=').append(e.getValue() * 100 / tt).append('%'));
+		out.add(h.toString());
 		return out;
 	}
 }

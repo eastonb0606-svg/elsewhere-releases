@@ -2182,8 +2182,11 @@
    "rarity": "rare",
    "stats": {},
    "lore": [
-    "Trapper trinket of Mirewick (off hand or hotbar)",
-    "Tipped, spectral and special arrows (Echo, Sunglass, Harpoon Bolt) are not used up 40% of the time"
+    "Trapper trinket of Mirewick",
+    "Works from the off hand or hotbar",
+    "Tipped, spectral and special arrows",
+    "(Echo, Sunglass, Harpoon Bolt)",
+    "are not used up 40% of the time"
    ],
    "recipe": {
     "type": "minecraft:crafting_shaped",

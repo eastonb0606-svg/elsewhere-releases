@@ -204,10 +204,10 @@ public final class SelfTest {
 			}
 			if (!grip) return false;
 		}
-		// vanilla shield.json / shield_blocking.json numbers (third-person hold and the raised block)
-		if (!idle.getAsJsonObject("display").getAsJsonObject("thirdperson_righthand").get("translation").toString().equals("[10,6,-4]")) return false;
+		// vanilla shield.json / shield_blocking.json numbers shifted by R*S*0.5 block (the element models are centred, vanilla's entity shield is not; see shield3d.py DISPLAY)
+		if (!idle.getAsJsonObject("display").getAsJsonObject("thirdperson_righthand").get("translation").toString().equals("[2,-2,4]")) return false;
 		if (!block.getAsJsonObject("display").getAsJsonObject("thirdperson_righthand").get("rotation").toString().equals("[45,155,0]")) return false;
-		if (!block.getAsJsonObject("display").getAsJsonObject("firstperson_righthand").get("translation").toString().equals("[-15,3.25,-11]")) return false;
+		if (!block.getAsJsonObject("display").getAsJsonObject("firstperson_righthand").get("translation").toString().equals("[-4.17,-5.84,-1]")) return false;
 		try (InputStream in = Gear3Content.class.getResourceAsStream("/assets/elsewhere/textures/item/" + id + "_3d.png")) {
 			if (in == null) return false;
 			var img = ImageIO.read(in);

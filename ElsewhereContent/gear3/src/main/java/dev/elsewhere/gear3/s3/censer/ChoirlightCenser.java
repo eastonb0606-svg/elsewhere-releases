@@ -195,16 +195,21 @@ public class ChoirlightCenser extends CasterItem {
 	}
 
 	private static void clientFx(Level level, LivingEntity user, int elapsed) {
-		if (!ENABLED || elapsed % 3 != 0) return;
+		if (!ENABLED) return;
+		boolean ring = elapsed % PULSE_TICKS == 0; // checked before the 3-tick gate below: 20 is not a multiple of 3, the ring only came every 3 s
+		if (elapsed % 3 != 0 && !ring) return;
 		RandomSource r = level.getRandom();
 		Vec3 c = censerPos(user, elapsed);
-		level.addParticle(ParticleTypes.WHITE_SMOKE, c.x, c.y, c.z, (r.nextDouble() - 0.5) * 0.02, 0.035, (r.nextDouble() - 0.5) * 0.02);
+		if (elapsed % 3 == 0) level.addParticle(ParticleTypes.WHITE_SMOKE, c.x, c.y, c.z, (r.nextDouble() - 0.5) * 0.02, 0.035, (r.nextDouble() - 0.5) * 0.02);
 		if (elapsed % 9 == 0) level.addParticle(ParticleTypes.WAX_ON, c.x, c.y + 0.1, c.z, 0, 0.02, 0);
-		if (elapsed % PULSE_TICKS == 0) {
+		if (ring) {
 			// the reach of the choirlight: a ring of gold sparks at 6 blocks, once a second
-			for (int i = 0; i < 24; i++) {
-				double a = i * Math.PI * 2 / 24;
-				level.addParticle(ParticleTypes.WAX_ON, user.getX() + Math.cos(a) * RADIUS, user.getY() + 0.2, user.getZ() + Math.sin(a) * RADIUS, 0, 0.01, 0);
+			net.minecraft.core.particles.DustParticleOptions gold = new net.minecraft.core.particles.DustParticleOptions(0xFFD24A, 1.5F); // dust lives scale x longer, so the ring outlasts the 1 s beat
+			for (int i = 0; i < 64; i++) {
+				double a = i * Math.PI * 2 / 64;
+				double x = user.getX() + Math.cos(a) * RADIUS, z = user.getZ() + Math.sin(a) * RADIUS;
+				level.addParticle(gold, x, user.getY() + 0.3, z, 0, 0, 0);
+				if (i % 2 == 0) level.addParticle(ParticleTypes.WAX_ON, x, user.getY() + 0.5, z, 0, 0.02, 0);
 			}
 		}
 	}

@@ -116,6 +116,7 @@ public final class SelfTest {
 		if (measuring) {
 			tickStart = System.nanoTime();
 			cpuStart = MX.getCurrentThreadCpuTime();
+			SiegeSampler.tickId++;
 			SiegeSampler.inTick = true;
 		}
 	}

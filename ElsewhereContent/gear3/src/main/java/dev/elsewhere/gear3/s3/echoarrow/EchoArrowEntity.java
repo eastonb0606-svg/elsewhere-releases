@@ -118,15 +118,30 @@ public class EchoArrowEntity extends AbstractArrow {
 	private void echoVisuals() {
 		Level l = this.level();
 		Vec3 at = this.position();
-		for (int i = 0; i < 16; i++) {
-			double a = i * (Math.PI * 2.0 / 16.0);
-			l.addParticle(ParticleTypes.SCULK_CHARGE_POP, at.x + Math.cos(a) * 0.6, at.y + 0.1, at.z + Math.sin(a) * 0.6, Math.cos(a) * 0.12, 0.02, Math.sin(a) * 0.12);
+		// teal sculk ring (two rings, 1.5 and 3 blocks) so the pulse reads at 10+ blocks; dust lives scale x longer
+		net.minecraft.core.particles.DustParticleOptions teal = new net.minecraft.core.particles.DustParticleOptions(0x2FD9C4, 1.4F);
+		for (int ring = 1; ring <= 2; ring++) {
+			double rad = ring * 1.5;
+			int n = ring * 20;
+			for (int i = 0; i < n; i++) {
+				double a = i * (Math.PI * 2.0 / n);
+				double cx = Math.cos(a), sz = Math.sin(a);
+				l.addParticle(teal, at.x + cx * rad, at.y + 0.15, at.z + sz * rad, 0, 0, 0);
+				if (i % 2 == 0) l.addParticle(ParticleTypes.SCULK_CHARGE_POP, at.x + cx * rad, at.y + 0.2, at.z + sz * rad, cx * 0.05, 0.02, sz * 0.05);
+			}
 		}
 		double r = EchoArrows.RADIUS * 2 + 2;
 		int lines = 0;
 		for (Mob m : l.getEntitiesOfClass(Mob.class, AABB.ofSize(at, r, r, r), e -> EchoArrows.reaches(e, at))) {
 			if (lines++ >= EchoArrows.MAX_LINES) break;
-			l.addParticle(new VibrationParticleOption(new EntityPositionSource(m, m.getBbHeight() * 0.5F), 12), at.x, at.y, at.z, 0.0, 0.0, 0.0);
+			Vec3 to = new Vec3(m.getX(), m.getY() + m.getBbHeight() * 0.5, m.getZ());
+			Vec3 d = to.subtract(at);
+			double len = d.length();
+			if (len > 0.5) for (double t = 0.3; t < len; t += 0.3) { // a continuous teal vibration line, impact to mob
+				Vec3 pt = at.add(d.scale(t / len));
+				l.addParticle(teal, pt.x, pt.y, pt.z, 0, 0, 0);
+			}
+			l.addParticle(new VibrationParticleOption(new EntityPositionSource(m, m.getBbHeight() * 0.5F), 20), at.x, at.y, at.z, 0.0, 0.0, 0.0);
 		}
 		if (this.getOwner() instanceof Player p && p.isLocalPlayer())
 			l.playLocalSound(at.x, at.y, at.z, SoundEvents.SCULK_CLICKING, SoundSource.PLAYERS, 0.7F, 1.5F, false);

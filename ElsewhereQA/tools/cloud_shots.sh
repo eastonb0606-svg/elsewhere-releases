@@ -97,6 +97,9 @@ if ! build_jar; then
 fi
 JAR=$(ls -S dist/elsewhere-*.jar 2>/dev/null | head -1); [ -n "$JAR" ] || fail "no dist/elsewhere-*.jar"
 rm -f "$W/mods"/*.jar; cp "$JAR" "$W/mods/"
+# g* shards: compat scenes need Green Leaf + Test Meter beside the merged jar, and JEI (-Pjei) (lead 17:00)
+JEIFLAG=""; case "$SHARD" in g*) cp "$R"/ElsewhereQA/cloud-extra-mods/*.jar "$W/mods/"; JEIFLAG="-Pjei";; esac
+ls "$W/mods"
 echo "merged jar $(basename "$JAR") $(stat -c %s "$JAR") bytes in $(( $(date +%s) - t0 )) s"
 
 # 4. client shots under xvfb
@@ -120,7 +123,7 @@ rm -rf build/run/clientGameTest/saves build/run/clientGameTest/logs
 PUB=$!
 timeout --kill-after=60 $(( (WD + 12) * 60 )) xvfb-run -a -s "-screen 0 1920x1080x24" ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx1g --console=plain \
   -Pfapi=0.166.0+26.3 -PqaMods="$W/mods" -PqaClient=shots -PqaShotList="$R/ElsewhereQA/shots-3.0/shotlist.json" -PqaShotDir="$S" \
-  -PqaShotOnly="$SPEC" -PqaUser=ShotRunner -PqaWatchdog="$WD" $MUSICVM runClientGameTest > "$W/client.out" 2>&1
+  -PqaShotOnly="$SPEC" -PqaUser=ShotRunner -PqaWatchdog="$WD" $MUSICVM $JEIFLAG runClientGameTest > "$W/client.out" 2>&1
 rc=$?
 touch "$W/client.done"; wait "$PUB" 2>/dev/null
 echo "client rc=$rc"; grep -E '\[shots\] (TOTAL|FAIL|MANUAL)|watchdog' "$QALOG" 2>/dev/null | tail -25

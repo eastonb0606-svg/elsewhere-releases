@@ -93,7 +93,7 @@ def texture(spec):
     face(16, True)
     for v in range(16, 24):
         for u in range(0, 8):
-            img[v][u] = get("o")
+            img[v][u] = get("m")  # rim: main colour, not the near-black outline (read as a black slab edge-on)
         for u in range(8, 16):
             img[v][u] = get("l", "b") if (u == 8 or v == 16) else get("b")
     leather = (75, 48, 32, 255) if wood else (58, 52, 50, 255)
@@ -135,23 +135,25 @@ def elements(r):
     return els
 
 
-# vanilla 26.3 assets/minecraft/models/item/shield.json and shield_blocking.json display blocks, verbatim
+# vanilla 26.3 shield.json / shield_blocking.json display blocks, with each translation shifted by R*S*(0.5 block): vanilla's
+# entity shield sits at the item origin and its translations cancel ItemTransform's translate(-0.5); these element models are
+# already centred, so the vanilla values verbatim float the shield ~0.5 block off the hand (scripts: derived 2026-11-12)
 DISPLAY = {
-    "thirdperson_righthand": {"rotation": [0, 90, 0], "translation": [10, 6, -4], "scale": [1, 1, 1]},
-    "thirdperson_lefthand": {"rotation": [0, 90, 0], "translation": [10, 6, 12], "scale": [1, 1, 1]},
-    "firstperson_righthand": {"rotation": [0, 180, 5], "translation": [-10, 1.75, -10], "scale": [1.25, 1.25, 1.25]},
-    "firstperson_lefthand": {"rotation": [0, 180, 5], "translation": [10, 0, -10], "scale": [1.25, 1.25, 1.25]},
-    "gui": {"rotation": [15, -25, -5], "translation": [2, 3, 0], "scale": [0.65, 0.65, 0.65]},
-    "fixed": {"rotation": [0, 180, 0], "translation": [-4.5, 4.5, -5], "scale": [0.55, 0.55, 0.55]},
-    "on_shelf": {"rotation": [0, 0, 0], "translation": [11, 18.5, 8.7], "scale": [1.4, 1.4, 1.4]},
-    "ground": {"rotation": [0, 0, 0], "translation": [2, 4, 2], "scale": [0.25, 0.25, 0.25]},
+    "thirdperson_righthand": {"rotation": [0, 90, 0], "translation": [2, -2, 4], "scale": [1, 1, 1]},
+    "thirdperson_lefthand": {"rotation": [0, 90, 0], "translation": [2, -2, 4], "scale": [1, 1, 1]},
+    "firstperson_righthand": {"rotation": [0, 180, 5], "translation": [-0.91, -9.08, 0], "scale": [1.25, 1.25, 1.25]},
+    "firstperson_lefthand": {"rotation": [0, 180, 5], "translation": [-0.83, -9.09, 0], "scale": [1.25, 1.25, 1.25]},
+    "gui": {"rotation": [15, -25, -5], "translation": [-0.9, 0.3, 0], "scale": [0.65, 0.65, 0.65]},
+    "fixed": {"rotation": [0, 180, 0], "translation": [-0.1, 0.1, -0.6], "scale": [0.55, 0.55, 0.55]},
+    "on_shelf": {"rotation": [0, 0, 0], "translation": [-0.2, 7.3, -2.5], "scale": [1.4, 1.4, 1.4]},
+    "ground": {"rotation": [0, 0, 0], "translation": [0, 2, 0], "scale": [0.25, 0.25, 0.25]},
 }
 DISPLAY_BLOCKING = {
-    "thirdperson_righthand": {"rotation": [45, 155, 0], "translation": [-3.49, 11, -2], "scale": [1, 1, 1]},
-    "thirdperson_lefthand": {"rotation": [45, 155, 0], "translation": [11.51, 7, 2.5], "scale": [1, 1, 1]},
-    "firstperson_righthand": {"rotation": [0, 180, -5], "translation": [-15, 3.25, -11], "scale": [1.25, 1.25, 1.25]},
-    "firstperson_lefthand": {"rotation": [0, 180, -5], "translation": [5, 5, -11], "scale": [1.25, 1.25, 1.25]},
-    "gui": {"rotation": [15, -25, -5], "translation": [2, 3, 0], "scale": [0.65, 0.65, 0.65]},
+    "thirdperson_righthand": {"rotation": [45, 155, 0], "translation": [0.38, -2.17, -0.14], "scale": [1, 1, 1]},
+    "thirdperson_lefthand": {"rotation": [45, 155, 0], "translation": [0.88, -1.39, -0.42], "scale": [1, 1, 1]},
+    "firstperson_righthand": {"rotation": [0, 180, -5], "translation": [-4.17, -5.84, -1], "scale": [1.25, 1.25, 1.25]},
+    "firstperson_lefthand": {"rotation": [0, 180, -5], "translation": [-4.09, -5.83, -1], "scale": [1.25, 1.25, 1.25]},
+    "gui": {"rotation": [15, -25, -5], "translation": [-0.9, 0.3, 0], "scale": [0.65, 0.65, 0.65]},
 }
 
 
