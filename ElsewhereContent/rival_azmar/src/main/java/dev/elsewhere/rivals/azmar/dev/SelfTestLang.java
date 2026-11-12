@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Function;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.locale.Language;
@@ -36,6 +37,21 @@ final class SelfTestLang {
 		"item.elsewhere.kingdom_auctioneer_spawn_egg", "item.elsewhere.kingdom_caravan_master_spawn_egg", "item.elsewhere.kingdom_clerk_spawn_egg",
 		"item.elsewhere.kingdom_lawspeaker_spawn_egg", "item.elsewhere.kingdom_market_inspector_spawn_egg", "item.elsewhere.kingdom_royal_envoy_spawn_egg",
 		"item.elsewhere.kingdom_smith_spawn_egg");
+
+	/**
+	 * Dev-classpath stand-ins, skipped only in a lane run without kingdom_lore: kingdom_court's DevEntry registers K-D's lore items as
+	 * bare placeholders (kingdom_lore registers and names the real ones), and court devlibs older than 3.0 registered the test coins. DevEntry
+	 * is dropped at merge, so in the merged jar none of these is skipped.
+	 */
+	static final Set<String> DEV_STAND_INS = Set.of("item.elsewhere.lore_survey_fragment", "item.elsewhere.lore_royal_proclamation",
+		"item.elsewhere.lore_seal_marshal", "item.elsewhere.lore_seal_castellan", "item.elsewhere.lore_seal_master_at_arms", "item.elsewhere.lore_seal_huntsman",
+		"item.elsewhere.lore_seal_chancellor", "item.elsewhere.test_dinar", "item.elsewhere.test_scrip");
+
+	/** A lane run (Azmar is its own mod) with no kingdom_lore on the classpath: the only case where {@link #DEV_STAND_INS} are skipped. */
+	static boolean laneWithoutLore() {
+		FabricLoader f = FabricLoader.getInstance();
+		return f.isModLoaded("elsewhere_rival_azmar") && !f.isModLoaded("elsewhere_kingdom_lore");
+	}
 
 	/** Vanilla potion-type items: each Elsewhere potion needs a name on all four. */
 	static final List<Item> POTION_ITEMS = List.of(Items.POTION, Items.SPLASH_POTION, Items.LINGERING_POTION, Items.TIPPED_ARROW);
@@ -146,6 +162,11 @@ final class SelfTestLang {
 
 	/** One check line; {@code mustHaveSome}: Azmar itself registers entries of this kind, so an empty sweep means the sweep is broken. */
 	static void report(String name, List<String> missing, int looked, boolean mustHaveSome, List<String> all) {
+		if (laneWithoutLore()) {
+			List<String> skipped = new ArrayList<>();
+			missing.removeIf(k -> DEV_STAND_INS.contains(k) && skipped.add(k));
+			if (!skipped.isEmpty()) info("lang: skipped " + skipped.size() + " dev-classpath stand-ins (kingdom_court DevEntry / old court devlib; named or absent in the merged jar): " + skipped);
+		}
 		all.addAll(missing);
 		String detail = missing.isEmpty() ? looked + " checked" : missing.size() + " of " + looked + " missing: "
 			+ (missing.size() > 40 ? missing.subList(0, 40) + " ..." : missing);

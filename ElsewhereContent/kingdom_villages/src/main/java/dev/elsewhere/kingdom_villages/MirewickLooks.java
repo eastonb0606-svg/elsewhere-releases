@@ -203,7 +203,7 @@ public final class MirewickLooks {
 				} else if (y > b.minY() + 1 && wallStuff(o) && roof(orig(c, p.above()))) {
 					// the wall course right under the roof: a gilt cornice where it shows outside (and along the gable rakes)
 					boolean shows = false;
-					for (Direction d : Direction.Plane.HORIZONTAL) if (level.getBlockState(p.relative(d)).isAir()) shows = true;
+					for (Direction d : Direction.Plane.HORIZONTAL) if (level.isLoaded(p.relative(d)) && level.getBlockState(p.relative(d)).isAir()) shows = true; // no neighbour chunk load (s-review-kingdom)
 					if (shows) set(c, at, p, gilt());
 				}
 			}

@@ -25,7 +25,9 @@
 		"setbonusb.SetBonusBMixins$Shoot",
 		"reliquary.EchoSilenceMixin",
 		"mothlight.MothdustMixin",
-		"mothlight.SapTapperMothlightMixin"
+		"mothlight.SapTapperMothlightMixin",
+		"minion.MinionManagerSlotsMixin",
+		"waryak.QuartermasterOffersMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

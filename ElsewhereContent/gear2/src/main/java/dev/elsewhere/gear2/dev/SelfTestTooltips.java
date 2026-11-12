@@ -93,7 +93,7 @@ final class SelfTestTooltips {
 			args(summary(Gear2Items.MIRRORBOLT_ARBALEST), Gear2Stats.ARBALEST_DAMAGE, Gear2Stats.ARBALEST_RELOAD_SECONDS, Gear2Stats.ARBALEST_PIERCE)
 				&& args(detail(Gear2Items.MIRRORBOLT_ARBALEST, "elsewhere.p5.range"), Gear2Stats.ARBALEST_RANGE)
 				&& args(summary(Gear2Items.STEAM_AUGER), Gear2Stats.AUGER_SPEED, Gear2Stats.AUGER_SPEED / Gear2Stats.NETHERITE_PICK_SPEED)
-				&& args(detail(Gear2Items.STEAM_AUGER, "elsewhere.p5.auger.reach"), Attributes.BLOCK_INTERACTION_RANGE.value().getDefaultValue() + Gear2Stats.AUGER_REACH_DELTA)
+				&& args(detail(Gear2Items.STEAM_AUGER, "elsewhere.p5.auger.reach"), p.getAttributes().getBaseValue(Attributes.BLOCK_INTERACTION_RANGE) + Gear2Stats.AUGER_REACH_DELTA)
 				&& args(summary(Gear2Items.TERMITE_HIVE_LANTERN), 3, 3, Gear2Stats.TERMITE_SPREAD_TICKS / 20.0)
 				&& args(detail(Gear2Items.TERMITE_HIVE_LANTERN, "elsewhere.p5.termite.speed"), Gear2Stats.TERMITE_SPEED, Gear2Stats.TERMITE_SPEED / Gear2Stats.NETHERITE_PICK_SPEED * 100)
 				&& args(summary(Gear2Items.SEERS_HOURGLASS), Gear2Stats.HOURGLASS_LEAD_TICKS / 20.0)

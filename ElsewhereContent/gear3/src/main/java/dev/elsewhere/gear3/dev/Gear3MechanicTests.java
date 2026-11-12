@@ -117,6 +117,20 @@ final class Gear3MechanicTests {
 			if (Gear3Hooks.bandolierSaves(p, new ItemStack(Items.ARROW))) plainSaved = true;
 		}
 		check("Bandolier: spectral arrows saved about 40% (400 shots)", saved > 120 && saved < 200 && !plainSaved, saved);
+		{ // s-asm-gear3 (lead directive 12:58): the swarm's special arrows are saved too
+			java.util.List<String> special = java.util.List.of("echo_arrow", "sunglass_arrow", "tidebrass_harpoon_bolt");
+			java.util.Map<String, Integer> got = new java.util.LinkedHashMap<>();
+			boolean all = true;
+			for (String sid : special) {
+				Item si = it(sid);
+				if (si == null) { all = false; got.put(sid, -1); continue; }
+				int n = 0;
+				for (int i = 0; i < 400; i++) if (Gear3Hooks.bandolierSaves(p, new ItemStack(si))) n++;
+				got.put(sid, n);
+				all &= Gear3Hooks.isSpecialArrow(new ItemStack(si)) && n > 120 && n < 200;
+			}
+			check("Bandolier: Echo, Sunglass and Harpoon arrows are special arrows, saved about 40% (400 shots each)", all, got);
+		}
 		p.setItemInHand(InteractionHand.OFF_HAND, ItemStack.EMPTY);
 		check("Bandolier: nothing without the trinket", !Gear3Hooks.bandolierSaves(p, new ItemStack(Items.SPECTRAL_ARROW)));
 

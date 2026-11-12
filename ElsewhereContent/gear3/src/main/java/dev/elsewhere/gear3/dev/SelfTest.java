@@ -317,6 +317,7 @@ public final class SelfTest {
 		dev.elsewhere.gear3.s3.willo.WilloSelfTest.run(s); // s-willolantern: "Will-o'-Lantern: ..." checks
 		dev.elsewhere.gear3.s3.reliquary.ReliquarySelfTest.run(s); // s-reliquary: "Echo Reliquary: ..." checks
 		dev.elsewhere.gear3.s3.totems.TotemTests.run(s); // s-totems: "Totems: ..." checks
+		dev.elsewhere.gear3.s3.waryak.WarYakSelfTest.run(s); // s-waryak: "War-Yak Horn: ..." checks
 	}
 
 	static boolean stats(Gear3Def d, ItemStack st) {

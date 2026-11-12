@@ -471,7 +471,7 @@ final class SelfTestLayoutAudit {
 			}
 			islands++;
 			islandBlocks += size;
-			if (iFirst == null) iFirst = size + " blocks from " + rel(s, BlockPos.getX(first), BlockPos.getY(first), BlockPos.getZ(first)) + " (" + l.getBlockState(BlockPos.of(first)).getBlock() + ")";
+			if (islands <= 6) iFirst = (iFirst == null ? "" : iFirst + " | ") + size + " blocks from " + rel(s, BlockPos.getX(first), BlockPos.getY(first), BlockPos.getZ(first)) + " (" + l.getBlockState(BlockPos.of(first)).getBlock() + ")";
 		}
 		// floating 2: footprint columns with more than 1 air/fluid block under their lowest structure block (overhangs, spans and hung blocks excused)
 		int floatCols = 0, maxGap = 0;
@@ -484,7 +484,7 @@ final class SelfTestLayoutAudit {
 			if (hung(l, struct, x, y, z) || overhang(t, ys, yt, gap, x, y, z)) continue;
 			floatCols++;
 			maxGap = Math.max(maxGap, gap[i]);
-			if (fFirst == null) fFirst = l.getBlockState(new BlockPos(x, y, z)).getBlock() + " at " + rel(s, x, y, z) + " over " + gap[i] + " air/fluid";
+			if (floatCols <= 4) fFirst = (fFirst == null ? "" : fFirst + " | ") + l.getBlockState(new BlockPos(x, y, z)).getBlock() + " at " + rel(s, x, y, z) + " over " + gap[i] + " air/fluid";
 		}
 		double share = faces == 0 ? 0 : (double) buried / faces;
 		info(String.format("%s: site %s, town floors %d/%d, %d columns, %d blocks placed, %d structure blocks, %d placed fluid, %d ms; floating islands %d (%d blocks), unsupported columns %d (max gap %d), afloat %d; blocked openings %d, buried faces %d of %d (%.1f%%); leaks %d; valuable %d",
@@ -492,7 +492,7 @@ final class SelfTestLayoutAudit {
 		check(tag + ": the realm is built (castle, towns, road)", struct.size() > 20000, struct.size() + " structure blocks");
 		check(tag + ": no valuable blocks anywhere in the realm", valuable == 0, valuable + (vFirst == null ? "" : "; " + vFirst));
 		check(tag + ": nothing floating (no island off the ground; no footprint column over more than 1 air/fluid block, overhangs and spans excepted)", islands == 0 && floatCols == 0,
-			islands + " islands, " + floatCols + " columns" + (iFirst == null ? "" : "; island " + iFirst) + (fFirst == null ? "" : "; column " + fFirst));
+			islands + " islands, " + floatCols + " columns" + (iFirst == null ? "" : "; islands: " + iFirst) + (fFirst == null ? "" : "; columns: " + fFirst));
 		check(tag + ": nothing buried (no door, gate or window against terrain; terrain against at most 5% of the wall faces above their ground)", blocked == 0 && share <= 0.05,
 			blocked + " blocked, " + String.format("%.1f%%", share * 100) + (bFirst == null ? "" : "; " + bFirst) + (faceFirst == null ? "" : "; " + faceFirst));
 		check(tag + ": no water leaks (every placed fluid contained, no natural water opened)", leaks == 0, leaks + (lFirst == null ? "" : "; " + lFirst));

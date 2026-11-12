@@ -347,11 +347,13 @@ public final class BossFight {
 		for (ServerBossEvent bar : bars) bar.removeAllPlayers();
 		for (Participant p : participants.values()) onLeave(p.player);
 		String tag = fightTag();
-		for (Entity e : level.getEntities((Entity) null, arena.box().inflate(48), e -> e.entityTags().contains(tag))) e.discard();
-		// boss projectiles still in flight would land after the restore (soul fire, magma ...): remove them first
+		// boss and minion projectiles still in flight would land after the restore (soul fire, magma, a Pyre Shard's fireball
+		// setting fire ...): remove them first, while their minion owners are still loaded
 		List<ElsewhereBoss> owners = bodies();
 		for (Entity e : level.getEntities((Entity) null, arena.box().inflate(48),
-			e -> e instanceof net.minecraft.world.entity.projectile.Projectile pr && owners.contains(pr.getOwner()))) e.discard();
+			e -> e instanceof net.minecraft.world.entity.projectile.Projectile pr && pr.getOwner() != null
+				&& (owners.contains(pr.getOwner()) || pr.getOwner().entityTags().contains(tag)))) e.discard();
+		for (Entity e : level.getEntities((Entity) null, arena.box().inflate(48), e -> e.entityTags().contains(tag))) e.discard();
 		for (Entity e : level.getEntities((Entity) null, arena.box().inflate(8), e -> e instanceof net.minecraft.world.entity.item.FallingBlockEntity)) e.discard();
 		if (arena.hasSnapshot()) {
 			arena.restore(level);

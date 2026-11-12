@@ -11,13 +11,7 @@
     "elsewhere:frostwake_scepter",
     "elsewhere:starfall_orrery",
     "elsewhere:choirlight_censer",
-    {
-      "id": "elsewhere:prism_bow",
-      "required": false
-    },
-    {
-      "id": "elsewhere:mirewick_will_o_lantern",
-      "required": false
-    }
+    "elsewhere:prism_bow",
+    "elsewhere:mirewick_will_o_lantern"
   ]
 }

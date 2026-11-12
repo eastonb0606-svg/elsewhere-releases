@@ -4,7 +4,8 @@
   "entities/mother_creak",
   "entities/ossyra",
   "entities/lithara",
-  "entities/aphelion"
+  "entities/aphelion",
+  "entities/auris"
  ],
  "items": [
   {
@@ -1838,7 +1839,8 @@
    "lore": [
     "Swarm whip",
     "Reach +2",
-    "Tags its target like the Gale Ribbon: your minions switch to it"
+    "Hit marks it Thorned 5 s: minions switch to it, +2 damage",
+    "Right-click cracks it: the mark fades 3 s after your last swing"
    ],
    "recipe": {
     "type": "minecraft:crafting_shaped",
@@ -1888,7 +1890,8 @@
    "lore": [
     "Commander whip",
     "Reach +3",
-    "Tags its target like the Gale Ribbon: your minions switch to it"
+    "Hit marks it Shackled 5 s (7 s wet): minions switch, +20% damage",
+    "Right-click cracks it: the mark fades 3 s after your last swing"
    ],
    "recipe": {
     "type": "minecraft:crafting_shaped",
@@ -1938,7 +1941,8 @@
    "lore": [
     "Commander whip of Azmar",
     "Reach +2.5",
-    "Tags its target like the Gale Ribbon: your minions switch to it"
+    "Hit marks it Venom 5 s: minions switch, +15% damage, ignore 3 armor",
+    "Right-click cracks it: the mark fades 3 s after your last swing"
    ],
    "recipe": {
     "type": "minecraft:smithing_transform",
@@ -1980,7 +1984,8 @@
    "lore": [
     "Commander whip",
     "Reach +3.5",
-    "Tags its target like the Gale Ribbon: your minions switch to it"
+    "Hit marks it Resonant 5 s: minions switch to it, +25% damage",
+    "Right-click cracks it: the mark fades 3 s after your last swing"
    ],
    "recipe": {
     "type": "minecraft:smithing_transform",
@@ -2178,7 +2183,7 @@
    "stats": {},
    "lore": [
     "Trapper trinket of Mirewick (off hand or hotbar)",
-    "Tipped and spectral arrows are not used up 40% of the time"
+    "Tipped, spectral and special arrows (Echo, Sunglass, Harpoon Bolt) are not used up 40% of the time"
    ],
    "recipe": {
     "type": "minecraft:crafting_shaped",
@@ -2822,6 +2827,552 @@
    "calling": [
     "marksman"
    ]
+  },
+  {
+   "id": "gear3_ascension_shard",
+   "name": "Ascension Shard",
+   "kind": "material",
+   "rarity": "epic",
+   "mechanic": "ascension_shard",
+   "stats": {
+    "stack": 64,
+    "fireproof": 1
+   },
+   "lore": [
+    "Smithing material (Elsewhere, G5)",
+    "Smithing table, empty template slot: a G4 set piece + this shard makes that piece Ascendant",
+    "Ascendant: +1 armor toughness; a full Ascendant set raises its set bonus to II"
+   ],
+   "jei": [
+    "How to get: Auris, Lithara, Ossyra and Aphelion always drop one; so does every kingdom ruler (the Aldermark King, the Sultana of Azmar, the High Jarl of Hrafnholt, and whichever Magnate holds Mirewick's Chair) when a player kills them. Court Lords and lesser bosses drop none.",
+    "Use: in a smithing table, leave the template slot empty and put a G4 set piece (any Elsewhere 3.0 armor set piece) with one shard. The piece stays itself, enchantments and all, and becomes Ascendant: +1 armor toughness.",
+    "Wear a whole set of Ascendant pieces for set bonus II: the set or pair bonus is half again as strong. A piece can only be Ascended once."
+   ]
+  },
+  {
+   "id": "tidebrass_harpoon_bolt",
+   "name": "Harpoon Bolt",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "harpoon_bolt",
+   "stats": {},
+   "tags": [
+    "minecraft:arrows",
+    "elsewhere:crossbow_only_ammo"
+   ],
+   "lore": [
+    "Trapper crossbow bolt of Tidebrass",
+    "Hit: pulls a non-boss target 3 blocks toward you",
+    "x1.5 damage to a target in water; flies true underwater",
+    "!Crossbows only: bows can't fire it"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     " A ",
+     "ATA",
+     " A "
+    ],
+    "key": {
+     "A": "minecraft:arrow",
+     "T": "elsewhere:tidebrass_ingot"
+    },
+    "result": {
+     "id": "elsewhere:tidebrass_harpoon_bolt",
+     "count": 8
+    }
+   },
+   "jei": [
+    "How to get: craft 4 arrows around a Tidebrass Ingot (the Tidewright's metal) for 8 Harpoon Bolts.",
+    "Crossbow ammo (crossbows and dispensers fire it; bows can't). A hit pulls the target 3 blocks toward the shooter, never closer than 1.5 blocks; players too, never bosses or riders. A dispensed bolt pulls back toward the dispenser.",
+    "Against a target standing or swimming in water it deals x1.5 damage, and it keeps its speed underwater like a trident."
+   ]
+  },
+  {
+   "id": "mothlight_staff",
+   "name": "Mothlight Staff",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "mothlight_staff",
+   "model": "handheld",
+   "stats": {
+    "durability": 128,
+    "repair": "elsewhere:moonsilk_thread"
+   },
+   "lore": [
+    "Swarm staff of the Pale Hollow (10 Glimmer, 1 s call)",
+    "Calls a Mothlight Swarm: 3 moths in one minion slot, 6 HP each, each strikes for 1.5 every 0.75 s",
+    "Moth hits: a non-boss target deals 10% less damage for 3 s",
+    "Sneak-use: send the moths home"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "TET",
+     "TBT",
+     " B "
+    ],
+    "key": {
+     "T": "elsewhere:moonsilk_thread",
+     "E": "elsewhere:unblinking_eye",
+     "B": "elsewhere:pale_bark"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/selenne",
+     "chance": 0.3
+    }
+   ],
+   "jei": [
+    "How to get: Selenne drops it (30%); the Sap Tapper (Resin Kilns, Pale Hollow) trades it for 20 Pale Bark + 4 Moonsilk Thread; or craft it from 4 Moonsilk Thread, 2 Pale Bark and an Unblinking Eye.",
+    "Hold use for 1 s to call a Mothlight Swarm (10 Glimmer, 1 durability): three moths that share ONE minion slot, 6 HP each. Every 0.75 s each living moth strikes for 1.5 (x minion damage).",
+    "One blow fells at most one moth, and a fallen moth stays down until you call a new swarm. Moth hits dust non-boss targets: for 3 s they deal 10% less damage. Sneak-use sends the moths home."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "herdcaller_pennant",
+   "name": "Herdcaller's Pennant",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "pennant",
+   "stats": {
+    "stack": 1
+   },
+   "lore": [
+    "Swarm standard (Summoner), 60 s cooldown",
+    "Plant it: your minions within 12 blocks heal 1 HP/s and move 10% faster for 30 s",
+    "One standard at a time; scales with your Summoner Calling"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "KFK",
+     "R R"
+    ],
+    "key": {
+     "K": "elsewhere:haze_resin_block",
+     "F": "#minecraft:banners",
+     "R": "elsewhere:haze_resin"
+    }
+   },
+   "jei": [
+    "How to get: craft it from any banner and 10 Haze Resin (a Haze Resin Block on each side of the banner, a Haze Resin under each block). Haze Resin comes from the Green Haze; its Budtender trades it.",
+    "Use it on the ground (in the open while standing: at your feet) to plant your standard. For 30 s your minions within 12 blocks of it heal 1 HP every second and move 10% faster, both times your Summoner Calling strength.",
+    "It needs a solid block under it and 3 blocks of room. One standard per player: planting again takes the old one down. The pennant is kept and cools down for 60 s; the standard comes down early if you leave, die or its block is broken."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "prism_bow",
+   "name": "Prism Bow",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "prism_bow",
+   "model": "bow",
+   "bow": {
+    "grip": [
+     7.3,
+     7.0
+    ]
+   },
+   "stats": {
+    "durability": 640,
+    "repair": "elsewhere:sunglass_shard"
+   },
+   "tags": [
+    "minecraft:enchantable/bow",
+    "minecraft:enchantable/durability"
+   ],
+   "lore": [
+    "Arcane archer bow (Marksman + Caster)",
+    "Full draw: spends 2 Glimmer to loose a light arrow (8 x spell power x hybrid strength) instead of your arrow",
+    "The light arrow flies dead straight for 24 blocks, then fades; arrows in your other hand are always loosed as arrows",
+    "!Bow enchantments only work on real arrows"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "SMS",
+     "SBS",
+     "SSS"
+    ],
+    "key": {
+     "S": "elsewhere:sunglass_shard",
+     "M": "elsewhere:heliodor_mirror_core",
+     "B": "minecraft:bow"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/heliodor",
+     "chance": 0.3
+    }
+   ],
+   "jei": [
+    "How to get: Heliodor drops it (30% per kill), or craft it from 7 Sunglass Shards around a Heliodor Mirror Core and a bow.",
+    "A full draw with 2 Glimmer to spare (spell cost applies) looses a light arrow instead of your arrow, which is not used: 8 x spell power, scaled by your Marksman/Caster hybrid strength. It flies dead straight and fades after 24 blocks.",
+    "Without the Glimmer, or on a short draw, it shoots your arrow like any bow. Hold arrows in your other hand to always loose real arrows: tipped, spectral and special arrows keep their effects, and Power, Punch and Flame work on those only."
+   ],
+   "calling": [
+    "marksman",
+    "caster"
+   ]
+  },
+  {
+   "id": "echo_reliquary",
+   "name": "Echo Reliquary",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "echo_reliquary",
+   "stats": {
+    "durability": 256
+   },
+   "lore": [
+    "Reliquary of the Mute Order (Summoner, Elite)",
+    "Hold use 1 s (10 Glimmer): an Echo Knight answers, without a sound",
+    "Echo Knight: 60 HP, armor 16, strikes for 10 every 1.2 s",
+    "Its blows ignore 40% of armor and make no sound or vibration",
+    "Sneak-use: your knights go home",
+    "!Takes 2 minion slots"
+   ],
+   "loot": [
+    {
+     "table": "entities/auris",
+     "chance": 0.3
+    }
+   ],
+   "jei": [
+    "How to get: Auris, the Listening Engine, drops it (30%); the Mute Archivist of a Silent Monastery sells one for 32 Resonant Shards and a Cantor's Bell Shard. It can't be crafted.",
+    "Hold use for 1 s (10 Glimmer, 1 durability): an Echo Knight answers. It takes 2 minion slots, so you need 2 slots to call one; older minions go home to make room. Sneak-use sends your knights home.",
+    "Echo Knight: 60 HP, armor 16, strikes for 10 every 1.2 s, scaled by your minion damage. Its blows ignore 40% of the target's armor, and neither it nor its fights make a sound or a vibration: sculk, Wardens and the Hush's listeners never hear it."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "sunglass_arrow",
+   "name": "Sunglass Arrow",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "sunglass_arrow",
+   "stats": {},
+   "tags": [
+    "minecraft:arrows"
+   ],
+   "lore": [
+    "Trapper arrow",
+    "Flies straight through glass and glass panes",
+    "Sets the target on fire for 3 s; +25% damage against undead"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     " A ",
+     "ASA",
+     " A "
+    ],
+    "key": {
+     "A": "minecraft:arrow",
+     "S": "elsewhere:sunglass_shard"
+    },
+    "result": {
+     "id": "elsewhere:sunglass_arrow",
+     "count": 4
+    }
+   },
+   "jei": [
+    "How to get: craft 4 arrows around a Sunglass Shard (Glass Scarabs and Sun Motes in the Glasswaste drop it) for 4 Sunglass Arrows.",
+    "Shoot it from any bow, crossbow or dispenser. It flies straight through glass, stained and tinted glass and glass panes without breaking them, and stops at the first other block or mob.",
+    "A hit sets the target on fire for 3 s and deals +25% damage to undead (zombies, skeletons, phantoms, the Wither)."
+   ]
+  },
+  {
+   "id": "bramble_totem",
+   "name": "Bramble Totem",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "totem",
+   "stats": {
+    "durability": 128
+   },
+   "lore": [
+    "Swarm totem of the Greenhaze (10 Glimmer, 1 minion slot)",
+    "Use on the ground: a 30 HP bramble post that lashes up to 3 mobs within 5 blocks every 2 s",
+    "Each lash: 2 minion damage and Slowness I for 1 s",
+    "Thick with haze pollen: every 4th mob it lashes sneezes",
+    "Max 2 totems out; sneak-use to take yours down"
+   ],
+   "jei": [
+    "How to get: only from a Greenhaze Budtender, for 12 Haze Resin + 4 Giant Fern (each Budtender sells 2, and never restocks).",
+    "Use it on solid ground to set a 30 HP bramble post that never moves (10 Glimmer, 1 minion slot, 1 durability). Every 2 s it lashes the nearest 3 hostile mobs within 5 blocks for 2 minion damage and Slowness I (1 s). Every 4th mob it lashes sneezes from the haze pollen (harmless).",
+    "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "clockwork_sentry",
+   "name": "Clockwork Sentry",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "totem",
+   "stats": {
+    "durability": 128
+   },
+   "lore": [
+    "Sentry totem of the Verdigris Sea (10 Glimmer, 1 minion slot)",
+    "Use on the ground: a 40 HP, armor 8 copper turret",
+    "Fires a 3-damage bolt every second at one mob within 16 blocks it can see",
+    "Max 2 totems out; sneak-use to take yours down"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "PXP",
+     "GDG",
+     "CGC"
+    ],
+    "key": {
+     "P": "elsewhere:scraped_patina",
+     "X": "minecraft:crossbow",
+     "G": "elsewhere:verdigris_gear",
+     "D": "minecraft:dispenser",
+     "C": "minecraft:copper_block"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/verdigrim",
+     "chance": 0.3
+    }
+   ],
+   "jei": [
+    "How to get: Verdigrim drops it (30% per kill), or craft it from 2 Scraped Patina, a crossbow, 3 Verdigris Gears, a dispenser and 2 copper blocks.",
+    "Use it on solid ground to set a 40 HP, armor 8 copper turret that never moves (10 Glimmer, 1 minion slot, 1 durability). Once a second it fires a 3-damage minion bolt at one mob within 16 blocks that it can see: the one you are fighting first, else the nearest hostile.",
+    "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "azmar_sunglass_obelisk",
+   "name": "Sunglass Obelisk",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "totem",
+   "stats": {
+    "durability": 128
+   },
+   "lore": [
+    "Sentry totem of the Sultanate of Azmar (10 Glimmer, 1 minion slot)",
+    "Use on the ground: a 50 HP obelisk with a floating sunglass lens",
+    "Sunbeam on one mob within 16 blocks: 4 damage a second, 8 after 3 s on the same target",
+    "!Needs daylight or bright light (12+); dormant in the dark",
+    "Max 2 totems out; sneak-use to take yours down"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "SGS",
+     "DWD",
+     "CCC"
+    ],
+    "key": {
+     "S": "elsewhere:sunglass_shard",
+     "G": "minecraft:gold_block",
+     "D": "elsewhere:azmar_dinar",
+     "W": "elsewhere:azmar_seal_wazir",
+     "C": "minecraft:chiseled_sandstone"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/azmar_courier",
+     "chance": 0.05
+    }
+   ],
+   "jei": [
+    "How to get: the Royal Workshop of Azmar: craft it from 2 Sunglass Shards, a gold block, 2 Azmar Dinars, a Wazir's Seal and 3 chiseled sandstone; rarely found in Azmar courier chests (5%).",
+    "Use it on solid ground to set a 50 HP obelisk that never moves (10 Glimmer, 1 minion slot, 1 durability). In daylight or bright light (12+) its lens holds a sunbeam on one mob within 16 blocks: 4 minion damage a second, 8 a second once the beam has held the same target for 3 s. In the dark it stands dormant.",
+    "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "ironpeak_war_yak_horn",
+   "name": "War-Yak Horn",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "war_yak_horn",
+   "stats": {
+    "durability": 256,
+    "repair": "elsewhere:skyiron"
+   },
+   "lore": [
+    "Elite war-horn of Ironpeak (Summoner)",
+    "Blow it (hold use 1 s, 10 Glimmer): a War-Yak answers, 2 minion slots",
+    "War-Yak: 80 HP, armor 12; charges every 1.5 s for 9 damage",
+    "Its charge tramples through up to 3 mobs in a line",
+    "Sneak-use: your War-Yaks go home"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "KTK",
+     "KGK",
+     "L L"
+    ],
+    "key": {
+     "K": "elsewhere:skyiron",
+     "T": "elsewhere:gear3_forging_template",
+     "G": "minecraft:goat_horn",
+     "L": "minecraft:leather"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/thurgrim",
+     "chance": 0.3
+    }
+   ],
+   "jei": [
+    "How to get: Thurgrim drops it (30% per kill); the Clan Quartermaster sells one from clan rank 5 (8 Skyiron and a goat horn); or craft it: a goat horn bound with 4 Skyiron, an Elsewhere Forging Template and 2 leather straps."
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "mirewick_will_o_lantern",
+   "name": "Will-o'-Lantern",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "will_o_lantern",
+   "stats": {
+    "durability": 384,
+    "repair": "elsewhere:mirewick_scrip"
+   },
+   "lore": [
+    "Ritualist lantern of Mirewick, Caster and Summoner (10 Glimmer, 1 minion slot)",
+    "Hold use to call a Marsh Wisp; sneak-use sends it home",
+    "Every 4 s the wisp recasts your last damage spell at its target at 40% power (x Ritualist hybrid)",
+    "Its marsh-light lights the air around you",
+    "!One wisp per player; teleports, wards, heals, channels and crowd control are never echoed"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:mirewick_seal_ames",
+    "base": "elsewhere:glimmer_lantern",
+    "addition": "minecraft:ghast_tear"
+   },
+   "loot": [
+    {
+     "table": "chests/mirewick_courier",
+     "chance": 0.05
+    }
+   ],
+   "jei": [
+    "How to get: a Mirewick Magnate who holds the Chair when he falls drops it (30%); Mirewick courier chests (5%); or smith it: Seal of the Lantern-Oil + Glimmer Lantern + Ghast Tear.",
+    "Hold use for 1 s to call a Marsh Wisp (10 Glimmer, 1 minion slot, 1 durability). It floats at your shoulder and lights the air around it; sneak-use sends it home. One wisp per player.",
+    "Every 4 s, while your minions have a target you can see, the wisp recasts your last damage spell (Amethyst Wand, Sunlance Staff, Stormcoil Staff, Sculk Resonator, Emberfall Rod) at it for free at 40% power, times your Caster/Summoner hybrid strength."
+   ],
+   "calling": [
+    "caster",
+    "summoner"
+   ]
+  },
+  {
+   "id": "hrafnholt_hurlbat",
+   "name": "Hurlbat",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "hurlbat",
+   "model": "handheld",
+   "stats": {
+    "stack": 8
+   },
+   "lore": [
+    "Hrafnholt throwing axe (Marksman)",
+    "Use: throw it for 7 damage, 0.6 s between throws",
+    "Disables a raised shield for 2 s",
+    "Sticks where it lands; its thrower picks it back up",
+    "!Breaks on half of its hits"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "HH",
+     "HS",
+     " S"
+    ],
+    "key": {
+     "H": "elsewhere:hacksilver",
+     "S": "minecraft:stick"
+    },
+    "result": {
+     "count": 2
+    }
+   },
+   "loot": [],
+   "jei": [
+    "How to get: the Hrafnholt Huntmaster drops a bundle of 8 (50%, when a player kills him); the Hrafnholt Thing-day sells 8 for 12 Hacksilver; or craft 2 from 3 Hacksilver and 2 sticks.",
+    "Use to throw one: 7 damage, then 0.6 s before the next. A hit on a raised shield knocks it down for 2 s, like an axe blow.",
+    "It sticks where it lands, or glances off what it hit and drops; walk over it to pick it back up (only its thrower can). It breaks on half of its hits on a creature."
+   ],
+   "calling": [
+    "marksman"
+   ]
+  },
+  {
+   "id": "mirewick_mire_snare",
+   "name": "Mire Snare",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "mire_snare",
+   "stats": {
+    "stack": 8
+   },
+   "lore": [
+    "Trapper snare of Mirewick (place it on the floor)",
+    "Roots the first non-boss mob to step in for 3 s and deals 6 damage",
+    "Never springs for players, villagers, golems, pets or minions",
+    "!Single use: a sprung snare falls apart after 3 s"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "SCS",
+     "RIR"
+    ],
+    "key": {
+     "S": "minecraft:string",
+     "C": "elsewhere:mirewick_scrip",
+     "R": "minecraft:mangrove_roots",
+     "I": "minecraft:iron_ingot"
+    }
+   },
+   "jei": "How to get: Mirewick market (6 Lantern Scrip), or craft one from 2 string, 1 Mirewick Scrip, 1 iron ingot and 2 mangrove roots. Place it on a floor (also in shallow water): the first non-boss mob to step in is rooted for 3 s and takes 6 damage, credited to you. Players, villagers, golems, pets and minions never spring it. Single use: a sprung snare falls apart; an armed one breaks back into your hand."
   }
  ]
 }

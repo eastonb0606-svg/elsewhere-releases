@@ -25,7 +25,8 @@ and one combined log per profile as `modtests-<tag>-<profile>-latest.log` (same 
 - Failure isolation: a throw in a module's hook/start/tick is `CRASH`, no done signal within `TB_TIMEOUT` s (1200) is
   `TIMEOUT`; the batch goes on. If the JVM itself dies, the module it was running is `JVM-DIED` and a new boot (same
   world) continues with the rest. Between modules: force-loaded chunks released, all non-player entities discarded,
-  and on flat worlds the chunks within `TB_FLATR` (8) of 0,0 put back to the flat layers.
+  and on flat worlds every loaded overworld chunk (and all within `TB_FLATR`, 8, of 0,0) put back to the flat layers.
+  Every module starts at the fresh world's time of day with the weather cycle reset (Hrafnholt's tactics differ at dusk).
 - No cost outside the test copy; inside it, nothing is registered without `-Delsewhere.testbatch`.
 
 ## Options (env)
@@ -36,3 +37,14 @@ and one combined log per profile as `modtests-<tag>-<profile>-latest.log` (same 
 - `TB_PAR=0` one JVM at a time (strictly one slot's worth of memory); default runs the profiles at once.
 - `TB_SRC=<tree on the iMac>` test a tree already there (e.g. a previous merge's `ElsewhereBeta-mtk`) instead of ROOT's.
 - `TB_XMX` (2560m), `TB_TIMEOUT` (1200), `PORT0` (25790), `LANE`, `HL`.
+
+## Measured (merge 30, the 11:33 merge, iMac, one heavy.sh slot each)
+- Old (`modtests-all` + 5 `modtests-kingdom` rounds, logs `modtests-t30-*`): 12 JVM boots, 32.5 min wall for the pass
+  (11:35:06-12:07:37) plus 7.4 min to re-run arsenal; 70.7 JVM-minutes. Group a died of OutOfMemoryError (the core,
+  summoner and overworld_bosses totals were lost) and arsenal showed 77/84 there (84/84 alone); gear3 was not run.
+- New (`tools/testbatch.sh tb2`, same build): 3 boots, 20 modules, **21.9 min wall including sync and build** (world
+  12.4, flat 13.6, flat2 20.3 min, in parallel); every world module green (core 216/216, arsenal 84/84, gear3 686/686).
+  Kingdom-set totals equal the old ones on that build (court 381/438, kingdom 319/319, mirewick 472/472, bosshealth
+  2403/2403, duelist 2 fails vs 3, villages 1 vs 3). Two leaks between modules showed up (Hrafnholt's berserker_screen at
+  dusk, a villages road outside the old reset radius in Azmar's hash) and are fixed above; see `out-imac/testbatch/tb3`.
+- Gaps between modules are 2 s; a boot is about 20-30 s; no 420 s `haltAfterSeconds` idle per group any more.

@@ -28,5 +28,6 @@ public final class Gear3Client {
 		dev.elsewhere.gear3.s3.mothlight.client.MothlightClient.init(); // s-mothlight: Mothlight Swarm model layer + renderer (full bright)
 		dev.elsewhere.gear3.s3.willo.client.WillOLanternClient.init(); // s-willolantern: Marsh Wisp model layer + full-bright renderer
 		dev.elsewhere.gear3.s3.totems.client.TotemRenderers.init(); // s-totems: 3 totem model layers + renderer (sentry bolt streak, obelisk sunbeam)
+		dev.elsewhere.gear3.s3.waryak.client.WarYakClient.register(); // s-waryak: War-Yak model layer + renderer
 	}
 }

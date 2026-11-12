@@ -111,7 +111,7 @@
     "elsewhere:boss_music.theme.trouble_with_tribals": 728,
     "elsewhere:boss_music.theme.tyrant": 1389,
     "elsewhere:boss_music.theme.verdigris": 101,
-    "elsewhere:boss_music.theme.ignosi": 367
+    "elsewhere:boss_music.theme.ignosi": 406
   },
   "handoff_ramp_ticks": 8,
   "shared_themes": {
@@ -800,7 +800,7 @@
     },
     "elsewhere:boss_music.theme.ignosi": {
       "intro": "native",
-      "intro_ticks": 367,
+      "intro_ticks": 406,
       "beat_ticks": 9.536,
       "loop_ticks": 458.46,
       "surge_ticks": 0.0,

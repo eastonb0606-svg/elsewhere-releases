@@ -146,6 +146,7 @@ public final class SelfTestRun {
 		SelfTest2.run(server, gh, hu);
 		structuresAndLoot(server, gh, hu);
 		liveBuilds(gh);
+		SelfTestFit.add(gh, hu);
 		gh.getChunk(4, 0);
 		gh.getChunk(-4, 0);
 		List<Fight> fights = new ArrayList<>();

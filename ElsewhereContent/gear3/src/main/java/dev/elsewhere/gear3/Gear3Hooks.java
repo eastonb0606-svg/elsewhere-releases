@@ -94,10 +94,17 @@ public final class Gear3Hooks {
 		return Math.max(1, Math.round(original * QUIVER_DRAW));
 	}
 
-	// ---------------------------------------------------------------- Fowler's Bandolier: tipped and spectral arrows 40% not used
+	// ---------------------------------------------------------------- Fowler's Bandolier: tipped and special arrows 40% not used
+
+	/** Special arrows the Bandolier saves (GEAR.md "tipped and special arrows"): tipped, spectral and #elsewhere:special_arrows (Echo, Sunglass, Harpoon Bolt). */
+	public static final net.minecraft.tags.TagKey<Item> SPECIAL_ARROWS = net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ITEM, Gear3Content.id("special_arrows"));
+
+	public static boolean isSpecialArrow(ItemStack ammo) {
+		return ammo.is(Items.TIPPED_ARROW) || ammo.is(Items.SPECTRAL_ARROW) || ammo.is(SPECIAL_ARROWS);
+	}
 
 	public static boolean bandolierSaves(LivingEntity shooter, ItemStack ammo) {
-		if (!(shooter instanceof Player p) || p.level().isClientSide() || !ammo.is(Items.TIPPED_ARROW) && !ammo.is(Items.SPECTRAL_ARROW)) return false;
+		if (!(shooter instanceof Player p) || p.level().isClientSide() || !isSpecialArrow(ammo)) return false;
 		return active(p, Gear3Items.BANDOLIER) && p.getRandom().nextFloat() < BANDOLIER_SAVE;
 	}
 

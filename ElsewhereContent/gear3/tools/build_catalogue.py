@@ -172,7 +172,13 @@ def shaped(pattern, key, cat="equipment"):
     return {"type": "minecraft:crafting_shaped", "category": cat, "pattern": pattern, "key": key}
 
 
-WHIP_LORE = "Tags its target like the Gale Ribbon: your minions switch to it"
+WHIP_MARK = {  # s-whips: each whip's own mark (gear3 s3/whips/WhipKind)
+    "thornlash": "Hit marks it Thorned 5 s: minions switch to it, +2 damage",
+    "tidechain_lash": "Hit marks it Shackled 5 s (7 s wet): minions switch, +20% damage",
+    "azmar_sunscourge": "Hit marks it Venom 5 s: minions switch, +15% damage, ignore 3 armor",
+    "echo_chord": "Hit marks it Resonant 5 s: minions switch to it, +25% damage",
+}
+WHIP_CRACK = "Right-click cracks it: the mark fades 3 s after your last swing"
 for wid, name, dmg, spd, reach, dur, rar, lore0, rec, loot, repair in [
     ("thornlash", "Thornlash", 4, 1.4, 2, 700, "uncommon", "Swarm whip", shaped(["  R", " RT", "S  "], {"R": "elsewhere:haze_resin", "T": "elsewhere:trichome_quartz", "S": "minecraft:stick"}),
      [{"table": "chests/great_hotbox", "chance": 0.08}], "elsewhere:haze_resin"),
@@ -186,7 +192,7 @@ for wid, name, dmg, spd, reach, dur, rar, lore0, rec, loot, repair in [
     ITEMS.append({"id": wid, "name": name, "kind": "sword", "rarity": rar, "mechanic": "whip",
                   "stats": {"damage": dmg, "speed": spd, "durability": dur, "tier": "diamond", "repair": repair, "enchantability": 15},
                   "attrs": [{"attr": "minecraft:entity_interaction_range", "amount": reach, "slot": "mainhand"}],
-                  "lore": [lore0, f"Reach +{reach:g}", WHIP_LORE], "recipe": rec, "loot": loot})
+                  "lore": [lore0, f"Reach +{reach:g}", WHIP_MARK[wid], WHIP_CRACK], "recipe": rec, "loot": loot})
 ITEMS.append({"id": "mirewick_lantern_crook", "name": "Lantern Crook", "kind": "sword", "rarity": "rare", "mechanic": "crook",
               "stats": {"damage": 6, "speed": 1.6, "durability": 900, "tier": "diamond", "repair": "elsewhere:mirewick_scrip", "enchantability": 15},
               "attrs": [{"attr": "minecraft:entity_interaction_range", "amount": 1.5, "slot": "mainhand"}],
@@ -207,7 +213,7 @@ trinket("aldermark_oath_ring", "Oath Ring", "rare", ["Vanguard trinket of Alderm
         shaped([" G ", "GDG", " G "], {"G": "minecraft:gold_ingot", "D": "minecraft:diamond"}, "misc"), [{"table": "chests/kingdom_armory", "chance": 0.08}])
 trinket("aldermark_quickdraw_quiver", "Quickdraw Quiver", "rare", ["Skirmisher trinket of Aldermark (off hand or hotbar)", "Bow and crossbow draw time -15%"],
         shaped(["LSL", "LAL", "LLL"], {"L": "minecraft:leather", "S": "minecraft:string", "A": "minecraft:arrow"}, "misc"), [{"table": "chests/kingdom_armory", "chance": 0.08}])
-trinket("mirewick_fowlers_bandolier", "Fowler's Bandolier", "rare", ["Trapper trinket of Mirewick (off hand or hotbar)", "Tipped and spectral arrows are not used up 40% of the time"],
+trinket("mirewick_fowlers_bandolier", "Fowler's Bandolier", "rare", ["Trapper trinket of Mirewick (off hand or hotbar)", "Tipped, spectral and special arrows (Echo, Sunglass, Harpoon Bolt) are not used up 40% of the time"],
         shaped(["LSL", "ASA", "LLL"], {"L": "minecraft:leather", "S": "minecraft:string", "A": "minecraft:spectral_arrow"}, "misc"), [{"table": "chests/mirewick_courier", "chance": 0.08}])
 trinket("hush_binding_sigil", "Binding Sigil", "epic", ["Control trinket (off hand or hotbar)", "Slowness, Weakness, Blindness, Mining Fatigue, Nausea, Darkness and Levitation you apply last 30% longer on non-bosses"],
         shaped(["RER", "ECE", "RER"], {"R": "elsewhere:resonant_shard", "E": "minecraft:ender_pearl", "C": "minecraft:amethyst_shard"}, "misc"), [{"table": "chests/silent_monastery", "chance": 0.08}])
@@ -327,6 +333,236 @@ ITEMS.append({"id": "aphelion_starpiercer", "name": "Starpiercer", "kind": "plai
                       "A bow with a 1.6 s draw (a chime marks the full draw). Arrows leave 1.6x faster, pierce 2 more targets and fly with no drop for their first 32 blocks.",
                       "Plain arrows become star arrows (they pick up as arrows); tipped, spectral and other special arrows keep their effect. Sprinting cancels the draw. Drawing zooms in: 1.5x at full draw, 2x while sneaking."]})
 
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-ascension.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-ascension: Ascension Shard (GEAR.md A6 shared table, G5 material).
+# Mechanic "ascension_shard" (factory registered by dev.elsewhere.gear3.s3.ascension.Ascension.init, before Gear3Items): a plain item with glint.
+# No crafting recipe and no chest loot: the smithing recipe that USES it is data/elsewhere/recipe/gear3_ascension.json (serializer
+# elsewhere:gear3_ascension), and the drops (T5/T6 bosses + kingdom rulers, 1 each) are code (AscensionSources). Paste right after the
+# gear3_forging_template entry (or anywhere before the calling block).
+ITEMS.append({"id": "gear3_ascension_shard", "name": "Ascension Shard", "kind": "material", "rarity": "epic", "mechanic": "ascension_shard",
+              "stats": {"stack": 64, "fireproof": 1},
+              "lore": ["Smithing material (Elsewhere, G5)",
+                       "Smithing table, empty template slot: a G4 set piece + this shard makes that piece Ascendant",
+                       "Ascendant: +1 armor toughness; a full Ascendant set raises its set bonus to II"],
+              "jei": ["How to get: Auris, Lithara, Ossyra and Aphelion always drop one; so does every kingdom ruler (the Aldermark King, the Sultana of Azmar, the High Jarl of Hrafnholt, and whichever Magnate holds Mirewick's Chair) when a player kills them. Court Lords and lesser bosses drop none.",
+                      "Use: in a smithing table, leave the template slot empty and put a G4 set piece (any Elsewhere 3.0 armor set piece) with one shard. The piece stays itself, enchantments and all, and becomes Ascendant: +1 armor toughness.",
+                      "Wear a whole set of Ascendant pieces for set bonus II: the set or pair bonus is half again as strong. A piece can only be Ascended once."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-harpoon.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-harpoon: Harpoon Bolt (Marksman Trapper crossbow ammo, G3). Entity, pull,
+# water bonus, bow refusal (HarpoonBowMixin), renderer and self-test: dev.elsewhere.gear3.s3.harpoon (mechanic "harpoon_bolt" = HarpoonBoltItem).
+# Entity texture: tools/harpoon_bolt_entity.py; entity lang: tools/extra/tidebrass_harpoon_bolt.json. GEAR.md: craft 4 arrows + Tidebrass Ingot -> 8;
+# crossbow ammo; pulls non-boss target 3 blocks; x1.5 in water. No calling tag (ammo, calling_tags.py).
+ITEMS.append({"id": "tidebrass_harpoon_bolt", "name": "Harpoon Bolt", "kind": "plain", "rarity": "uncommon", "mechanic": "harpoon_bolt", "stats": {},
+              "tags": ["minecraft:arrows", "elsewhere:crossbow_only_ammo"],
+              "lore": ["Trapper crossbow bolt of Tidebrass", "Hit: pulls a non-boss target 3 blocks toward you",
+                       "x1.5 damage to a target in water; flies true underwater", "!Crossbows only: bows can't fire it"],
+              "recipe": {"type": "minecraft:crafting_shaped", "category": "equipment", "pattern": [" A ", "ATA", " A "],
+                         "key": {"A": "minecraft:arrow", "T": "elsewhere:tidebrass_ingot"}, "result": {"id": "elsewhere:tidebrass_harpoon_bolt", "count": 8}},
+              "jei": ["How to get: craft 4 arrows around a Tidebrass Ingot (the Tidewright's metal) for 8 Harpoon Bolts.",
+                      "Crossbow ammo (crossbows and dispensers fire it; bows can't). A hit pulls the target 3 blocks toward the shooter, never closer than 1.5 blocks; players too, never bosses or riders. A dispensed bolt pulls back toward the dispenser.",
+                      "Against a target standing or swimming in water it deals x1.5 damage, and it keeps its speed underwater like a trident."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-mothlight.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-mothlight: Mothlight Staff (GEAR.md A5 Summoner table, Swarm, G3).
+# Swarm minion (3 moths in one slot), Mothdust, Sap Tapper offer, renderer and self-test: dev.elsewhere.gear3.s3.mothlight (mechanic
+# "mothlight_staff" = MothlightStaffItem, put into Gear3Mechanics.FACTORIES by Mothlight.init()). Entity/effect/message lang:
+# tools/extra/mothlight_staff.json. Swarm + effect textures: tools/mothlight_art.py. Calling: calling_tags.py (summoner).
+# GEAR.md source "Selenne 30%; Sap Tapper 20 Pale Bark + 4 Moonsilk Thread": the Selenne loot hook, the Sap Tapper offer (pseudo mixin on
+# core's SapTapper.offers()) and a recipe in the same Pale Hollow materials (the Unblinking Eye is the Sap Tapper's 10-bark item).
+ITEMS.append({"id": "mothlight_staff", "name": "Mothlight Staff", "kind": "plain", "rarity": "rare", "mechanic": "mothlight_staff", "model": "handheld",
+              "stats": {"durability": 128, "repair": "elsewhere:moonsilk_thread"},
+              "lore": ["Swarm staff of the Pale Hollow (10 Glimmer, 1 s call)",
+                       "Calls a Mothlight Swarm: 3 moths in one minion slot, 6 HP each, each strikes for 1.5 every 0.75 s",
+                       "Moth hits: a non-boss target deals 10% less damage for 3 s",
+                       "Sneak-use: send the moths home"],
+              "recipe": shaped(["TET", "TBT", " B "], {"T": "elsewhere:moonsilk_thread", "E": "elsewhere:unblinking_eye", "B": "elsewhere:pale_bark"}),
+              "loot": [{"table": "entities/selenne", "chance": 0.3}],
+              "jei": ["How to get: Selenne drops it (30%); the Sap Tapper (Resin Kilns, Pale Hollow) trades it for 20 Pale Bark + 4 Moonsilk Thread; or craft it from 4 Moonsilk Thread, 2 Pale Bark and an Unblinking Eye.",
+                      "Hold use for 1 s to call a Mothlight Swarm (10 Glimmer, 1 durability): three moths that share ONE minion slot, 6 HP each. Every 0.75 s each living moth strikes for 1.5 (x minion damage).",
+                      "One blow fells at most one moth, and a fallen moth stays down until you call a new swarm. Moth hits dust non-boss targets: for 3 s they deal 10% less damage. Sneak-use sends the moths home."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-pennant.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-pennant: Herdcaller's Pennant (Summoner Swarm standard, G2). Planted
+# standard entity, aura (Gear3Scheduler pulses over MinionManager.minions, no scan), Command +8 hook and self-test: dev.elsewhere.gear3.s3.pennant
+# (mechanic "pennant" = PennantItem, put by Pennant.init() before Gear3Items). Standard name + messages: tools/extra/herdcaller_pennant.json.
+# Standard texture: tools/pennant_art.py. GEAR.md: minions within 12 regen 1 HP/s and +10% speed for 30 s; 1 per player, 60 s cooldown, x D(Summoner).
+ITEMS.append({"id": "herdcaller_pennant", "name": "Herdcaller's Pennant", "kind": "plain", "rarity": "uncommon", "mechanic": "pennant", "stats": {"stack": 1},
+              "lore": ["Swarm standard (Summoner), 60 s cooldown", "Plant it: your minions within 12 blocks heal 1 HP/s and move 10% faster for 30 s",
+                       "One standard at a time; scales with your Summoner Calling"],
+              "recipe": shaped(["KFK", "R R"], {"K": "elsewhere:haze_resin_block", "F": "#minecraft:banners", "R": "elsewhere:haze_resin"}),
+              "jei": ["How to get: craft it from any banner and 10 Haze Resin (a Haze Resin Block on each side of the banner, a Haze Resin under each block). Haze Resin comes from the Green Haze; its Budtender trades it.",
+                      "Use it on the ground (in the open while standing: at your feet) to plant your standard. For 30 s your minions within 12 blocks of it heal 1 HP every second and move 10% faster, both times your Summoner Calling strength.",
+                      "It needs a solid block under it and 3 blocks of room. One standard per player: planting again takes the old one down. The pennant is kept and cools down for 60 s; the standard comes down early if you leave, die or its block is broken."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-prismbow.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-prismbow: Prism Bow (GEAR.md A5 Marksman table, M+C hybrid, Arcane archer,
+# G4, Heliodor 30%). Bow, light arrow and self-test: dev.elsewhere.gear3.s3.prismbow (mechanic "prism_bow" = PrismBowItem, Gear3Mechanics).
+# "model": "bow": item definition + pull models from tools/bow_models.py (hand display turned for the upright sprite; "bow.grip" = the
+# sprite's grip centre, so the hand holds the grip). Pull frames: tools/prism_bow_art.py. GEAR.md's "Dune Factor 16 Sunglass Shards + bow
+# + Heliodor Mirror Core" is a 3x3 recipe here (7 shards around the Mirror Core and the bow), like the other Dune Factor pieces.
+ITEMS.append({"id": "prism_bow", "name": "Prism Bow", "kind": "plain", "rarity": "epic", "mechanic": "prism_bow", "model": "bow",
+              "bow": {"grip": [7.3, 7.0]},
+              "stats": {"durability": 640, "repair": "elsewhere:sunglass_shard"},
+              "tags": ["minecraft:enchantable/bow", "minecraft:enchantable/durability"],
+              "lore": ["Arcane archer bow (Marksman + Caster)",
+                       "Full draw: spends 2 Glimmer to loose a light arrow (8 x spell power x hybrid strength) instead of your arrow",
+                       "The light arrow flies dead straight for 24 blocks, then fades; arrows in your other hand are always loosed as arrows",
+                       "!Bow enchantments only work on real arrows"],
+              "recipe": shaped(["SMS", "SBS", "SSS"], {"S": "elsewhere:sunglass_shard", "M": "elsewhere:heliodor_mirror_core", "B": "minecraft:bow"}),
+              "loot": [{"table": "entities/heliodor", "chance": 0.3}],
+              "jei": ["How to get: Heliodor drops it (30% per kill), or craft it from 7 Sunglass Shards around a Heliodor Mirror Core and a bow.",
+                      "A full draw with 2 Glimmer to spare (spell cost applies) looses a light arrow instead of your arrow, which is not used: 8 x spell power, scaled by your Marksman/Caster hybrid strength. It flies dead straight and fades after 24 blocks.",
+                      "Without the Glimmer, or on a short draw, it shoots your arrow like any bow. Hold arrows in your other hand to always loose real arrows: tipped, spectral and special arrows keep their effects, and Power, Punch and Flame work on those only."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-reliquary.catalogue.py (lead 13:23) ====
+# s-reliquary -> s-asm-gear3: paste this block before the calling-tags block in gear3/tools/build_catalogue.py, AND add
+# "entities/auris" to the placeholder_tables list at the end of build_catalogue.py (Auris's table is not in the gear3 devlib, so
+# gen_resources writes an empty placeholder; the merged jar's Hush module ships the real one). Then build_catalogue + gen_textures
+# + gen_resources (sprite echo_reliquary is already in Ideas/overhaul/sprites.json; knight lang is in tools/extra/echo_reliquary.json).
+# Dry-run 13:17 on a copy: 69 items, calling -> ["summoner"] (calling_tags), placeholder_tables gains entities/auris, no notes.
+
+# ---------------------------------------------------------------- s-reliquary: Echo Reliquary (Summoner, Elite, G5). Echo Knight minion
+# (2 slots via gear3 minion/MinionSlots, 60 HP, armor 16, 10 dmg / 1.2 s, blows ignore 40% armor, silent: mixin/reliquary/EchoSilenceMixin),
+# Mute Archivist offer (32 Resonant Shards + a Cantor's Bell Shard) and self-test: dev.elsewhere.gear3.s3.reliquary (mechanic "echo_reliquary",
+# factory put by EchoReliquary.init()). No recipe: GEAR.md sources are Auris 30% and the Mute Archivist only. Knight lang: tools/extra/echo_reliquary.json.
+# Knight art: tools/echo_knight_art.py. Kill switch: "echo_reliquary": false in config/elsewhere-overhaul3.json.
+ITEMS.append({"id": "echo_reliquary", "name": "Echo Reliquary", "kind": "plain", "rarity": "epic", "mechanic": "echo_reliquary",
+              "stats": {"durability": 256},
+              "lore": ["Reliquary of the Mute Order (Summoner, Elite)",
+                       "Hold use 1 s (10 Glimmer): an Echo Knight answers, without a sound",
+                       "Echo Knight: 60 HP, armor 16, strikes for 10 every 1.2 s",
+                       "Its blows ignore 40% of armor and make no sound or vibration",
+                       "Sneak-use: your knights go home", "!Takes 2 minion slots"],
+              "loot": [{"table": "entities/auris", "chance": 0.3}],
+              "jei": ["How to get: Auris, the Listening Engine, drops it (30%); the Mute Archivist of a Silent Monastery sells one for 32 Resonant Shards and a Cantor's Bell Shard. It can't be crafted.",
+                      "Hold use for 1 s (10 Glimmer, 1 durability): an Echo Knight answers. It takes 2 minion slots, so you need 2 slots to call one; older minions go home to make room. Sneak-use sends your knights home.",
+                      "Echo Knight: 60 HP, armor 16, strikes for 10 every 1.2 s, scaled by your minion damage. Its blows ignore 40% of the target's armor, and neither it nor its fights make a sound or a vibration: sculk, Wardens and the Hush's listeners never hear it."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-sunglass.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-sunglass: Sunglass Arrow (Marksman Trapper ammo, G3). Entity, glass
+# pass-through, fire, undead bonus, renderer and self-test: dev.elsewhere.gear3.s3.sunglass (mechanic "sunglass_arrow" = SunglassArrowItem,
+# factory put by SunglassArrows.init() before Gear3Items). Entity lang: tools/extra/sunglass_arrow.json. GEAR.md: craft 4 arrows + Sunglass Shard -> 4.
+ITEMS.append({"id": "sunglass_arrow", "name": "Sunglass Arrow", "kind": "plain", "rarity": "uncommon", "mechanic": "sunglass_arrow", "stats": {}, "tags": ["minecraft:arrows"],
+              "lore": ["Trapper arrow", "Flies straight through glass and glass panes",
+                       "Sets the target on fire for 3 s; +25% damage against undead"],
+              "recipe": {"type": "minecraft:crafting_shaped", "category": "equipment", "pattern": [" A ", "ASA", " A "],
+                         "key": {"A": "minecraft:arrow", "S": "elsewhere:sunglass_shard"}, "result": {"id": "elsewhere:sunglass_arrow", "count": 4}},
+              "jei": ["How to get: craft 4 arrows around a Sunglass Shard (Glass Scarabs and Sun Motes in the Glasswaste drop it) for 4 Sunglass Arrows.",
+                      "Shoot it from any bow, crossbow or dispenser. It flies straight through glass, stained and tinted glass and glass panes without breaking them, and stops at the first other block or mob.",
+                      "A hit sets the target on fire for 3 s and deals +25% damage to undead (zombies, skeletons, phantoms, the Wither)."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-totems.catalogue.py (lead 13:23) ====
+# s-totems: the three GEAR.md totems (Summoner, placed minions that never move: 1 slot each, max 2 per player).
+# For s-asm-gear3: paste this block into gear3/tools/build_catalogue.py before the calling-tags block (uses ITEMS and shaped()), then run the pipeline.
+# Entities, effects, placement, Budtender trade and self-test: dev.elsewhere.gear3.s3.totems (mechanic "totem" = TotemItem).
+# Entity names + messages: tools/extra/totems.json. Entity textures + beam: tools/totems_art.py.
+# Calling tags (calling_weapon/summoner, held) come from calling_tags.py. Transmutation: excluded (s-compat-transmute's gear3 tag).
+
+ITEMS.append({"id": "bramble_totem", "name": "Bramble Totem", "kind": "plain", "rarity": "uncommon", "mechanic": "totem",
+              "stats": {"durability": 128},
+              "lore": ["Swarm totem of the Greenhaze (10 Glimmer, 1 minion slot)",
+                       "Use on the ground: a 30 HP bramble post that lashes up to 3 mobs within 5 blocks every 2 s",
+                       "Each lash: 2 minion damage and Slowness I for 1 s",
+                       "Thick with haze pollen: every 4th mob it lashes sneezes",
+                       "Max 2 totems out; sneak-use to take yours down"],
+              "jei": ["How to get: only from a Greenhaze Budtender, for 12 Haze Resin + 4 Giant Fern (each Budtender sells 2, and never restocks).",
+                      "Use it on solid ground to set a 30 HP bramble post that never moves (10 Glimmer, 1 minion slot, 1 durability). Every 2 s it lashes the nearest 3 hostile mobs within 5 blocks for 2 minion damage and Slowness I (1 s). Every 4th mob it lashes sneezes from the haze pollen (harmless).",
+                      "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."]})
+
+ITEMS.append({"id": "clockwork_sentry", "name": "Clockwork Sentry", "kind": "plain", "rarity": "rare", "mechanic": "totem",
+              "stats": {"durability": 128},
+              "lore": ["Sentry totem of the Verdigris Sea (10 Glimmer, 1 minion slot)",
+                       "Use on the ground: a 40 HP, armor 8 copper turret",
+                       "Fires a 3-damage bolt every second at one mob within 16 blocks it can see",
+                       "Max 2 totems out; sneak-use to take yours down"],
+              "recipe": shaped(["PXP", "GDG", "CGC"], {"P": "elsewhere:scraped_patina", "X": "minecraft:crossbow", "G": "elsewhere:verdigris_gear",
+                                                       "D": "minecraft:dispenser", "C": "minecraft:copper_block"}),
+              "loot": [{"table": "entities/verdigrim", "chance": 0.3}],
+              "jei": ["How to get: Verdigrim drops it (30% per kill), or craft it from 2 Scraped Patina, a crossbow, 3 Verdigris Gears, a dispenser and 2 copper blocks.",
+                      "Use it on solid ground to set a 40 HP, armor 8 copper turret that never moves (10 Glimmer, 1 minion slot, 1 durability). Once a second it fires a 3-damage minion bolt at one mob within 16 blocks that it can see: the one you are fighting first, else the nearest hostile.",
+                      "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."]})
+
+ITEMS.append({"id": "azmar_sunglass_obelisk", "name": "Sunglass Obelisk", "kind": "plain", "rarity": "epic", "mechanic": "totem",
+              "stats": {"durability": 128},
+              "lore": ["Sentry totem of the Sultanate of Azmar (10 Glimmer, 1 minion slot)",
+                       "Use on the ground: a 50 HP obelisk with a floating sunglass lens",
+                       "Sunbeam on one mob within 16 blocks: 4 damage a second, 8 after 3 s on the same target",
+                       "!Needs daylight or bright light (12+); dormant in the dark",
+                       "Max 2 totems out; sneak-use to take yours down"],
+              "recipe": shaped(["SGS", "DWD", "CCC"], {"S": "elsewhere:sunglass_shard", "G": "minecraft:gold_block", "D": "elsewhere:azmar_dinar",
+                                                       "W": "elsewhere:azmar_seal_wazir", "C": "minecraft:chiseled_sandstone"}),
+              "loot": [{"table": "chests/azmar_courier", "chance": 0.05}],
+              "jei": ["How to get: the Royal Workshop of Azmar: craft it from 2 Sunglass Shards, a gold block, 2 Azmar Dinars, a Wazir's Seal and 3 chiseled sandstone; rarely found in Azmar courier chests (5%).",
+                      "Use it on solid ground to set a 50 HP obelisk that never moves (10 Glimmer, 1 minion slot, 1 durability). In daylight or bright light (12+) its lens holds a sunbeam on one mob within 16 blocks: 4 minion damage a second, 8 a second once the beam has held the same target for 3 s. In the dark it stands dormant.",
+                      "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-waryak.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-waryak: War-Yak Horn (Summoner, Elite, G4; Thurgrim 30%, Clan Quartermaster
+# rank 5). War-Yak minion (2 slots via gear3 minion.MinionSlots, charge/trample), horn item, Quartermaster trade mixin and self-test:
+# dev.elsewhere.gear3.s3.waryak (mechanic "war_yak_horn" = WarYakHornItem). Goat-horn item definition + tooting model, sounds, lang, extra JEI
+# lines: tools/extra/ironpeak_war_yak_horn.json. Entity skin: tools/war_yak_texture.py. Transmutation: already excluded (s-compat-transmute's tag).
+# GEAR.md: 2 slots: 80 HP, armor 12, 9 dmg / 1.5 s charge; tramples through up to 3 mobs.
+ITEMS.append({"id": "ironpeak_war_yak_horn", "name": "War-Yak Horn", "kind": "plain", "rarity": "epic", "mechanic": "war_yak_horn",
+              "stats": {"durability": 256, "repair": "elsewhere:skyiron"},
+              "lore": ["Elite war-horn of Ironpeak (Summoner)", "Blow it (hold use 1 s, 10 Glimmer): a War-Yak answers, 2 minion slots",
+                       "War-Yak: 80 HP, armor 12; charges every 1.5 s for 9 damage", "Its charge tramples through up to 3 mobs in a line",
+                       "Sneak-use: your War-Yaks go home"],
+              "recipe": shaped(["KTK", "KGK", "L L"], {"K": "elsewhere:skyiron", "T": "elsewhere:gear3_forging_template", "G": "minecraft:goat_horn",
+                                                     "L": "minecraft:leather"}),
+              "loot": [{"table": "entities/thurgrim", "chance": 0.3}],
+              "jei": ["How to get: Thurgrim drops it (30% per kill); the Clan Quartermaster sells one from clan rank 5 (8 Skyiron and a goat horn); or craft it: a goat horn bound with 4 Skyiron, an Elsewhere Forging Template and 2 leather straps."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-willolantern.catalogue.py (lead 13:23) ====
+# ---------------------------------------------------------------- s-willolantern: Will-o'-Lantern (GEAR.md Caster table, C+S hybrid, Ritualist, G4).
+# Item, Marsh Wisp minion, recast, light, Chair-holder drop and self-test: dev.elsewhere.gear3.s3.willo (mechanic "will_o_lantern" =
+# WillOLanternItem). Wisp name + overlay messages: tools/extra/will_o_lantern.json. GEAR.md source "Chair-holder 30%; weekly auction":
+# the 30% Chair-holder drop is a Java hook (WillOLantern.onDeath); there is no auction system, so Mirewick courier chests (5%) and a
+# smithing upgrade of the Glimmer Lantern stand in for it, as for the other Mirewick items.
+ITEMS.append({"id": "mirewick_will_o_lantern", "name": "Will-o'-Lantern", "kind": "plain", "rarity": "epic", "mechanic": "will_o_lantern",
+              "stats": {"durability": 384, "repair": "elsewhere:mirewick_scrip"},
+              "lore": ["Ritualist lantern of Mirewick, Caster and Summoner (10 Glimmer, 1 minion slot)",
+                       "Hold use to call a Marsh Wisp; sneak-use sends it home",
+                       "Every 4 s the wisp recasts your last damage spell at its target at 40% power (x Ritualist hybrid)",
+                       "Its marsh-light lights the air around you",
+                       "!One wisp per player; teleports, wards, heals, channels and crowd control are never echoed"],
+              "recipe": smith("elsewhere:mirewick_seal_ames", "elsewhere:glimmer_lantern", "minecraft:ghast_tear"),
+              "loot": [{"table": "chests/mirewick_courier", "chance": 0.05}],
+              "jei": ["How to get: a Mirewick Magnate who holds the Chair when he falls drops it (30%); Mirewick courier chests (5%); or smith it: Seal of the Lantern-Oil + Glimmer Lantern + Ghast Tear.",
+                      "Hold use for 1 s to call a Marsh Wisp (10 Glimmer, 1 minion slot, 1 durability). It floats at your shoulder and lights the air around it; sneak-use sends it home. One wisp per player.",
+                      "Every 4 s, while your minions have a target you can see, the wisp recasts your last damage spell (Amethyst Wand, Sunlance Staff, Stormcoil Staff, Sculk Resonator, Emberfall Rod) at it for free at 40% power, times your Caster/Summoner hybrid strength."]})
+
+# ==== pasted by s-asm-gear3 from the s-hurlbat queue (scratchpad hurlbat_cat.py, 13:08; lost in the build_catalogue queue) ====
+# ---------------------------------------------------------------- s-hurlbat: Hurlbat (Marksman Skirmisher, G3; a Hrafnholt throwing axe).
+# Thrown entity, item, Huntmaster drop, shield disable and self-test: dev.elsewhere.gear3.s3.hurlbat (mechanic "hurlbat" = HurlbatItem,
+# factory put by Hurlbats.putFactory()); renderer: client s3/hurlbat/client. Entity name, sounds, death lines: tools/extra/hrafnholt_hurlbat.json.
+# GEAR.md A5: Huntmaster 50%; Thing-day 12 Hacksilver for 8 (rival_hrafnholt kingdom_trade line); thrown axe 7 dmg, 0.6 s between throws,
+# retrievable, 50% break, disables shields 2 s. The recipe costs what the Thing-day charges: 3 Hacksilver + 2 sticks -> 2 (12 for 8).
+ITEMS.append({"id": "hrafnholt_hurlbat", "name": "Hurlbat", "kind": "plain", "rarity": "rare", "mechanic": "hurlbat", "model": "handheld",
+              "stats": {"stack": 8},
+              "lore": ["Hrafnholt throwing axe (Marksman)", "Use: throw it for 7 damage, 0.6 s between throws",
+                       "Disables a raised shield for 2 s", "Sticks where it lands; its thrower picks it back up",
+                       "!Breaks on half of its hits"],
+              "recipe": {"type": "minecraft:crafting_shaped", "category": "equipment", "pattern": ["HH", "HS", " S"],
+                         "key": {"H": "elsewhere:hacksilver", "S": "minecraft:stick"}, "result": {"count": 2}},
+              "loot": [],
+              "jei": ["How to get: the Hrafnholt Huntmaster drops a bundle of 8 (50%, when a player kills him); the Hrafnholt Thing-day sells 8 for 12 Hacksilver; or craft 2 from 3 Hacksilver and 2 sticks.",
+                      "Use to throw one: 7 damage, then 0.6 s before the next. A hit on a raised shield knocks it down for 2 s, like an axe blow.",
+                      "It sticks where it lands, or glances off what it hit and drops; walk over it to pick it back up (only its thrower can). It breaks on half of its hits on a creature."]})
+
+# ==== pasted by s-asm-gear3 from _swarm/gear3/s-miresnare.done (ASSEMBLER TODO 1) ====
+# ---------------------------------------------------------------- s-miresnare: Mire Snare (Marksman / Trapper, Mirewick, G2). Placed trap
+# block + block entity + Snared effect + mire_snare damage type: dev.elsewhere.gear3.s3.miresnare (mechanic "mire_snare" = MireSnareItem,
+# put into FACTORIES by MireSnare.init() before Gear3Items). Block/effect/death lang: tools/extra/mirewick_mire_snare.json. Block art:
+# tools/mire_snare_art.py. No calling tag (calling_tags.py: a placed trap). Recipe makes 1, so crafting is not cheaper than the 6 Scrip shop.
+ITEMS.append({"id": "mirewick_mire_snare", "name": "Mire Snare", "kind": "plain", "rarity": "uncommon", "mechanic": "mire_snare",
+              "stats": {"stack": 8},
+              "lore": ["Trapper snare of Mirewick (place it on the floor)", "Roots the first non-boss mob to step in for 3 s and deals 6 damage",
+                       "Never springs for players, villagers, golems, pets or minions", "!Single use: a sprung snare falls apart after 3 s"],
+              "recipe": shaped(["SCS", "RIR"], {"S": "minecraft:string", "C": "elsewhere:mirewick_scrip", "R": "minecraft:mangrove_roots",
+                                              "I": "minecraft:iron_ingot"}, "misc"),
+              "jei": "How to get: Mirewick market (6 Lantern Scrip), or craft one from 2 string, 1 Mirewick Scrip, 1 iron ingot and 2 mangrove roots. Place it on a floor (also in shallow water): the first non-boss mob to step in is rooted for 3 s and takes 6 damage, credited to you. Players, villagers, golems, pets and minions never spring it. Single use: a sprung snare falls apart; an armed one breaks back into your hand."})
+
 # ---------------------------------------------------------------- calling tags (s-callingtags): tools/calling_tags.py sets every item's
 # "calling" (and the caster_trinket tag) from its GEAR.md table; keep this block last, after every ITEMS.append.
 import sys  # noqa: E402
@@ -335,6 +571,6 @@ import calling_tags  # noqa: E402
 for _note in calling_tags.apply(ITEMS):
     print(_note)
 
-cat = {"tab_name": "Elsewhere 3.0 Gear", "placeholder_tables": ["entities/mother_creak", "entities/ossyra", "entities/lithara", "entities/aphelion"], "items": ITEMS}
+cat = {"tab_name": "Elsewhere 3.0 Gear", "placeholder_tables": ["entities/mother_creak", "entities/ossyra", "entities/lithara", "entities/aphelion", "entities/auris"], "items": ITEMS}
 json.dump(cat, open(OUT, "w"), indent=1, ensure_ascii=False)
 print(f"build_catalogue: {len(ITEMS)} item(s) -> {OUT}")

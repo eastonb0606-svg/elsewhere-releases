@@ -78,8 +78,10 @@ public final class AldLook {
 	/** A door within one block of the column (at the two heights above {@code g}): a palisade or post there would block it. */
 	public static boolean nearDoor(ServerLevel level, int x, int g, int z) {
 		BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
-		for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) for (int dy = 0; dy <= 2; dy++)
-			if (level.getBlockState(m.set(x + dx, g + dy, z + dz)).is(BlockTags.DOORS)) return true;
+		for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) {
+			if (!level.isLoaded(m.set(x + dx, g, z + dz))) return true; // never load a neighbour chunk at plan time; unknown counts as a door (s-review-kingdom)
+			for (int dy = 0; dy <= 2; dy++) if (level.getBlockState(m.set(x + dx, g + dy, z + dz)).is(BlockTags.DOORS)) return true;
+		}
 		return false;
 	}
 

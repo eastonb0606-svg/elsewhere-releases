@@ -17,8 +17,10 @@ for p in sorted(glob.glob(d + "/*_loop.ogg")):
     thr = max(0.02, 4 * float(np.percentile(diff, 99.9)))
     wrap = float(np.abs(x[0] - x[-1]).max())
     A = m["loop_start"]
-    hand = float(np.abs(i[A - 1] - x[0]).max())
-    ok = wrap <= thr and hand <= thr and abs(len(x) - (m["loop_end"] - m["loop_start"])) <= 2 and abs(len(i) - (A + int(m["tail_s"] * sr))) <= 2
+    # 3.0 lead-in intros (_tools/music_leadin.py): the intro is opening + bars before the loop, so the hand-off sample is its length minus the tail
+    H = m["intro_len"] if m.get("leadin") else A
+    hand = float(np.abs(i[H - 1] - x[0]).max())
+    ok = wrap <= thr and hand <= thr and abs(len(x) - (m["loop_end"] - m["loop_start"])) <= 2 and abs(len(i) - (H + int(m["tail_s"] * sr))) <= 2
     bad += not ok
     print(f"{'ok  ' if ok else 'FAIL'} {name:28s} wrap {wrap:.4f} hand-off {hand:.4f} thr {thr:.4f} loop {len(x)/sr:.1f}s intro {len(i)/sr:.1f}s")
 print("OK" if not bad else f"{bad} FAILED"); sys.exit(1 if bad else 0)

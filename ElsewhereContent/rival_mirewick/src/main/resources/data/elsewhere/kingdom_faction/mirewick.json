@@ -288,7 +288,7 @@
   ]
  },
  "army": {
-  "scale": {"patrol": {"day": 6, "night": 7}, "squad_size": 7, "unit_name": "watch", "company_size": 19, "garrison": {"village": [9, 12], "town": [20, 28], "capital": [60, 80]}, "field_army": [100, 150], "battle_side_max": 150, "live_front": 30, "wave": {"style": "ragged", "size": 6, "interval_s": 28, "interval_jitter_s": 8, "trigger_front": 0.6}, "attack_tokens": {"melee": 4, "ranged": 3}, "formation": {"width": 6, "depth": 2, "spacing": 1.3, "jitter": 0.8}, "hired": {"company": [12, 20]}, "residents": {"capital": 220, "town": 80}, "composition": {"line": 0.36, "heavy": 0.11, "ranged": 0.33, "mounted": 0.05, "special": 0.08, "officers": 0.07}},
+  "scale": {"patrol": {"day": 6, "night": 7}, "squad_size": 7, "unit_name": "watch", "company_size": 19, "garrison": {"village": [9, 12], "town": [20, 28], "capital": [60, 80]}, "field_army": [100, 150], "battle_side_max": 150, "live_front": 30, "wave": {"style": "ragged", "size": 6, "interval_s": 28, "interval_jitter_s": 8, "trigger_front": 0.6}, "attack_tokens": {"melee": 1, "ranged": 3}, "formation": {"width": 6, "depth": 2, "spacing": 1.3, "jitter": 0.8}, "hired": {"company": [12, 20]}, "residents": {"capital": 220, "town": 80}, "composition": {"line": 0.36, "heavy": 0.11, "ranged": 0.33, "mounted": 0.05, "special": 0.08, "officers": 0.07}},
   "routine": {
    "watch_changes": [7, 19],
    "watch_jitter_min": 30,

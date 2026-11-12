@@ -181,7 +181,7 @@ public final class SpawnGroups3 {
 			MobSpawnSettings s = biome.getAttributes().applyModifier(EnvironmentAttributes.NATURAL_MOB_SPAWNS, EnvironmentAttributes.NATURAL_MOB_SPAWNS.defaultValue());
 			for (MobCategory cat : MobCategory.values()) {
 				var mobs = s.getMobsInCategory(cat);
-				if (mobs == null) continue; // a biome without entries in this category has no list (s-asm-kingdom 13:20)
+				if (mobs == null) continue; // a category with no entries reads as null here (self-test crash, s-struct-verdigris 13:32)
 				for (Weighted<MobSpawnSettings.SpawnerData> w : mobs.unwrap()) {
 					Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(w.value().type());
 					int[] want = Groups3Data.TARGET.get(id.getPath());
@@ -220,12 +220,14 @@ public final class SpawnGroups3 {
 		check.accept(trip.isEmpty(), n + "off switch restores exact 2.1 groups; expected head count per pick unchanged " + trip);
 		// 3-5. live groups: a pack forms, a hurt member alerts the pack, a dead leader hands over
 		ServerLevel level = server.overworld();
-		BlockPos at = new BlockPos(Groups3Data.TEST_X, 200, 29_000);
+		// 4 blocks into the chunk: the pack (x +0..5), the add, the attacker and the swarm (z +0..7) all stay inside it
+		BlockPos at = new BlockPos((Groups3Data.TEST_X >> 4 << 4) + 4, 200, (29_000 >> 4 << 4) + 4);
 		int cx = at.getX() >> 4, cz = at.getZ() >> 4;
 		List<Entity> spawned = new ArrayList<>();
 		try {
 			level.setChunkForced(cx, cz, true);
 			level.getChunk(cx, cz);
+			boolean ticking = entityTicking(level, at);
 			EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.fromNamespaceAndPath("elsewhere", Groups3Data.TEST_TYPE));
 			Herds3.Rule rule = Herds3.ruleFor(Groups3Data.TEST_TYPE);
 			List<Mob> pack = new ArrayList<>();
@@ -233,7 +235,16 @@ public final class SpawnGroups3 {
 				if (type.create(level, EntitySpawnReason.NATURAL) instanceof Mob m) {
 					m.setPos(at.getX() + 0.5 + i * 1.5, at.getY(), at.getZ() + 0.5);
 					m.finalizeSpawn(level, level.getCurrentDifficultyAt(at), EntitySpawnReason.NATURAL, null); // as NaturalSpawner does
-					if (m.isPassenger()) m.stopRiding();
+					m.setBaby(false);
+					Entity vehicle = m.getVehicle(); // a chicken jockey's chicken was added to the level by finalizeSpawn
+					if (vehicle != null) {
+						m.stopRiding();
+						vehicle.discard();
+					}
+					for (Entity rider : List.copyOf(m.getPassengers())) {
+						rider.stopRiding();
+						rider.discard();
+					}
 					m.setNoGravity(true);
 					level.addFreshEntity(m);
 					spawned.add(m);
@@ -258,7 +269,7 @@ public final class SpawnGroups3 {
 			}
 			check.accept(addAlone, n + "a boss add (no finalizeSpawn) never joins or leads a herd");
 			check.accept(pack.size() == 4 && leaders == 1 && follow && grown, n + "a natural pack of " + Groups3Data.TEST_TYPE + " forms one leader + 3 followers (steer "
-				+ (rule == null ? "?" : rule.steer()) + ", leader scale " + (lead == null ? "?" : lead.getScale()) + ")");
+				+ (rule == null ? "?" : rule.steer()) + ", leader scale " + (lead == null ? "?" : lead.getScale()) + (ticking ? "" : ", TEST SITE NEVER ENTITY-TICKING") + ")");
 			// the 10-tick decision gate: canUse is evaluated every other tick, so one in five calls decides
 			Mob f0 = pack.size() > 1 ? pack.get(pack.indexOf(lead) == 0 ? 1 : 0) : null;
 			int decided = 0;
@@ -312,7 +323,28 @@ public final class SpawnGroups3 {
 			LOG.error("[spawn_groups] self-test", t);
 		} finally {
 			for (Entity e : spawned) e.discard();
+			try { // the dead leader's drops
+				for (Entity e : level.getEntities((Entity) null, new net.minecraft.world.phys.AABB(at).inflate(16),
+					e -> e instanceof net.minecraft.world.entity.item.ItemEntity || e instanceof net.minecraft.world.entity.ExperienceOrb)) e.discard();
+			} catch (Throwable ignored) {
+				// cleanup only
+			}
 			level.setChunkForced(cx, cz, false);
 		}
+	}
+
+	/**
+	 * Entities are only visible to level lookups ({@code getEntity}, {@code getEntitiesOfClass}) in entity-ticking chunks, and
+	 * a force ticket is only promoted to entity-ticking once its 5x5 neighbourhood has loaded, which normally happens over the
+	 * next server ticks (GOTCHAS: arsenal). The self-test runs inside SERVER_STARTED, so it drives the chunk source's own
+	 * main-thread tasks (what the server does between ticks) until the site is entity-ticking, at most 30 s.
+	 */
+	static boolean entityTicking(final ServerLevel level, final BlockPos at) {
+		long end = System.nanoTime() + 30_000_000_000L;
+		while (!level.isPositionEntityTicking(at)) {
+			if (System.nanoTime() > end) return false;
+			if (!level.getChunkSource().pollTask()) java.util.concurrent.locks.LockSupport.parkNanos(200_000L);
+		}
+		return true;
 	}
 }

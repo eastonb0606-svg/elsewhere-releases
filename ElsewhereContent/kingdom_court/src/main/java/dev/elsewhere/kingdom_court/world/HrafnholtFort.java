@@ -760,11 +760,11 @@ public final class HrafnholtFort {
 	/** Forge, stables, holmgang posts, runestone and the gate fires. */
 	static void yardWorks(H h) {
 		// forge (open smithy under a slab roof; no furnace: nothing ticks)
-		for (int x = 9; x <= 13; x++) for (int z = -9; z <= -4; z++) {
+		for (int x = 9; x <= 12; x++) for (int z = -9; z <= -4; z++) {
 			h.carve(x, 0, 4, z);
 			h.s(x, 3, z, CastleKit.slab(Blocks.SPRUCE_SLAB, net.minecraft.world.level.block.state.properties.SlabType.BOTTOM));
 		}
-		for (int[] p : new int[][] {{9, -9}, {13, -9}, {9, -4}, {13, -4}}) for (int y = 0; y <= 2; y++) h.s(p[0], y, p[1], Blocks.SPRUCE_LOG);
+		for (int[] p : new int[][] {{9, -9}, {12, -9}, {9, -4}, {12, -4}}) for (int y = 0; y <= 2; y++) h.s(p[0], y, p[1], Blocks.SPRUCE_LOG);
 		for (int x = 10; x <= 12; x++) h.s(x, -1, -8, Blocks.POLISHED_BLACKSTONE_BRICKS);
 		h.s(11, 0, -8, Blocks.POLISHED_BLACKSTONE_BRICKS);
 		h.s(11, 1, -8, lantern(false));

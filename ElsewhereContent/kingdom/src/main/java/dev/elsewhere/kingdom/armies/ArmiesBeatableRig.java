@@ -210,7 +210,7 @@ final class ArmiesBeatableRig {
 				ln.comp = 0;
 				ln.compIds.clear();
 				ln.lastHealth = ln.dummy.getHealth();
-				ArmiesSelfTest.check("the weak-diamond dummy for " + ln.unit.getPath() + " has 20 armor, 8 toughness and Protection I on all four pieces", ln.dummy.getArmorValue() == 20
+				ArmiesSelfTest.check("the weak-diamond dummy for " + s.faction().getPath() + " " + ln.unit.getPath() + " has 20 armor, 8 toughness and Protection I on all four pieces", ln.dummy.getArmorValue() == 20
 					&& Math.abs(ln.dummy.getAttributeValue(Attributes.ARMOR_TOUGHNESS) - 8) < 0.01 && protectionPieces(ln.dummy) == 4,
 					ln.dummy.getArmorValue() + " armor, " + ln.dummy.getAttributeValue(Attributes.ARMOR_TOUGHNESS) + " toughness, " + protectionPieces(ln.dummy) + " pieces");
 			}

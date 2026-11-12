@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tipped_arrow",
+    "minecraft:spectral_arrow",
+    "elsewhere:echo_arrow",
+    "elsewhere:sunglass_arrow",
+    "elsewhere:tidebrass_harpoon_bolt"
+  ]
+}

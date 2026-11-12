@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PXP",
+    "GDG",
+    "CGC"
+  ],
+  "key": {
+    "P": "elsewhere:scraped_patina",
+    "X": "minecraft:crossbow",
+    "G": "elsewhere:verdigris_gear",
+    "D": "minecraft:dispenser",
+    "C": "minecraft:copper_block"
+  },
+  "result": {
+    "id": "elsewhere:clockwork_sentry"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:scraped_patina",
+        "elsewhere:verdigris_gear"
+      ]
+    }
+  ]
+}

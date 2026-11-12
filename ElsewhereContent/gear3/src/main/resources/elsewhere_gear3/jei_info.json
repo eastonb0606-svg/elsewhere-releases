@@ -258,8 +258,72 @@
     "A bow with a 1.6 s draw (a chime marks the full draw). Arrows leave 1.6x faster, pierce 2 more targets and fly with no drop for their first 32 blocks.",
     "Plain arrows become star arrows (they pick up as arrows); tipped, spectral and other special arrows keep their effect. Sprinting cancels the draw. Drawing zooms in: 1.5x at full draw, 2x while sneaking."
   ],
+  "elsewhere:gear3_ascension_shard": [
+    "How to get: Auris, Lithara, Ossyra and Aphelion always drop one; so does every kingdom ruler (the Aldermark King, the Sultana of Azmar, the High Jarl of Hrafnholt, and whichever Magnate holds Mirewick's Chair) when a player kills them. Court Lords and lesser bosses drop none.",
+    "Use: in a smithing table, leave the template slot empty and put a G4 set piece (any Elsewhere 3.0 armor set piece) with one shard. The piece stays itself, enchantments and all, and becomes Ascendant: +1 armor toughness.",
+    "Wear a whole set of Ascendant pieces for set bonus II: the set or pair bonus is half again as strong. A piece can only be Ascended once."
+  ],
+  "elsewhere:tidebrass_harpoon_bolt": [
+    "How to get: craft 4 arrows around a Tidebrass Ingot (the Tidewright's metal) for 8 Harpoon Bolts.",
+    "Crossbow ammo (crossbows and dispensers fire it; bows can't). A hit pulls the target 3 blocks toward the shooter, never closer than 1.5 blocks; players too, never bosses or riders. A dispensed bolt pulls back toward the dispenser.",
+    "Against a target standing or swimming in water it deals x1.5 damage, and it keeps its speed underwater like a trident."
+  ],
+  "elsewhere:mothlight_staff": [
+    "How to get: Selenne drops it (30%); the Sap Tapper (Resin Kilns, Pale Hollow) trades it for 20 Pale Bark + 4 Moonsilk Thread; or craft it from 4 Moonsilk Thread, 2 Pale Bark and an Unblinking Eye.",
+    "Hold use for 1 s to call a Mothlight Swarm (10 Glimmer, 1 durability): three moths that share ONE minion slot, 6 HP each. Every 0.75 s each living moth strikes for 1.5 (x minion damage).",
+    "One blow fells at most one moth, and a fallen moth stays down until you call a new swarm. Moth hits dust non-boss targets: for 3 s they deal 10% less damage. Sneak-use sends the moths home."
+  ],
+  "elsewhere:herdcaller_pennant": [
+    "How to get: craft it from any banner and 10 Haze Resin (a Haze Resin Block on each side of the banner, a Haze Resin under each block). Haze Resin comes from the Green Haze; its Budtender trades it.",
+    "Use it on the ground (in the open while standing: at your feet) to plant your standard. For 30 s your minions within 12 blocks of it heal 1 HP every second and move 10% faster, both times your Summoner Calling strength.",
+    "It needs a solid block under it and 3 blocks of room. One standard per player: planting again takes the old one down. The pennant is kept and cools down for 60 s; the standard comes down early if you leave, die or its block is broken."
+  ],
+  "elsewhere:prism_bow": [
+    "How to get: Heliodor drops it (30% per kill), or craft it from 7 Sunglass Shards around a Heliodor Mirror Core and a bow.",
+    "A full draw with 2 Glimmer to spare (spell cost applies) looses a light arrow instead of your arrow, which is not used: 8 x spell power, scaled by your Marksman/Caster hybrid strength. It flies dead straight and fades after 24 blocks.",
+    "Without the Glimmer, or on a short draw, it shoots your arrow like any bow. Hold arrows in your other hand to always loose real arrows: tipped, spectral and special arrows keep their effects, and Power, Punch and Flame work on those only."
+  ],
+  "elsewhere:echo_reliquary": [
+    "How to get: Auris, the Listening Engine, drops it (30%); the Mute Archivist of a Silent Monastery sells one for 32 Resonant Shards and a Cantor's Bell Shard. It can't be crafted.",
+    "Hold use for 1 s (10 Glimmer, 1 durability): an Echo Knight answers. It takes 2 minion slots, so you need 2 slots to call one; older minions go home to make room. Sneak-use sends your knights home.",
+    "Echo Knight: 60 HP, armor 16, strikes for 10 every 1.2 s, scaled by your minion damage. Its blows ignore 40% of the target's armor, and neither it nor its fights make a sound or a vibration: sculk, Wardens and the Hush's listeners never hear it."
+  ],
+  "elsewhere:sunglass_arrow": [
+    "How to get: craft 4 arrows around a Sunglass Shard (Glass Scarabs and Sun Motes in the Glasswaste drop it) for 4 Sunglass Arrows.",
+    "Shoot it from any bow, crossbow or dispenser. It flies straight through glass, stained and tinted glass and glass panes without breaking them, and stops at the first other block or mob.",
+    "A hit sets the target on fire for 3 s and deals +25% damage to undead (zombies, skeletons, phantoms, the Wither)."
+  ],
+  "elsewhere:bramble_totem": [
+    "How to get: only from a Greenhaze Budtender, for 12 Haze Resin + 4 Giant Fern (each Budtender sells 2, and never restocks).",
+    "Use it on solid ground to set a 30 HP bramble post that never moves (10 Glimmer, 1 minion slot, 1 durability). Every 2 s it lashes the nearest 3 hostile mobs within 5 blocks for 2 minion damage and Slowness I (1 s). Every 4th mob it lashes sneezes from the haze pollen (harmless).",
+    "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."
+  ],
+  "elsewhere:clockwork_sentry": [
+    "How to get: Verdigrim drops it (30% per kill), or craft it from 2 Scraped Patina, a crossbow, 3 Verdigris Gears, a dispenser and 2 copper blocks.",
+    "Use it on solid ground to set a 40 HP, armor 8 copper turret that never moves (10 Glimmer, 1 minion slot, 1 durability). Once a second it fires a 3-damage minion bolt at one mob within 16 blocks that it can see: the one you are fighting first, else the nearest hostile.",
+    "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."
+  ],
+  "elsewhere:azmar_sunglass_obelisk": [
+    "How to get: the Royal Workshop of Azmar: craft it from 2 Sunglass Shards, a gold block, 2 Azmar Dinars, a Wazir's Seal and 3 chiseled sandstone; rarely found in Azmar courier chests (5%).",
+    "Use it on solid ground to set a 50 HP obelisk that never moves (10 Glimmer, 1 minion slot, 1 durability). In daylight or bright light (12+) its lens holds a sunbeam on one mob within 16 blocks: 4 minion damage a second, 8 a second once the beam has held the same target for 3 s. In the dark it stands dormant.",
+    "At most 2 totems per player (a 3rd takes down the oldest). A totem crumbles when you go more than 48 blocks away. Sneak-use the item to take yours down."
+  ],
   "elsewhere:ironpeak_war_yak_horn": [
+    "How to get: Thurgrim drops it (30% per kill); the Clan Quartermaster sells one from clan rank 5 (8 Skyiron and a goat horn); or craft it: a goat horn bound with 4 Skyiron, an Elsewhere Forging Template and 2 leather straps.",
     "Hold use for 1 s to call a War-Yak (10 Glimmer). It takes 2 of your minion slots; older minions make room.",
     "The War-Yak charges every 1.5 s: 9 damage to each of up to 3 mobs in a line, knocking them aside."
+  ],
+  "elsewhere:mirewick_will_o_lantern": [
+    "How to get: a Mirewick Magnate who holds the Chair when he falls drops it (30%); Mirewick courier chests (5%); or smith it: Seal of the Lantern-Oil + Glimmer Lantern + Ghast Tear.",
+    "Hold use for 1 s to call a Marsh Wisp (10 Glimmer, 1 minion slot, 1 durability). It floats at your shoulder and lights the air around it; sneak-use sends it home. One wisp per player.",
+    "Every 4 s, while your minions have a target you can see, the wisp recasts your last damage spell (Amethyst Wand, Sunlance Staff, Stormcoil Staff, Sculk Resonator, Emberfall Rod) at it for free at 40% power, times your Caster/Summoner hybrid strength."
+  ],
+  "elsewhere:hrafnholt_hurlbat": [
+    "How to get: the Hrafnholt Huntmaster drops a bundle of 8 (50%, when a player kills him); the Hrafnholt Thing-day sells 8 for 12 Hacksilver; or craft 2 from 3 Hacksilver and 2 sticks.",
+    "Use to throw one: 7 damage, then 0.6 s before the next. A hit on a raised shield knocks it down for 2 s, like an axe blow.",
+    "It sticks where it lands, or glances off what it hit and drops; walk over it to pick it back up (only its thrower can). It breaks on half of its hits on a creature."
+  ],
+  "elsewhere:mirewick_mire_snare": [
+    "How to get: Mirewick market (6 Lantern Scrip), or craft one from 2 string, 1 Mirewick Scrip, 1 iron ingot and 2 mangrove roots. Place it on a floor (also in shallow water): the first non-boss mob to step in is rooted for 3 s and takes 6 damage, credited to you. Players, villagers, golems, pets and minions never spring it. Single use: a sprung snare falls apart; an armed one breaks back into your hand."
   ]
 }

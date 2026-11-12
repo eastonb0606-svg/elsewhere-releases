@@ -459,6 +459,7 @@ public final class SelfTest {
 		SelfTestTactics.add();
 		SelfTestHeraldry.add(); // 3.0 P10 emblems + capes
 		SelfTestTownsfolkSkins.run(); // 3.0 townsfolk skins: 36 role textures (s-townsfolk-art; resource reads only)
+		SelfTestHeap.run(); // 3.0 heap pass (s-heapleak): clash cooldown map bounded (no world access)
 	}
 
 	static int benchDead;

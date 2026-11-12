@@ -1,0 +1,6 @@
+{
+  "parent": "elsewhere:item/prism_bow",
+  "textures": {
+    "layer0": "elsewhere:item/prism_bow_pulling_0"
+  }
+}

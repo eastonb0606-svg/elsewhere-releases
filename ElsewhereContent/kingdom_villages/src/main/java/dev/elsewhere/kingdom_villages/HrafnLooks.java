@@ -850,8 +850,11 @@ public final class HrafnLooks {
 
 	/** A door beside the column (at the two heights a palisade log would stand in front of): that column stays open. */
 	static boolean nextToDoor(B b, int x, int top, int z) {
-		for (Direction d : Direction.Plane.HORIZONTAL) for (int dy = 1; dy <= 2; dy++)
-			if (b.level.getBlockState(new BlockPos(x + d.getStepX(), top + dy, z + d.getStepZ())).getBlock() instanceof DoorBlock) return true;
+		for (Direction d : Direction.Plane.HORIZONTAL) for (int dy = 1; dy <= 2; dy++) {
+			BlockPos q = new BlockPos(x + d.getStepX(), top + dy, z + d.getStepZ());
+			if (!b.level.isLoaded(q)) return true; // never load a neighbour chunk at plan time; unknown counts as a door (s-review-kingdom)
+			if (b.level.getBlockState(q).getBlock() instanceof DoorBlock) return true;
+		}
 		return false;
 	}
 

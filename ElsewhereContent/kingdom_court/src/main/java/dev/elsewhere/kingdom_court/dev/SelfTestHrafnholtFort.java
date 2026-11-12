@@ -329,16 +329,16 @@ final class SelfTestHrafnholtFort {
 			boolean castle = Math.abs(lx) <= 36 && Math.abs(lz) <= 36;
 			if (!castle && (plan == null || !mine(plan, dir, o, x0 + x, z0 + z))) continue;
 			for (int y = 0; y < sy; y++) {
-			BlockState s = l.getBlockState(m.set(x0 + x, y0 + y, z0 + z));
-			if (s.isAir()) continue;
-			if (castle) {
-				if (Valuables.isValuable(s)) valuables++;
-				if (s.getBlock() instanceof BannerBlock || s.getBlock() instanceof WallBannerBlock) banners++;
-				if (s.is(Blocks.FURNACE) || s.is(Blocks.SMOKER) || s.is(Blocks.BLAST_FURNACE)) furnaces++;
-			}
-			if (!solid(s) || seen.get((x * sy + y) * sz + z)) continue;
-			floating++;
-			if (first == null) first = "floating " + s.getBlock() + " at " + lx + "," + (y0 + y - o.getY()) + "," + lz;
+				BlockState s = l.getBlockState(m.set(x0 + x, y0 + y, z0 + z));
+				if (s.isAir()) continue;
+				if (castle) {
+					if (Valuables.isValuable(s)) valuables++;
+					if (s.getBlock() instanceof BannerBlock || s.getBlock() instanceof WallBannerBlock) banners++;
+					if (s.is(Blocks.FURNACE) || s.is(Blocks.SMOKER) || s.is(Blocks.BLAST_FURNACE)) furnaces++;
+				}
+				if (!solid(s) || seen.get((x * sy + y) * sz + z)) continue;
+				floating++;
+				if (first == null) first = "floating " + s.getBlock() + " at " + lx + "," + (y0 + y - o.getY()) + "," + lz;
 			}
 		}
 		check(tag + ": nothing floating (every block of the fort and the shore works stands on the ground)", floating == 0, floating + (first == null ? "" : "; " + first));

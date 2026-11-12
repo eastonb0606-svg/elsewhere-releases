@@ -260,6 +260,10 @@ public final class GreenhazeItems {
 		@Override
 		public InteractionResult use(Level level, Player player, InteractionHand hand) {
 			if (!(player instanceof ServerPlayer sp)) return InteractionResult.SUCCESS;
+			if (GreenLeafBridge.usable() && GreenLeafBridge.refusesHits(sp)) { // Green Leaf 2.1 coming down: refused like its own bong, no bud burned
+				sp.sendOverlayMessage(Component.translatable("message.greenleaf.comedown_blocked").withStyle(ChatFormatting.GRAY));
+				return InteractionResult.FAIL;
+			}
 			double factor = 0;
 			String strain = null; // the rip is in the packed bud's strain (Hazeborn is a hybrid)
 			for (int i = 0; i < sp.getInventory().getContainerSize(); i++) {

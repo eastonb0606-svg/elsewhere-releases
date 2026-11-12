@@ -32,7 +32,9 @@ import net.minecraft.world.entity.LivingEntity;
  * join with {@code -Dboss_music.selftest=true} (the integrator's client run), or on demand with
  * {@code /elsewhere_bossmusic selftest}. With {@code bossMusic3=false} it checks that the guard is off. If the world changes
  * or another boss's theme takes over mid-test, it starts again (at most 3 times). Prints
- * {@code [boss_music-ingame-selftest] PASS|FAIL <check>} lines and one TOTAL line. Nothing here runs unless started.
+ * {@code [boss_music-ingame-selftest] PASS|FAIL <check>} lines and one TOTAL line, then sets the system property
+ * {@code boss_music.ingame.done=true} (a client gametest can wait on it before leaving the world or summoning other
+ * bosses). Nothing here runs unless started.
  */
 final class InGameTest {
 	private InGameTest() {}
@@ -374,6 +376,7 @@ final class InGameTest {
 		cleanup(mc);
 		log("TOTAL " + pass + "/" + (pass + fail) + (fail == 0 ? " PASS" : " FAIL " + failed));
 		running = false;
+		System.setProperty("boss_music.ingame.done", "true"); // a client gametest waits on this (no compile dependency)
 		echo = null;
 	}
 }

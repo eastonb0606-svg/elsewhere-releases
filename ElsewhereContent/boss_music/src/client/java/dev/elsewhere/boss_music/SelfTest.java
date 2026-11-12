@@ -132,7 +132,8 @@ final class SelfTest {
 					files++;
 				}
 			}
-			boolean otherModules = BuiltInRegistries.ENTITY_TYPE.containsKey(Identifier.fromNamespaceAndPath("elsewhere", "mother_creak"));
+			bad += FitCheck.run(mc, all, new HashSet<>(m.themes.values()), msg); // s-music-fit: Aldermark realm event + no orphan themes
+			boolean otherModules =BuiltInRegistries.ENTITY_TYPE.containsKey(Identifier.fromNamespaceAndPath("elsewhere", "mother_creak"));
 			int missing = 0;
 			if (otherModules) {
 				for (Identifier boss : m.themes.keySet()) {

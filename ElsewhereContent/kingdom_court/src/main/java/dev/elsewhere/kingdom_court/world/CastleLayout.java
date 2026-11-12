@@ -398,6 +398,13 @@ public final class CastleLayout {
 	}
 
 	/** Water or lava on top of the generator terrain at a world column (fv 2 HeightField only; deterministic). */
+	/** s-asm-court: local column (x, z) lies in the chunk being written (so a costly ground probe for one block runs only where it is placed). */
+	static boolean inClip(L l, int x, int z) {
+		var c = l.p.clip;
+		int wx = l.o.getX() + x, wz = l.o.getZ() + z;
+		return wx >= c.minX() && wx <= c.maxX() && wz >= c.minZ() && wz <= c.maxZ();
+	}
+
 	static boolean wet(Ground g, int x, int z) {
 		if (!(g instanceof RealmFit.HeightField hf)) return false;
 		return hf.gen.getBaseHeight(x, z, net.minecraft.world.level.levelgen.Heightmap.Types.OCEAN_FLOOR_WG, hf.h, hf.rs) < hf.y(x, z);
@@ -539,6 +546,7 @@ public final class CastleLayout {
 			for (int i = 20; i < n - 10; i += 28) {
 				int px = path[i + 1][1] - path[i - 1][1], pz = path[i - 1][0] - path[i + 1][0];
 				int x = path[i][0] + Integer.signum(px) * 2, z = path[i][1] + Integer.signum(pz) * 2;
+				if (!inClip(l, x, z) || wet(g, l.o.getX() + x, l.o.getZ() + z)) continue; // s-asm-court: no lamp post standing in a river or pond
 				int y = Math.max(l.gy(x, z), h[i]);
 				l.b(x, y, z, Blocks.STONE_BRICK_WALL);
 				l.b(x, y + 1, z, Blocks.LANTERN);
@@ -749,7 +757,7 @@ public final class CastleLayout {
 				l.b(cx - sx, y, cz - sz * r, Blocks.AIR);
 				l.b(cx, y, cz - sz * r, Blocks.AIR);
 			}
-			l.b(cx, 1, cz, Blocks.LANTERN);
+			l.b(cx, 0, cz, Blocks.LANTERN); // s-asm-court: on the tower floor (y -1); at y 1 it hung in the air over the cleared y 0
 		}
 	}
 
@@ -878,13 +886,13 @@ public final class CastleLayout {
 		l.b(14, 0, 15, Blocks.BREWING_STAND);
 		l.b(16, 0, 15, Blocks.BARREL);
 		l.b(16, 0, 14, Blocks.BARREL);
-		for (int s = -1; s <= 1; s += 2) {
-			l.dy = l.p.ground == null ? 0 : l.gy(s * 3, 8);
-			l.b(s * 3, 0, 8, Blocks.OAK_FENCE);
-			l.b(s * 3, 1, 8, Blocks.LANTERN);
-			l.dy = l.p.ground == null ? 0 : l.gy(s * 8, -3);
-			l.b(s * 8, 0, -3, Blocks.OAK_FENCE);
-			l.b(s * 8, 1, -3, Blocks.LANTERN);
+		for (int s = -1; s <= 1; s += 2) for (int[] c : new int[][] {{s * 3, 8}, {s * 8, -3}}) {
+			// s-asm-court: fv 2 lamp posts stand on their own ground, underpinned where it was cut, and none stands in a river or pond
+			if (l.p.ground != null && (!inClip(l, c[0], c[1]) || wet(l.p.ground, l.o.getX() + c[0], l.o.getZ() + c[1]))) continue;
+			l.dy = l.p.ground == null ? 0 : l.gy(c[0], c[1]);
+			l.b(c[0], 0, c[1], Blocks.OAK_FENCE);
+			l.b(c[0], 1, c[1], Blocks.LANTERN);
+			if (l.p.ground != null) l.foundation(c[0], c[1], c[0], c[1], l.dy - 1, Blocks.COBBLESTONE);
 		}
 		l.dy = 0;
 	}

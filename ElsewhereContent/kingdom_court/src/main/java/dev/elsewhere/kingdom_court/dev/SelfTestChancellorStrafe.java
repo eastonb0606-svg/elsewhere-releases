@@ -7,7 +7,7 @@ import dev.elsewhere.kingdom_court.ruler.CourtRuler;
 import dev.elsewhere.kingdom_court.ruler.Ruler;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EntitySpawnReason;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.decoration.ArmorStand;
 
 /**
@@ -22,7 +22,7 @@ final class SelfTestChancellorStrafe {
 	static void add() {
 		STEPS.add((srv, l) -> {
 			CourtRuler ch = Ruler.CHANCELLOR.type == null ? null : Ruler.CHANCELLOR.type.create(l, EntitySpawnReason.COMMAND);
-			ArmorStand t = EntityType.ARMOR_STAND.create(l, EntitySpawnReason.COMMAND);
+			ArmorStand t = EntityTypes.ARMOR_STAND.create(l, EntitySpawnReason.COMMAND);
 			boolean ok = false;
 			String detail = "the Chancellor or the target could not be made";
 			if (ch != null && t != null) {

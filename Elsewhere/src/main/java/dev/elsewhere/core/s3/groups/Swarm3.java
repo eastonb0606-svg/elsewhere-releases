@@ -28,8 +28,8 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
  * Server: when a naturally spawned swarm mob loads for the first time ({@code finalizeSpawn} ran, no swarm tag yet), it rolls
  * its member count and gets three permanent attribute modifiers: max health = members x the per-member health, a wider
  * hitbox (SCALE; the renderer cancels it for the members themselves) and, where the rule says so, damage for the swarm.
- * The members still alive are {@code ceil(health / per-member health)}, so the client needs no extra synced data (max health,
- * its base and health are synced already). Event-driven: one ENTITY_LOAD hook. Kill switch: {@link SpawnGroups3#ON}.
+ * The members are read back from the pooled-health modifier and the members still alive are {@code ceil(health / per-member
+ * health)}, so the client needs no extra synced data (max health, its modifiers and health are synced already). Event-driven: one ENTITY_LOAD hook. Kill switch: {@link SpawnGroups3#ON}.
  */
 public final class Swarm3 {
 	private Swarm3() {}
@@ -111,10 +111,12 @@ public final class Swarm3 {
 		if (m.getHealth() > m.getMaxHealth()) m.setHealth(m.getMaxHealth());
 	}
 
-	/** One member's health: base max health x the rule's share (the base comes from the entity type, or a slime's size). */
+	/**
+	 * One member's health: the swarm's max health split over its members. Other max-health modifiers (Test Meter's saved
+	 * +53% {@code ADD_MULTIPLIED_TOTAL} on every {@code Enemy}, difficulty mods) make each member tougher, never more numerous.
+	 */
 	public static double memberHealth(final LivingEntity e, final double share) {
-		AttributeInstance hp = e.getAttribute(Attributes.MAX_HEALTH);
-		return Math.max(0.5, (hp == null ? e.getMaxHealth() : hp.getBaseValue()) * share);
+		return Math.max(0.5, e.getMaxHealth() / members(e, share));
 	}
 
 	/** A swarm carries the pooled-health modifier; works on both sides (attribute modifiers are synced to clients). */
@@ -123,10 +125,15 @@ public final class Swarm3 {
 		return hp != null && hp.hasModifier(HEALTH_ID);
 	}
 
-	/** Members the swarm was born with (1 for a plain 2.1 mob or a boss add). */
+	/**
+	 * Members the swarm was born with, read back from its own pooled-health modifier (members x share - 1), so no other
+	 * modifier changes the count; 1 for a plain 2.1 mob or a boss add. Modifiers are synced, so this works on the client.
+	 */
 	public static int members(final LivingEntity e, final double share) {
-		if (!isSwarm(e)) return 1;
-		return Math.max(1, (int) Math.round(e.getMaxHealth() / memberHealth(e, share)));
+		AttributeInstance hp = e.getAttribute(Attributes.MAX_HEALTH);
+		AttributeModifier mod = hp == null ? null : hp.getModifier(HEALTH_ID);
+		if (mod == null) return 1;
+		return Math.max(1, (int) Math.round((mod.amount() + 1.0) / share));
 	}
 
 	/** Members still alive: health / one member's health, rounded up, at least 1 while the entity lives. */
@@ -162,9 +169,22 @@ public final class Swarm3 {
 				form(m, r);
 				int mem = members(m, r.healthShare());
 				double per = memberHealth(m, r.healthShare());
-				boolean healthOk = m.entityTags().contains(TAG) && mem >= r.min() && mem <= r.max() && Math.abs(m.getMaxHealth() - mem * per) < 0.01
-					&& Math.abs(m.getHealth() - m.getMaxHealth()) < 0.01;
+				AttributeInstance hp = m.getAttribute(Attributes.MAX_HEALTH);
+				AttributeModifier pool = hp == null ? null : hp.getModifier(HEALTH_ID);
+				boolean healthOk = m.entityTags().contains(TAG) && mem >= r.min() && mem <= r.max() && pool != null
+					&& Math.abs(pool.amount() - (mem * r.healthShare() - 1.0)) < 1e-6 && Math.abs(m.getHealth() - m.getMaxHealth()) < 0.01;
 				check.accept(healthOk, w + mem + " members, pooled " + m.getMaxHealth() + " HP (" + per + " each)");
+				// Test Meter (s-compat-testmeter 13:10): its +53% TOTAL max-health modifier makes members tougher, not more numerous
+				boolean tm = false;
+				if (hp != null) {
+					Identifier tmId = Identifier.fromNamespaceAndPath("elsewhere", "selftest_testmeter_like");
+					hp.addTransientModifier(new AttributeModifier(tmId, 0.53, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+					m.setHealth(m.getMaxHealth());
+					tm = members(m, r.healthShare()) == mem && alive(m, r.healthShare()) == mem && Math.abs(memberHealth(m, r.healthShare()) - per * 1.53) < 0.01;
+					hp.removeModifier(tmId);
+					m.setHealth(m.getMaxHealth());
+				}
+				check.accept(tm, w + "Test Meter's +53% mob health leaves the member count at " + mem);
 				check.accept(r.hitbox() <= 0 || m.getBbWidth() > baseWidth * 1.2F, w + "the swarm's hitbox is wider (" + baseWidth + " -> " + m.getBbWidth() + ")");
 				m.setHealth((float) (per * 1.5));
 				check.accept(alive(m, r.healthShare()) == 2 && weight(m) > 0, w + "members alive follow health (1.5 members' health -> 2 drawn)");

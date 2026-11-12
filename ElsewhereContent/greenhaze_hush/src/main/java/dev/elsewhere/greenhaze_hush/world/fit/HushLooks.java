@@ -49,7 +49,6 @@ public final class HushLooks {
 	static void engine(Piece pc, Out o) {
 		int x = pc.o.getX(), y = pc.o.getY(), z = pc.o.getZ();
 		long sd = pc.seed;
-		RandomSource r = RandomSource.create(sd);
 		double rx = 22, ry = 14, rz = 22;
 		int cy = y + 8;
 		for (int dx = -23; dx <= 23; dx++) for (int dz = -23; dz <= 23; dz++) {
@@ -109,7 +108,6 @@ public final class HushLooks {
 			o.set(new BlockPos(px, y + 16, pz), Blocks.IRON_CHAIN.defaultBlockState());
 			o.set(new BlockPos(px, y + 15, pz), Blocks.SOUL_LANTERN.defaultBlockState().setValue(LanternBlock.HANGING, true));
 		}
-		r.nextInt();
 	}
 
 	/** Access tunnel (local +z runs away from the room): arched 3x3, 1 step per 2 blocks to the nearest cave floor. p = [n, levels..., cache]; cache 1 = the Engine surveyor's chest. */

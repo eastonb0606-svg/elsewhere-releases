@@ -14,9 +14,11 @@ import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.DefaultAttributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
@@ -135,16 +137,21 @@ public final class Gear2Tooltips {
 
 	// ------------------------------------------------------------------------------------------------ real stats
 
-	/** Main-hand attack damage of the item as the game computes it (player base 1 + the item's modifiers). */
+	/** Main-hand attack damage of the item as the game computes it (the player's base, not the attribute default, + the item's modifiers). */
 	public static double attackDamage(Item item) {
 		return new ItemStack(item).getOrDefault(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY)
-			.compute(Attributes.ATTACK_DAMAGE, Attributes.ATTACK_DAMAGE.value().getDefaultValue(), EquipmentSlot.MAINHAND);
+			.compute(Attributes.ATTACK_DAMAGE, playerBase(Attributes.ATTACK_DAMAGE), EquipmentSlot.MAINHAND);
 	}
 
-	/** Block reach with the item in the main hand (player default + the item's modifier). */
+	/** Block reach with the item in the main hand (the player's base + the item's modifier). */
 	public static double reach(Item item) {
 		return new ItemStack(item).getOrDefault(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY)
-			.compute(Attributes.BLOCK_INTERACTION_RANGE, Attributes.BLOCK_INTERACTION_RANGE.value().getDefaultValue(), EquipmentSlot.MAINHAND);
+			.compute(Attributes.BLOCK_INTERACTION_RANGE, playerBase(Attributes.BLOCK_INTERACTION_RANGE), EquipmentSlot.MAINHAND);
+	}
+
+	/** A player's base value of an attribute (attack damage 1, while the attribute's own default is 2). */
+	static double playerBase(Holder<Attribute> attr) {
+		return DefaultAttributes.getSupplier(EntityTypes.PLAYER).getBaseValue(attr);
 	}
 
 	/** The total of one attribute over a set's pieces, each in its own armor slot. */

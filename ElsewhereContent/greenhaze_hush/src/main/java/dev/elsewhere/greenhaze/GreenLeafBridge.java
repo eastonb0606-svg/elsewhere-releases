@@ -30,7 +30,7 @@ public final class GreenLeafBridge {
 	private static @Nullable Field highField, pendingField;
 	/** Green Leaf 2.1+ API: high(ServerPlayer), dose(ServerPlayer, double, String), lower(ServerPlayer, double). */
 	private static boolean apiLooked;
-	private static @Nullable Method apiHigh, apiDose, apiLower, apiContactRadius, apiContactAmount;
+	private static @Nullable Method apiHigh, apiDose, apiLower, apiContactRadius, apiContactAmount, apiRefusesHits;
 
 	public static boolean loaded() {
 		if (loaded == null) loaded = FabricLoader.getInstance().isModLoaded(MOD_ID);
@@ -110,6 +110,35 @@ public final class GreenLeafBridge {
 			apiContactAmount = api.getMethod("contactAmount");
 		} catch (Throwable t) {
 			apiHigh = apiDose = apiLower = apiContactRadius = apiContactAmount = null; // an older Green Leaf: the field path below still works
+		}
+		try {
+			apiRefusesHits = Class.forName("dev.greenleaf.api.GreenLeafApi").getMethod("refusesHits", ServerPlayer.class); // API version 2
+		} catch (Throwable t) {
+			apiRefusesHits = null;
+		}
+	}
+
+	/**
+	 * True while Green Leaf refuses every hit (2.1's session cap come-down): its own joints and bong do nothing then, so the
+	 * Everflow Bong must not burn a bud and a refused puff must not count as a Green Leaf use (trips, Hush cough). Reads the
+	 * API, or the {@code comedown} field and {@code sessionCap} config on a 2.1 jar without it; false on Green Leaf 2.0.
+	 */
+	public static boolean refusesHits(ServerPlayer p) {
+		if (hasApi() && apiRefusesHits != null) {
+			try {
+				return (boolean) apiRefusesHits.invoke(null, p);
+			} catch (Throwable t) {
+				return false;
+			}
+		}
+		Object d = data(p);
+		if (d == null) return false;
+		try {
+			if (!d.getClass().getField("comedown").getBoolean(d)) return false;
+			Object cfg = Class.forName("dev.greenleaf.GreenLeaf").getField("config").get(null);
+			return cfg.getClass().getField("sessionCap").getBoolean(cfg);
+		} catch (Throwable t) {
+			return false; // Green Leaf 2.0: no come-down
 		}
 	}
 

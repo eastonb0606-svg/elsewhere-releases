@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "TET",
+    "TBT",
+    " B "
+  ],
+  "key": {
+    "T": "elsewhere:moonsilk_thread",
+    "E": "elsewhere:unblinking_eye",
+    "B": "elsewhere:pale_bark"
+  },
+  "result": {
+    "id": "elsewhere:mothlight_staff"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:moonsilk_thread",
+        "elsewhere:unblinking_eye",
+        "elsewhere:pale_bark"
+      ]
+    }
+  ]
+}

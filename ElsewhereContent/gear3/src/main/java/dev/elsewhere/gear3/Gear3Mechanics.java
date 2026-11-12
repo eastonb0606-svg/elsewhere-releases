@@ -37,6 +37,7 @@ public final class Gear3Mechanics {
 		FACTORIES.put("prism_bow", dev.elsewhere.gear3.s3.prismbow.PrismBowItem::new); // s-prismbow
 		FACTORIES.put("harpoon_bolt", dev.elsewhere.gear3.s3.harpoon.HarpoonBoltItem::new); // s-harpoon
 		FACTORIES.put("totem", dev.elsewhere.gear3.s3.totems.TotemItem::new); // s-totems: bramble_totem, clockwork_sentry, azmar_sunglass_obelisk
+		FACTORIES.put("war_yak_horn", dev.elsewhere.gear3.s3.waryak.WarYakHornItem::new); // s-waryak
 	}
 
 	public static void init() {

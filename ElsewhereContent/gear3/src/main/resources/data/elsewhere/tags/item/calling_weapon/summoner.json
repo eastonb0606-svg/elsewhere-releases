@@ -7,37 +7,13 @@
     "elsewhere:echo_chord",
     "elsewhere:mirewick_lantern_crook",
     "elsewhere:hrafnholt_wolfcall_horn",
-    {
-      "id": "elsewhere:mirewick_will_o_lantern",
-      "required": false
-    },
-    {
-      "id": "elsewhere:mothlight_staff",
-      "required": false
-    },
-    {
-      "id": "elsewhere:bramble_totem",
-      "required": false
-    },
-    {
-      "id": "elsewhere:herdcaller_pennant",
-      "required": false
-    },
-    {
-      "id": "elsewhere:ironpeak_war_yak_horn",
-      "required": false
-    },
-    {
-      "id": "elsewhere:echo_reliquary",
-      "required": false
-    },
-    {
-      "id": "elsewhere:clockwork_sentry",
-      "required": false
-    },
-    {
-      "id": "elsewhere:azmar_sunglass_obelisk",
-      "required": false
-    }
+    "elsewhere:mothlight_staff",
+    "elsewhere:herdcaller_pennant",
+    "elsewhere:echo_reliquary",
+    "elsewhere:bramble_totem",
+    "elsewhere:clockwork_sentry",
+    "elsewhere:azmar_sunglass_obelisk",
+    "elsewhere:ironpeak_war_yak_horn",
+    "elsewhere:mirewick_will_o_lantern"
   ]
 }

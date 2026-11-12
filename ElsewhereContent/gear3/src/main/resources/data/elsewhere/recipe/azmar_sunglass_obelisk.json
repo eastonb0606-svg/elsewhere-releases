@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SGS",
+    "DWD",
+    "CCC"
+  ],
+  "key": {
+    "S": "elsewhere:sunglass_shard",
+    "G": "minecraft:gold_block",
+    "D": "elsewhere:azmar_dinar",
+    "W": "elsewhere:azmar_seal_wazir",
+    "C": "minecraft:chiseled_sandstone"
+  },
+  "result": {
+    "id": "elsewhere:azmar_sunglass_obelisk"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:sunglass_shard",
+        "elsewhere:azmar_dinar",
+        "elsewhere:azmar_seal_wazir"
+      ]
+    }
+  ]
+}

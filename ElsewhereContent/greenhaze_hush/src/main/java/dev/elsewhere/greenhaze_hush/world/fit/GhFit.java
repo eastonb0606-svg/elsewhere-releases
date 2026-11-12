@@ -99,15 +99,15 @@ public final class GhFit {
 		};
 	}
 
-	/** Ground of a loaded level (dev builds and self-tests only). */
+	/** Ground of a live level (dev builds and self-tests only). Loads the chunk: Level.getHeight answers min y for an unloaded one. */
 	public static Ground live(ServerLevel l) {
 		return new Ground() {
 			public int y(int x, int z) {
-				return l.getHeight(Heightmap.Types.OCEAN_FLOOR, x, z) - 1;
+				return l.getChunk(x >> 4, z >> 4).getHeight(Heightmap.Types.OCEAN_FLOOR, x & 15, z & 15);
 			}
 
 			public boolean wet(int x, int z) {
-				return l.getHeight(Heightmap.Types.WORLD_SURFACE, x, z) - 1 > y(x, z);
+				return l.getChunk(x >> 4, z >> 4).getHeight(Heightmap.Types.WORLD_SURFACE, x & 15, z & 15) > y(x, z);
 			}
 		};
 	}
@@ -164,7 +164,7 @@ public final class GhFit {
 		public final @Nullable TerrainAdjustment adapt;
 
 		public Piece(String kind, BlockPos o, long seed, int rot, int[] p, BoundingBox box, @Nullable BoundingBox beard, @Nullable TerrainAdjustment adapt) {
-			super(PIECE, 0, box);
+			super(PIECE, 0, beard == null ? box : withSkirt(box, beard));
 			this.kind = kind;
 			this.v = V;
 			this.o = o.immutable();
@@ -210,6 +210,14 @@ public final class GhFit {
 								BoundingBox chunkBB, ChunkPos chunkPos, BlockPos referencePos) {
 			BiConsumer<Piece, Out> b = BUILDERS.get(kind);
 			if (b != null) b.accept(this, Out.gen(level, chunkBB));
+		}
+
+		/**
+		 * The structure JSONs say {@code none}, so vanilla never widens the start for a skirt: a bearded piece's box reaches 12 past its
+		 * beard sideways, so every chunk the skirt touches references the start and gets the rule (no seam at a chunk edge).
+		 */
+		static BoundingBox withSkirt(BoundingBox box, BoundingBox beard) {
+			return BoundingBox.encapsulating(box, new BoundingBox(beard.minX() - 12, beard.minY(), beard.minZ() - 12, beard.maxX() + 12, beard.maxY(), beard.maxZ() + 12));
 		}
 
 		public int p(int i) {

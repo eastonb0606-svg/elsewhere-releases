@@ -14,7 +14,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class LivingEntityUseMixin {
 	@Inject(method = "completeUsingItem", at = @At("HEAD"))
 	private void elsewhere$greenLeafUse(CallbackInfo ci) {
-		if ((Object) this instanceof ServerPlayer p && GreenLeafBridge.loaded() && GreenLeafBridge.isGreenLeafItem(p.getUseItem())) {
+		// a hit Green Leaf 2.1 refuses (coming down) is not a use: no trip roll, no Hush cough
+		if ((Object) this instanceof ServerPlayer p && GreenLeafBridge.loaded() && GreenLeafBridge.isGreenLeafItem(p.getUseItem()) && !GreenLeafBridge.refusesHits(p)) {
 			GreenhazeHushContent.onGreenLeafUse(p);
 		}
 	}

@@ -3,13 +3,7 @@
   "values": [
     "elsewhere:gale_sling",
     "elsewhere:aphelion_starpiercer",
-    {
-      "id": "elsewhere:hrafnholt_hurlbat",
-      "required": false
-    },
-    {
-      "id": "elsewhere:prism_bow",
-      "required": false
-    }
+    "elsewhere:prism_bow",
+    "elsewhere:hrafnholt_hurlbat"
   ]
 }
