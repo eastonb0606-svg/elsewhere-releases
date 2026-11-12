@@ -171,7 +171,9 @@
           "scene": 266,
           "line": 302,
           "check": "the yellow shockwave ring travels outward smoothly (attack, not a hint, so it shows without the helm); one ring, no trail of old rings",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 120 s",
+          "taken": "23:00:12"
         }
       ]
     },
@@ -182,14 +184,16 @@
           "scene": 276,
           "line": 312,
           "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:15"
         },
         {
           "file": "s_p1_bossbar__boss_bar_v2_state_chips_5s.png",
           "scene": 276,
           "line": 312,
           "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:21"
         }
       ]
     },
@@ -200,21 +204,24 @@
           "scene": 278,
           "line": 314,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:22"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person.png",
           "scene": 278,
           "line": 314,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:23"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_tooltip.png",
           "scene": 278,
           "line": 314,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:24"
         }
       ]
     },
@@ -225,42 +232,48 @@
           "scene": 342,
           "line": 385,
           "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:26"
         },
         {
           "file": "s_p5_tooltips__steam_auger_third_person.png",
           "scene": 342,
           "line": 385,
           "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:26"
         },
         {
           "file": "s_p5_tooltips__steam_auger_in_use_first_person.png",
           "scene": 342,
           "line": 385,
           "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:27"
         },
         {
           "file": "s_p5_tooltips__steam_auger_in_use_third_person.png",
           "scene": 342,
           "line": 385,
           "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:28"
         },
         {
           "file": "s_p5_tooltips__steam_auger_after_use.png",
           "scene": 342,
           "line": 385,
           "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:28"
         },
         {
           "file": "s_p5_tooltips__steam_auger_tooltip.png",
           "scene": 342,
           "line": 385,
           "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:29"
         }
       ]
     },
@@ -271,14 +284,16 @@
           "scene": 350,
           "line": 393,
           "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:31"
         },
         {
           "file": "s_p10_tabard__remnant_heraldry_and_rulers_later.png",
           "scene": 350,
           "line": 393,
           "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:33"
         }
       ]
     },
@@ -289,21 +304,24 @@
           "scene": 373,
           "line": 421,
           "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:35"
         },
         {
           "file": "s_miresnare__mirewick_mire_snare_third_person_2.png",
           "scene": 373,
           "line": 421,
           "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:35"
         },
         {
           "file": "s_miresnare__mirewick_mire_snare_tooltip_2.png",
           "scene": 373,
           "line": 421,
           "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:00:36"
         }
       ]
     },
@@ -314,15 +332,17 @@
           "scene": 454,
           "line": 506,
           "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
-          "status": "pending"
+          "status": "ok",
+          "detail": "move label: Glyph Flare",
+          "taken": "23:00:38"
         }
       ]
     }
   },
-  "run": "22:58:12",
+  "run": "23:00:39",
   "totals": {
-    "ok": 17,
-    "fail": 0,
+    "ok": 34,
+    "fail": 1,
     "manual": 0
   }
 }
