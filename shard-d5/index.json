@@ -1,0 +1,135 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (azmar realm)": [
+        {
+          "file": "villages__village_near_azmar.png",
+          "scene": 4,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_mirewick": [
+        {
+          "file": "structures_build__castle_mirewick_c_52_40_52_y135.png",
+          "scene": 18,
+          "line": 26,
+          "check": "crow-stepped calcite Counting-House with gilt caps and a lantern belfry, crimson spires with gilt finials, purple bands",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_0_6_48_y180.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 22,
+          "line": 30,
+          "check": "the west curtain's foot follows the ground with a rubble footing, the top steps by at most 1, the corner towers rise with their corner; nothing floats",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Mirewick looks (clerk, bargeman, lamplighter, peat_cutter x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_front.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "23:15:09"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_back.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "23:15:10"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Mirewick canal market + lamplighters": [
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_3000.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_12500.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_throne": {
+      "Grunthar legacy treasure hall (nether, 2.x saved arena)": [
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "ok",
+          "taken": "23:15:17"
+        },
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "ok",
+          "taken": "23:15:22"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_40_60_50_y140.png",
+          "scene": 410,
+          "line": 460,
+          "check": "49 x 50 palm-wall enclosure (Aldermark's curtain is 61 x 61) with an undulating top; one processional axis: pylons, palm court with two lapis pools, hypostyle hall (raised nave roof), throne hall with a roof kiosk, naos to the west, mud-brick palace with kiosk and striped awning to the east; terraces stepping up north; nothing floating at the edges",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_asm_court": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_asm_court__castle_aldermark_c_0_2_40_y180.png",
+          "scene": 488,
+          "line": 540,
+          "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:15:22",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
