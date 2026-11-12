@@ -729,3 +729,73 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:06:52] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1280.500000, 83.000000, -1263.500000
 [20:06:54] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
 [20:06:54] [Render thread/INFO] (Minecraft) Loaded 7 advancements
+[20:06:59] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[20:06:59] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[20:07:08] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[20:07:08] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[20:07:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__aldermark_capital_time_set_3000.png: 
+[20:07:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 313 (s_townsfolk | Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)) done in 20811 ms
+[20:07:08] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:07:08] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:07:09] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:07:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
+[20:07:16] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 23000 tick(s)
+[20:07:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1488.500000, 95.000000, -7119.500000
+[20:07:20] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 23775ms or 475 ticks behind
+[20:07:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__hrafnholt_capital_time_set_23000.png: 
+[20:07:32] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 11000 tick(s)
+[20:07:32] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1488.500000, 95.000000, -7119.500000
+[20:07:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__hrafnholt_capital_time_set_11000.png: 
+[20:07:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 315 (s_townsfolk | Hrafnholt jetty at dawn + hall feast) done in 31469 ms
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:07:40] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[20:07:44] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 9000 tick(s)
+[20:07:44] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 864.500000, 105.000000, -4431.500000
+[20:07:47] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 12689ms or 253 ticks behind
+[20:07:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__azmar_capital_time_set_9000.png: 
+[20:07:56] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:07:56] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 864.500000, 105.000000, -4431.500000
+[20:08:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__azmar_capital_time_set_6000.png: 
+[20:08:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 316 (s_townsfolk | Azmar bazaar vs siesta) done in 21225 ms
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[20:08:15] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 3000 tick(s)
+[20:08:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2800.500000, 130.000000, -3631.500000
+[20:08:19] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 16366ms or 327 ticks behind
+[20:08:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__mirewick_capital_time_set_3000.png: 
+[20:08:30] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 12500 tick(s)
+[20:08:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2800.500000, 130.000000, -3631.500000
+[20:08:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__mirewick_capital_time_set_12500.png: 
+[20:08:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 317 (s_townsfolk | Mirewick canal market + lamplighters) done in 36357 ms
+[20:08:37] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:08:37] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:08:37] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:08:38] [Server thread/INFO] (Minecraft) Stopping server
+[20:08:38] [Server thread/INFO] (Minecraft) Saving players
+[20:08:38] [Server thread/INFO] (Minecraft) Saving worlds
+[20:08:38] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:08:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:08:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 296 (s_vlook_azmar | villages_azmar_overview + villages_azmar_overview_street (kingdom_villages VillagesScreenshots client gametest, Azmar village after its rebuild)): no id, view or command in the line
+[20:08:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 297 (s_vlook_azmar | villages_azmar_obelisk + villages_azmar_border_hint): no id, view or command in the line
+[20:08:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 298 (s_vlook_azmar | Azmar "Migdol" outpost + villages_azmar_palm_wall): no id, view or command in the line
+[20:08:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 75 ok, 0 fail, 3 manual
+[20:08:40] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 4m 49s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
