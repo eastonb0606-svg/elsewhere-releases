@@ -766,3 +766,121 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:09:29] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
 [22:09:29] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [22:09:29] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[22:09:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 0 68 -4720
+[22:09:37] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, 98.000000, -4689.500000
+[22:09:45] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[22:09:45] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[22:09:50] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[22:09:50] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[22:09:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK villages__village_near_azmar.png: 
+[22:09:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 4 (villages | the faction villages and rebuild styles (azmar realm)) done in 20905 ms
+[22:09:50] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:09:50] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:09:50] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:09:50] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:09:50] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:09:53] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1423.330000, 111.000000, -1248.670000
+[22:09:56] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 17644ms or 352 ticks behind
+[22:10:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_aldermark_c_52_40_52_y135.png: 
+[22:10:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 13 (structures_build | elsewhere:castle_aldermark) done in 15703 ms
+[22:10:06] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:10:06] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:10:06] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:10:06] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:10:06] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:10:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:10:06] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1420.500000, 109.000000, -1251.500000
+[22:10:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__castle_aldermark_c_52_40_52_y135.png: 
+[22:10:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 26 (generation | elsewhere:castle_aldermark) done in 6122 ms
+[22:10:12] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:10:12] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:10:12] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:10:12] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:10:12] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:10:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:climbers_cairn in elsewhere:ironpeak at C = 32 1233 32
+[22:10:22] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 41.330000, 1239.000000, 41.330000
+[22:10:22] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[22:10:24] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 12702ms or 254 ticks behind
+[22:10:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__climbers_cairn_s_6_4_6.png: 
+[22:10:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 154 (s_struct_verdigris | elsewhere:climbers_cairn) done in 41022 ms
+[22:10:53] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:10:53] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:10:53] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:10:53] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:10:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:10:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 1456 65 -1520
+[22:10:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1456.500000, 79.000000, -1493.500000
+[22:10:54] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3281ms or 65 ticks behind
+[22:11:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__villages_aldermark_overview_street.png: 
+[22:11:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 171 (s_dataclean | villages_aldermark_overview_street) done in 14603 ms
+[22:11:07] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:11:07] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[22:11:07] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:11:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:11:07] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:11:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:petal_pagoda in elsewhere:petalwind at C = 208 187 80
+[22:11:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 232.500000, 203.000000, 104.500000
+[22:11:08] [Render thread/INFO] (Minecraft) Loaded 5 advancements
+[22:11:15] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6085ms or 121 ticks behind
+[22:11:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__petal_pagoda_s_24_16_24.png: 
+[22:11:19] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 208.500000, 193.000000, 110.500000
+[22:11:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__petal_pagoda_s_0_4_26.png: 
+[22:11:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 181 (s_struct_petalwind | elsewhere:petal_pagoda) done in 18035 ms
+[22:11:25] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:11:25] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:11:25] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:11:25] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:11:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:drowned_chapel in elsewhere:pale_hollow at C = 64 67 128
+[22:11:26] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 81.330000, 78.000000, 145.330000
+[22:11:27] [Render thread/INFO] (Minecraft) Loaded 6 advancements
+[22:11:39] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 8886ms or 177 ticks behind
+[22:11:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_core__drowned_chapel_s_14_9_14.png: 
+[22:11:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 211 (s_struct_core | elsewhere:drowned_chapel) done in 17275 ms
+[22:11:43] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:11:43] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:11:43] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:11:43] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:11:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[22:11:43] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 979.330000, 107.000000, -4444.670000
+[22:11:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_locate__castle_azmar_overview.png: 
+[22:11:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 952.500000, 85.000000, -4447.500000
+[22:11:57] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2648ms or 52 ticks behind
+[22:11:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_locate__castle_azmar_ground.png: 
+[22:11:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 357 (s_locate | elsewhere:castle_azmar) done in 15428 ms
+[22:11:58] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:11:58] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:11:58] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 13000 tick(s)
+[22:11:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:11:58] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:11:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:bonfire_terrace in elsewhere:greenhaze at C = 720 64 -448
+[22:11:59] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 742.500000, 84.000000, -425.500000
+[22:12:00] [Render thread/INFO] (Minecraft) Loaded 7 advancements
+[22:12:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__bonfire_terrace_overview.png: 
+[22:12:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 703.500000, 64.000000, -430.500000
+[22:12:30] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 18596ms or 371 ticks behind
+[22:12:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__bonfire_terrace_ground.png: 
+[22:12:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 479 (s_struct_greenhaze | elsewhere:bonfire_terrace) done in 34859 ms
+[22:12:33] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:12:33] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:12:33] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:12:33] [Server thread/INFO] (Minecraft) Stopping server
+[22:12:33] [Server thread/INFO] (Minecraft) Saving players
+[22:12:33] [Server thread/INFO] (Minecraft) Saving worlds
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:12:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:12:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 62 ok, 5 fail, 0 manual
+[22:12:37] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 12m 53s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html

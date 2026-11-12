@@ -14,3 +14,31 @@ fatal: expected 'acknowledgments', received 'packfile'
 warning: push negotiation failed; proceeding anyway with push
 published 8 PNGs (progress) -> cloud-shots-b4 f9cb347
 published 28 PNGs (progress) -> cloud-shots-b4 4271b5b
+published 50 PNGs (progress) -> cloud-shots-b4 4f77069
+client rc=0
+[22:03:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_thwaite_move_windup.png: wait_label: no boss bar move label containing 'Long Thrust' within 120 s
+[22:03:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_thwaite_move_strike.png: wait_label: no boss bar move label containing 'Long Thrust' within 120 s
+[22:05:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__azmar_wazir_counter_brew_windup.png: wait_label: no boss bar move label containing 'Counter-Brew' within 120 s
+[22:05:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__azmar_wazir_counter_brew_strike.png: wait_label: no boss bar move label containing 'Counter-Brew' within 120 s
+[22:07:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p2_telegraph__verdigrim_note_shockwave_helm_off.png: wait_label: no boss bar move label within 120 s
+[22:12:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 62 ok, 5 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:00:56] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:00:56] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, vanilla, elsewhere, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader
+[22:00:57] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[22:01:00] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:01:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] 21 flat-stage scenes, 9 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:01:04] [Worker-Main-1/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+22:12:38Z finished rc=0, 62 PNGs;  TOTAL 62 ok, 5 fail, 0 manual
