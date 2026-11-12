@@ -7,7 +7,8 @@
           "scene": 22,
           "line": 30,
           "check": "the west curtain's foot follows the ground with a rubble footing, the top steps by at most 1, the corner towers rise with their corner; nothing floats",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:59"
         }
       ]
     },
@@ -216,7 +217,8 @@
           "scene": 163,
           "line": 180,
           "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:15"
         }
       ]
     },
@@ -227,14 +229,16 @@
           "scene": 176,
           "line": 188,
           "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:30"
         },
         {
           "file": "s_struct_overworld__glacier_shelf_downhill_20.png",
           "scene": 176,
           "line": 188,
           "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:36"
         }
       ]
     },
@@ -277,14 +281,16 @@
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:52"
         },
         {
           "file": "s_struct_core__hollow_shrine_downhill_20.png",
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:01"
         }
       ]
     },
@@ -453,21 +459,24 @@
           "scene": 360,
           "line": 408,
           "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:41"
         },
         {
           "file": "s_setbonus_b__ridgewatch_hood_third_person.png",
           "scene": 360,
           "line": 408,
           "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:41"
         },
         {
           "file": "s_setbonus_b__ridgewatch_hood_tooltip.png",
           "scene": 360,
           "line": 408,
           "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:42"
         }
       ],
       "elsewhere:hrafnholt_mead_horn": [
@@ -476,42 +485,48 @@
           "scene": 364,
           "line": 412,
           "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:43"
         },
         {
           "file": "s_setbonus_b__hrafnholt_mead_horn_third_person.png",
           "scene": 364,
           "line": 412,
           "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:44"
         },
         {
           "file": "s_setbonus_b__hrafnholt_mead_horn_in_use_first_person.png",
           "scene": 364,
           "line": 412,
           "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:45"
         },
         {
           "file": "s_setbonus_b__hrafnholt_mead_horn_in_use_third_person.png",
           "scene": 364,
           "line": 412,
           "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:46"
         },
         {
           "file": "s_setbonus_b__hrafnholt_mead_horn_after_use.png",
           "scene": 364,
           "line": 412,
           "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:46"
         },
         {
           "file": "s_setbonus_b__hrafnholt_mead_horn_tooltip.png",
           "scene": 364,
           "line": 412,
           "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:47"
         }
       ]
     },
@@ -522,14 +537,16 @@
           "scene": 402,
           "line": 452,
           "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:48"
         },
         {
           "file": "s_mothlight__mothlight_staff_tooltip.png",
           "scene": 402,
           "line": 452,
           "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:49"
         }
       ]
     },
@@ -540,21 +557,24 @@
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:50"
         },
         {
           "file": "s_compat_transmute__boss_token_third_person.png",
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:51"
         },
         {
           "file": "s_compat_transmute__boss_token_tooltip.png",
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:51"
         }
       ]
     },
@@ -565,7 +585,8 @@
           "scene": 443,
           "line": 493,
           "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:26"
         }
       ]
     },
@@ -576,14 +597,16 @@
           "scene": 450,
           "line": 500,
           "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:28"
         },
         {
           "file": "s_reliquary__echo_knight_striking_later.png",
           "scene": 450,
           "line": 500,
           "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:30"
         }
       ]
     },
@@ -606,9 +629,9 @@
       ]
     }
   },
-  "run": "22:06:39",
+  "run": "22:09:01",
   "totals": {
-    "ok": 33,
+    "ok": 56,
     "fail": 6,
     "manual": 0
   }
