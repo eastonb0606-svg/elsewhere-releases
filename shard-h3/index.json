@@ -1,0 +1,206 @@
+{
+  "lanes": {
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:rimeback": [
+        {
+          "file": "anim__rimeback_hurt_peak.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:00"
+        },
+        {
+          "file": "anim__rimeback_hurt_rest.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:01"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (third person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_third_person_blocking.png",
+          "scene": 142,
+          "line": 158,
+          "check": "arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
+          "status": "ok",
+          "taken": "23:40:02"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_palisade": [
+        {
+          "file": "s_dataclean__villages_aldermark_palisade.png",
+          "scene": 172,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "nameplates hidden behind walls and while crouching": [
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "ok",
+          "taken": "23:40:05"
+        },
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "ok",
+          "taken": "23:40:15"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:aphelion_shattered_halo": [
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_26_10_26.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:windwright": [
+        {
+          "file": "s_galesling__windwright_trade.png",
+          "scene": 296,
+          "line": 335,
+          "check": "an offer of 6 Zephyr Feathers + 1 String for a Gale Sling (4 uses); with -Delsewhere.overhaul3.gale_sling_trade=false a newly summoned Windwright has no sling offer",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark Muster Day ranks and mock charge": [
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_pennant": {
+      "elsewhere:herdcaller_pennant": [
+        {
+          "file": "s_pennant__herdcaller_pennant_first_person.png",
+          "scene": 422,
+          "line": 472,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_pennant__herdcaller_pennant_third_person.png",
+          "scene": 422,
+          "line": 472,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_pennant__herdcaller_pennant_tooltip.png",
+          "scene": 422,
+          "line": 472,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rout at the end of a battle": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 443,
+          "line": 493,
+          "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:40:15",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
