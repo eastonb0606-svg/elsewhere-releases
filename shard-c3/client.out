@@ -722,3 +722,120 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:41:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:glacier_shelf in minecraft:overworld at C = 1376 145 3696
 [22:41:41] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
 [22:41:41] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1406.500000, 159.000000, 3726.500000
+[22:41:50] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4954ms or 99 ticks behind
+[22:41:53] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[22:41:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_overworld__glacier_shelf_s_30_14_30.png: 
+[22:41:53] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1362.500000, 120.000000, 3710.500000
+[22:41:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_overworld__glacier_shelf_downhill_20.png: 
+[22:41:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 176 (s_struct_overworld | elsewhere:glacier_shelf) done in 20764 ms
+[22:41:59] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:41:59] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:41:59] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:41:59] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:41:59] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:42:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:sunpit in elsewhere:glasswaste at C = 352 54 336
+[22:42:00] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 352.500000, 80.000000, 380.500000
+[22:42:00] [Render thread/INFO] (Minecraft) Loaded 11 advancements
+[22:42:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__sunpit_s_0_26_44.png: 
+[22:42:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 382.500000, 60.000000, 336.500000
+[22:42:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__sunpit_s_30_6_0.png: 
+[22:42:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 183 (s_struct_petalwind | elsewhere:sunpit) done in 15837 ms
+[22:42:15] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:42:15] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:42:15] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:42:15] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:42:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:drowned_chapel in elsewhere:pale_hollow at C = 64 67 128
+[22:42:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 81.330000, 78.000000, 145.330000
+[22:42:16] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2494ms or 49 ticks behind
+[22:42:16] [Render thread/INFO] (Minecraft) Loaded 12 advancements
+[22:42:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_core__drowned_chapel_s_14_9_14.png: 
+[22:42:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 211 (s_struct_core | elsewhere:drowned_chapel) done in 15404 ms
+[22:42:30] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:42:30] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:42:30] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:42:30] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:42:30] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:42:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:lantern_road in elsewhere:pale_hollow at C = 176 65 64
+[22:42:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 176.500000, 67.000000, 64.500000
+[22:42:40] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 9737ms or 194 ticks behind
+[22:43:03] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 8092ms or 161 ticks behind
+[22:43:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_core__lantern_road_procession_night.png: 
+[22:43:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 215 (s_struct_core | elsewhere:lantern_road (night procession)) done in 35570 ms
+[22:43:06] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:43:06] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:43:06] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Spectator Mode
+[22:43:06] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:43:06] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:43:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:grunthar_treasure_hall in minecraft:the_nether at C = -192 68 64
+[22:43:07] [Server thread/INFO] (Minecraft) System chat: ShotRunner has made the advancement [We Need to Go Deeper]
+[22:43:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -191.500000, 70.000000, 89.500000
+[22:43:07] [Render thread/INFO] (Minecraft) Loaded 39 advancements
+[22:43:07] [Render thread/INFO] (Minecraft) Loaded 39 advancements
+[22:43:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__grunthar_treasure_hall_s_0_0_21.png: 
+[22:43:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -171.630000, 76.000000, 102.040000
+[22:43:21] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3006ms or 60 ticks behind
+[22:43:22] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[22:43:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__grunthar_treasure_hall_s_18_6_34.png: 
+[22:43:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 283 (s_struct_nether | elsewhere:grunthar_treasure_hall) done in 16969 ms
+[22:43:23] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:43:23] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:43:23] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:43:23] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:43:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:great_hotbox in elsewhere:greenhaze at C = 48 84 64
+[22:43:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 72.500000, 98.000000, 88.500000
+[22:43:25] [Render thread/INFO] (Minecraft) Loaded 40 advancements
+[22:43:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__great_hotbox_overview.png: 
+[22:43:44] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 23.500000, 80.000000, 64.500000
+[22:43:54] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 17967ms or 359 ticks behind
+[22:43:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__great_hotbox_ground.png: 
+[22:43:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 478 (s_struct_greenhaze | elsewhere:great_hotbox) done in 35227 ms
+[22:43:58] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:43:58] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:43:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:43:58] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:43:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:listening_engine in elsewhere:the_hush at C = 96 84 32
+[22:43:59] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 120.500000, 98.000000, 56.500000
+[22:43:59] [Render thread/INFO] (Minecraft) Loaded 41 advancements
+[22:44:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__listening_engine_overview.png: 
+[22:44:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 118.500000, 256.000000, 32.500000
+[22:44:13] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3568ms or 71 ticks behind
+[22:44:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__listening_engine_ground.png: 
+[22:44:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 484 (s_struct_greenhaze | elsewhere:listening_engine) done in 15720 ms
+[22:44:14] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:44:14] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:44:14] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:44:14] [Server thread/INFO] (Minecraft) Stopping server
+[22:44:14] [Server thread/INFO] (Minecraft) Saving players
+[22:44:14] [Server thread/INFO] (Minecraft) Saving worlds
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:44:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:44:16] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:44:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 46 ok, 5 fail, 0 manual
+[22:44:16] [Render thread/INFO] (Minecraft) Stopping!
+[22:44:16] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+BUILD SUCCESSFUL in 12m 20s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
