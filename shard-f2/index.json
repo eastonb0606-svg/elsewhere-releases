@@ -280,49 +280,55 @@
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:49"
         },
         {
           "file": "s_prismbow__prism_bow_third_person_3.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:50"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_first_person_2.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:51"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_third_person_2.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:52"
         },
         {
           "file": "s_prismbow__prism_bow_after_use_2.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:52"
         },
         {
           "file": "s_prismbow__prism_bow_tooltip_3.png",
           "scene": 401,
           "line": 451,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:53"
         }
       ]
     }
   },
-  "run": "23:14:48",
+  "run": "23:14:54",
   "totals": {
-    "ok": 25,
+    "ok": 31,
     "fail": 5,
     "manual": 0
   }

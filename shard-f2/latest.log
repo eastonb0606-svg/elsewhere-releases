@@ -581,3 +581,24 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [23:14:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_in_use_first_person_2.png: 
 [23:14:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_in_use_third_person_2.png: 
 [23:14:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_after_use_2.png: 
+[23:14:52] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Prism Bow]
+[23:14:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_tooltip_3.png: 
+[23:14:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 401 (s_prismbow | elsewhere:prism_bow) done in 4578 ms
+[23:14:53] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[23:14:53] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[23:14:53] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[23:14:53] [Server thread/INFO] (Minecraft) Stopping server
+[23:14:53] [Server thread/INFO] (Minecraft) Saving players
+[23:14:53] [Server thread/INFO] (Minecraft) Saving worlds
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[23:14:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[23:14:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[23:14:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[23:14:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[23:14:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[23:14:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[23:14:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[23:14:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 31 ok, 5 fail, 0 manual
+[23:14:54] [Render thread/INFO] (Minecraft) Stopping!
