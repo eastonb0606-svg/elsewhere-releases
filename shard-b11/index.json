@@ -7,7 +7,8 @@
           "scene": 21,
           "line": 29,
           "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:43"
         }
       ]
     },
@@ -18,14 +19,16 @@
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:51"
         },
         {
           "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:02"
         }
       ]
     },
@@ -214,7 +217,8 @@
           "scene": 162,
           "line": 179,
           "check": "the plate chamber set into the sea-bed slope: sediment over the back half of the roof and banked on the sides, riveted portal with a plate lintel and two lit bulbs, a plated apron down to the bed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:15"
         }
       ]
     },
@@ -225,14 +229,16 @@
           "scene": 175,
           "line": 187,
           "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:45"
         },
         {
           "file": "s_struct_overworld__croaking_shrine_s_0_3_34.png",
           "scene": 175,
           "line": 187,
           "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:59"
         }
       ]
     },
@@ -539,14 +545,16 @@
           "scene": 396,
           "line": 446,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:26"
         },
         {
           "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
           "scene": 396,
           "line": 446,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:32"
         }
       ]
     },
@@ -557,21 +565,24 @@
           "scene": 429,
           "line": 479,
           "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:33"
         },
         {
           "file": "s_compat_transmute__skyiron_ingot_third_person.png",
           "scene": 429,
           "line": 479,
           "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:34"
         },
         {
           "file": "s_compat_transmute__skyiron_ingot_tooltip.png",
           "scene": 429,
           "line": 479,
           "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:35"
         }
       ]
     },
@@ -582,7 +593,8 @@
           "scene": 440,
           "line": 490,
           "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:07"
         }
       ]
     },
@@ -593,14 +605,16 @@
           "scene": 449,
           "line": 499,
           "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:11"
         },
         {
           "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png",
           "scene": 449,
           "line": 499,
           "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:14"
         }
       ]
     },
@@ -611,21 +625,23 @@
           "scene": 486,
           "line": 538,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:12"
         },
         {
           "file": "s_struct_greenhaze__silent_monastery_ground.png",
           "scene": 486,
           "line": 538,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:10:18"
         }
       ]
     }
   },
-  "run": "22:07:20",
+  "run": "22:10:20",
   "totals": {
-    "ok": 44,
+    "ok": 60,
     "fail": 6,
     "manual": 0
   }
