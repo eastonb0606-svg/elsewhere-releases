@@ -1,0 +1,329 @@
+{
+  "lanes": {
+    "s_setbonus_a": {
+      "elsewhere:azmar_glyphmail_hood": [
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_first_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:13:49"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_third_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:13:50"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_first_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:13:51"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_third_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:13:51"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_after_use.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:13:52"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_tooltip.png",
+          "scene": 353,
+          "line": 396,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "ok",
+          "taken": "23:13:53"
+        }
+      ]
+    },
+    "s_locate": {
+      "explorer map to a rival castle": [
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_azmar could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:13:53"
+        },
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_azmar could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:13:53"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:ridgewatch_hood": [
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_first_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_third_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_tooltip.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:glasswaste_starsight_visor": [
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_after_use.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_tooltip.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark Muster Day ranks and mock charge": [
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        }
+      ],
+      "Changing of the guard salute": [
+        {
+          "file": "s_routines__changing_of_the_guard_salute.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__changing_of_the_guard_salute_5s.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:hotbox_smog": [
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush.png",
+          "scene": 393,
+          "line": 441,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush_later.png",
+          "scene": 393,
+          "line": 441,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:eyeblossom_wisp": [
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core.png",
+          "scene": 394,
+          "line": 442,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core_later.png",
+          "scene": 394,
+          "line": 442,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "elsewhere:hrafnholt_wolfcall_horn": [
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_first_person.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_third_person.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_after_use.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        }
+      ],
+      "Warg pack hunting (gear3)": [
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:13:53",
+  "totals": {
+    "ok": 6,
+    "fail": 2,
+    "manual": 0
+  }
+}
