@@ -39,14 +39,16 @@
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:41"
         },
         {
           "file": "s_struct_verdigris__clan_hold_downhill_18.png",
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:47"
         }
       ]
     },
@@ -57,7 +59,8 @@
           "scene": 173,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:30"
         }
       ]
     },
@@ -96,14 +99,16 @@
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:42"
         },
         {
           "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:51"
         }
       ]
     },
@@ -138,14 +143,16 @@
           "scene": 378,
           "line": 426,
           "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:17"
         },
         {
           "file": "s_routines__changing_of_the_guard_salute_5s.png",
           "scene": 378,
           "line": 426,
           "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:23"
         }
       ]
     },
@@ -208,14 +215,15 @@
           "scene": 440,
           "line": 490,
           "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:11"
         }
       ]
     }
   },
-  "run": "23:40:40",
+  "run": "23:43:26",
   "totals": {
-    "ok": 14,
+    "ok": 22,
     "fail": 0,
     "manual": 0
   }
