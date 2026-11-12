@@ -1,0 +1,319 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:strawgrim": [
+        {
+          "file": "anim__strawgrim_hurt_peak.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:15"
+        },
+        {
+          "file": "anim__strawgrim_hurt_rest.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:16"
+        }
+      ],
+      "elsewhere:auris": [
+        {
+          "file": "anim__auris_hurt_peak.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:19"
+        },
+        {
+          "file": "anim__auris_hurt_rest.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:19"
+        }
+      ],
+      "elsewhere:galvanox": [
+        {
+          "file": "anim__galvanox_hurt_peak.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:22"
+        },
+        {
+          "file": "anim__galvanox_hurt_rest.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:22"
+        }
+      ],
+      "elsewhere:selenne": [
+        {
+          "file": "anim__selenne_hurt_peak.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:25"
+        },
+        {
+          "file": "anim__selenne_hurt_rest.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:57:26"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:aldermark_outrider_chaps": [
+        {
+          "file": "items__aldermark_outrider_chaps_front.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:57:27"
+        },
+        {
+          "file": "items__aldermark_outrider_chaps_side.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:57:28"
+        },
+        {
+          "file": "items__aldermark_outrider_chaps_tooltip.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:57:29"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, idle)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_idle.png",
+          "scene": 138,
+          "line": 156,
+          "check": "a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
+          "status": "ok",
+          "taken": "22:57:31"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Ankhara arena seal + burrow trail (elsewhere:sunpit)": [
+        {
+          "file": "s_p13_particles__ankhara_arena_seal_3s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        }
+      ],
+      "verdigris arena seal (elsewhere:lighthouse, Galvanox)": [
+        {
+          "file": "s_p13_particles__verdigris_arena_seal_galvanox.png",
+          "scene": 169,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_pulse_mobs_within_6)": [
+        {
+          "file": "s_echoarrow__echo_arrow_pulse_glow.png",
+          "scene": 218,
+          "line": 248,
+          "check": "hit husk and the one 4 away have the white Glowing outline (lasts 5 s), the one 9 away does not; a teal sculk ring at the hit point and vibration lines to each glowing husk (sound is not shot-checkable: silence is covered by the self-test sculk-sensor check)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "nameplates hidden behind walls and while crouching": [
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:aphelion": [
+        {
+          "file": "s_p2_telegraph__aphelion_warning_column_helm_on.png",
+          "scene": 267,
+          "line": 303,
+          "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_5.png",
+          "scene": 282,
+          "line": 318,
+          "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_5.png",
+          "scene": 282,
+          "line": 318,
+          "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "elsewhere:mothlight_staff": [
+        {
+          "file": "s_mothlight__mothlight_staff_held.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__mothlight_staff_tooltip.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:57:31",
+  "totals": {
+    "ok": 12,
+    "fail": 0,
+    "manual": 0
+  }
+}
