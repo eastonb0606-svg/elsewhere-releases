@@ -382,42 +382,48 @@
           "scene": 310,
           "line": 350,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:00"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_third_person_2.png",
           "scene": 310,
           "line": 350,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:00"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person.png",
           "scene": 310,
           "line": 350,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:01"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person.png",
           "scene": 310,
           "line": 350,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:02"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_after_use.png",
           "scene": 310,
           "line": 350,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:02"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_tooltip.png",
           "scene": 310,
           "line": 350,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:03"
         }
       ]
     },
@@ -428,21 +434,24 @@
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:04"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:05"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:06"
         }
       ]
     },
@@ -453,7 +462,8 @@
           "scene": 348,
           "line": 391,
           "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:37"
         }
       ]
     },
@@ -482,21 +492,24 @@
           "scene": 399,
           "line": 449,
           "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:38"
         },
         {
           "file": "s_prismbow__prism_bow_third_person.png",
           "scene": 399,
           "line": 449,
           "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:39"
         },
         {
           "file": "s_prismbow__prism_bow_tooltip.png",
           "scene": 399,
           "line": 449,
           "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:40"
         }
       ]
     },
@@ -507,14 +520,16 @@
           "scene": 408,
           "line": 458,
           "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:48"
         },
         {
           "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
           "scene": 408,
           "line": 458,
           "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:53"
         }
       ]
     },
@@ -525,42 +540,48 @@
           "scene": 427,
           "line": 477,
           "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:55"
         },
         {
           "file": "s_sunglass__sunglass_third_person_2.png",
           "scene": 427,
           "line": 477,
           "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:56"
         },
         {
           "file": "s_sunglass__sunglass_in_use_first_person.png",
           "scene": 427,
           "line": 477,
           "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:57"
         },
         {
           "file": "s_sunglass__sunglass_in_use_third_person.png",
           "scene": 427,
           "line": 477,
           "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:00"
         },
         {
           "file": "s_sunglass__sunglass_after_use.png",
           "scene": 427,
           "line": 477,
           "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:03"
         },
         {
           "file": "s_sunglass__sunglass_tooltip_2.png",
           "scene": 427,
           "line": 477,
           "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:03"
         }
       ]
     },
@@ -571,7 +592,8 @@
           "scene": 457,
           "line": 509,
           "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:14"
         }
       ]
     },
@@ -582,21 +604,24 @@
           "scene": 462,
           "line": 514,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:15"
         },
         {
           "file": "s_willolantern__mirewick_will_o_lantern_third_person.png",
           "scene": 462,
           "line": 514,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:16"
         },
         {
           "file": "s_willolantern__mirewick_will_o_lantern_tooltip.png",
           "scene": 462,
           "line": 514,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:17"
         }
       ]
     },
@@ -619,9 +644,9 @@
       ]
     }
   },
-  "run": "22:07:59",
+  "run": "22:09:17",
   "totals": {
-    "ok": 25,
+    "ok": 50,
     "fail": 5,
     "manual": 0
   }
