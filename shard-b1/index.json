@@ -1,0 +1,597 @@
+{
+  "lanes": {
+    "sfx": {
+      "client latest.log of the merged run (no scene needed)": [
+        {
+          "file": "sfx__client_log_sfx3.txt",
+          "scene": 23,
+          "line": 31,
+          "check": "expect 0 lines. Any line names the broken `elsewhere:sfx3.*` event; that module's switch `sfx3_<module>` goes false",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:azmar_amir": [
+        {
+          "file": "anim__azmar_amir_move_windup.png",
+          "scene": 37,
+          "line": 50,
+          "check": "Camel Charge and Final Charge = thrust, Javelin Volley = draw, Dismount Lunge = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:02:30"
+        },
+        {
+          "file": "anim__azmar_amir_move_strike.png",
+          "scene": 37,
+          "line": 50,
+          "check": "Camel Charge and Final Charge = thrust, Javelin Volley = draw, Dismount Lunge = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:02:30"
+        }
+      ],
+      "elsewhere:ossyra": [
+        {
+          "file": "anim__ossyra_hurt_peak.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:02:33"
+        },
+        {
+          "file": "anim__ossyra_hurt_rest.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:02:34"
+        }
+      ],
+      "elsewhere:hrolf": [
+        {
+          "file": "anim__hrolf_hurt_peak.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:02:37"
+        },
+        {
+          "file": "anim__hrolf_hurt_rest.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:02:38"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:hrafnholt_huginns_bite": [
+        {
+          "file": "items__hrafnholt_huginns_bite_held.png",
+          "scene": 108,
+          "line": 124,
+          "check": "icon matches the sprite page (16x16, Huginn's Bite), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:39"
+        },
+        {
+          "file": "items__hrafnholt_huginns_bite_tooltip.png",
+          "scene": 108,
+          "line": 124,
+          "check": "icon matches the sprite page (16x16, Huginn's Bite), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:39"
+        }
+      ],
+      "elsewhere:rangefinder_lens": [
+        {
+          "file": "items__rangefinder_lens_held.png",
+          "scene": 120,
+          "line": 136,
+          "check": "icon matches the sprite page (16x16, Rangefinder Lens), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:40"
+        },
+        {
+          "file": "items__rangefinder_lens_tooltip.png",
+          "scene": 120,
+          "line": 136,
+          "check": "icon matches the sprite page (16x16, Rangefinder Lens), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:41"
+        }
+      ],
+      "elsewhere:starfall_orrery": [
+        {
+          "file": "items__starfall_orrery_held.png",
+          "scene": 132,
+          "line": 148,
+          "check": "icon matches the sprite page (16x16, Starfall Orrery), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:42"
+        },
+        {
+          "file": "items__starfall_orrery_tooltip.png",
+          "scene": 132,
+          "line": 148,
+          "check": "icon matches the sprite page (16x16, Starfall Orrery), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:43"
+        }
+      ]
+    },
+    "court": {
+      "elsewhere:waterfront_hrafnholt": [
+        {
+          "file": "court__court_waterfront_front.png",
+          "scene": 133,
+          "line": 150,
+          "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
+          "status": "pending"
+        },
+        {
+          "file": "court__court_waterfront_side.png",
+          "scene": 133,
+          "line": 150,
+          "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
+          "status": "pending"
+        },
+        {
+          "file": "court__court_waterfront_boathouse.png",
+          "scene": 133,
+          "line": 150,
+          "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (third person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_third_person_blocking.png",
+          "scene": 147,
+          "line": 162,
+          "check": "arm in the block pose, steel face with blue ring and gold boss toward the camera",
+          "status": "ok",
+          "taken": "22:02:45"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Percolax phase-0 smoke hide (elsewhere:percolax)": [
+        {
+          "file": "s_p13_particles__percolax_smoke_hide_3s.png",
+          "scene": 168,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "ok",
+          "taken": "22:02:49"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:sun_chamber": [
+        {
+          "file": "s_struct_overworld__sun_chamber_s_22_3_6.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__sun_chamber_hall_altar_facing_south.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_huntmaster Pinning Arrow": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_huntmaster_pinning_arrow_windup.png",
+          "scene": 191,
+          "line": 213,
+          "check": "throwing arm cocked behind the head, off arm aiming; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_huntmaster_pinning_arrow_strike.png",
+          "scene": 191,
+          "line": 213,
+          "check": "throwing arm cocked behind the head, off arm aiming; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sultana (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase3.png",
+          "scene": 207,
+          "line": 236,
+          "check": "",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:lantern_road": [
+        {
+          "file": "s_struct_core__lantern_road_above.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__lantern_road_end_eye_level.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:grimhorn": [
+        {
+          "file": "s_p8_bossanims__grimhorn_death_15t.png",
+          "scene": 245,
+          "line": 275,
+          "check": "legs buckle under it and the neck sags as it tips onto its side; no legs poking through the ground; with `\"bossAnimations3\": false` only the plain vanilla tilt",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:strawgrim": [
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3_later.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:solaxis_pyre_cradle": [
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_24_8_0.png",
+          "scene": 284,
+          "line": 323,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_0_3_30.png",
+          "scene": 284,
+          "line": 323,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_after_use.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sunscourge": [
+        {
+          "file": "s_whips__azmar_sunscourge_first_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_third_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_tooltip.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)": [
+        {
+          "file": "s_townsfolk__aldermark_capital_time_set_3000.png",
+          "scene": 314,
+          "line": 354,
+          "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__captain_capes_heraldry_kingdom_cape_png.png",
+          "scene": 346,
+          "line": 389,
+          "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__captain_capes_heraldry_kingdom_cape_png_later.png",
+          "scene": 346,
+          "line": 389,
+          "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person.png",
+          "scene": 372,
+          "line": 420,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person.png",
+          "scene": 372,
+          "line": 420,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip.png",
+          "scene": 372,
+          "line": 420,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "elsewhere:mothlight_swarm": [
+        {
+          "file": "s_mothlight__mothlight_swarm_entity_idle.png",
+          "scene": 403,
+          "line": 453,
+          "check": "three small pale moths (cream wings with lilac rims and an amber eyespot, striped bodies, brown feelers) circling one point beside the player, wings fluttering; full bright at dusk, no shadow, no pink/black boxes",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__mothlight_swarm_entity_idle_later.png",
+          "scene": 403,
+          "line": 453,
+          "check": "three small pale moths (cream wings with lilac rims and an amber eyespot, striped bodies, brown feelers) circling one point beside the player, wings fluttering; full bright at dusk, no shadow, no pink/black boxes",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:clockwork_sentry": [
+        {
+          "file": "s_totems__clockwork_sentry_first_person.png",
+          "scene": 437,
+          "line": 487,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__clockwork_sentry_third_person.png",
+          "scene": 437,
+          "line": 487,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__clockwork_sentry_tooltip.png",
+          "scene": 437,
+          "line": 487,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p7_standing": {
+      "elsewhere:kingdom_market_inspector": [
+        {
+          "file": "s_p7_standing__hostile_trader_dialogue.png",
+          "scene": 446,
+          "line": 496,
+          "check": "red \"Hostile\" segment lit, the marker at the far left, \"Enemy of the Throne\", one red line \"They will not trade with you.\", Wares and Collect order greyed out (tooltips say why), Tribute... and Farewell still work; no price percent shown",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Live soldiers end at 96 blocks, ranks beyond (with s-impostors)": [
+        {
+          "file": "s_lod__distant_battle_subtitles.png",
+          "scene": 459,
+          "line": 511,
+          "check": "at 90 live soldiers (baked skins) are still drawn; at 110 no live rank-and-file soldier is drawn, while s-impostors' rank figures (reserves) still show; court rulers and unique NPCs (own renderers) are not cut off; render distance 16 with the slider at 150% moves the cutoff to about 144",
+          "status": "pending"
+        },
+        {
+          "file": "s_lod__melee_subtitles.png",
+          "scene": 459,
+          "line": 511,
+          "check": "at 90 live soldiers (baked skins) are still drawn; at 110 no live rank-and-file soldier is drawn, while s-impostors' rank figures (reserves) still show; court rulers and unique NPCs (own renderers) are not cut off; render distance 16 with the slider at 150% moves the cutoff to about 144",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_bossdrops": {
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        },
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:02:49",
+  "totals": {
+    "ok": 12,
+    "fail": 2,
+    "manual": 0
+  }
+}
