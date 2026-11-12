@@ -55,7 +55,8 @@
           "scene": 157,
           "line": 174,
           "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:57"
         }
       ]
     },
@@ -66,7 +67,8 @@
           "scene": 205,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:06"
         }
       ]
     },
@@ -77,14 +79,16 @@
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:22"
         },
         {
           "file": "s_struct_core__hollow_shrine_downhill_20.png",
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:28"
         }
       ]
     },
@@ -95,21 +99,24 @@
           "scene": 289,
           "line": 328,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:08"
         },
         {
           "file": "s_dredge__tidebrass_dredge_third_person.png",
           "scene": 289,
           "line": 328,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:09"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
           "scene": 289,
           "line": 328,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:10"
         }
       ]
     },
@@ -120,42 +127,48 @@
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:12"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_third_person_3.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:13"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:13"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:14"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_after_use_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:15"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_tooltip_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:16"
         }
       ]
     },
@@ -177,21 +190,24 @@
           "scene": 374,
           "line": 422,
           "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:17"
         },
         {
           "file": "s_miresnare__mirewick_mire_snare_third_person_3.png",
           "scene": 374,
           "line": 422,
           "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:17"
         },
         {
           "file": "s_miresnare__mirewick_mire_snare_tooltip_3.png",
           "scene": 374,
           "line": 422,
           "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:18"
         }
       ]
     },
@@ -213,21 +229,24 @@
           "scene": 437,
           "line": 487,
           "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:22"
         },
         {
           "file": "s_totems__clockwork_sentry_third_person.png",
           "scene": 437,
           "line": 487,
           "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:24"
         },
         {
           "file": "s_totems__clockwork_sentry_tooltip.png",
           "scene": 437,
           "line": 487,
           "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:25"
         }
       ]
     },
@@ -238,28 +257,31 @@
           "scene": 493,
           "line": 546,
           "check": "",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:27"
         },
         {
           "file": "s_meadhorn__hrafnholt_mead_horn_third_person.png",
           "scene": 493,
           "line": 546,
           "check": "",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:27"
         },
         {
           "file": "s_meadhorn__hrafnholt_mead_horn_tooltip.png",
           "scene": 493,
           "line": 546,
           "check": "",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:28"
         }
       ]
     }
   },
-  "run": "23:39:58",
+  "run": "23:41:28",
   "totals": {
-    "ok": 5,
+    "ok": 27,
     "fail": 0,
     "manual": 0
   }
