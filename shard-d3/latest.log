@@ -504,3 +504,88 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:52:52] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
 [22:52:52] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [22:52:52] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:52:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
+[22:52:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1576.500000, 91.000000, -7097.500000
+[22:53:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_hrafnholt_c_0_8_58_y180.png: 
+[22:53:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1515.040000, 93.000000, -7127.500000
+[22:53:17] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 14432ms or 288 ticks behind
+[22:53:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_hrafnholt_c_58_10_30_y_120.png: 
+[22:53:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 134 (structures_build | sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_hrafnholt)) done in 36332 ms
+[22:53:28] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:53:28] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:53:28] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:53:28] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:53:28] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:53:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[22:53:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2935.330000, 126.000000, -3624.670000
+[22:53:43] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 11277ms or 225 ticks behind
+[22:53:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK z_castle__castle_mirewick_c_44_8_44_y135.png: 
+[22:53:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 149 (z_castle | elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)) done in 16841 ms
+[22:53:45] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:53:45] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:53:45] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:53:45] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:53:45] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:53:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
+[22:53:45] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 23000 tick(s)
+[22:53:45] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1488.500000, 97.000000, -7115.500000
+[22:53:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__hrafnholt_capital_time_set_23000.png: 
+[22:53:57] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 11000 tick(s)
+[22:53:57] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1488.500000, 97.000000, -7115.500000
+[22:54:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__hrafnholt_capital_time_set_11000.png: 
+[22:54:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 316 (s_townsfolk | Hrafnholt jetty at dawn + hall feast) done in 19685 ms
+[22:54:05] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:54:05] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:54:05] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:54:05] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:54:05] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:54:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:54:05] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 76.000000, -1289.500000
+[22:54:06] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 7736ms or 154 ticks behind
+[22:54:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_0_5_10_y180.png: 
+[22:54:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 411 (s_layout_azmar | elsewhere:castle_aldermark) done in 9635 ms
+[22:54:14] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:54:14] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:54:15] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:54:15] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:54:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
+[22:54:15] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:54:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1636.500000, 121.000000, -7099.500000
+[22:54:24] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3873ms or 77 ticks behind
+[22:54:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_hraf__castle_hrafnholt_overview.png: 
+[22:54:26] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1576.500000, 89.000000, -7103.500000
+[22:54:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_hraf__castle_hrafnholt_ground.png: 
+[22:54:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 466 (s_layout_hraf | elsewhere:castle_hrafnholt) done in 20172 ms
+[22:54:35] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:54:35] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:54:35] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:54:35] [Server thread/INFO] (Minecraft) Stopping server
+[22:54:35] [Server thread/INFO] (Minecraft) Saving players
+[22:54:35] [Server thread/INFO] (Minecraft) Saving worlds
+[22:54:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:54:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:54:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 12 ok, 0 fail, 0 manual
+[22:54:36] [Render thread/INFO] (Minecraft) Stopping!
+[22:54:36] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
