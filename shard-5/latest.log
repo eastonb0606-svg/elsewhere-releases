@@ -491,3 +491,112 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:05:08] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
 [20:05:08] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [20:05:08] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__changing_of_the_guard_salute.png: 
+[20:05:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__changing_of_the_guard_salute_5s.png: 
+[20:05:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 377 (s_routines | Changing of the guard salute) done in 8522 ms
+[20:05:17] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:05:17] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:05:17] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:17] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:17] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:17] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 333 tick(s)
+[20:05:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__mirewick_off_time_wards.png: 
+[20:05:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__mirewick_off_time_wards_5s.png: 
+[20:05:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 381 (s_routines | Mirewick off-time wards) done in 8559 ms
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: Summoned new Shrieker Swarm
+[20:05:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 3.660000, -59.420000, 2.560000
+[20:05:26] [Server thread/INFO] (Minecraft) System chat: Unknown or incomplete command. See below for error
+[20:05:26] [Server thread/INFO] (Minecraft) System chat: ...eker_swarm<--[HERE]
+[20:05:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu.png: 
+[20:05:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu_later.png: 
+[20:05:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 391 (s_spawngroups | elsewhere:shrieker_swarm) done in 4220 ms
+[20:05:29] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:05:29] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:05:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:30] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 18000 tick(s)
+[20:05:30] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:30] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:30] [Server thread/INFO] (Minecraft) System chat: Summoned new Hotbox Smog
+[20:05:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 4.600000, -59.420000, 9.370000
+[20:05:31] [Server thread/INFO] (Minecraft) System chat: Summoned new Hotbox Smog
+[20:05:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush.png: 
+[20:05:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush_later.png: 
+[20:05:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 392 (s_spawngroups | elsewhere:hotbox_smog) done in 4144 ms
+[20:05:34] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:05:34] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:05:34] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:34] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:34] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:34] [Server thread/INFO] (Minecraft) System chat: Summoned new Eyeblossom Wisp
+[20:05:34] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 5.230000, -59.400000, 8.240000
+[20:05:35] [Server thread/INFO] (Minecraft) System chat: Summoned new Eyeblossom Wisp
+[20:05:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__eyeblossom_wisp_swarm_core.png: 
+[20:05:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__eyeblossom_wisp_swarm_core_later.png: 
+[20:05:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 393 (s_spawngroups | elsewhere:eyeblossom_wisp) done in 4153 ms
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[20:05:38] [Server thread/INFO] (Minecraft) System chat: ...elsewhere summon grunthar<--[HERE]
+[20:05:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_throne__grunthar_legacy_treasure_hall_nether_2_x.png: 
+[20:05:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png: 
+[20:05:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 395 (s_throne | Grunthar legacy treasure hall (nether, 2.x saved arena)) done in 8547 ms
+[20:05:46] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:05:46] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:05:46] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:46] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2016ms or 40 ticks behind
+[20:05:46] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:46] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:46] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Prism Bow]
+[20:05:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_first_person.png: 
+[20:05:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_third_person.png: 
+[20:05:48] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:05:48] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[20:05:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_tooltip.png: 
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:05:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 398 (s_prismbow | elsewhere:prism_bow) done in 2436 ms
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:49] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Prism Bow]
+[20:05:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_first_person_2.png: 
+[20:05:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_third_person_2.png: 
+[20:05:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_in_use_first_person.png: 
+[20:05:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_in_use_third_person.png: 
+[20:05:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_after_use.png: 
+[20:05:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_tooltip_2.png: 
+[20:05:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 399 (s_prismbow | elsewhere:prism_bow) done in 4383 ms
+[20:05:53] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:05:53] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:05:53] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:05:53] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:05:53] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:05:53] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:05:53] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Prism Bow]
+[20:05:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_first_person_3.png: 
+[20:05:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_third_person_3.png: 
+[20:05:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_in_use_first_person_2.png: 
+[20:05:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_in_use_third_person_2.png: 
+[20:05:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_after_use_2.png: 
+[20:05:57] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:05:57] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[20:05:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_prismbow__prism_bow_tooltip_3.png: 
+[20:05:58] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:05:58] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:05:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 400 (s_prismbow | elsewhere:prism_bow) done in 4530 ms
+[20:05:58] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:05:58] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:05:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000

@@ -183,14 +183,16 @@
           "scene": 377,
           "line": 425,
           "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:11"
         },
         {
           "file": "s_routines__changing_of_the_guard_salute_5s.png",
           "scene": 377,
           "line": 425,
           "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:17"
         }
       ],
       "Hrafnholt sparring pairs and the hall feast": [],
@@ -202,14 +204,16 @@
           "scene": 381,
           "line": 429,
           "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:20"
         },
         {
           "file": "s_routines__mirewick_off_time_wards_5s.png",
           "scene": 381,
           "line": 429,
           "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:25"
         }
       ],
       "Lantern Fair floating lanterns": [],
@@ -231,14 +235,16 @@
           "scene": 391,
           "line": 439,
           "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:27"
         },
         {
           "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu_later.png",
           "scene": 391,
           "line": 439,
           "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:29"
         }
       ],
       "elsewhere:hotbox_smog": [
@@ -247,14 +253,16 @@
           "scene": 392,
           "line": 440,
           "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:31"
         },
         {
           "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush_later.png",
           "scene": 392,
           "line": 440,
           "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:34"
         }
       ],
       "elsewhere:eyeblossom_wisp": [
@@ -263,14 +271,16 @@
           "scene": 393,
           "line": 441,
           "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:36"
         },
         {
           "file": "s_spawngroups__eyeblossom_wisp_swarm_core_later.png",
           "scene": 393,
           "line": 441,
           "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:38"
         }
       ]
     },
@@ -282,14 +292,16 @@
           "scene": 395,
           "line": 445,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:41"
         },
         {
           "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
           "scene": 395,
           "line": 445,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:46"
         }
       ],
       "Verdigrim cathedral + Galvanox and Thurgrim arenas (legacy)": [],
@@ -302,105 +314,120 @@
           "scene": 398,
           "line": 448,
           "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:47"
         },
         {
           "file": "s_prismbow__prism_bow_third_person.png",
           "scene": 398,
           "line": 448,
           "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:48"
         },
         {
           "file": "s_prismbow__prism_bow_tooltip.png",
           "scene": 398,
           "line": 448,
           "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:49"
         },
         {
           "file": "s_prismbow__prism_bow_first_person_2.png",
           "scene": 399,
           "line": 449,
           "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:50"
         },
         {
           "file": "s_prismbow__prism_bow_third_person_2.png",
           "scene": 399,
           "line": 449,
           "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:50"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_first_person.png",
           "scene": 399,
           "line": 449,
           "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:51"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_third_person.png",
           "scene": 399,
           "line": 449,
           "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:52"
         },
         {
           "file": "s_prismbow__prism_bow_after_use.png",
           "scene": 399,
           "line": 449,
           "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:52"
         },
         {
           "file": "s_prismbow__prism_bow_tooltip_2.png",
           "scene": 399,
           "line": 449,
           "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:53"
         },
         {
           "file": "s_prismbow__prism_bow_first_person_3.png",
           "scene": 400,
           "line": 450,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:54"
         },
         {
           "file": "s_prismbow__prism_bow_third_person_3.png",
           "scene": 400,
           "line": 450,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:55"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_first_person_2.png",
           "scene": 400,
           "line": 450,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:56"
         },
         {
           "file": "s_prismbow__prism_bow_in_use_third_person_2.png",
           "scene": 400,
           "line": 450,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:56"
         },
         {
           "file": "s_prismbow__prism_bow_after_use_2.png",
           "scene": 400,
           "line": 450,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:57"
         },
         {
           "file": "s_prismbow__prism_bow_tooltip_3.png",
           "scene": 400,
           "line": 450,
           "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:05:58"
         }
       ]
     },
@@ -552,9 +579,9 @@
       ]
     }
   },
-  "run": "20:05:08",
+  "run": "20:05:58",
   "totals": {
-    "ok": 19,
+    "ok": 46,
     "fail": 0,
     "manual": 0
   }
