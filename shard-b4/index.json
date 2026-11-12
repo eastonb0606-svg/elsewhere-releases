@@ -136,14 +136,16 @@
           "scene": 151,
           "line": 165,
           "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:03:29"
         },
         {
           "file": "s_callingtags__calling_tooltip_sunlance_staff.png",
           "scene": 151,
           "line": 165,
           "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:03:30"
         }
       ]
     },
@@ -194,14 +196,18 @@
           "scene": 194,
           "line": 219,
           "check": "off hand with the flask at the lips, head tipped back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: flask flung down and out, guard back up, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Counter-Brew' within 120 s",
+          "taken": "22:05:30"
         },
         {
           "file": "s_p4_rivalanims__azmar_wazir_counter_brew_strike.png",
           "scene": 194,
           "line": 219,
           "check": "off hand with the flask at the lips, head tipped back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: flask flung down and out, guard back up, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Counter-Brew' within 120 s",
+          "taken": "22:05:30"
         }
       ]
     },
@@ -223,14 +229,16 @@
           "scene": 220,
           "line": 250,
           "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:33"
         },
         {
           "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_back.png",
           "scene": 220,
           "line": 250,
           "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:34"
         }
       ]
     },
@@ -241,21 +249,24 @@
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:42"
         },
         {
           "file": "s_p3_nameplates__nameplate_lod_and_range_12.png",
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:43"
         },
         {
           "file": "s_p3_nameplates__nameplate_lod_and_range_18.png",
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:44"
         }
       ]
     },
@@ -266,42 +277,48 @@
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:45"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_third_person.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:46"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_in_use_first_person.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:46"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_in_use_third_person.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:47"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_after_use.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:47"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_tooltip.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:49"
         }
       ]
     },
@@ -312,14 +329,16 @@
           "scene": 257,
           "line": 290,
           "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:50"
         },
         {
           "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced_5s.png",
           "scene": 257,
           "line": 290,
           "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:56"
         }
       ]
     },
@@ -330,7 +349,9 @@
           "scene": 266,
           "line": 302,
           "check": "the yellow shockwave ring travels outward smoothly (attack, not a hint, so it shows without the helm); one ring, no trail of old rings",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 120 s",
+          "taken": "22:07:57"
         }
       ]
     },
@@ -341,14 +362,16 @@
           "scene": 288,
           "line": 327,
           "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:58"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip.png",
           "scene": 288,
           "line": 327,
           "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:59"
         }
       ]
     },
@@ -596,10 +619,10 @@
       ]
     }
   },
-  "run": "22:03:23",
+  "run": "22:07:59",
   "totals": {
-    "ok": 8,
-    "fail": 2,
+    "ok": 25,
+    "fail": 5,
     "manual": 0
   }
 }
