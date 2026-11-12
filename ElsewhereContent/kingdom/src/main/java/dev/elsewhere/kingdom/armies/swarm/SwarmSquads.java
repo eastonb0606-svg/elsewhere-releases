@@ -26,7 +26,9 @@ public final class SwarmSquads {
 	static final class SquadState {
 		/** Newest first. */
 		final List<Vec3> trail = new ArrayList<>();
-		long trailTick = Long.MIN_VALUE, indexTick = Long.MIN_VALUE, used;
+		// MIN_VALUE / 2, not MIN_VALUE: "now - indexTick >= 5" must not overflow on the first call (with MIN_VALUE it went negative, the column
+		// index was never built and every COLUMN member fell back to the heading slot: no ribbon, s-armies-fix 14:02)
+		long trailTick = Long.MIN_VALUE / 2, indexTick = Long.MIN_VALUE / 2, used;
 		final Map<UUID, Integer> column = new HashMap<>();
 	}
 

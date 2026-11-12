@@ -340,12 +340,12 @@ final class SelfTestFit {
 		List<GhFit.Piece> ps = GhFit.buildPlan(l, "hanging_undercity", new BlockPos(sx, 150, z));
 		Tally t = scan(l, span(ps));
 		long towers = ps.stream().filter(p -> p.kind.equals("tower")).count();
-		// every tower hangs free: its anchor plate is under rock and there is air under its spire tip
+		// every tower hangs free: its soul lantern hangs under the spire tip with open air below it
 		int free = 0;
 		for (GhFit.Piece p : ps) {
 			if (!p.kind.equals("tower")) continue;
 			BlockPos tip = new BlockPos(p.o.getX(), p.o.getY() - p.p(1) - 2 * p.p(2) + 2, p.o.getZ());
-			if (l.getBlockState(tip.below()).isAir() && !l.getBlockState(new BlockPos(p.o.getX(), p.p(0), p.o.getZ())).isAir()) free++;
+			if (l.getBlockState(tip).is(Blocks.POLISHED_DEEPSLATE) && l.getBlockState(tip.below()).is(Blocks.SOUL_LANTERN) && l.getBlockState(tip.below(2)).isAir()) free++;
 		}
 		check("struct fit: Hanging Undercity look (octagonal towers hung from the real ceiling by chains, inverted spires, a chest per tower, the Ancients' door)",
 			towers >= 1 && free == towers && t.n(StubBlocks.RETURN_RIFT) == 2 && t.loot("hanging_undercity") == towers && t.n(Blocks.IRON_CHAIN) >= 4 * towers && t.n(Blocks.LADDER) >= 6,

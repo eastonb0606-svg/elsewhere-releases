@@ -43,10 +43,8 @@ final class SelfTestRulerLook {
 			}
 			int i = 0;
 			for (Magnate m : Magnate.values()) {
-				MagnateBoss b = m.type.create(l, EntitySpawnReason.COMMAND);
-				b.snapTo(2.5 + 5 * i++, y, 403.5, 0F, 0F);
+				MagnateBoss b = MagnateBoss.spawn(l, m, new net.minecraft.world.phys.Vec3(2.5 + 5 * i++, y, 403.5));   // the same real spawn path (home set) as the Magnate tests that pass
 				b.passive = true;
-				l.addFreshEntity(b);
 				SPAWNED.add(b);
 			}
 			return 3;   // the first tick runs each Magnate's own loadout
@@ -56,6 +54,8 @@ final class SelfTestRulerLook {
 			boolean ready = true;
 			for (MagnateBoss b : SPAWNED) ready &= !b.getItemBySlot(EquipmentSlot.CHEST).isEmpty();
 			if (!ready && ++waited < 200) return -1;
+			int empty = 0;
+			for (MagnateBoss b : SPAWNED) if (b.getItemBySlot(EquipmentSlot.CHEST).isEmpty()) empty++;
 			boolean on = MirewickRulerLook.ENABLED, noDiamond = true, styled = true, kept = true, thwaite = false;
 			int metal = 0;
 			StringBuilder bad = new StringBuilder();
@@ -74,7 +74,7 @@ final class SelfTestRulerLook {
 				}
 			}
 			SelfTest.check("B10 ruler armor: no Mirewick Magnate wears undyed vanilla diamond (" + SPAWNED.size() + " Magnates, real loadouts)", !on || noDiamond, bad.length() == 0 ? null : bad.toString().trim());
-			SelfTest.check("B10 ruler armor: every iron/gold/diamond piece on a Magnate draws the purple-crimson-gold mirewick_ruler layer (" + metal + " pieces)", !on || (styled && metal > 0), bad.length() == 0 ? null : bad.toString().trim());
+			SelfTest.check("B10 ruler armor: every iron/gold/diamond piece on a Magnate draws the purple-crimson-gold mirewick_ruler layer (" + metal + " pieces)", !on || (styled && metal > 0), bad.length() == 0 ? (empty > 0 ? empty + " Magnates without a chestplate after " + waited + " waits" : null) : bad.toString().trim());
 			SelfTest.check("B10 ruler armor: the restyled pieces keep their vanilla item, armor attributes, trim and slot (Thwaite's trimmed diamond chestplate)", !on || (kept && thwaite), null);
 			boolean layer = res("assets/elsewhere/equipment/mirewick_ruler.json") && res("assets/elsewhere/textures/entity/equipment/humanoid/mirewick_ruler.png")
 				&& res("assets/elsewhere/textures/entity/equipment/humanoid_leggings/mirewick_ruler.png");

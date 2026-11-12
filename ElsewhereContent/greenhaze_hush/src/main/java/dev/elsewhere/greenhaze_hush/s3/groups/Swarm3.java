@@ -97,6 +97,7 @@ public final class Swarm3 {
 			dmg.removeModifier(DAMAGE_ID);
 			dmg.addPermanentModifier(new AttributeModifier(DAMAGE_ID, n * r.damagePer() - 1.0, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 		}
+		m.refreshDimensions(); // the SCALE modifier only reaches the hitbox on the next dirty-attribute tick; widen it now
 		m.setHealth(m.getMaxHealth());
 	}
 
@@ -108,6 +109,7 @@ public final class Swarm3 {
 		if (hp != null) hp.removeModifier(HEALTH_ID);
 		if (sc != null) sc.removeModifier(SCALE_ID);
 		if (dmg != null) dmg.removeModifier(DAMAGE_ID);
+		m.refreshDimensions();
 		if (m.getHealth() > m.getMaxHealth()) m.setHealth(m.getMaxHealth());
 	}
 

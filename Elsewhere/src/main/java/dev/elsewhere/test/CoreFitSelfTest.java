@@ -133,8 +133,7 @@ public final class CoreFitSelfTest {
 		};
 		BlockPos o = new BlockPos(x0, slope.ground(x0, z0), z0);
 		List<StructurePiece> ps = plan(kind, slope, o, 99L + idx * 31L);
-		BoundingBox all = null;
-		for (StructurePiece p : ps) all = all == null ? p.getBoundingBox() : BoundingBox.encapsulatingBoxes(List.of(all, p.getBoundingBox())).orElse(all);
+		BoundingBox all = area(ps);
 		if (all == null) {
 			check(false, kind + " synthetic: no pieces planned");
 			return;
@@ -152,13 +151,29 @@ public final class CoreFitSelfTest {
 		}
 		var gen = level.getChunkSource().getGenerator();
 		for (StructurePiece p : ps) {
-			BoundingBox b = p.getBoundingBox();
+			BoundingBox b = area(List.of(p));
 			for (int cx = b.minX() >> 4; cx <= b.maxX() >> 4; cx++) for (int cz = b.minZ() >> 4; cz <= b.maxZ() >> 4; cz++) {
 				BoundingBox chunkBB = new BoundingBox(cx << 4, level.getMinY(), cz << 4, (cx << 4) + 15, level.getMaxY() - 1, (cz << 4) + 15);
 				p.postProcess(level, level.structureManager(), gen, level.getRandom(), chunkBB, new ChunkPos(cx, cz), o);
 			}
 		}
 		measure(level, ps, kind + " on a 1:3 hillside", false);
+	}
+
+	/**
+	 * The blocks a site's pieces build and the checks read: each piece's own footprint plus 4 (the shrine's fallen drum), not the 12-block
+	 * beard skirt its box carries. Only these chunks are loaded, so the test keeps few chunks in memory (the whole self-test runs before the
+	 * server saves). Null when no fit piece.
+	 */
+	static BoundingBox area(List<StructurePiece> ps) {
+		BoundingBox all = null;
+		for (StructurePiece q : ps) {
+			if (!(q instanceof FitPiece f)) continue;
+			int[] r = f.worldRect();
+			BoundingBox b = new BoundingBox(r[0] - 4, f.getBoundingBox().minY(), r[1] - 4, r[2] + 4, f.getBoundingBox().maxY(), r[3] + 4);
+			all = all == null ? b : BoundingBox.encapsulatingBoxes(List.of(all, b)).orElse(all);
+		}
+		return all;
 	}
 
 	// ------------------------------------------------------------------ real worldgen
@@ -173,7 +188,8 @@ public final class CoreFitSelfTest {
 				continue;
 			}
 			for (int site = 0; site < 2; site++) {
-				int sx = 60000 + site * 37000 + nm[0].length() * 1500, sz = -70000 - site * 23000;
+				// all four structures are searched from the same two fresh areas, so their generated chunks overlap (fewer chunks to save at stop)
+				int sx = 60000 + site * 37000, sz = -70000 - site * 23000;
 				var found = hollow.getChunkSource().getGenerator().findNearestMapStructure(hollow, net.minecraft.core.HolderSet.direct(holder.get()), new BlockPos(sx, 64, sz), 100, false);
 				if (found == null) {
 					check(false, nm[0] + " site " + site + ": found by the structure search");
@@ -185,7 +201,8 @@ public final class CoreFitSelfTest {
 					check(false, nm[0] + " site " + site + ": start exists");
 					continue;
 				}
-				BoundingBox b = start.getBoundingBox();
+				BoundingBox b = area(start.getPieces());
+				if (b == null) b = start.getBoundingBox();
 				for (int cx = b.minX() >> 4; cx <= b.maxX() >> 4; cx++) for (int cz = b.minZ() >> 4; cz <= b.maxZ() >> 4; cz++) hollow.getChunk(cx, cz, ChunkStatus.FULL, true);
 				List<StructurePiece> ps = start.getPieces();
 				boolean fit = !ps.isEmpty() && ps.stream().allMatch(q -> q instanceof FitPiece f && f.v == CoreFit.V);

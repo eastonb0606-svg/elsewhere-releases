@@ -135,6 +135,13 @@ final class SwarmSelfTest {
 			String detail = "spawn failed";
 			if (enemy != null && a != null && b != null) {
 				enemy.setNoAi(true);
+				// a and b were spawned this tick on the floor but have not moved yet, so their onGround flag is still false and vanilla
+				// navigation refuses to path (canUpdatePath); hold them still (no AI: the check is the shared path, not a fight) and mark
+				// them grounded, as their first tick would (s-armies-fix 14:02: this check always read "paths 0/0" before)
+				for (KingdomSoldier s : List.of(a, b)) {
+					s.setNoAi(true);
+					s.setOnGround(true);
+				}
 				a.getNavigation().moveTo(enemy, 1.0);
 				SwarmPaths.offerApproach(a, enemy);
 				long h0 = SwarmPaths.approachHits;

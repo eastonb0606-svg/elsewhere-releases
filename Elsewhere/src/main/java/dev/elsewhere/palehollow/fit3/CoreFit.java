@@ -63,10 +63,20 @@ public final class CoreFit {
 
 	public static Ground ground(ChunkGenerator gen, LevelHeightAccessor h, RandomState rs) {
 		Map<Long, Integer> g = new HashMap<>(), s = new HashMap<>();
+		// Without aquifers (the Pale Hollow's noise settings have none) the only noise fluid is the sea below sea level, so a top block at or
+		// above sea level is solid ground: one noise column instead of two (each height query evaluates a whole column).
+		int sea = gen.getSeaLevel();
+		boolean seaOnly = gen instanceof net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator nb && nb.generatorSettings().value().aquifers().isEmpty();
 		return new Ground() {
 			@Override
 			public int ground(int x, int z) {
-				return g.computeIfAbsent(BlockPos.asLong(x, 0, z), k -> gen.getFirstOccupiedHeight(x, z, Heightmap.Types.OCEAN_FLOOR_WG, h, rs));
+				return g.computeIfAbsent(BlockPos.asLong(x, 0, z), k -> {
+					if (seaOnly) {
+						int top = surface(x, z);
+						if (top >= sea) return top;
+					}
+					return gen.getFirstOccupiedHeight(x, z, Heightmap.Types.OCEAN_FLOOR_WG, h, rs);
+				});
 			}
 
 			@Override
