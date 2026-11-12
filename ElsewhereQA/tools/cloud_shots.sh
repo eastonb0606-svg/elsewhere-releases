@@ -14,6 +14,8 @@ set -u
 SHARD="${1:?shard}"; SPEC="${2:?scene spec}"; WD_MAX="${3:-90}"
 # boss_music client self-test only in m* shards (it adds a stand-in boss bar that would spoil scene shots; lead 16:47)
 MUSICVM=""; case "$SHARD" in m*) MUSICVM="-PqaVm=-Dboss_music.selftest=true";; esac
+# cloud VMs have no audio device: OpenAL Soft null backend so the sound engine starts and the in-game music test is real (lead 17:03)
+case "$SHARD" in m*) export ALSOFT_DRIVERS=null;; esac
 R="$(git rev-parse --show-toplevel)"; cd "$R" || exit 2
 W="$HOME/cloudshots-$SHARD"; S="$W/shots"; mkdir -p "$W" "$S" "$W/mods"; rm -f "$W/DONE" "$W/client.done"
 LOG="$W/run.log"; exec > >(tee -a "$LOG") 2>&1
