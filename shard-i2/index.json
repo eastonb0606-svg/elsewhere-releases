@@ -7,7 +7,8 @@
           "scene": 17,
           "line": 25,
           "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:47:13"
         }
       ]
     },
@@ -38,14 +39,16 @@
           "scene": 181,
           "line": 196,
           "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:47:29"
         },
         {
           "file": "s_struct_petalwind__petal_pagoda_s_0_4_26.png",
           "scene": 181,
           "line": 196,
           "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:47:35"
         }
       ]
     },
@@ -108,7 +111,8 @@
           "scene": 267,
           "line": 303,
           "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:04"
         }
       ]
     },
@@ -119,14 +123,16 @@
           "scene": 408,
           "line": 458,
           "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:19"
         },
         {
           "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
           "scene": 408,
           "line": 458,
           "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:25"
         }
       ]
     },
@@ -137,42 +143,48 @@
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:26"
         },
         {
           "file": "s_totems__bramble_totem_third_person.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:26"
         },
         {
           "file": "s_totems__bramble_totem_in_use_first_person.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:29"
         },
         {
           "file": "s_totems__bramble_totem_in_use_third_person.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:30"
         },
         {
           "file": "s_totems__bramble_totem_after_use.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:33"
         },
         {
           "file": "s_totems__bramble_totem_tooltip.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:33"
         }
       ]
     },
@@ -183,14 +195,16 @@
           "scene": 482,
           "line": 534,
           "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:48:00"
         },
         {
           "file": "s_struct_greenhaze__sesh_hut_ground.png",
           "scene": 482,
           "line": 534,
           "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:48:05"
         }
       ],
       "elsewhere:hanging_undercity": [
@@ -199,21 +213,23 @@
           "scene": 487,
           "line": 539,
           "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:48:18"
         },
         {
           "file": "s_struct_greenhaze__hanging_undercity_ground.png",
           "scene": 487,
           "line": 539,
           "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:48:24"
         }
       ]
     }
   },
-  "run": "23:46:02",
+  "run": "23:48:26",
   "totals": {
-    "ok": 8,
+    "ok": 24,
     "fail": 0,
     "manual": 0
   }
