@@ -31,14 +31,16 @@
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:39:38"
         },
         {
           "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:39:49"
         }
       ]
     },
@@ -179,7 +181,9 @@
           "scene": 136,
           "line": 152,
           "check": "every letter renders: the anim test shot showed 'glyph_flare' as 'glyph_ lare' (dropped f) on boss_ui bar v2",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'f' within 90 s",
+          "taken": "22:37:08"
         }
       ]
     },
@@ -190,14 +194,16 @@
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:40:07"
         },
         {
           "file": "s_struct_verdigris__clan_hold_downhill_18.png",
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:40:14"
         }
       ],
       "elsewhere:climbers_cairn": [
@@ -206,7 +212,8 @@
           "scene": 154,
           "line": 171,
           "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:40:45"
         }
       ],
       "elsewhere:summit_throne": [
@@ -215,7 +222,8 @@
           "scene": 156,
           "line": 173,
           "check": "ice plateau on the true summit cap with a packed-ice/frostgranite plinth down to the rock, 6 deepslate storm obelisks on frostgranite-stair plinths (no iron blocks), throne with the war drum, 1-3 small frostgranite waymark obelisks on ridge points around the cap; snowy banks, no cylinder cut",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:41:28"
         }
       ],
       "elsewhere:drowned_cathedral": [
@@ -224,7 +232,8 @@
           "scene": 161,
           "line": 178,
           "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:41:38"
         }
       ]
     },
@@ -271,14 +280,18 @@
           "scene": 196,
           "line": 223,
           "check": "weapon arm drawn across the chest, torso turned; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Call the Debt' within 90 s",
+          "taken": "22:38:39"
         },
         {
           "file": "s_p4_rivalanims__mirewick_marrow_call_the_debt_strike.png",
           "scene": 196,
           "line": 223,
           "check": "weapon arm drawn across the chest, torso turned; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Call the Debt' within 90 s",
+          "taken": "22:38:39"
         }
       ],
       "elsewhere:hrafnholt_jarl (phase 2 glyphs)": [
@@ -287,7 +300,8 @@
           "scene": 202,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:41"
         }
       ]
     },
@@ -318,42 +332,48 @@
           "scene": 279,
           "line": 315,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:41"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person_2.png",
           "scene": 279,
           "line": 315,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:42"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person.png",
           "scene": 279,
           "line": 315,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:43"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person.png",
           "scene": 279,
           "line": 315,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:44"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_after_use.png",
           "scene": 279,
           "line": 315,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:44"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_2.png",
           "scene": 279,
           "line": 315,
           "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:45"
         }
       ]
     },
@@ -382,14 +402,16 @@
           "scene": 431,
           "line": 481,
           "check": "Frostgranite page shows a stone-like price (64 Quanta or less, not ~1M); Skyiron Ingot shows 1,147,904 Quanta; the template has no Transmutation page (excluded)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:46"
         },
         {
           "file": "s_compat_transmute__frostgranite_third_person.png",
           "scene": 431,
           "line": 481,
           "check": "Frostgranite page shows a stone-like price (64 Quanta or less, not ~1M); Skyiron Ingot shows 1,147,904 Quanta; the template has no Transmutation page (excluded)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:47"
         }
       ]
     },
@@ -400,14 +422,16 @@
           "scene": 433,
           "line": 483,
           "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:50"
         },
         {
           "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png",
           "scene": 433,
           "line": 483,
           "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:38:53"
         }
       ]
     },
@@ -418,14 +442,16 @@
           "scene": 460,
           "line": 512,
           "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:39:04"
         },
         {
           "file": "s_lod__melee_subtitles.png",
           "scene": 460,
           "line": 512,
           "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:39:09"
         }
       ]
     },
@@ -464,10 +490,10 @@
       ]
     }
   },
-  "run": "22:35:38",
+  "run": "22:41:38",
   "totals": {
-    "ok": 14,
-    "fail": 2,
+    "ok": 34,
+    "fail": 5,
     "manual": 0
   }
 }
