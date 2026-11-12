@@ -327,7 +327,7 @@ public final class AzmarCastle {
 			a.s(x, -1, z, inside ? paving(x, z) : SAND);
 		}
 		// slope skirt instead of a sheer box cut: the hillside is cut back 1:1 outside the pad, a low side is raised, overhangs cleared
-		CastleKit.skirt(l, PAD + 12, (x, z) -> Math.max(Math.abs(x), Math.abs(z)) - PAD, 10, Blocks.SAND, Blocks.SANDSTONE, 30);
+		CastleKit.skirt(l, PAD + 12, (x, z) -> Math.max(Math.abs(x), Math.abs(z)) - PAD, 10, Blocks.SAND, Blocks.SANDSTONE, 30, -1, true);
 		terraces(a);
 		court(a, w);
 		pylons(a, w);

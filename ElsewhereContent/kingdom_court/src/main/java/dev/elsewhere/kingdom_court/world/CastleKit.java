@@ -611,8 +611,9 @@ public final class CastleKit {
 
 	/** Natural terrain (earth, stone, sand, terracotta, snow, foliage): the only blocks a slope skirt may clear or cover, so it never eats a wall. */
 	static boolean natural(BlockState c) {
-		return c.isAir() || c.canBeReplaced() || c.is(BlockTags.DIRT) || c.is(BlockTags.LEAVES) || c.is(BlockTags.LOGS) || c.is(BlockTags.SAND)
-			|| c.is(BlockTags.TERRACOTTA) || c.is(BlockTags.BASE_STONE_OVERWORLD) || c.is(BlockTags.SNOW) || c.is(Blocks.SANDSTONE) || c.is(Blocks.RED_SANDSTONE);
+		return c.isAir() || c.canBeReplaced() || c.is(BlockTags.DIRT) || c.is(BlockTags.LEAVES) || c.is(BlockTags.SAND) || c.is(BlockTags.BASE_STONE_OVERWORLD)
+			|| c.is(BlockTags.SNOW) || c.is(Blocks.TERRACOTTA) || c.is(Blocks.DYED_TERRACOTTA.pick(DyeColor.ORANGE)) || c.is(Blocks.DYED_TERRACOTTA.pick(DyeColor.RED))
+			|| c.is(Blocks.DYED_TERRACOTTA.pick(DyeColor.BROWN)) || c.is(Blocks.DYED_TERRACOTTA.pick(DyeColor.WHITE)) || c.is(Blocks.DYED_TERRACOTTA.pick(DyeColor.LIGHT_GRAY));
 	}
 
 	/**
@@ -621,15 +622,21 @@ public final class CastleKit {
 	 * {@code dist} is the distance of a column outside the pad (<= 0 = on the pad, skipped); columns up to {@code reach} out are fitted. Per column
 	 * and from the generator ground only, so every chunk agrees; man-made blocks (walls, towers) are never touched.
 	 */
-	static void skirt(CastleLayout.L l, int ext, java.util.function.IntBinaryOperator dist, int reach, Block top, Block body, int clearTo) {
+	static void skirt(CastleLayout.L l, int ext, java.util.function.IntBinaryOperator dist, int reach, Block top, Block body, int clearTo, int base, boolean fill) {
 		var c = l.p.clip;
 		int x0 = Math.max(-ext, c.minX() - l.o.getX()), x1 = Math.min(ext, c.maxX() - l.o.getX());
 		int z0 = Math.max(-ext, c.minZ() - l.o.getZ()), z1 = Math.min(ext, c.maxZ() - l.o.getZ());
 		for (int x = x0; x <= x1; x++) for (int z = z0; z <= z1; z++) {
 			int d = dist.applyAsInt(x, z);
 			if (d <= 0 || d > reach) continue;
-			int g = l.gy(x, z) - 1, tgt = g > -1 ? -1 + d : -1 - d;
-			int eff = g > -1 ? Math.min(g, tgt) : Math.max(g, tgt);
+			int g = l.gy(x, z) - 1, tgt = g > base ? base + d : base - d;
+			boolean street = false;
+			for (int y = Math.min(g, base) - 12; y <= Math.max(g, base) + 12 && !street; y++) {
+				int wx = l.o.getX() + x, wy = l.o.getY() + y, wz = l.o.getZ() + z;
+				if (c.isInside(wx, wy, wz) && l.p.level.getBlockState(new BlockPos(wx, wy, wz)).is(Blocks.DIRT_PATH)) street = true;
+			}
+			if (street) continue; // a street column keeps the earth it lies on
+			int eff = g > base ? Math.min(g, tgt) : Math.max(g, tgt);
 			// clear natural blocks above the target surface (hillside, trees, overhanging grass)
 			for (int y = eff + 1; y <= Math.max(clearTo, g + 12); y++) {
 				BlockPos bp = new BlockPos(l.o.getX() + x, l.o.getY() + y, l.o.getZ() + z);
@@ -637,8 +644,8 @@ public final class CastleKit {
 				BlockState cur = l.p.level.getBlockState(bp);
 				if (!cur.isAir() && natural(cur) && cur.getFluidState().isEmpty()) l.p.setRaw(bp.getX(), bp.getY(), bp.getZ(), Blocks.AIR.defaultBlockState());
 			}
-			if (g > -1 && g > tgt) l.p.setSkirt(l.o.getX() + x, l.o.getY() + tgt, l.o.getZ() + z, top.defaultBlockState());
-			else if (g < -1 && g < tgt) {
+			if (g > base && g > tgt) l.p.setSkirt(l.o.getX() + x, l.o.getY() + tgt, l.o.getZ() + z, top.defaultBlockState());
+			else if (fill && g < base && g < tgt) {
 				for (int y = g + 1; y <= tgt; y++) l.p.setSkirt(l.o.getX() + x, l.o.getY() + y, l.o.getZ() + z, (y == tgt ? top : body).defaultBlockState());
 				l.foundation(x, z, x, z, g, body);
 			}

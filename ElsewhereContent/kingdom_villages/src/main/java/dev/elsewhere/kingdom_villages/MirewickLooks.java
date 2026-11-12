@@ -80,7 +80,9 @@ public final class MirewickLooks {
 	public static int lastQuayWater = NONE, lastQuayEdges, lastLanterns;
 	/** The last boardwalk search: the start street cell (null: no street within 10 of the bell), street cells reached, farthest, legs tried. */
 	public static @Nullable BlockPos lastWalkStart;
-	public static int lastWalkCells, lastWalkFar, lastWalkTried;
+	public static int lastWalkCells, lastWalkFar, lastWalkTried, lastWalkUnloaded;
+	/** What stopped the street search (a few rejected neighbour cells: column, top block, block above), for the self-test message. */
+	public static String lastWalkWhy = "";
 
 	/** What one plan built, kept per village id (the self-test reads its own village's even if another Mirewick plan ran since). */
 	public record Plan(List<int[][]> legs, int @Nullable [] hut, @Nullable BoundingBox quay, int quayWater, int quayEdges, int lanterns) {}
@@ -378,8 +380,13 @@ public final class MirewickLooks {
 
 	static boolean pathCell(RivalPlans.Ctx c, int x, int z) {
 		if (!Plans.inAnyColumn(c.r, x, z)) return false;
+		// the chunk must already be loaded: reading its heightmap would otherwise load or generate it from here (counted for the self-test message)
+		if (!c.level.isLoaded(new BlockPos(x, c.bell.getY(), z))) {
+			lastWalkUnloaded++;
+			return false;
+		}
 		BlockPos top = new BlockPos(x, c.level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1, z);
-		return c.level.isLoaded(top) && c.level.getBlockState(top).is(Blocks.DIRT_PATH) && c.level.getBlockState(top.above()).isAir();
+		return c.level.isLoaded(top) && c.level.getBlockState(top).is(Blocks.DIRT_PATH) && c.level.getBlockState(top.above()).getCollisionShape(c.level, top.above()).isEmpty() && c.level.getBlockState(top.above()).getFluidState().isEmpty(); // a flower or grass on the path (no collision) does not cut the street
 	}
 
 	static void boardwalk(B b) {
@@ -395,6 +402,8 @@ public final class MirewickLooks {
 			}
 		}
 		lastWalkStart = null;
+		lastWalkUnloaded = 0;
+		lastWalkWhy = "";
 		lastWalkCells = lastWalkFar = lastWalkTried = 0;
 		if (start == Long.MIN_VALUE) return;
 		lastWalkStart = BlockPos.of(start);
@@ -411,7 +420,14 @@ public final class MirewickLooks {
 				int nx = x + d.getStepX(), nz = z + d.getStepZ();
 				if (Math.abs(nx - bell.getX()) > 64 || Math.abs(nz - bell.getZ()) > 64) continue;
 				long nk = BlockPos.asLong(nx, 0, nz);
-				if (dist.containsKey(nk) || !pathCell(c, nx, nz)) continue;
+				if (dist.containsKey(nk)) continue;
+				if (!pathCell(c, nx, nz)) {
+					if (lastWalkWhy.length() < 360 && dist.size() < 40) {
+						int ty = c.level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, nx, nz) - 1;
+						lastWalkWhy += " [" + nx + "," + nz + " col " + Plans.inAnyColumn(c.r, nx, nz) + " " + c.level.getBlockState(new BlockPos(nx, ty, nz)).getBlock().getDescriptionId().replace("block.minecraft.", "") + "/" + c.level.getBlockState(new BlockPos(nx, ty + 1, nz)).getBlock().getDescriptionId().replace("block.minecraft.", "") + "]";
+					}
+					continue;
+				}
 				dist.put(nk, dist.get(k) + 1);
 				parent.put(nk, k);
 				q.add(nk);

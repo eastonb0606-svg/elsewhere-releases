@@ -60,15 +60,13 @@ public final class BrainLod {
 
 	/** One villager walk search this tick, or false when the per-tick budget is used up (try again on a later pass). */
 	public static boolean tryWalkSearch(long gameTime) {
-		if (gameTime != budgetTick) {
-			budgetTick = gameTime;
-			budgetUsed = 0;
-		}
-		if (budgetUsed >= WALK_SEARCHES_PER_TICK) {
+		roll(gameTime);
+		if (budgetUsed >= WALK_SEARCHES_PER_TICK || searchesUsed >= SEARCHES_PER_TICK) {
 			walkSearchesDeferred++;
 			return false;
 		}
 		budgetUsed++;
+		searchesUsed++;
 		walkSearches++;
 		if (budgetUsed > maxWalkSearchesInTick) maxWalkSearchesInTick = budgetUsed;
 		return true;
@@ -83,17 +81,17 @@ public final class BrainLod {
 	public static long poiSearches, poiSearchesDeferred;
 	public static int maxPoiSearchesInTick;
 	public static long startPassTick = Long.MIN_VALUE;
-	private static long poiTick = Long.MIN_VALUE;
 	private static int poiUsed;
 
 	/** May a villager POI search start now? True outside a villager start pass (no budget there). */
 	public static boolean mayPoiSearch() {
 		if (!enabled || startPassTick == Long.MIN_VALUE) return true;
-		if (startPassTick != poiTick) {
-			poiTick = startPassTick;
-			poiUsed = 0;
+		if (shelteredNow) {
+			poiSuspended++;
+			return false; // siege shelter: no POI acquisition until the siege ends
 		}
-		if (poiUsed >= POI_SEARCHES_PER_TICK) {
+		roll(startPassTick);
+		if (poiUsed >= POI_SEARCHES_PER_TICK || searchesUsed >= SEARCHES_PER_TICK) {
 			poiSearchesDeferred++;
 			return false;
 		}
@@ -103,11 +101,9 @@ public final class BrainLod {
 	/** A villager POI search ran (counts against this tick's budget). */
 	public static void poiSearched() {
 		if (startPassTick == Long.MIN_VALUE) return;
-		if (startPassTick != poiTick) {
-			poiTick = startPassTick;
-			poiUsed = 0;
-		}
+		roll(startPassTick);
 		poiUsed++;
+		searchesUsed++;
 		poiSearches++;
 		if (poiUsed > maxPoiSearchesInTick) maxPoiSearchesInTick = poiUsed;
 	}
@@ -116,6 +112,25 @@ public final class BrainLod {
 	public static void resetWalkBudget() {
 		budgetTick = Long.MIN_VALUE;
 		budgetUsed = 0;
+		poiUsed = 0;
+		searchesUsed = 0;
+	}
+
+	/**
+	 * fx-siegeperf: walk and POI path searches share one per-tick cap ({@link #SEARCHES_PER_TICK}) on top of their own caps,
+	 * so one tick never stacks both bursts (3 + 3 path searches were the siege bench's slowest ticks). Bench demand is about
+	 * 2.3 searches a tick, so a deferred search runs on the villager's next start pass.
+	 */
+	public static final int SEARCHES_PER_TICK = Integer.MAX_VALUE; // fx-siegeperf: shared cap measured no gain (8.59 ms vs 7.75 without); off, own caps only
+	private static int searchesUsed;
+
+	private static void roll(long tick) {
+		if (tick != budgetTick) {
+			budgetTick = tick;
+			budgetUsed = 0;
+			poiUsed = 0;
+			searchesUsed = 0;
+		}
 	}
 
 	/** Start-pass interval for a villager at squared distance {@code d2} from the nearest player (MAX_VALUE: none). */
@@ -127,9 +142,28 @@ public final class BrainLod {
 
 	/** Never delay a reaction: hurt, trading, panicking, raid and hide states run the start pass every tick. */
 	public static boolean urgent(Villager v, Brain<?> brain) {
-		return v.hurtTime > 0 || v.isTrading() || brain.isActive(Activity.PANIC) || brain.isActive(Activity.RAID)
-			|| brain.isActive(Activity.PRE_RAID) || brain.isActive(Activity.HIDE);
+		return urgent(v, brain, false);
 	}
+
+	/** As {@link #urgent(Villager, Brain)}; a siege-sheltered villager's own (siege) hide is not an urgent state, a hit or panic still is. */
+	public static boolean urgent(Villager v, Brain<?> brain, boolean sheltered) {
+		return v.hurtTime > 0 || v.isTrading() || brain.isActive(Activity.PANIC) || brain.isActive(Activity.RAID)
+			|| brain.isActive(Activity.PRE_RAID) || !sheltered && brain.isActive(Activity.HIDE);
+	}
+
+	/**
+	 * fx-siegeperf, siege shelter (gameplay, lead-approved 16:02): while its village is under siege a villager takes shelter
+	 * the vanilla raid-bell way. It hears a bell (HEARD_BELL_TIME, refreshed every {@link #SHELTER_BELL_EVERY} ticks from its
+	 * own brain tick, no entity scans), so vanilla ReactToBell puts it in HIDE: it goes to its home or hiding place once and
+	 * stays, with no strolls. Its POI acquisition (job site, bed, meeting point) is suspended until the siege ends; within
+	 * {@link #RETIER} ticks of the end both lift (the last bell times out the vanilla way). Kill switch: JVM flag
+	 * {@code elsewhere.overhaul3.siege_shelter}, default on.
+	 */
+	public static final boolean SHELTER = !"false".equalsIgnoreCase(System.getProperty("elsewhere.overhaul3.siege_shelter", "true"));
+	public static final int SHELTER_BELL_EVERY = 200;
+	/** True while a siege-sheltered villager's start pass runs. */
+	public static boolean shelteredNow;
+	public static long poiSuspended, shelterBells;
 
 	/** Squared distance to the nearest non-spectator player in the level (or self-test observer); MAX_VALUE if none. */
 	public static double nearestObserver2(ServerLevel level, Vec3 pos) {

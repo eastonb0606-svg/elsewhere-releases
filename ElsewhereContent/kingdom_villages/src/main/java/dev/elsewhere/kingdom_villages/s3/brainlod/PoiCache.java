@@ -33,6 +33,9 @@ public final class PoiCache {
 	record Key(Object type, long section, int r) {}
 
 	private static final Map<PoiManager, Set<Key>> EMPTY = new WeakHashMap<>();
+	/** Probes that found a POI just outside the search reach: not probed again for {@link #NO_PROBE} ticks (work saved only; the real search always runs). */
+	private static final Map<PoiManager, Map<Key, Long>> NO_PROBE = new WeakHashMap<>();
+	static final int NO_PROBE_TICKS = 200;
 	private static final int MAX = 8192;
 
 	static long sectionOf(BlockPos at) {
@@ -50,12 +53,26 @@ public final class PoiCache {
 	/** A real search from {@code at} saw no candidate at all: probe the whole section's reach and remember it if empty. */
 	public static void searchedEmpty(PoiManager pm, Predicate<Holder<PoiType>> type, BlockPos at, int radius, PoiManager.Occupancy occ) {
 		int r = radius + 14;
+		Key key = new Key(type, sectionOf(at), r);
+		long now = BrainLod.startPassTick;
+		synchronized (PoiCache.class) {
+			Map<Key, Long> np = NO_PROBE.get(pm);
+			Long until = np == null ? null : np.get(key);
+			if (until != null && now < until && now > until - 2 * NO_PROBE_TICKS) return;
+		}
 		BlockPos c = new BlockPos(((at.getX() >> 4) << 4) + 8, ((at.getY() >> 4) << 4) + 8, ((at.getZ() >> 4) << 4) + 8);
-		if (pm.getInRange(type, c, r, occ).findAny().isPresent()) return;
+		if (pm.getInRange(type, c, r, occ).findAny().isPresent()) {
+			synchronized (PoiCache.class) {
+				Map<Key, Long> np = NO_PROBE.computeIfAbsent(pm, k -> new java.util.HashMap<>());
+				if (np.size() >= MAX) np.clear();
+				np.put(key, now + NO_PROBE_TICKS);
+			}
+			return;
+		}
 		synchronized (PoiCache.class) {
 			Set<Key> s = EMPTY.computeIfAbsent(pm, k -> new HashSet<>());
 			if (s.size() >= MAX) s.clear();
-			if (s.add(new Key(type, sectionOf(at), r))) stored++;
+			if (s.add(key)) stored++;
 		}
 	}
 
@@ -77,5 +94,6 @@ public final class PoiCache {
 	/** Self-test / kill switch: forget everything. */
 	public static synchronized void clear() {
 		EMPTY.clear();
+		NO_PROBE.clear();
 	}
 }

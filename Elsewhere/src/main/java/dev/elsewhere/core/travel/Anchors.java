@@ -26,6 +26,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
@@ -191,7 +192,23 @@ public final class Anchors {
 		if (w == null) {
 			return null;
 		}
-		return new RiftTravel.Destination(level, SafeLanding.near(level, Vec3.atBottomCenterOf(w.above()), 6, ElsewhereDimensions.platformOf(dim)));
+		level.getChunk(w.getX() >> 4, w.getZ() >> 4);
+		Vec3 beside = nearestSafeAround(level, w, 8, 6);
+		if (beside == null) {
+			// No safe spot nearby (water, canopy, steep slope): level a small pad right beside the stone.
+			Block pad = ElsewhereDimensions.platformOf(dim);
+			BlockPos c = w.offset(2, 0, 0);
+			for (int dx = -1; dx <= 1; dx++) {
+				for (int dz = -1; dz <= 1; dz++) {
+					level.setBlockAndUpdate(c.offset(dx, -1, dz), pad.defaultBlockState());
+					for (int dy = 0; dy < 3; dy++) {
+						level.setBlockAndUpdate(c.offset(dx, dy, dz), Blocks.AIR.defaultBlockState());
+					}
+				}
+			}
+			beside = Vec3.atBottomCenterOf(c);
+		}
+		return new RiftTravel.Destination(level, beside);
 	}
 
 	/** Sneak-use: a rift to the player's latest waystone in {@code dim}. False (with a message) if none. */

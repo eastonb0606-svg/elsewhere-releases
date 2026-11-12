@@ -181,9 +181,15 @@ public final class HrafnLooks {
 
 	/** The column's top block y when it is natural open ground, else {@link #NONE}. */
 	static int ground(B b, int x, int z) {
+		return ground(b, x, z, false);
+	}
+
+	/** {@code soft}: a street path counts as ground too (a hall may stand on a plinth over it); houses, fields and water never do. */
+	static int ground(B b, int x, int z, boolean soft) {
 		if (!b.level.isLoaded(new BlockPos(x, b.c.bell.getY(), z))) return NONE;
 		int y = b.level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
-		return natural(b.level.getBlockState(new BlockPos(x, y, z))) ? y : NONE;
+		BlockState g = b.level.getBlockState(new BlockPos(x, y, z));
+		return natural(g) || (soft && g.is(Blocks.DIRT_PATH)) ? y : NONE;
 	}
 
 	static boolean isPath(B b, int x, int z) {
@@ -232,6 +238,8 @@ public final class HrafnLooks {
 		Report rep = new Report();
 		REPORTS.put(c.r.id, rep);
 		B b = new B(c, rep);
+		// the waterfront (jetty, naust, strand boat) is planned first: the hall's fallback site must never take the shore
+		BlockPos shore = waterfront(b);
 		longhall(b);
 		watchTower(b);
 		BlockPos fireAt = Plans.freeFloor(c.level, c.r, c.bell.offset(3, 0, 3), 8, c.used);
@@ -246,7 +254,6 @@ public final class HrafnLooks {
 			rep.banners++;
 			rep.spots.put("raven_post", hs);
 		}
-		BlockPos shore = waterfront(b);
 		tofts(b);
 		houseBanners(b);
 		palisade(b, shore);
@@ -324,13 +331,13 @@ public final class HrafnLooks {
 	 * Ground of every cell of the hall's plan and its 2-cell apron, or null when a plan or inner-apron cell is not open natural ground (an
 	 * outer-apron cell may be a path or field: {@link #NONE}, left as it is). Index [i + 2][j + hm + 2].
 	 */
-	static int[][] groundMap(B b, Hall h) {
+	static int[][] groundMap(B b, Hall h, boolean soft) {
 		int[][] g = new int[h.len + 4][2 * h.hm + 5];
 		for (int i = -2; i <= h.len + 1; i++) for (int j = -(h.hm + 2); j <= h.hm + 2; j++) {
 			g[i + 2][j + h.hm + 2] = NONE;
 			if (h.dist(i, j) > 2) continue;
 			BlockPos q = h.at(i, j, 0);
-			int y = ground(b, q.getX(), q.getZ());
+			int y = ground(b, q.getX(), q.getZ(), soft);
 			if (y == NONE && h.dist(i, j) == 2) continue;
 			if (y == NONE || nextToDoor(b, q.getX(), y, q.getZ())) return null;
 			g[i + 2][j + h.hm + 2] = y;
@@ -340,25 +347,30 @@ public final class HrafnLooks {
 
 	static void longhall(B b) {
 		int[][] sizes = {{15, 7}, {11, 5}, {9, 5}};
-		for (int[] sz : sizes) {
+		// every cell of the footprint within 54 of the bell, nearest first (random tries missed the one open stretch of a crowded village)
+		List<int[]> hallCand = new ArrayList<>();
+		for (int dx = -54; dx <= 54; dx++) for (int dz = -54; dz <= 54; dz++) hallCand.add(new int[] {dx, dz});
+		hallCand.sort(java.util.Comparator.comparingInt(o -> o[0] * o[0] + o[1] * o[1]));
+		// pass 0: open natural ground; pass 1 (no such stretch: a crowded village or rough ground): the flattest, nearest stretch of street and open
+		// ground, built up on a taller plinth over the path, with the apron skirting its edges, so every Hrafnholt village gets its hall
+		for (int pass = 0; pass < 2; pass++) for (int[] sz : sizes) {
+			boolean soft = pass == 1;
 			Hall best = null;
 			int[][] bestG = null;
 			Part bestPart = null;
 			int bestScore = Integer.MAX_VALUE, found = 0;
-			for (int t = 0; t < 260 && found < 6; t++) {
-				// the first 140 tries stay near the bell; a big village (120 wide) with no free ground there gets the whole footprint
-				int rad = t < 140 ? 28 : 54;
-				BlockPos s = b.c.bell.offset(b.c.rnd.nextInt(2 * rad + 1) - rad, 0, b.c.rnd.nextInt(2 * rad + 1) - rad);
+			for (int t = 0; t < hallCand.size() && found < 6; t++) {
+				BlockPos s = b.c.bell.offset(hallCand.get(t)[0], 0, hallCand.get(t)[1]);
 				for (int o = 0; o < 2; o++) {
 					Hall h = new Hall(sz[0], sz[1], o == 0, s.getX(), s.getZ());
-					int[][] g = groundMap(b, h);
+					int[][] g = groundMap(b, h, soft);
 					if (g == null) continue;
 					int max = NONE, min = Integer.MAX_VALUE;
 					for (int[] row : g) for (int y : row) if (y != NONE) {
 						max = Math.max(max, y);
 						min = Math.min(min, y);
 					}
-					if (max - min > MAX_PLINTH) continue;
+					if (max - min > (soft ? MAX_PLINTH + 2 : MAX_PLINTH)) continue;
 					int score = (max - min) * 10 + (int) Math.round(alongSlope(h, g) * 3);
 					if (score >= bestScore) continue;
 					Part part = planHall(b, h, g, max + 1);

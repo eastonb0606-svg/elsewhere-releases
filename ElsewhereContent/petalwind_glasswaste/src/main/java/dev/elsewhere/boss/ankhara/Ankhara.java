@@ -155,8 +155,8 @@ public class Ankhara extends BossBase implements Burrowing {
 		double wantY = burrowY();
 		this.setDeltaMovement(move.x, (wantY - getY()) * 0.2, move.z);
 		if (move.lengthSqr() > 0) face(move);
-		if (this.tickCount % (move.lengthSqr() > 0 ? 4 : 8) == 0) { // P13: was 4 every 2 ticks, moving or not
-			level.sendParticles(new BlockParticleOption(ParticleTypes.FALLING_DUST, Blocks.SAND.defaultBlockState()), getX(), floorY() + 0.1, getZ(), 3,
+		if (this.tickCount % (move.lengthSqr() > 0 ? 2 : 8) == 0) { // denser sand trail while moving
+			level.sendParticles(new BlockParticleOption(ParticleTypes.FALLING_DUST, Blocks.SAND.defaultBlockState()), getX(), floorY() + 0.1, getZ(), 4,
 				1.0, 0.05, 1.0, 0);
 		}
 	}

@@ -94,8 +94,8 @@ public final class SelfTest {
 	static final java.lang.management.ThreadMXBean MX = java.lang.management.ManagementFactory.getThreadMXBean();
 	static long tickStart, cpuStart;
 	static boolean measuring;
-	/** fx-siegeperf: opt-in hotspot sampler (info lines only). TEMP on for one diagnostic run. */
-	static final boolean SAMPLER_ON = true || Boolean.getBoolean("elsewhere.villages.sampler");
+	/** fx-siegeperf: opt-in hotspot sampler (info lines only), JVM flag elsewhere.villages.sampler. */
+	static final boolean SAMPLER_ON = Boolean.getBoolean("elsewhere.villages.sampler");
 	static VillageRecord outpost, road;
 
 	static void check(String name, boolean ok, @Nullable Object detail) {
@@ -853,6 +853,7 @@ public final class SelfTest {
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxWalkSearchesInTick = 0;
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSearches = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSearchesDeferred = 0;
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxPoiSearchesInTick = 0;
+				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSuspended = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.shelterBells = 0;
 			}
 			if (age() == 700 && lodFar != null) BrainLodTest.live(level, lodFar); // after the measured window (window 2 is info only)
 			if (age() == 640 || age() == 840 || age() == 1040 || age() == 1240) {
@@ -893,6 +894,25 @@ public final class SelfTest {
 					check("load test: full siege p95 tick cost at most 8 ms (server-thread CPU; lag budget)", cp >= 0 && cp <= 8,
 						String.format("CPU p95 %.2f mean %.2f; wall p95 %.2f mean %.2f; machine load %.1f", cp, cm, wp, wm, loadAvg));
 					check("load test: villages manager under 1 ms per tick", VillageManager.meanMs() < 1.0, String.format("%.3f", VillageManager.meanMs()));
+					// fx-siegeperf siege shelter: D's villagers hide (vanilla bell) and acquire no POI; the shelter lifts when the siege ends
+					int inD = 0, hiding = 0;
+					Villager probe = null;
+					for (Villager v : level.getEntitiesOfClass(Villager.class, AABB.of(D.bounds), e -> true)) {
+						inD++;
+						if (v.getBrain().hasMemoryValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.HEARD_BELL_TIME)) hiding++;
+						if (probe == null && VillageManager.underSiege(level, v)) probe = v;
+					}
+					long bells = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.shelterBells, suspended = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSuspended;
+					info(String.format("SIEGEPERF shelter: %d of %d villagers in the besieged village hiding; bells %d, POI acquisitions suspended %d", hiding, inD, bells, suspended));
+					check("siege shelter: villagers of a besieged village take shelter (vanilla bell hide) and acquire no POI during the siege",
+						inD > 0 && hiding * 2 >= inD && bells > 0 && suspended > 0, hiding + " of " + inD + " hiding, bells " + bells + ", POI suspended " + suspended);
+					boolean during = probe != null && VillageManager.underSiege(level, probe), after = false;
+					if (probe != null) {
+						D.state = VillageRecord.State.FREE; // the siege ends (state only, for the check; put back at once)
+						after = !VillageManager.underSiege(level, probe);
+						D.state = VillageRecord.State.SIEGE;
+					}
+					check("siege shelter lifts when the siege ends (POI acquisition and the normal schedule resume)", during && after, "during " + during + " after " + after);
 				}
 				for (var e : new ArrayList<>(level.getEntitiesOfClass(net.minecraft.world.entity.Entity.class, new AABB(-5000, -128, -5000, 5000, 400, 5000), x -> true))) {
 					if (e instanceof net.minecraft.world.entity.player.Player) continue;

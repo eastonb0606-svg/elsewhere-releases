@@ -173,7 +173,7 @@ public final class MirewickLooksTest {
 		int[] l = legs(level, plan);
 		check("Mirewick boardwalk quays follow the streets and step with the ground: steps <= 1, no gaps, never buried, stilts under raised spans",
 			l[0] >= 1 && l[1] >= 16 && l[2] <= 1 && l[3] == 0 && l[4] == 0 && l[5] == 0,
-			"legs " + l[0] + " cells " + l[1] + " max step " + l[2] + " buried " + l[3] + " gaps " + l[4] + " unstilted " + l[5] + " raised " + l[6] + " stairs " + l[7] + " | bell " + vm.center.toShortString() + " street start " + MirewickLooks.lastWalkStart + " cells " + MirewickLooks.lastWalkCells + " far " + MirewickLooks.lastWalkFar + " tried " + MirewickLooks.lastWalkTried);
+			"legs " + l[0] + " cells " + l[1] + " max step " + l[2] + " buried " + l[3] + " gaps " + l[4] + " unstilted " + l[5] + " raised " + l[6] + " stairs " + l[7] + " | bell " + vm.center.toShortString() + " street start " + MirewickLooks.lastWalkStart + " cells " + MirewickLooks.lastWalkCells + " far " + MirewickLooks.lastWalkFar + " tried " + MirewickLooks.lastWalkTried + " unloaded " + MirewickLooks.lastWalkUnloaded + MirewickLooks.lastWalkWhy);
 		check("Mirewick sluice house stands on four mangrove stilts that each reach their own ground (the archer's post)",
 			hutOnGround(level, plan) && vm.towerTop != null && plan != null && plan.hut() != null && vm.towerTop.getY() == plan.hut()[2] + 1, plan == null || plan.hut() == null ? "no hut" : java.util.Arrays.toString(plan.hut()));
 		int fl = floating(level, vm);

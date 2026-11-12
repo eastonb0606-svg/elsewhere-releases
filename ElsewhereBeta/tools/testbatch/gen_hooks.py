@@ -55,6 +55,7 @@ for root, _, files in os.walk(J):
         if f.endswith(".java"):
             exits.update(re.findall(r'getBoolean\("([a-z0-9_.]+)\.selftest\.exit"\)', read(os.path.join(root, f))))
 exits.discard("elsewhere.armies")  # the armies bench runs only when no other self-test runs (ArmiesConfig.otherSelfTest)
+exits.discard("elsewhere.townsfolk")  # townsfolk bench: package-private register(), runs standalone (lead 16:20, lane-tf run)
 for mid in sorted(exits - set(hooks)):
     bad.append(f"{mid}: halts on {mid}.selftest.exit but no hook was found")
 if bad:

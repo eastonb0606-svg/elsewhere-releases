@@ -162,7 +162,8 @@ public final class StreetGraph {
 		private int ci, ei, ej;
 		private final List<int[]> nodes = new ArrayList<>(); // x, y, z, flags
 		private List<List<Integer>> links;
-		int unloaded;
+		int unloaded, edgeCount, rejectCount;
+		private final StringBuilder rejects = new StringBuilder();
 		long nanos, maxStepNanos;
 
 		Builder(String key, BlockPos center, int radius, long day) {
@@ -212,16 +213,19 @@ public final class StreetGraph {
 					if (walkable(lv, a, b)) {
 						links.get(ei).add(j);
 						links.get(j).add(ei);
-					}
+						edgeCount++;
+					} else if (rejectCount++ < 5) rejects.append(" [").append(a[0]).append(',').append(a[2]).append("->").append(b[0]).append(',').append(b[2]).append(" y ").append(a[1]).append('/').append(b[1]).append(" not walkable]");
 					if (System.nanoTime() - t0 > budgetNanos) { // resumes at the next pair: no tick does more than one segment past the budget
 						nanos += System.nanoTime() - t0;
 						return null;
 					}
 				}
 				ei++;
+				ej = 0; // the next row restarts at its own ei + 1 (a stale ej left every row after the first without candidates)
 			}
 			nanos += System.nanoTime() - t0;
 			int n = nodes.size();
+			if (edgeCount < n - 1) System.out.println("[townsfolk-graph] " + key + " DISCONNECTED: candidates " + cand.size() + ", nodes " + n + ", edges " + edgeCount + ", link " + link + ", rejected (first few):" + rejects);
 			int[] gx = new int[n], gy = new int[n], gz = new int[n];
 			byte[] gf = new byte[n];
 			int[][] adj = new int[n][];

@@ -118,11 +118,12 @@ rm -rf build/run/clientGameTest/saves build/run/clientGameTest/logs
 PUB=$!
 timeout --kill-after=60 $(( (WD + 12) * 60 )) xvfb-run -a -s "-screen 0 1920x1080x24" ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx1g --console=plain \
   -Pfapi=0.166.0+26.3 -PqaMods="$W/mods" -PqaClient=shots -PqaShotList="$R/ElsewhereQA/shots-3.0/shotlist.json" -PqaShotDir="$S" \
-  -PqaShotOnly="$SPEC" -PqaUser=ShotRunner -PqaWatchdog="$WD" runClientGameTest > "$W/client.out" 2>&1
+  -PqaShotOnly="$SPEC" -PqaUser=ShotRunner -PqaWatchdog="$WD" -PqaVm="-Dboss_music.selftest=true" runClientGameTest > "$W/client.out" 2>&1
 rc=$?
 touch "$W/client.done"; wait "$PUB" 2>/dev/null
 echo "client rc=$rc"; grep -E '\[shots\] (TOTAL|FAIL|MANUAL)|watchdog' "$QALOG" 2>/dev/null | tail -25
 grep -E 'What went wrong|FAILED|Exception' -A2 "$W/client.out" | head -20
+echo "boss_music client selftest:"; grep -E '\[boss_music-selftest\] (FAIL|TOTAL)' "$W/client.out" | head -20
 st "finished rc=$rc, $(ls "$S"/*.png 2>/dev/null | wc -l) PNGs; $(grep -E '\[shots\] TOTAL' "$QALOG" 2>/dev/null | tail -1 | sed 's/.*\[shots\]//')"
 publish "final rc=$rc"
 touch "$W/DONE"

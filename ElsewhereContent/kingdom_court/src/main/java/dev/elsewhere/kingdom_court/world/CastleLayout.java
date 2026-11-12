@@ -11,6 +11,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.BellBlock;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CampfireBlock;
@@ -862,13 +863,21 @@ public final class CastleLayout {
 		}
 		// palisade; 3.0 fit (fv 2): each post stands on its own ground and the top follows the smoothed contour
 		int[] pal = l.p.ground != null ? ringLift(l, 22) : null;
+		boolean azmar = CastleKit.kitOf(l.p) == CastleKit.Kit.AZMAR;
 		for (int x = -22; x <= 22; x++) for (int z = -22; z <= 22; z++) {
 			if (Math.max(Math.abs(x), Math.abs(z)) != 22) continue;
 			if (z == 22 && Math.abs(x) <= 1) continue;
 			if (Math.abs(x) == 22 && Math.abs(z) <= 1) continue;
 			int lift = pal == null ? 0 : liftAt(pal, 22, x, z), foot = pal == null ? 0 : Math.min(0, l.gy(x, z));
-			l.fill(x, foot, z, x, 4 + lift, z, Blocks.SPRUCE_LOG.defaultBlockState().setValue(RotatedPillarBlock.AXIS, Direction.Axis.Y));
-			if (((x + z) & 1) == 0) l.b(x, 5 + lift, z, Blocks.SPRUCE_FENCE);
+			if (azmar) {
+				// Azmar: a sandstone curtain (mud-brick course, lapis band, sandstone merlons) instead of the style-mapped acacia log and fence pickets
+				BlockState cut = Blocks.CUT_SANDSTONE.defaultBlockState(), mud = Blocks.MUD_BRICKS.defaultBlockState(), lapis = Blocks.DYED_TERRACOTTA.pick(DyeColor.BLUE).defaultBlockState();
+				for (int y = foot; y <= 4 + lift; y++) l.p.setRaw(l.o.getX() + x, l.o.getY() + y, l.o.getZ() + z, y == 3 + lift ? lapis : y <= 1 + lift && y >= lift ? mud : cut);
+				if (((x + z) & 1) == 0) l.p.setRaw(l.o.getX() + x, l.o.getY() + 5 + lift, l.o.getZ() + z, Blocks.SANDSTONE_WALL.defaultBlockState());
+			} else {
+				l.fill(x, foot, z, x, 4 + lift, z, Blocks.SPRUCE_LOG.defaultBlockState().setValue(RotatedPillarBlock.AXIS, Direction.Axis.Y));
+				if (((x + z) & 1) == 0) l.b(x, 5 + lift, z, Blocks.SPRUCE_FENCE);
+			}
 			if (pal != null) l.foundation(x, z, x, z, foot - 1, Blocks.COBBLESTONE);
 		}
 		// well
@@ -926,6 +935,8 @@ public final class CastleLayout {
 			l.foundation(x0 - 1, z0 - 1, x1 + 1, z1 + 1, f - 2, Blocks.COBBLESTONE);
 			for (int x = x0 - 1; x <= x1 + 1; x++) for (int z = z0 - 1; z <= z1 + 1; z++)
 				if (x < x0 || x > x1 || z < z0 || z > z1) l.b(x, f - 1, z, Blocks.GRASS_BLOCK);
+			// slope skirt (1:1, grass over dirt) round the pad instead of a sheer cut face; walls and streets are never touched
+			CastleKit.skirt(l, 40, (x, z) -> Math.max(Math.max(x0 - 1 - x, x - x1 - 1), Math.max(z0 - 1 - z, z - z1 - 1)), 4, Blocks.GRASS_BLOCK, Blocks.DIRT, f + 20, f - 1, false);
 			l.dy = f;
 			houseBody(l, x0, z0, w, d, x1, z1);
 			l.dy = 0;

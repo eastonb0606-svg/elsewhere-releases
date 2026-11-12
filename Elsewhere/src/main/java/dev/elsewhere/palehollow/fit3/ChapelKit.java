@@ -96,9 +96,12 @@ public final class ChapelKit {
 				}
 				if (roofY != Roof.NONE) for (int y = f + 1; y < roofY; y++) w.soft(x, y, z);
 			}
-			// roof: the topmost of the three wins; the bay over z 3..5 has fallen in, and a few stairs are missing
+			// roof: the topmost of the three wins; the bay over z 3..5 has fallen in (its roof cell is cleared, so ground or plants never close
+			// it), and a few slope stairs are missing; a ridge plank never is (fx-overlap: the 6% gap used to hit the ridge too, ~6% of chapels)
+			boolean bay = z >= 3 && z <= 5 && x >= -2 && x <= 3;
+			if (bay && roofY != Roof.NONE) w.room(x, roofY, z);
 			Roof.column(w, roofs, x, z, Blocks.PALE_OAK_STAIRS, Blocks.PALE_OAK_PLANKS.defaultBlockState(),
-				(lx, lz) -> (lz >= 3 && lz <= 5 && lx >= -2 && lx <= 3) || w.chance(lx, 200, lz, 6));
+				(lx, lz) -> bay || r != null && r.across(lx, lz) != 0 && w.chance(lx, 200, lz, 6));
 		}
 		if (naveP) {
 			// pews (submerged), tie beams under the broken bay, the front gable with an oculus, the gable over the crossing

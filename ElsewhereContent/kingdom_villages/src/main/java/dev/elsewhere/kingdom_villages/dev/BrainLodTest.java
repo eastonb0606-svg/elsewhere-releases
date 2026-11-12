@@ -73,13 +73,16 @@ final class BrainLodTest {
 		// futile walk search: a target 60 blocks straight up is unreachable; the first search ends where the villager
 		// stands, the repeats from the same block to the same target are skipped (the walk target is kept)
 		net.minecraft.world.entity.ai.behavior.MoveToTargetSink sink = new net.minecraft.world.entity.ai.behavior.MoveToTargetSink();
-		BlockPos up = v.blockPosition().above(60);
-		// fx-siegeperf: GroundPathNavigation drops an air target to the ground below it, which over open ground is the
-		// villager's own block (reachable: no futile search to skip, on any flat or open spot). A temporary block under the
-		// target keeps it 60 blocks up on a perch no villager can reach; it is put back after the check.
-		BlockPos perch = up.below();
-		net.minecraft.world.level.block.state.BlockState perchWas = level.getBlockState(perch);
+		// fx-siegeperf: a spot that is the same on every world. On the ground, GroundPathNavigation drops an air target to the
+		// ground below it (the villager's own block: reachable), and any step up nearby (a hay bale, a stair) ends the partial
+		// path there instead of where the villager stands. So the villager stands on a one-block stone perch 30 up (no
+		// neighbour it can walk or drop to) and the target is 60 above that, on a second perch. Both blocks are put back.
+		BlockPos stand = v.blockPosition().above(30), up = stand.above(60), floor = stand.below(), perch = up.below();
+		net.minecraft.world.level.block.state.BlockState floorWas = level.getBlockState(floor), perchWas = level.getBlockState(perch);
+		level.setBlock(floor, net.minecraft.world.level.block.Blocks.STONE.defaultBlockState(), 2);
 		level.setBlock(perch, net.minecraft.world.level.block.Blocks.STONE.defaultBlockState(), 2);
+		v.snapTo(stand.getX() + 0.5, stand.getY(), stand.getZ() + 0.5, 0F, 0F);
+		v.getNavigation().stop();
 		long now = level.getGameTime(), s0 = BrainLod.walkSearches, sv0 = BrainLod.walkSearchesSaved;
 		boolean keptTarget = true;
 		for (int i = 0; i < 6; i++) {
@@ -93,6 +96,7 @@ final class BrainLodTest {
 		}
 		if (sink.getStatus() == net.minecraft.world.entity.ai.behavior.Behavior.Status.RUNNING) sink.doStop(level, v, now);
 		level.setBlock(perch, perchWas, 2);
+		level.setBlock(floor, floorWas, 2);
 		long searched = BrainLod.walkSearches - s0, saved = BrainLod.walkSearchesSaved - sv0;
 		SelfTest.check("villager walk searches: an unreachable walk target is searched once from a spot, the 5 repeats are skipped and the target kept",
 			searched == 1 && saved == 5 && keptTarget, "searched " + searched + ", skipped " + saved + ", target kept " + keptTarget);

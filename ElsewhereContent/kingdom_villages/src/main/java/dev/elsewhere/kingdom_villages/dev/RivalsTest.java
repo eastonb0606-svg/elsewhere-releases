@@ -229,6 +229,8 @@ public final class RivalsTest {
 		poolWater0 = poolWater();
 		VA = VillageManager.discover(level, sA, null);
 		VM = VillageManager.discover(level, sM, null);
+		// keep the chunks round the Mirewick village loaded for the whole run: its street search reads the heightmap of every cell within 64 of the bell
+		for (int fx = (VM.center.getX() - 80) >> 4; fx <= (VM.center.getX() + 80) >> 4; fx++) for (int fz = (VM.center.getZ() - 80) >> 4; fz <= (VM.center.getZ() + 80) >> 4; fz++) level.setChunkForced(fx, fz, true);
 		VF = VillageManager.discover(level, sF, null);
 		check("each village is claimed by the nearest realm's faction",
 			VH != null && VA != null && VM != null && VF != null && VH.owner.equals(HRAF.toString()) && VA.owner.equals(AZMAR.toString()) && VM.owner.equals(MIRE.toString()) && VF.owner.equals(Factions.ALDERMARK.toString()),
@@ -257,7 +259,7 @@ public final class RivalsTest {
 	 * (541 of 648 water blocks at pool level, then floods, members over flowing water). Every candidate keeps the jetty lane 2 into the pool.
 	 */
 	static BlockPos poolSpot(BlockPos c) {
-		for (int dx = 30; dx <= 110; dx += 2) for (int dz : new int[] {-6, -2, -10, 2, -14, -24, 12, -40, 28, -60, 44}) {
+		for (int dx = 30; dx <= 46; dx += 2) for (int dz : new int[] {-6, -2, -10, 2, -14, 6, -18, -22}) {
 			BlockPos o = c.offset(dx, 0, dz);
 			int gy = Integer.MIN_VALUE;
 			boolean ok = true;
@@ -269,8 +271,24 @@ public final class RivalsTest {
 			}
 			if (ok) return o;
 		}
-		info("[rivals] no clear level ground for the pool; using the old spot 30 east");
-		return c.offset(30, 0, -6);
+		// none: clear a dedicated spot (the waterfront search reaches only 48 out and 12 sideways of the village centre, so the pool stays near it)
+		BlockPos o = c.offset(34, 0, -6);
+		info("[rivals] no clear level ground for the pool; clearing a dedicated spot 34 east");
+		clearArea(o.getX() - 4, o.getX() + POOL_X + 4, o.getZ() - 4, o.getZ() + POOL_Z + 4);
+		return o;
+	}
+
+	/** Levels the columns x0..x1 / z0..z1 (inclusive-exclusive on the upper end) to open grass at the lowest ground found: houses, paths and plants there are removed. */
+	static void clearArea(int x0, int x1, int z0, int z1) {
+		int gy = Integer.MAX_VALUE;
+		for (int x = x0; x < x1; x++) for (int z = z0; z < z1; z++)
+			gy = Math.min(gy, level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1);
+		for (int x = x0; x < x1; x++) for (int z = z0; z < z1; z++) {
+			int top = level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
+			for (int y = top; y > gy; y--) level.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 2);
+			level.setBlock(new BlockPos(x, gy, z), Blocks.GRASS_BLOCK.defaultBlockState(), 2);
+			for (int y = gy + 1; y <= gy + 2; y++) if (!level.getBlockState(new BlockPos(x, y, z)).isAir()) level.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 2);
+		}
 	}
 
 	/** Water blocks in the pool and a margin of 8 around it (a flood would raise this). */

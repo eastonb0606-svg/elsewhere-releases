@@ -21,6 +21,8 @@ public abstract class VillageBrainLodMixin {
 	private int elsewhereVillages$every = 1;
 	@Unique
 	private long elsewhereVillages$retierAt = Long.MIN_VALUE;
+	@Unique
+	private boolean elsewhereVillages$sheltered;
 
 	@WrapOperation(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/ai/Brain;startEachNonRunningBehavior(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)V"))
 	private void elsewhereVillages$staggerStarts(Brain<?> self, ServerLevel level, LivingEntity body, Operation<Void> original) {
@@ -31,15 +33,25 @@ public abstract class VillageBrainLodMixin {
 		long now = level.getGameTime();
 		if (now >= elsewhereVillages$retierAt || now < elsewhereVillages$retierAt - BrainLod.RETIER) {
 			elsewhereVillages$every = BrainLod.computeInterval(level, v);
+			elsewhereVillages$sheltered = BrainLod.SHELTER && dev.elsewhere.kingdom_villages.VillageManager.underSiege(level, v);
 			elsewhereVillages$retierAt = now + BrainLod.RETIER;
 		}
-		if (BrainLod.onPhase(v, elsewhereVillages$every) || BrainLod.urgent(v, self)) {
+		if (elsewhereVillages$sheltered) {
+			java.util.Optional<Long> heard = self.getMemory(net.minecraft.world.entity.ai.memory.MemoryModuleType.HEARD_BELL_TIME);
+			if (heard.isEmpty() || now - heard.get() >= BrainLod.SHELTER_BELL_EVERY) {
+				self.setMemory(net.minecraft.world.entity.ai.memory.MemoryModuleType.HEARD_BELL_TIME, now); // siege shelter: the vanilla bell hide
+				BrainLod.shelterBells++;
+			}
+		}
+		if (BrainLod.onPhase(v, elsewhereVillages$every) || BrainLod.urgent(v, self, elsewhereVillages$sheltered)) {
 			BrainLod.startsRun++;
 			BrainLod.startPassTick = now;
+			BrainLod.shelteredNow = elsewhereVillages$sheltered;
 			try {
 				original.call(self, level, body);
 			} finally {
 				BrainLod.startPassTick = Long.MIN_VALUE;
+				BrainLod.shelteredNow = false;
 			}
 		} else BrainLod.startsSkipped++;
 	}

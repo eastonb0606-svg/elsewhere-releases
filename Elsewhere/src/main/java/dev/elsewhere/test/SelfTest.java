@@ -85,10 +85,28 @@ public final class SelfTest {
 			}
 			Elsewhere.LOG.info("[selftest] {} passed, {} failed{}", passed, failed, failed == 0 ? " - ALL PASSED" : " - FAILURES: " + FAILURES);
 			if (Boolean.getBoolean("elsewhere.selftest.exit")) {
+				// Not halt() here: the self-test loads far chunks inside SERVER_STARTED, and halting before the first tick left
+				// that chunk work queued. A stopped server runs queued tasks inline, so stopServer recursed through the backlog
+				// (StackOverflowError "Exception stopping the server") and the IO workers ran out of heap saving it. Let the
+				// server tick until its chunk work has drained (at most 20 s; 20 s of ticks was enough for a clean stop), then halt.
+				haltAt = server.getTickCount();
+			}
+		});
+		net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(server -> {
+			if (haltAt < 0) return;
+			int t = server.getTickCount() - haltAt;
+			boolean busy = false;
+			for (net.minecraft.server.level.ServerLevel l : server.getAllLevels()) busy |= l.getChunkSource().chunkMap.hasWork();
+			if (t >= 400 || t >= 20 && !busy) {
+				haltAt = -1;
+				Elsewhere.LOG.info("[selftest] halting after {} ticks (chunk work {})", t, busy ? "still queued" : "drained");
 				server.halt(false);
 			}
 		});
 	}
+
+	/** Tick at which the finished self-test asked to exit, or -1. */
+	private static int haltAt = -1;
 
 	static void check(final boolean ok, final String what) {
 		if (ok) {
@@ -111,12 +129,14 @@ public final class SelfTest {
 	private static void run(final MinecraftServer server) {
 		ServerLevel overworld = server.overworld();
 		ServerLevel hollow = server.getLevel(PaleHollowDimension.LEVEL);
+		Elsewhere.LOG.info("[selftest] world seed {} (set level-seed to this in run/server.properties to replay a failure)", overworld.getSeed());
 		check(hollow != null, "Pale Hollow dimension is loaded");
 		if (hollow == null) {
 			return;
 		}
 		AccidentalTrips.playTicksOverride = p -> 100L * 72000L;
 		try { CoreFitSelfTest.run(server, overworld, hollow); } catch (RuntimeException e) { Elsewhere.LOG.error("struct3_core self-test crashed", e); check(false, "struct3_core self-test crashed: " + e); } // 3.0 core structures (s-struct-core), first so other checks can't hide it
+		try { OverlapGuardSelfTest.run(overworld, hollow); } catch (RuntimeException e) { Elsewhere.LOG.error("overlap guard self-test crashed", e); check(false, "overlap guard self-test crashed: " + e); } // 3.0.0 structure overlap guard
 		dev.elsewhere.core.s3.groups.SpawnGroups3.selfTest(server, (ok, what) -> check(ok, what)); // ARMIES 6 spawn groups (s-spawngroups)
 		recipes(server, overworld);
 		worldgen(hollow);

@@ -173,7 +173,11 @@ final class V2SelfTest {
 		if (w != null) {
 			Anchors.rememberWaystone(p, PaleHollowDimension.LEVEL, w, false);
 			var wd = Anchors.waystoneDestination(p, PaleHollowDimension.LEVEL);
-			check(wd != null && wd.pos().distanceTo(Vec3.atBottomCenterOf(w)) < 14, "Waystone: destination is next to the stone");
+			boolean wnear = wd != null && wd.pos().distanceTo(Vec3.atBottomCenterOf(w)) < 14;
+			check(wnear, "Waystone: destination is next to the stone");
+			if (!wnear) {
+				System.out.println("DIAG Waystone: stone=" + w + " dest=" + (wd == null ? "null" : wd.pos() + " offset=" + wd.pos().subtract(Vec3.atBottomCenterOf(w))));
+			}
 			check(Anchors.warpToWaystone(p, PaleHollowDimension.LEVEL), "Waystone: sneak-use warp opens a rift");
 		}
 		check(Anchors.FIRST_TRIP_MIN == 32 && Anchors.FIRST_TRIP_MAX == 128, "first-trip window constants 32-128");

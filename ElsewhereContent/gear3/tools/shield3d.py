@@ -113,17 +113,24 @@ BOSS = uv(8, 16, 16, 24)
 HANDLE = uv(16, 16, 32, 32)
 
 
+SHIFT = 8  # every element's from/to is moved +8 on x, y and z (the geometry is centred on the origin, the shifted box is what ships)
+
+
+def at(p):
+    return [c + SHIFT for c in p]
+
+
 def elements(r):
     els = []
     for x1, x2, y1, y2 in bands(r):
-        els.append({"from": [x1, y1, 1], "to": [x2, y2, 2], "faces": {
+        els.append({"from": at([x1, y1, 1]), "to": at([x2, y2, 2]), "faces": {
             "south": {"uv": uv(x1 + 8, 8 - y2, x2 + 8, 8 - y1), "texture": "#shield"},          # front (design)
             "north": {"uv": uv(16 + 8 - x2, 8 - y2, 16 + 8 - x1, 8 - y1), "texture": "#shield"},  # back
             "east": {"uv": RIM, "texture": "#shield"}, "west": {"uv": RIM, "texture": "#shield"},
             "up": {"uv": RIM, "texture": "#shield"}, "down": {"uv": RIM, "texture": "#shield"}}})
-    els.append({"from": [-1, -1, 2], "to": [1, 1, 3], "faces": {
+    els.append({"from": at([-1, -1, 2]), "to": at([1, 1, 3]), "faces": {
         f: {"uv": BOSS, "texture": "#shield"} for f in ("south", "east", "west", "up", "down")}})
-    els.append({"from": [-1, -3, -5], "to": [1, 3, 1], "faces": {
+    els.append({"from": at([-1, -3, -5]), "to": at([1, 3, 1]), "faces": {
         f: {"uv": HANDLE, "texture": "#shield"} for f in ("north", "east", "west", "up", "down")}})
     return els
 

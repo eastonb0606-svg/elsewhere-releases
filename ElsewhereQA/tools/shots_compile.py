@@ -784,6 +784,10 @@ def apply_overrides(scenes):
             else:
                 print("override: %s: %s has neither steps nor manual" % (tag, fn))
                 continue
+            if isinstance(ov.get("item"), str) and ov["item"]:
+                sc["item"] = ov["item"]
+            if isinstance(ov.get("shots"), list) and ov["shots"]:
+                sc["shots"] = ov["shots"]
             sc["override"] = tag
     print("overrides: %d step sets applied, %d routed to manual (%d files)" % (applied, manual, len(files)))
 

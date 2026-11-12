@@ -1057,6 +1057,13 @@ public final class VillageManager {
 		return null;
 	}
 
+	/** fx-siegeperf siege shelter: is this villager inside a village that is under siege right now? */
+	public static boolean underSiege(ServerLevel level, Villager v) {
+		if (level.dimension() != Level.OVERWORLD) return false;
+		VillageRecord r = villageAt(level, v.blockPosition());
+		return r != null && r.state == VillageRecord.State.SIEGE;
+	}
+
 	/** Villagers of a besieged or occupied village are captured: no trading until it is freed. */
 	public static boolean isCaptured(ServerLevel level, Villager v) {
 		if (level.dimension() != Level.OVERWORLD) return false;

@@ -378,13 +378,13 @@ public abstract class BossBase extends Monster {
 		BlockPos c = arenaCenter;
 		if (c == null) return;
 		// P13: one packet per column (3 dust spread over the same 0.5-3.5 band) and 3 columns per radius block, was 5 x 3 packets
-		int points = Math.max(24, arenaRadius * 3);
+		int points = Math.max(48, arenaRadius * 6); // ~1.05 block spacing so the wall reads as continuous
 		double phaseOffset = (this.tickCount % 40) / 40.0;
 		DustParticleOptions dust = new DustParticleOptions(0x9FE8FF, 1.2F);
 		for (int i = 0; i < points; i++) {
 			double a = Math.PI * 2 * (i + phaseOffset) / points;
 			double x = c.getX() + 0.5 + Math.cos(a) * (arenaRadius + 1.5), z = c.getZ() + 0.5 + Math.sin(a) * (arenaRadius + 1.5);
-			level.sendParticles(dust, x, c.getY() + 2.0 + phaseOffset, z, 3, 0, 0.75, 0, 0);
+			level.sendParticles(dust, x, c.getY() + 2.0 + phaseOffset, z, 2, 0, 1.0, 0, 0);
 		}
 	}
 

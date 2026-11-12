@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 15:28",
+ "generated": "2026-11-12 16:24",
  "scenes": [
   {
    "n": 1,
@@ -37190,6 +37190,23 @@
    "line": 511,
    "lane": "s_lod",
    "item": "Live soldiers end at 96 blocks, ranks beyond (with s-impostors)",
+   "world": "none",
+   "steps": [
+    [
+     "manual",
+     "needs a live kingdom town/army state the runner cannot set up by command"
+    ]
+   ],
+   "shots": [],
+   "check": "at 90 live soldiers (baked skins) are still drawn; at 110 no live rank-and-file soldier is drawn, while s-impostors' rank figures (reserves) still show; court rulers and unique NPCs (own renderers) are not cut off; render distance 16 with the slider at 150% moves the cutoff to about 144",
+   "setup": "same battle, fly straight back from the line to 140 blocks, Entity Distance slider 100%; shots at 90 and 110 blocks",
+   "note": "needs a live kingdom town/army state the runner cannot set up by command"
+  },
+  {
+   "n": 460,
+   "line": 512,
+   "lane": "s_lod",
+   "item": "Distant battle din (subtitles)",
    "world": "flat",
    "steps": [
     [
@@ -37262,82 +37279,10 @@
      "file": "s_lod__melee_subtitles.png"
     }
    ],
-   "check": "at 90 live soldiers (baked skins) are still drawn; at 110 no live rank-and-file soldier is drawn, while s-impostors' rank figures (reserves) still show; court rulers and unique NPCs (own renderers) are not cut off; render distance 16 with the slider at 150% moves the cutoff to about 144",
-   "setup": "same battle, fly straight back from the line to 140 blocks, Entity Distance slider 100%; shots at 90 and 110 blocks",
-   "note": "needs a live kingdom town/army state the runner cannot set up by command",
-   "override": "lead.json"
-  },
-  {
-   "n": 460,
-   "line": 512,
-   "lane": "s_lod",
-   "item": null,
-   "world": "flat",
-   "steps": [
-    [
-     "reset",
-     "creative"
-    ],
-    [
-     "cmd",
-     "time set 6000"
-    ],
-    [
-     "cmd",
-     "weather clear"
-    ],
-    [
-     "gui",
-     true
-    ],
-    [
-     "subtitles",
-     true
-    ],
-    [
-     "summon",
-     null,
-     "{PersistenceRequired:1b}"
-    ],
-    [
-     "view",
-     0.0,
-     12.0,
-     20.0
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "wait",
-     40
-    ],
-    [
-     "hurt_to",
-     0.45
-    ],
-    [
-     "wait",
-     10
-    ],
-    [
-     "shot",
-     "boss_subtitle"
-    ],
-    [
-     "subtitles",
-     false
-    ]
-   ],
-   "shots": [
-    {
-     "slug": "boss_subtitle",
-     "file": "s_lod__boss_subtitle.png"
-    }
-   ],
    "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
    "setup": "Options > Accessibility > Show Subtitles on; same battle, stand 50 blocks from the fighting",
-   "note": "hurt to 45% of max HP (just past the first threshold); flat stage instead of the arena"
+   "note": "hurt to 45% of max HP (just past the first threshold); flat stage instead of the arena",
+   "override": "lead.json"
   },
   {
    "n": 461,
@@ -39520,7 +39465,7 @@
  ],
  "counts": {
   "scenes": 494,
-  "shots": 931,
-  "manual": 91
+  "shots": 930,
+  "manual": 92
  }
 }
