@@ -1,0 +1,473 @@
+{
+  "lanes": {
+    "armies": {
+      "big battle 2: Azmar v Mirewick, 110 a side": [
+        {
+          "file": "armies__battle_azmar_mirewick_110_30s.png",
+          "scene": 7,
+          "line": 12,
+          "check": "Azmar the smaller side (its front 14 v Mirewick 17), Mirewick a loose ragged line; both sides present",
+          "status": "ok",
+          "taken": "22:33:41"
+        }
+      ]
+    },
+    "sfx": {
+      "elsewhere:hrafnholt": [
+        {
+          "file": "sfx__hrafnholt_subtitle.png",
+          "scene": 25,
+          "line": 33,
+          "check": "subtitle box shows \"Hrafnholt warriors roar\", not \"Ravager roars\"",
+          "status": "ok",
+          "taken": "22:33:44"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:azmar_wazir": [
+        {
+          "file": "anim__azmar_wazir_move_windup.png",
+          "scene": 38,
+          "line": 51,
+          "check": "Counter Brew, Glyph Flare, Veil of the Ibis, Seal of the Ibis = cast (arms raised in a V, head tipped up, then palms pushed forward); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:35:15"
+        },
+        {
+          "file": "anim__azmar_wazir_move_strike.png",
+          "scene": 38,
+          "line": 51,
+          "check": "Counter Brew, Glyph Flare, Veil of the Ibis, Seal of the Ibis = cast (arms raised in a V, head tipped up, then palms pushed forward); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:35:15"
+        }
+      ],
+      "elsewhere:ashtusk": [
+        {
+          "file": "anim__ashtusk_hurt_peak.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:35:19"
+        },
+        {
+          "file": "anim__ashtusk_hurt_rest.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:35:19"
+        }
+      ],
+      "elsewhere:gulpmother": [
+        {
+          "file": "anim__gulpmother_hurt_peak.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:22"
+        },
+        {
+          "file": "anim__gulpmother_hurt_rest.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:23"
+        }
+      ],
+      "elsewhere:vorlagh": [
+        {
+          "file": "anim__vorlagh_hurt_peak.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:26"
+        },
+        {
+          "file": "anim__vorlagh_hurt_rest.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:27"
+        }
+      ],
+      "elsewhere:lithara": [
+        {
+          "file": "anim__lithara_hurt_peak.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:30"
+        },
+        {
+          "file": "anim__lithara_hurt_rest.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:30"
+        }
+      ],
+      "elsewhere:verdigrim": [
+        {
+          "file": "anim__verdigrim_hurt_peak.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:34"
+        },
+        {
+          "file": "anim__verdigrim_hurt_rest.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:34"
+        }
+      ],
+      "elsewhere:heliodor": [
+        {
+          "file": "anim__heliodor_hurt_peak.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:37"
+        },
+        {
+          "file": "anim__heliodor_hurt_rest.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:38"
+        }
+      ]
+    },
+    "lead": {
+      "boss bar label letters (elsewhere:azmar_wazir)": [
+        {
+          "file": "lead__boss_bar_label_lowercase_f.png",
+          "scene": 136,
+          "line": 152,
+          "check": "every letter renders: the anim test shot showed 'glyph_flare' as 'glyph_ lare' (dropped f) on boss_ui bar v2",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:clan_hold": [
+        {
+          "file": "s_struct_verdigris__clan_hold_s_14_10_14.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_verdigris__clan_hold_downhill_18.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:climbers_cairn": [
+        {
+          "file": "s_struct_verdigris__climbers_cairn_s_6_4_6.png",
+          "scene": 154,
+          "line": 171,
+          "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:summit_throne": [
+        {
+          "file": "s_struct_verdigris__summit_throne_s_30_18_30.png",
+          "scene": 156,
+          "line": 173,
+          "check": "ice plateau on the true summit cap with a packed-ice/frostgranite plinth down to the rock, 6 deepslate storm obelisks on frostgranite-stair plinths (no iron blocks), throne with the war drum, 1-3 small frostgranite waymark obelisks on ridge points around the cap; snowy banks, no cylinder cut",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:drowned_cathedral": [
+        {
+          "file": "s_struct_verdigris__drowned_cathedral_s_26_6_26.png",
+          "scene": 161,
+          "line": 178,
+          "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:glacier_shelf": [
+        {
+          "file": "s_struct_overworld__glacier_shelf_s_30_14_30.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__glacier_shelf_downhill_20.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:sunpit": [
+        {
+          "file": "s_struct_petalwind__sunpit_s_0_26_44.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunpit_s_30_6_0.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:mirewick_marrow Call the Debt": [
+        {
+          "file": "s_p4_rivalanims__mirewick_marrow_call_the_debt_windup.png",
+          "scene": 196,
+          "line": 223,
+          "check": "weapon arm drawn across the chest, torso turned; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_marrow_call_the_debt_strike.png",
+          "scene": 196,
+          "line": 223,
+          "check": "weapon arm drawn across the chest, torso turned; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_jarl (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_aura_phase2.png",
+          "scene": 202,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:drowned_chapel": [
+        {
+          "file": "s_struct_core__drowned_chapel_s_14_9_14.png",
+          "scene": 211,
+          "line": 241,
+          "check": "cruciform chapel: nave, transept arms, narrower chancel; broken pale-oak gable roofs (45 degrees, overhang 1) with a fallen-in bay over exposed beams; stone gables with an oculus; buttresses; water only inside the walls (nave 2 deep with submerged pews, one step up into the transept), none outside; ground meets the walls all round",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lantern_road (night procession)": [
+        {
+          "file": "s_struct_core__lantern_road_procession_night.png",
+          "scene": 215,
+          "line": 245,
+          "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_2.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_2.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_2.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:grunthar_treasure_hall": [
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_0_0_21.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:frostgranite": [
+        {
+          "file": "s_compat_transmute__frostgranite_first_person.png",
+          "scene": 431,
+          "line": 481,
+          "check": "Frostgranite page shows a stone-like price (64 Quanta or less, not ~1M); Skyiron Ingot shows 1,147,904 Quanta; the template has no Transmutation page (excluded)",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__frostgranite_third_person.png",
+          "scene": 431,
+          "line": 481,
+          "check": "Frostgranite page shows a stone-like price (64 Quanta or less, not ~1M); Skyiron Ingot shows 1,147,904 Quanta; the template has no Transmutation page (excluded)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom.png",
+          "scene": 433,
+          "line": 483,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png",
+          "scene": 433,
+          "line": 483,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Distant battle din (subtitles)": [
+        {
+          "file": "s_lod__distant_battle_subtitles.png",
+          "scene": 460,
+          "line": 512,
+          "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
+          "status": "pending"
+        },
+        {
+          "file": "s_lod__melee_subtitles.png",
+          "scene": 460,
+          "line": 512,
+          "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:great_hotbox": [
+        {
+          "file": "s_struct_greenhaze__great_hotbox_overview.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__great_hotbox_ground.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:listening_engine": [
+        {
+          "file": "s_struct_greenhaze__listening_engine_overview.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__listening_engine_ground.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:35:38",
+  "totals": {
+    "ok": 14,
+    "fail": 2,
+    "manual": 0
+  }
+}
