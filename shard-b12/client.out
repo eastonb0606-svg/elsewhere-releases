@@ -844,3 +844,65 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:09:01] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
 [22:09:01] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [22:09:01] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:grunthar_treasure_hall in minecraft:the_nether at C = -192 68 64
+[22:09:02] [Server thread/INFO] (Minecraft) System chat: ShotRunner has made the advancement [We Need to Go Deeper]
+[22:09:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -191.500000, 70.000000, 89.500000
+[22:09:02] [Render thread/INFO] (Minecraft) Loaded 37 advancements
+[22:09:03] [Render thread/INFO] (Minecraft) Loaded 37 advancements
+[22:09:12] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6069ms or 121 ticks behind
+[22:09:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__grunthar_treasure_hall_s_0_0_21.png: 
+[22:09:12] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -171.630000, 76.000000, 102.040000
+[22:09:19] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[22:09:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__grunthar_treasure_hall_s_18_6_34.png: 
+[22:09:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 283 (s_struct_nether | elsewhere:grunthar_treasure_hall) done in 17999 ms
+[22:09:19] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:09:19] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:09:19] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:09:19] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:hanging_undercity in elsewhere:the_hush at C = -896 85 1328
+[22:09:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -871.500000, 79.000000, 1352.500000
+[22:09:20] [Render thread/INFO] (Minecraft) Loaded 38 advancements
+[22:09:30] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 1024 reached during a single frame. New capacity will be 2048.
+[22:09:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__hanging_undercity_overview.png: 
+[22:09:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -895.500000, 71.000000, 1354.500000
+[22:09:30] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3763ms or 75 ticks behind
+[22:09:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__hanging_undercity_ground.png: 
+[22:09:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 487 (s_struct_greenhaze | elsewhere:hanging_undercity) done in 16878 ms
+[22:09:36] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:09:36] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:09:36] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:09:36] [Server thread/INFO] (Minecraft) Stopping server
+[22:09:36] [Server thread/INFO] (Minecraft) Saving players
+[22:09:36] [Server thread/INFO] (Minecraft) Saving worlds
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:09:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:09:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 60 ok, 6 fail, 0 manual
+[22:09:38] [Render thread/INFO] (Minecraft) Stopping!
+[22:09:38] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+BUILD SUCCESSFUL in 9m 44s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
