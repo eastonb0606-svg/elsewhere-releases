@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 /**
  * Ground navigation for kingdom soldiers that throttles the vanilla bow and crossbow goals, which call
  * {@code moveTo(target)} every tick they are out of range. While the old path is still running and the target
- * has moved less than 1.5 blocks (same target, path under 10 ticks old) the path is kept. Untouched vanilla: an archer
+ * has moved less than 1.5 blocks (same target, path under 20 ticks old) the path is kept. Untouched vanilla: an archer
  * in range with a clear shot (shoots and strafes), and any archer whose path ran out (it repaths at once, so nothing
  * idles at the end of a stale path); no path-search budget is used, so nothing is ever denied. Kill switch: armies config {@code ranged_repath}.
  */
@@ -18,7 +18,7 @@ public final class RangedNav extends GroundPathNavigation {
 	public static boolean throttle;
 	public static long pathsMade, pathsSkipped;
 	static final double MOVED = 1.5;
-	static final int MAX_AGE = 10;
+	static final int MAX_AGE = 20;
 	private int pathTick = -100, pathTarget = -1;
 	private double tx = Double.NaN, ty, tz;
 

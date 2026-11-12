@@ -2063,7 +2063,7 @@
    },
    "lore": [
     "Berserker's horn of Hrafnholt",
-    "Drink: heal 6 over 3 s, 30 s cooldown"
+    "Drink: heal 6 over 3 s and gain 3 Fury stacks, 30 s cooldown"
    ],
    "recipe": {
     "type": "minecraft:crafting_shaped",

@@ -4,6 +4,7 @@
     "block.elsewhere.mirewick_mire_snare": "Mire Snare",
     "effect.elsewhere.mire_snared": "Snared",
     "death.attack.elsewhere.mire_snare": "%1$s was caught in a Mire Snare",
-    "death.attack.elsewhere.mire_snare.player": "%1$s was caught in a Mire Snare while fighting %2$s"
+    "death.attack.elsewhere.mire_snare.player": "%1$s was caught in a Mire Snare while fighting %2$s",
+    "death.attack.elsewhere.mire_snare.item": "%1$s was caught in a Mire Snare set by %2$s"
   }
 }

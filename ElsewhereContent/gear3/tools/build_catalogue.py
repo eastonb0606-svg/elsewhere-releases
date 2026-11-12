@@ -199,7 +199,7 @@ ITEMS.append({"id": "mirewick_lantern_crook", "name": "Lantern Crook", "kind": "
               "lore": ["Commander crook of Mirewick", "Reach +1.5", "Gives the Herding Crook's orders"],
               "recipe": shaped([" SS", " T ", " T "], {"S": "elsewhere:mirewick_scrip", "T": "minecraft:stick"}), "loot": [{"table": "chests/mirewick_courier", "chance": 0.08}]})
 ITEMS.append({"id": "hrafnholt_mead_horn", "name": "Mead-Horn of the Hall", "kind": "plain", "rarity": "uncommon", "mechanic": "mead_horn", "stats": {"stack": 1},
-              "lore": ["Berserker's horn of Hrafnholt", "Drink: heal 6 over 3 s, 30 s cooldown"],
+              "lore": ["Berserker's horn of Hrafnholt", "Drink: heal 6 over 3 s and gain 3 Fury stacks, 30 s cooldown"],
               "recipe": shaped(["HBH", " H "], {"H": "elsewhere:hacksilver", "B": "minecraft:honey_bottle"}, "misc"), "loot": [{"table": "chests/hrafnholt_courier", "chance": 0.08}]})
 ITEMS.append({"id": "rangefinder_lens", "name": "Rangefinder Lens", "kind": "trinket", "rarity": "rare", "stats": {},
               "lore": ["Sniper trinket (off hand or hotbar)", "Arrows deal +1% damage per block beyond 16 (max +20%)"],
