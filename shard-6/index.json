@@ -342,14 +342,16 @@
           "scene": 432,
           "line": 482,
           "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:00"
         },
         {
           "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png",
           "scene": 432,
           "line": 482,
           "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:02"
         }
       ],
       "elsewhere:everflow_bong": [
@@ -358,35 +360,40 @@
           "scene": 433,
           "line": 483,
           "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:03"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_third_person.png",
           "scene": 433,
           "line": 483,
           "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:04"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_first_person_2.png",
           "scene": 434,
           "line": 484,
           "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:04"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_third_person_2.png",
           "scene": 434,
           "line": 484,
           "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:05"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_tooltip.png",
           "scene": 434,
           "line": 484,
           "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:06"
         }
       ]
     },
@@ -397,42 +404,48 @@
           "scene": 435,
           "line": 485,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:07"
         },
         {
           "file": "s_totems__bramble_totem_third_person.png",
           "scene": 435,
           "line": 485,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:08"
         },
         {
           "file": "s_totems__bramble_totem_in_use_first_person.png",
           "scene": 435,
           "line": 485,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:09"
         },
         {
           "file": "s_totems__bramble_totem_in_use_third_person.png",
           "scene": 435,
           "line": 485,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:09"
         },
         {
           "file": "s_totems__bramble_totem_after_use.png",
           "scene": 435,
           "line": 485,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:10"
         },
         {
           "file": "s_totems__bramble_totem_tooltip.png",
           "scene": 435,
           "line": 485,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:10"
         }
       ],
       "elsewhere:clockwork_sentry": [
@@ -441,21 +454,24 @@
           "scene": 436,
           "line": 486,
           "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:11"
         },
         {
           "file": "s_totems__clockwork_sentry_third_person.png",
           "scene": 436,
           "line": 486,
           "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:12"
         },
         {
           "file": "s_totems__clockwork_sentry_tooltip.png",
           "scene": 436,
           "line": 486,
           "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:13"
         }
       ],
       "elsewhere:azmar_sunglass_obelisk": [
@@ -464,21 +480,24 @@
           "scene": 437,
           "line": 487,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:15"
         },
         {
           "file": "s_totems__azmar_sunglass_obelisk_third_person.png",
           "scene": 437,
           "line": 487,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:16"
         },
         {
           "file": "s_totems__azmar_sunglass_obelisk_tooltip.png",
           "scene": 437,
           "line": 487,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:16"
         }
       ]
     },
@@ -489,7 +508,8 @@
           "scene": 438,
           "line": 488,
           "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:51"
         }
       ],
       "Kingdom rank shapes side by side (Azmar v Mirewick)": [
@@ -498,7 +518,8 @@
           "scene": 439,
           "line": 489,
           "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:07:22"
         }
       ],
       "Break-out moment": [],
@@ -633,9 +654,9 @@
       ]
     }
   },
-  "run": "20:05:58",
+  "run": "20:07:22",
   "totals": {
-    "ok": 30,
+    "ok": 51,
     "fail": 2,
     "manual": 0
   }

@@ -567,3 +567,110 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:05:59] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
 [20:05:59] [Server thread/INFO] (Minecraft) System chat: ...at @p run greenleaf effects full<--[HERE]
 [20:06:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom.png: 
+[20:06:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png: 
+[20:06:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 432 (s_compat_greenhaze | elsewhere:townsfolk) done in 4197 ms
+[20:06:02] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:06:02] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:06:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:02] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:02] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:02] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Everflow Bong]
+[20:06:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_compat_greenhaze__everflow_bong_first_person.png: 
+[20:06:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_compat_greenhaze__everflow_bong_third_person.png: 
+[20:06:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 433 (s_compat_greenhaze | elsewhere:everflow_bong) done in 1577 ms
+[20:06:04] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:06:04] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:06:04] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:04] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:04] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:04] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Everflow Bong]
+[20:06:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_compat_greenhaze__everflow_bong_first_person_2.png: 
+[20:06:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_compat_greenhaze__everflow_bong_third_person_2.png: 
+[20:06:05] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:06:05] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[20:06:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_compat_greenhaze__everflow_bong_tooltip.png: 
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:06:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 434 (s_compat_greenhaze | elsewhere:everflow_bong) done in 2463 ms
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Bramble Totem]
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[20:06:06] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__bramble_totem_first_person.png: 
+[20:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__bramble_totem_third_person.png: 
+[20:06:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__bramble_totem_in_use_first_person.png: 
+[20:06:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__bramble_totem_in_use_third_person.png: 
+[20:06:09] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2000ms or 40 ticks behind
+[20:06:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__bramble_totem_after_use.png: 
+[20:06:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__bramble_totem_tooltip.png: 
+[20:06:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 435 (s_totems | elsewhere:bramble_totem) done in 4421 ms
+[20:06:10] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:06:10] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:06:10] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:06:10] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Clockwork Sentry]
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[20:06:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__clockwork_sentry_first_person.png: 
+[20:06:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__clockwork_sentry_third_person.png: 
+[20:06:12] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:06:12] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[20:06:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__clockwork_sentry_tooltip.png: 
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:06:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 436 (s_totems | elsewhere:clockwork_sentry) done in 2446 ms
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 18000 tick(s)
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sunglass Obelisk]
+[20:06:13] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:06:14] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 18000 tick(s)
+[20:06:14] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[20:06:14] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__azmar_sunglass_obelisk_first_person.png: 
+[20:06:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__azmar_sunglass_obelisk_third_person.png: 
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[20:06:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__azmar_sunglass_obelisk_tooltip.png: 
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:06:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 437 (s_totems | elsewhere:azmar_sunglass_obelisk) done in 3552 ms
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:06:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:17] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:06:17] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:17] [Server thread/INFO] (Minecraft) System chat: Wave battle aldermark v hrafnholt, 150 a side: 32 live now, the rest come in waves
+[20:06:17] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -48.000000, -23.500000
+[20:06:26] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2007ms or 40 ticks behind
+[20:06:43] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2227ms or 44 ticks behind
+[20:06:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_impostors__battle_aldermark_hrafnholt_150_30s.png: 
+[20:06:51] [Server thread/INFO] (elsewhere-kingdom) Armies wave battle -1 ended: defender won; attacker 149/150 left, defender 149/150 left (0 + 0 waves)
+[20:06:51] [Server thread/INFO] (Minecraft) System chat: Stopped 1 wave battle(s)
+[20:06:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 438 (s_impostors | Rank impostors behind a 150-a-side wave battle (Aldermark v Hrafnholt)) done in 34987 ms
+[20:06:51] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:06:51] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:06:51] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:06:52] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:06:52] [Server thread/INFO] (Minecraft) System chat: Wave battle azmar v mirewick, 110 a side: 31 live now, the rest come in waves
+[20:06:52] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -48.000000, -23.500000
+[20:07:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_impostors__battle_azmar_mirewick_110_30s.png: 
+[20:07:22] [Server thread/INFO] (elsewhere-kingdom) Armies wave battle -1 ended: attacker won; attacker 109/110 left, defender 107/110 left (0 + 0 waves)
+[20:07:22] [Server thread/INFO] (Minecraft) System chat: Stopped 1 wave battle(s)
+[20:07:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 439 (s_impostors | Kingdom rank shapes side by side (Azmar v Mirewick)) done in 30992 ms
+[20:07:22] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:07:22] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:07:22] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:07:23] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:23] [Server thread/INFO] (Minecraft) System chat: Wave battle aldermark v hrafnholt, 30 a side: 32 live now, the rest come in waves
+[20:07:23] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -48.000000, -23.500000
