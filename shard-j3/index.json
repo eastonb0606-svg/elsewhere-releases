@@ -7,7 +7,8 @@
           "scene": 4,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:57:18"
         }
       ]
     },
@@ -46,7 +47,8 @@
           "scene": 172,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:57:57"
         }
       ]
     },
@@ -89,14 +91,16 @@
           "scene": 316,
           "line": 356,
           "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:58:22"
         },
         {
           "file": "s_townsfolk__hrafnholt_capital_time_set_11000.png",
           "scene": 316,
           "line": 356,
           "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:58:29"
         }
       ]
     },
@@ -107,14 +111,15 @@
           "scene": 348,
           "line": 391,
           "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:56:27"
         }
       ]
     }
   },
-  "run": "23:55:56",
+  "run": "23:58:31",
   "totals": {
-    "ok": 6,
+    "ok": 11,
     "fail": 0,
     "manual": 0
   }
