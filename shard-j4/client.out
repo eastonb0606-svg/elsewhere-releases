@@ -478,3 +478,80 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [23:57:04] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [23:57:04] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
 [23:57:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[23:57:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 2896 71 -3440
+[23:57:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2896.500000, 91.000000, -3439.500000
+[23:57:32] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[23:57:38] [Server thread/INFO] (Minecraft) System chat: No siege: village is FORTIFYING
+[23:57:40] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 27399ms or 547 ticks behind
+[23:57:41] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[23:57:48] [Server thread/INFO] (Minecraft) System chat: Interrupted the current tick sprint
+[23:57:48] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[23:58:02] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:58:02] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:58:02] [Server thread/INFO] (Minecraft) System chat: Set own game mode to Spectator Mode
+[23:58:02] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:58:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2896.500000, 99.000000, -3409.500000
+[23:58:02] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[23:58:09] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[23:58:09] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[23:58:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK villages__village_near_mirewick.png: 
+[23:58:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 5 (villages | the faction villages and rebuild styles (mirewick realm)) done in 65577 ms
+[23:58:10] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:58:10] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:58:10] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[23:58:10] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:58:10] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:58:10] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:58:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[23:58:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 1456 65 -1520
+[23:58:14] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1456.500000, 85.000000, -1519.500000
+[23:58:27] [Server thread/INFO] (Minecraft) System chat: Siege started at 1460, 70, -1516.
+[23:58:29] [Server thread/INFO] (Minecraft) System chat: Interrupted the current tick sprint
+[23:58:29] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[23:58:36] [Server thread/INFO] (Minecraft) System chat: Interrupted the current tick sprint
+[23:58:36] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[23:58:49] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:58:49] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:58:49] [Server thread/INFO] (Minecraft) System chat: Set own game mode to Spectator Mode
+[23:58:49] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:58:49] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1434.500000, 75.000000, -1505.500000
+[23:58:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__villages_aldermark_stone.png: 
+[23:58:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 173 (s_dataclean | villages_aldermark_stone) done in 46445 ms
+[23:58:56] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:58:56] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:58:56] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[23:58:56] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:58:56] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:58:56] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:59:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[23:59:02] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 9000 tick(s)
+[23:59:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 864.500000, 103.000000, -4443.500000
+[23:59:04] [Server thread/INFO] (Minecraft) [STDOUT]: [townsfolk-graph] capital:elsewhere:azmar DISCONNECTED: candidates 96, nodes 4, edges 1, link 15.01, rejected (first few):
+[23:59:18] [Render thread/WARN] (Minecraft) Received passengers for unknown entity
+[23:59:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__azmar_capital_time_set_9000.png: 
+[23:59:19] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:59:19] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 864.500000, 103.000000, -4443.500000
+[23:59:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__azmar_capital_time_set_6000.png: 
+[23:59:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 317 (s_townsfolk | Azmar bazaar vs siesta) done in 28011 ms
+[23:59:24] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[23:59:24] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[23:59:24] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[23:59:24] [Server thread/INFO] (Minecraft) Stopping server
+[23:59:24] [Server thread/INFO] (Minecraft) Saving players
+[23:59:24] [Server thread/INFO] (Minecraft) Saving worlds
+[23:59:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[23:59:26] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[23:59:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 9 ok, 0 fail, 0 manual
+[23:59:27] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 5m 48s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
