@@ -924,3 +924,59 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:08:54] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4529ms or 90 ticks behind
 [22:08:55] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
 [22:08:55] [Render thread/INFO] (Minecraft) Loaded 20 advancements
+[22:09:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_0_3_16_y180.png: 
+[22:09:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 413 (s_layout_azmar | elsewhere:castle_aldermark) done in 17932 ms
+[22:09:08] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:09:08] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:09:08] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:09:08] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:09:08] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:listening_engine in elsewhere:the_hush at C = 96 84 32
+[22:09:10] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 120.500000, 98.000000, 56.500000
+[22:09:10] [Render thread/INFO] (Minecraft) Loaded 21 advancements
+[22:09:14] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5945ms or 118 ticks behind
+[22:09:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__listening_engine_overview.png: 
+[22:09:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 118.500000, 256.000000, 32.500000
+[22:09:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__listening_engine_ground.png: 
+[22:09:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 484 (s_struct_greenhaze | elsewhere:listening_engine) done in 17099 ms
+[22:09:25] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:09:25] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:09:25] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:09:25] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:09:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 73.000000, -1259.500000
+[22:09:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_asm_court__castle_aldermark_c_0_2_40_y180.png: 
+[22:09:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 488 (s_asm_court | elsewhere:castle_aldermark) done in 8728 ms
+[22:09:34] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:09:34] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:09:34] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:09:34] [Server thread/INFO] (Minecraft) Stopping server
+[22:09:34] [Server thread/INFO] (Minecraft) Saving players
+[22:09:34] [Server thread/INFO] (Minecraft) Saving worlds
+[22:09:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:09:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:09:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 61 ok, 6 fail, 0 manual
+[22:09:36] [Render thread/INFO] (Minecraft) Stopping!
+[22:09:36] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)

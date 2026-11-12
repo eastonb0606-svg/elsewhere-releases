@@ -561,7 +561,8 @@
           "scene": 413,
           "line": 463,
           "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:08"
         }
       ]
     },
@@ -620,14 +621,16 @@
           "scene": 484,
           "line": 536,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:20"
         },
         {
           "file": "s_struct_greenhaze__listening_engine_ground.png",
           "scene": 484,
           "line": 536,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:25"
         }
       ]
     },
@@ -638,14 +641,15 @@
           "scene": 488,
           "line": 540,
           "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:34"
         }
       ]
     }
   },
-  "run": "22:08:50",
+  "run": "22:09:36",
   "totals": {
-    "ok": 57,
+    "ok": 61,
     "fail": 6,
     "manual": 0
   }
