@@ -53,7 +53,8 @@
           "scene": 18,
           "line": 26,
           "check": "crow-stepped calcite Counting-House with gilt caps and a lantern belfry, crimson spires with gilt finials, purple bands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:43"
         }
       ]
     },
@@ -216,7 +217,8 @@
           "scene": 160,
           "line": 177,
           "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:55"
         }
       ]
     },
@@ -227,14 +229,16 @@
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:17"
         },
         {
           "file": "s_p13_particles__rimeback_avalanche_20s.png",
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:27"
         }
       ]
     },
@@ -327,14 +331,16 @@
           "scene": 393,
           "line": 441,
           "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:42"
         },
         {
           "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush_later.png",
           "scene": 393,
           "line": 441,
           "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:44"
         }
       ]
     },
@@ -455,14 +461,16 @@
           "scene": 317,
           "line": 357,
           "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:45"
         },
         {
           "file": "s_townsfolk__azmar_capital_time_set_6000.png",
           "scene": 317,
           "line": 357,
           "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:50"
         }
       ]
     },
@@ -473,42 +481,48 @@
           "scene": 343,
           "line": 386,
           "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:33"
         },
         {
           "file": "s_p5_tooltips__amber_grimoire_third_person.png",
           "scene": 343,
           "line": 386,
           "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:34"
         },
         {
           "file": "s_p5_tooltips__amber_grimoire_in_use_first_person.png",
           "scene": 343,
           "line": 386,
           "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:35"
         },
         {
           "file": "s_p5_tooltips__amber_grimoire_in_use_third_person.png",
           "scene": 343,
           "line": 386,
           "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:35"
         },
         {
           "file": "s_p5_tooltips__amber_grimoire_after_use.png",
           "scene": 343,
           "line": 386,
           "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:36"
         },
         {
           "file": "s_p5_tooltips__amber_grimoire_tooltip.png",
           "scene": 343,
           "line": 386,
           "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:37"
         }
       ]
     },
@@ -519,21 +533,24 @@
           "scene": 352,
           "line": 395,
           "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:38"
         },
         {
           "file": "s_setbonus_a__galeplate_helmet_third_person.png",
           "scene": 352,
           "line": 395,
           "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:39"
         },
         {
           "file": "s_setbonus_a__galeplate_helmet_tooltip.png",
           "scene": 352,
           "line": 395,
           "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:40"
         }
       ]
     },
@@ -555,21 +572,24 @@
           "scene": 426,
           "line": 476,
           "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:45"
         },
         {
           "file": "s_sunglass__sunglass_third_person.png",
           "scene": 426,
           "line": 476,
           "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:46"
         },
         {
           "file": "s_sunglass__sunglass_tooltip.png",
           "scene": 426,
           "line": 476,
           "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:47"
         }
       ]
     },
@@ -580,14 +600,16 @@
           "scene": 444,
           "line": 494,
           "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:51"
         },
         {
           "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on_later.png",
           "scene": 444,
           "line": 494,
           "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:53"
         }
       ]
     },
@@ -621,9 +643,9 @@
       ]
     }
   },
-  "run": "22:06:32",
+  "run": "22:08:50",
   "totals": {
-    "ok": 35,
+    "ok": 57,
     "fail": 6,
     "manual": 0
   }
