@@ -37,7 +37,8 @@
           "scene": 158,
           "line": 175,
           "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:39"
         }
       ]
     },
@@ -60,7 +61,8 @@
           "scene": 211,
           "line": 241,
           "check": "cruciform chapel: nave, transept arms, narrower chancel; broken pale-oak gable roofs (45 degrees, overhang 1) with a fallen-in bay over exposed beams; stone gables with an oculus; buttresses; water only inside the walls (nave 2 deep with submerged pews, one step up into the transept), none outside; ground meets the walls all round",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:08"
         }
       ]
     },
@@ -175,7 +177,8 @@
           "scene": 327,
           "line": 370,
           "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:53"
         }
       ]
     },
@@ -214,7 +217,8 @@
           "scene": 410,
           "line": 460,
           "check": "49 x 50 palm-wall enclosure (Aldermark's curtain is 61 x 61) with an undulating top; one processional axis: pylons, palm court with two lapis pools, hypostyle hall (raised nave roof), throne hall with a roof kiosk, naos to the west, mud-brick palace with kiosk and striped awning to the east; terraces stepping up north; nothing floating at the edges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:10"
         }
       ]
     },
@@ -225,14 +229,16 @@
           "scene": 434,
           "line": 484,
           "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:05"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_third_person.png",
           "scene": 434,
           "line": 484,
           "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:06"
         }
       ]
     },
@@ -243,21 +249,23 @@
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:09"
         },
         {
           "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:13"
         }
       ]
     }
   },
-  "run": "23:41:01",
+  "run": "23:43:13",
   "totals": {
-    "ok": 19,
+    "ok": 27,
     "fail": 0,
     "manual": 0
   }
