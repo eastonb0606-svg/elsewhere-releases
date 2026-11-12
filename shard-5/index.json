@@ -1,0 +1,561 @@
+{
+  "lanes": {
+    "s_setbonus_b": {
+      "elsewhere:hrafnholt_mead_horn": [
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_first_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "ok",
+          "taken": "20:04:38"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_third_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "ok",
+          "taken": "20:04:39"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_in_use_first_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "ok",
+          "taken": "20:04:40"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_in_use_third_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "ok",
+          "taken": "20:04:40"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_after_use.png",
+          "scene": 363,
+          "line": 411,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "ok",
+          "taken": "20:04:41"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_tooltip.png",
+          "scene": 363,
+          "line": 411,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "ok",
+          "taken": "20:04:42"
+        }
+      ]
+    },
+    "s_vlook_mire": {
+      "villages_mirewick_overview + villages_mirewick_overview_street (kingdom_villages VillagesScreenshots client gametest, Mirewick village after its rebuild)": [],
+      "villages_mirewick_quay + villages_mirewick_lantern_post + villages_mirewick_border_hint": [],
+      "villages_mirewick_sluice_house": [],
+      "canal quay (Mirewick village by water)": []
+    },
+    "s_vlook_hraf": {
+      "villages_hrafnholt_overview + overview_street + longhall (kingdom_villages VillagesScreenshots client gametest, Hrafnholt village after its rebuild; the test now digs a 16x18 shelving pool 30 E of the bell first)": [],
+      "villages_hrafnholt_watchtower + gate + water_gate + palisade + thingstead + runestone + toft + border_hint": [],
+      "villages_hrafnholt_pier + boathouse + strand_boat": []
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person.png",
+          "scene": 371,
+          "line": 419,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "ok",
+          "taken": "20:04:42"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person.png",
+          "scene": 371,
+          "line": 419,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "ok",
+          "taken": "20:04:43"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip.png",
+          "scene": 371,
+          "line": 419,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "ok",
+          "taken": "20:04:44"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_2.png",
+          "scene": 372,
+          "line": 420,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "20:04:45"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_2.png",
+          "scene": 372,
+          "line": 420,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "20:04:46"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_2.png",
+          "scene": 372,
+          "line": 420,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "20:04:46"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_3.png",
+          "scene": 373,
+          "line": 421,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "20:04:47"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_3.png",
+          "scene": 373,
+          "line": 421,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "20:04:48"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_3.png",
+          "scene": 373,
+          "line": 421,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "20:04:49"
+        }
+      ],
+      "Snared effect icon (gear3)": []
+    },
+    "s_routines": {
+      "Aldermark drill and butts at dawn": [
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn.png",
+          "scene": 375,
+          "line": 423,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "ok",
+          "taken": "20:04:52"
+        },
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
+          "scene": 375,
+          "line": 423,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "ok",
+          "taken": "20:04:58"
+        }
+      ],
+      "Aldermark Muster Day ranks and mock charge": [
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char.png",
+          "scene": 376,
+          "line": 424,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "ok",
+          "taken": "20:05:03"
+        },
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
+          "scene": 376,
+          "line": 424,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "ok",
+          "taken": "20:05:08"
+        }
+      ],
+      "Changing of the guard salute": [
+        {
+          "file": "s_routines__changing_of_the_guard_salute.png",
+          "scene": 377,
+          "line": 425,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__changing_of_the_guard_salute_5s.png",
+          "scene": 377,
+          "line": 425,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        }
+      ],
+      "Hrafnholt sparring pairs and the hall feast": [],
+      "Azmar rank blocks, siesta and bazaar": [],
+      "Mirewick half-hearted drill and lamplighters": [],
+      "Mirewick off-time wards": [
+        {
+          "file": "s_routines__mirewick_off_time_wards.png",
+          "scene": 381,
+          "line": 429,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__mirewick_off_time_wards_5s.png",
+          "scene": 381,
+          "line": 429,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        }
+      ],
+      "Lantern Fair floating lanterns": [],
+      "Festival of the Flood lamp boats": []
+    },
+    "s_layout_mire": {
+      "Mirewick fort overview": [],
+      "water-gate and quay": [],
+      "inner canal": [],
+      "canal houses": [],
+      "windmill bastion": [],
+      "ravelin and dike road": [],
+      "kill switch": []
+    },
+    "s_spawngroups": {
+      "elsewhere:shrieker_swarm": [
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu.png",
+          "scene": 391,
+          "line": 439,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu_later.png",
+          "scene": 391,
+          "line": 439,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hotbox_smog": [
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush.png",
+          "scene": 392,
+          "line": 440,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush_later.png",
+          "scene": 392,
+          "line": 440,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:eyeblossom_wisp": [
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core.png",
+          "scene": 393,
+          "line": 441,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core_later.png",
+          "scene": 393,
+          "line": 441,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_throne": {
+      "Aldermark throne, castle_kit=false (B9)": [],
+      "Grunthar legacy treasure hall (nether, 2.x saved arena)": [
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x.png",
+          "scene": 395,
+          "line": 445,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        },
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
+          "scene": 395,
+          "line": 445,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        }
+      ],
+      "Verdigrim cathedral + Galvanox and Thurgrim arenas (legacy)": [],
+      "Sun chamber sarcophagi (overworld, legacy)": []
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person.png",
+          "scene": 398,
+          "line": 448,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person.png",
+          "scene": 398,
+          "line": 448,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip.png",
+          "scene": 398,
+          "line": 448,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_first_person_2.png",
+          "scene": 399,
+          "line": 449,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_2.png",
+          "scene": 399,
+          "line": 449,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use.png",
+          "scene": 399,
+          "line": 449,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_2.png",
+          "scene": 399,
+          "line": 449,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_first_person_3.png",
+          "scene": 400,
+          "line": 450,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_3.png",
+          "scene": 400,
+          "line": 450,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_3.png",
+          "scene": 400,
+          "line": 450,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "elsewhere:mothlight_staff": [
+        {
+          "file": "s_mothlight__mothlight_staff_held.png",
+          "scene": 401,
+          "line": 451,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__mothlight_staff_tooltip.png",
+          "scene": 401,
+          "line": 451,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mothlight_swarm": [
+        {
+          "file": "s_mothlight__mothlight_swarm_entity_idle.png",
+          "scene": 402,
+          "line": 452,
+          "check": "three small pale moths (cream wings with lilac rims and an amber eyespot, striped bodies, brown feelers) circling one point beside the player, wings fluttering; full bright at dusk, no shadow, no pink/black boxes",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__mothlight_swarm_entity_idle_later.png",
+          "scene": 402,
+          "line": 452,
+          "check": "three small pale moths (cream wings with lilac rims and an amber eyespot, striped bodies, brown feelers) circling one point beside the player, wings fluttering; full bright at dusk, no shadow, no pink/black boxes",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__a_moth_falls_mothdust_icon.png",
+          "scene": 404,
+          "line": 454,
+          "check": "a puff of white ash and end-rod sparks, one moth drops with folded wings, then only 2 circle; inventory effect list: a pale moth icon with amber eyespots named \"Mothdust\" (no missing texture)",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__a_moth_falls_mothdust_icon_later.png",
+          "scene": 404,
+          "line": 454,
+          "check": "a puff of white ash and end-rod sparks, one moth drops with folded wings, then only 2 circle; inventory effect list: a pale moth icon with amber eyespots named \"Mothdust\" (no missing texture)",
+          "status": "pending"
+        }
+      ],
+      "swarm attacking + Mothdust": [
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust.png",
+          "scene": 403,
+          "line": 453,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust_5s.png",
+          "scene": 403,
+          "line": 453,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "elsewhere:hrafnholt_wolfcall_horn": [
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person.png",
+          "scene": 405,
+          "line": 455,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person.png",
+          "scene": 405,
+          "line": 455,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip.png",
+          "scene": 405,
+          "line": 455,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person_2.png",
+          "scene": 406,
+          "line": 456,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person_2.png",
+          "scene": 406,
+          "line": 456,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_first_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_third_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_after_use.png",
+          "scene": 406,
+          "line": 456,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip_2.png",
+          "scene": 406,
+          "line": 456,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        }
+      ],
+      "Warg pack hunting (gear3)": [
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3.png",
+          "scene": 407,
+          "line": 457,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
+          "scene": 407,
+          "line": 457,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:05:08",
+  "totals": {
+    "ok": 19,
+    "fail": 0,
+    "manual": 0
+  }
+}
