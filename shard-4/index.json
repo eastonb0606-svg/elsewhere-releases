@@ -1,0 +1,679 @@
+{
+  "lanes": {
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_3.png",
+          "scene": 322,
+          "line": 362,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "ok",
+          "taken": "20:05:51"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
+          "scene": 322,
+          "line": 362,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "ok",
+          "taken": "20:05:51"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
+          "scene": 322,
+          "line": 362,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "ok",
+          "taken": "20:05:52"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_4.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "20:05:53"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "20:05:54"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "20:05:55"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "20:05:55"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "20:05:56"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "20:05:57"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "Pose.SIT, all four kingdoms (sit at the fire)": [],
+      "Pose.SALUTE, all four kingdoms + one unarmed Aldermark": [],
+      "elsewhere:kingdom_archer": [
+        {
+          "file": "s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png",
+          "scene": 326,
+          "line": 369,
+          "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
+          "status": "ok",
+          "taken": "20:05:59"
+        }
+      ],
+      "Pose.CARRY, all four kingdoms (carry)": [],
+      "Pose.DRINK and Pose.TORCH": [
+        {
+          "file": "s_p9_idle__pose_drink_and_pose_torch.png",
+          "scene": 328,
+          "line": 371,
+          "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
+          "status": "ok",
+          "taken": "20:06:02"
+        },
+        {
+          "file": "s_p9_idle__pose_drink_and_pose_torch_5s.png",
+          "scene": 328,
+          "line": 371,
+          "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
+          "status": "ok",
+          "taken": "20:06:07"
+        }
+      ],
+      "Pose.LOUNGE, Pose.PRAY and Pose.KNEEL (Azmar siesta, dawn rite)": [],
+      "Pose.SPAR and Pose.CHEER": [],
+      "night rest (REST: soldiers the night routine rests)": [
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi.png",
+          "scene": 331,
+          "line": 374,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "ok",
+          "taken": "20:06:10"
+        },
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
+          "scene": 331,
+          "line": 374,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "ok",
+          "taken": "20:06:16"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_p9_idle__townsfolk_routine_poses_s_townsfolk_resi.png",
+          "scene": 332,
+          "line": 375,
+          "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
+          "status": "ok",
+          "taken": "20:06:17"
+        }
+      ],
+      "elsewhere:hrafnholt_thrall": [
+        {
+          "file": "s_p9_idle__serf_work_animations_all_four_tiers.png",
+          "scene": 333,
+          "line": 376,
+          "check": "serf: stoops to lay a stone and tamps it down; thrall: chops with a stone axe; porter: stoops and lifts its load up to the head; peat-cutter: foot on a wooden spade, levers and lifts the turf. Each tier wears its own skin (brown tunic / hooded wadmal with collar / linen with lapis sash / purple smock with crimson cap)",
+          "status": "fail",
+          "detail": "summon: entity type elsewhere:hrafnholt_thrall is not registered in this build",
+          "taken": "20:06:17"
+        }
+      ],
+      "serf hauling (SERF_CARRY)": [],
+      "serf tier skins on a fresh join (sync fix)": [],
+      "pose LOD and gating": [],
+      "kill switches": []
+    },
+    "s_p5_tooltips": {
+      "elsewhere:sunlance_staff": [
+        {
+          "file": "s_p5_tooltips__sunlance_staff_first_person.png",
+          "scene": 338,
+          "line": 381,
+          "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
+          "status": "ok",
+          "taken": "20:06:18"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_third_person.png",
+          "scene": 338,
+          "line": 381,
+          "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
+          "status": "ok",
+          "taken": "20:06:19"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_tooltip.png",
+          "scene": 338,
+          "line": 381,
+          "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
+          "status": "ok",
+          "taken": "20:06:20"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_first_person_2.png",
+          "scene": 339,
+          "line": 382,
+          "check": "grey detail under the gold line: \"Hits up to 3 foes in a 24-block line\", \"Sets them on fire for 2 s\", \"Base cost 5 Glimmer...\", \"Costs 4 under open daytime sky; 6 at night...\", \"Damage scales...\"; Prism: \"Beam: 5 damage/s, rising to 12/s\", \"12 damage/s after 2.5 s on the same target\"; boss_ui \"Durability: x / y\" stays at the bottom; no hint line",
+          "status": "ok",
+          "taken": "20:06:21"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_third_person_2.png",
+          "scene": 339,
+          "line": 382,
+          "check": "grey detail under the gold line: \"Hits up to 3 foes in a 24-block line\", \"Sets them on fire for 2 s\", \"Base cost 5 Glimmer...\", \"Costs 4 under open daytime sky; 6 at night...\", \"Damage scales...\"; Prism: \"Beam: 5 damage/s, rising to 12/s\", \"12 damage/s after 2.5 s on the same target\"; boss_ui \"Durability: x / y\" stays at the bottom; no hint line",
+          "status": "ok",
+          "taken": "20:06:22"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_tooltip_2.png",
+          "scene": 339,
+          "line": 382,
+          "check": "grey detail under the gold line: \"Hits up to 3 foes in a 24-block line\", \"Sets them on fire for 2 s\", \"Base cost 5 Glimmer...\", \"Costs 4 under open daytime sky; 6 at night...\", \"Damage scales...\"; Prism: \"Beam: 5 damage/s, rising to 12/s\", \"12 damage/s after 2.5 s on the same target\"; boss_ui \"Durability: x / y\" stays at the bottom; no hint line",
+          "status": "ok",
+          "taken": "20:06:22"
+        }
+      ],
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p5_tooltips__ironclad_flail_first_person.png",
+          "scene": 340,
+          "line": 383,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "ok",
+          "taken": "20:06:23"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_third_person.png",
+          "scene": 340,
+          "line": 383,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "ok",
+          "taken": "20:06:24"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_tooltip.png",
+          "scene": 340,
+          "line": 383,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "ok",
+          "taken": "20:06:25"
+        }
+      ],
+      "elsewhere:steam_auger": [
+        {
+          "file": "s_p5_tooltips__steam_auger_first_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "20:06:26"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_third_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "20:06:26"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_first_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "20:06:27"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_third_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "20:06:28"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_after_use.png",
+          "scene": 341,
+          "line": 384,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "20:06:29"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_tooltip.png",
+          "scene": 341,
+          "line": 384,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "ok",
+          "taken": "20:06:29"
+        }
+      ],
+      "elsewhere:amber_grimoire": [
+        {
+          "file": "s_p5_tooltips__amber_grimoire_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_in_use_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_in_use_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_after_use.png",
+          "scene": 342,
+          "line": 385,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_tooltip.png",
+          "scene": 342,
+          "line": 385,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_man_at_arms": [
+        {
+          "file": "s_p10_tabard__tabard_emblems_chest_kingdom_module_clie.png",
+          "scene": 343,
+          "line": 386,
+          "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__tabard_emblems_chest_kingdom_module_clie_later.png",
+          "scene": 343,
+          "line": 386,
+          "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
+          "status": "pending"
+        }
+      ],
+      "tabard emblems, back": [],
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__captain_capes_heraldry_kingdom_cape_png.png",
+          "scene": 345,
+          "line": 388,
+          "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__captain_capes_heraldry_kingdom_cape_png_later.png",
+          "scene": 345,
+          "line": 388,
+          "check": "long capes from the shoulders, behind the tabard and armour (nothing pokes through): Aldermark blue, cream edge, crown and tower, dagged hem; Hrafnholt green wool with a fur collar, brown raven, brown border, ragged hem; Azmar white pleated linen, gold winged scarab, lapis/gold/turquoise hem stripes, a little shorter; Mirewick purple, gold edge, gold lantern, crimson band, gold fringe; side shot shows the lining (cream / brown / lapis / crimson) and a slight backward hang",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod.png",
+          "scene": 348,
+          "line": 391,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
+          "scene": 348,
+          "line": 391,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers.png",
+          "scene": 349,
+          "line": 392,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers_later.png",
+          "scene": 349,
+          "line": 392,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:kingdom_sergeant": [
+        {
+          "file": "s_p10_tabard__officer_capes_heraldry_kingdom_cape_shor.png",
+          "scene": 346,
+          "line": 389,
+          "check": "short shoulder capes (about half length), kingdom colours and trim, no emblem; rank-and-file man-at-arms from the first shot wear no cape",
+          "status": "pending"
+        }
+      ],
+      "cape wave in motion": [
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 347,
+          "line": 390,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "pending"
+        }
+      ],
+      "kill switches": []
+    },
+    "s_setbonus_a": {
+      "elsewhere:galeplate_helmet": [
+        {
+          "file": "s_setbonus_a__galeplate_helmet_first_person.png",
+          "scene": 351,
+          "line": 394,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__galeplate_helmet_third_person.png",
+          "scene": 351,
+          "line": 394,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__galeplate_helmet_tooltip.png",
+          "scene": 351,
+          "line": 394,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_glyphmail_hood": [
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_first_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_third_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_first_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_in_use_third_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_after_use.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_glyphmail_hood_tooltip.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hearth_ward_mail": [
+        {
+          "file": "s_setbonus_a__hrafnholt_hearth_ward_mail_first_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "armor bar gains 2 icons (+4) the moment you sneak or raise the shield, with a soft iron-equip clink; it drops back when you stand or lower the shield",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__hrafnholt_hearth_ward_mail_third_person.png",
+          "scene": 353,
+          "line": 396,
+          "check": "armor bar gains 2 icons (+4) the moment you sneak or raise the shield, with a soft iron-equip clink; it drops back when you stand or lower the shield",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__hrafnholt_hearth_ward_mail_tooltip.png",
+          "scene": 353,
+          "line": 396,
+          "check": "armor bar gains 2 icons (+4) the moment you sneak or raise the shield, with a soft iron-equip clink; it drops back when you stand or lower the shield",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sandrunner_sandals": [
+        {
+          "file": "s_setbonus_a__azmar_sandrunner_sandals_first_person.png",
+          "scene": 354,
+          "line": 397,
+          "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_sandrunner_sandals_third_person.png",
+          "scene": 354,
+          "line": 397,
+          "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_sandrunner_sandals_tooltip.png",
+          "scene": 354,
+          "line": 397,
+          "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_rulerarmor": {
+      "kill switch": []
+    },
+    "s_locate": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_locate__castle_azmar_overview.png",
+          "scene": 356,
+          "line": 404,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__castle_azmar_ground.png",
+          "scene": 356,
+          "line": 404,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:waterfront_hrafnholt": [
+        {
+          "file": "s_locate__waterfront_hrafnholt_overview.png",
+          "scene": 357,
+          "line": 405,
+          "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__waterfront_hrafnholt_ground.png",
+          "scene": 357,
+          "line": 405,
+          "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
+          "status": "pending"
+        }
+      ],
+      "explorer map to a rival castle": [
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle.png",
+          "scene": 358,
+          "line": 406,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
+          "scene": 358,
+          "line": 406,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:ridgewatch_hood": [
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_first_person.png",
+          "scene": 359,
+          "line": 407,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_third_person.png",
+          "scene": 359,
+          "line": 407,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_tooltip.png",
+          "scene": 359,
+          "line": 407,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:glasswaste_starsight_visor": [
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_first_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_third_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_first_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_third_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_after_use.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_tooltip.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        }
+      ],
+      "Steady Aim, no spread": [],
+      "elsewhere:hrafnholt_wolfskin_boots": [
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_first_person.png",
+          "scene": 362,
+          "line": 410,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_third_person.png",
+          "scene": 362,
+          "line": 410,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_tooltip.png",
+          "scene": 362,
+          "line": 410,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:06:29",
+  "totals": {
+    "ok": 30,
+    "fail": 1,
+    "manual": 0
+  }
+}
