@@ -7,21 +7,24 @@
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:04"
         },
         {
           "file": "generation__castle_aldermark_c_88_26_52_y180.png",
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:27"
         },
         {
           "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:45"
         }
       ]
     },
@@ -64,7 +67,8 @@
           "scene": 172,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:45:25"
         }
       ]
     },
@@ -95,14 +99,16 @@
           "scene": 286,
           "line": 325,
           "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:45:34"
         },
         {
           "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
           "scene": 286,
           "line": 325,
           "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:45:42"
         }
       ]
     },
@@ -113,7 +119,8 @@
           "scene": 296,
           "line": 335,
           "check": "an offer of 6 Zephyr Feathers + 1 String for a Gale Sling (4 uses); with -Delsewhere.overhaul3.gale_sling_trade=false a newly summoned Windwright has no sling offer",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:19"
         }
       ]
     },
@@ -124,21 +131,24 @@
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:20"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:21"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:22"
         }
       ]
     },
@@ -149,14 +159,16 @@
           "scene": 377,
           "line": 425,
           "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:16"
         },
         {
           "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
           "scene": 377,
           "line": 425,
           "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:46:24"
         }
       ]
     },
@@ -167,21 +179,24 @@
           "scene": 422,
           "line": 472,
           "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:23"
         },
         {
           "file": "s_pennant__herdcaller_pennant_third_person.png",
           "scene": 422,
           "line": 472,
           "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:24"
         },
         {
           "file": "s_pennant__herdcaller_pennant_tooltip.png",
           "scene": 422,
           "line": 472,
           "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:24"
         }
       ]
     },
@@ -192,14 +207,15 @@
           "scene": 443,
           "line": 493,
           "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:25"
         }
       ]
     }
   },
-  "run": "23:40:15",
+  "run": "23:46:26",
   "totals": {
-    "ok": 5,
+    "ok": 21,
     "fail": 0,
     "manual": 0
   }
