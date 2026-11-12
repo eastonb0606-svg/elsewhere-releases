@@ -1,0 +1,597 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 21,
+          "line": 29,
+          "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
+          "status": "pending"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:hrafnholt_huntmaster": [
+        {
+          "file": "anim__hrafnholt_huntmaster_move_windup.png",
+          "scene": 35,
+          "line": 48,
+          "check": "Wolf Pack = cast, Pinning Arrow = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:03:00"
+        },
+        {
+          "file": "anim__hrafnholt_huntmaster_move_strike.png",
+          "scene": 35,
+          "line": 48,
+          "check": "Wolf Pack = cast, Pinning Arrow = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:03:00"
+        }
+      ],
+      "elsewhere:ashtusk": [
+        {
+          "file": "anim__ashtusk_hurt_peak.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:03:03"
+        },
+        {
+          "file": "anim__ashtusk_hurt_rest.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:03:04"
+        }
+      ],
+      "elsewhere:lithara": [
+        {
+          "file": "anim__lithara_hurt_peak.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:07"
+        },
+        {
+          "file": "anim__lithara_hurt_rest.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:08"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:galeplate_helmet": [
+        {
+          "file": "items__galeplate_helmet_front.png",
+          "scene": 72,
+          "line": 88,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:03:09"
+        },
+        {
+          "file": "items__galeplate_helmet_side.png",
+          "scene": 72,
+          "line": 88,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:03:10"
+        },
+        {
+          "file": "items__galeplate_helmet_tooltip.png",
+          "scene": 72,
+          "line": 88,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:03:11"
+        }
+      ],
+      "elsewhere:aldermark_outrider_chaps": [
+        {
+          "file": "items__aldermark_outrider_chaps_front.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:03:12"
+        },
+        {
+          "file": "items__aldermark_outrider_chaps_side.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:03:13"
+        },
+        {
+          "file": "items__aldermark_outrider_chaps_tooltip.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:03:14"
+        }
+      ],
+      "elsewhere:mirewick_lanternfang_estoc": [
+        {
+          "file": "items__mirewick_lanternfang_estoc_held.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:15"
+        },
+        {
+          "file": "items__mirewick_lanternfang_estoc_tooltip.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:16"
+        }
+      ],
+      "elsewhere:mirewick_lantern_crook": [
+        {
+          "file": "items__mirewick_lantern_crook_held.png",
+          "scene": 118,
+          "line": 134,
+          "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:17"
+        },
+        {
+          "file": "items__mirewick_lantern_crook_tooltip.png",
+          "scene": 118,
+          "line": 134,
+          "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:18"
+        }
+      ],
+      "elsewhere:emberfall_rod": [
+        {
+          "file": "items__emberfall_rod_held.png",
+          "scene": 130,
+          "line": 146,
+          "check": "icon matches the sprite page (16x16, Emberfall Rod), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:19"
+        },
+        {
+          "file": "items__emberfall_rod_tooltip.png",
+          "scene": 130,
+          "line": 146,
+          "check": "icon matches the sprite page (16x16, Emberfall Rod), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:20"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, idle)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_idle.png",
+          "scene": 145,
+          "line": 160,
+          "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
+          "status": "ok",
+          "taken": "22:03:21"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:tidelock_vault": [
+        {
+          "file": "s_struct_verdigris__tidelock_vault_s_0_3_14.png",
+          "scene": 162,
+          "line": 179,
+          "check": "the plate chamber set into the sea-bed slope: sediment over the back half of the roof and banked on the sides, riveted portal with a plate lintel and two lit bulbs, a plated apron down to the bed",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:croaking_shrine": [
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_22_9_22.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_0_3_34.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_skald Verse of Winter": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_skald_verse_of_winter_windup.png",
+          "scene": 189,
+          "line": 209,
+          "check": "half crouch, both arms rising palms up, head bowed; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_skald_verse_of_winter_strike.png",
+          "scene": 189,
+          "line": 209,
+          "check": "half crouch, both arms rising palms up, head bowed; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:duelist_test Oath Cleave": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_oath_cleave_windup.png",
+          "scene": 201,
+          "line": 233,
+          "check": "weapon high above the head, off arm forward, slight back-lean; baseline style; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chopped down to the front with a forward step, torso bent over; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__duelist_test_oath_cleave_strike.png",
+          "scene": 201,
+          "line": 233,
+          "check": "weapon high above the head, off arm forward, slight back-lean; baseline style; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chopped down to the front with a forward step, torso bent over; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:duelist_test (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase2.png",
+          "scene": 205,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:hollow_stag": [
+        {
+          "file": "s_spawngroups__hollow_stag_herd_core.png",
+          "scene": 241,
+          "line": 271,
+          "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_5.png",
+          "scene": 282,
+          "line": 318,
+          "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_5.png",
+          "scene": 282,
+          "line": 318,
+          "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_first_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use_3.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_4.png",
+          "scene": 295,
+          "line": 334,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_in_flight.png",
+          "scene": 312,
+          "line": 352,
+          "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "night rest (REST: soldiers the night routine rests)": [
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        },
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_a": {
+      "elsewhere:azmar_sandrunner_sandals": [
+        {
+          "file": "s_setbonus_a__azmar_sandrunner_sandals_first_person.png",
+          "scene": 355,
+          "line": 398,
+          "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_sandrunner_sandals_third_person.png",
+          "scene": 355,
+          "line": 398,
+          "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__azmar_sandrunner_sandals_tooltip.png",
+          "scene": 355,
+          "line": 398,
+          "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:glasswaste_starsight_visor": [
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_after_use.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_tooltip.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_throne": {
+      "Grunthar legacy treasure hall (nether, 2.x saved arena)": [
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        },
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:skyiron_ingot": [
+        {
+          "file": "s_compat_transmute__skyiron_ingot_first_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_third_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_tooltip.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Kingdom rank shapes side by side (Azmar v Mirewick)": [
+        {
+          "file": "s_impostors__battle_azmar_mirewick_110_30s.png",
+          "scene": 440,
+          "line": 490,
+          "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:silent_monastery": [
+        {
+          "file": "s_struct_greenhaze__silent_monastery_overview.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__silent_monastery_ground.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:03:21",
+  "totals": {
+    "ok": 17,
+    "fail": 2,
+    "manual": 0
+  }
+}
