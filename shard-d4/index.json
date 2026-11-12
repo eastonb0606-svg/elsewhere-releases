@@ -1,0 +1,147 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 13,
+          "line": 21,
+          "check": "steep deepslate spires with blue banners on 4 corners + 2 gate spires, pitched keep roof inside the parapet with 4 bartizans, chapel steeple; curtain steps with the ground (no flat 69x69 cut, no cliff); no gold throne (yellow terracotta)",
+          "status": "ok",
+          "taken": "22:52:44"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 21,
+          "line": 29,
+          "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_52_40_52_y135.png",
+          "scene": 15,
+          "line": 23,
+          "check": "Jarl's-hall roof over the keep with crossed finials at both ends, timber hoardings on walls and towers, steep spruce spires, stave tower on the hof",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_castle": {
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_azmar)": [
+        {
+          "file": "z_castle__castle_azmar_c_44_8_44_y135.png",
+          "scene": 150,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_azmarsize": {
+      "Azmar line relief: rank blocks of 5 (army.scale squad 5, relief wave 5 / 30 s at 85%)": [
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_10s.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "22:51:33"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "22:52:01"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Aldermark looks (peasant_0..2, craftsman_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_front.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "ok",
+          "taken": "22:52:04"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_back.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "ok",
+          "taken": "22:52:05"
+        }
+      ],
+      "elsewhere:townsfolk, Hrafnholt looks (thrall_0..2, fisherfolk_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_front.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "ok",
+          "taken": "22:52:08"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_back.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "ok",
+          "taken": "22:52:09"
+        }
+      ],
+      "elsewhere:serf variants (serf, thrall, porter, peat_cutter; kingdom_villages SerfRenderer)": [
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_front.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "ok",
+          "taken": "22:52:12"
+        },
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_back.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "ok",
+          "taken": "22:52:12"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)": [
+        {
+          "file": "s_townsfolk__aldermark_capital_time_set_3000.png",
+          "scene": 314,
+          "line": 354,
+          "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_2_3_y180.png",
+          "scene": 412,
+          "line": 462,
+          "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:52:44",
+  "totals": {
+    "ok": 9,
+    "fail": 0,
+    "manual": 0
+  }
+}
