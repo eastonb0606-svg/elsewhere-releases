@@ -1,0 +1,161 @@
+{
+  "lanes": {
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_3.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "20:04:58"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_3.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "20:04:59"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_2.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "20:05:00"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_2.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "20:05:00"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_2.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "20:05:01"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_3.png",
+          "scene": 279,
+          "line": 315,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "20:05:02"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_4.png",
+          "scene": 280,
+          "line": 316,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_4.png",
+          "scene": 280,
+          "line": 316,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_4.png",
+          "scene": 280,
+          "line": 316,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_5.png",
+          "scene": 281,
+          "line": 317,
+          "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_5.png",
+          "scene": 281,
+          "line": 317,
+          "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:grunthar_treasure_hall": [
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_0_0_21.png",
+          "scene": 282,
+          "line": 321,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
+          "scene": 282,
+          "line": 321,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:solaxis_pyre_cradle": [
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_24_8_0.png",
+          "scene": 283,
+          "line": 322,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__solaxis_pyre_cradle_s_0_3_30.png",
+          "scene": 283,
+          "line": 322,
+          "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mournmaw_weeping_basin": [
+        {
+          "file": "s_struct_nether__mournmaw_weeping_basin_s_0_16_26.png",
+          "scene": 284,
+          "line": 323,
+          "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:05:02",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
