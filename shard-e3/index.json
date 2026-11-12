@@ -181,7 +181,9 @@
           "scene": 262,
           "line": 298,
           "check": "crisp yellow rings and a red cone on the ground, fill grows then the hit lands as it fills; edges pulse faster near the end; no jagged dust, nothing under the floor or floating",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Slam' within 120 s",
+          "taken": "23:00:16"
         }
       ],
       "`/elsewhere_hud telegraphs hidden`, helm ON": [
@@ -190,14 +192,18 @@
           "scene": 269,
           "line": 305,
           "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Slam' within 120 s",
+          "taken": "23:02:18"
         },
         {
           "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on_5s.png",
           "scene": 269,
           "line": 305,
           "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Slam' within 120 s",
+          "taken": "23:02:18"
         }
       ]
     },
@@ -208,42 +214,48 @@
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:21"
         },
         {
           "file": "s_galesling__gale_sling_third_person.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:22"
         },
         {
           "file": "s_galesling__gale_sling_in_use_first_person.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:22"
         },
         {
           "file": "s_galesling__gale_sling_in_use_third_person.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:23"
         },
         {
           "file": "s_galesling__gale_sling_after_use.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:24"
         },
         {
           "file": "s_galesling__gale_sling_tooltip_2.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:25"
         }
       ],
       "elsewhere:gale_sling_stone": [
@@ -252,7 +264,8 @@
           "scene": 294,
           "line": 333,
           "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:27"
         }
       ]
     },
@@ -263,21 +276,24 @@
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:28"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:29"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
           "scene": 323,
           "line": 363,
           "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:29"
         }
       ]
     },
@@ -288,14 +304,16 @@
           "scene": 344,
           "line": 387,
           "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:32"
         },
         {
           "file": "s_p10_tabard__tabard_emblems_chest_kingdom_module_clie_later.png",
           "scene": 344,
           "line": 387,
           "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:34"
         }
       ]
     },
@@ -306,22 +324,24 @@
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:36"
         },
         {
           "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:02:39"
         }
       ]
     }
   },
-  "run": "22:58:16",
+  "run": "23:02:40",
   "totals": {
-    "ok": 18,
-    "fail": 0,
+    "ok": 32,
+    "fail": 3,
     "manual": 0
   }
 }
