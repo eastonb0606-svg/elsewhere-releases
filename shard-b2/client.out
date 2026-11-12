@@ -849,3 +849,73 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:08:54] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
 [22:08:54] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [22:08:54] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:08:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:wreck_ring in minecraft:overworld at C = -880 63 1536
+[22:08:55] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -853.500000, 73.000000, 1562.500000
+[22:09:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_overworld__wreck_ring_s_26_10_26.png: 
+[22:09:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -879.500000, 51.000000, 1562.500000
+[22:09:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_overworld__wreck_ring_s_0_12_26.png: 
+[22:09:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 178 (s_struct_overworld | elsewhere:wreck_ring) done in 20907 ms
+[22:09:14] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:09:14] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:09:14] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:09:14] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:09:14] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:aphelion_shattered_halo in minecraft:the_end at C = -1648 65 1296
+[22:09:15] [Server thread/INFO] (Minecraft) System chat: ShotRunner has made the advancement [The End?]
+[22:09:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1618.670000, 77.000000, 1325.330000
+[22:09:16] [Render thread/INFO] (Minecraft) Loaded 17 advancements
+[22:09:16] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 10283ms or 205 ticks behind
+[22:09:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__aphelion_shattered_halo_s_26_10_26.png: 
+[22:09:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1629.500000, 57.000000, 1296.500000
+[22:09:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_nether__aphelion_shattered_halo_s_14_10_0.png: 
+[22:09:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 286 (s_struct_nether | elsewhere:aphelion_shattered_halo) done in 15357 ms
+[22:09:30] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:09:30] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:09:30] [Server thread/INFO] (Minecraft) System chat: Set minecraft:the_end to 6000 tick(s)
+[22:09:30] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:09:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
+[22:09:30] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:09:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1636.500000, 121.000000, -7099.500000
+[22:09:36] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2022ms or 40 ticks behind
+[22:09:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_hraf__castle_hrafnholt_overview.png: 
+[22:09:42] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1576.500000, 89.000000, -7103.500000
+[22:09:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_hraf__castle_hrafnholt_ground.png: 
+[22:09:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 466 (s_layout_hraf | elsewhere:castle_hrafnholt) done in 22923 ms
+[22:09:53] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:09:53] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:09:53] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:09:53] [Server thread/INFO] (Minecraft) Stopping server
+[22:09:53] [Server thread/INFO] (Minecraft) Saving players
+[22:09:53] [Server thread/INFO] (Minecraft) Saving worlds
+[22:09:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:09:54] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:09:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 63 ok, 4 fail, 0 manual
+[22:09:54] [Render thread/INFO] (Minecraft) Stopping!
+[22:09:54] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+BUILD SUCCESSFUL in 10m 8s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
