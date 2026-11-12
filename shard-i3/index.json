@@ -1,0 +1,236 @@
+{
+  "lanes": {
+    "s_p13_particles": {
+      "Percolax phase-0 smoke hide (elsewhere:percolax)": [
+        {
+          "file": "s_p13_particles__percolax_smoke_hide_3s.png",
+          "scene": 168,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "ok",
+          "taken": "23:47:17"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:croaking_shrine": [
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_22_9_22.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_0_3_34.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:sunwright_ziggurat": [
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_s_30_14_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_downhill_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:47:19"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:47:20"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:47:21"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:47:23"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:47:25"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:47:25"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "swarm attacking + Mothdust": [
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "ok",
+          "taken": "23:47:29"
+        },
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust_5s.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "ok",
+          "taken": "23:47:30"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "ok",
+          "taken": "23:47:38"
+        },
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "ok",
+          "taken": "23:47:41"
+        }
+      ]
+    },
+    "s_waryak": {
+      "elsewhere:ironpeak_war_yak_horn": [
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "23:47:42"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "23:47:43"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "23:47:42"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "23:47:43"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "23:47:45"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "23:47:46"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:great_hotbox": [
+        {
+          "file": "s_struct_greenhaze__great_hotbox_overview.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__great_hotbox_ground.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lucid_spring": [
+        {
+          "file": "s_struct_greenhaze__lucid_spring_overview.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__lucid_spring_ground.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:47:46",
+  "totals": {
+    "ok": 17,
+    "fail": 0,
+    "manual": 0
+  }
+}
