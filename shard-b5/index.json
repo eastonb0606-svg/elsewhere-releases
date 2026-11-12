@@ -191,14 +191,18 @@
           "scene": 195,
           "line": 221,
           "check": "weapon arm drawn across the chest, torso turned; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Falcon Mark' within 90 s",
+          "taken": "22:04:03"
         },
         {
           "file": "s_p4_rivalanims__azmar_falconer_falcon_mark_strike.png",
           "scene": 195,
           "line": 221,
           "check": "weapon arm drawn across the chest, torso turned; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Falcon Mark' within 90 s",
+          "taken": "22:04:03"
         }
       ]
     },
@@ -220,14 +224,16 @@
           "scene": 221,
           "line": 251,
           "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:07"
         },
         {
           "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_back.png",
           "scene": 221,
           "line": 251,
           "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:08"
         }
       ]
     },
@@ -238,21 +244,24 @@
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:14"
         },
         {
           "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:15"
         },
         {
           "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:16"
         }
       ]
     },
@@ -263,42 +272,48 @@
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:17"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_third_person.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:18"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_in_use_first_person.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:19"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_in_use_third_person.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:20"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_after_use.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:21"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_tooltip.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:22"
         }
       ]
     },
@@ -309,14 +324,16 @@
           "scene": 258,
           "line": 291,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:43"
         },
         {
           "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
           "scene": 258,
           "line": 291,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:19"
         }
       ]
     },
@@ -327,7 +344,8 @@
           "scene": 267,
           "line": 303,
           "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:21"
         }
       ]
     },
@@ -338,14 +356,16 @@
           "scene": 291,
           "line": 330,
           "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:22"
         },
         {
           "file": "s_galesling__gale_sling_tooltip.png",
           "scene": 291,
           "line": 330,
           "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:22"
         }
       ]
     },
@@ -356,42 +376,48 @@
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:23"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_third_person_3.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:24"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:25"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:25"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_after_use_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:26"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_tooltip_2.png",
           "scene": 311,
           "line": 351,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:27"
         }
       ]
     },
@@ -402,21 +428,24 @@
           "scene": 339,
           "line": 382,
           "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:28"
         },
         {
           "file": "s_p5_tooltips__sunlance_staff_third_person.png",
           "scene": 339,
           "line": 382,
           "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:28"
         },
         {
           "file": "s_p5_tooltips__sunlance_staff_tooltip.png",
           "scene": 339,
           "line": 382,
           "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:29"
         }
       ]
     },
@@ -445,21 +474,24 @@
           "scene": 406,
           "line": 456,
           "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:30"
         },
         {
           "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person.png",
           "scene": 406,
           "line": 456,
           "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:31"
         },
         {
           "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip.png",
           "scene": 406,
           "line": 456,
           "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:32"
         }
       ]
     },
@@ -593,10 +625,10 @@
       ]
     }
   },
-  "run": "22:02:32",
+  "run": "22:05:32",
   "totals": {
-    "ok": 9,
-    "fail": 2,
+    "ok": 37,
+    "fail": 4,
     "manual": 0
   }
 }
