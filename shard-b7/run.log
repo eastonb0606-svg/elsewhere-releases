@@ -13,3 +13,35 @@ merged jar elsewhere-3.0.0.jar 133290310 bytes in 79 s
 fatal: expected 'acknowledgments', received 'packfile'
 warning: push negotiation failed; proceeding anyway with push
 published 11 PNGs (progress) -> cloud-shots-b7 ce6160a
+published 48 PNGs (progress) -> cloud-shots-b7 3a296dc
+client rc=0
+[22:03:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__hrafnholt_hallwarden_move_windup.png: wait_label: no boss bar move label within 90 s
+[22:03:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__hrafnholt_hallwarden_move_strike.png: wait_label: no boss bar move label within 90 s
+[22:05:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_marrow_move_windup.png: wait_label: no boss bar move label within 90 s
+[22:05:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_marrow_move_strike.png: wait_label: no boss bar move label within 90 s
+[22:06:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__hrafnholt_jarl_ninth_winter_slam_windup.png: wait_label: no boss bar move label containing 'Ninth-Winter Slam' within 90 s
+[22:06:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__hrafnholt_jarl_ninth_winter_slam_strike.png: wait_label: no boss bar move label containing 'Ninth-Winter Slam' within 90 s
+[22:08:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__mirewick_sorrel_sluice_maul_windup.png: wait_label: no boss bar move label containing 'Sluice Maul' within 90 s
+[22:08:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__mirewick_sorrel_sluice_maul_strike.png: wait_label: no boss bar move label containing 'Sluice Maul' within 90 s
+[22:13:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 59 ok, 8 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:00:49] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:00:49] [Worker-Main-2/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[22:00:49] [Worker-Main-3/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[22:00:53] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:00:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] 22 flat-stage scenes, 8 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:00:56] [Worker-Main-1/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+--
+22:13:49Z finished rc=0, 59 PNGs;  TOTAL 59 ok, 8 fail, 0 manual
