@@ -76,14 +76,23 @@ public final class CoreFitSelfTest {
 		long worst = 0, total = 0;
 		int n = 0;
 		boolean same = true;
+		// planner cost is this thread's CPU time (the budget is a CPU cost; wall time also counts other JVMs sharing the cores), after one
+		// untimed warm-up plan per kind so the JIT's first compile is not billed to a site
+		var mx = java.lang.management.ManagementFactory.getThreadMXBean();
+		boolean cpu = mx.isCurrentThreadCpuTimeSupported();
+		java.util.function.LongSupplier clock = cpu ? mx::getCurrentThreadCpuTime : System::nanoTime;
+		for (String kind : new String[] {"shrine", "chapel", "kiln", "road"}) {
+			int x = -20000 - kind.length() * 4111, z = 15000;
+			plan(kind, CoreFit.ground(gen, hollow, rs), new BlockPos(x, gen.getFirstOccupiedHeight(x, z, net.minecraft.world.level.levelgen.Heightmap.Types.OCEAN_FLOOR_WG, hollow, rs), z), 7L + kind.hashCode());
+		}
 		for (String kind : new String[] {"shrine", "chapel", "kiln", "road"}) {
 			for (int i = 0; i < 4; i++) {
 				int x = 20000 + i * 977 + kind.length() * 4111, z = -15000 + i * 613;
 				BlockPos o = new BlockPos(x, gen.getFirstOccupiedHeight(x, z, net.minecraft.world.level.levelgen.Heightmap.Types.OCEAN_FLOOR_WG, hollow, rs), z);
 				long seed = 1234567L * (i + 1) + kind.hashCode();
-				long t0 = System.nanoTime();
+				long t0 = clock.getAsLong();
 				List<StructurePiece> a = plan(kind, CoreFit.ground(gen, hollow, rs), o, seed);
-				long dt = System.nanoTime() - t0;
+				long dt = clock.getAsLong() - t0;
 				List<StructurePiece> b = plan(kind, CoreFit.ground(gen, hollow, rs), o, seed);
 				same &= sig(a).equals(sig(b)) && !a.isEmpty();
 				worst = Math.max(worst, dt);
@@ -104,7 +113,7 @@ public final class CoreFitSelfTest {
 		}
 		check(same, "plans are deterministic (same seed and ground -> identical pieces, floors, rotations and road cells)");
 		double avg = total / 1e6 / n;
-		check(avg <= 8.0, SelfTest.f("planner time per site: avg %.2f ms, worst %.2f ms (budget 8 ms per site, STRUCTURES.md 5)", avg, worst / 1e6));
+		check(avg <= 8.0, SelfTest.f("planner time per site (%s, warm): avg %.2f ms, worst %.2f ms (budget 8 ms per site, STRUCTURES.md 5)", cpu ? "thread CPU" : "wall", avg, worst / 1e6));
 	}
 
 	// ------------------------------------------------------------------ synthetic hillside

@@ -104,18 +104,22 @@ final class SelfTestStructFit {
 		// valuables, lit campfires, block count in the box
 		int valuable = 0, campfires = 0, blocks = 0;
 		int R = bp.radius();
-		int scanFrom = Math.max(-bp.depth(), Math.max(level.getMinY() - oy, t.minGround() - 6 - oy)); // natural ore veins below the prepared ground are not ours
-		for (int x = -R; x <= R; x++) for (int z = -R; z <= R; z++) for (int y = scanFrom; y <= bp.height(); y++) {
+		StringBuilder found = new StringBuilder();
+		for (int x = -R; x <= R; x++) for (int z = -R; z <= R; z++) {
+			// from this column's prepared ground down 6: natural ore veins and geodes below it are not ours
+			int scanFrom = Math.max(-bp.depth(), Math.max(level.getMinY() - oy, ground.applyAsInt(cx + x, cz + z) - 6 - oy));
+			for (int y = scanFrom; y <= bp.height(); y++) {
 			BlockState b = level.getBlockState(o.offset(x, y, z));
 			if (b.isAir()) continue;
 			String id = BuiltInRegistries.BLOCK.getKey(b.getBlock()).getPath();
-			if (VALUABLE.contains(id)) valuable++;
+			if (VALUABLE.contains(id) && valuable++ < 3) found.append(f(" %s at (%d, %d, %d)", id, x, y, z));
 			if (b.getBlock() instanceof CampfireBlock && b.getValue(CampfireBlock.LIT)) campfires++;
 			blocks++;
+			}
 		}
 		check(floating == 0 && (!cells.isEmpty() || name.equals("clockwork_rig") || name.equals("return_rift_verdigris_sea")),
 			f("struct fit %s: every floor cell stands on continuous support to the ground (%d of %d floating) on a %s", name, floating, cells.size(), wet ? "sea bed" : "1-in-3 slope"));
-		check(valuable == 0 && campfires == 0, f("struct fit %s: no valuable blocks (%d) and no lit campfires (%d)", name, valuable, campfires));
+		check(valuable == 0 && campfires == 0, f("struct fit %s: no valuable blocks (%d%s) and no lit campfires (%d)", name, valuable, found, campfires));
 		VerdigrisIronpeakContent.LOG.info("[selftest] struct fit {}: built in {} ms at {}, {} non-air blocks in its box", name, ms, o.toShortString(), blocks);
 		switch (name) {
 			case "clan_hold" -> {

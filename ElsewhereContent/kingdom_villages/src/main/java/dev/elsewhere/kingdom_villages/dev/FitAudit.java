@@ -48,9 +48,10 @@ import java.util.regex.Pattern;
  * {@link VillageRecord#journal} and the live world. Style-agnostic, so it judges every faction's rebuild, outpost and hamlet
  * the same way (STRUCTURES.md 2.16 metrics, adapted to runtime builds):
  * <ul>
- * <li><b>floating</b>: a standing member (log post, wall, fence, stone or brick course) whose lowest added block has any air,
- * plant or fluid under it; deck pieces (slabs, stairs, planks, trapdoors) must be tied to a grounded member within
- * {@value #TIE} steps; fixtures must pass vanilla {@code canSurvive}; no added block may be detached;</li>
+ * <li><b>floating</b>: every solid added block must be held, bottom-up: ground under it, a lean on a held added block
+ * diagonally below, a full block bridging a one-block gap, or a span of at most {@value #SPAN} along its own level from a held
+ * block; slabs, stairs and trapdoors may hang under a held block; fixtures must pass vanilla {@code canSurvive}. Terrain beside a
+ * block never holds it (a post over a dip floats);</li>
  * <li><b>buried</b>: added faces with natural ground against them 2+ above the column's lowest added block (at most 5%),
  * and no door blocked by an added block or by ground;</li>
  * <li><b>flooding</b>: no lava, no unenclosed water written, and (with {@link #newFluid}) no fluid where there was none
@@ -73,13 +74,23 @@ public final class FitAudit {
 		public int written, additions, verticalCols, floatingCols, maxGap, unsupported, cantSurvive;
 		public int exteriorFaces, buriedFaces, doorsBlocked, valuables, fluidWritten, fluidUnenclosed, lava, newFluid, naturalRemoved, maxCut;
 		public final List<String> samples = new ArrayList<>();
+		/** Every finding in full (bounded), for the worldgen report file. */
+		public final List<String> details = new ArrayList<>();
+		final java.util.Map<String, Integer> perKind = new java.util.HashMap<>();
 
 		Result(String label) {
 			this.label = label;
 		}
 
 		void sample(String kind, BlockPos p, BlockState s) {
-			if (samples.size() < 10) samples.add(kind + "@" + p.toShortString() + "=" + id(s));
+			String k = kind.replaceAll("[0-9]+$", "");
+			int n = perKind.merge(k, 1, Integer::sum);
+			if (n <= 4 && samples.size() < 16) samples.add(kind + "@" + p.toShortString() + "=" + id(s));
+			if (!k.equals("gap") && !k.equals("unsupported") && !k.equals("new-fluid")) detail(kind + " " + p.toShortString() + " " + id(s));
+		}
+
+		void detail(String line) {
+			if (details.size() < 120) details.add(line);
 		}
 
 		public boolean floatingOk() {
@@ -209,68 +220,73 @@ public final class FitAudit {
 			}
 		}
 
-		// 2. standing members: the lowest added block of each column must sit on ground (no air, plant or water gap)
-		LongOpenHashSet groundedBottoms = new LongOpenHashSet();
-		for (var e : lowest.long2IntEntrySet()) {
-			long ck = e.getLongKey();
-			int x = colX(ck), z = colZ(ck), y = e.getIntValue();
-			BlockPos p = new BlockPos(x, y, z);
-			BlockState s = add.get(p.asLong());
-			if (s == null) continue;
-			int gap = 0;
-			m.set(x, y - 1, z);
-			while (gap < 64 && m.getY() > level.getMinY() && !ground(level.getBlockState(m))) {
-				gap++;
-				m.move(Direction.DOWN);
-			}
-			if (gap == 0) groundedBottoms.add(p.asLong());
-			if (deck(s)) continue;
-			res.verticalCols++;
-			if (gap > 0) {
-				res.floatingCols++;
-				res.maxGap = Math.max(res.maxGap, gap);
-				res.sample("gap" + gap, p, s);
-			}
-		}
-
-		// 3. every solid added block is tied (26-neighbour, through solid added blocks) to ground within TIE steps
-		Long2IntOpenHashMap dist = new Long2IntOpenHashMap();
-		dist.defaultReturnValue(-1);
-		LongArrayFIFOQueue q = new LongArrayFIFOQueue();
+		// 2. support (bottom-up): every solid added block must be held. It is held when the block under it is ground (the world's,
+		//    or a held added block); when it leans on a held added block diagonally below (acacia-style kinks, stair roofs stepping
+		//    in); when it is a full block bridging a one-block gap between two supports; or when it is at most SPAN steps along its
+		//    own level (4-neighbour, through solid added blocks) from a held block (lintels, flat roofs, cornices, decks). A slab,
+		//    stair or trapdoor right under a held block is held too (corbels, eaves). Terrain beside or diagonally below never holds:
+		//    a post one block over a dip floats even when the next column's ground is level with it.
+		Long2ObjectOpenHashMap<BlockState> sol = new Long2ObjectOpenHashMap<>();
+		java.util.TreeMap<Integer, it.unimi.dsi.fastutil.longs.LongArrayList> byY = new java.util.TreeMap<>();
 		for (var e : add.long2ObjectEntrySet()) {
 			BlockState s = e.getValue();
 			if (!s.isSolid() || attached(s)) continue;
-			BlockPos p = BlockPos.of(e.getLongKey());
-			boolean anchored = groundedBottoms.contains(e.getLongKey());
-			for (Direction d : Direction.values()) {
-				if (anchored) break;
-				BlockPos n = p.relative(d);
-				if (!add.containsKey(n.asLong()) && ground(level.getBlockState(n))) anchored = true;
+			sol.put(e.getLongKey(), s);
+			byY.computeIfAbsent(BlockPos.getY(e.getLongKey()), k -> new it.unimi.dsi.fastutil.longs.LongArrayList()).add(e.getLongKey());
+		}
+		LongOpenHashSet held = new LongOpenHashSet();
+		for (var lv : byY.values()) {
+			LongArrayFIFOQueue q = new LongArrayFIFOQueue();
+			Long2IntOpenHashMap span = new Long2IntOpenHashMap();
+			for (long k : lv) if (heldBase(level, k, add, sol, held)) {
+				held.add(k);
+				span.put(k, 0);
+				q.enqueue(k);
 			}
-			if (anchored) {
-				dist.put(e.getLongKey(), 0);
-				q.enqueue(e.getLongKey());
+			while (!q.isEmpty()) {
+				long k = q.dequeueLong();
+				int d0 = span.get(k);
+				if (d0 >= SPAN) continue;
+				BlockPos p = BlockPos.of(k);
+				for (Direction d : Direction.Plane.HORIZONTAL) {
+					long nk = p.relative(d).asLong();
+					if (!sol.containsKey(nk) || !held.add(nk)) continue;
+					span.put(nk, d0 + 1);
+					q.enqueue(nk);
+				}
 			}
 		}
-		while (!q.isEmpty()) {
-			long k = q.dequeueLong();
-			int d0 = dist.get(k);
-			if (d0 >= TIE) continue;
-			BlockPos p = BlockPos.of(k);
-			for (int dx = -1; dx <= 1; dx++) for (int dy = -1; dy <= 1; dy++) for (int dz = -1; dz <= 1; dz++) {
-				if (dx == 0 && dy == 0 && dz == 0) continue;
-				long nk = BlockPos.asLong(p.getX() + dx, p.getY() + dy, p.getZ() + dz);
-				BlockState ns = add.get(nk);
-				if (ns == null || !ns.isSolid() || attached(ns) || dist.get(nk) >= 0) continue;
-				dist.put(nk, d0 + 1);
-				q.enqueue(nk);
-			}
+		for (var lv : byY.descendingMap().values()) for (long k : lv) {
+			if (held.contains(k) || !hangs(sol.get(k))) continue;
+			long up = BlockPos.offset(k, Direction.UP);
+			if (sol.containsKey(up) ? held.contains(up) : !add.containsKey(up) && ground(level.getBlockState(BlockPos.of(up)))) held.add(k);
 		}
-		for (var e : add.long2ObjectEntrySet()) {
-			BlockState s = e.getValue();
-			if (!s.isSolid() || attached(s) || dist.get(e.getLongKey()) >= 0) continue;
+		for (var e : lowest.long2IntEntrySet()) {
+			long ck = e.getLongKey();
+			BlockPos p = new BlockPos(colX(ck), e.getIntValue(), colZ(ck));
+			BlockState s = sol.get(p.asLong());
+			if (s == null) continue;
+			res.verticalCols++;
+			if (held.contains(p.asLong())) continue;
+			int gap = 0;
+			m.set(p.getX(), p.getY() - 1, p.getZ());
+			StringBuilder under = new StringBuilder();
+			while (gap < 64 && m.getY() > level.getMinY() && !ground(level.getBlockState(m))) {
+				if (gap < 4) under.append(gap == 0 ? "" : ",").append(id(level.getBlockState(m)));
+				gap++;
+				m.move(Direction.DOWN);
+			}
+			res.floatingCols++;
+			res.maxGap = Math.max(res.maxGap, gap);
+			res.sample("gap" + gap, p, s);
+			res.detail("floating gap" + gap + " " + p.toShortString() + " " + id(s) + " over [" + under + "] on " + id(level.getBlockState(m)));
+		}
+		for (var e : sol.long2ObjectEntrySet()) {
+			long k = e.getLongKey();
+			if (held.contains(k) || BlockPos.getY(k) == lowest.get(columnKey(BlockPos.of(k)))) continue;
 			res.unsupported++;
-			res.sample("unsupported", BlockPos.of(e.getLongKey()), s);
+			res.sample("unsupported", BlockPos.of(k), e.getValue());
+			res.detail("unsupported " + BlockPos.of(k).toShortString() + " " + id(e.getValue()));
 		}
 
 		// 4. buried faces and blocked doors
@@ -322,10 +338,47 @@ public final class FitAudit {
 					if (ch != null && !ch.written().getFluidState().isEmpty()) continue; // written on purpose (counted above)
 					res.newFluid++;
 					res.sample("new-fluid", n, level.getBlockState(n));
+					StringBuilder near = new StringBuilder();
+					for (int ex = -1; ex <= 1; ex++) for (int ey = -1; ey <= 1; ey++) for (int ez = -1; ez <= 1; ez++) {
+						VillageRecord.Change c2 = r.journal.get(BlockPos.asLong(n.getX() + ex, n.getY() + ey, n.getZ() + ez));
+						if (c2 != null) near.append(' ').append(n.offset(ex, ey, ez).toShortString()).append(' ').append(id(c2.original())).append('>').append(id(c2.written()));
+					}
+					res.detail("new-fluid " + n.toShortString() + " " + id(level.getBlockState(n)) + (f.isSource() ? " source" : " flowing") + " | journal near:" + near);
 				}
 			}
 		}
 		return res;
+	}
+
+	/** How far (blocks along its own level) an added block may reach from a held one: a lintel, flat roof or cornice span. */
+	public static final int SPAN = 4;
+
+	/** Held from below: ground under it, a lean on a held added block diagonally below, or a full block bridging a gap. */
+	static boolean heldBase(ServerLevel level, long k, Long2ObjectOpenHashMap<BlockState> add, Long2ObjectOpenHashMap<BlockState> sol, LongOpenHashSet held) {
+		BlockPos p = BlockPos.of(k);
+		if (supports(level, p.below(), add, sol, held)) return true;
+		for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) {
+			if (dx == 0 && dz == 0) continue;
+			long q = BlockPos.asLong(p.getX() + dx, p.getY() - 1, p.getZ() + dz);
+			if (sol.containsKey(q) && held.contains(q)) return true;
+		}
+		BlockState s = sol.get(k);
+		if (s != null && s.isCollisionShapeFullBlock(level, p)) for (Direction d : new Direction[] {Direction.EAST, Direction.SOUTH})
+			if (supports(level, p.relative(d), add, sol, held) && supports(level, p.relative(d.getOpposite()), add, sol, held)) return true;
+		return false;
+	}
+
+	/** A block that holds what rests on it: a held added block, or the world's own ground (not an unheld or non-solid addition). */
+	static boolean supports(ServerLevel level, BlockPos q, Long2ObjectOpenHashMap<BlockState> add, Long2ObjectOpenHashMap<BlockState> sol, LongOpenHashSet held) {
+		long k = q.asLong();
+		if (sol.containsKey(k)) return held.contains(k);
+		return !add.containsKey(k) && ground(level.getBlockState(q));
+	}
+
+	/** Pieces that may hang under a held block: corbels, eaves, upside-down stairs and slabs, trapdoors. */
+	static boolean hangs(BlockState s) {
+		Block b = s.getBlock();
+		return b instanceof SlabBlock || b instanceof StairBlock || b instanceof TrapDoorBlock;
 	}
 
 	/** A written water block holds: solid or water on every side and below. */

@@ -296,7 +296,7 @@ public final class FitBuilds {
 		for (int u = -6; u <= 6; u++) for (int w = -8; w <= 12; w++) {
 			int[] d = rot(f, u, w);
 			if (Math.abs(u) <= 5 && w >= -7) {
-				s.underpin(d[0], -1, d[1], bricks, cobble, stone, 12);
+				s.underpin(d[0], -1, d[1], bricks, cobble, stone, 24); // the terrace's retaining wall on the downhill side
 				s.set(d[0], 0, d[1], w >= 9 ? terracePave(s, d[0], d[1]) : w >= 6 ? planks : (Math.abs(u) == 5 || w == -7 ? cobble : planks));
 			}
 			if (w >= 5) s.trim(d[0], d[1], Math.abs(u) <= 5 ? 0 : Math.abs(u) - 5, 12);

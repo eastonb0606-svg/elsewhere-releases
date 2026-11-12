@@ -30,6 +30,10 @@ dependencies {
 	// 3.0.0 jar with its own copy of dev/elsewhere/compat/jei removed, so this module's classes are the only ones).
 	runtimeOnly files(project.findProperty("elsewhereRuntime") ?: "libs/elsewhere-0.3.0-beta.jar")
 	runtimeOnly("mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}") { transitive = false }
+	// -PtestmeterRuntime=<testmeter jar>: the self-test also checks the Transmutation Table/Tablet entries against Test Meter.
+	if (project.hasProperty("testmeterRuntime")) {
+		runtimeOnly files(project.property("testmeterRuntime"))
+	}
 }
 loom {
 	runs {

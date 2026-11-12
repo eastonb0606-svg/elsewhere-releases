@@ -237,6 +237,7 @@ public final class WorldgenCheck {
 		check(what + ": no flooding", a.floodOk(), a.flood());
 		check(what + ": no valuable blocks", a.valuableOk(), a.valuables == 0 ? null : a.valuables + " " + a.samples);
 		check(what + ": cuts at most " + FitAudit.MAX_CUT + " deep", a.cutOk(), "natural blocks removed " + a.naturalRemoved + ", deepest column " + a.maxCut);
+		if (!(a.floatingOk() && a.buriedOk() && a.floodOk())) for (String d : a.details) LOG.add("  detail " + what + ": " + d); // report file only
 	}
 
 	static void restore(VillageRecord r, String what) {

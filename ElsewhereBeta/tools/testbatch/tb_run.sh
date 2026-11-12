@@ -7,7 +7,7 @@
 # module it was running is recorded as JVM-DIED and a new boot (same world) goes on with the modules not yet run.
 # Env: JH (JDK home), TB_XMX (heap, default 2560m), TB_TIMEOUT (s per module, default 1200), TB_FLATR (flat reset
 # radius in chunks, default 8), TB_JD ("-Dk=v ..." for every JVM), TB_FLAGS ("mod:k=v;k=v|mod2:k=v": per-module -D),
-# TB_PAR=1 (run the profiles in parallel: one JVM each at the same time; 0 or unset = one after another).
+# TB_PAR=N (at most N profiles, one JVM each, at the same time; 0 or unset = one after another).
 setopt null_glob
 P=$1; shift
 M=${0:A:h}; cd $M || exit 1
@@ -28,7 +28,8 @@ runprofile() { # <profile> <mods> <port>
     print -r -- "motd=Elsewhere test batch $prof"
     if [[ $prof == flat* ]]; then
       print -r -- "level-type=minecraft:flat"; print -r -- "generator-settings=$GEN"; print -r -- "generate-structures=false"
-      print -r -- "spawn-monsters=false"; print -r -- "view-distance=6"; print -r -- "simulation-distance=6"
+      local vd=4; [[ ,$mods, == *,court,* ]] && vd=6   # as modtests-kingdom: court 6, the others 4
+      print -r -- "spawn-monsters=false"; print -r -- "view-distance=$vd"; print -r -- "simulation-distance=$vd"
     else
       print -r -- "gamemode=survival"; print -r -- "difficulty=easy"
     fi
@@ -63,7 +64,13 @@ rm -rf $M/run-tb-*(N)   # no stale profile of an earlier run reaches the summary
 pids=(); i=0
 for spec in "$@"; do
   prof=${spec%%=*}; mods=${spec#*=}
-  if [ "${TB_PAR:-0}" != 0 ]; then runprofile $prof $mods $((P + i)) & pids+=($!); else runprofile $prof $mods $((P + i)); fi
+  if [ "${TB_PAR:-0}" -gt 0 ]; then
+    while true; do  # at most TB_PAR profiles (JVMs) at once
+      live=0; for p in $pids; do kill -0 $p 2>/dev/null && live=$((live + 1)); done
+      [ $live -lt $TB_PAR ] && break; sleep 5
+    done
+    runprofile $prof $mods $((P + i)) & pids+=($!)
+  else runprofile $prof $mods $((P + i)); fi
   i=$((i + 1))
 done
 for p in $pids; do wait $p; done

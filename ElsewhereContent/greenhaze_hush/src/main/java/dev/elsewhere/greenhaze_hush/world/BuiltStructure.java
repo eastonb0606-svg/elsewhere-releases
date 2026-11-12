@@ -117,9 +117,15 @@ public final class BuiltStructure extends Structure {
 			var column = context.chunkGenerator().getBaseColumn(x + c[0], z + c[1], context.heightAccessor(), context.randomState());
 			for (int yy = y - h; yy <= y + h; yy++) if (!column.getBlock(yy).getFluidState().isEmpty()) return false;
 			if (kind.equals("hanging_undercity") && c[0] == 0) {
-				boolean roof = false;
-				for (int yy = y + 1; yy <= y + 12 && !roof; yy++) roof = !column.getBlock(yy).isAir() && column.getBlock(yy).getFluidState().isEmpty();
-				if (!roof) return false;
+				if (dev.elsewhere.greenhaze_hush.world.fit.GhFit.LOOKS) {
+					// 3.0 looks: a roof within 12 above over a cavern the hub tower can hang in free (never buried in rock or standing on the floor)
+					var col = column;
+					if (!dev.elsewhere.greenhaze_hush.world.fit.GhPlans.undercitySite((xx, yy, zz) -> col.getBlock(yy), x, z, y)) return false;
+				} else {
+					boolean roof = false;
+					for (int yy = y + 1; yy <= y + 12 && !roof; yy++) roof = !column.getBlock(yy).isAir() && column.getBlock(yy).getFluidState().isEmpty();
+					if (!roof) return false;
+				}
 			}
 		}
 		return true;

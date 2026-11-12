@@ -78,6 +78,9 @@ public final class MirewickLooks {
 	/** The last canal quay: its box, the water top y it stands on, and how many edge blocks it planned. */
 	public static @Nullable BoundingBox lastQuay;
 	public static int lastQuayWater = NONE, lastQuayEdges, lastLanterns;
+	/** The last boardwalk search: the start street cell (null: no street within 10 of the bell), street cells reached, farthest, legs tried. */
+	public static @Nullable BlockPos lastWalkStart;
+	public static int lastWalkCells, lastWalkFar, lastWalkTried;
 
 	/** What one plan built, kept per village id (the self-test reads its own village's even if another Mirewick plan ran since). */
 	public record Plan(List<int[][]> legs, int @Nullable [] hut, @Nullable BoundingBox quay, int quayWater, int quayEdges, int lanterns) {}
@@ -391,7 +394,10 @@ public final class MirewickLooks {
 				break search;
 			}
 		}
+		lastWalkStart = null;
+		lastWalkCells = lastWalkFar = lastWalkTried = 0;
 		if (start == Long.MIN_VALUE) return;
+		lastWalkStart = BlockPos.of(start);
 		// breadth-first over the street cells: the legs follow the village's own streets
 		Map<Long, Long> parent = new HashMap<>();
 		Map<Long, Integer> dist = new HashMap<>();
@@ -412,6 +418,8 @@ public final class MirewickLooks {
 			}
 		}
 		// up to three legs to the farthest street ends, in clearly different directions
+		lastWalkCells = dist.size();
+		for (int v : dist.values()) lastWalkFar = Math.max(lastWalkFar, v);
 		List<Long> cand = new ArrayList<>(dist.keySet());
 		cand.sort((a, bb) -> dist.get(bb) - dist.get(a) != 0 ? dist.get(bb) - dist.get(a) : Long.compare(a, bb));
 		List<Double> angles = new ArrayList<>();
@@ -431,6 +439,7 @@ public final class MirewickLooks {
 			// a later leg starts where it branches off an earlier one (that cell's deck height is fixed)
 			int from = 0;
 			for (int i = 0; i < chain.size(); i++) if (deck.containsKey(chain.get(i))) from = i;
+			lastWalkTried++;
 			if (leg(b, chain.subList(from, chain.size()), deck, deck.containsKey(chain.get(from)))) angles.add(a);
 		}
 	}

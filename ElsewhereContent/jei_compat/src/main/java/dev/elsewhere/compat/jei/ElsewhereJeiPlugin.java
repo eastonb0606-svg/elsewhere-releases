@@ -6,11 +6,15 @@ import java.util.Map;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.ingredients.subtypes.ISubtypeInterpreter;
+import mezz.jei.api.ingredients.subtypes.UidContext;
 import mezz.jei.api.registration.IAdvancedRegistration;
+import mezz.jei.api.registration.IExtraIngredientRegistration;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.IRecipeTransferRegistration;
+import mezz.jei.api.registration.ISubtypeRegistration;
 import mezz.jei.api.runtime.IJeiRuntime;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -37,6 +41,24 @@ public final class ElsewhereJeiPlugin implements IModPlugin {
 
 	private static ItemStack icon(final String id, final ItemStack fallback) {
 		return ElsewhereJeiData.item(id).map(ItemStack::new).orElse(fallback);
+	}
+
+	/** Test Meter's Table and Tablet are vanilla items with custom_data; this makes each its own JEI entry (searchable, own recipe). */
+	@Override
+	public void registerItemSubtypes(final ISubtypeRegistration registration) {
+		if (!TransmutationCategory.available()) {
+			return;
+		}
+		ISubtypeInterpreter<ItemStack> testMeterKind = (final ItemStack stack, final UidContext context) -> TransmutationCategory.subtype(stack);
+		registration.registerSubtypeInterpreter(Items.ENCHANTING_TABLE, testMeterKind);
+		registration.registerSubtypeInterpreter(Items.RECOVERY_COMPASS, testMeterKind);
+	}
+
+	@Override
+	public void registerExtraIngredients(final IExtraIngredientRegistration registration) {
+		if (TransmutationCategory.available()) {
+			registration.addExtraItemStacks(List.of(TransmutationCategory.table(), TransmutationCategory.tablet()));
+		}
 	}
 
 	@Override
@@ -69,6 +91,16 @@ public final class ElsewhereJeiPlugin implements IModPlugin {
 			}
 			registration.addIngredientInfo(item.get(), lines.toArray(Component[]::new));
 			info++;
+		}
+		if (TransmutationCategory.available()) {
+			for (var e : Map.of("transmutation_table", TransmutationCategory.table(), "transmutation_tablet", TransmutationCategory.tablet()).entrySet()) {
+				List<Component> lines = new ArrayList<>();
+				for (int i = 0; i < TransmutationCategory.INFO.size(); i++) {
+					lines.add(Component.translatableWithFallback("jei.elsewhere.info." + e.getKey() + "." + i, TransmutationCategory.INFO.get(i)));
+				}
+				registration.addIngredientInfo(e.getValue(), VanillaTypes.ITEM_STACK, lines.toArray(Component[]::new));
+				info++;
+			}
 		}
 		ElsewhereJeiData.LOG.info("Elsewhere JEI plugin: {} Wayfinder attunements, {} loot pages, {} shop lines, {} info pages",
 			data.attunements().size(), data.loot().size(), data.trades().size(), info);

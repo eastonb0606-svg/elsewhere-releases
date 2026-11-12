@@ -658,8 +658,12 @@ public final class HrafnLooks {
 		BlockPos best = null;
 		int[][] bestG = null;
 		int bestSpread = 3;
-		for (int t = 0; t < 70 && bestSpread > 0; t++) {
-			BlockPos s = b.c.bell.offset(b.c.rnd.nextInt(61) - 30, 0, b.c.rnd.nextInt(61) - 30);
+		// every second cell within 30 of the bell, nearest first (70 random tries missed the open meadow in a crowded village: s-asm-vill)
+		List<int[]> cand = new ArrayList<>();
+		for (int dx = -30; dx <= 30; dx += 2) for (int dz = -30; dz <= 30; dz += 2) cand.add(new int[] {dx, dz});
+		cand.sort(java.util.Comparator.comparingInt(o -> o[0] * o[0] + o[1] * o[1]));
+		for (int t = 0; t < cand.size() && bestSpread > 0; t++) {
+			BlockPos s = b.c.bell.offset(cand.get(t)[0], 0, cand.get(t)[1]);
 			int[][] g = new int[9][9];
 			int max = NONE, min = Integer.MAX_VALUE;
 			boolean ok = true;

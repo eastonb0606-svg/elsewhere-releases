@@ -16,9 +16,10 @@ and one combined log per profile as `modtests-<tag>-<profile>-latest.log` (same 
 - One gradle `classes writeServerLaunch`, then one JVM per profile, all inside the same heavy.sh job:
   - `world` (default world, survival/easy, as the old modtests groups): elsewhere, arsenal, summoner,
     petalwind_glasswaste, verdigris_ironpeak, greenhaze_hush, overworld_bosses, nether_end_bosses, boss_ui, gear2, gear3.
-  - `flat` and `flat2` (superflat plains, no structures, no monsters, as modtests-kingdom): kingdom, court, lore,
-    duelist, mirewick | villages, hrafnholt, azmar, bosshealth. Two world types are needed: overworld_bosses locates
-    structures in the noise overworld, and the kingdom set needs the flat world of its lanes.
+  - `flat_<mod>` (superflat plains, no structures, no monsters, view distance 4, court 6: exactly modtests-kingdom),
+    one fresh world per kingdom-set module: kingdom, villages, bosshealth, hrafnholt, azmar, court, duelist, mirewick,
+    lore (longest first). Two world types are needed: overworld_bosses locates structures in the noise overworld, and
+    the kingdom set needs the flat world of its lanes. At most `TB_PAR` (3) JVMs run at once.
 - In each JVM the modules run one after another in the same world. Per module: `<id>.selftest=true` and
   `<id>.selftest.exit=true` are set, its hook runs, its start listeners run at once and its tick listeners run only
   while it is the current module; its own `halt(false)` ends the module instead of the server.
@@ -34,7 +35,7 @@ and one combined log per profile as `modtests-<tag>-<profile>-latest.log` (same 
   `-D<id>.selftest` prefixes.
 - `TB_FLAGS="duelist:duelist.auditFixtures=x;k=v|court:k=v"` per-module `-D` flags, set only while that module runs.
   `TB_JD="-Dk=v ..."` JVM-wide flags (for static-final reads).
-- `TB_PAR=0` one JVM at a time (strictly one slot's worth of memory); default runs the profiles at once.
+- `TB_PAR=N` at most N JVMs at once (default 3, 2.5 GB each); `TB_PAR=0` one at a time.
 - `TB_SRC=<tree on the iMac>` test a tree already there (e.g. a previous merge's `ElsewhereBeta-mtk`) instead of ROOT's.
 - `TB_XMX` (2560m), `TB_TIMEOUT` (1200), `PORT0` (25790), `LANE`, `HL`.
 
@@ -49,10 +50,10 @@ and one combined log per profile as `modtests-<tag>-<profile>-latest.log` (same 
   dusk, a villages road outside the old reset radius in Azmar's hash) and are fixed above; see `out-imac/testbatch/tb3`.
 - Gaps between modules are 2 s; a boot is about 20-30 s; no 420 s `haltAfterSeconds` idle per group any more.
 
-## Status (13:52) - read before relying on the flat profiles
-- `world` (11 modules, one JVM): verified green and equal to or better than the old boots. Use it.
-- `flat`/`flat2` (kingdom set sharing a JVM): the three order effects found (time of day, a leftover village road,
-  MSPT under 3 JVMs) are fixed and verified in `tb3`, but `tb3` then failed 4 checks that pass in single-module boots
-  and in `tb2` (hrafnholt: Verse of Winter at 50%, Wolfskin Boots no slipping; azmar: High-Ground Kite, Falcon Mark).
-  Until that is explained, run the kingdom set one module per JVM (old `imac_int.sh modtests-kingdom`), or give each
-  its own flat profile here: `flatk=kingdom flatc=court ...` (each profile is a fresh world).
+## Status (13:55) - why the kingdom set is not shared
+- `world` (11 modules, one JVM): verified green, equal to or better than the old boots.
+- Kingdom set in a shared world (`flat=a,b,c`, still possible): the three order effects found in `tb2` (time of day,
+  a leftover village road, MSPT with 3 JVMs) are fixed and verified in `tb3`, but `tb3` then failed 4 checks that pass
+  in every single-module boot (hrafnholt: Verse of Winter at 50%, Wolfskin Boots no slipping; azmar: High-Ground Kite,
+  Falcon Mark). So the default gives each of these modules its own fresh flat world, as modtests-kingdom did, inside
+  the same heavy.sh job. The full default run (world + 9 flat profiles, TB_PAR 3) has not yet run end to end.

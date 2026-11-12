@@ -11,6 +11,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.TerrainAdjustment;
 
@@ -367,28 +368,59 @@ public final class GhPlans {
 	}
 
 	/** Up to 7 towers, each hung from its own ceiling (the centre one always, it keeps the Ancients' door); chain bridges from the centre. */
+	/** Lowest roof in (lo, hi] with at least 4 air under it (a ceiling a tower can hang from), or MIN_VALUE. */
+	static int hang(Columns c, int x, int z, int lo, int hi) {
+		int air = 0;
+		for (int yy = lo; yy <= hi; yy++) {
+			BlockState s = c.at(x, yy, z);
+			if (s.isAir()) air++;
+			else if (air >= 4 && solid(s)) return yy;
+			else air = 0;
+		}
+		return Integer.MIN_VALUE;
+	}
+
+	/** Undercity site (worldgen rule and self-test): a roof within 12 above {@code y} over a cavern tall enough for the hub to hang free. */
+	public static boolean undercitySite(Columns c, int x, int z, int y) {
+		int roof = hang(c, x, z, y - 8, y + 12);
+		if (roof == Integer.MIN_VALUE) return false;
+		int drop = 0;
+		while (drop < 22 && c.at(x, roof - 1 - drop, z).isAir()) drop++;
+		return drop >= 22; // hub: w 4, chain up to 4, h 8 (see undercity)
+	}
+
 	static List<Piece> undercity(BlockPos o, long seed, Columns c) {
 		int x = o.getX(), y = o.getY(), z = o.getZ();
 		RandomSource r = RandomSource.create(seed);
 		List<Piece> towers = new ArrayList<>(), bridges = new ArrayList<>();
 		List<int[]> placed = new ArrayList<>(); // tx, top, tz, w
 		for (int i = 0; i < 7; i++) {
-			double a = i * 2 * Math.PI / 7 + r.nextDouble() * 0.4;
-			double rad = i == 0 ? 0 : 9 + r.nextInt(7);
-			int tx = x + (int) Math.round(Math.cos(a) * rad), tz = z + (int) Math.round(Math.sin(a) * rad);
-			int h = 12 + r.nextInt(14), w = i == 0 ? 4 : 3, chain = 2 + r.nextInt(3);
-			int ceil = ceiling(c, tx, tz, y - 8, 24);
-			if (i == 0 && ceil == Integer.MIN_VALUE) ceil = y + 1;
-			if (ceil == Integer.MIN_VALUE) continue;
-			boolean room = true;
-			for (int yy = ceil - 1; yy >= ceil - 4 && room; yy--) room = c.at(tx, yy, tz).isAir();
-			boolean apart = true;
-			for (int[] q : placed) apart &= Math.max(Math.abs(q[0] - tx), Math.abs(q[2] - tz)) > q[3] + w + 2;
-			if (i != 0 && (!room || !apart)) continue;
-			int top = ceil - 2 - chain;
-			towers.add(new Piece("tower", new BlockPos(tx, top, tz), seed ^ (0x70E1L * (i + 1)), 0, new int[] {ceil, h, w, i == 0 ? 1 : 0},
-				box(tx - w - 2, top - h - 2 * w - 3, tz - w - 2, tx + w + 2, ceil + 6, tz + w + 2), null, null));
-			placed.add(new int[] {tx, top, tz, w});
+			double a0 = i * 2 * Math.PI / 7 + r.nextDouble() * 0.4;
+			int rad0 = i == 0 ? 0 : 9 + r.nextInt(7);
+			int h0 = 12 + r.nextInt(14), w = i == 0 ? 4 : 3, chain = 2 + r.nextInt(3);
+			// up to 4 spots per tower (its bearing, either side of it, then further out): each hangs from a real roof over open air and
+			// stops short of the cave floor (the hub always stands, from y + 1 when the dev site has no roof: worldgen sites always do)
+			for (int t = 0; t < (i == 0 ? 1 : 4); t++) {
+				double a = a0 + (t == 1 ? 0.3 : t == 2 ? -0.3 : 0);
+				int rad = rad0 + (t == 3 ? 5 : 0);
+				int tx = x + (int) Math.round(Math.cos(a) * rad), tz = z + (int) Math.round(Math.sin(a) * rad);
+				int ceil = hang(c, tx, tz, y - 8, y + 24);
+				if (ceil == Integer.MIN_VALUE && i != 0) continue;
+				if (ceil == Integer.MIN_VALUE) ceil = y + 1;
+				int drop = 0;
+				while (drop < 48 && c.at(tx, ceil - 1 - drop, tz).isAir()) drop++;
+				int h = Math.min(h0, drop - chain - 2 * w - 2); // lowest spire block (top - h - 2w + 2) stays 3 over the floor
+				if (i != 0 && h < 8) continue;
+				h = Math.max(h, 8);
+				boolean apart = true;
+				for (int[] q : placed) apart &= Math.max(Math.abs(q[0] - tx), Math.abs(q[2] - tz)) > q[3] + w + 2;
+				if (!apart) continue;
+				int top = ceil - 2 - chain;
+				towers.add(new Piece("tower", new BlockPos(tx, top, tz), seed ^ (0x70E1L * (i + 1)), 0, new int[] {ceil, h, w, i == 0 ? 1 : 0},
+					box(tx - w - 2, top - h - 2 * w - 3, tz - w - 2, tx + w + 2, ceil + 6, tz + w + 2), null, null));
+				placed.add(new int[] {tx, top, tz, w});
+				break;
+			}
 		}
 		int[] hub = placed.get(0);
 		for (int k = 1; k < placed.size(); k++) {

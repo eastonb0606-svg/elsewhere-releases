@@ -21,6 +21,7 @@ import dev.elsewhere.kingdom_villages.VillagesApi;
 import dev.elsewhere.kingdom_villages.WarBridge;
 import net.fabricmc.fabric.api.entity.FakePlayer;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -147,8 +148,8 @@ public final class RivalsTest {
 	}
 
 	static int banners(VillageRecord r, net.minecraft.world.item.DyeColor c) {
-		Block want = Blocks.BANNER.pick(c);
-		return countTag(r, s -> s.is(want));
+		Block want = Blocks.BANNER.pick(c), wall = Blocks.WALL_BANNER.pick(c);
+		return countTag(r, s -> s.is(want) || s.is(wall));
 	}
 
 	static boolean journalHasFluid(VillageRecord r) {
@@ -256,6 +257,28 @@ public final class RivalsTest {
 		for (int x = -8; x < POOL_X + 8; x++) for (int z = -8; z < POOL_Z + 8; z++) for (int y = -63; y <= -58; y++)
 			if (level.getBlockState(new BlockPos(poolOrigin.getX() + x, y, poolOrigin.getZ() + z)).is(Blocks.WATER)) n++;
 		return n;
+	}
+
+	/** Where the pool spilled (flowing water) and what the rebuild wrote next to it: the failure message of the flood check. */
+	static String floodHint(VillageRecord r) {
+		StringBuilder sb = new StringBuilder();
+		int shown = 0;
+		for (int x = -8; x < POOL_X + 8 && shown < 4; x++) for (int z = -8; z < POOL_Z + 8 && shown < 4; z++) for (int y = -63; y <= -58 && shown < 4; y++) {
+			BlockPos q = new BlockPos(poolOrigin.getX() + x, y, poolOrigin.getZ() + z);
+			var f = level.getFluidState(q);
+			if (f.isEmpty() || f.isSource()) continue;
+			boolean edge = false; // the outflow: flowing water beside or under a source
+			for (Direction d : Direction.values()) if (d != Direction.DOWN && level.getFluidState(q.relative(d)).isSource()) edge = true;
+			if (!edge) continue;
+			shown++;
+			sb.append(" | flowing ").append(q.toShortString()).append(" near:");
+			for (int dx = -2; dx <= 2; dx++) for (int dy = -1; dy <= 2; dy++) for (int dz = -2; dz <= 2; dz++) {
+				VillageRecord.Change ch = r.journal.get(q.offset(dx, dy, dz).asLong());
+				if (ch != null) sb.append(' ').append(q.offset(dx, dy, dz).toShortString()).append(' ').append(ch.original().getBlock().getDescriptionId().replace("block.minecraft.", ""))
+					.append(">").append(ch.written().getBlock().getDescriptionId().replace("block.minecraft.", ""));
+			}
+		}
+		return sb.toString();
 	}
 
 	static void hrafnholtRebuild() {
@@ -369,7 +392,7 @@ public final class RivalsTest {
 		check("Hrafnholt waterfront (16a): a spruce pier of slabs on log pilings and a boathouse beside open water", slabs >= 8 && logsInWater >= 2 && VH.pieces.stream().anyMatch(pc -> pc.type() == RivalPlans.PIER), "slabs " + slabs + " pilings " + logsInWater);
 		int piled = 0;
 		for (var e : VH.journal.long2ObjectEntrySet()) if (e.getValue().original().is(Blocks.WATER)) piled++;
-		check("Hrafnholt waterfront never floods: water in and around the pool is exactly what was there less each pile", poolWater() == poolWater0 - piled, poolWater0 + " -> " + poolWater() + " piles " + piled);
+		check("Hrafnholt waterfront never floods: water in and around the pool is exactly what was there less each pile", poolWater() == poolWater0 - piled, poolWater0 + " -> " + poolWater() + " piles " + piled + floodHint(VH));
 		HrafnLooksTest.checks(level, VH, poolOrigin, POOL_X, POOL_Z);
 		// Azmar
 		int gold = count(VA, Blocks.GLAZED_TERRACOTTA.yellow()), lapis = count(VA, Blocks.DYED_TERRACOTTA.pick(net.minecraft.world.item.DyeColor.BLUE)), valuable = count(VA, Blocks.LAPIS_BLOCK) + count(VA, Blocks.GOLD_BLOCK), sand = count(VA, Blocks.SANDSTONE), jl = countTag(VA, s -> s.is(Blocks.JUNGLE_LEAVES) && s.getValue(net.minecraft.world.level.block.LeavesBlock.PERSISTENT)), jl2 = count(VA, Blocks.JUNGLE_LOG);

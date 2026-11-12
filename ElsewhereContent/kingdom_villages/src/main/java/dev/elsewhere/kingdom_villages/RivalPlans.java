@@ -386,7 +386,8 @@ public final class RivalPlans {
 		List<VillageRecord.Op> out = new ArrayList<>();
 		for (int h = 0; h < 5; h++) out.add(new VillageRecord.Op(g.above(h).asLong(), state(Blocks.SPRUCE_LOG)));
 		out.add(new VillageRecord.Op(g.above(5).asLong(), Blocks.DYED_CANDLE.pick(net.minecraft.world.item.DyeColor.BLACK).defaultBlockState()));
-		out.add(new VillageRecord.Op(g.offset(1, 4, 0).asLong(), banner(p, 4)));
+		// a wall banner hung on the post's east face (a standing banner here stood on air: s-asm-vill)
+		out.add(new VillageRecord.Op(g.offset(1, 4, 0).asLong(), Blocks.WALL_BANNER.pick(p.banner()).defaultBlockState().setValue(net.minecraft.world.level.block.WallBannerBlock.FACING, Direction.EAST)));
 		return out;
 	}
 
@@ -742,6 +743,44 @@ public final class RivalPlans {
 			default -> {}
 		}
 		return ops;
+	}
+
+	/** The ground y under (x, z): the top block that stops motion (plants, snow layers and leaves are not ground). */
+	static int groundY(ServerLevel level, int x, int z) {
+		return level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
+	}
+
+	/**
+	 * {@link #outpost(Profile, BlockPos, Direction)} on the real ground at {@code c} (a {@code Conquest.flatSpot} site, which may step by
+	 * one): the ring, the camp fire and the hint post each stand on their own column's ground and the platform's four feet reach down
+	 * to theirs, so nothing floats over a dip or a snow layer (s-asm-vill, worldgen fit check). Azmar's Migdol fits itself.
+	 */
+	public static List<VillageRecord.Op> outpost(ServerLevel level, Profile p, BlockPos c, Direction gate) {
+		List<VillageRecord.Op> flat = outpost(p, c, gate);
+		if (p.shape() == Shape.AZMAR && AzmarLooks.ON) return flat;
+		List<VillageRecord.Op> ops = new ArrayList<>();
+		Set<Long> used = new HashSet<>();
+		int post = postShift(level, c);
+		for (VillageRecord.Op op : flat) {
+			BlockPos q = BlockPos.of(op.pos());
+			int dx = q.getX() - c.getX(), dy = q.getY() - c.getY(), dz = q.getZ() - c.getZ();
+			if (Math.abs(dx - 3) <= 1 && Math.abs(dz - 3) <= 1) q = q.above(post); // the hint post and its banner
+			else if (dy == 0 && (Math.abs(dx) == 5 || Math.abs(dz) == 5 || dx == -3 && dz == -3)) q = q.atY(groundY(level, q.getX(), q.getZ()) + 1); // ring, fire
+			else if (dy == 0 && Math.abs(dx) == 1 && Math.abs(dz) == 1) // a platform foot: down to its own ground
+				for (int y = groundY(level, q.getX(), q.getZ()) + 1; y < c.getY(); y++) Plans.add(ops, used, q.atY(y), op.state());
+			Plans.add(ops, used, q, op.state());
+		}
+		return ops;
+	}
+
+	static int postShift(ServerLevel level, BlockPos c) {
+		return groundY(level, c.getX() + 3, c.getZ() + 3) + 1 - c.getY();
+	}
+
+	/** {@link #hintPos(Profile, BlockPos)} for {@link #outpost(ServerLevel, Profile, BlockPos, Direction)}: the hint post stands on its own ground. */
+	public static BlockPos hintPos(ServerLevel level, Profile p, BlockPos c) {
+		BlockPos h = hintPos(p, c);
+		return p.shape() == Shape.AZMAR && AzmarLooks.ON ? h : h.above(postShift(level, c));
 	}
 
 	// ---- cosmetic owner swap (a village changed hands: only blocks our own ledger placed) --------------------------------

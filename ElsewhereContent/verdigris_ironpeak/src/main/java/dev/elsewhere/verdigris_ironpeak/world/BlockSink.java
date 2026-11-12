@@ -162,21 +162,22 @@ public final class BlockSink {
 	 * Foundation in matching blocks (STRUCTURES.md 2.9): from {@code dy} down through air, fluid, plants, leaves and logs until it meets
 	 * bearing ground, as a ladder: {@code plinth} for 2 blocks, {@code course} for 1, then {@code rubble}. Capped at {@code cap}; past the cap
 	 * only every 4th column continues (a pier, never a solid block), down to 64. Writes only inside this chunk.
-	 * @return blocks placed in this column
+	 * @return blocks placed in this column, or -1 when the drop is deeper than the cap off the pier grid (nothing placed)
 	 */
 	public int underpin(int dx, int dy, int dz, BlockState plinth, BlockState course, BlockState rubble, int cap) {
-		int placed = 0;
+		if (!inside(at(dx, dy, dz))) return 0;
+		// measure the drop to bearing ground first: a column deeper than the cap is filled only on the pier grid, never left hanging
+		int depth = 64;
 		for (int k = 0; k < 64; k++) {
-			int y = dy - k;
-			BlockPos p = at(dx, y, dz);
-			if (!inside(p)) return placed;
-			BlockState old = level.getBlockState(p);
-			if (bearing(old)) return placed;
-			if (k >= cap && (Math.floorMod(dx, 4) != 0 || Math.floorMod(dz, 4) != 0)) return placed;
-			level.setBlock(p, k < 2 ? plinth : k == 2 ? course : rubble, Block.UPDATE_CLIENTS);
-			placed++;
+			BlockPos p = at(dx, dy - k, dz);
+			if (!inside(p) || bearing(level.getBlockState(p))) {
+				depth = k;
+				break;
+			}
 		}
-		return placed;
+		if (depth > cap && (Math.floorMod(dx, 4) != 0 || Math.floorMod(dz, 4) != 0)) return -1;
+		for (int k = 0; k < depth; k++) level.setBlock(at(dx, dy - k, dz), k < 2 ? plinth : k == 2 ? course : rubble, Block.UPDATE_CLIENTS);
+		return depth;
 	}
 
 	/** Air only where something stands (a room interior); never touches blocks outside this chunk. Underwater it leaves water. */

@@ -5,19 +5,25 @@ import dev.elsewhere.compat.jei.ElsewhereJeiData.LootEntry;
 import dev.elsewhere.compat.jei.ElsewhereJeiData.LootPage;
 import dev.elsewhere.compat.jei.ElsewhereJeiData.Snapshot;
 import dev.elsewhere.compat.jei.ElsewhereJeiData.TradePage;
+import dev.elsewhere.compat.jei.TransmutationCategory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.context.ContextMap;
 import net.minecraft.world.item.Item;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.item.crafting.display.SlotDisplayContext;
@@ -210,5 +216,68 @@ public final class JeiSelfTest {
 		check("every spawn egg says it is creative-only", eggs.isEmpty(), eggs);
 
 		check("data is built once and reused (lazy cache)", ElsewhereJeiData.get() == data, null);
+
+		transmutationEntries(server, ctxStacks(server));
+	}
+
+	private static ContextMap ctxStacks(final MinecraftServer server) {
+		return SlotDisplayContext.fromLevel(server.overworld());
+	}
+
+	/**
+	 * s-compat-transmute's request: the Table and Tablet are their own JEI entries (the subtype key the plugin registers), each with
+	 * its info lines; with Test Meter loaded, each crafting recipe makes the stack JEI files under that entry, and an excluded item
+	 * (the Boss Token) gets no Transmutation page.
+	 */
+	static void transmutationEntries(final MinecraftServer server, final ContextMap ctx) {
+		List<String> bad = new ArrayList<>();
+		for (String kind : List.of("transmutation_table", "transmutation_tablet")) {
+			CompoundTag tag = new CompoundTag();
+			tag.putString("testmeter", kind);
+			ItemStack built = new ItemStack(kind.endsWith("table") ? Items.ENCHANTING_TABLE : Items.RECOVERY_COMPASS);
+			built.set(DataComponents.CUSTOM_DATA, CustomData.of(tag));
+			if (!kind.equals(TransmutationCategory.subtype(built))) {
+				bad.add(kind + ": subtype key " + TransmutationCategory.subtype(built));
+			}
+		}
+		if (TransmutationCategory.subtype(new ItemStack(Items.ENCHANTING_TABLE)) != null || TransmutationCategory.subtype(new ItemStack(Items.RECOVERY_COMPASS)) != null) {
+			bad.add("plain enchanting table / recovery compass got a subtype");
+		}
+		if (TransmutationCategory.INFO.isEmpty() || TransmutationCategory.INFO.stream().anyMatch(String::isBlank)) {
+			bad.add("Table/Tablet info lines blank");
+		}
+		boolean tm = TransmutationCategory.available();
+		if (tm) {
+			if (!"transmutation_table".equals(TransmutationCategory.subtype(TransmutationCategory.table()))
+				|| !"transmutation_tablet".equals(TransmutationCategory.subtype(TransmutationCategory.tablet()))) {
+				bad.add("Test Meter's own Table/Tablet stacks do not carry their subtype key");
+			}
+			for (String kind : List.of("transmutation_table", "transmutation_tablet")) {
+				ResourceKey<net.minecraft.world.item.crafting.Recipe<?>> key = ResourceKey.create(Registries.RECIPE,
+					Identifier.fromNamespaceAndPath("testmeter", kind));
+				var holder = server.getRecipeManager().byKey(key);
+				if (holder.isEmpty()) {
+					bad.add("no recipe testmeter:" + kind);
+					continue;
+				}
+				boolean makes = false;
+				for (RecipeDisplay d : holder.get().value().display()) {
+					for (ItemStack s : d.result().resolveForStacks(ctx)) {
+						makes |= kind.equals(TransmutationCategory.subtype(s));
+					}
+				}
+				if (!makes) {
+					bad.add("testmeter:" + kind + " does not make the " + kind + " entry");
+				}
+			}
+			ElsewhereJeiData.item("elsewhere:boss_token").ifPresent(token -> {
+				if (TransmutationCategory.value(new ItemStack(token)) > 0) {
+					bad.add("excluded elsewhere:boss_token has a Transmutation page");
+				}
+			});
+		}
+		check("Transmutation Table and Tablet are their own JEI entries with info lines" + (tm
+			? " (Test Meter loaded: each recipe makes its entry; Boss Token has no page)" : " (Test Meter not loaded: subtype key checked on built stacks)"),
+			bad.isEmpty(), bad);
 	}
 }

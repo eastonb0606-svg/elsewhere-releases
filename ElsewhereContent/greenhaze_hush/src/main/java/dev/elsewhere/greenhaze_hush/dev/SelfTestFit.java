@@ -333,13 +333,25 @@ final class SelfTestFit {
 	}
 
 	static void undercity(ServerLevel l, int x, int z) {
-		List<GhFit.Piece> ps = GhFit.buildPlan(l, "hanging_undercity", new BlockPos(x, 150, z));
+		// a site worldgen would take (fixedSiteOk: a roof over 4+ air within 12 above y 150 at the centre), looked for 96 apart
+		GhFit.Columns live = GhFit.live(l, true);
+		int sx = x;
+		for (int k = 0; k < 24; k++) if (GhPlans.undercitySite(live, x + 96 * k, z, 150)) { sx = x + 96 * k; break; }
+		List<GhFit.Piece> ps = GhFit.buildPlan(l, "hanging_undercity", new BlockPos(sx, 150, z));
 		Tally t = scan(l, span(ps));
 		long towers = ps.stream().filter(p -> p.kind.equals("tower")).count();
+		// every tower hangs free: its anchor plate is under rock and there is air under its spire tip
+		int free = 0;
+		for (GhFit.Piece p : ps) {
+			if (!p.kind.equals("tower")) continue;
+			BlockPos tip = new BlockPos(p.o.getX(), p.o.getY() - p.p(1) - 2 * p.p(2) + 2, p.o.getZ());
+			if (l.getBlockState(tip.below()).isAir() && !l.getBlockState(new BlockPos(p.o.getX(), p.p(0), p.o.getZ())).isAir()) free++;
+		}
 		check("struct fit: Hanging Undercity look (octagonal towers hung from the real ceiling by chains, inverted spires, a chest per tower, the Ancients' door)",
-			towers >= 1 && t.n(StubBlocks.RETURN_RIFT) == 2 && t.loot("hanging_undercity") == towers && t.n(Blocks.IRON_CHAIN) >= 4 * towers && t.n(Blocks.LADDER) >= 6,
-			towers + " towers, " + t.loot("hanging_undercity") + " chests, " + t.n(Blocks.IRON_CHAIN) + " chain, " + t.n(StubBlocks.RETURN_RIFT) + " rift");
+			towers >= 1 && free == towers && t.n(StubBlocks.RETURN_RIFT) == 2 && t.loot("hanging_undercity") == towers && t.n(Blocks.IRON_CHAIN) >= 4 * towers && t.n(Blocks.LADDER) >= 6,
+			towers + " towers (" + free + " hanging free), " + t.loot("hanging_undercity") + " chests, " + t.n(Blocks.IRON_CHAIN) + " chain, " + t.n(StubBlocks.RETURN_RIFT) + " rift, " + ps.stream().filter(p -> p.kind.equals("bridge")).count() + " bridges");
 	}
+
 
 	/** A real worldgen start on fresh ground: new pieces, and the beard mixin hands the noise its per-piece rule. */
 	static void beards(ServerLevel l, int x, int z) {

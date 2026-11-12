@@ -12,12 +12,14 @@ import mezz.jei.api.recipe.advanced.ISimpleRecipeManagerPlugin;
 import mezz.jei.api.recipe.category.AbstractRecipeCategory;
 import mezz.jei.api.recipe.types.IRecipeType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.CustomData;
 
 /**
  * "Transmutation Table" (Test Meter's equivalent exchange), shown only when Test Meter is installed: one page per item with a Quanta
@@ -61,7 +63,7 @@ public final class TransmutationCategory extends AbstractRecipeCategory<Transmut
 		return valueOf != null;
 	}
 
-	static double value(final ItemStack stack) {
+	public static double value(final ItemStack stack) {
 		if (!available() || stack.isEmpty()) {
 			return 0;
 		}
@@ -80,12 +82,29 @@ public final class TransmutationCategory extends AbstractRecipeCategory<Transmut
 		}
 	}
 
+	/** Info-page lines for the Table and Tablet (s-compat-transmute's text; values checked by its TransmutePlan QA). */
+	public static final List<String> INFO = List.of(
+		"Burn an item at the table to turn it into Quanta and learn it; withdraw copies of anything you've learned for the same Quanta.",
+		"Craft: 4 obsidian, 2 amethyst shards, 2 diamonds and an eye of ender. The Tablet (eyes of ender, diamonds, netherite scrap, a recovery compass) opens it anywhere.",
+		"Elsewhere's rare ores and gems, and the endgame gear made from them, cost at least 5 netherite ingots' worth.",
+		"Boss uniques, kingdom and rival gear, currencies, seals and boss parts can't be transmuted.");
+
+	/**
+	 * JEI subtype key for Test Meter's items: the Table is an enchanting table and the Tablet a recovery compass, told apart by
+	 * {@code custom_data {testmeter: "<kind>"}}. Returns that kind, or null for the plain vanilla item (one JEI entry).
+	 */
+	public static String subtype(final ItemStack stack) {
+		CustomData data = stack.get(DataComponents.CUSTOM_DATA);
+		String kind = data == null ? "" : data.copyTag().getStringOr("testmeter", "");
+		return kind.isEmpty() ? null : kind;
+	}
+
 	/** The Table and Tablet stacks (catalysts), or an enchanting table when Test Meter can't make them. */
-	static ItemStack table() {
+	public static ItemStack table() {
 		return testItem("transmutation_table", Items.ENCHANTING_TABLE);
 	}
 
-	static ItemStack tablet() {
+	public static ItemStack tablet() {
 		return testItem("transmutation_tablet", Items.RECOVERY_COMPASS);
 	}
 
