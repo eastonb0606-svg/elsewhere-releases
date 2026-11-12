@@ -1,0 +1,501 @@
+{
+  "lanes": {
+    "longships": {
+      "elsewhere:hrafnholt_longship": [
+        {
+          "file": "longships__longship_afloat.png",
+          "scene": 1,
+          "line": 9,
+          "check": "hull, sail, shield rails, beaching, raiders hopping off",
+          "status": "fail",
+          "detail": "summon: summon elsewhere:hrafnholt_longship produced no entity",
+          "taken": "20:15:45"
+        },
+        {
+          "file": "longships__longship_10s.png",
+          "scene": 1,
+          "line": 9,
+          "check": "hull, sail, shield rails, beaching, raiders hopping off",
+          "status": "fail",
+          "detail": "summon: summon elsewhere:hrafnholt_longship produced no entity",
+          "taken": "20:15:45"
+        }
+      ]
+    },
+    "villages": {
+      "the faction villages and rebuild styles (aldermark realm)": [
+        {
+          "file": "villages__village_near_aldermark.png",
+          "scene": 2,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ],
+      "the faction villages and rebuild styles (hrafnholt realm)": [
+        {
+          "file": "villages__village_near_hrafnholt.png",
+          "scene": 3,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ],
+      "the faction villages and rebuild styles (azmar realm)": [
+        {
+          "file": "villages__village_near_azmar.png",
+          "scene": 4,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ],
+      "the faction villages and rebuild styles (mirewick realm)": [
+        {
+          "file": "villages__village_near_mirewick.png",
+          "scene": 5,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "armies": {
+      "big battle: wave battle Aldermark v Hrafnholt, 150 a side (kingdom/armies ArmyWaves)": [
+        {
+          "file": "armies__battle_aldermark_hrafnholt_150_20s.png",
+          "scene": 6,
+          "line": 11,
+          "check": "both liveries fielded and fighting (not one side only); about 32 live near the camera (`/kingdom armies` \"max live\" at most 32); no stuck, floating or T-posed soldiers; no arrow carpets; FPS on F3",
+          "status": "ok",
+          "taken": "20:16:12"
+        },
+        {
+          "file": "armies__battle_aldermark_hrafnholt_150_60s_f3.png",
+          "scene": 6,
+          "line": 11,
+          "check": "both liveries fielded and fighting (not one side only); about 32 live near the camera (`/kingdom armies` \"max live\" at most 32); no stuck, floating or T-posed soldiers; no arrow carpets; FPS on F3",
+          "status": "ok",
+          "taken": "20:16:55"
+        }
+      ],
+      "big battle 2: Azmar v Mirewick, 110 a side": [
+        {
+          "file": "armies__battle_azmar_mirewick_110_30s.png",
+          "scene": 7,
+          "line": 12,
+          "check": "Azmar the smaller side (its front 14 v Mirewick 17), Mirewick a loose ragged line; both sides present",
+          "status": "ok",
+          "taken": "20:17:26"
+        }
+      ],
+      "patrol: Aldermark day patrol of 8 (army.scale.patrol.day)": [
+        {
+          "file": "armies__patrol_8_10s.png",
+          "scene": 8,
+          "line": 13,
+          "check": "8 soldiers in a tidy column, Aldermark livery, nobody stuck or idle at spawn",
+          "status": "ok",
+          "taken": "20:17:37"
+        }
+      ]
+    },
+    "gear": {
+      "Calling panel (moonsilk + sunlance_staff)": [
+        {
+          "file": "gear__calling_panel_caster.png",
+          "scene": 9,
+          "line": 14,
+          "check": "top-left box \"Callings\": Caster Primary with a full bar, Vanguard/Marksman/Summoner Open with short bars; text readable, nothing overlapping the hotbar or the Glimmer bar",
+          "status": "ok",
+          "taken": "20:17:40"
+        }
+      ],
+      "Calling tooltip (moonsilk_robe, sunlance_staff)": [
+        {
+          "file": "gear__calling_tooltip_moonsilk_robe.png",
+          "scene": 10,
+          "line": 15,
+          "check": "purple line \"Caster 100%: spells x1.15, cost x0.90\" (staff) or the Leaning line on the robe; no line on vanilla items",
+          "status": "ok",
+          "taken": "20:17:43"
+        },
+        {
+          "file": "gear__calling_tooltip_sunlance_staff.png",
+          "scene": 10,
+          "line": 15,
+          "check": "purple line \"Caster 100%: spells x1.15, cost x0.90\" (staff) or the Leaning line on the robe; no line on vanilla items",
+          "status": "ok",
+          "taken": "20:17:44"
+        }
+      ],
+      "/calling readout": [
+        {
+          "file": "gear__calling_readout_chat.png",
+          "scene": 11,
+          "line": 16,
+          "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
+          "status": "ok",
+          "taken": "20:17:48"
+        }
+      ],
+      "Amberstill Plate full set (gear2)": [
+        {
+          "file": "gear__amberstill_plate_standing.png",
+          "scene": 12,
+          "line": 17,
+          "check": "armor renders (amber texture on all 4 pieces); hover the chestplate: lore says \"Brace ... hits keep it, sprinting breaks it\"",
+          "status": "ok",
+          "taken": "20:17:51"
+        },
+        {
+          "file": "gear__amberstill_plate_swing.png",
+          "scene": 12,
+          "line": 17,
+          "check": "armor renders (amber texture on all 4 pieces); hover the chestplate: lore says \"Brace ... hits keep it, sprinting breaks it\"",
+          "status": "ok",
+          "taken": "20:17:52"
+        },
+        {
+          "file": "gear__amberstill_plate_tooltip.png",
+          "scene": 12,
+          "line": 17,
+          "check": "armor renders (amber texture on all 4 pieces); hover the chestplate: lore says \"Brace ... hits keep it, sprinting breaks it\"",
+          "status": "ok",
+          "taken": "20:17:53"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 13,
+          "line": 21,
+          "check": "steep deepslate spires with blue banners on 4 corners + 2 gate spires, pitched keep roof inside the parapet with 4 bartizans, chapel steeple; curtain steps with the ground (no flat 69x69 cut, no cliff); no gold throne (yellow terracotta)",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 14,
+          "line": 22,
+          "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 20,
+          "line": 28,
+          "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 21,
+          "line": 29,
+          "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 22,
+          "line": 30,
+          "check": "the west curtain's foot follows the ground with a rubble footing, the top steps by at most 1, the corner towers rise with their corner; nothing floats",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_52_40_52_y135.png",
+          "scene": 15,
+          "line": 23,
+          "check": "Jarl's-hall roof over the keep with crossed finials at both ends, timber hoardings on walls and towers, steep spruce spires, stave tower on the hof",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_52_40_52_y135.png",
+          "scene": 16,
+          "line": 24,
+          "check": "flat roofs with cavetto cornices and lapis bands, kiosks on the tower tops, undulating parapet, palms in the court; no pitched roofs, no gold blocks",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_azmar_c_14_9_10_y200.png",
+          "scene": 17,
+          "line": 25,
+          "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_mirewick": [
+        {
+          "file": "structures_build__castle_mirewick_c_52_40_52_y135.png",
+          "scene": 18,
+          "line": 26,
+          "check": "crow-stepped calcite Counting-House with gilt caps and a lantern belfry, crimson spires with gilt finials, purple bands",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_0_6_48_y180.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        }
+      ]
+    },
+    "sfx": {
+      "client latest.log of the merged run (no scene needed)": [
+        {
+          "file": "sfx__client_log_sfx3.txt",
+          "scene": 23,
+          "line": 31,
+          "check": "expect 0 lines. Any line names the broken `elsewhere:sfx3.*` event; that module's switch `sfx3_<module>` goes false",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aphelion": [
+        {
+          "file": "sfx__aphelion_subtitle.png",
+          "scene": 24,
+          "line": 32,
+          "check": "subtitle box shows \"Aphelion roars from beyond the End\" and NO \"Ender Dragon ...\" line",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt": [
+        {
+          "file": "sfx__hrafnholt_subtitle.png",
+          "scene": 25,
+          "line": 33,
+          "check": "subtitle box shows \"Hrafnholt warriors roar\", not \"Ravager roars\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 26,
+          "line": 37,
+          "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        }
+      ],
+      "site-rule structures (the release client test `rel_<structure>` shots, sites section, already queued)": []
+    },
+    "anim": {
+      "elsewhere:hrafnholt_jarl": [
+        {
+          "file": "anim__hrafnholt_jarl_move_windup.png",
+          "scene": 30,
+          "line": 43,
+          "check": "Ninth Winter Slam = slam (both arms high, leaning back, then bent over the ground), Oath Cleave = overhead (weapon above the head, then chopped down with a forward step), plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrafnholt_jarl_move_strike.png",
+          "scene": 30,
+          "line": 43,
+          "check": "Ninth Winter Slam = slam (both arms high, leaning back, then bent over the ground), Oath Cleave = overhead (weapon above the head, then chopped down with a forward step), plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "anim__hrafnholt_hersir_move_windup.png",
+          "scene": 31,
+          "line": 44,
+          "check": "Raid Charge = thrust (arm drawn back, then a long lunge with the weapon arm straight), Horn of Three Calls = cast (arms raised in a V, head up); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrafnholt_hersir_move_strike.png",
+          "scene": 31,
+          "line": 44,
+          "check": "Raid Charge = thrust (arm drawn back, then a long lunge with the weapon arm straight), Horn of Three Calls = cast (arms raised in a V, head up); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hallwarden": [
+        {
+          "file": "anim__hrafnholt_hallwarden_move_windup.png",
+          "scene": 32,
+          "line": 45,
+          "check": "Hearth Ward = shield bash (shield arm pulled in, torso twisted, then shoved forward), Door Breaker = overhead; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrafnholt_hallwarden_move_strike.png",
+          "scene": 32,
+          "line": 45,
+          "check": "Hearth Ward = shield bash (shield arm pulled in, torso twisted, then shoved forward), Door Breaker = overhead; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_skald": [
+        {
+          "file": "anim__hrafnholt_skald_move_windup.png",
+          "scene": 33,
+          "line": 46,
+          "check": "Rune Throw = draw (throwing arm cocked behind the head, off arm aiming, then released across the body), Three Beat Verse = cast; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrafnholt_skald_move_strike.png",
+          "scene": 33,
+          "line": 46,
+          "check": "Rune Throw = draw (throwing arm cocked behind the head, off arm aiming, then released across the body), Three Beat Verse = cast; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_chief": [
+        {
+          "file": "anim__hrafnholt_chief_move_windup.png",
+          "scene": 34,
+          "line": 47,
+          "check": "Furrow Run and Pelt Leap = leap (crouched, arms back, then arms up and body lifted with legs tucked); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrafnholt_chief_move_strike.png",
+          "scene": 34,
+          "line": 47,
+          "check": "Furrow Run and Pelt Leap = leap (crouched, arms back, then arms up and body lifted with legs tucked); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_huntmaster": [
+        {
+          "file": "anim__hrafnholt_huntmaster_move_windup.png",
+          "scene": 35,
+          "line": 48,
+          "check": "Wolf Pack = cast, Pinning Arrow = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrafnholt_huntmaster_move_strike.png",
+          "scene": 35,
+          "line": 48,
+          "check": "Wolf Pack = cast, Pinning Arrow = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sultana": [
+        {
+          "file": "anim__azmar_sultana_move_windup.png",
+          "scene": 36,
+          "line": 49,
+          "check": "Screen and Step = sweep (arm out wide with the torso wound back, then swept across), Counter Riposte = thrust, Halo Flare = cast, Scarab Shell = shield bash; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__azmar_sultana_move_strike.png",
+          "scene": 36,
+          "line": 49,
+          "check": "Screen and Step = sweep (arm out wide with the torso wound back, then swept across), Counter Riposte = thrust, Halo Flare = cast, Scarab Shell = shield bash; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_amir": [
+        {
+          "file": "anim__azmar_amir_move_windup.png",
+          "scene": 37,
+          "line": 50,
+          "check": "Camel Charge and Final Charge = thrust, Javelin Volley = draw, Dismount Lunge = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__azmar_amir_move_strike.png",
+          "scene": 37,
+          "line": 50,
+          "check": "Camel Charge and Final Charge = thrust, Javelin Volley = draw, Dismount Lunge = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_wazir": [
+        {
+          "file": "anim__azmar_wazir_move_windup.png",
+          "scene": 38,
+          "line": 51,
+          "check": "Counter Brew, Glyph Flare, Veil of the Ibis, Seal of the Ibis = cast (arms raised in a V, head tipped up, then palms pushed forward); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__azmar_wazir_move_strike.png",
+          "scene": 38,
+          "line": 51,
+          "check": "Counter Brew, Glyph Flare, Veil of the Ibis, Seal of the Ibis = cast (arms raised in a V, head tipped up, then palms pushed forward); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_falconer": [
+        {
+          "file": "anim__azmar_falconer_move_windup.png",
+          "scene": 39,
+          "line": 52,
+          "check": "Falcon Mark, Perch Post, Falcon Storm = cast, Triple Stoop = thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__azmar_falconer_move_strike.png",
+          "scene": 39,
+          "line": 52,
+          "check": "Falcon Mark, Perch Post, Falcon Storm = cast, Triple Stoop = thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:17:53",
+  "totals": {
+    "ok": 11,
+    "fail": 2,
+    "manual": 0
+  }
+}
