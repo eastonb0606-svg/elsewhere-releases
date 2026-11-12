@@ -1,0 +1,599 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (aldermark realm)": [
+        {
+          "file": "villages__village_near_aldermark.png",
+          "scene": 2,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "gear": {
+      "Calling panel (moonsilk + sunlance_staff)": [
+        {
+          "file": "gear__calling_panel_caster.png",
+          "scene": 9,
+          "line": 14,
+          "check": "top-left box \"Callings\": Caster Primary with a full bar, Vanguard/Marksman/Summoner Open with short bars; text readable, nothing overlapping the hotbar or the Glimmer bar",
+          "status": "ok",
+          "taken": "22:02:32"
+        }
+      ]
+    },
+    "sfx": {
+      "elsewhere:aphelion": [
+        {
+          "file": "sfx__aphelion_subtitle.png",
+          "scene": 24,
+          "line": 32,
+          "check": "subtitle box shows \"Aphelion roars from beyond the End\" and NO \"Ender Dragon ...\" line",
+          "status": "ok",
+          "taken": "22:02:35"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:azmar_wazir": [
+        {
+          "file": "anim__azmar_wazir_move_windup.png",
+          "scene": 38,
+          "line": 51,
+          "check": "Counter Brew, Glyph Flare, Veil of the Ibis, Seal of the Ibis = cast (arms raised in a V, head tipped up, then palms pushed forward); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:04:07"
+        },
+        {
+          "file": "anim__azmar_wazir_move_strike.png",
+          "scene": 38,
+          "line": 51,
+          "check": "Counter Brew, Glyph Flare, Veil of the Ibis, Seal of the Ibis = cast (arms raised in a V, head tipped up, then palms pushed forward); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:04:07"
+        }
+      ],
+      "elsewhere:aphelion": [
+        {
+          "file": "anim__aphelion_hurt_peak.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:04:10"
+        },
+        {
+          "file": "anim__aphelion_hurt_rest.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:04:11"
+        }
+      ],
+      "elsewhere:grimhorn": [
+        {
+          "file": "anim__grimhorn_hurt_peak.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:04:14"
+        },
+        {
+          "file": "anim__grimhorn_hurt_rest.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:04:15"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:hrafnholt_runeseax": [
+        {
+          "file": "items__hrafnholt_runeseax_held.png",
+          "scene": 109,
+          "line": 125,
+          "check": "icon matches the sprite page (16x16, Runeseax), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_runeseax_tooltip.png",
+          "scene": 109,
+          "line": 125,
+          "check": "icon matches the sprite page (16x16, Runeseax), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_oath_ring": [
+        {
+          "file": "items__aldermark_oath_ring_held.png",
+          "scene": 121,
+          "line": 137,
+          "check": "icon matches the sprite page (16x16, Oath Ring), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_oath_ring_tooltip.png",
+          "scene": 121,
+          "line": 137,
+          "check": "icon matches the sprite page (16x16, Oath Ring), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ]
+    },
+    "structures_build": {
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_hrafnholt)": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_0_8_58_y180.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_castle": {
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)": [
+        {
+          "file": "z_castle__castle_mirewick_c_44_8_44_y135.png",
+          "scene": 149,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "verdigris arena seal (elsewhere:lighthouse, Galvanox)": [
+        {
+          "file": "s_p13_particles__verdigris_arena_seal_galvanox.png",
+          "scene": 169,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:wreck_ring": [
+        {
+          "file": "s_struct_overworld__wreck_ring_s_26_10_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__wreck_ring_s_0_12_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer (channel)": [
+        {
+          "file": "s_censer__censer_channel_first_person_1s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "pending"
+        },
+        {
+          "file": "s_censer__censer_channel_third_person_2s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "pending"
+        },
+        {
+          "file": "s_censer__censer_channel_top_3s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_sultana Halo Flare": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_halo_flare_windup.png",
+          "scene": 192,
+          "line": 215,
+          "check": "half crouch, both arms rising palms up, head bowed; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_halo_flare_strike.png",
+          "scene": 192,
+          "line": 215,
+          "check": "half crouch, both arms rising palms up, head bowed; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_ames (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_aura_phase3.png",
+          "scene": 208,
+          "line": 236,
+          "check": "",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_in_flight_and_stuck)": [
+        {
+          "file": "s_echoarrow__echo_arrow_in_flight.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "pending"
+        },
+        {
+          "file": "s_echoarrow__echo_arrow_stuck_2_blocks.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_greenhaze_rework": {
+      "Green Leaf HUD + soft tint at High (Sativa)": [
+        {
+          "file": "s_greenhaze_rework__green_leaf_hud_soft_tint_at_high_sativa.png",
+          "scene": 255,
+          "line": 288,
+          "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__green_leaf_hud_soft_tint_at_high_sativa_5s.png",
+          "scene": 255,
+          "line": 288,
+          "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:grumblegut": [
+        {
+          "file": "s_p2_telegraph__grumblegut_cone_ground_slam_rings_helm_o.png",
+          "scene": 262,
+          "line": 298,
+          "check": "crisp yellow rings and a red cone on the ground, fill grows then the hit lands as it fills; edges pulse faster near the end; no jagged dust, nothing under the floor or floating",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:aphelion_shattered_halo": [
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_26_10_26.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:echo_chord": [
+        {
+          "file": "s_whips__echo_chord_first_person.png",
+          "scene": 307,
+          "line": 347,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__echo_chord_third_person.png",
+          "scene": 307,
+          "line": 347,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__echo_chord_tooltip.png",
+          "scene": 307,
+          "line": 347,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_townsfolk__townsfolk_close_up_skins.png",
+          "scene": 320,
+          "line": 360,
+          "check": "the 36 skins of TOWNSFOLK-IDS.md render (no missing-texture checkerboard), held tools visible, no nameplate",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person_3.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_3.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person_2.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person_2.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use_2.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_3.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "swarm attacking + Mothdust": [
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust_5s.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:azmar_sunglass_obelisk": [
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_first_person.png",
+          "scene": 438,
+          "line": 488,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_third_person.png",
+          "scene": 438,
+          "line": 488,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__azmar_sunglass_obelisk_tooltip.png",
+          "scene": 438,
+          "line": 488,
+          "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_foresight": {
+      "elsewhere:azmar_wazir": [
+        {
+          "file": "s_foresight__ground_patch_pre_arm_ring_duelist_ground.png",
+          "scene": 454,
+          "line": 506,
+          "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_hraf": {
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_overview.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_ground.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:04:15",
+  "totals": {
+    "ok": 6,
+    "fail": 2,
+    "manual": 0
+  }
+}
