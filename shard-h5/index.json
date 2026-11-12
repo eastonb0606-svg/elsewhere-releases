@@ -1,0 +1,205 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:strawgrim": [
+        {
+          "file": "anim__strawgrim_hurt_peak.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:41:20"
+        },
+        {
+          "file": "anim__strawgrim_hurt_rest.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:41:21"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, idle)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_idle.png",
+          "scene": 138,
+          "line": 156,
+          "check": "a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
+          "status": "ok",
+          "taken": "23:41:23"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:climbers_cairn": [
+        {
+          "file": "s_struct_verdigris__climbers_cairn_s_6_4_6.png",
+          "scene": 154,
+          "line": 171,
+          "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "mirewick_castle_mirewick (elsewhere:castle_mirewick)": [
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_front.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_corner.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_gate.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_quay.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_sultana (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase3.png",
+          "scene": 207,
+          "line": 236,
+          "check": "",
+          "status": "ok",
+          "taken": "23:41:31"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_in_flight.png",
+          "scene": 312,
+          "line": 352,
+          "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark fields at 14:00 + vespers": [
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers.png",
+          "scene": 315,
+          "line": 355,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers_5s.png",
+          "scene": 315,
+          "line": 355,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Mirewick off-time wards": [
+        {
+          "file": "s_routines__mirewick_off_time_wards.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__mirewick_off_time_wards_5s.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rank impostors behind a 150-a-side wave battle (Aldermark v Hrafnholt)": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 439,
+          "line": 489,
+          "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:41:31",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
