@@ -422,3 +422,253 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:01:35] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
 [22:01:35] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [22:01:35] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Choirlight Censer]
+[22:01:35] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:01:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_censer__choirlight_censer_held.png: 
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:01:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_censer__choirlight_censer_tooltip.png: 
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[22:01:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 179 (s_censer | elsewhere:choirlight_censer) done in 1729 ms
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Applied effect Regeneration to ShotRunner
+[22:01:36] [Server thread/INFO] (Minecraft) System chat: Summoned new Amir Tariq Vashti
+[22:01:37] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1.790000, -60.000000, 9.780000
+[22:01:39] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[22:01:54] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[22:01:57] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[22:02:24] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[22:02:41] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[22:03:02] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[22:03:07] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 193 stopped at wait_label: no boss bar move label containing 'Camel Charge' within 90 s
+[22:03:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__azmar_amir_camel_charge_windup.png: wait_label: no boss bar move label containing 'Camel Charge' within 90 s
+[22:03:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__azmar_amir_camel_charge_strike.png: wait_label: no boss bar move label containing 'Camel Charge' within 90 s
+[22:03:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 193 (s_p4_rivalanims | elsewhere:azmar_amir Camel Charge) done in 90333 ms
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Summoned new Test Duelist
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Applied 2.5 damage to Test Duelist
+[22:03:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2.500000, -59.540000, 3.040000
+[22:03:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p4_rivalanims__duelist_test_aura_phase3.png: 
+[22:03:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 209 (s_p4_rivalanims | elsewhere:duelist_test (phase 3 swirl)) done in 1956 ms
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Summoned new Peasant
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Summoned new Peasant
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Summoned new Peasant
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Summoned new Peasant
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Summoned new Peasant
+[22:03:09] [Server thread/INFO] (Minecraft) System chat: Summoned new Peasant
+[22:03:11] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Peasant
+[22:03:11] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Peasant
+[22:03:11] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Peasant
+[22:03:11] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Peasant
+[22:03:11] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Peasant
+[22:03:11] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Peasant
+[22:03:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 1.500000
+[22:03:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_front.png: 
+[22:03:12] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 13.500000
+[22:03:12] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2002ms or 40 ticks behind
+[22:03:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_back.png: 
+[22:03:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 219 (s_townsfolk_art | elsewhere:townsfolk, Aldermark looks (peasant_0..2, craftsman_0..2)) done in 4004 ms
+[22:03:13] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:03:13] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[22:03:13] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:03:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:13] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:13] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:03:13] [Server thread/INFO] (Minecraft) System chat: Patrol: 8 soldiers
+[22:03:18] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.879684, -60.000000, -5.843694
+[22:03:19] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[22:03:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_6.png: 
+[22:03:19] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.879684, -60.000000, -11.843694
+[22:03:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png: 
+[22:03:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.879684, -60.000000, -17.843694
+[22:03:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png: 
+[22:03:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 225 (s_p3_nameplates | kingdom soldier nameplates, Aldermark (POLISH P3; supersedes polish2's 10:05 nameplate scene in INTEGRATION-REQUESTS)) done in 8768 ms
+[22:03:21] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:03:21] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:03:21] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:22] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:22] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:03:22] [Server thread/INFO] (Minecraft) System chat: Successfully filled 78 block(s)
+[22:03:22] [Server thread/INFO] (Minecraft) System chat: Successfully filled 119 block(s)
+[22:03:22] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Ironclad Flail]
+[22:03:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_first_person_3.png: 
+[22:03:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_third_person_3.png: 
+[22:03:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_in_use_first_person_3.png: 
+[22:03:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_in_use_third_person_3.png: 
+[22:03:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_after_use_3.png: 
+[22:03:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_tooltip_3.png: 
+[22:03:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 234 (s_p6_useanims | elsewhere:ironclad_flail) done in 7533 ms
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Successfully filled 119 block(s)
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Successfully filled 9 block(s)
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Successfully filled 9 block(s)
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[22:03:29] [Server thread/INFO] (Minecraft) System chat: ...at @p run high set @s 95<--[HERE]
+[22:03:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri.png: 
+[22:03:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri_5s.png: 
+[22:03:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 256 (s_greenhaze_rework | Couch-locked screen, FULL effects (hue drift + wobble)) done in 13507 ms
+[22:03:42] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:03:42] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:03:42] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:43] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:43] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:03:43] [Server thread/INFO] (Minecraft) System chat: Applied effect Regeneration to ShotRunner
+[22:03:43] [Server thread/INFO] (Minecraft) System chat: Summoned new Rimeback, the Avalanche Colossus
+[22:03:43] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 6.240000, -60.000000, 0.310000
+[22:03:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p2_telegraph__rimeback_breath_cone_helm_on.png: 
+[22:03:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 265 (s_p2_telegraph | elsewhere:rimeback) done in 6463 ms
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Thornlash]
+[22:03:49] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[22:03:51] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Husk
+[22:03:51] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_whips__thornlash_first_person_3.png: 
+[22:03:51] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_whips__thornlash_third_person_3.png: 
+[22:03:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_whips__thornlash_in_use_first_person_3.png: 
+[22:03:53] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_whips__thornlash_in_use_third_person_3.png: 
+[22:03:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_whips__thornlash_after_use_3.png: 
+[22:03:54] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:03:54] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[22:03:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_whips__thornlash_tooltip_3.png: 
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[22:03:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 308 (s_whips | elsewhere:thornlash) done in 5879 ms
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Arrow]
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Harpoon Bolt]
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Harpoon Bolt]
+[22:03:55] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_first_person.png: 
+[22:03:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_third_person.png: 
+[22:03:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_tooltip.png: 
+[22:03:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 321 (s_harpoon | elsewhere:tidebrass_harpoon_bolt) done in 3315 ms
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Removed 18 item(s) from player ShotRunner
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: ...at @p run kingdomdetail medium<--[HERE]
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Changed the block at 6, -60, 16
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Man-at-Arms
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Man-at-Arms
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Man-at-Arms
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Man-at-Arms
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Archer
+[22:03:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -0.500000, -57.000000, -7.500000
+[22:04:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png: 
+[22:04:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 327 (s_p9_idle | elsewhere:kingdom_archer) done in 2777 ms
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Captain
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Captain
+[22:04:01] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2.790000, -59.540000, 4.220000
+[22:04:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p10_tabard__remnant_heraldry_and_rulers.png: 
+[22:04:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p10_tabard__remnant_heraldry_and_rulers_later.png: 
+[22:04:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 350 (s_p10_tabard | elsewhere:kingdom_captain) done in 4128 ms
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 18000 tick(s)
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Mire Snare]
+[22:04:05] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[22:04:07] [Server thread/INFO] (Minecraft) System chat: Modified entity data of Husk
+[22:04:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_miresnare__mirewick_mire_snare_first_person_3.png: 
+[22:04:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_miresnare__mirewick_mire_snare_third_person_3.png: 
+[22:04:08] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:04:08] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:04:08] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[22:04:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_miresnare__mirewick_mire_snare_tooltip_3.png: 
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[22:04:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 374 (s_miresnare | elsewhere:mirewick_mire_snare) done in 3937 ms
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Applied effect Regeneration to ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Applied effect Saturation to ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Summoned new Mothlight Swarm
+[22:04:09] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 405 stopped at view: target is gone before the camera was placed
+[22:04:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_mothlight__a_moth_falls_mothdust_icon.png: view: target is gone before the camera was placed
+[22:04:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_mothlight__a_moth_falls_mothdust_icon_later.png: view: target is gone before the camera was placed
+[22:04:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 405 (s_mothlight | elsewhere:mothlight_swarm) done in 169 ms
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Wolf-Call Horn]
+[22:04:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_first_person_2.png: 
+[22:04:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_third_person_2.png: 
+[22:04:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_in_use_first_person.png: 
+[22:04:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_in_use_third_person.png: 
+[22:04:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_after_use.png: 
+[22:04:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_wolfcall__hrafnholt_wolfcall_horn_tooltip_2.png: 
+[22:04:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 407 (s_wolfcall | elsewhere:hrafnholt_wolfcall_horn) done in 5608 ms
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Stormcrest Helm]
+[22:04:15] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Stormcrest Helm]
+[22:04:15] [Render thread/INFO] (Minecraft) Loaded 6 advancements
+[22:04:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_foresight__stormcrest_helm_first_person.png: 
+[22:04:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_foresight__stormcrest_helm_third_person.png: 
+[22:04:16] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[22:04:16] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[22:04:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_foresight__stormcrest_helm_tooltip.png: 
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[22:04:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 452 (s_foresight | elsewhere:stormcrest_helm) done in 2320 ms
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Wave battle aldermark v azmar, 60 a side: 32 live now, the rest come in waves
+[22:04:17] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -48.000000, -23.500000
