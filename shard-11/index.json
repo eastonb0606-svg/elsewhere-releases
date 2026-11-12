@@ -1,0 +1,510 @@
+{
+  "lanes": {
+    "items": {
+      "elsewhere:glimmer_lantern": [
+        {
+          "file": "items__glimmer_lantern_held.png",
+          "scene": 128,
+          "line": 144,
+          "check": "icon matches the sprite page (16x16, Glimmer Lantern), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:37"
+        },
+        {
+          "file": "items__glimmer_lantern_tooltip.png",
+          "scene": 128,
+          "line": 144,
+          "check": "icon matches the sprite page (16x16, Glimmer Lantern), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:38"
+        }
+      ],
+      "elsewhere:blinkstone": [
+        {
+          "file": "items__blinkstone_held.png",
+          "scene": 129,
+          "line": 145,
+          "check": "icon matches the sprite page (16x16, Blinkstone), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:39"
+        },
+        {
+          "file": "items__blinkstone_tooltip.png",
+          "scene": 129,
+          "line": 145,
+          "check": "icon matches the sprite page (16x16, Blinkstone), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:40"
+        }
+      ],
+      "elsewhere:emberfall_rod": [
+        {
+          "file": "items__emberfall_rod_held.png",
+          "scene": 130,
+          "line": 146,
+          "check": "icon matches the sprite page (16x16, Emberfall Rod), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:41"
+        },
+        {
+          "file": "items__emberfall_rod_tooltip.png",
+          "scene": 130,
+          "line": 146,
+          "check": "icon matches the sprite page (16x16, Emberfall Rod), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:42"
+        }
+      ],
+      "elsewhere:frostwake_scepter": [
+        {
+          "file": "items__frostwake_scepter_held.png",
+          "scene": 131,
+          "line": 147,
+          "check": "icon matches the sprite page (16x16, Frostwake Scepter), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:43"
+        },
+        {
+          "file": "items__frostwake_scepter_tooltip.png",
+          "scene": 131,
+          "line": 147,
+          "check": "icon matches the sprite page (16x16, Frostwake Scepter), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:44"
+        }
+      ],
+      "elsewhere:starfall_orrery": [
+        {
+          "file": "items__starfall_orrery_held.png",
+          "scene": 132,
+          "line": 148,
+          "check": "icon matches the sprite page (16x16, Starfall Orrery), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:45"
+        },
+        {
+          "file": "items__starfall_orrery_tooltip.png",
+          "scene": 132,
+          "line": 148,
+          "check": "icon matches the sprite page (16x16, Starfall Orrery), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "20:14:46"
+        }
+      ]
+    },
+    "court": {
+      "elsewhere:waterfront_hrafnholt": [
+        {
+          "file": "court__court_waterfront_front.png",
+          "scene": 133,
+          "line": 150,
+          "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
+          "status": "pending"
+        },
+        {
+          "file": "court__court_waterfront_side.png",
+          "scene": 133,
+          "line": 150,
+          "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
+          "status": "pending"
+        },
+        {
+          "file": "court__court_waterfront_boathouse.png",
+          "scene": 133,
+          "line": 150,
+          "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
+          "status": "pending"
+        }
+      ]
+    },
+    "structures_build": {
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_hrafnholt)": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_0_8_58_y180.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ],
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_mirewick)": [
+        {
+          "file": "structures_build__castle_mirewick_c_0_8_58_y180.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_58_10_30_y_120.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "lead": {
+      "boss bar label letters (elsewhere:azmar_wazir)": [
+        {
+          "file": "lead__boss_bar_label_lowercase_f.png",
+          "scene": 136,
+          "line": 152,
+          "check": "every letter renders: the anim test shot showed 'glyph_flare' as 'glyph_ lare' (dropped f) on boss_ui bar v2",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_items": {
+      "minecraft:shield (reference: first person, idle)": [
+        {
+          "file": "z_items__vanilla_shield_first_person_idle.png",
+          "scene": 137,
+          "line": 156,
+          "check": "vanilla reference for: a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, idle)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_idle.png",
+          "scene": 138,
+          "line": 156,
+          "check": "a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
+          "status": "pending"
+        }
+      ],
+      "minecraft:shield (reference: first person, blocking)": [
+        {
+          "file": "z_items__vanilla_shield_first_person_blocking.png",
+          "scene": 139,
+          "line": 157,
+          "check": "vanilla reference for: the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_blocking.png",
+          "scene": 140,
+          "line": 157,
+          "check": "the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
+          "status": "pending"
+        }
+      ],
+      "minecraft:shield (reference: third person, blocking)": [
+        {
+          "file": "z_items__vanilla_shield_third_person_blocking.png",
+          "scene": 141,
+          "line": 158,
+          "check": "vanilla reference for: arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_skjaldborg_shield (third person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_third_person_blocking.png",
+          "scene": 142,
+          "line": 158,
+          "check": "arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
+          "status": "pending"
+        }
+      ],
+      "minecraft:shield (reference: GUI slot)": [
+        {
+          "file": "z_items__vanilla_shield_gui_slot.png",
+          "scene": 143,
+          "line": 159,
+          "check": "vanilla reference for: a 3D shield at the vanilla shield's GUI angle (turned about 25 degrees, slight tilt), filling the slot like the vanilla shield; lit from the front, not dark",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_skjaldborg_shield (GUI slot)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_gui_slot.png",
+          "scene": 144,
+          "line": 159,
+          "check": "a 3D shield at the vanilla shield's GUI angle (turned about 25 degrees, slight tilt), filling the slot like the vanilla shield; lit from the front, not dark",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_parrying_buckler (first person, idle)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_idle.png",
+          "scene": 145,
+          "line": 160,
+          "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_parrying_buckler (first person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_blocking.png",
+          "scene": 146,
+          "line": 161,
+          "check": "rises to the vanilla blocking spot",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_parrying_buckler (third person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_third_person_blocking.png",
+          "scene": 147,
+          "line": 162,
+          "check": "arm in the block pose, steel face with blue ring and gold boss toward the camera",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_parrying_buckler (GUI slot)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_gui_slot.png",
+          "scene": 148,
+          "line": 163,
+          "check": "3D buckler at the vanilla shield GUI angle, centred in the slot",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_castle": {
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)": [
+        {
+          "file": "z_castle__castle_mirewick_c_44_8_44_y135.png",
+          "scene": 149,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_azmar)": [
+        {
+          "file": "z_castle__castle_azmar_c_44_8_44_y135.png",
+          "scene": 150,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_callingtags": {
+      "Calling tooltip (moonsilk_robe, sunlance_staff)": [
+        {
+          "file": "s_callingtags__calling_tooltip_moonsilk_robe.png",
+          "scene": 151,
+          "line": 165,
+          "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_callingtags__calling_tooltip_sunlance_staff.png",
+          "scene": 151,
+          "line": 165,
+          "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
+          "status": "pending"
+        }
+      ],
+      "No Calling line on untagged gear3 items": [
+        {
+          "file": "s_callingtags__tooltip_quickdraw_quiver.png",
+          "scene": 152,
+          "line": 166,
+          "check": "name and lore lines only: no \"Vanguard/Marksman/Caster/Summoner:\" line",
+          "status": "pending"
+        },
+        {
+          "file": "s_callingtags__tooltip_skjaldborg_round_shield.png",
+          "scene": 152,
+          "line": 166,
+          "check": "name and lore lines only: no \"Vanguard/Marksman/Caster/Summoner:\" line",
+          "status": "pending"
+        },
+        {
+          "file": "s_callingtags__tooltip_sunglass_arrow.png",
+          "scene": 152,
+          "line": 166,
+          "check": "name and lore lines only: no \"Vanguard/Marksman/Caster/Summoner:\" line",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:clan_hold": [
+        {
+          "file": "s_struct_verdigris__clan_hold_s_14_10_14.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_verdigris__clan_hold_downhill_18.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:climbers_cairn": [
+        {
+          "file": "s_struct_verdigris__climbers_cairn_s_6_4_6.png",
+          "scene": 154,
+          "line": 171,
+          "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:proving_grounds": [
+        {
+          "file": "s_struct_verdigris__proving_grounds_s_0_16_34.png",
+          "scene": 155,
+          "line": 172,
+          "check": "round arena ledge cut into the mountain, open cliff edge to the south on a stone foundation, stone-brick spectator tiers climbing the uphill (north) side, sloped banks instead of a cylinder cut, iron-bar rails, 4 red banners, the horn at the north gate",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:summit_throne": [
+        {
+          "file": "s_struct_verdigris__summit_throne_s_30_18_30.png",
+          "scene": 156,
+          "line": 173,
+          "check": "ice plateau on the true summit cap with a packed-ice/frostgranite plinth down to the rock, 6 deepslate storm obelisks on frostgranite-stair plinths (no iron blocks), throne with the war drum, 1-3 small frostgranite waymark obelisks on ridge points around the cap; snowy banks, no cylinder cut",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ironpeak_return_rift": [
+        {
+          "file": "s_struct_verdigris__ironpeak_return_rift_s_8_5_8.png",
+          "scene": 157,
+          "line": 174,
+          "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:engineers_atoll": [
+        {
+          "file": "s_struct_verdigris__engineers_atoll_s_16_8_16.png",
+          "scene": 158,
+          "line": 175,
+          "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:clockwork_rig": [
+        {
+          "file": "s_struct_verdigris__clockwork_rig_s_18_2_18.png",
+          "scene": 159,
+          "line": 176,
+          "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_verdigris__clockwork_rig_s_0_10_16.png",
+          "scene": 159,
+          "line": 176,
+          "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lighthouse": [
+        {
+          "file": "s_struct_verdigris__lighthouse_s_30_10_30.png",
+          "scene": 160,
+          "line": 177,
+          "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:drowned_cathedral": [
+        {
+          "file": "s_struct_verdigris__drowned_cathedral_s_26_6_26.png",
+          "scene": 161,
+          "line": 178,
+          "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:tidelock_vault": [
+        {
+          "file": "s_struct_verdigris__tidelock_vault_s_0_3_14.png",
+          "scene": 162,
+          "line": 179,
+          "check": "the plate chamber set into the sea-bed slope: sediment over the back half of the roof and banked on the sides, riveted portal with a plate lintel and two lit bulbs, a plated apron down to the bed",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:verdigris_sea_return_rift": [
+        {
+          "file": "s_struct_verdigris__verdigris_sea_return_rift_s_8_4_8.png",
+          "scene": 163,
+          "line": 180,
+          "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_azmarsize": {
+      "Azmar line relief: rank blocks of 5 (army.scale squad 5, relief wave 5 / 30 s at 85%)": [
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_10s.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "pending"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Ankhara arena seal + burrow trail (elsewhere:sunpit)": [
+        {
+          "file": "s_p13_particles__ankhara_arena_seal_3s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        }
+      ],
+      "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
+        {
+          "file": "s_p13_particles__rimeback_avalanche_10s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__rimeback_avalanche_20s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:14:46",
+  "totals": {
+    "ok": 10,
+    "fail": 0,
+    "manual": 0
+  }
+}
