@@ -122,19 +122,13 @@ public final class VillageManager {
 		long t0 = System.nanoTime();
 		long now = level.getGameTime();
 		List<Vec3> obs = observers(level);
-		if (obs.isEmpty()) {
-			dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.siegeActive = false;
-			return;
-		}
+		if (obs.isEmpty()) return;
 		VillageLedger ledger = VillageLedger.get(level);
 		if (now % 40 == 0) for (Vec3 o : obs) scan(level, BlockPos.containing(o), observerPlayer(level, o));
-		boolean sieging = false;
 		for (VillageRecord r : new ArrayList<>(ledger.villages.values())) {
-			if (r.state == VillageRecord.State.SIEGE) sieging = true;
 			Vec3 near = nearest(r, obs);
 			if (near != null) process(level, r, now, near);
 		}
-		dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.siegeActive = sieging;
 		Conquest.tick(level, ledger, obs, now);
 		if (now % 40 == 20) Hints.tick(level, ledger);
 		if (now % 1200 == 600) WarBridge.ensure(level.getServer(), ledger);

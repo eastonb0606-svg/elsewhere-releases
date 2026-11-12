@@ -109,7 +109,7 @@ public final class Swarm3Renderers {
 		public void submit(final GreenhazeHushClient.SmogState s, final PoseStack pose, final SubmitNodeCollector c, final CameraRenderState cam) {
 			int n = s instanceof SmogBankState b ? b.drawn : 1;
 			int seed = s instanceof SmogBankState b ? b.seed : 0;
-			drawMany(s, n, seed, 0.45F * Math.max(1, s.size), pose, () -> super.submit(s, pose, c, cam));
+			drawMany(s, n, seed, 1.0F * Math.max(1, s.size), pose, () -> super.submit(s, pose, c, cam));
 		}
 	}
 

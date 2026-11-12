@@ -502,7 +502,10 @@ public final class MirewickLooks {
 			int cut = n;
 			for (int i = 0; i < n && cut == n; i++) {
 				if (d[i] - s[i] > 4 || d[i] < s[i] || i > 0 && Math.abs(d[i] - d[i - 1]) > 1) cut = i;
-				else if (!(anchored && i == 0)) for (int y = s[i]; y <= d[i] && cut == n; y++) if (!free(c, new BlockPos(xs[i], y, zs[i]))) cut = i;
+				else if (!(anchored && i == 0)) for (int y = s[i]; y <= d[i] && cut == n; y++) if (!free(c, new BlockPos(xs[i], y, zs[i]))) {
+					cut = i;
+					if (lastWalkWhy.length() < 700) lastWalkWhy += " {free " + xs[i] + "," + y + "," + zs[i] + " " + level.getBlockState(new BlockPos(xs[i], y, zs[i])).getBlock().getDescriptionId() + " used " + c.used.contains(new BlockPos(xs[i], y, zs[i]).asLong()) + " fp " + c.r.insideFootprint(new BlockPos(xs[i], y, zs[i]), BlockWriter.UP) + " i " + i + "}";
+				}
 			}
 			if (cut < n) {
 				n = cut;

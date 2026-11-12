@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 16:49",
+ "generated": "2026-11-12 16:53",
  "scenes": [
   {
    "n": 1,
@@ -19848,6 +19848,10 @@
      0
     ],
     [
+     "cmd",
+     "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
+    ],
+    [
      "look_target"
     ],
     [
@@ -19886,7 +19890,7 @@
     ],
     [
      "wait",
-     2
+     3
     ],
     [
      "shot",
@@ -19902,14 +19906,14 @@
     ],
     [
      "wait",
-     5
+     8
     ],
     [
      "attack"
     ],
     [
      "wait",
-     2
+     3
     ],
     [
      "shot",
@@ -19933,9 +19937,6 @@
     [
      "shot",
      "ironclad_flail_after_use"
-    ],
-    [
-     "close"
     ],
     [
      "hold",
@@ -19987,7 +19988,7 @@
    "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
    "setup": "flat world, noon, survival, `elsewhere:ironclad_flail` in main hand, a NoAI husk 2 blocks ahead; left-click it and shoot 2 ticks after the click (mid-swing), then again 4 ticks after",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "shard-3.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 232,
@@ -20010,7 +20011,7 @@
     ],
     [
      "gui",
-     false
+     true
     ],
     [
      "cmd",
@@ -20021,7 +20022,7 @@
      "minecraft:husk",
      "{NoAI:1b,PersistenceRequired:1b}",
      0,
-     4
+     3
     ],
     [
      "hold",
@@ -20041,12 +20042,19 @@
      "chunks"
     ],
     [
+     "cmd",
+     "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
+    ],
+    [
      "wait",
      20
     ],
     [
      "camera",
      "first"
+    ],
+    [
+     "look_target"
     ],
     [
      "wait",
@@ -20073,15 +20081,18 @@
      "first"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
-     "use_down"
+     "look_target"
     ],
     [
      "wait",
      14
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     3
     ],
     [
      "shot",
@@ -20093,14 +20104,18 @@
     ],
     [
      "wait",
+     20
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
      3
     ],
     [
      "shot",
      "ironclad_flail_in_use_third_person_2"
-    ],
-    [
-     "use_up"
     ],
     [
      "wait",
@@ -20119,12 +20134,9 @@
      "ironclad_flail_after_use_2"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
-     "gui",
-     true
+     "hold",
+     "mainhand",
+     "elsewhere:ironclad_flail"
     ],
     [
      "inventory",
@@ -20140,10 +20152,6 @@
     ],
     [
      "close"
-    ],
-    [
-     "gui",
-     false
     ]
    ],
    "shots": [
@@ -20175,7 +20183,7 @@
    "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
    "setup": "same scene, F5 (front view), or a second player 6 blocks away swinging; shoot mid-swing for each weapon",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 233,
@@ -20367,7 +20375,7 @@
     ],
     [
      "wait",
-     2
+     3
     ],
     [
      "shot",
@@ -20386,7 +20394,7 @@
     ],
     [
      "wait",
-     2
+     3
     ],
     [
      "shot",
@@ -20453,7 +20461,7 @@
    "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
    "setup": "flail in hand, stand still 1 s (shot 1, also the hotbar slot), swing at air and shoot within 4 ticks (shot 2)",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 235,
@@ -20706,7 +20714,7 @@
     ],
     [
      "wait",
-     15
+     30
     ],
     [
      "shot",
@@ -20784,18 +20792,116 @@
    "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
    "setup": "Glimmer full, hold right-click with each; resonator shots at 5, 15 and 30 ticks held; prism and bell one shot each at 10 ticks held",
    "note": "generic: item sculk_resonator; framing approximate",
-   "override": "shard-2.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 237,
    "line": 267,
    "lane": "s_p6_useanims",
    "item": "weapon effects level + kill switch",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "shot 2 needs use_anims=false in config/elsewhere-overhaul3.json plus a client restart; /elsewhere_weaponfx is a client command and the kill switch cannot be toggled in-run"
+     "reset",
+     "survival"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     true
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "chat",
+     true
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:ironclad_flail"
+    ],
+    [
+     "summon",
+     "minecraft:husk",
+     "{NoAI:1b,PersistenceRequired:1b}",
+     0,
+     3
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "cmd",
+     "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     15
+    ],
+    [
+     "player_cmd",
+     "elsewhere_weaponfx low"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "shot",
+     "weapon_effects_level_kill_switch"
+    ],
+    [
+     "wait",
+     25
+    ],
+    [
+     "player_cmd",
+     "elsewhere_weaponfx normal"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "shot",
+     "weapon_effects_level_kill_switch_5s"
+    ],
+    [
+     "chat",
+     false
     ]
    ],
    "shots": [
@@ -20811,7 +20917,7 @@
    "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
    "setup": "`/elsewhere_weaponfx low`, swing the flail (shot 1); `/elsewhere_weaponfx normal`; then `\"use_anims\": false` in config/elsewhere-overhaul3.json and restart (shot 2 mid-swing)",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "shard-3.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 238,
@@ -20845,16 +20951,16 @@
     ],
     [
      "cmd",
-     "execute positioned ~ ~ ~10 run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run summon elsewhere:munchie_boar ~1 ~ ~1"
+     "execute positioned ~ ~ ~9 run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run summon elsewhere:munchie_boar ~1 ~ ~1"
     ],
     [
      "tp",
      "stage",
      0,
      6,
-     -1,
+     -3,
      0,
-     28
+     25
     ],
     [
      "chunks"
@@ -20889,7 +20995,7 @@
    "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
    "setup": "Greenhaze kush_canopy, noon, survival-safe spot; spawn 4 in ONE tick: `/execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run summon elsewhere:munchie_boar ~1 ~ ~1`; creative, step 10 back and 6 up, shoot at +15 s",
    "note": "generic: entity munchie_boar, 1 setup command(s); framing approximate",
-   "override": "shard-4.out.json"
+   "override": "spawn.json"
   },
   {
    "n": 239,
@@ -20931,41 +21037,6 @@
      "give @s minecraft:iron_sword"
     ],
     [
-     "summon",
-     "elsewhere:ironclan_raider",
-     "{PersistenceRequired:1b}",
-     -2.5,
-     13
-    ],
-    [
-     "summon",
-     "elsewhere:ironclan_raider",
-     "{PersistenceRequired:1b}",
-     2.5,
-     13
-    ],
-    [
-     "summon",
-     "elsewhere:ironclan_raider",
-     "{PersistenceRequired:1b}",
-     -2.5,
-     10
-    ],
-    [
-     "summon",
-     "elsewhere:ironclan_raider",
-     "{PersistenceRequired:1b}",
-     2.5,
-     10
-    ],
-    [
-     "summon",
-     "elsewhere:ironclan_raider",
-     "{PersistenceRequired:1b}",
-     0,
-     7
-    ],
-    [
      "subtitles",
      true
     ],
@@ -20982,20 +21053,28 @@
      "chunks"
     ],
     [
-     "wait",
-     10
-    ],
-    [
-     "damage",
-     "1"
+     "cmd",
+     "execute positioned ~ ~ ~10 run execute summon elsewhere:ironclan_raider run execute summon elsewhere:ironclan_raider run execute summon elsewhere:ironclan_raider run execute summon elsewhere:ironclan_raider run summon elsewhere:ironclan_raider ~1 ~ ~1"
     ],
     [
      "wait",
-     30
+     60
     ],
     [
      "shot",
      "ironclan_raider_raiding_party_verdigris"
+    ],
+    [
+     "cmd",
+     "damage @e[type=elsewhere:ironclan_raider,limit=1,sort=nearest] 1 minecraft:player_attack by @s"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "shot",
+     "ironclan_raider_raiding_party_verdigris_hit"
     ]
    ],
    "shots": [
@@ -21007,7 +21086,7 @@
    "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
    "setup": "Ironpeak iron_foothills, noon, same one-tick chain with 5 `elsewhere:ironclan_raider`; survival, hit one with a sword, shoot at +2 s from 8 back",
    "note": "generic: entity ironclan_raider; framing approximate",
-   "override": "shard-5.out.json"
+   "override": "spawn.json"
   },
   {
    "n": 240,
@@ -21018,11 +21097,11 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 18000"
     ],
     [
      "cmd",
@@ -21033,49 +21112,56 @@
      true
     ],
     [
-     "summon",
-     "elsewhere:ossuary_chorister",
-     "{NoAI:1b,PersistenceRequired:1b}",
-     -3,
-     7
+     "cmd",
+     "effect give @s resistance infinite 255 true"
     ],
     [
-     "summon",
-     "elsewhere:ossuary_chorister",
-     "{NoAI:1b,PersistenceRequired:1b}",
-     3,
-     7
+     "cmd",
+     "time set 18000"
     ],
     [
-     "summon",
-     "elsewhere:ossuary_chorister",
-     "{NoAI:1b,PersistenceRequired:1b}",
+     "cmd",
+     "effect give @s regeneration infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
+    ],
+    [
+     "tp",
+     "stage",
      0,
-     5
-    ],
-    [
-     "summon",
-     "elsewhere:ossuary_chorister",
-     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:scale\",base:1.5d}]}",
      0,
-     9
-    ],
-    [
-     "view",
-     1.2,
-     8.0,
-     30.0
+     0,
+     0,
+     8
     ],
     [
      "chunks"
     ],
     [
+     "cmd",
+     "execute positioned ~ ~ ~7 run execute summon elsewhere:ossuary_chorister run execute summon elsewhere:ossuary_chorister run execute summon elsewhere:ossuary_chorister run summon elsewhere:ossuary_chorister ~1 ~ ~1"
+    ],
+    [
      "wait",
-     30
+     60
     ],
     [
      "shot",
      "ossuary_chorister_choir_greenhaze_hush_t"
+    ],
+    [
+     "cmd",
+     "damage @e[type=elsewhere:ossuary_chorister,limit=1,sort=nearest] 1 minecraft:player_attack by @s"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "shot",
+     "ossuary_chorister_choir_greenhaze_hush_t_hit"
     ]
    ],
    "shots": [
@@ -21087,7 +21173,7 @@
    "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
    "setup": "the Hush, any cave floor, same one-tick chain with 4 choristers; survival player 6 blocks away for 10 s, then hit one",
    "note": "generic: entity ossuary_chorister; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "spawn.json"
   },
   {
    "n": 241,
@@ -21113,65 +21199,51 @@
      true
     ],
     [
-     "chat",
-     false
-    ],
-    [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "summon",
-     "elsewhere:hollow_stag",
-     "{PersistenceRequired:1b}",
-     -4,
-     10
+     "chat",
+     false
     ],
     [
-     "summon",
-     "elsewhere:hollow_stag",
-     "{PersistenceRequired:1b}",
+     "fly"
+    ],
+    [
+     "tp",
+     "stage",
      0,
-     9
-    ],
-    [
-     "summon",
-     "elsewhere:hollow_stag",
-     "{PersistenceRequired:1b}",
-     4,
-     10
-    ],
-    [
-     "summon",
-     "elsewhere:hollow_stag",
-     "{PersistenceRequired:1b}",
+     5,
+     -2,
      0,
-     13
-    ],
-    [
-     "view",
-     2.5,
-     10.0,
-     35.0
+     25
     ],
     [
      "chunks"
     ],
     [
-     "wait",
-     40
-    ],
-    [
-     "damage",
-     "1"
+     "cmd",
+     "execute positioned ~ ~ ~9 run execute summon elsewhere:hollow_stag run execute summon elsewhere:hollow_stag run execute summon elsewhere:hollow_stag run summon elsewhere:hollow_stag ~1 ~ ~1"
     ],
     [
      "wait",
-     4
+     100
     ],
     [
      "shot",
      "hollow_stag_herd_core"
+    ],
+    [
+     "cmd",
+     "damage @e[type=elsewhere:hollow_stag,limit=1,sort=nearest] 1 minecraft:player_attack by @s"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "shot",
+     "hollow_stag_herd_core_hit"
     ]
    ],
    "shots": [
@@ -21183,7 +21255,7 @@
    "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
    "setup": "Pale Hollow hollow_thicket, noon, one-tick chain with 4 `elsewhere:hollow_stag`; hit one",
    "note": "generic: entity hollow_stag; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "spawn.json"
   },
   {
    "n": 242,
@@ -26508,7 +26580,7 @@
     ],
     [
      "gui",
-     false
+     true
     ],
     [
      "cmd",
@@ -26594,7 +26666,7 @@
     ],
     [
      "camera",
-     "front"
+     "back"
     ],
     [
      "wait",
@@ -26659,7 +26731,7 @@
     ],
     [
      "gui",
-     false
+     true
     ]
    ],
    "shots": [
@@ -26691,7 +26763,7 @@
    "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, cursor on each of Thornlash, Tidechain Lash, Sunscourge, Echo Chord; then survival, each in the main hand, first person and F5 front, noon; right-click once and shoot during the 0.5 s cooldown",
    "note": "generic: item thornlash; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 304,
@@ -27863,7 +27935,11 @@
     [
      "hold",
      "mainhand",
-     "elsewhere:starpiercer"
+     "elsewhere:aphelion_starpiercer"
+    ],
+    [
+     "cmd",
+     "give @s minecraft:arrow 16"
     ],
     [
      "tp",
@@ -27883,7 +27959,7 @@
     ],
     [
      "wait",
-     25
+     40
     ],
     [
      "use_up"
@@ -27899,7 +27975,7 @@
      0,
      7,
      -34,
-     3
+     0
     ],
     [
      "wait",
@@ -27919,7 +27995,7 @@
    "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
    "setup": "after the flight shot, walk to the arrow stuck in a block; then start drawing and sprint",
    "note": "generic: entity starpiercer_arrow; framing approximate",
-   "override": "idfix.json"
+   "override": "itemsc.json"
   },
   {
    "n": 314,
@@ -27995,11 +28071,89 @@
    "line": 355,
    "lane": "s_townsfolk",
    "item": "Aldermark fields at 14:00 + vespers",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "needs the live Aldermark capital with townsfolk routines at set times; the scene world is flat so no town exists"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 7000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     false
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     6,
+     24,
+     180,
+     6
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 8000"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "shot",
+     "aldermark_fields_at_14_00_vespers"
+    ],
+    [
+     "cmd",
+     "time set 10000"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 11000"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "shot",
+     "aldermark_fields_at_14_00_vespers_5s"
     ]
    ],
    "shots": [
@@ -28015,7 +28169,7 @@
    "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
    "setup": "same capital, /time set 8000 (14:00), then 11000 (17:00)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-6.out.json"
+   "override": "npc.json"
   },
   {
    "n": 316,
@@ -28322,11 +28476,90 @@
    "line": 359,
    "lane": "s_townsfolk",
    "item": "elsewhere:townsfolk",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "LOD fold needs a live capital with 40+ townsfolk and a 100-block walk away and back; cannot be framed in one flat-stage shot"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 3000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     false
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     6,
+     24,
+     180,
+     6
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     60,
+     150,
+     0,
+     20
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     6,
+     24,
+     180,
+     6
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "shot",
+     "townsfolk_lod_fold"
     ]
    ],
    "shots": [
@@ -28338,7 +28571,7 @@
    "check": "nobody pops out of existence in view (they fold beyond 72 blocks, outside the 64-block tracking range); coming back, residents reappear at doors/far streets, never next to you",
    "setup": "any capital at market with 40+ live, walk 100 blocks away, then back",
    "note": "generic: entity townsfolk; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "npc.json"
   },
   {
    "n": 320,
@@ -29271,7 +29504,7 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 1000"
     ],
     [
      "cmd",
@@ -29279,10 +29512,6 @@
     ],
     [
      "gui",
-     true
-    ],
-    [
-     "chat",
      false
     ],
     [
@@ -29293,63 +29522,39 @@
      "fly"
     ],
     [
-     "cmd",
-     "kingdomdetail medium"
-    ],
-    [
-     "cmd",
-     "setblock ~6 ~ ~16 minecraft:hay_block"
-    ],
-    [
-     "summon",
-     "elsewhere:kingdom_man_at_arms",
-     "{NoAI:1b,PersistenceRequired:1b,KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}",
-     -9,
-     8
-    ],
-    [
-     "summon",
-     "elsewhere:kingdom_man_at_arms",
-     "{NoAI:1b,PersistenceRequired:1b,KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:azmar\"}",
-     -5,
-     8
-    ],
-    [
-     "summon",
-     "elsewhere:kingdom_man_at_arms",
-     "{NoAI:1b,PersistenceRequired:1b,KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:hrafnholt\"}",
-     -1,
-     8
-    ],
-    [
-     "summon",
-     "elsewhere:kingdom_man_at_arms",
-     "{NoAI:1b,PersistenceRequired:1b,KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:mirewick\"}",
-     3,
-     8
-    ],
-    [
-     "summon",
-     "elsewhere:kingdom_archer",
-     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:aldermark\"}",
-     7,
-     8
+     "locate",
+     "elsewhere:castle_aldermark"
     ],
     [
      "tp",
-     "stage",
-     -1,
-     3,
-     -8,
+     "anchor",
      0,
-     12
+     8,
+     24,
+     180,
+     8
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 2000"
+    ],
+    [
+     "wait",
+     300
     ],
     [
      "shot",
@@ -29365,7 +29570,7 @@
    "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
    "setup": "the row plus the archer at the end, two shots 1 s apart",
    "note": "generic: entity kingdom_archer; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "npc.json"
   },
   {
    "n": 328,
@@ -29389,11 +29594,81 @@
    "line": 372,
    "lane": "s_p9_idle",
    "item": "Pose.DRINK and Pose.TORCH",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "pose DRINK/TORCH is set only by the night routine's feast/watch events on live town garrisons; no command or NBT sets an idle pose"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 12500"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     false
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     10,
+     30,
+     180,
+     8
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 13000"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "shot",
+     "pose_drink_and_pose_torch"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "shot",
+     "pose_drink_and_pose_torch_5s"
     ]
    ],
    "shots": [
@@ -29409,7 +29684,7 @@
    "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
    "setup": "Hrafnholt + Aldermark with DRINK, Aldermark + Mirewick with TORCH, `/time set 13000`; for DRINK take 4 shots 1 s apart",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-2.out.json"
+   "override": "npc.json"
   },
   {
    "n": 330,
@@ -29454,11 +29729,11 @@
    "steps": [
     [
      "reset",
-     "survival"
+     "creative"
     ],
     [
      "cmd",
-     "time set 18000"
+     "time set 17000"
     ],
     [
      "cmd",
@@ -29466,36 +29741,49 @@
     ],
     [
      "gui",
-     true
-    ],
-    [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
+     false
     ],
     [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "summon elsewhere:kingdom_man_at_arms ~-3 ~ ~7 {PersistenceRequired:1b,KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}"
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
     ],
     [
      "cmd",
-     "summon elsewhere:kingdom_man_at_arms ~0 ~ ~7 {PersistenceRequired:1b,KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}"
-    ],
-    [
-     "cmd",
-     "summon elsewhere:kingdom_man_at_arms ~3 ~ ~7 {PersistenceRequired:1b,KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}"
+     "effect give @s night_vision infinite 0 true"
     ],
     [
      "tp",
-     "stage",
+     "anchor",
      0,
-     0,
-     0,
-     0,
-     10
+     10,
+     30,
+     180,
+     8
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 18000"
     ],
     [
      "wait",
@@ -29527,18 +29815,76 @@
    "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
    "setup": "a real Aldermark garrison (or 3 soldiers with AI on near their post), `/time set 18000`, wait for the night routine to rest them, camera 5 blocks away",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-3.out.json"
+   "override": "npc.json"
   },
   {
    "n": 333,
    "line": 376,
    "lane": "s_p9_idle",
    "item": "elsewhere:townsfolk",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "kingdom town routine poses (SIT/WORK/CARRY/PRAY/LOUNGE) are set by RoutinePoses code at routine hours, not by any command"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 3000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     false
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     4,
+     22,
+     180,
+     4
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 4000"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "shot",
+     "townsfolk_routine_poses_s_townsfolk_resi"
     ]
    ],
    "shots": [
@@ -29550,7 +29896,7 @@
    "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
    "setup": "a capital or kingdom town of each kingdom at its routine hours (Aldermark market 09:00-12:00, Azmar dawn rite 06:00 and siesta 13:00, Hrafnholt Thing, Mirewick Canal Market), or `TownsfolkManager.TYPE.create` + `setup(...)` + `setNoAi(true)` + `RoutinePoses.set(tf, Pose.<POSE>)` for SIT, WORK, CARRY, PRAY, LOUNGE",
    "note": "generic: entity townsfolk; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "npc.json"
   },
   {
    "n": 334,
@@ -30889,12 +31235,8 @@
      "fill ~-8 ~ ~8 ~8 ~6 ~8 minecraft:light_gray_concrete"
     ],
     [
-     "cmd",
-     "item replace entity @s armor.head with elsewhere:galeplate_helmet"
-    ],
-    [
-     "cmd",
-     "item replace entity @s armor.chest with elsewhere:galeplate_chestplate"
+     "wear_set",
+     "galeplate"
     ],
     [
      "wait",
@@ -30921,6 +31263,12 @@
      "first"
     ],
     [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     true
+    ],
+    [
      "inventory",
      "armor.head"
     ],
@@ -30934,6 +31282,12 @@
     ],
     [
      "close"
+    ],
+    [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     false
     ]
    ],
    "shots": [
@@ -30953,7 +31307,7 @@
    "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
    "setup": "creative, wear 2 Galeplate pieces, hover the Galeplate helmet in the inventory; then hold Shift; then wear all 4",
    "note": "generic: item galeplate_helmet; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 353,
@@ -31080,6 +31434,12 @@
      "time set 6000"
     ],
     [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     true
+    ],
+    [
      "inventory",
      "armor.head"
     ],
@@ -31093,6 +31453,12 @@
     ],
     [
      "close"
+    ],
+    [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     false
     ]
    ],
    "shots": [
@@ -31124,7 +31490,7 @@
    "check": "gold \"Pair bonus: Glyph and Blade (2/2)\", 3 yellow detail lines, and \"Pair strength NN% (Vanguard and Caster)\"",
    "setup": "wear Azmar Glyphmail hood + hauberk with a Vanguard/Caster hybrid calling, hover the hood, hold Shift",
    "note": "generic: item azmar_glyphmail_hood; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 354,
@@ -31550,11 +31916,88 @@
    "line": 407,
    "lane": "s_locate",
    "item": "explorer map to a rival castle",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "the exploration map needs a generated castle_azmar and biome colours; the scene's world is flat, which has no Elsewhere structures"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     true
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_azmar"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     25,
+     50,
+     180,
+     35
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "hold",
+     "mainhand",
+     "minecraft:map"
+    ],
+    [
+     "cmd",
+     "item modify entity @s weapon.mainhand elsewhereqa:azmar_map"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     25,
+     50,
+     180,
+     50
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "shot",
+     "explorer_map_to_a_rival_castle"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "shot",
+     "explorer_map_to_a_rival_castle_5s"
     ]
    ],
    "shots": [
@@ -31570,7 +32013,7 @@
    "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
    "setup": "same world, `/give @s minecraft:map`, hold it, then `/item modify entity @s weapon.mainhand {\"type\":\"minecraft:exploration_map\",\"destination\":\"#elsewhere:azmar_castle\"}`; hold the map, first person",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "shard-3.out.json"
+   "override": "npc.json"
   },
   {
    "n": 360,
@@ -31645,6 +32088,12 @@
      true
     ],
     [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     true
+    ],
+    [
      "inventory",
      "armor.head"
     ],
@@ -31658,6 +32107,12 @@
     ],
     [
      "close"
+    ],
+    [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     false
     ]
    ],
    "shots": [
@@ -31677,7 +32132,7 @@
    "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
    "setup": "creative, wear all 4 Ridgewatch pieces, hover the Ridgewatch Hood, hold Shift; repeat on a Sunscribe, Ulfhednar and Marshal's piece",
    "note": "generic: item ridgewatch_hood; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 361,
@@ -31787,6 +32242,12 @@
      "elsewhere:glasswaste_prism_mantle"
     ],
     [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     true
+    ],
+    [
      "inventory",
      "armor.head"
     ],
@@ -31800,6 +32261,12 @@
     ],
     [
      "close"
+    ],
+    [
+     "client_set",
+     "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
+     "forceShift",
+     false
     ]
    ],
    "shots": [
@@ -31831,7 +32298,7 @@
    "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
    "setup": "wear the Starsight Visor + Prism Mantle with a Marksman/Caster hybrid calling, hover the Visor, hold Shift; then the Outrider Chaps + Boots with Vanguard/Marksman",
    "note": "generic: item glasswaste_starsight_visor; framing approximate",
-   "override": "shard-5.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 362,
@@ -31950,7 +32417,7 @@
    "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
    "setup": "survival, full Ulfhednar set (Mask, Pelt, Breeches, Wolfskin Boots), attack indicator on (crosshair), hit a zombie 5 times fast, then stop for 4 s",
    "note": "generic: item hrafnholt_wolfskin_boots; framing approximate",
-   "override": "shard-6.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 364,
@@ -32652,11 +33119,81 @@
    "line": 425,
    "lane": "s_routines",
    "item": "Aldermark Muster Day ranks and mock charge",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "Muster Day needs the Aldermark castle garrison and townsfolk routine in a real kingdom world at a 7th day; the flat stage has no garrison and no command forces the routine"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 171000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     false
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     9,
+     40,
+     180,
+     10
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 172000"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "shot",
+     "aldermark_muster_day_ranks_and_mock_char"
+    ],
+    [
+     "cmd",
+     "time set 173000"
+    ],
+    [
+     "wait",
+     160
+    ],
+    [
+     "shot",
+     "aldermark_muster_day_ranks_and_mock_char_5s"
     ]
    ],
    "shots": [
@@ -32672,18 +33209,84 @@
    "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
    "setup": "`/time set` so the day number is a multiple of 7, then 10:00 (`/time set 4000`), stand in front of the gate on the road",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "shard-2.out.json"
+   "override": "npc.json"
   },
   {
    "n": 378,
    "line": 426,
    "lane": "s_routines",
    "item": "Changing of the guard salute",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "Aldermark squads salute at their posts only inside a generated castle; the scene's world is flat and has no castle or posts"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 5000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     false
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     12,
+     34,
+     180,
+     12
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "shot",
+     "changing_of_the_guard_salute"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "shot",
+     "changing_of_the_guard_salute_5s"
     ]
    ],
    "shots": [
@@ -32699,7 +33302,7 @@
    "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
    "setup": "Aldermark, 12:00 (`/time set 6000`), stand at the gate",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-3.out.json"
+   "override": "npc.json"
   },
   {
    "n": 379,
@@ -32761,11 +33364,11 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 0"
     ],
     [
      "cmd",
@@ -32777,7 +33380,10 @@
     ],
     [
      "cmd",
-     "effect give @s night_vision infinite 0 true"
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
     ],
     [
      "locate",
@@ -32786,11 +33392,18 @@
     [
      "tp",
      "anchor",
-     0.0,
-     9.0,
-     40.0,
-     180.0,
-     10.0
+     0,
+     9,
+     30,
+     180,
+     10
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
     ],
     [
      "chunks"
@@ -32805,7 +33418,7 @@
     ],
     [
      "wait",
-     60
+     100
     ],
     [
      "shot",
@@ -32813,11 +33426,11 @@
     ],
     [
      "cmd",
-     "time set 1000"
+     "time set 900"
     ],
     [
      "wait",
-     100
+     200
     ],
     [
      "shot",
@@ -32837,7 +33450,7 @@
    "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
    "setup": "Mirewick realm, watch the gate from 06:20 to 07:40 (`/time set 333`)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-4.out.json"
+   "override": "npc.json"
   },
   {
    "n": 383,
@@ -33030,14 +33643,14 @@
     [
      "summon",
      "elsewhere:shrieker_swarm",
-     "{PersistenceRequired:1b}",
+     "{}",
      0,
      8
     ],
     [
      "view",
      0.0,
-     5.0,
+     4.0,
      35.0
     ],
     [
@@ -33091,7 +33704,7 @@
    "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
    "setup": "the Hush, a cave floor, `/execute summon elsewhere:shrieker_swarm` (one summon is enough; it runs finalizeSpawn), camera 5 back, shoot at +3 s, then hit it twice with a sword and shoot again",
    "note": "generic: entity shrieker_swarm, 1 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "spawn.json"
   },
   {
    "n": 393,
@@ -33123,12 +33736,12 @@
     [
      "summon",
      "elsewhere:hotbox_smog",
-     "{PersistenceRequired:1b}"
+     "{}"
     ],
     [
      "view",
      0.0,
-     5.0,
+     4.0,
      40.0
     ],
     [
@@ -33174,7 +33787,7 @@
    "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
    "setup": "Greenhaze kush_canopy, night, `/summon elsewhere:hotbox_smog`, camera 6 back",
    "note": "generic: entity hotbox_smog, 1 setup command(s); framing approximate",
-   "override": "shard-6.out.json"
+   "override": "spawn.json"
   },
   {
    "n": 394,
@@ -33214,35 +33827,14 @@
     [
      "summon",
      "elsewhere:eyeblossom_wisp",
-     "{PersistenceRequired:1b}",
-     -2,
-     8
-    ],
-    [
-     "summon",
-     "elsewhere:eyeblossom_wisp",
-     "{PersistenceRequired:1b}",
-     2,
-     8
-    ],
-    [
-     "summon",
-     "elsewhere:eyeblossom_wisp",
-     "{PersistenceRequired:1b}",
+     "{}",
      0,
-     11
-    ],
-    [
-     "summon",
-     "elsewhere:eyeblossom_wisp",
-     "{PersistenceRequired:1b}",
-     0,
-     5
+     8
     ],
     [
      "view",
-     2.0,
-     6.0,
+     0.0,
+     4.5,
      35.0
     ],
     [
@@ -33281,7 +33873,7 @@
    "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
    "setup": "Pale Hollow heartwood_grove, night, `/summon elsewhere:eyeblossom_wisp`, camera 5 back",
    "note": "generic: entity eyeblossom_wisp, 1 setup command(s); framing approximate",
-   "override": "shard-1.out.json"
+   "override": "spawn.json"
   },
   {
    "n": 395,
@@ -33567,13 +34159,13 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "give @s minecraft:arrow 16"
-    ],
-    [
      "hold",
      "mainhand",
      "elsewhere:prism_bow"
+    ],
+    [
+     "cmd",
+     "give @s minecraft:arrow 16"
     ],
     [
      "tp",
@@ -33650,12 +34242,12 @@
      "use_up"
     ],
     [
-     "wait",
-     20
+     "camera",
+     "back"
     ],
     [
-     "camera",
-     "first"
+     "wait",
+     4
     ],
     [
      "wait",
@@ -33722,7 +34314,7 @@
    "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
    "setup": "survival, flat noon, 20 Glimmer, 16 arrows in the inventory, bow in the main hand; hold use and shoot at 0.3 s, 0.7 s and 1.0 s in first person, then F5 (front view) at full draw",
    "note": "generic: item prism_bow; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 401,
@@ -33733,7 +34325,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -33759,6 +34351,10 @@
      "hold",
      "mainhand",
      "elsewhere:prism_bow"
+    ],
+    [
+     "cmd",
+     "give @s minecraft:arrow 16"
     ],
     [
      "tp",
@@ -33889,7 +34485,7 @@
    "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
    "setup": "same player facing a stone wall 30 blocks away, full draw, release; shot 3 ticks later in F5 (back view), then one shot at +1 s",
    "note": "generic: item prism_bow; framing approximate",
-   "override": "shard-5.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 402,
@@ -34274,7 +34870,7 @@
    "steps": [
     [
      "reset",
-     "survival"
+     "creative"
     ],
     [
      "cmd",
@@ -34295,6 +34891,10 @@
     [
      "cmd",
      "item replace entity @s hotbar.1 with minecraft:goat_horn"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
     ],
     [
      "hold",
@@ -34377,7 +34977,7 @@
    "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
    "setup": "survival, daytime Hrafnholt or plains, `/give @s elsewhere:hrafnholt_wolfcall_horn`, third person front view, then first person",
    "note": "generic: item hrafnholt_wolfcall_horn, 1 setup command(s); framing approximate",
-   "override": "shard-3.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 407,
@@ -34388,7 +34988,7 @@
    "steps": [
     [
      "reset",
-     "survival"
+     "creative"
     ],
     [
      "cmd",
@@ -34400,11 +35000,15 @@
     ],
     [
      "gui",
-     false
+     true
     ],
     [
      "cmd",
      "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
     ],
     [
      "hold",
@@ -34526,7 +35130,7 @@
     ],
     [
      "gui",
-     false
+     true
     ]
    ],
    "shots": [
@@ -34558,7 +35162,7 @@
    "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
    "setup": "as above, hold use for 1 s, shoot at 0.5 s (third person front, then first person)",
    "note": "generic: item hrafnholt_wolfcall_horn; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 408,
@@ -34619,7 +35223,11 @@
     ],
     [
      "wait",
-     10
+     40
+    ],
+    [
+     "wait",
+     60
     ],
     [
      "use_down"
@@ -34633,7 +35241,11 @@
     ],
     [
      "wait",
-     10
+     40
+    ],
+    [
+     "wait",
+     60
     ],
     [
      "use_down"
@@ -34644,6 +35256,10 @@
     ],
     [
      "use_up"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "view",
@@ -34687,7 +35303,7 @@
    "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
    "setup": "plains, at least 30 Glimmer, blow the horn 3 times (3 summoner slots, e.g. with Summoner gear), `/summon minecraft:zombie ~6 ~ ~`, camera 6 back at the side",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 409,
@@ -35203,11 +35819,82 @@
    "line": 470,
    "lane": "s_ascension",
    "item": "elsewhere:galeplate_helmet",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "smithing-table GUI slot placement (helmet + shard) and the result-slot tooltip have no ShotRunner step"
+     "reset",
+     "creative"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     true
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
+     "item replace entity @s weapon.mainhand with elsewhere:galeplate_helmet[item_name={translate:\"item.elsewhere.gear3_ascension_shard.ascendant\",with:[{translate:\"item.elsewhere.galeplate_helmet\"}],color:\"gold\",italic:false},enchantment_glint_override=true,lore=[{translate:\"item.elsewhere.gear3_ascension_shard.ascended_lore\",color:\"gold\",italic:false}],attribute_modifiers=[{type:\"minecraft:armor\",id:\"elsewhere:t_a\",amount:3,operation:\"add_value\",slot:\"head\"},{type:\"minecraft:armor_toughness\",id:\"elsewhere:t_t\",amount:3.5,operation:\"add_value\",slot:\"head\"},{type:\"minecraft:knockback_resistance\",id:\"elsewhere:t_k\",amount:0.5,operation:\"add_value\",slot:\"head\"}],elsewhere:gear3_ascended={}]"
+    ],
+    [
+     "wait",
+     15
+    ],
+    [
+     "shot",
+     "galeplate_helmet_first_person"
+    ],
+    [
+     "cmd",
+     "item replace entity @s armor.head with elsewhere:galeplate_helmet[item_name={translate:\"item.elsewhere.gear3_ascension_shard.ascendant\",with:[{translate:\"item.elsewhere.galeplate_helmet\"}],color:\"gold\",italic:false},enchantment_glint_override=true,lore=[{translate:\"item.elsewhere.gear3_ascension_shard.ascended_lore\",color:\"gold\",italic:false}],attribute_modifiers=[{type:\"minecraft:armor\",id:\"elsewhere:t_a\",amount:3,operation:\"add_value\",slot:\"head\"},{type:\"minecraft:armor_toughness\",id:\"elsewhere:t_t\",amount:3.5,operation:\"add_value\",slot:\"head\"},{type:\"minecraft:knockback_resistance\",id:\"elsewhere:t_k\",amount:0.5,operation:\"add_value\",slot:\"head\"}],elsewhere:gear3_ascended={}]"
+    ],
+    [
+     "cmd",
+     "item replace entity @s weapon.mainhand with minecraft:air"
+    ],
+    [
+     "camera",
+     "front"
+    ],
+    [
+     "wait",
+     15
+    ],
+    [
+     "shot",
+     "galeplate_helmet_third_person"
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "cmd",
+     "item replace entity @s hotbar.0 with elsewhere:galeplate_helmet[item_name={translate:\"item.elsewhere.gear3_ascension_shard.ascendant\",with:[{translate:\"item.elsewhere.galeplate_helmet\"}],color:\"gold\",italic:false},enchantment_glint_override=true,lore=[{translate:\"item.elsewhere.gear3_ascension_shard.ascended_lore\",color:\"gold\",italic:false}],attribute_modifiers=[{type:\"minecraft:armor\",id:\"elsewhere:t_a\",amount:3,operation:\"add_value\",slot:\"head\"},{type:\"minecraft:armor_toughness\",id:\"elsewhere:t_t\",amount:3.5,operation:\"add_value\",slot:\"head\"},{type:\"minecraft:knockback_resistance\",id:\"elsewhere:t_k\",amount:0.5,operation:\"add_value\",slot:\"head\"}],elsewhere:gear3_ascended={}]"
+    ],
+    [
+     "inventory",
+     "armor.head"
+    ],
+    [
+     "wait",
+     8
+    ],
+    [
+     "shot",
+     "galeplate_helmet_tooltip"
+    ],
+    [
+     "close"
     ]
    ],
    "shots": [
@@ -35227,7 +35914,7 @@
    "check": "the result slot shows the same helmet with glint; hover it: gold \"Ascendant Galeplate Helmet\", +3.5 Armor Toughness in the stat lines, a gold lore line \"Ascendant: +1 armor toughness ...\"",
    "setup": "`/give @s elsewhere:galeplate_helmet`, `/give @s elsewhere:gear3_ascension_shard`, `/setblock ~2 ~ ~ smithing_table`, open it, put the helmet in the middle slot and the shard in the right slot (template slot left empty)",
    "note": "generic: item galeplate_helmet, 3 setup command(s); framing approximate",
-   "override": "shard-1.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 421,
@@ -35912,7 +36599,11 @@
     [
      "hold",
      "mainhand",
-     "elsewhere:sunglass"
+     "minecraft:bow"
+    ],
+    [
+     "cmd",
+     "give @s elsewhere:sunglass_arrow 16"
     ],
     [
      "tp",
@@ -35966,10 +36657,6 @@
      10
     ],
     [
-     "wait",
-     1
-    ],
-    [
      "camera",
      "first"
     ],
@@ -35978,13 +36665,8 @@
      5
     ],
     [
-     "equip",
-     "armor.head",
-     "elsewhere:sunglass"
-    ],
-    [
      "inventory",
-     "armor.head"
+     "elsewhere:sunglass_arrow"
     ],
     [
      "wait",
@@ -36015,7 +36697,7 @@
    "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
    "setup": "flat, /time set 18000 (night, so only the arrow can set it alight); a 3x3 glass wall, a glass-pane wall 3 blocks behind it, a NoAI zombie 3 blocks behind the panes (/summon zombie ~ ~ ~ {NoAI:1b}); shoot it from 10 blocks in front of the glass, shot 0.5 s after the hit, camera to the side",
    "note": "generic: item sunglass, 1 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 429,
@@ -36811,7 +37493,7 @@
     [
      "hold",
      "mainhand",
-     "elsewhere:bramble_totem 8"
+     "elsewhere:bramble_totem"
     ],
     [
      "tp",
@@ -36889,6 +37571,11 @@
      "first"
     ],
     [
+     "hold",
+     "mainhand",
+     "elsewhere:bramble_totem"
+    ],
+    [
      "inventory",
      "mainhand"
     ],
@@ -36933,7 +37620,7 @@
    "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
    "setup": "flat daylight, survival with Glimmer; use the Bramble Totem on grass, then /summon 4 NoAI husks 2-4 blocks around it; camera 5 back, third person, wait 2 s",
    "note": "generic: item bramble_totem; framing approximate",
-   "override": "idfix.json"
+   "override": "itemsd.json"
   },
   {
    "n": 437,
@@ -37169,7 +37856,7 @@
    "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
    "setup": "flat, /time set 6000; set the Obelisk, a NoAI husk with 200 HP (/attribute) 8 blocks away; shot after 1 s and after 4 s; then /time set 18000 away from torches",
    "note": "generic: item azmar_sunglass_obelisk, 2 setup command(s); framing approximate",
-   "override": "shard-1.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 439,
@@ -37608,11 +38295,65 @@
    "line": 497,
    "lane": "s_p7_standing",
    "item": "elsewhere:court_marshal",
-   "world": "none",
+   "world": "flat",
    "steps": [
     [
-     "manual",
-     "court rulers are CourtRuler entities spawned by the court module (castle/KingdomApi); no summonable id elsewhere:court_marshal"
+     "reset",
+     "survival"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "gui",
+     true
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
+     "diplomacy standing mirewick 45"
+    ],
+    [
+     "summon",
+     "elsewhere:court_marshal",
+     "{NoAI:1b,PersistenceRequired:1b,KingdomFaction:\"elsewhere:mirewick\"}",
+     0,
+     6
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "shot",
+     "standing_chip_when_looking_at_a_ruler"
     ]
    ],
    "shots": [
@@ -37624,7 +38365,7 @@
    "check": "a small crimson/gold chip fades in just under the crosshair within 0.2 s: lantern crest, \"the Lantern Republic of Mirewick\", \"Valued Client \u00b7 Friendly +45\" and a thin band bar; fades out over 0.2 s on looking away; shows through glass, never through stone; /diplomacy standing mirewick -80, look away for 5 s and back: the chip turns to \"Defaulter \u00b7 Hostile -80\" with a red \"Attacks you on sight\" line; hidden in any open screen, F1, and with the Elsewhere HUD \"standing\" meter off",
    "setup": "/summon elsewhere:court_marshal ~ ~ ~6 {KingdomFaction:\"elsewhere:mirewick\",NoAI:1b}; /diplomacy standing mirewick 45; look at it, then away, then at it through a glass pane and from behind a stone wall",
    "note": "generic: entity court_marshal; framing approximate",
-   "override": "idfix.json"
+   "override": "npc.json"
   },
   {
    "n": 448,
@@ -37812,7 +38553,7 @@
    "steps": [
     [
      "reset",
-     "survival"
+     "creative"
     ],
     [
      "cmd",
@@ -37832,7 +38573,35 @@
     ],
     [
      "cmd",
-     "item replace entity @s hotbar.1 with elsewhere:echo_reliquary"
+     "attribute @s elsewhere:minion_slots base set 2"
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:echo_reliquary"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     5
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     30
     ],
     [
      "summon",
@@ -37842,36 +38611,26 @@
      2.5
     ],
     [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     0,
-     0
+     "look_target"
     ],
     [
-     "look_target"
+     "wait",
+     5
     ],
     [
      "attack"
     ],
     [
      "wait",
-     20
+     8
     ],
     [
-     "tp",
-     "stage",
-     5,
-     0,
-     3,
-     90,
-     12
+     "camera",
+     "front"
     ],
     [
      "wait",
-     20
+     12
     ],
     [
      "shot",
@@ -37899,7 +38658,7 @@
    "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
    "setup": "same; `/summon husk ~4 ~ ~ {NoAI:1b}`, hit the husk once with the hand; shot side-on from 5 blocks at +2 s",
    "note": "generic: entity echo_knight, 1 setup command(s); framing approximate",
-   "override": "shard-6.out.json"
+   "override": "npc.json"
   },
   {
    "n": 451,
@@ -38703,7 +39462,7 @@
    "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
    "setup": "creative inventory, hover elsewhere:mirewick_will_o_lantern in a hotbar slot next to a Glimmer Lantern",
    "note": "generic: item mirewick_will_o_lantern; framing approximate",
-   "override": "shard-3.out.json"
+   "override": "itemsd.json"
   },
   {
    "n": 463,
@@ -39267,6 +40026,14 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
+    ],
+    [
      "tp",
      "stage",
      0,
@@ -39391,7 +40158,7 @@
    "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
    "setup": "give yourself 2 minion slots (e.g. Summoner gear) and 10+ Glimmer, hold use for 1 s, shoot at 0.5 s (third person front, then first person)",
    "note": "generic: item ironpeak_war_yak_horn; framing approximate",
-   "override": "shard-1.out.json"
+   "override": "itemsc.json"
   },
   {
    "n": 474,
@@ -40752,6 +41519,6 @@
  "counts": {
   "scenes": 494,
   "shots": 930,
-  "manual": 92
+  "manual": 82
  }
 }

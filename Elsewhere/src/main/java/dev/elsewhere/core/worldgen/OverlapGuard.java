@@ -45,7 +45,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
  *
  * <p>Rule: start A is dropped when a raw start B, A excluded, (1) outranks A, (2) is {@link #contested} with A (Elsewhere on at least one side,
  * not castle against castle) and (3) overlaps A: any piece of one within {@link #GAP} blocks of a piece of the other (whole bounding boxes when
- * either side is a castle, which terraforms its whole box). Rank: castles/waterfronts, then vanilla and other mods, then Elsewhere return rifts and
+ * either side is a castle, which terraforms its whole box). Filler sets ({@link #isFiller}: nether fossils, mineshafts, buried treasure) never
+ * make an Elsewhere start give way. Rank: castles/waterfronts, then vanilla and other mods, then Elsewhere return rifts and
  * the lantern road, then boss arenas, then other Elsewhere structures; ties by id, then start chunk x, then z. B's starts are searched in every chunk within
  * {@link #REACH} chunks of A's inflated box (vanilla never places a piece more than 8 chunks from its start chunk).
  */
@@ -159,6 +160,8 @@ public final class OverlapGuard {
 		final List<Holder<StructureSet>> sets;
 		/** Best tier among a set's structures, and among its Elsewhere structures only (Integer.MAX_VALUE: none). */
 		final int[] minTier, minElsewhereTier;
+		/** Filler sets ({@link #isFiller}): never a blocker for an Elsewhere start. */
+		final boolean[] filler;
 		final Map<Structure, Integer> setOf = new IdentityHashMap<>();
 		final Map<Long, Object> raw = new ConcurrentHashMap<>();
 		final Map<String, Boolean> decisions = new ConcurrentHashMap<>();
@@ -171,6 +174,7 @@ public final class OverlapGuard {
 			sets = List.copyOf(state.possibleStructureSets());
 			minTier = new int[sets.size()];
 			minElsewhereTier = new int[sets.size()];
+			filler = new boolean[sets.size()];
 			for (int i = 0; i < sets.size(); i++) {
 				int t = Integer.MAX_VALUE, te = Integer.MAX_VALUE;
 				for (StructureSet.StructureSelectionEntry e : sets.get(i).value().structures()) {
@@ -182,13 +186,28 @@ public final class OverlapGuard {
 				}
 				minTier[i] = t;
 				minElsewhereTier[i] = te;
+				filler[i] = te == Integer.MAX_VALUE && isFiller(sets.get(i).value());
 			}
 		}
 
 		boolean relevant(int set, Shape a) {
 			if (a.tier == CASTLE) return false; // castles only meet castles, which the guard leaves to CourtSite
+			if (filler[set]) return false; // dense vanilla/other-mod filler (nether fossils, mineshafts, buried treasure) never drops an Elsewhere start
 			return (isElsewhere(a.id) ? minTier[set] : minElsewhereTier[set]) <= a.tier;
 		}
+	}
+
+	/** Densest placement still judged as a blocker: sets placed every 1-2 chunks are filler, not sites. */
+	public static final int FILLER_SPACING = 2;
+
+	/**
+	 * A set placed on a 1- or 2-chunk grid (vanilla: nether fossils, which tile every soul sand valley; mineshafts; buried treasure). Vanilla lets
+	 * these overlap anything; ranking them above Elsewhere structures dropped nearly every start in their biomes (Mournmaw's basin is soul sand
+	 * valley only, and a fossil sits within reach of almost every candidate: /locate found the nearest one 3,481 blocks out in the merged pre-gate
+	 * run). They still yield to castles like any other non-Elsewhere start.
+	 */
+	public static boolean isFiller(StructureSet set) {
+		return set.placement() instanceof net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStructurePlacement rs && rs.spacing() <= FILLER_SPACING;
 	}
 
 	private static final Map<ChunkGeneratorStructureState, Ctx> CTX = Collections.synchronizedMap(new WeakHashMap<>());

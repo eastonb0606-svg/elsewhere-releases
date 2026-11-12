@@ -81,7 +81,13 @@ public final class OverlapGuardSelfTest {
 		// live: real worldgen, both dimensions
 		audit("pale hollow", hollow, new ChunkPos(0, 0), 16);
 		var spawn = overworld.getRespawnData().pos();
-		audit("overworld", overworld, new ChunkPos(spawn.getX() >> 4, spawn.getZ() >> 4), 8);
+		// 16, as the hollow: 8 (289 chunks) held 1 start on the standalone seed and none on the merged pre-gate seed (raw starts, guard-independent)
+		audit("overworld", overworld, new ChunkPos(spawn.getX() >> 4, spawn.getZ() >> 4), 16);
+		var setReg = overworld.registryAccess().lookupOrThrow(net.minecraft.core.registries.Registries.STRUCTURE_SET);
+		var fossils = setReg.get(id("minecraft:nether_fossils")).orElse(null);
+		var villages = setReg.get(id("minecraft:villages")).orElse(null);
+		check(fossils != null && OverlapGuard.isFiller(fossils.value()) && villages != null && !OverlapGuard.isFiller(villages.value()),
+			"nether fossils are filler that never drops an Elsewhere start (they tile soul sand valley, Mournmaw's only biome); villages are not");
 		locateSkipsDropped(overworld, spawn);
 	}
 
