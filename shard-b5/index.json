@@ -7,7 +7,8 @@
           "scene": 5,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:01"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 14,
           "line": 22,
           "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:14"
         }
       ]
     },
@@ -135,14 +137,16 @@
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:30"
         },
         {
           "file": "s_struct_verdigris__clan_hold_downhill_18.png",
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:37"
         }
       ],
       "elsewhere:proving_grounds": [
@@ -151,7 +155,8 @@
           "scene": 155,
           "line": 172,
           "check": "round arena ledge cut into the mountain, open cliff edge to the south on a stone foundation, stone-brick spectator tiers climbing the uphill (north) side, sloped banks instead of a cylinder cut, iron-bar rails, 4 red banners, the horn at the north gate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:01"
         }
       ]
     },
@@ -162,7 +167,8 @@
           "scene": 172,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:15"
         }
       ]
     },
@@ -173,14 +179,16 @@
           "scene": 182,
           "line": 197,
           "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:24"
         },
         {
           "file": "s_struct_petalwind__sunwright_ziggurat_downhill_30.png",
           "scene": 182,
           "line": 197,
           "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:31"
         }
       ]
     },
@@ -213,7 +221,8 @@
           "scene": 212,
           "line": 242,
           "check": "L-shaped half-timber workshop (stripped pale-oak posts, plank infill, stone plinth course) with steep 2:1 roofs meeting in a valley, stone chimney stack past the ridge, lean-to over a gravel yard, mud-brick beehive kiln with flue, fenced yard, Sap Tapper inside; wings on their own floors (a step between them on slopes), nothing floating",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:43"
         }
       ]
     },
@@ -456,14 +465,18 @@
           "scene": 358,
           "line": 406,
           "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
-          "status": "pending"
+          "status": "fail",
+          "detail": "locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "22:08:44"
         },
         {
           "file": "s_locate__waterfront_hrafnholt_ground.png",
           "scene": 358,
           "line": 406,
           "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
-          "status": "pending"
+          "status": "fail",
+          "detail": "locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "22:08:44"
         }
       ]
     },
@@ -513,14 +526,16 @@
           "scene": 424,
           "line": 474,
           "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:43"
         },
         {
           "file": "s_pennant__standard_waving_with_minions_gear3_later.png",
           "scene": 424,
           "line": 474,
           "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:45"
         }
       ]
     },
@@ -531,42 +546,48 @@
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:46"
         },
         {
           "file": "s_totems__bramble_totem_third_person.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:47"
         },
         {
           "file": "s_totems__bramble_totem_in_use_first_person.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:48"
         },
         {
           "file": "s_totems__bramble_totem_in_use_third_person.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:49"
         },
         {
           "file": "s_totems__bramble_totem_after_use.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:52"
         },
         {
           "file": "s_totems__bramble_totem_tooltip.png",
           "scene": 436,
           "line": 486,
           "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:52"
         }
       ]
     },
@@ -577,7 +598,8 @@
           "scene": 458,
           "line": 510,
           "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:23"
         }
       ]
     },
@@ -588,21 +610,24 @@
           "scene": 472,
           "line": 524,
           "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:24"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_third_person.png",
           "scene": 472,
           "line": 524,
           "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:25"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_tooltip.png",
           "scene": 472,
           "line": 524,
           "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:26"
         }
       ]
     },
@@ -625,10 +650,10 @@
       ]
     }
   },
-  "run": "22:05:32",
+  "run": "22:08:44",
   "totals": {
-    "ok": 37,
-    "fail": 4,
+    "ok": 58,
+    "fail": 6,
     "manual": 0
   }
 }
