@@ -1,0 +1,476 @@
+{
+  "lanes": {
+    "sfx": {
+      "elsewhere:aphelion": [
+        {
+          "file": "sfx__aphelion_subtitle.png",
+          "scene": 24,
+          "line": 32,
+          "check": "subtitle box shows \"Aphelion roars from beyond the End\" and NO \"Ender Dragon ...\" line",
+          "status": "ok",
+          "taken": "22:33:31"
+        }
+      ]
+    },
+    "generation": {
+      "site-rule structures (the release client test `rel_<structure>` shots, sites section, already queued)": []
+    },
+    "anim": {
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "anim__mirewick_tolliver_move_windup.png",
+          "scene": 42,
+          "line": 55,
+          "check": "Fowling Net = draw, Heron Flight and Reed Dive = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:35:01"
+        },
+        {
+          "file": "anim__mirewick_tolliver_move_strike.png",
+          "scene": 42,
+          "line": 55,
+          "check": "Fowling Net = draw, Heron Flight and Reed Dive = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:35:01"
+        }
+      ],
+      "elsewhere:grunthar": [
+        {
+          "file": "anim__grunthar_hurt_peak.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:35:04"
+        },
+        {
+          "file": "anim__grunthar_hurt_rest.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:35:05"
+        }
+      ],
+      "elsewhere:aphelion": [
+        {
+          "file": "anim__aphelion_hurt_peak.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:35:08"
+        },
+        {
+          "file": "anim__aphelion_hurt_rest.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:35:09"
+        }
+      ],
+      "elsewhere:rimeback": [
+        {
+          "file": "anim__rimeback_hurt_peak.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:12"
+        },
+        {
+          "file": "anim__rimeback_hurt_rest.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:13"
+        }
+      ],
+      "elsewhere:auris": [
+        {
+          "file": "anim__auris_hurt_peak.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:16"
+        },
+        {
+          "file": "anim__auris_hurt_rest.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:16"
+        }
+      ],
+      "elsewhere:grimhorn": [
+        {
+          "file": "anim__grimhorn_hurt_peak.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:20"
+        },
+        {
+          "file": "anim__grimhorn_hurt_rest.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:20"
+        }
+      ],
+      "elsewhere:tempestra": [
+        {
+          "file": "anim__tempestra_hurt_peak.png",
+          "scene": 67,
+          "line": 80,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:23"
+        },
+        {
+          "file": "anim__tempestra_hurt_rest.png",
+          "scene": 67,
+          "line": 80,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:24"
+        }
+      ],
+      "elsewhere:selenne": [
+        {
+          "file": "anim__selenne_hurt_peak.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:27"
+        },
+        {
+          "file": "anim__selenne_hurt_rest.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:35:28"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:engineers_atoll": [
+        {
+          "file": "s_struct_verdigris__engineers_atoll_s_16_8_16.png",
+          "scene": 158,
+          "line": 175,
+          "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:verdigris_sea_return_rift": [
+        {
+          "file": "s_struct_verdigris__verdigris_sea_return_rift_s_8_4_8.png",
+          "scene": 163,
+          "line": 180,
+          "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_stone": [
+        {
+          "file": "s_dataclean__villages_aldermark_stone.png",
+          "scene": 173,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:croaking_shrine": [
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_22_9_22.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_0_3_34.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:sunwright_ziggurat": [
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_s_30_14_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_downhill_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:breeze_temple": [
+        {
+          "file": "s_struct_petalwind__breeze_temple_s_14_6_16.png",
+          "scene": 184,
+          "line": 199,
+          "check": "open tuff colonnade (columns every 2 on chiseled bases with brick capitals) on a stepped stylobate, solid back wall behind the two vaults, architrave and cornice, low hipped tuff-brick roof with a wind-chime finial, hanging lanterns inside; at an edge the columns carry on down to the ground as piers; steps down to the ground on the south",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:mirewick_ames (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_aura_phase2.png",
+          "scene": 204,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "22:35:30"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "court ruler plates": [
+        {
+          "file": "s_p3_nameplates__court_ruler_plates_6.png",
+          "scene": 229,
+          "line": 259,
+          "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
+          "status": "ok",
+          "taken": "22:35:36"
+        },
+        {
+          "file": "s_p3_nameplates__court_ruler_plates_12.png",
+          "scene": 229,
+          "line": 259,
+          "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
+          "status": "ok",
+          "taken": "22:35:37"
+        },
+        {
+          "file": "s_p3_nameplates__court_ruler_plates_18.png",
+          "scene": 229,
+          "line": 259,
+          "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
+          "status": "ok",
+          "taken": "22:35:39"
+        }
+      ]
+    },
+    "s_p1_bossbar": {
+      "elsewhere:strawgrim": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_on_a_real_boss_strawgrim.png",
+          "scene": 275,
+          "line": 311,
+          "check": "icon left, notches at 65% and 30% (Strawgrim's own thresholds), cream damage trail after the hit, gold flash plus an \"Invulnerable\" chip (steel frame) for ~2 s at the phase change, then \"❖ 2/3\" at the right; the '⚠ <attack>' cast bar is NOT a separate bar: its name sits under the main bar with a thin wind-up line",
+          "status": "ok",
+          "taken": "22:35:40"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:ossyra_matriarch_spire": [
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_20_14_20.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_2.png",
+          "scene": 322,
+          "line": 362,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_2.png",
+          "scene": 322,
+          "line": 362,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person.png",
+          "scene": 322,
+          "line": 362,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person.png",
+          "scene": 322,
+          "line": 362,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use.png",
+          "scene": 322,
+          "line": 362,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_2.png",
+          "scene": 322,
+          "line": 362,
+          "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_locate": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_locate__castle_azmar_overview.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__castle_azmar_ground.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:waterfront_hrafnholt": [
+        {
+          "file": "s_locate__waterfront_hrafnholt_overview.png",
+          "scene": 358,
+          "line": 406,
+          "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__waterfront_hrafnholt_ground.png",
+          "scene": 358,
+          "line": 406,
+          "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark drill and butts at dawn": [
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_ascension": {
+      "elsewhere:gear3_ascension_shard": [
+        {
+          "file": "s_ascension__gear3_ascension_shard_first_person.png",
+          "scene": 419,
+          "line": 469,
+          "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
+          "status": "pending"
+        },
+        {
+          "file": "s_ascension__gear3_ascension_shard_third_person.png",
+          "scene": 419,
+          "line": 469,
+          "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
+          "status": "pending"
+        },
+        {
+          "file": "s_ascension__gear3_ascension_shard_tooltip.png",
+          "scene": 419,
+          "line": 469,
+          "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:lucid_spring": [
+        {
+          "file": "s_struct_greenhaze__lucid_spring_overview.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__lucid_spring_ground.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hanging_undercity": [
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_overview.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_ground.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:35:40",
+  "totals": {
+    "ok": 20,
+    "fail": 2,
+    "manual": 0
+  }
+}
