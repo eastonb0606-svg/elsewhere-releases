@@ -7,7 +7,8 @@
           "scene": 3,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:55:47"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 171,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:56:30"
         }
       ]
     },
@@ -69,7 +71,8 @@
           "scene": 314,
           "line": 354,
           "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:56:53"
         }
       ],
       "elsewhere:townsfolk": [
@@ -90,14 +93,15 @@
           "scene": 447,
           "line": 497,
           "check": "a small crimson/gold chip fades in just under the crosshair within 0.2 s: lantern crest, \"the Lantern Republic of Mirewick\", \"Valued Client · Friendly +45\" and a thin band bar; fades out over 0.2 s on looking away; shows through glass, never through stone; /diplomacy standing mirewick -80, look away for 5 s and back: the chip turns to \"Defaulter · Hostile -80\" with a red \"Attacks you on sight\" line; hidden in any open screen, F1, and with the Elsewhere HUD \"standing\" meter off",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:54:54"
         }
       ]
     }
   },
-  "run": "23:54:52",
+  "run": "23:56:55",
   "totals": {
-    "ok": 5,
+    "ok": 9,
     "fail": 0,
     "manual": 0
   }
