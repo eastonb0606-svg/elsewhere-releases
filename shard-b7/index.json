@@ -1,0 +1,606 @@
+{
+  "lanes": {
+    "armies": {
+      "big battle: wave battle Aldermark v Hrafnholt, 150 a side (kingdom/armies ArmyWaves)": [
+        {
+          "file": "armies__battle_aldermark_hrafnholt_150_20s.png",
+          "scene": 6,
+          "line": 11,
+          "check": "both liveries fielded and fighting (not one side only); about 32 live near the camera (`/kingdom armies` \"max live\" at most 32); no stuck, floating or T-posed soldiers; no arrow carpets; FPS on F3",
+          "status": "ok",
+          "taken": "22:01:24"
+        },
+        {
+          "file": "armies__battle_aldermark_hrafnholt_150_60s_f3.png",
+          "scene": 6,
+          "line": 11,
+          "check": "both liveries fielded and fighting (not one side only); about 32 live near the camera (`/kingdom armies` \"max live\" at most 32); no stuck, floating or T-posed soldiers; no arrow carpets; FPS on F3",
+          "status": "ok",
+          "taken": "22:02:05"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_52_40_52_y135.png",
+          "scene": 16,
+          "line": 24,
+          "check": "flat roofs with cavetto cornices and lapis bands, kiosks on the tower tops, undulating parapet, palms in the court; no pitched roofs, no gold blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:hrafnholt_hallwarden": [
+        {
+          "file": "anim__hrafnholt_hallwarden_move_windup.png",
+          "scene": 32,
+          "line": 45,
+          "check": "Hearth Ward = shield bash (shield arm pulled in, torso twisted, then shoved forward), Door Breaker = overhead; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:03:36"
+        },
+        {
+          "file": "anim__hrafnholt_hallwarden_move_strike.png",
+          "scene": 32,
+          "line": 45,
+          "check": "Hearth Ward = shield bash (shield arm pulled in, torso twisted, then shoved forward), Door Breaker = overhead; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:03:36"
+        }
+      ],
+      "elsewhere:mirewick_marrow": [
+        {
+          "file": "anim__mirewick_marrow_move_windup.png",
+          "scene": 44,
+          "line": 57,
+          "check": "Call the Debt and Bog Drum Call = cast, Crossbow Volley = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:05:08"
+        },
+        {
+          "file": "anim__mirewick_marrow_move_strike.png",
+          "scene": 44,
+          "line": 57,
+          "check": "Call the Debt and Bog Drum Call = cast, Crossbow Volley = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:05:08"
+        }
+      ],
+      "elsewhere:percolax": [
+        {
+          "file": "anim__percolax_hurt_peak.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:11"
+        },
+        {
+          "file": "anim__percolax_hurt_rest.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:11"
+        }
+      ],
+      "elsewhere:ankhara": [
+        {
+          "file": "anim__ankhara_hurt_peak.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:15"
+        },
+        {
+          "file": "anim__ankhara_hurt_rest.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:15"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:tidechain_lash": [
+        {
+          "file": "items__tidechain_lash_held.png",
+          "scene": 115,
+          "line": 131,
+          "check": "icon matches the sprite page (16x16, Tidechain Lash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:16"
+        },
+        {
+          "file": "items__tidechain_lash_tooltip.png",
+          "scene": 115,
+          "line": 131,
+          "check": "icon matches the sprite page (16x16, Tidechain Lash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:17"
+        }
+      ],
+      "elsewhere:azmar_ka_sigil": [
+        {
+          "file": "items__azmar_ka_sigil_held.png",
+          "scene": 127,
+          "line": 143,
+          "check": "icon matches the sprite page (16x16, Ka Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:18"
+        },
+        {
+          "file": "items__azmar_ka_sigil_tooltip.png",
+          "scene": 127,
+          "line": 143,
+          "check": "icon matches the sprite page (16x16, Ka Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:19"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, idle)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_idle.png",
+          "scene": 138,
+          "line": 156,
+          "check": "a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
+          "status": "ok",
+          "taken": "22:05:20"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:ironpeak_return_rift": [
+        {
+          "file": "s_struct_verdigris__ironpeak_return_rift_s_8_5_8.png",
+          "scene": 157,
+          "line": 174,
+          "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Ankhara arena seal + burrow trail (elsewhere:sunpit)": [
+        {
+          "file": "s_p13_particles__ankhara_arena_seal_3s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:breeze_temple": [
+        {
+          "file": "s_struct_petalwind__breeze_temple_s_14_6_16.png",
+          "scene": 184,
+          "line": 199,
+          "check": "open tuff colonnade (columns every 2 on chiseled bases with brick capitals) on a stepped stylobate, solid back wall behind the two vaults, architrave and cornice, low hipped tuff-brick roof with a wind-chime finial, hanging lanterns inside; at an edge the columns carry on down to the ground as piers; steps down to the ground on the south",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_jarl Ninth-Winter Slam": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_ninth_winter_slam_windup.png",
+          "scene": 186,
+          "line": 203,
+          "check": "both arms high over the head, leaning back; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_ninth_winter_slam_strike.png",
+          "scene": 186,
+          "line": 203,
+          "check": "both arms high over the head, leaning back; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_sorrel Sluice Maul": [
+        {
+          "file": "s_p4_rivalanims__mirewick_sorrel_sluice_maul_windup.png",
+          "scene": 198,
+          "line": 227,
+          "check": "both arms high over the head, leaning back; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_sorrel_sluice_maul_strike.png",
+          "scene": 198,
+          "line": 227,
+          "check": "both arms high over the head, leaning back; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:lantern_road (night procession)": [
+        {
+          "file": "s_struct_core__lantern_road_procession_night.png",
+          "scene": 215,
+          "line": 245,
+          "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_testfix": {
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k_later.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:gale_rapier": [
+        {
+          "file": "s_p6_useanims__gale_rapier_first_person.png",
+          "scene": 233,
+          "line": 263,
+          "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__gale_rapier_third_person.png",
+          "scene": 233,
+          "line": 263,
+          "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__gale_rapier_tooltip.png",
+          "scene": 233,
+          "line": 263,
+          "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "swarm-as-one squad targeting (ARMIES 3.4)": [
+        {
+          "file": "s_swarm1__battle_aldermark_mirewick_32_30s.png",
+          "scene": 272,
+          "line": 308,
+          "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
+          "status": "pending"
+        }
+      ],
+      "`/kingdom armies swarm` report": [
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        },
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Hrafnholt jetty at dawn + hall feast": [
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_23000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_11000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p5_tooltips__ironclad_flail_first_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_third_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_tooltip.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:shrieker_swarm": [
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu.png",
+          "scene": 392,
+          "line": 440,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu_later.png",
+          "scene": 392,
+          "line": 440,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_5_10_y180.png",
+          "scene": 411,
+          "line": 461,
+          "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle façade, scarab over its door",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_pennant": {
+      "elsewhere:herdcaller_pennant": [
+        {
+          "file": "s_pennant__herdcaller_pennant_first_person.png",
+          "scene": 422,
+          "line": 472,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_pennant__herdcaller_pennant_third_person.png",
+          "scene": 422,
+          "line": 472,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_pennant__herdcaller_pennant_tooltip.png",
+          "scene": 422,
+          "line": 472,
+          "check": "a small green swallow-tailed banner on a dark crossbar and pole with an amber medallion; tooltip: \"Swarm standard (Summoner), 60 s cooldown\", the 12-block heal/speed line and \"One standard at a time\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "elsewhere:everflow_bong": [
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_willolantern": {
+      "elsewhere:marsh_wisp": [
+        {
+          "file": "s_willolantern__marsh_wisp_beside_its_owner_at_night_gea.png",
+          "scene": 463,
+          "line": 515,
+          "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_waryak": {
+      "elsewhere:ironpeak_war_yak_horn": [
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:lucid_spring": [
+        {
+          "file": "s_struct_greenhaze__lucid_spring_overview.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__lucid_spring_ground.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:05:20",
+  "totals": {
+    "ok": 11,
+    "fail": 4,
+    "manual": 0
+  }
+}
