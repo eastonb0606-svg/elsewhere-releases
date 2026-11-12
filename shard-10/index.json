@@ -1,0 +1,856 @@
+{
+  "lanes": {
+    "items": {
+      "elsewhere:ridgewatch_hood": [
+        {
+          "file": "items__ridgewatch_hood_front.png",
+          "scene": 85,
+          "line": 101,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:38"
+        },
+        {
+          "file": "items__ridgewatch_hood_side.png",
+          "scene": 85,
+          "line": 101,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:39"
+        },
+        {
+          "file": "items__ridgewatch_hood_tooltip.png",
+          "scene": 85,
+          "line": 101,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:40"
+        }
+      ],
+      "elsewhere:ridgewatch_coat": [
+        {
+          "file": "items__ridgewatch_coat_front.png",
+          "scene": 86,
+          "line": 102,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:41"
+        },
+        {
+          "file": "items__ridgewatch_coat_side.png",
+          "scene": 86,
+          "line": 102,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:42"
+        },
+        {
+          "file": "items__ridgewatch_coat_tooltip.png",
+          "scene": 86,
+          "line": 102,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:43"
+        }
+      ],
+      "elsewhere:ridgewatch_leggings": [
+        {
+          "file": "items__ridgewatch_leggings_front.png",
+          "scene": 87,
+          "line": 103,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:44"
+        },
+        {
+          "file": "items__ridgewatch_leggings_side.png",
+          "scene": 87,
+          "line": 103,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:45"
+        },
+        {
+          "file": "items__ridgewatch_leggings_tooltip.png",
+          "scene": 87,
+          "line": 103,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "20:14:46"
+        }
+      ],
+      "elsewhere:ridgewatch_boots": [
+        {
+          "file": "items__ridgewatch_boots_front.png",
+          "scene": 88,
+          "line": 104,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__ridgewatch_boots_side.png",
+          "scene": 88,
+          "line": 104,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__ridgewatch_boots_tooltip.png",
+          "scene": 88,
+          "line": 104,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:glasswaste_starsight_visor": [
+        {
+          "file": "items__glasswaste_starsight_visor_front.png",
+          "scene": 89,
+          "line": 105,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__glasswaste_starsight_visor_side.png",
+          "scene": 89,
+          "line": 105,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__glasswaste_starsight_visor_tooltip.png",
+          "scene": 89,
+          "line": 105,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:glasswaste_prism_mantle": [
+        {
+          "file": "items__glasswaste_prism_mantle_front.png",
+          "scene": 90,
+          "line": 106,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__glasswaste_prism_mantle_side.png",
+          "scene": 90,
+          "line": 106,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__glasswaste_prism_mantle_tooltip.png",
+          "scene": 90,
+          "line": 106,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_falconer_kilt": [
+        {
+          "file": "items__azmar_falconer_kilt_front.png",
+          "scene": 91,
+          "line": 107,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_falconer_kilt_side.png",
+          "scene": 91,
+          "line": 107,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_falconer_kilt_tooltip.png",
+          "scene": 91,
+          "line": 107,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sunscribe_hood": [
+        {
+          "file": "items__sunscribe_hood_front.png",
+          "scene": 92,
+          "line": 108,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_hood_side.png",
+          "scene": 92,
+          "line": 108,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_hood_tooltip.png",
+          "scene": 92,
+          "line": 108,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sunscribe_robe": [
+        {
+          "file": "items__sunscribe_robe_front.png",
+          "scene": 93,
+          "line": 109,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_robe_side.png",
+          "scene": 93,
+          "line": 109,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_robe_tooltip.png",
+          "scene": 93,
+          "line": 109,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sunscribe_leggings": [
+        {
+          "file": "items__sunscribe_leggings_front.png",
+          "scene": 94,
+          "line": 110,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_leggings_side.png",
+          "scene": 94,
+          "line": 110,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_leggings_tooltip.png",
+          "scene": 94,
+          "line": 110,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sunscribe_boots": [
+        {
+          "file": "items__sunscribe_boots_front.png",
+          "scene": 95,
+          "line": 111,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_boots_side.png",
+          "scene": 95,
+          "line": 111,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__sunscribe_boots_tooltip.png",
+          "scene": 95,
+          "line": 111,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_lamplighter_hood": [
+        {
+          "file": "items__mirewick_lamplighter_hood_front.png",
+          "scene": 96,
+          "line": 112,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_lamplighter_hood_side.png",
+          "scene": 96,
+          "line": 112,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_lamplighter_hood_tooltip.png",
+          "scene": 96,
+          "line": 112,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_lamplighter_coat": [
+        {
+          "file": "items__mirewick_lamplighter_coat_front.png",
+          "scene": 97,
+          "line": 113,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_lamplighter_coat_side.png",
+          "scene": 97,
+          "line": 113,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_lamplighter_coat_tooltip.png",
+          "scene": 97,
+          "line": 113,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:elderbark_mantle": [
+        {
+          "file": "items__elderbark_mantle_front.png",
+          "scene": 98,
+          "line": 114,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__elderbark_mantle_side.png",
+          "scene": 98,
+          "line": 114,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__elderbark_mantle_tooltip.png",
+          "scene": 98,
+          "line": 114,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:elderbark_leggings": [
+        {
+          "file": "items__elderbark_leggings_front.png",
+          "scene": 99,
+          "line": 115,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__elderbark_leggings_side.png",
+          "scene": 99,
+          "line": 115,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__elderbark_leggings_tooltip.png",
+          "scene": 99,
+          "line": 115,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:elderbark_boots": [
+        {
+          "file": "items__elderbark_boots_front.png",
+          "scene": 100,
+          "line": 116,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__elderbark_boots_side.png",
+          "scene": 100,
+          "line": 116,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__elderbark_boots_tooltip.png",
+          "scene": 100,
+          "line": 116,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:court_marshals_helm": [
+        {
+          "file": "items__court_marshals_helm_front.png",
+          "scene": 101,
+          "line": 117,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__court_marshals_helm_side.png",
+          "scene": 101,
+          "line": 117,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__court_marshals_helm_tooltip.png",
+          "scene": 101,
+          "line": 117,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:court_marshals_tabard": [
+        {
+          "file": "items__court_marshals_tabard_front.png",
+          "scene": 102,
+          "line": 118,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__court_marshals_tabard_side.png",
+          "scene": 102,
+          "line": 118,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__court_marshals_tabard_tooltip.png",
+          "scene": 102,
+          "line": 118,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:court_marshals_tassets": [
+        {
+          "file": "items__court_marshals_tassets_front.png",
+          "scene": 103,
+          "line": 119,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__court_marshals_tassets_side.png",
+          "scene": 103,
+          "line": 119,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__court_marshals_tassets_tooltip.png",
+          "scene": 103,
+          "line": 119,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hird_leggings": [
+        {
+          "file": "items__hrafnholt_hird_leggings_front.png",
+          "scene": 104,
+          "line": 120,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hird_leggings_side.png",
+          "scene": 104,
+          "line": 120,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hird_leggings_tooltip.png",
+          "scene": 104,
+          "line": 120,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hird_boots": [
+        {
+          "file": "items__hrafnholt_hird_boots_front.png",
+          "scene": 105,
+          "line": 121,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hird_boots_side.png",
+          "scene": 105,
+          "line": 121,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hird_boots_tooltip.png",
+          "scene": 105,
+          "line": 121,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_lanternfang_estoc": [
+        {
+          "file": "items__mirewick_lanternfang_estoc_held.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_lanternfang_estoc_tooltip.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:bellbreaker_maul": [
+        {
+          "file": "items__bellbreaker_maul_held.png",
+          "scene": 107,
+          "line": 123,
+          "check": "icon matches the sprite page (16x16, Bellbreaker Maul), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__bellbreaker_maul_tooltip.png",
+          "scene": 107,
+          "line": 123,
+          "check": "icon matches the sprite page (16x16, Bellbreaker Maul), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_huginns_bite": [
+        {
+          "file": "items__hrafnholt_huginns_bite_held.png",
+          "scene": 108,
+          "line": 124,
+          "check": "icon matches the sprite page (16x16, Huginn's Bite), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_huginns_bite_tooltip.png",
+          "scene": 108,
+          "line": 124,
+          "check": "icon matches the sprite page (16x16, Huginn's Bite), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_runeseax": [
+        {
+          "file": "items__hrafnholt_runeseax_held.png",
+          "scene": 109,
+          "line": 125,
+          "check": "icon matches the sprite page (16x16, Runeseax), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_runeseax_tooltip.png",
+          "scene": 109,
+          "line": 125,
+          "check": "icon matches the sprite page (16x16, Runeseax), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_parrying_buckler": [
+        {
+          "file": "items__aldermark_parrying_buckler_held.png",
+          "scene": 110,
+          "line": 126,
+          "check": "icon matches the sprite page (16x16, Parrying Buckler), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_parrying_buckler_tooltip.png",
+          "scene": 110,
+          "line": 126,
+          "check": "icon matches the sprite page (16x16, Parrying Buckler), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_skjaldborg_shield": [
+        {
+          "file": "items__hrafnholt_skjaldborg_shield_held.png",
+          "scene": 111,
+          "line": 127,
+          "check": "icon matches the sprite page (16x16, Skjaldborg Round-Shield), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_skjaldborg_shield_tooltip.png",
+          "scene": 111,
+          "line": 127,
+          "check": "icon matches the sprite page (16x16, Skjaldborg Round-Shield), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:gear3_forging_template": [
+        {
+          "file": "items__gear3_forging_template_held.png",
+          "scene": 112,
+          "line": 128,
+          "check": "icon matches the sprite page (16x16, Elsewhere Forging Template), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__gear3_forging_template_tooltip.png",
+          "scene": 112,
+          "line": 128,
+          "check": "icon matches the sprite page (16x16, Elsewhere Forging Template), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_masons_chisel": [
+        {
+          "file": "items__aldermark_masons_chisel_held.png",
+          "scene": 113,
+          "line": 129,
+          "check": "icon matches the sprite page (16x16, Mason's Chisel), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_masons_chisel_tooltip.png",
+          "scene": 113,
+          "line": 129,
+          "check": "icon matches the sprite page (16x16, Mason's Chisel), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:thornlash": [
+        {
+          "file": "items__thornlash_held.png",
+          "scene": 114,
+          "line": 130,
+          "check": "icon matches the sprite page (16x16, Thornlash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__thornlash_tooltip.png",
+          "scene": 114,
+          "line": 130,
+          "check": "icon matches the sprite page (16x16, Thornlash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:tidechain_lash": [
+        {
+          "file": "items__tidechain_lash_held.png",
+          "scene": 115,
+          "line": 131,
+          "check": "icon matches the sprite page (16x16, Tidechain Lash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__tidechain_lash_tooltip.png",
+          "scene": 115,
+          "line": 131,
+          "check": "icon matches the sprite page (16x16, Tidechain Lash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sunscourge": [
+        {
+          "file": "items__azmar_sunscourge_held.png",
+          "scene": 116,
+          "line": 132,
+          "check": "icon matches the sprite page (16x16, Sunscourge), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_sunscourge_tooltip.png",
+          "scene": 116,
+          "line": 132,
+          "check": "icon matches the sprite page (16x16, Sunscourge), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:echo_chord": [
+        {
+          "file": "items__echo_chord_held.png",
+          "scene": 117,
+          "line": 133,
+          "check": "icon matches the sprite page (16x16, Echo Chord), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__echo_chord_tooltip.png",
+          "scene": 117,
+          "line": 133,
+          "check": "icon matches the sprite page (16x16, Echo Chord), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_lantern_crook": [
+        {
+          "file": "items__mirewick_lantern_crook_held.png",
+          "scene": 118,
+          "line": 134,
+          "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_lantern_crook_tooltip.png",
+          "scene": 118,
+          "line": 134,
+          "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_mead_horn": [
+        {
+          "file": "items__hrafnholt_mead_horn_held.png",
+          "scene": 119,
+          "line": 135,
+          "check": "icon matches the sprite page (16x16, Mead-Horn of the Hall), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_mead_horn_tooltip.png",
+          "scene": 119,
+          "line": 135,
+          "check": "icon matches the sprite page (16x16, Mead-Horn of the Hall), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:rangefinder_lens": [
+        {
+          "file": "items__rangefinder_lens_held.png",
+          "scene": 120,
+          "line": 136,
+          "check": "icon matches the sprite page (16x16, Rangefinder Lens), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__rangefinder_lens_tooltip.png",
+          "scene": 120,
+          "line": 136,
+          "check": "icon matches the sprite page (16x16, Rangefinder Lens), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_oath_ring": [
+        {
+          "file": "items__aldermark_oath_ring_held.png",
+          "scene": 121,
+          "line": 137,
+          "check": "icon matches the sprite page (16x16, Oath Ring), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_oath_ring_tooltip.png",
+          "scene": 121,
+          "line": 137,
+          "check": "icon matches the sprite page (16x16, Oath Ring), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_quickdraw_quiver": [
+        {
+          "file": "items__aldermark_quickdraw_quiver_held.png",
+          "scene": 122,
+          "line": 138,
+          "check": "icon matches the sprite page (16x16, Quickdraw Quiver), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_quickdraw_quiver_tooltip.png",
+          "scene": 122,
+          "line": 138,
+          "check": "icon matches the sprite page (16x16, Quickdraw Quiver), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_fowlers_bandolier": [
+        {
+          "file": "items__mirewick_fowlers_bandolier_held.png",
+          "scene": 123,
+          "line": 139,
+          "check": "icon matches the sprite page (16x16, Fowler's Bandolier), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_fowlers_bandolier_tooltip.png",
+          "scene": 123,
+          "line": 139,
+          "check": "icon matches the sprite page (16x16, Fowler's Bandolier), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hush_binding_sigil": [
+        {
+          "file": "items__hush_binding_sigil_held.png",
+          "scene": 124,
+          "line": 140,
+          "check": "icon matches the sprite page (16x16, Binding Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__hush_binding_sigil_tooltip.png",
+          "scene": 124,
+          "line": 140,
+          "check": "icon matches the sprite page (16x16, Binding Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:amber_grimoire": [
+        {
+          "file": "items__amber_grimoire_held.png",
+          "scene": 125,
+          "line": 141,
+          "check": "icon matches the sprite page (16x16, Amber Grimoire), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__amber_grimoire_tooltip.png",
+          "scene": 125,
+          "line": 141,
+          "check": "icon matches the sprite page (16x16, Amber Grimoire), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_almoners_chalice": [
+        {
+          "file": "items__mirewick_almoners_chalice_held.png",
+          "scene": 126,
+          "line": 142,
+          "check": "icon matches the sprite page (16x16, Almoner's Chalice), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_almoners_chalice_tooltip.png",
+          "scene": 126,
+          "line": 142,
+          "check": "icon matches the sprite page (16x16, Almoner's Chalice), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_ka_sigil": [
+        {
+          "file": "items__azmar_ka_sigil_held.png",
+          "scene": 127,
+          "line": 143,
+          "check": "icon matches the sprite page (16x16, Ka Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_ka_sigil_tooltip.png",
+          "scene": 127,
+          "line": 143,
+          "check": "icon matches the sprite page (16x16, Ka Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:14:46",
+  "totals": {
+    "ok": 9,
+    "fail": 0,
+    "manual": 0
+  }
+}
