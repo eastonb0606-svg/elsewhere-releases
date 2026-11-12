@@ -243,14 +243,18 @@
           "scene": 189,
           "line": 209,
           "check": "half crouch, both arms rising palms up, head bowed; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Verse of Winter' within 90 s",
+          "taken": "22:04:52"
         },
         {
           "file": "s_p4_rivalanims__hrafnholt_skald_verse_of_winter_strike.png",
           "scene": 189,
           "line": 209,
           "check": "half crouch, both arms rising palms up, head bowed; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Verse of Winter' within 90 s",
+          "taken": "22:04:52"
         }
       ],
       "elsewhere:duelist_test Oath Cleave": [
@@ -259,14 +263,18 @@
           "scene": 201,
           "line": 233,
           "check": "weapon high above the head, off arm forward, slight back-lean; baseline style; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chopped down to the front with a forward step, torso bent over; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Oath Cleave' within 90 s",
+          "taken": "22:06:23"
         },
         {
           "file": "s_p4_rivalanims__duelist_test_oath_cleave_strike.png",
           "scene": 201,
           "line": 233,
           "check": "weapon high above the head, off arm forward, slight back-lean; baseline style; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chopped down to the front with a forward step, torso bent over; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Oath Cleave' within 90 s",
+          "taken": "22:06:23"
         }
       ],
       "elsewhere:duelist_test (phase 2 glyphs)": [
@@ -275,7 +283,8 @@
           "scene": 205,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:25"
         }
       ]
     },
@@ -286,7 +295,8 @@
           "scene": 241,
           "line": 271,
           "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:28"
         }
       ]
     },
@@ -297,14 +307,16 @@
           "scene": 243,
           "line": 273,
           "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:32"
         },
         {
           "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
           "scene": 243,
           "line": 273,
           "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:37"
         }
       ]
     },
@@ -315,14 +327,16 @@
           "scene": 282,
           "line": 318,
           "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:38"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person_5.png",
           "scene": 282,
           "line": 318,
           "check": "how to get: Hrafnholt Huntmaster drops 8 (50%), the Thing-day sells 8 for 12 Hacksilver, craft 3 Hacksilver + 2 sticks -> 2; usage: 7 damage, 0.6 s between throws, disables shields 2 s, its thrower picks it back up, breaks on half its hits; the recipe page shows the axe-shaped Hacksilver/stick grid",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:39"
         }
       ]
     },
@@ -333,21 +347,24 @@
           "scene": 290,
           "line": 329,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:40"
         },
         {
           "file": "s_dredge__tidebrass_dredge_third_person_2.png",
           "scene": 290,
           "line": 329,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:40"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
           "scene": 290,
           "line": 329,
           "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:41"
         }
       ]
     },
@@ -358,42 +375,48 @@
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:42"
         },
         {
           "file": "s_galesling__gale_sling_third_person_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:43"
         },
         {
           "file": "s_galesling__gale_sling_in_use_first_person_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:44"
         },
         {
           "file": "s_galesling__gale_sling_in_use_third_person_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:44"
         },
         {
           "file": "s_galesling__gale_sling_after_use_3.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:45"
         },
         {
           "file": "s_galesling__gale_sling_tooltip_4.png",
           "scene": 295,
           "line": 334,
           "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:45"
         }
       ]
     },
@@ -404,7 +427,8 @@
           "scene": 312,
           "line": 352,
           "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:47"
         }
       ]
     },
@@ -415,14 +439,16 @@
           "scene": 332,
           "line": 375,
           "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:07"
         },
         {
           "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
           "scene": 332,
           "line": 375,
           "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:13"
         }
       ]
     },
@@ -433,21 +459,24 @@
           "scene": 355,
           "line": 398,
           "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:13"
         },
         {
           "file": "s_setbonus_a__azmar_sandrunner_sandals_third_person.png",
           "scene": 355,
           "line": 398,
           "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:14"
         },
         {
           "file": "s_setbonus_a__azmar_sandrunner_sandals_tooltip.png",
           "scene": 355,
           "line": 398,
           "check": "arrow-marked zombie: a puff of enchanted-hit sparks; minion-marked: wax-on sparkles; marked targets take visibly more damage from the other source",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:15"
         }
       ]
     },
@@ -458,42 +487,48 @@
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:16"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_third_person.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:17"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_first_person.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:18"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_third_person.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:18"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_after_use.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:19"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_tooltip.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:20"
         }
       ]
     },
@@ -588,10 +623,10 @@
       ]
     }
   },
-  "run": "22:03:21",
+  "run": "22:07:20",
   "totals": {
-    "ok": 17,
-    "fail": 2,
+    "ok": 44,
+    "fail": 6,
     "manual": 0
   }
 }
