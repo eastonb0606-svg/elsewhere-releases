@@ -89,14 +89,16 @@
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:05"
         },
         {
           "file": "s_struct_core__hollow_shrine_downhill_20.png",
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:10"
         }
       ],
       "elsewhere:drowned_chapel": [
@@ -105,7 +107,8 @@
           "scene": 211,
           "line": 241,
           "check": "cruciform chapel: nave, transept arms, narrower chancel; broken pale-oak gable roofs (45 degrees, overhang 1) with a fallen-in bay over exposed beams; stone gables with an oculus; buttresses; water only inside the walls (nave 2 deep with submerged pews, one step up into the transept), none outside; ground meets the walls all round",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:23"
         }
       ],
       "elsewhere:resin_kiln": [
@@ -114,7 +117,8 @@
           "scene": 212,
           "line": 242,
           "check": "L-shaped half-timber workshop (stripped pale-oak posts, plank infill, stone plinth course) with steep 2:1 roofs meeting in a valley, stone chimney stack past the ridge, lean-to over a gravel yard, mud-brick beehive kiln with flue, fenced yard, Sap Tapper inside; wings on their own floors (a step between them on slopes), nothing floating",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:34"
         }
       ],
       "elsewhere:lantern_road": [
@@ -123,14 +127,16 @@
           "scene": 213,
           "line": 243,
           "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:45"
         },
         {
           "file": "s_struct_core__lantern_road_end_eye_level.png",
           "scene": 213,
           "line": 243,
           "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:50"
         }
       ],
       "Return Rift ring (feature, Pale Hollow)": [
@@ -139,7 +145,9 @@
           "scene": 214,
           "line": 244,
           "check": "5x5 tuff dais under the rift, ring of 8 tuff standing stones each on its own ground (heights differ, stair caps tilted, one lying fallen), no 9x9 air box cut into a slope",
-          "status": "pending"
+          "status": "fail",
+          "detail": "anchor_from_log: no log line matches /Return Rift ring at \\((-?\\d+), (-?\\d+), (-?\\d+)\\)/ (the self-test anchor was not printed in this session)",
+          "taken": "20:18:50"
         }
       ],
       "elsewhere:lantern_road (night procession)": [
@@ -148,7 +156,8 @@
           "scene": 215,
           "line": 245,
           "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:25"
         }
       ]
     },
@@ -791,14 +800,16 @@
           "scene": 243,
           "line": 273,
           "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:29"
         },
         {
           "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
           "scene": 243,
           "line": 273,
           "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:31"
         }
       ],
       "elsewhere:grunthar": [
@@ -807,22 +818,24 @@
           "scene": 244,
           "line": 274,
           "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:36"
         },
         {
           "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
           "scene": 244,
           "line": 274,
           "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:38"
         }
       ]
     }
   },
-  "run": "20:17:25",
+  "run": "20:19:27",
   "totals": {
-    "ok": 78,
-    "fail": 1,
-    "manual": 0
+    "ok": 89,
+    "fail": 2,
+    "manual": 1
   }
 }
