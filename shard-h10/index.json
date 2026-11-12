@@ -40,7 +40,8 @@
           "scene": 162,
           "line": 179,
           "check": "the plate chamber set into the sea-bed slope: sediment over the back half of the roof and banked on the sides, riveted portal with a plate lintel and two lit bulbs, a plated apron down to the bed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:26"
         }
       ]
     },
@@ -51,14 +52,16 @@
           "scene": 164,
           "line": 181,
           "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:08"
         },
         {
           "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
           "scene": 164,
           "line": 181,
           "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:36"
         }
       ]
     },
@@ -69,7 +72,8 @@
           "scene": 215,
           "line": 245,
           "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:04"
         }
       ]
     },
@@ -80,14 +84,16 @@
           "scene": 246,
           "line": 276,
           "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:37"
         },
         {
           "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3_later.png",
           "scene": 246,
           "line": 276,
           "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:40"
         }
       ]
     },
@@ -98,21 +104,24 @@
           "scene": 307,
           "line": 347,
           "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:42"
         },
         {
           "file": "s_whips__echo_chord_third_person.png",
           "scene": 307,
           "line": 347,
           "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:43"
         },
         {
           "file": "s_whips__echo_chord_tooltip.png",
           "scene": 307,
           "line": 347,
           "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:44"
         }
       ]
     },
@@ -123,7 +132,8 @@
           "scene": 333,
           "line": 376,
           "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:50"
         }
       ]
     },
@@ -134,21 +144,24 @@
           "scene": 360,
           "line": 408,
           "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:45"
         },
         {
           "file": "s_setbonus_b__ridgewatch_hood_third_person.png",
           "scene": 360,
           "line": 408,
           "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:46"
         },
         {
           "file": "s_setbonus_b__ridgewatch_hood_tooltip.png",
           "scene": 360,
           "line": 408,
           "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:47"
         }
       ]
     },
@@ -159,7 +172,8 @@
           "scene": 413,
           "line": 463,
           "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:45:05"
         }
       ]
     },
@@ -170,21 +184,24 @@
           "scene": 428,
           "line": 478,
           "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:50"
         },
         {
           "file": "s_sunglass__sunglass_third_person_3.png",
           "scene": 428,
           "line": 478,
           "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:50"
         },
         {
           "file": "s_sunglass__sunglass_tooltip_3.png",
           "scene": 428,
           "line": 478,
           "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:51"
         }
       ]
     },
@@ -195,14 +212,15 @@
           "scene": 457,
           "line": 509,
           "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:01"
         }
       ]
     }
   },
-  "run": "23:41:58",
+  "run": "23:45:07",
   "totals": {
-    "ok": 2,
+    "ok": 20,
     "fail": 1,
     "manual": 0
   }
