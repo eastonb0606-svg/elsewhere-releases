@@ -42,7 +42,15 @@ public final class TownsfolkRoles {
 
 	public record Slot(int from, int to, String activity, String where, String pose) {}
 
-	public record Role(String id, double weight, ItemStack held, List<Slot> day) {
+	public record Role(String id, double weight, Item heldItem, List<Slot> day) {
+		/**
+		 * A fresh stack of the role's held item (EMPTY for none). Made on use, not at reload: item components are not bound yet while
+		 * data packs load, so an ItemStack built in the reload listener throws "Components not bound yet".
+		 */
+		public ItemStack held() {
+			return heldItem == Items.AIR ? ItemStack.EMPTY : new ItemStack(heldItem);
+		}
+
 		/** The role's slot at {@code hour}, or null (indoors). */
 		public @Nullable Slot at(int hour) {
 			for (Slot s : day) if (hour >= s.from && hour < s.to) return INDOORS.contains(s.activity) ? null : s;
@@ -171,11 +179,11 @@ public final class TownsfolkRoles {
 		List<Role> roles = new ArrayList<>();
 		if (o.has("roles")) for (JsonElement re : o.getAsJsonArray("roles")) {
 			JsonObject r = re.getAsJsonObject();
-			ItemStack held = ItemStack.EMPTY;
+			Item held = Items.AIR;
 			if (r.has("held")) {
 				Identifier hid = Identifier.tryParse(r.get("held").getAsString());
 				Item item = hid == null ? Items.AIR : BuiltInRegistries.ITEM.getValue(hid);
-				if (item != Items.AIR) held = new ItemStack(item);
+				if (item != null) held = item;
 			}
 			List<Slot> day = new ArrayList<>();
 			if (r.has("day")) for (JsonElement se : r.getAsJsonArray("day")) {

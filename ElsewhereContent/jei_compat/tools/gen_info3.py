@@ -35,7 +35,6 @@ add('vorlagh_capstan', 'The capstan on the deck of the Wreck Ring, three shipwre
 add('neferkhet_sun_altar', 'The altar of the Sun Chamber, a hidden hall under desert pyramids. Place a gold block on it at noon to summon Neferkhet, the Sand-Bound King.', FIXTURE)
 add('neferkhet_sun_idol', 'A sun idol of the Sun Chamber, the hidden hall under desert pyramids where Neferkhet sleeps.', FIXTURE)
 add('gulpmother_shrine_cauldron', 'The cauldron of the Croaking Shrine (mangrove swamps). Drop 3 slimeballs into it at night to summon Old Gulpmother.', FIXTURE)
-add('gulpmother_frogspawn', 'Frogspawn around the lily-pad pool of the Croaking Shrine, Old Gulpmother\'s home in mangrove swamps.', FIXTURE)
 add('proving_challenge_horn', 'The challenge horn of the Proving Grounds in Ironpeak. Sound it to call Hrolf Grimhorn; beating him opens the way to Thurgrim on the Summit Throne.', FIXTURE)
 add('choir_pillar', 'One of the 8 crystal pillars of the Choir Geode (The Hush). Strike all 8 once each to summon Lithara, the Geode Cantor.', FIXTURE)
 add('tympanum_membrane', 'The membrane of the Listening Engine (The Hush), the ear-shaped deepslate funnel where Auris answers when your Resonance reaches 100%.', FIXTURE)
@@ -74,11 +73,7 @@ add('music_disc_hush', 'A music disc: Hush. The Mute Archivist of the Hush trade
 add('music_disc_low_tide_engine', 'A music disc: Low Tide Engine. The Tidewright of the Verdigris Sea trades it for 4 Scraped Patina.')
 add('music_disc_thin_air', 'A music disc: Thin Air. The Ironpeak Clan Quartermaster trades it for 8 Skyiron and 16 emeralds.')
 
-# --- filled survey maps (the unfolded twin of each kingdom's Survey Map)
-for k, name in (('azmar', 'Azmar'), ('hrafnholt', 'Hrafnholt'), ('mirewick', 'Mirewick')):
-    add(k + '_survey_map_filled', 'The unfolded ' + name + ' Survey Map: use a ' + name + ' Survey Map (sold in ' + name
-        + '\'s shop) to turn it into this explorer-style map, centred on the nearest ' + name + ' castle with a red X.')
-add('lore_royal_survey_map_filled', 'The unfolded Royal Survey Map: use a folded Royal Survey Map (3 Survey Map Fragments) in the Overworld and it turns into this explorer-style map, centred on the nearest Castle Aldermark with a red X.')
+# (the filled survey maps are not separate items: a Survey Map turns into a vanilla filled map, so no page)
 
 # --- brewing (minecraft:brewing data recipes show in JEI's brewing category; the page adds what the potion does)
 add('strong_glimmer_tonic', 'A stronger Glimmer Tonic: brew a Glimmer Tonic with glowstone dust. Drinking it restores more Glimmer than the plain tonic.')

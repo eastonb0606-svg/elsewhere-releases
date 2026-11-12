@@ -442,6 +442,8 @@ final class SelfTestLayoutAudit {
 				long p = queue.dequeueLong();
 				size++;
 				int x = BlockPos.getX(p), y = BlockPos.getY(p), z = BlockPos.getZ(p);
+				// a lily pad floats on water by design (Azmar's pools, the sacred lake): water under it is its support
+				if (!anchored && l.getBlockState(q.set(x, y, z)).is(Blocks.LILY_PAD) && !l.getBlockState(q.set(x, y - 1, z)).getFluidState().isEmpty()) anchored = true;
 				// 26-neighbour: Minecraft builds join on edges and corners too (a spire on its parapet, palm fronds on the trunk)
 				for (int dx = -1; dx <= 1; dx++) for (int dy = -1; dy <= 1; dy++) for (int dz = -1; dz <= 1; dz++) {
 					if (dx == 0 && dy == 0 && dz == 0) continue;

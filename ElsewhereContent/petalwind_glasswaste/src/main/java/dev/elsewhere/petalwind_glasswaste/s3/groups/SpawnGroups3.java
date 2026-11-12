@@ -180,7 +180,9 @@ public final class SpawnGroups3 {
 			}
 			MobSpawnSettings s = biome.getAttributes().applyModifier(EnvironmentAttributes.NATURAL_MOB_SPAWNS, EnvironmentAttributes.NATURAL_MOB_SPAWNS.defaultValue());
 			for (MobCategory cat : MobCategory.values()) {
-				for (Weighted<MobSpawnSettings.SpawnerData> w : s.getMobsInCategory(cat).unwrap()) {
+				var mobs = s.getMobsInCategory(cat);
+				if (mobs == null) continue; // a category with no entries reads as null here (self-test crash; s-asm-kingdom)
+				for (Weighted<MobSpawnSettings.SpawnerData> w : mobs.unwrap()) {
 					Identifier id = BuiltInRegistries.ENTITY_TYPE.getKey(w.value().type());
 					int[] want = Groups3Data.TARGET.get(id.getPath());
 					if (!"elsewhere".equals(id.getNamespace()) || want == null) continue;

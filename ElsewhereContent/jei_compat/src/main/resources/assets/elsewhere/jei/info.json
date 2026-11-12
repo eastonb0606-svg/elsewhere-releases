@@ -136,11 +136,6 @@
   "Boss Trophy: a statue of a boss you helped defeat. Place it as a block; breaking it gives the same trophy back.",
   "How to get: your first kill of each boss (killer and players within 48 blocks). Collect all 24 for the Hall of Trophies advancement."
  ],
- "elsewhere:boss_waystone": [
-  "Boss Waystone: appears near the spot where a boss falls and is remembered for everyone credited with the kill (use it to remember it yourself).",
-  "Sneak-use an attuned Wayfinder outside its dimension to warp to your latest waystone there, or the base Wayfinder to warp to your latest waystone in the dimension you are in.",
-  "Unbreakable; it cannot be crafted or picked up."
- ],
  "elsewhere:brassback_key": [
   "Winds up a Brassback, a sturdy brass crab that draws mobs' attention away from you. Barely hurts anything, but very hard to kill. Costs 10 Glimmer and 1 minion slot.",
   "How to get: Drop from Archdeacon Verdigrim (50% on your first kill, 20% after), or Tidewright trade: 3 Scraped Patina and 16 Verdigris Gears.",
@@ -855,11 +850,6 @@
   "Old mummy linen.",
   "How to get: Drop from Wrapped Sentinels."
  ],
- "elsewhere:lore_aldermark_surcoat": [
-  "A blue Aldermark surcoat: dyed leather you can wear over your gear in the colors of the kingdom.",
-  "How to get: The Reeve (royal quartermaster) sells it for 8 emeralds.",
-  "A blue surcoat in the colors of Aldermark."
- ],
  "elsewhere:lore_royal_proclamation": [
   "A 12-page written book in the voice of King Osric Vael, the Hundredth Crown. It tells of the five Lords, the Seals, the villages and the Survey.",
   "How to get: a royal patrol's Sergeant (the courier) hands you one if you right-click him while he is not fighting you; it is also in the courier's pouch if he dies, in the Reeve's stall (3 emeralds) and rarely in castle dungeons."
@@ -962,10 +952,6 @@
  "elsewhere:munchfruit": [
   "Sweet fruit from Munchfruit bushes: food. Grumblegut sniffs out ripe fruit trees.",
   "How to get: Munchfruit bushes in the Munchie Groves, around the Bonfire Terrace trees, in the Munchie Market and Fern Terrace Farms; the Budtender sells 3 for 2 Haze Resin."
- ],
- "elsewhere:munchfruit_bush": [
-  "A berry bush with plump snack fruit.",
-  "How to get: Grows in the Munchie Groves."
  ],
  "elsewhere:munchie_bacon": [
   "Restores 10 hunger and cures the munchies instantly.",
@@ -1484,9 +1470,6 @@
  ],
  "elsewhere:village_royal_purse": [
   "The seized village treasury, handed back after a liberation."
- ],
- "elsewhere:village_siege_fire": [
-  "A controlled siege fire. It burns only village blocks and goes out on its own."
  ],
  "elsewhere:void_scale": [
   "Smithing piece that fuses a netherite chestplate and an elytra into the Void-Scale Elytra.",

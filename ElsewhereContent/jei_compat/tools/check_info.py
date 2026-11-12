@@ -22,7 +22,11 @@ for l in glob.glob(CONTENT + '/*/src/main/resources/assets/elsewhere/lang/en_us.
         mods.setdefault(i, set()).add(l.split('/')[-6] if '/src/' in l else '?')
 new = sorted(i for i in mods if i not in oldids)
 # not worth a page: spawn eggs (creative only), technical blocks, the filled-map twin of the Survey Map
-skip = lambda i: i.endswith('_spawn_egg') or i in ('lore_royal_survey_map_filled',)
+# 3.0: lang names that are not registered items (the filled survey maps are vanilla filled maps; blocks with no block item; the
+# retired surcoat), per the server-side JeiSelfTest, which checks the real item registry and is the authoritative test.
+NOT_ITEMS = ('lore_royal_survey_map_filled', 'azmar_survey_map_filled', 'hrafnholt_survey_map_filled', 'mirewick_survey_map_filled',
+             'boss_waystone', 'munchfruit_bush', 'village_siege_fire', 'gulpmother_frogspawn', 'lore_aldermark_surcoat')
+skip = lambda i: i.endswith('_spawn_egg') or i in NOT_ITEMS
 fails = []
 def check(name, ok, detail=''):
     print(('PASS ' if ok else 'FAIL ') + name + ' ' + detail)

@@ -70,6 +70,31 @@ public final class SelfTest {
 		System.out.println("[gear3-selftest] INFO " + s);
 	}
 
+	static MinecraftServer server;
+
+	/** True when arsenal's elsewhere:spell damage type is loaded (always in the merged jar; not in a classes-only devlib such as the cloud mirror's). */
+	public static boolean spellEnv() {
+		return server != null && server.registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).get(dev.elsewhere.arsenal.spell.Spells.SPELL).isPresent();
+	}
+
+	/**
+	 * s-asm-gear3: runs one lane's block of checks so that an exception ends only that block, not the whole run. If the cause is
+	 * arsenal's elsewhere:spell damage type missing from this environment (classes-only devlib, no data/), the rest of the block is
+	 * skipped with an INFO, like recipes and loot tables from modules that are not here; any other exception is a FAIL.
+	 */
+	public static void group(String name, Runnable r) {
+		try {
+			r.run();
+		} catch (Throwable t) {
+			if (!spellEnv() && String.valueOf(t.getMessage()).contains("damage_type / elsewhere:spell]")) {
+				info(name + ": rest of this block skipped, damage type elsewhere:spell is not in this environment (" + t + ")");
+			} else {
+				t.printStackTrace();
+				check(name + ": block ran to the end", false, t);
+			}
+		}
+	}
+
 	public static boolean near(double a, double b) {
 		return Math.abs(a - b) < 1.0E-3;
 	}
@@ -196,6 +221,7 @@ public final class SelfTest {
 	}
 
 	public static void run(MinecraftServer s) {
+		server = s;
 		try {
 			runChecks(s);
 		} catch (Throwable t) {

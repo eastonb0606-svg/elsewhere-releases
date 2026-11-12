@@ -14,10 +14,10 @@ final class BrainLodTest {
 
 	/** The tier rules (pure). */
 	static void rules() {
-		SelfTest.check("villager brain LOD: within 16 blocks of a player the start pass runs every tick (captured or not)",
-			BrainLod.interval(15 * 15, true) == 1 && BrainLod.interval(15 * 15, false) == 1, null);
-		SelfTest.check("villager brain LOD: captured villagers every 2nd tick within 48 blocks, every 4th beyond or with no player",
-			BrainLod.interval(30 * 30, true) == 2 && BrainLod.interval(60 * 60, true) == 4 && BrainLod.interval(Double.MAX_VALUE, true) == 4, null);
+		SelfTest.check("villager brain LOD: free villagers near a player run the start pass every tick (vanilla)",
+			BrainLod.interval(5 * 5, false) == 1 && BrainLod.interval(15 * 15, false) == 1, null);
+		SelfTest.check("villager brain LOD: captured villagers every 2nd tick within 16 blocks, every 4th beyond or with no player",
+			BrainLod.interval(15 * 15, true) == 2 && BrainLod.interval(30 * 30, true) == 4 && BrainLod.interval(Double.MAX_VALUE, true) == 4, null);
 		SelfTest.check("villager brain LOD: free villagers vanilla within 48 blocks, every 2nd tick to 96, every 4th beyond",
 			BrainLod.interval(40 * 40, false) == 1 && BrainLod.interval(80 * 80, false) == 2 && BrainLod.interval(200 * 200, false) == 4
 				&& BrainLod.interval(Double.MAX_VALUE, false) == 4, null);

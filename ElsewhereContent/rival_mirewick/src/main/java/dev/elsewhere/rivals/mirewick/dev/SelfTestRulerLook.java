@@ -23,6 +23,7 @@ final class SelfTestRulerLook {
 	private SelfTestRulerLook() {}
 
 	static final List<MagnateBoss> SPAWNED = new ArrayList<>();
+	static int waited;
 
 	static boolean res(String path) {
 		try (InputStream in = SelfTestRulerLook.class.getResourceAsStream("/" + path)) {
@@ -35,15 +36,15 @@ final class SelfTestRulerLook {
 	static void add() {
 		SelfTest.STEPS.add((srv, l) -> {
 			int y = SelfTest.Y;
-			for (int cx = 600 >> 4; cx <= 630 >> 4; cx++) { l.setChunkForced(cx, 600 >> 4, true); l.getChunk(cx, 600 >> 4); }
-			for (int x = 600; x <= 630; x++) for (int z = 601; z <= 605; z++) {
+			// inside the chunks the harness forces at start (cx -5..5, cz -6..36), so the Magnates really tick and run their first-tick loadout
+			for (int x = 0; x <= 30; x++) for (int z = 401; z <= 405; z++) {
 				l.setBlock(new BlockPos(x, y - 1, z), Blocks.STONE.defaultBlockState(), 2);
 				for (int yy = y; yy < y + 4; yy++) l.setBlock(new BlockPos(x, yy, z), Blocks.AIR.defaultBlockState(), 2);
 			}
 			int i = 0;
 			for (Magnate m : Magnate.values()) {
 				MagnateBoss b = m.type.create(l, EntitySpawnReason.COMMAND);
-				b.snapTo(602.5 + 5 * i++, y, 603.5, 0F, 0F);
+				b.snapTo(2.5 + 5 * i++, y, 403.5, 0F, 0F);
 				b.passive = true;
 				l.addFreshEntity(b);
 				SPAWNED.add(b);
@@ -51,6 +52,10 @@ final class SelfTestRulerLook {
 			return 3;   // the first tick runs each Magnate's own loadout
 		});
 		SelfTest.STEPS.add((srv, l) -> {
+			// wait (bounded) until every Magnate's own first-tick loadout has run, instead of trusting a fixed tick count
+			boolean ready = true;
+			for (MagnateBoss b : SPAWNED) ready &= !b.getItemBySlot(EquipmentSlot.CHEST).isEmpty();
+			if (!ready && ++waited < 200) return -1;
 			boolean on = MirewickRulerLook.ENABLED, noDiamond = true, styled = true, kept = true, thwaite = false;
 			int metal = 0;
 			StringBuilder bad = new StringBuilder();

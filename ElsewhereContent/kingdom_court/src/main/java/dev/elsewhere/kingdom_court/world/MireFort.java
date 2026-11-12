@@ -145,8 +145,9 @@ final class MireFort {
 			// guard-room doors from the yard, windows to the quay
 			w.s(s * 4, 0, 25, air);
 			w.s(s * 4, 1, 25, air);
-			w.s(s * 4, 2, 30, glass);
-			for (int y = 7; y <= 9; y++) w.s(s * 3, y, 30, glass);
+			// s-asm-court: a front window only where the ground outside is below it (an uphill gate keeps its wall: no glass against earth)
+			w.s(s * 4, 2, 30, l.gy(s * 4, 31) > 2 ? quartz : glass);
+			for (int y = 7; y <= 9; y++) w.s(s * 3, y, 30, l.gy(s * 3, 31) > y ? quartz : glass);
 			for (int y = 7; y <= 9; y++) w.s(s * 3, y, 25, glass);
 			w.s(s * 4, 7, 31, Blocks.WALL_BANNER.pick(DyeColor.PURPLE).defaultBlockState().setValue(WallBannerBlock.FACING, Direction.SOUTH));
 		}

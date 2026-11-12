@@ -54,6 +54,7 @@ def sync():
         if not os.path.isdir(src):
             continue
         dst = os.path.join(SNAP, m, "src")
+        os.makedirs(dst, exist_ok=True)  # Linux rsync (cloud runners) does not create missing parents (exit 11)
         subprocess.check_call(["rsync", "-a", "--delete", *ex, src + "/", dst + "/"])
         log(f"snapshot {m} <- {os.path.relpath(src, ROOT)}")
         # art staging (art2/<module>/src mirrors the module; core is art2/Elsewhere): copied into the snapshot only

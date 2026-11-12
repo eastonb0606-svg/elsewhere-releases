@@ -75,9 +75,14 @@ public final class SelfTestIdle {
 			pawn.discard();
 			KingdomSoldier copy = (KingdomSoldier) pawn.getType().create(l, EntitySpawnReason.LOAD);
 			copy.load(TagValueInput.create(ProblemReporter.DISCARDING, l.registryAccess(), ct));
+			// IdlePoses.restore copies the saved routine tag onto the synced byte (what its ENTITY_LOAD hook does)
 			int before = copy.idlePose();
+			IdlePoses.restore(copy);
+			check("idle: pose restored from the saved routine tag on load", before == 0 && copy.idlePose() == Pose.SIT.id && RoutinePoses.get(copy) == Pose.SIT, before + " -> " + copy.idlePose());
+			// RoutineDirector's ENTITY_LOAD hook stands a soldier whose squad has no activity (restart) up again, tag and byte
 			boolean ok = l.addFreshEntity(copy);
-			check("idle: pose restored from the saved routine tag on load", ok && copy.idlePose() == Pose.SIT.id, before + " -> " + copy.idlePose() + (ok ? "" : " (not added)"));
+			check("idle: a loaded soldier whose squad has no activity stands up again", ok && copy.idlePose() == 0 && RoutinePoses.get(copy) == Pose.NONE, copy.idlePose() + (ok ? "" : " (not added)"));
+			copy.discard();
 
 			// townsfolk (s-townsfolk) take routine poses through the same sink (never added to the world: no town, no manager)
 			var tfType = dev.elsewhere.kingdom.armies.townsfolk.TownsfolkManager.TYPE;

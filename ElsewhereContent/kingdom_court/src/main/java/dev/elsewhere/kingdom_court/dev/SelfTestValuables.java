@@ -144,7 +144,13 @@ final class SelfTestValuables {
 			check("valuables: " + jobs + " realm builds (styles " + STYLES_SEEN + ", fv 1 and fv 2, every switch combination) contain no valuable block",
 				jobs >= 8 * HOSTILE_IDS.length && valuableTotal == 0, valuableTotal + " valuable in " + blocksScanned + " scanned blocks" + (BAD.isEmpty() ? "" : "; " + BAD));
 			check("valuables: every waterfront (jetty, boathouse, longships; " + waterfronts + " built, hostile included) has no valuable block", waterfronts >= 1 && waterfrontValuable == 0, waterfrontValuable);
-			if (otherBuilt == 0) info("valuables: no other module's structures on this classpath (module dev run): the cross-module scan runs in the merged jar"
+			// s-asm-court: the court's dev run has the other modules only as its pre-3.0 devlib (merged elsewhere.jar 2.0.0-alpha.4), whose old
+			// blueprints are not what 3.0 ships; the check is for the merged 3.0 jar, where the "elsewhere" mod is 3.x
+			String core = net.fabricmc.loader.api.FabricLoader.getInstance().getModContainer("elsewhere")
+				.map(m -> m.getMetadata().getVersion().getFriendlyString()).orElse("");
+			if (otherBuilt > 0 && !core.startsWith("3.")) info("valuables: the other modules on this classpath are the court's pre-3.0 devlib (elsewhere " + core
+				+ "), not 3.0 code: " + otherBuilt + " blueprints, " + otherValuable + " valuable there; the cross-module scan is checked in the merged 3.0 jar");
+			else if (otherBuilt == 0) info("valuables: no other module's structures on this classpath (module dev run): the cross-module scan runs in the merged jar"
 				+ (otherCrashed > 0 ? "; " + otherCrashed + " could not be built here" : ""));
 			else check("valuables: " + otherBuilt + " structure blueprints of the other modules (nether arenas, Verdigris/Ironpeak legacy and fit, Greenhaze/Hush, overworld bosses) contain no valuable block",
 				otherValuable == 0, otherValuable + " valuable" + (OTHER_BAD.isEmpty() ? "" : "; " + OTHER_BAD) + (otherCrashed > 0 ? "; " + otherCrashed + " not buildable in this test world (info)" : ""));

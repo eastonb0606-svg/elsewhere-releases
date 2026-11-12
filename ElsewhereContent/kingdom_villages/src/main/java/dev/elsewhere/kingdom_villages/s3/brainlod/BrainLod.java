@@ -19,12 +19,12 @@ import net.minecraft.world.phys.Vec3;
  * sleeping, trading, breeding, panicking) still tick every tick, exactly as vanilla, from {@code Brain.tick}. A villager
  * runs the start pass:
  * <ul>
- * <li>every tick when it is within {@link #NEAR} blocks of a player, was hurt in the last 10 ticks, is trading, or its
- * brain is in PANIC, RAID, PRE_RAID or HIDE (so a hit, a raid bell or a zombie never waits);</li>
- * <li>captured (its village is besieged or occupied, so it can't trade anyway): every 2nd tick within {@link #MID}
+ * <li>every tick when it was hurt in the last 10 ticks, is trading, or its brain is in PANIC, RAID, PRE_RAID or HIDE
+ * (so a hit, a raid bell or a zombie never waits);</li>
+ * <li>captured (its village is besieged or occupied, so it can't trade anyway): every 2nd tick within {@link #NEAR}
  * blocks of a player, every 4th tick farther out;</li>
- * <li>free villagers: every tick within {@link #MID}, every 2nd tick within {@link #FAR}, every 4th beyond (or with no
- * player in the level).</li>
+ * <li>free villagers: every tick within {@link #MID} (vanilla), every 2nd tick within {@link #FAR}, every 4th beyond (or
+ * with no player in the level).</li>
  * </ul>
  * The phase is the villager's entity id, so on any tick only a share of the villagers evaluate new behaviours (the
  * path-search spikes no longer pile onto the same ticks). The tier is re-read every 20 ticks from the player list (no
@@ -46,8 +46,7 @@ public final class BrainLod {
 
 	/** Start-pass interval for a villager at squared distance {@code d2} from the nearest player (MAX_VALUE: none). */
 	public static int interval(double d2, boolean captured) {
-		if (d2 <= NEAR * NEAR) return 1;
-		if (captured) return d2 <= MID * MID ? 2 : 4;
+		if (captured) return d2 <= NEAR * NEAR ? 2 : 4;
 		if (d2 <= MID * MID) return 1;
 		return d2 <= FAR * FAR ? 2 : 4;
 	}

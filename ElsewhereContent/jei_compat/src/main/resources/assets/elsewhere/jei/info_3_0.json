@@ -1,7 +1,4 @@
 {
- "elsewhere:azmar_survey_map_filled": [
-  "The unfolded Azmar Survey Map: use a Azmar Survey Map (sold in Azmar's shop) to turn it into this explorer-style map, centred on the nearest Azmar castle with a red X."
- ],
  "elsewhere:chiseled_sunwright_bricks": [
   "Chiseled Sunwright Bricks: the carved stone of the Sunwright Ziggurat in the Glasswaste. Mine it with a pickaxe; it drops itself."
  ],
@@ -24,10 +21,6 @@
   "The gilded throne of Grunthar's hoard (the Nether). Place a gold block on the throne to summon Grunthar & Ashtusk.",
   "Breaking it with the right tool drops the block itself, so you can take it home as a trophy or for building."
  ],
- "elsewhere:gulpmother_frogspawn": [
-  "Frogspawn around the lily-pad pool of the Croaking Shrine, Old Gulpmother's home in mangrove swamps.",
-  "An arena fixture: it is part of the structure and drops nothing when broken, so it cannot be collected in survival."
- ],
  "elsewhere:gulpmother_shrine_cauldron": [
   "The cauldron of the Croaking Shrine (mangrove swamps). Drop 3 slimeballs into it at night to summon Old Gulpmother.",
   "An arena fixture: it is part of the structure and drops nothing when broken, so it cannot be collected in survival."
@@ -44,9 +37,6 @@
   "A vent shutter of the Great Hotbox (The Greenhaze), the smoke-filled dome of Percolax. In his second phase the vents slam shut and the smoke builds up; the lever beside a shutter opens it again.",
   "An arena fixture: it is part of the structure and drops nothing when broken, so it cannot be collected in survival."
  ],
- "elsewhere:hrafnholt_survey_map_filled": [
-  "The unfolded Hrafnholt Survey Map: use a Hrafnholt Survey Map (sold in Hrafnholt's shop) to turn it into this explorer-style map, centred on the nearest Hrafnholt castle with a red X."
- ],
  "elsewhere:kelpwood_log": [
   "Kelpwood: the trees of the Verdigris Sea islands. Chop the log with an axe; 1 log makes 4 Kelpwood Planks."
  ],
@@ -56,15 +46,9 @@
  "elsewhere:kushwood_log": [
   "Kushwood: the trees of the Greenhaze. Chop the log with an axe; 1 log makes 4 Kushwood Planks."
  ],
- "elsewhere:lore_royal_survey_map_filled": [
-  "The unfolded Royal Survey Map: use a folded Royal Survey Map (3 Survey Map Fragments) in the Overworld and it turns into this explorer-style map, centred on the nearest Castle Aldermark with a red X."
- ],
  "elsewhere:matriarch_pedestal": [
   "The dragon-egg pedestal on top of the Matriarch Spire (The End). Place a shulker shell on it, with the Ender Dragon dead, to summon Ossyra.",
   "Breaking it with the right tool drops the block itself, so you can take it home as a trophy or for building."
- ],
- "elsewhere:mirewick_survey_map_filled": [
-  "The unfolded Mirewick Survey Map: use a Mirewick Survey Map (sold in Mirewick's shop) to turn it into this explorer-style map, centred on the nearest Mirewick castle with a red X."
  ],
  "elsewhere:moon_bloom": [
   "The single closed eyeblossom in the center of the Moonring (Pale Hollow). Pick it to summon Selenne, the Unblinking.",
