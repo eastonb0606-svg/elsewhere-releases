@@ -1,0 +1,329 @@
+{
+  "lanes": {
+    "s_p6_useanims": {
+      "elsewhere:sculk_resonator": [
+        {
+          "file": "s_p6_useanims__sculk_resonator_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "23:14:09"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "23:14:10"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "23:14:12"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "23:14:13"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_after_use.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "23:14:14"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_tooltip.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "23:14:15"
+        }
+      ],
+      "weapon effects level + kill switch": [
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "ok",
+          "taken": "23:14:17"
+        },
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch_5s.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "ok",
+          "taken": "23:14:19"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:hollow_stag": [
+        {
+          "file": "s_spawngroups__hollow_stag_herd_core.png",
+          "scene": 241,
+          "line": 271,
+          "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
+          "status": "ok",
+          "taken": "23:14:25"
+        },
+        {
+          "file": "s_spawngroups__hollow_stag_herd_core_hit.png",
+          "scene": 241,
+          "line": 271,
+          "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
+          "status": "ok",
+          "taken": "23:14:25"
+        }
+      ],
+      "elsewhere:shrieker_swarm": [
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu.png",
+          "scene": 392,
+          "line": 440,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "ok",
+          "taken": "23:14:37"
+        },
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu_later.png",
+          "scene": 392,
+          "line": 440,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "ok",
+          "taken": "23:14:39"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_stuck_sprint_cancel.png",
+          "scene": 313,
+          "line": 353,
+          "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
+          "status": "ok",
+          "taken": "23:14:30"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "Pose.DRINK and Pose.TORCH": [
+        {
+          "file": "s_p9_idle__pose_drink_and_pose_torch.png",
+          "scene": 329,
+          "line": 372,
+          "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:14:30"
+        },
+        {
+          "file": "s_p9_idle__pose_drink_and_pose_torch_5s.png",
+          "scene": 329,
+          "line": 372,
+          "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:14:30"
+        }
+      ],
+      "night rest (REST: soldiers the night routine rests)": [
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:14:31"
+        },
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:14:31"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_p9_idle__townsfolk_routine_poses_s_townsfolk_resi.png",
+          "scene": 333,
+          "line": 376,
+          "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "23:14:31"
+        }
+      ]
+    },
+    "s_setbonus_a": {
+      "elsewhere:galeplate_helmet": [
+        {
+          "file": "s_setbonus_a__galeplate_helmet_first_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "ok",
+          "taken": "23:14:32"
+        },
+        {
+          "file": "s_setbonus_a__galeplate_helmet_third_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "ok",
+          "taken": "23:14:33"
+        },
+        {
+          "file": "s_setbonus_a__galeplate_helmet_tooltip.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "ok",
+          "taken": "23:14:34"
+        }
+      ]
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "ok",
+          "taken": "23:14:41"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "ok",
+          "taken": "23:14:42"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "ok",
+          "taken": "23:14:43"
+        },
+        {
+          "file": "s_prismbow__prism_bow_first_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:14:44"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:14:45"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:14:46"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:14:47"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:14:47"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:14:48"
+        },
+        {
+          "file": "s_prismbow__prism_bow_first_person_3.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_3.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person_2.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person_2.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use_2.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_3.png",
+          "scene": 401,
+          "line": 451,
+          "check": "a white-gold glowing bolt with a gold dust trail flying dead level (no arrow entity, no drop); it fades about 24 blocks out and never reaches the wall; the Glimmer bar shows 2 less; the arrow count in the hotbar is unchanged",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:14:48",
+  "totals": {
+    "ok": 25,
+    "fail": 5,
+    "manual": 0
+  }
+}
