@@ -1,0 +1,345 @@
+{
+  "lanes": {
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:14:30"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:14:31"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:14:32"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:14:34"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:14:36"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:14:37"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:14:39"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:14:40"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:14:41"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:14:42"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:14:44"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "23:14:45"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:14:46"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:14:47"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:14:48"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:14:49"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:14:52"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:14:53"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:munchie_boar": [
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ironclan_raider": [
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ossuary_chorister": [
+        {
+          "file": "s_spawngroups__ossuary_chorister_choir_greenhaze_hush_t.png",
+          "scene": 240,
+          "line": 270,
+          "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sickle": {
+      "elsewhere:mirewick_lantern_sickle": [
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_after_use.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_2.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person_2.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person_2.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_3.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_after_use.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark fields at 14:00 + vespers": [
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers.png",
+          "scene": 315,
+          "line": 355,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers_5s.png",
+          "scene": 315,
+          "line": 355,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_townsfolk__townsfolk_lod_fold.png",
+          "scene": 319,
+          "line": 359,
+          "check": "nobody pops out of existence in view (they fold beyond 72 blocks, outside the 64-block tracking range); coming back, residents reappear at doors/far streets, never next to you",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "elsewhere:kingdom_archer": [
+        {
+          "file": "s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png",
+          "scene": 327,
+          "line": 370,
+          "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:14:53",
+  "totals": {
+    "ok": 18,
+    "fail": 0,
+    "manual": 0
+  }
+}
