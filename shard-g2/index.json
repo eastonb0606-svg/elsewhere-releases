@@ -1,0 +1,163 @@
+{
+  "lanes": {
+    "s_compat_transmute": {
+      "elsewhere:skyiron_ingot": [
+        {
+          "file": "s_compat_transmute__skyiron_ingot_first_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "ok",
+          "taken": "22:57:43"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_third_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "ok",
+          "taken": "22:57:44"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_tooltip.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "ok",
+          "taken": "22:57:45"
+        }
+      ],
+      "elsewhere:boss_token": [
+        {
+          "file": "s_compat_transmute__boss_token_first_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "ok",
+          "taken": "22:57:47"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_third_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "ok",
+          "taken": "22:57:48"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_tooltip.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "ok",
+          "taken": "22:57:49"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "Calling panel (moonsilk + sunlance_staff)": [
+        {
+          "file": "s_compat_greenhaze__calling_panel_caster.png",
+          "scene": 432,
+          "line": 482,
+          "check": "the Calling panel starts below the Green Leaf meter (panel top y 32, meter 4-26): no overlap, both fully readable; without Green Leaf the panel sits at y 6 as before",
+          "status": "ok",
+          "taken": "22:57:55"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom.png",
+          "scene": 433,
+          "line": 483,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png",
+          "scene": 433,
+          "line": 483,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:everflow_bong": [
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person_2.png",
+          "scene": 435,
+          "line": 485,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person_2.png",
+          "scene": 435,
+          "line": 485,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_tooltip.png",
+          "scene": 435,
+          "line": 485,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:sesh_hut": [
+        {
+          "file": "s_struct_greenhaze__sesh_hut_overview.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__sesh_hut_ground.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:listening_engine": [
+        {
+          "file": "s_struct_greenhaze__listening_engine_overview.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__listening_engine_ground.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:57:55",
+  "totals": {
+    "ok": 7,
+    "fail": 0,
+    "manual": 0
+  }
+}
