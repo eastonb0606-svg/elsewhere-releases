@@ -1,0 +1,582 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 22,
+          "line": 30,
+          "check": "the west curtain's foot follows the ground with a rubble footing, the top steps by at most 1, the corner towers rise with their corner; nothing floats",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:hrafnholt_jarl": [
+        {
+          "file": "anim__hrafnholt_jarl_move_windup.png",
+          "scene": 30,
+          "line": 43,
+          "check": "Ninth Winter Slam = slam (both arms high, leaning back, then bent over the ground), Oath Cleave = overhead (weapon above the head, then chopped down with a forward step), plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:02:44"
+        },
+        {
+          "file": "anim__hrafnholt_jarl_move_strike.png",
+          "scene": 30,
+          "line": 43,
+          "check": "Ninth Winter Slam = slam (both arms high, leaning back, then bent over the ground), Oath Cleave = overhead (weapon above the head, then chopped down with a forward step), plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:02:44"
+        }
+      ],
+      "elsewhere:azmar_sultana": [
+        {
+          "file": "anim__azmar_sultana_move_windup.png",
+          "scene": 36,
+          "line": 49,
+          "check": "Screen and Step = sweep (arm out wide with the torso wound back, then swept across), Counter Riposte = thrust, Halo Flare = cast, Scarab Shell = shield bash; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:04:15"
+        },
+        {
+          "file": "anim__azmar_sultana_move_strike.png",
+          "scene": 36,
+          "line": 49,
+          "check": "Screen and Step = sweep (arm out wide with the torso wound back, then swept across), Counter Riposte = thrust, Halo Flare = cast, Scarab Shell = shield bash; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:04:15"
+        }
+      ],
+      "elsewhere:mournmaw": [
+        {
+          "file": "anim__mournmaw_hurt_peak.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:04:19"
+        },
+        {
+          "file": "anim__mournmaw_hurt_rest.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:04:20"
+        }
+      ],
+      "elsewhere:thurgrim": [
+        {
+          "file": "anim__thurgrim_hurt_peak.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:04:23"
+        },
+        {
+          "file": "anim__thurgrim_hurt_rest.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:04:23"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:hrafnholt_hearthguard_helm": [
+        {
+          "file": "items__hrafnholt_hearthguard_helm_front.png",
+          "scene": 76,
+          "line": 92,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_helm_side.png",
+          "scene": 76,
+          "line": 92,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_helm_tooltip.png",
+          "scene": 76,
+          "line": 92,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_outrider_boots": [
+        {
+          "file": "items__aldermark_outrider_boots_front.png",
+          "scene": 84,
+          "line": 100,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_outrider_boots_side.png",
+          "scene": 84,
+          "line": 100,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_outrider_boots_tooltip.png",
+          "scene": 84,
+          "line": 100,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:bellbreaker_maul": [
+        {
+          "file": "items__bellbreaker_maul_held.png",
+          "scene": 107,
+          "line": 123,
+          "check": "icon matches the sprite page (16x16, Bellbreaker Maul), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__bellbreaker_maul_tooltip.png",
+          "scene": 107,
+          "line": 123,
+          "check": "icon matches the sprite page (16x16, Bellbreaker Maul), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_mead_horn": [
+        {
+          "file": "items__hrafnholt_mead_horn_held.png",
+          "scene": 119,
+          "line": 135,
+          "check": "icon matches the sprite page (16x16, Mead-Horn of the Hall), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_mead_horn_tooltip.png",
+          "scene": 119,
+          "line": 135,
+          "check": "icon matches the sprite page (16x16, Mead-Horn of the Hall), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:frostwake_scepter": [
+        {
+          "file": "items__frostwake_scepter_held.png",
+          "scene": 131,
+          "line": 147,
+          "check": "icon matches the sprite page (16x16, Frostwake Scepter), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__frostwake_scepter_tooltip.png",
+          "scene": 131,
+          "line": 147,
+          "check": "icon matches the sprite page (16x16, Frostwake Scepter), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_blocking.png",
+          "scene": 146,
+          "line": 161,
+          "check": "rises to the vanilla blocking spot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:verdigris_sea_return_rift": [
+        {
+          "file": "s_struct_verdigris__verdigris_sea_return_rift_s_8_4_8.png",
+          "scene": 163,
+          "line": 180,
+          "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:glacier_shelf": [
+        {
+          "file": "s_struct_overworld__glacier_shelf_s_30_14_30.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__glacier_shelf_downhill_20.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_chief Wolf Howl": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_chief_wolf_howl_windup.png",
+          "scene": 190,
+          "line": 211,
+          "check": "sunk low, head down, arms hanging forward; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: reared up, arms spread wide and low, head flung back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_chief_wolf_howl_strike.png",
+          "scene": 190,
+          "line": 211,
+          "check": "sunk low, head down, arms hanging forward; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: reared up, arms spread wide and low, head flung back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_jarl (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_aura_phase3.png",
+          "scene": 206,
+          "line": 236,
+          "check": "",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:hollow_shrine": [
+        {
+          "file": "s_struct_core__hollow_shrine_s_9_6_9.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__hollow_shrine_downhill_20.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_langfix": {
+      "elsewhere:azmar_soldier_spawn_egg": [
+        {
+          "file": "s_langfix__azmar_soldier_spawn_egg_death_15t.png",
+          "scene": 242,
+          "line": 272,
+          "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:grunthar": [
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:grunthar_treasure_hall": [
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_0_0_21.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sickle": {
+      "elsewhere:mirewick_lantern_sickle": [
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_after_use.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_2.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person_2.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person_2.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_3.png",
+          "scene": 302,
+          "line": 341,
+          "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_stuck_sprint_cancel.png",
+          "scene": 313,
+          "line": 353,
+          "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_man_at_arms": [
+        {
+          "file": "s_p10_tabard__tabard_emblems_chest_kingdom_module_clie.png",
+          "scene": 344,
+          "line": 387,
+          "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__tabard_emblems_chest_kingdom_module_clie_later.png",
+          "scene": 344,
+          "line": 387,
+          "check": "each chest shows its own emblem over the tinted tabard: Aldermark cream tower under a gold crown on a red chief; Hrafnholt brown raven in profile (black beak, amber eye) on green under a brown neck band; Azmar gold winged scarab under a red sun disc with a gold/turquoise collar; Mirewick gold lantern with crimson glass and an amber flame on purple; a belt at the waist, a hem band in the kingdom's trim on the skirt; no grey tower shape behind any emblem, no flicker or z-fighting on the emblem",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:ridgewatch_hood": [
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_first_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_third_person.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__ridgewatch_hood_tooltip.png",
+          "scene": 360,
+          "line": 408,
+          "check": "\"Set bonus: Steady Aim (4/4)\" under the name; with Shift 2 detail lines (sneak or hold still 1 s: no spread, +30%; bows only); Sunscribe shows \"Zenith\" with 3 lines, Ulfhednar \"Wolf-Fury\" 3 lines, Marshal's \"Command\" 2 lines, never a raw setbonus.elsewhere.* key",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_mead_horn": [
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_first_person.png",
+          "scene": 364,
+          "line": 412,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_third_person.png",
+          "scene": 364,
+          "line": 412,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_in_use_first_person.png",
+          "scene": 364,
+          "line": 412,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_in_use_third_person.png",
+          "scene": 364,
+          "line": 412,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_after_use.png",
+          "scene": 364,
+          "line": 412,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_mead_horn_tooltip.png",
+          "scene": 364,
+          "line": 412,
+          "check": "Regeneration hearts for 3 s, and the crosshair cooldown sword refills faster for 4 s (3 Fury stacks, +12%); the horn goes on its 30 s cooldown",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "elsewhere:mothlight_staff": [
+        {
+          "file": "s_mothlight__mothlight_staff_held.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__mothlight_staff_tooltip.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:boss_token": [
+        {
+          "file": "s_compat_transmute__boss_token_first_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_third_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_tooltip.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rout at the end of a battle": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 443,
+          "line": 493,
+          "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_striking.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_knight_striking_later.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:hanging_undercity": [
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_overview.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_ground.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:04:23",
+  "totals": {
+    "ok": 4,
+    "fail": 4,
+    "manual": 0
+  }
+}
