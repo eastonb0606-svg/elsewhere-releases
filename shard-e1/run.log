@@ -11,3 +11,35 @@ JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_e
 elsewhere-3.0.0.jar
 merged jar elsewhere-3.0.0.jar 133327905 bytes in 67 s
 22:56:03Z client: scenes 53,59,65,71,83,138,165,169,218,227,267,280,282,289,374,402, watchdog 90 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+remote: 
+remote: Create a pull request for 'cloud-shots-e1' on GitHub by visiting:        
+remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-e1        
+remote: 
+published 12 PNGs (progress) -> cloud-shots-e1 2216850
+client rc=0
+[22:58:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_hurlbat__hrafnholt_hurlbat_first_person_5.png: not automatable: JEI/recipe-viewer page (U key) is not driven by ShotRunner: needs a manual shot with JEI loaded
+[22:58:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL s_hurlbat__hrafnholt_hurlbat_third_person_5.png: not automatable: JEI/recipe-viewer page (U key) is not driven by ShotRunner: needs a manual shot with JEI loaded
+[22:58:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 33 ok, 0 fail, 2 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:56:59] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:56:59] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[22:56:59] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[22:57:02] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:57:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] 13 flat-stage scenes, 2 worldgen scenes, 1 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:57:06] [Worker-Main-2/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+boss_music client selftest:
+22:59:07Z finished rc=0, 33 PNGs;  TOTAL 33 ok, 0 fail, 2 manual
