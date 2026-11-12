@@ -316,42 +316,48 @@
           "scene": 322,
           "line": 362,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:42"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_2.png",
           "scene": 322,
           "line": 362,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:43"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person.png",
           "scene": 322,
           "line": 362,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:43"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person.png",
           "scene": 322,
           "line": 362,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:45"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_after_use.png",
           "scene": 322,
           "line": 362,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:47"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_2.png",
           "scene": 322,
           "line": 362,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:48"
         }
       ]
     },
@@ -396,14 +402,18 @@
           "scene": 376,
           "line": 424,
           "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
-          "status": "pending"
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "22:35:48"
         },
         {
           "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
           "scene": 376,
           "line": 424,
           "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
-          "status": "pending"
+          "status": "fail",
+          "detail": "locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "22:35:48"
         }
       ]
     },
@@ -414,21 +424,24 @@
           "scene": 419,
           "line": 469,
           "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:49"
         },
         {
           "file": "s_ascension__gear3_ascension_shard_third_person.png",
           "scene": 419,
           "line": 469,
           "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:50"
         },
         {
           "file": "s_ascension__gear3_ascension_shard_tooltip.png",
           "scene": 419,
           "line": 469,
           "check": "a gold crystal splinter with a white core, a pale-lavender tip and a dark outline, with enchantment glint; purple \"Ascension Shard\" name, grey/blue lore lines (G5 material, smithing use, +1 toughness / set bonus II)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:51"
         }
       ]
     },
@@ -467,10 +480,10 @@
       ]
     }
   },
-  "run": "22:35:40",
+  "run": "22:35:51",
   "totals": {
-    "ok": 20,
-    "fail": 2,
+    "ok": 29,
+    "fail": 4,
     "manual": 0
   }
 }
