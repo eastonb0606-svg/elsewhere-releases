@@ -99,21 +99,24 @@
           "scene": 133,
           "line": 150,
           "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:48"
         },
         {
           "file": "court__court_waterfront_side.png",
           "scene": 133,
           "line": 150,
           "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:56"
         },
         {
           "file": "court__court_waterfront_boathouse.png",
           "scene": 133,
           "line": 150,
           "check": "`./gradlew runClientGameTest` in kingdom_court takes `court_waterfront_front|side|boathouse` (Hrafnholt jetty, boathouse, longships on a dug lake north of the castle). Check the shore stays natural and dry.",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:02"
         }
       ]
     },
@@ -158,7 +161,9 @@
           "scene": 136,
           "line": 152,
           "check": "every letter renders: the anim test shot showed 'glyph_flare' as 'glyph_ lare' (dropped f) on boss_ui bar v2",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'f' within 90 s",
+          "taken": "20:16:16"
         }
       ]
     },
@@ -169,7 +174,8 @@
           "scene": 137,
           "line": 156,
           "check": "vanilla reference for: a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:17"
         }
       ],
       "elsewhere:hrafnholt_skjaldborg_shield (first person, idle)": [
@@ -178,7 +184,8 @@
           "scene": 138,
           "line": 156,
           "check": "a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:18"
         }
       ],
       "minecraft:shield (reference: first person, blocking)": [
@@ -187,7 +194,8 @@
           "scene": 139,
           "line": 157,
           "check": "vanilla reference for: the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:20"
         }
       ],
       "elsewhere:hrafnholt_skjaldborg_shield (first person, blocking)": [
@@ -196,7 +204,8 @@
           "scene": 140,
           "line": 157,
           "check": "the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:22"
         }
       ],
       "minecraft:shield (reference: third person, blocking)": [
@@ -205,7 +214,8 @@
           "scene": 141,
           "line": 158,
           "check": "vanilla reference for: arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:24"
         }
       ],
       "elsewhere:hrafnholt_skjaldborg_shield (third person, blocking)": [
@@ -214,7 +224,8 @@
           "scene": 142,
           "line": 158,
           "check": "arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:26"
         }
       ],
       "minecraft:shield (reference: GUI slot)": [
@@ -223,7 +234,8 @@
           "scene": 143,
           "line": 159,
           "check": "vanilla reference for: a 3D shield at the vanilla shield's GUI angle (turned about 25 degrees, slight tilt), filling the slot like the vanilla shield; lit from the front, not dark",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:26"
         }
       ],
       "elsewhere:hrafnholt_skjaldborg_shield (GUI slot)": [
@@ -232,7 +244,8 @@
           "scene": 144,
           "line": 159,
           "check": "a 3D shield at the vanilla shield's GUI angle (turned about 25 degrees, slight tilt), filling the slot like the vanilla shield; lit from the front, not dark",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:27"
         }
       ],
       "elsewhere:aldermark_parrying_buckler (first person, idle)": [
@@ -241,7 +254,8 @@
           "scene": 145,
           "line": 160,
           "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:28"
         }
       ],
       "elsewhere:aldermark_parrying_buckler (first person, blocking)": [
@@ -250,7 +264,8 @@
           "scene": 146,
           "line": 161,
           "check": "rises to the vanilla blocking spot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:30"
         }
       ],
       "elsewhere:aldermark_parrying_buckler (third person, blocking)": [
@@ -259,7 +274,8 @@
           "scene": 147,
           "line": 162,
           "check": "arm in the block pose, steel face with blue ring and gold boss toward the camera",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:32"
         }
       ],
       "elsewhere:aldermark_parrying_buckler (GUI slot)": [
@@ -268,7 +284,8 @@
           "scene": 148,
           "line": 163,
           "check": "3D buckler at the vanilla shield GUI angle, centred in the slot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:32"
         }
       ]
     },
@@ -299,14 +316,16 @@
           "scene": 151,
           "line": 165,
           "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:35"
         },
         {
           "file": "s_callingtags__calling_tooltip_sunlance_staff.png",
           "scene": 151,
           "line": 165,
           "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:36"
         }
       ],
       "No Calling line on untagged gear3 items": [
@@ -315,21 +334,24 @@
           "scene": 152,
           "line": 166,
           "check": "name and lore lines only: no \"Vanguard/Marksman/Caster/Summoner:\" line",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:37"
         },
         {
           "file": "s_callingtags__tooltip_skjaldborg_round_shield.png",
           "scene": 152,
           "line": 166,
           "check": "name and lore lines only: no \"Vanguard/Marksman/Caster/Summoner:\" line",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:37"
         },
         {
           "file": "s_callingtags__tooltip_sunglass_arrow.png",
           "scene": 152,
           "line": 166,
           "check": "name and lore lines only: no \"Vanguard/Marksman/Caster/Summoner:\" line",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:38"
         }
       ]
     },
@@ -455,14 +477,16 @@
           "scene": 164,
           "line": 181,
           "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:49"
         },
         {
           "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
           "scene": 164,
           "line": 181,
           "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:16"
         }
       ]
     },
@@ -501,10 +525,10 @@
       ]
     }
   },
-  "run": "20:14:46",
+  "run": "20:18:02",
   "totals": {
-    "ok": 10,
-    "fail": 0,
+    "ok": 32,
+    "fail": 1,
     "manual": 0
   }
 }
