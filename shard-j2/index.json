@@ -1,0 +1,104 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (hrafnholt realm)": [
+        {
+          "file": "villages__village_near_hrafnholt.png",
+          "scene": 3,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview_street": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview_street.png",
+          "scene": 171,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Hrafnholt looks (thrall_0..2, fisherfolk_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_front.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "ok",
+          "taken": "23:54:41"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_back.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "ok",
+          "taken": "23:54:42"
+        }
+      ]
+    },
+    "s_testfix": {
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "23:54:46"
+        },
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k_later.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "23:54:47"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)": [
+        {
+          "file": "s_townsfolk__aldermark_capital_time_set_3000.png",
+          "scene": 314,
+          "line": 354,
+          "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_townsfolk__townsfolk_close_up_skins.png",
+          "scene": 320,
+          "line": 360,
+          "check": "the 36 skins of TOWNSFOLK-IDS.md render (no missing-texture checkerboard), held tools visible, no nameplate",
+          "status": "ok",
+          "taken": "23:54:52"
+        }
+      ]
+    },
+    "s_p7_standing": {
+      "elsewhere:court_marshal": [
+        {
+          "file": "s_p7_standing__standing_chip_when_looking_at_a_ruler.png",
+          "scene": 447,
+          "line": 497,
+          "check": "a small crimson/gold chip fades in just under the crosshair within 0.2 s: lantern crest, \"the Lantern Republic of Mirewick\", \"Valued Client · Friendly +45\" and a thin band bar; fades out over 0.2 s on looking away; shows through glass, never through stone; /diplomacy standing mirewick -80, look away for 5 s and back: the chip turns to \"Defaulter · Hostile -80\" with a red \"Attacks you on sight\" line; hidden in any open screen, F1, and with the Elsewhere HUD \"standing\" meter off",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:54:52",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
