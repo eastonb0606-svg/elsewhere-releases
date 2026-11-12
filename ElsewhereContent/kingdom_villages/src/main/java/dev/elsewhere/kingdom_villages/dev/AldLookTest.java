@@ -113,7 +113,7 @@ public final class AldLookTest {
 			BlockPos p = new BlockPos(x, y, z);
 			VillageRecord.Change ch = r.journal.get(p.asLong());
 			BlockState s = ch != null ? ch.original() : level.getBlockState(p);
-			if ((s.blocksMotion() || !s.getFluidState().isEmpty()) && !s.is(BlockTags.LEAVES)) return y;
+			if ((s.isSolid() || !s.getFluidState().isEmpty()) && !s.is(BlockTags.LEAVES)) return y;
 		}
 		return Integer.MIN_VALUE;
 	}
