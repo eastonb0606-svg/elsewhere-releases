@@ -1,0 +1,564 @@
+{
+  "lanes": {
+    "s_p13_particles": {
+      "Prism beam and Burning Glass beam": [
+        {
+          "file": "s_p13_particles__prism_beam_15.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "fail",
+          "detail": "hover_named: no item is shown as 'Prism' in this build",
+          "taken": "20:15:17"
+        },
+        {
+          "file": "s_p13_particles__burning_glass_beam_10.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "fail",
+          "detail": "hover_named: no item is shown as 'Prism' in this build",
+          "taken": "20:15:17"
+        }
+      ],
+      "Percolax phase-0 smoke hide (elsewhere:percolax)": [
+        {
+          "file": "s_p13_particles__percolax_smoke_hide_3s.png",
+          "scene": 168,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "ok",
+          "taken": "20:15:21"
+        }
+      ],
+      "verdigris arena seal (elsewhere:lighthouse, Galvanox)": [
+        {
+          "file": "s_p13_particles__verdigris_arena_seal_galvanox.png",
+          "scene": 169,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview.png",
+          "scene": 170,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ],
+      "villages_aldermark_overview_street": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview_street.png",
+          "scene": 171,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ],
+      "villages_aldermark_palisade": [
+        {
+          "file": "s_dataclean__villages_aldermark_palisade.png",
+          "scene": 172,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ],
+      "villages_aldermark_stone": [
+        {
+          "file": "s_dataclean__villages_aldermark_stone.png",
+          "scene": 173,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ],
+      "mirewick_castle_mirewick (elsewhere:castle_mirewick)": [
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_front.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_corner.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_gate.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_quay.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:croaking_shrine": [
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_22_9_22.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_0_3_34.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:glacier_shelf": [
+        {
+          "file": "s_struct_overworld__glacier_shelf_s_30_14_30.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__glacier_shelf_downhill_20.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sun_chamber": [
+        {
+          "file": "s_struct_overworld__sun_chamber_s_22_3_6.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__sun_chamber_hall_altar_facing_south.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:wreck_ring": [
+        {
+          "file": "s_struct_overworld__wreck_ring_s_26_10_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__wreck_ring_s_0_12_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer": [
+        {
+          "file": "s_censer__choirlight_censer_held.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "20:15:22"
+        },
+        {
+          "file": "s_censer__choirlight_censer_tooltip.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "20:15:23"
+        }
+      ],
+      "elsewhere:choirlight_censer (channel)": [
+        {
+          "file": "s_censer__censer_channel_first_person_1s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "20:15:25"
+        },
+        {
+          "file": "s_censer__censer_channel_third_person_2s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "20:15:26"
+        },
+        {
+          "file": "s_censer__censer_channel_top_3s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "20:15:27"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:petal_pagoda": [
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_24_16_24.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_0_4_26.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sunwright_ziggurat": [
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_s_30_14_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_downhill_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sunpit": [
+        {
+          "file": "s_struct_petalwind__sunpit_s_0_26_44.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunpit_s_30_6_0.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:breeze_temple": [
+        {
+          "file": "s_struct_petalwind__breeze_temple_s_14_6_16.png",
+          "scene": 184,
+          "line": 199,
+          "check": "open tuff colonnade (columns every 2 on chiseled bases with brick capitals) on a stepped stylobate, solid back wall behind the two vaults, architrave and cornice, low hipped tuff-brick roof with a wind-chime finial, hanging lanterns inside; at an edge the columns carry on down to the ground as piers; steps down to the ground on the south",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:eye_of_the_gale": [
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_0_8_26.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_20_10_20.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_jarl Ninth-Winter Slam": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_ninth_winter_slam_windup.png",
+          "scene": 186,
+          "line": 203,
+          "check": "both arms high over the head, leaning back; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_ninth_winter_slam_strike.png",
+          "scene": 186,
+          "line": 203,
+          "check": "both arms high over the head, leaning back; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hersir Horn of Three Calls": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hersir_horn_of_three_calls_windup.png",
+          "scene": 187,
+          "line": 205,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hersir_horn_of_three_calls_strike.png",
+          "scene": 187,
+          "line": 205,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hallwarden Hearth-Ward": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hallwarden_hearth_ward_windup.png",
+          "scene": 188,
+          "line": 207,
+          "check": "very low wide guard, weapon held two-handed in front; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: driven forward from the guard, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hallwarden_hearth_ward_strike.png",
+          "scene": 188,
+          "line": 207,
+          "check": "very low wide guard, weapon held two-handed in front; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: driven forward from the guard, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_skald Verse of Winter": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_skald_verse_of_winter_windup.png",
+          "scene": 189,
+          "line": 209,
+          "check": "half crouch, both arms rising palms up, head bowed; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_skald_verse_of_winter_strike.png",
+          "scene": 189,
+          "line": 209,
+          "check": "half crouch, both arms rising palms up, head bowed; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_chief Wolf Howl": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_chief_wolf_howl_windup.png",
+          "scene": 190,
+          "line": 211,
+          "check": "sunk low, head down, arms hanging forward; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: reared up, arms spread wide and low, head flung back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_chief_wolf_howl_strike.png",
+          "scene": 190,
+          "line": 211,
+          "check": "sunk low, head down, arms hanging forward; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: reared up, arms spread wide and low, head flung back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_huntmaster Pinning Arrow": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_huntmaster_pinning_arrow_windup.png",
+          "scene": 191,
+          "line": 213,
+          "check": "throwing arm cocked behind the head, off arm aiming; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_huntmaster_pinning_arrow_strike.png",
+          "scene": 191,
+          "line": 213,
+          "check": "throwing arm cocked behind the head, off arm aiming; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sultana Halo Flare": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_halo_flare_windup.png",
+          "scene": 192,
+          "line": 215,
+          "check": "half crouch, both arms rising palms up, head bowed; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_halo_flare_strike.png",
+          "scene": 192,
+          "line": 215,
+          "check": "half crouch, both arms rising palms up, head bowed; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both arms straight up to the sky, on the toes, head back; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_amir Camel Charge": [
+        {
+          "file": "s_p4_rivalanims__azmar_amir_camel_charge_windup.png",
+          "scene": 193,
+          "line": 217,
+          "check": "weapon drawn back at the hip, torso turned, weight back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: long lunge, weapon arm straight at the camera, front leg forward; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_amir_camel_charge_strike.png",
+          "scene": 193,
+          "line": 217,
+          "check": "weapon drawn back at the hip, torso turned, weight back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: long lunge, weapon arm straight at the camera, front leg forward; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_wazir Counter-Brew": [
+        {
+          "file": "s_p4_rivalanims__azmar_wazir_counter_brew_windup.png",
+          "scene": 194,
+          "line": 219,
+          "check": "off hand with the flask at the lips, head tipped back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: flask flung down and out, guard back up, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_wazir_counter_brew_strike.png",
+          "scene": 194,
+          "line": 219,
+          "check": "off hand with the flask at the lips, head tipped back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: flask flung down and out, guard back up, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_falconer Falcon Mark": [
+        {
+          "file": "s_p4_rivalanims__azmar_falconer_falcon_mark_windup.png",
+          "scene": 195,
+          "line": 221,
+          "check": "weapon arm drawn across the chest, torso turned; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_falconer_falcon_mark_strike.png",
+          "scene": 195,
+          "line": 221,
+          "check": "weapon arm drawn across the chest, torso turned; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_marrow Call the Debt": [
+        {
+          "file": "s_p4_rivalanims__mirewick_marrow_call_the_debt_windup.png",
+          "scene": 196,
+          "line": 223,
+          "check": "weapon arm drawn across the chest, torso turned; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_marrow_call_the_debt_strike.png",
+          "scene": 196,
+          "line": 223,
+          "check": "weapon arm drawn across the chest, torso turned; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_thwaite Bog-Drum Call": [
+        {
+          "file": "s_p4_rivalanims__mirewick_thwaite_bog_drum_call_windup.png",
+          "scene": 197,
+          "line": 225,
+          "check": "hunched, arms beating alternately (two shots 3 ticks apart differ); Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both fists down on the last beat, deeper crouch; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_thwaite_bog_drum_call_strike.png",
+          "scene": 197,
+          "line": 225,
+          "check": "hunched, arms beating alternately (two shots 3 ticks apart differ); Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both fists down on the last beat, deeper crouch; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_sorrel Sluice Maul": [
+        {
+          "file": "s_p4_rivalanims__mirewick_sorrel_sluice_maul_windup.png",
+          "scene": 198,
+          "line": 227,
+          "check": "both arms high over the head, leaning back; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_sorrel_sluice_maul_strike.png",
+          "scene": 198,
+          "line": 227,
+          "check": "both arms high over the head, leaning back; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: bent over, both arms down at the ground, crouched; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_tolliver Fowling Net": [
+        {
+          "file": "s_p4_rivalanims__mirewick_tolliver_fowling_net_windup.png",
+          "scene": 199,
+          "line": 229,
+          "check": "throwing arm cocked behind the head, off arm aiming; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_tolliver_fowling_net_strike.png",
+          "scene": 199,
+          "line": 229,
+          "check": "throwing arm cocked behind the head, off arm aiming; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_ames Dusk Bell": [
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_dusk_bell_windup.png",
+          "scene": 200,
+          "line": 231,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_ames_dusk_bell_strike.png",
+          "scene": 200,
+          "line": 231,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:duelist_test Oath Cleave": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_oath_cleave_windup.png",
+          "scene": 201,
+          "line": 233,
+          "check": "weapon high above the head, off arm forward, slight back-lean; baseline style; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chopped down to the front with a forward step, torso bent over; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__duelist_test_oath_cleave_strike.png",
+          "scene": 201,
+          "line": 233,
+          "check": "weapon high above the head, off arm forward, slight back-lean; baseline style; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chopped down to the front with a forward step, torso bent over; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:15:27",
+  "totals": {
+    "ok": 6,
+    "fail": 2,
+    "manual": 0
+  }
+}
