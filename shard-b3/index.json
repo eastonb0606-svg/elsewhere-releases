@@ -7,7 +7,8 @@
           "scene": 3,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:15"
         }
       ]
     },
@@ -138,14 +139,16 @@
           "scene": 135,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:41"
         },
         {
           "file": "structures_build__castle_mirewick_c_58_10_30_y_120.png",
           "scene": 135,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:51"
         }
       ]
     },
@@ -156,7 +159,8 @@
           "scene": 150,
           "line": 164,
           "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:05"
         }
       ]
     },
@@ -167,7 +171,8 @@
           "scene": 170,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:21"
         }
       ]
     },
@@ -362,14 +367,16 @@
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:30"
         },
         {
           "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:35"
         }
       ]
     },
@@ -622,7 +629,8 @@
           "scene": 456,
           "line": 508,
           "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:04:47"
         }
       ]
     },
@@ -633,21 +641,23 @@
           "scene": 478,
           "line": 530,
           "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:55"
         },
         {
           "file": "s_struct_greenhaze__great_hotbox_ground.png",
           "scene": 478,
           "line": 530,
           "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:07"
         }
       ]
     }
   },
-  "run": "22:04:17",
+  "run": "22:07:08",
   "totals": {
-    "ok": 51,
+    "ok": 61,
     "fail": 6,
     "manual": 0
   }
