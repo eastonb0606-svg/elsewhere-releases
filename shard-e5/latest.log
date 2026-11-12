@@ -663,3 +663,68 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [23:02:34] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [23:02:34] [Server thread/INFO] (Minecraft) System chat: Wave battle aldermark v hrafnholt, 30 a side: 32 live now, the rest come in waves
 [23:02:34] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -48.000000, -23.500000
+[23:03:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p10_tabard__battle_aldermark_hrafnholt_30_30s.png: 
+[23:03:05] [Server thread/INFO] (elsewhere-kingdom) Armies wave battle -1 ended: defender won; attacker 24/30 left, defender 28/30 left (0 + 0 waves)
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: Stopped 1 wave battle(s)
+[23:03:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 348 (s_p10_tabard | cape wave in motion) done in 31223 ms
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:03:05] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:03:05] [Render thread/INFO] (Minecraft) [System] [CHAT] Kingdom soldier detail: medium
+[23:03:06] [Server thread/INFO] (Minecraft) System chat: Summoned new Aldermark Captain
+[23:03:06] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2.550000, -60.000000, 12.140000
+[23:03:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p10_tabard__cape_and_emblem_lod.png: 
+[23:03:08] [Render thread/INFO] (Minecraft) [System] [CHAT] Kingdom soldier detail: low
+[23:03:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 5.090000, -60.000000, -0.050000
+[23:03:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p10_tabard__cape_and_emblem_lod_later.png: 
+[23:03:10] [Render thread/INFO] (Minecraft) [System] [CHAT] Kingdom soldier detail: medium
+[23:03:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 349 (s_p10_tabard | elsewhere:kingdom_captain) done in 4498 ms
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Mire Snare]
+[23:03:10] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Mire Snare]
+[23:03:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_miresnare__mirewick_mire_snare_first_person.png: 
+[23:03:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:03:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_miresnare__mirewick_mire_snare_third_person.png: 
+[23:03:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_miresnare__mirewick_mire_snare_tooltip.png: 
+[23:03:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 372 (s_miresnare | elsewhere:mirewick_mire_snare) done in 2293 ms
+[23:03:12] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[23:03:12] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[23:03:12] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[23:03:12] [Server thread/INFO] (Minecraft) Stopping server
+[23:03:12] [Server thread/INFO] (Minecraft) Saving players
+[23:03:12] [Server thread/INFO] (Minecraft) Saving worlds
+[23:03:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[23:03:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[23:03:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 34 ok, 1 fail, 0 manual
+[23:03:13] [Render thread/INFO] (Minecraft) Stopping!
