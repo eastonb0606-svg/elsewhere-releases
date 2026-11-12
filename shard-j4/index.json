@@ -1,0 +1,102 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (mirewick realm)": [
+        {
+          "file": "villages__village_near_mirewick.png",
+          "scene": 5,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_stone": [
+        {
+          "file": "s_dataclean__villages_aldermark_stone.png",
+          "scene": 173,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Mirewick looks (clerk, bargeman, lamplighter, peat_cutter x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_front.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "23:56:13"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_back.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "23:56:14"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "swarm-as-one squad targeting (ARMIES 3.4)": [
+        {
+          "file": "s_swarm1__battle_aldermark_mirewick_32_30s.png",
+          "scene": 272,
+          "line": 308,
+          "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
+          "status": "ok",
+          "taken": "23:56:46"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Azmar bazaar vs siesta": [
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_9000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_6000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "23:56:49"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "23:56:51"
+        }
+      ]
+    }
+  },
+  "run": "23:56:51",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
