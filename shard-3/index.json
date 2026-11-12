@@ -358,84 +358,96 @@
           "scene": 309,
           "line": 349,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:04"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_third_person_2.png",
           "scene": 309,
           "line": 349,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:04"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person.png",
           "scene": 309,
           "line": 349,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:05"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person.png",
           "scene": 309,
           "line": 349,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:06"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_after_use.png",
           "scene": 309,
           "line": 349,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:06"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_tooltip.png",
           "scene": 309,
           "line": 349,
           "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:07"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_first_person_3.png",
           "scene": 310,
           "line": 350,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:08"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_third_person_3.png",
           "scene": 310,
           "line": 350,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:08"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person_2.png",
           "scene": 310,
           "line": 350,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:09"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person_2.png",
           "scene": 310,
           "line": 350,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:10"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_after_use_2.png",
           "scene": 310,
           "line": 350,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:11"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_tooltip_2.png",
           "scene": 310,
           "line": 350,
           "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:12"
         }
       ],
       "elsewhere:starpiercer_arrow": [
@@ -444,14 +456,16 @@
           "scene": 311,
           "line": 351,
           "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:13"
         },
         {
           "file": "s_starpiercer__starpiercer_arrow_stuck_sprint_cancel.png",
           "scene": 312,
           "line": 352,
           "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:14"
         }
       ]
     },
@@ -471,14 +485,16 @@
           "scene": 314,
           "line": 354,
           "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:18"
         },
         {
           "file": "s_townsfolk__aldermark_fields_at_14_00_vespers_5s.png",
           "scene": 314,
           "line": 354,
           "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:23"
         }
       ],
       "Hrafnholt jetty at dawn + hall feast": [
@@ -535,14 +551,16 @@
           "scene": 318,
           "line": 358,
           "check": "nobody pops out of existence in view (they fold beyond 72 blocks, outside the 64-block tracking range); coming back, residents reappear at doors/far streets, never next to you",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:24"
         },
         {
           "file": "s_townsfolk__townsfolk_close_up_skins.png",
           "scene": 319,
           "line": 359,
           "check": "the 36 skins of TOWNSFOLK-IDS.md render (no missing-texture checkerboard), held tools visible, no nameplate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:26"
         }
       ]
     },
@@ -553,70 +571,79 @@
           "scene": 320,
           "line": 360,
           "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:27"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person.png",
           "scene": 320,
           "line": 360,
           "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:28"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip.png",
           "scene": 320,
           "line": 360,
           "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:29"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_2.png",
           "scene": 321,
           "line": 361,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:30"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_2.png",
           "scene": 321,
           "line": 361,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:30"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person.png",
           "scene": 321,
           "line": 361,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:31"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person.png",
           "scene": 321,
           "line": 361,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:32"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_after_use.png",
           "scene": 321,
           "line": 361,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:32"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_2.png",
           "scene": 321,
           "line": 361,
           "check": "flying and stuck bolt use the brass/verdigris harpoon texture (not the vanilla arrow, no pink/black): barbed head at the front, teal fletching at the back",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:06:33"
         }
       ]
     }
   },
-  "run": "20:06:03",
+  "run": "20:06:33",
   "totals": {
-    "ok": 41,
+    "ok": 68,
     "fail": 0,
     "manual": 0
   }
