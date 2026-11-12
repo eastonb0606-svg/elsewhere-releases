@@ -1,0 +1,141 @@
+{
+  "lanes": {
+    "s_compat_jei": {
+      "elsewhere:highland_yak": [
+        {
+          "file": "s_compat_jei__jei_category_elsewhere_loot_a_creature_p.png",
+          "scene": 249,
+          "line": 279,
+          "check": "\"Dropped by: Highland Yak\" (creatures that have a spawn egg, e.g. `elsewhere:bog_wight`, also show the egg slot top right); drops in the grid with chance tooltips",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hacksilver": [
+        {
+          "file": "s_compat_jei__hacksilver_first_person.png",
+          "scene": 251,
+          "line": 281,
+          "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_jei__hacksilver_third_person.png",
+          "scene": 251,
+          "line": 281,
+          "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_dinar": [
+        {
+          "file": "s_compat_jei__azmar_dinar_first_person.png",
+          "scene": 252,
+          "line": 282,
+          "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_jei__azmar_dinar_third_person.png",
+          "scene": 252,
+          "line": 282,
+          "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_greenhaze_rework": {
+      "Green Leaf HUD + soft tint at High (Sativa)": [
+        {
+          "file": "s_greenhaze_rework__green_leaf_hud_soft_tint_at_high_sativa.png",
+          "scene": 255,
+          "line": 288,
+          "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
+          "status": "ok",
+          "taken": "22:57:43"
+        },
+        {
+          "file": "s_greenhaze_rework__green_leaf_hud_soft_tint_at_high_sativa_5s.png",
+          "scene": 255,
+          "line": 288,
+          "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
+          "status": "ok",
+          "taken": "22:57:48"
+        }
+      ],
+      "Couch-locked screen, FULL effects (hue drift + wobble)": [
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "ok",
+          "taken": "22:57:57"
+        },
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri_5s.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "ok",
+          "taken": "22:58:02"
+        }
+      ],
+      "Accessibility: `/greenleaf effects reduced`, then `/greenleaf effects off`": [
+        {
+          "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced.png",
+          "scene": 257,
+          "line": 290,
+          "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
+          "status": "ok",
+          "taken": "22:58:06"
+        },
+        {
+          "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced_5s.png",
+          "scene": 257,
+          "line": 290,
+          "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
+          "status": "ok",
+          "taken": "22:58:11"
+        }
+      ],
+      "Hallucinated mobs": [
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs.png",
+          "scene": 258,
+          "line": 291,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
+          "scene": 258,
+          "line": 291,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "pending"
+        }
+      ],
+      "Thoughts in chat": [
+        {
+          "file": "s_greenhaze_rework__thoughts_in_chat.png",
+          "scene": 260,
+          "line": 293,
+          "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__thoughts_in_chat_5s.png",
+          "scene": 260,
+          "line": 293,
+          "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:58:12",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
