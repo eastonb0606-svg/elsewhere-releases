@@ -844,6 +844,8 @@ public final class SelfTest {
 				benchVillagers = cen.getOrDefault("villager", 0);
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.startsRun = 0;
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.startsSkipped = 0;
+				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearches = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearchesSaved = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearchesDeferred = 0;
+				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxWalkSearchesInTick = 0;
 			}
 			if (age() == 700 && lodFar != null) BrainLodTest.live(level, lodFar); // after the measured window (window 2 is info only)
 			if (age() == 640 || age() == 840 || age() == 1040 || age() == 1240) {
@@ -868,6 +870,12 @@ public final class SelfTest {
 						benchVillagers, KingdomPerf.loaded(level).size(), lr, ls, 100.0 * ls / Math.max(1, lr + ls), cp, cm, wp, wm, loadAvg));
 					check("load test: the full-siege bench runs with 31+ villagers (the hard case)", benchVillagers >= 31, benchVillagers);
 					check("villager brain LOD: siege villagers skip part of their start passes (stagger + LOD active)", ls > 0 && lr > 0, lr + " run / " + ls + " skipped");
+					long ws = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearches, wsv = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearchesSaved,
+						wd = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearchesDeferred;
+					int wmax = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxWalkSearchesInTick;
+					info(String.format("SIEGEPERF walk searches %d, futile repeats saved %d, deferred to a later pass %d, most in one tick %d", ws, wsv, wd, wmax));
+					check("villager walk searches: villagers still walk in the siege, at most " + dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.WALK_SEARCHES_PER_TICK + " searches start per tick",
+						ws > 0 && wmax <= dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.WALK_SEARCHES_PER_TICK, ws + " searches, max " + wmax + " in a tick");
 					check("load test: full siege mean MSPT under 10", wm < 10, String.format("%.2f", wm));
 					// lag budget (BUILD-3.0): p95 <= 8 ms. Judged on the server thread's CPU per tick, so other JVMs on the shared iMac
 					// (load 40+ in the merged 4-JVM run: wall p95 29.9) can't fail it; the wall numbers are in the LOAD line above

@@ -343,6 +343,7 @@ public final class SelfTest {
 		group("AscensionTests", () -> dev.elsewhere.gear3.s3.ascension.AscensionTests.run(s)); // s-ascension: "ascension: ..." checks
 		group("StarpiercerChecks", () -> dev.elsewhere.gear3.s3.starpiercer.StarpiercerChecks.run(s)); // s-starpiercer: "Starpiercer: ..." checks
 		group("SetBonusTestsB", () -> dev.elsewhere.gear3.setbonus.b.SetBonusTestsB.run(s)); // s-setbonus-b: "setbonus-b/Outrider/Steady Aim/Starsight/Zenith/Wolf-Fury/Mead-Horn/Command: ..." checks
+		group("MeadHornTests", () -> dev.elsewhere.gear3.s3.meadhorn.MeadHornTests.run(s)); // s-meadhorn: "Mead-Horn refill: ..." checks
 		group("PennantSelfTest", () -> dev.elsewhere.gear3.s3.pennant.PennantSelfTest.run(s)); // s-pennant: "Herdcaller's Pennant: ..." checks
 		group("SunglassSelfTest", () -> dev.elsewhere.gear3.s3.sunglass.SunglassSelfTest.run(s)); // s-sunglass: "Sunglass Arrow: ..." checks
 		group("MireSnareSelfTest", () -> dev.elsewhere.gear3.s3.miresnare.MireSnareSelfTest.run(s)); // s-miresnare: "Mire Snare: ..." checks

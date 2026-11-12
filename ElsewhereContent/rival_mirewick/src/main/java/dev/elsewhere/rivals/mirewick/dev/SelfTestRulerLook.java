@@ -36,7 +36,9 @@ final class SelfTestRulerLook {
 	static void add() {
 		SelfTest.STEPS.add((srv, l) -> {
 			int y = SelfTest.Y;
-			// inside the chunks the harness forces at start (cx -5..5, cz -6..36), so the Magnates really tick and run their first-tick loadout
+			// this step runs BEFORE the harness forces its chunks (build() adds it ahead of that step), so force the pad's own chunks
+			// (cx 0..1, cz 25, inside the harness's later range) or the Magnates never tick and never run their first-tick loadout
+			for (int cx = 0; cx <= 1; cx++) { l.setChunkForced(cx, 25, true); l.getChunk(cx, 25); }
 			for (int x = 0; x <= 30; x++) for (int z = 401; z <= 405; z++) {
 				l.setBlock(new BlockPos(x, y - 1, z), Blocks.STONE.defaultBlockState(), 2);
 				for (int yy = y; yy < y + 4; yy++) l.setBlock(new BlockPos(x, yy, z), Blocks.AIR.defaultBlockState(), 2);

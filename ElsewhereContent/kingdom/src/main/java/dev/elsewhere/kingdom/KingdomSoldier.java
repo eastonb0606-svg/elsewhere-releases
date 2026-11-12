@@ -179,7 +179,13 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 		this.goalSelector.addGoal(1, new RoutGoal(this));
 		this.goalSelector.addGoal(2, new RetreatGoal(this));
 		this.goalSelector.addGoal(3, new GatedGoal(this, new SpearUseGoal<>(this, 1.0, 1.0, 10.0F, 2.0F), s -> s.role() == UnitType.Role.LANCER));
-		this.goalSelector.addGoal(3, new GatedGoal(this, new RangedBowAttackGoal<>(this, 0.85, 25, 14.0F), s -> s.role() == UnitType.Role.ARCHER));
+		// 3.0 fix (s-intreq): vanilla's goal only counts Items.BOW, so a bowman with any other bow (Azmar's composite bow) never drew
+		this.goalSelector.addGoal(3, new GatedGoal(this, new RangedBowAttackGoal<KingdomSoldier>(this, 0.85, 25, 14.0F) {
+			@Override
+			protected boolean isHoldingBow() {
+				return bowHand() != null;
+			}
+		}, s -> s.role() == UnitType.Role.ARCHER));
 		this.goalSelector.addGoal(3, new GatedGoal(this, new RangedCrossbowAttackGoal<>(this, 1.0, 8.0F), s -> s.role() == UnitType.Role.CROSSBOW));
 		this.goalSelector.addGoal(3, new dev.elsewhere.kingdom.tactics.OrderGoal(this));
 		this.goalSelector.addGoal(3, new MountedChargeGoal(this));
@@ -551,6 +557,26 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 		return doHurtTarget(level, target);
 	}
 
+	/** True when the held weapon has a minimum reach ({@code attack_range}: the 26.x spears, 2.0 x mob factor 0.5 = 1 block). */
+	public boolean hasMinReach() {
+		net.minecraft.world.item.component.AttackRange r = getActiveItem().get(DataComponents.ATTACK_RANGE);
+		return r != null && r.effectiveMinRange(this) > 0F;
+	}
+
+	/**
+	 * 3.0 fix (s-intreq): where {@code t} stands against the held weapon's reach band, with the same boxes as
+	 * {@link #isWithinMeleeAttackRange}: -1 inside the minimum reach (a spear can't jab there), 0 in the band, 1 beyond it.
+	 * {@code slack} narrows the band on both sides (0 = the exact rule). A weapon without {@code attack_range} never returns -1.
+	 */
+	public int reachBand(LivingEntity t, double slack) {
+		net.minecraft.world.item.component.AttackRange r = getActiveItem().get(DataComponents.ATTACK_RANGE);
+		if (r == null) return isWithinMeleeAttackRange(t) ? 0 : 1;
+		net.minecraft.world.phys.AABB hit = t.getBoundingBox();
+		double min = r.effectiveMinRange(this);
+		if (min > 0.0 && getAttackBoundingBox(min + slack).intersects(hit)) return -1;
+		return getAttackBoundingBox(Math.max(0.0, r.effectiveMaxRange(this) - slack)).intersects(hit) ? 0 : 1;
+	}
+
 	@Override
 	public boolean doHurtTarget(ServerLevel level, Entity target) {
 		boolean crit = KingdomConfig.useCrits && canCritNow(target);
@@ -666,6 +692,28 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 		return item.getItem() instanceof BowItem || item.getItem() instanceof CrossbowItem;
 	}
 
+	/** The hand holding a bow of any kind (vanilla or a modded {@link BowItem}), main hand first; null when none. */
+	public @Nullable InteractionHand bowHand() {
+		if (getMainHandItem().getItem() instanceof BowItem) return InteractionHand.MAIN_HAND;
+		if (getOffhandItem().getItem() instanceof BowItem) return InteractionHand.OFF_HAND;
+		return null;
+	}
+
+	/**
+	 * 3.0 fix (s-intreq): vanilla's bow goal draws with the hand holding {@code Items.BOW}, which is the off hand for any other bow
+	 * (Azmar's composite bow), so the draw never started. An archer asked to use a hand that holds neither a bow nor a shield uses
+	 * its bow hand instead; shields, spears, crossbows and every other role are untouched.
+	 */
+	@Override
+	public void startUsingItem(InteractionHand hand) {
+		ItemStack in = getItemInHand(hand);
+		if (!(in.getItem() instanceof BowItem) && !in.has(DataComponents.BLOCKS_ATTACKS) && role() == UnitType.Role.ARCHER) {
+			InteractionHand b = bowHand();
+			if (b != null) hand = b;
+		}
+		super.startUsingItem(hand);
+	}
+
 	@Override
 	public void performRangedAttack(LivingEntity target, float power) {
 		shots++;
@@ -673,7 +721,8 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 			performCrossbowAttack(this, 1.6F);
 			return;
 		}
-		ItemStack bow = getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, Items.BOW));
+		InteractionHand bowHand = bowHand(); // any BowItem (3.0 fix, s-intreq), not only Items.BOW
+		ItemStack bow = getItemInHand(bowHand != null ? bowHand : InteractionHand.MAIN_HAND);
 		ItemStack projectile = getProjectile(bow);
 		AbstractArrow arrow = ProjectileUtil.getMobArrow(this, projectile, power, bow);
 		double xd = target.getX() - getX();

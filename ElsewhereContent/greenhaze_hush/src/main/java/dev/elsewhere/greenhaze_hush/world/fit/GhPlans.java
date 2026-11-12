@@ -255,7 +255,8 @@ public final class GhPlans {
 		int rot = downhill(g, o, 7, seed);
 		Frame f = new Frame(x, 0, z, rot);
 		int top = Integer.MIN_VALUE;
-		for (int[] q : new int[][] {{0, 0}, {3, 0}, {-3, 0}, {0, 3}, {0, -3}, {2, 2}, {-2, 2}, {2, -2}, {-2, -2}}) top = Math.max(top, g.y(f.x(q[0], q[1]), f.z(q[0], q[1])));
+		// the 9 posts, plus the ladder post and its foot at the front gap, so the ladder always has rungs (never a bank above the deck)
+		for (int[] q : new int[][] {{0, 0}, {3, 0}, {-3, 0}, {0, 3}, {0, -3}, {2, 2}, {-2, 2}, {2, -2}, {-2, -2}, {0, 5}, {0, 6}}) top = Math.max(top, g.y(f.x(q[0], q[1]), f.z(q[0], q[1])));
 		int d = top + 4;
 		return List.of(new Piece("hut", new BlockPos(x, d, z), seed, rot, new int[0], box(x - 7, d - 18, z - 7, x + 7, d + 10, z + 7), null, null));
 	}

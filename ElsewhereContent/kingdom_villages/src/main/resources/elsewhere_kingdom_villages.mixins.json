@@ -7,7 +7,8 @@
 		"VillageVillagerMixin",
 		"VillageBlockItemMixin",
 		"VillageFarmlandMixin",
-		"VillageBrainLodMixin"
+		"VillageBrainLodMixin",
+		"VillageWalkSearchMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

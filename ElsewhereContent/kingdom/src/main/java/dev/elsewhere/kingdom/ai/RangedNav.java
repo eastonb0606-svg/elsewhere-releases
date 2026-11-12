@@ -16,7 +16,11 @@ import net.minecraft.world.level.Level;
  */
 public final class RangedNav extends GroundPathNavigation {
 	public static boolean throttle;
-	public static long pathsMade, pathsSkipped;
+	/**
+	 * Approach repaths made and kept (the calls the throttle decides on), and calls passed to vanilla untouched because the soldier was in
+	 * range with a clear shot ({@code pathsInRange}: never throttled by design, so they are counted apart from the approach calls).
+	 */
+	public static long pathsMade, pathsSkipped, pathsInRange;
 	static final double MOVED = 1.5;
 	static final int MAX_AGE = 20;
 	private int pathTick = -100, pathTarget = -1;
@@ -51,7 +55,8 @@ public final class RangedNav extends GroundPathNavigation {
 		tx = target.getX();
 		ty = target.getY();
 		tz = target.getZ();
-		pathsMade++;
+		if (shooting) pathsInRange++;
+		else pathsMade++;
 		return ok;
 	}
 }

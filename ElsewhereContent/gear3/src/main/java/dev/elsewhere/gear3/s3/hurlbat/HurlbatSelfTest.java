@@ -220,20 +220,22 @@ public final class HurlbatSelfTest {
 				+ " using=" + bearer.isUsingItem() + " hp " + hp + " -> " + bearer.getHealth());
 			bearer.getCooldowns().removeCooldown(bearer.getCooldowns().getCooldownGroup(held));
 
-			// same bearer, turned away: the shield does not cover the back
-			bearer.snapTo(32.5, Y, 72.5, 0.0F, 0.0F);
-			bearer.setYHeadRot(0.0F);
-			bearer.startUsingItem(InteractionHand.MAIN_HAND);
+			// turned away: the shield does not cover the back. A mob bears the shield here, because a self-test FakePlayer has no
+			// loaded client connection, which makes it immune to all damage (ServerPlayer.isInvulnerableTo), so "the hit lands" could never hold on one.
+			Mob back = cow(l, 32.5, 72.5, spawned);
+			back.snapTo(32.5, Y, 72.5, 0.0F, 0.0F); // yaw 0 faces south (+z); the hurlbat comes from the north, behind it
+			back.setYHeadRot(0.0F);
+			back.setItemInHand(InteractionHand.MAIN_HAND, instantShield(v));
+			back.startUsingItem(InteractionHand.MAIN_HAND);
+			boolean raisedBack = back.isUsingItem() && back.getItemBlockingWith() != null;
 			HurlbatEntity h4 = hurlbat(l, null, 32.5, 70.0, spawned);
-			bearer.setInvulnerableTime(0);
-			bearer.damageCooldownTime = 0;
-			float hp2 = bearer.getHealth();
+			float hp2 = back.getHealth();
 			DamageSource probe = Hurlbats.damageSource(h4, h4);
-			boolean coversBack = Hurlbats.blockingShield(bearer, probe, Hurlbats.DAMAGE) != null;
-			h4.hitForTest(bearer);
-			check(P + "a shield turned away is not disabled and the hit lands", !coversBack && !bearer.getCooldowns().isOnCooldown(bearer.getMainHandItem())
-				&& bearer.getHealth() < hp2, "covers=" + coversBack + " hp " + hp2 + " -> " + bearer.getHealth());
-			bearer.stopUsingItem();
+			boolean coversBack = Hurlbats.blockingShield(back, probe, Hurlbats.DAMAGE) != null;
+			h4.hitForTest(back);
+			check(P + "a shield turned away is not disabled and the hit lands", raisedBack && !coversBack && back.isUsingItem()
+				&& back.getHealth() < hp2, "raised=" + raisedBack + " covers=" + coversBack + " using=" + back.isUsingItem() + " hp " + hp2 + " -> " + back.getHealth());
+			back.stopUsingItem();
 			HurlbatEntity.forceBreak = null;
 		}
 

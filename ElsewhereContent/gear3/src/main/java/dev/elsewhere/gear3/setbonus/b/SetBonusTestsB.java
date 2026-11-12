@@ -304,10 +304,12 @@ public final class SetBonusTestsB {
 			&& SetBonusesB.target(p, husk));
 		bare(p);
 		check("Starsight: no bonus without the pair", near(StarsightPair.spellMult(p, husk), 1.0));
-		double without = spell(p, husk);
-		check("Starsight: arsenal's Spells.damage carries the mark bonus", without > 0 && near(withPair / without, m), without + " -> " + withPair);
+		// The mark's own effect is measured against the SAME pair worn with the mark aged out. Comparing with a bare player (the old
+		// check) also drops the pieces' caster Calling, so the ratio mixed the mark bonus with the Calling change.
 		wear(p, b);
 		StarsightPair.ageMarksForTest(StarsightPair.MARK_TICKS + 1);
+		double without = spell(p, husk);
+		check("Starsight: arsenal's Spells.damage carries the mark bonus", without > 0 && near(withPair / without, m), without + " -> " + withPair);
 		check("Starsight: the mark ends after 4 s", near(StarsightPair.spellMult(p, husk), 1.0) && near(StarsightPair.spellMult(p, husk2), 1.0));
 		bare(p);
 		Glimmer.setForTest(p, Glimmer.max(p));

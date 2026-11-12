@@ -148,6 +148,8 @@
   "item.elsewhere.hrafnholt_mead_horn": "Mead-Horn of the Hall",
   "item.elsewhere.hrafnholt_mead_horn.lore1": "Berserker's horn of Hrafnholt",
   "item.elsewhere.hrafnholt_mead_horn.lore2": "Drink: heal 6 over 3 s and gain 3 Fury stacks, 30 s cooldown",
+  "item.elsewhere.hrafnholt_mead_horn.refilled": "The Mead-Horn is full again",
+  "item.elsewhere.hrafnholt_mead_horn.empty": "The Mead-Horn is empty. Use it with a honey bottle in the other hand",
   "item.elsewhere.rangefinder_lens": "Rangefinder Lens",
   "item.elsewhere.rangefinder_lens.lore1": "Sniper trinket (off hand or hotbar)",
   "item.elsewhere.rangefinder_lens.lore2": "Arrows deal +1% damage per block beyond 16 (max +20%)",

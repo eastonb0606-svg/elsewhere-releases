@@ -118,26 +118,36 @@ public final class CenserChecks {
 			return near(mine.getHealth(), 4.6);
 		});
 
-		checkS(N + "other players are allies, except on rival scoreboard teams; spectators never", () -> {
-			if (!ChoirlightCenser.isAlly(p, other) || ChoirlightCenser.isAlly(p, p) || ChoirlightCenser.isAlly(p, husk) || ChoirlightCenser.isAlly(p, theirs)) return false;
-			Scoreboard sb = l.getScoreboard();
-			for (String name : new String[] {"censer_test_a", "censer_test_b"}) {
-				PlayerTeam old = sb.getPlayerTeam(name); // left over from an interrupted run of this test world
-				if (old != null) sb.removePlayerTeam(old);
-			}
-			PlayerTeam a = sb.addPlayerTeam("censer_test_a"), b = sb.addPlayerTeam("censer_test_b");
+		{
+			String why;
 			try {
-				sb.addPlayerToTeam(p.getScoreboardName(), a);
-				sb.addPlayerToTeam(other.getScoreboardName(), b);
-				boolean rivals = !ChoirlightCenser.isAlly(p, other);
-				sb.addPlayerToTeam(other.getScoreboardName(), a);
-				boolean mates = ChoirlightCenser.isAlly(p, other);
-				return rivals && mates;
-			} finally {
-				sb.removePlayerTeam(a);
-				sb.removePlayerTeam(b);
+				boolean base = ChoirlightCenser.isAlly(p, other), self = ChoirlightCenser.isAlly(p, p), mob = ChoirlightCenser.isAlly(p, husk), pet = ChoirlightCenser.isAlly(p, theirs);
+				why = "teamless: other=" + base + " self=" + self + " husk=" + mob + " theirs=" + pet + " (other alive=" + other.isAlive() + " hp=" + other.getHealth() + " removed=" + other.isRemoved()
+					+ " spectator=" + other.isSpectator() + " teams=" + p.getTeam() + "/" + other.getTeam() + ")";
+				boolean ok = base && !self && !mob && !pet;
+				Scoreboard sb = l.getScoreboard();
+				for (String name : new String[] {"censer_test_a", "censer_test_b"}) {
+					PlayerTeam old = sb.getPlayerTeam(name); // left over from an interrupted run of this test world
+					if (old != null) sb.removePlayerTeam(old);
+				}
+				PlayerTeam a = sb.addPlayerTeam("censer_test_a"), b = sb.addPlayerTeam("censer_test_b");
+				try {
+					sb.addPlayerToTeam(p.getScoreboardName(), a);
+					sb.addPlayerToTeam(other.getScoreboardName(), b);
+					boolean rivals = !ChoirlightCenser.isAlly(p, other);
+					sb.addPlayerToTeam(other.getScoreboardName(), a);
+					boolean mates = ChoirlightCenser.isAlly(p, other);
+					why += " rivals=" + rivals + " mates=" + mates;
+					ok &= rivals && mates;
+				} finally {
+					sb.removePlayerTeam(a);
+					sb.removePlayerTeam(b);
+				}
+				check(N + "other players are allies, except on rival scoreboard teams; spectators never", ok, why);
+			} catch (Throwable ex) {
+				check(N + "other players are allies, except on rival scoreboard teams; spectators never", false, ex);
 			}
-		});
+		}
 
 		checkS(N + "incense hangs from the using hand (visual anchor within 1 block of the hand, 0.6-1.2 blocks up)", () -> {
 			p.startUsingItem(InteractionHand.MAIN_HAND);

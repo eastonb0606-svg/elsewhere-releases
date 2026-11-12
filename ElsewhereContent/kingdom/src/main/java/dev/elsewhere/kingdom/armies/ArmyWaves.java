@@ -89,8 +89,13 @@ public final class ArmyWaves {
 		final BlockPos objective;
 
 		Side(Identifier faction, int heads, BlockPos rear, BlockPos objective) {
+			this(faction, ArmyScale.of(faction), heads, rear, objective);
+		}
+
+		/** With an explicit scale (the self-test's wave probe); the war layer uses the kingdom's loaded {@code army.scale}. */
+		Side(Identifier faction, @Nullable ArmyScale scale, int heads, BlockPos rear, BlockPos objective) {
 			this.faction = faction;
-			this.scale = ArmyScale.of(faction);
+			this.scale = scale;
 			this.heads = heads;
 			this.reserve = heads;
 			this.rear = rear;
@@ -116,6 +121,11 @@ public final class ArmyWaves {
 
 		int waveSize() {
 			return scale != null ? scale.wave().size() : 8;
+		}
+
+		/** The kingdom's own squad (army.scale.squad_size: Aldermark lance 10, Hrafnholt crew 6, Azmar rank block 5, Mirewick watch 7); 10 without a scale. */
+		int squadSize() {
+			return scale != null ? Math.max(2, scale.squadSize()) : 10;
 		}
 
 		long intervalTicks(net.minecraft.util.RandomSource r) {
@@ -227,7 +237,11 @@ public final class ArmyWaves {
 		return b;
 	}
 
-	/** Spawns up to {@code n} of this side's reserve at its rear, in squads of up to 10. Returns the number spawned. */
+	/**
+	 * Spawns up to {@code n} of this side's reserve at its rear, in squads of the kingdom's own size ({@link Side#squadSize}; before 3.0
+	 * every kingdom came in squads of 10, so Azmar's rank blocks of 5 arrived as groups of 10: s-azmarsize 12:46, fixed by s-intreq).
+	 * Six squads stand side by side, further ones in a row behind. Returns the number spawned.
+	 */
 	static int field(ServerLevel lv, Battle b, Side s, int n) {
 		n = Math.min(n, s.reserve);
 		if (rankHook != null && n > 0) {
@@ -240,9 +254,10 @@ public final class ArmyWaves {
 		}
 		int made = 0, k = 0;
 		var r = lv.getRandom();
-		while (made < n && k < 6) {
-			int size = Math.min(10, n - made);
-			BlockPos at = s.rear.offset((k - 1) * 6 + r.nextInt(3) - 1, 0, r.nextInt(3) - 1);
+		int squad = s.squadSize(), maxSquads = Math.max(6, (n + squad - 1) / squad);
+		while (made < n && k < maxSquads) {
+			int size = Math.min(squad, n - made);
+			BlockPos at = s.rear.offset((k % 6 - 1) * 6 + r.nextInt(3) - 1, 0, (k / 6) * 5 + r.nextInt(3) - 1);
 			k++;
 			List<KingdomSoldier> sq = KingdomApi.spawnSquad(lv, at, s.faction, s == b.d ? Squad.Formation.SHIELD_WALL : Squad.Formation.LINE, UnitTypes.SERGEANT,
 				ArmyComposer.members(r, Math.max(0, size - 1), false, s.faction));

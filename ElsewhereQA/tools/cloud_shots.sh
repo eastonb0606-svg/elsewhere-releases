@@ -70,12 +70,29 @@ xvfb-run -a -s "-screen 0 1920x1080x24" glxinfo -B 2>&1 | grep -E 'OpenGL (rende
 # 3. merged jar
 st "merged jar: merge.py --sync + build dist"
 cd "$R/ElsewhereBeta" || fail "no ElsewhereBeta"
-python3 tools/merge.py --sync > "$W/merge.out" 2>&1 || { tail -20 "$W/merge.out"; fail "merge.py --sync"; }
-grep -E '^(JAVA-DUP|MISSING|PATCH-FAILED|ENTRYPOINT-MISSING|EXTRA-MISSING)' merge-report.txt 2>/dev/null | head -5
-chmod +x gradlew
 t0=$(date +%s)
-./gradlew --no-daemon --console=plain -Dorg.gradle.jvmargs=-Xmx1536m build dist > "$W/beta-build.out" 2>&1 \
-  || { grep -E 'error:|FAILED|What went wrong' -A3 "$W/beta-build.out" | head -40; fail "merged jar build"; }
+build_jar() {
+  cd "$R/ElsewhereBeta" && python3 tools/merge.py --sync > "$W/merge.out" 2>&1 || { tail -20 "$W/merge.out"; return 1; }
+  grep -E '^(JAVA-DUP|MISSING|PATCH-FAILED|ENTRYPOINT-MISSING|EXTRA-MISSING)' merge-report.txt 2>/dev/null | head -5
+  chmod +x gradlew
+  ./gradlew --no-daemon --console=plain -Dorg.gradle.jvmargs=-Xmx1536m build dist > "$W/beta-build.out" 2>&1 \
+    || { grep -E 'error:|FAILED|What went wrong' -A3 "$W/beta-build.out" | head -40; return 1; }
+}
+# Live source can be mid-edit (red). Fallback: the source of cloud-src KNOWN_GOOD (the 13:59 sync every first-wave shard
+# built), with ElsewhereQA (runner + shot list) kept at HEAD.
+KG="${KNOWN_GOOD:-f7708fa381532cc2e49da198d4ad8d1307b53953}"
+if ! build_jar; then
+  CUR=$(git -C "$R" rev-parse HEAD)
+  git -C "$R" cat-file -e "$KG^{commit}" 2>/dev/null || git -C "$R" fetch -q --deepen=200 origin cloud-src 2>/dev/null || git -C "$R" fetch -q origin "$KG" 2>/dev/null
+  if [ "$CUR" != "$KG" ] && git -C "$R" cat-file -e "$KG^{commit}" 2>/dev/null; then
+    st "merged jar failed at ${CUR:0:7}; retrying with known-good source ${KG:0:7} (ElsewhereQA stays at ${CUR:0:7})"
+    git -C "$R" checkout -q -f "$KG" && git -C "$R" checkout -q "$CUR" -- ElsewhereQA || fail "checkout $KG"
+    rm -rf "$R/ElsewhereBeta/src/main" "$R/ElsewhereBeta/src/client" "$R/ElsewhereBeta/snap"
+    build_jar || fail "merged jar build (${CUR:0:7} and ${KG:0:7})"
+  else
+    fail "merged jar build"
+  fi
+fi
 JAR=$(ls -S dist/elsewhere-*.jar 2>/dev/null | head -1); [ -n "$JAR" ] || fail "no dist/elsewhere-*.jar"
 rm -f "$W/mods"/*.jar; cp "$JAR" "$W/mods/"
 echo "merged jar $(basename "$JAR") $(stat -c %s "$JAR") bytes in $(( $(date +%s) - t0 )) s"

@@ -144,7 +144,7 @@ public final class WilloSelfTest {
 		checkS(P + "the wisp never intercepts its own echo (floating right on the spell's line)", () -> {
 			var mid = p.getEyePosition().add(husk.getBoundingBox().getCenter()).scale(0.5);
 			wisp.setPos(mid.x, mid.y - wisp.getBbHeight() * 0.5, mid.z);
-			husk.setInvulnerableTime(0);
+			husk.damageCooldownTime = 0; // the hit-immunity frames of the echo just cast (LivingEntity.damageCooldownTime; Entity.setInvulnerableTime is a different timer)
 			float h0 = husk.getHealth();
 			return WillOLantern.recast(l, p, wisp, husk) && husk.getHealth() < h0 && !wisp.isSpectator();
 		});
@@ -168,6 +168,7 @@ public final class WilloSelfTest {
 		int n1 = WillOLantern.recasts;
 		for (int i = 0; i < 170 && !wisp.isRemoved(); i++) {
 			husk.setInvulnerableTime(0);
+			husk.damageCooldownTime = 0;
 			wisp.tickCount++;
 			wisp.tick();
 		}
@@ -211,6 +212,8 @@ public final class WilloSelfTest {
 			return ok;
 		});
 		checkS(P + "a wisp unloaded with its chunk leaves its light for that chunk's next load, which clears it", () -> {
+			MinionManager.dismissAll(p.getUUID()); // the earlier checks spent the Glimmer pool (20 max, 10 a call) and may hold the slot
+			GlimmerStub.setPool(p, 100F);
 			MinionEntity m = item.summonNow(p, stack);
 			if (!(m instanceof MarshWisp w)) return false;
 			w.setPos(home.getX() + 0.5, home.getY() + 5, home.getZ() + 6.5);
@@ -227,6 +230,8 @@ public final class WilloSelfTest {
 
 		// ---- sneak-use sends the wisp home
 		checkS(P + "sneak-use sends the wisp home", () -> {
+			MinionManager.dismissAll(p.getUUID());
+			GlimmerStub.setPool(p, 100F);
 			MinionEntity m = item.summonNow(p, stack);
 			p.setShiftKeyDown(true);
 			item.use(l, p, InteractionHand.MAIN_HAND);

@@ -44,6 +44,42 @@ public final class BrainLod {
 	/** Counters for the self-test and the bench report. */
 	public static long startsRun, startsSkipped;
 
+	/**
+	 * Walk path searches (villager {@code MoveToTargetSink} start checks). A search whose result is futile (no path, or a
+	 * partial path that ends where the villager already stands: a burned or walled-off bed, job site or stroll spot) is
+	 * not repeated from the same block to the same target for {@link #FUTILE_MEMO} ticks: vanilla would search again
+	 * every pass and walk nowhere; the give-up timer (CANT_REACH_WALK_TARGET_SINCE) is game time and keeps running, so the
+	 * villager forgets an unreachable POI exactly when vanilla would. At most {@link #WALK_SEARCHES_PER_TICK} villager walk
+	 * searches start per server tick; a villager over the budget keeps its walk target and searches on a later pass.
+	 */
+	public static final int FUTILE_MEMO = 40, WALK_SEARCHES_PER_TICK = 3;
+	public static long walkSearches, walkSearchesSaved, walkSearchesDeferred;
+	public static int maxWalkSearchesInTick;
+	private static long budgetTick = Long.MIN_VALUE;
+	private static int budgetUsed;
+
+	/** One villager walk search this tick, or false when the per-tick budget is used up (try again on a later pass). */
+	public static boolean tryWalkSearch(long gameTime) {
+		if (gameTime != budgetTick) {
+			budgetTick = gameTime;
+			budgetUsed = 0;
+		}
+		if (budgetUsed >= WALK_SEARCHES_PER_TICK) {
+			walkSearchesDeferred++;
+			return false;
+		}
+		budgetUsed++;
+		walkSearches++;
+		if (budgetUsed > maxWalkSearchesInTick) maxWalkSearchesInTick = budgetUsed;
+		return true;
+	}
+
+	/** Self-test: a fresh walk-search budget for this tick. */
+	public static void resetWalkBudget() {
+		budgetTick = Long.MIN_VALUE;
+		budgetUsed = 0;
+	}
+
 	/** Start-pass interval for a villager at squared distance {@code d2} from the nearest player (MAX_VALUE: none). */
 	public static int interval(double d2, boolean captured) {
 		if (captured) return d2 <= NEAR * NEAR ? 2 : 4;

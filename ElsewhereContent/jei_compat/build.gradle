@@ -38,7 +38,8 @@ dependencies {
 loom {
 	runs {
 		server {
-			vmArg "-Xmx2g"
+			// -PserverXmx=1g fits heavy.sh --light (all JVMs <= 1 GB)
+			vmArg "-Xmx${project.findProperty("serverXmx") ?: "2g"}"
 			if (project.hasProperty("jeiSelftest")) {
 				vmArg "-Djei.selftest=true"
 				vmArg "-Djei.selftest.exit=true"

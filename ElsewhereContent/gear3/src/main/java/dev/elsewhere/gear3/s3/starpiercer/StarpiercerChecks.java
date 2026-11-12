@@ -204,11 +204,13 @@ public final class StarpiercerChecks {
 			ItemStack st = new ItemStack(bow);
 			p.setItemInHand(InteractionHand.MAIN_HAND, st);
 			ItemStack tipped = new ItemStack(Items.TIPPED_ARROW, 4);
-			tipped.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.SLOWNESS));
+			PotionContents slow = new PotionContents(Potions.SLOWNESS);
+			tipped.set(DataComponents.POTION_CONTENTS, slow);
 			p.getInventory().setItem(9, tipped);
 			sp.releaseUsing(st, l, p, sp.getUseDuration(st, p) - Starpiercer.DRAW_TICKS);
 			List<AbstractArrow> a = arrows(l, base);
-			boolean ok = a.size() == 1 && a.get(0) instanceof Arrow arrow && arrow.getColor() > 0 && arrow.isNoGravity();
+			boolean ok = a.size() == 1 && a.get(0) instanceof Arrow arrow && arrow.getColor() == slow.getColor() && arrow.getColor() != -1 && arrow.isNoGravity();
+			// (Arrow.getColor is an opaque ARGB int, so it is negative for a potion arrow; -1 is the 'no potion' sentinel. The old '> 0' could never hold.)
 			Gear3Scheduler.runDueWithin(s, 10);
 			clear(l, base);
 			return ok;

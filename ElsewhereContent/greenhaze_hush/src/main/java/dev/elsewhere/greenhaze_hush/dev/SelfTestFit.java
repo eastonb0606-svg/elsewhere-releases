@@ -163,7 +163,7 @@ final class SelfTestFit {
 		return new Tally(m, loot, candles, fires, leaks);
 	}
 
-	/** Walk level on dry ground near (x, z): the first of 8 spots 96 apart with no water over the centre and 8 points at r 20 (worldgen rejects wet sites too). */
+	/** Walk level on dry ground near (x, z): the first of 8 spots 96 apart with no water on a 9x9 lattice 6 apart (worldgen rejects wet sites too). */
 	static BlockPos surface(ServerLevel l, int x, int z) {
 		// the live Ground reads the chunk itself (Level.getHeight answers min y for a chunk that is not visible yet) and skips trees
 		GhFit.Ground g = GhFit.live(l);
@@ -171,10 +171,7 @@ final class SelfTestFit {
 		for (int k = 0; k < 8; k++) {
 			int cx = x + 96 * k;
 			boolean dry = true;
-			for (int i = 0; i < 9 && dry; i++) {
-				double a = i * Math.PI / 4;
-				dry = !g.wet(cx + (i == 8 ? 0 : (int) Math.round(Math.cos(a) * 20)), z + (i == 8 ? 0 : (int) Math.round(Math.sin(a) * 20)));
-			}
+			for (int i = -4; i <= 4 && dry; i++) for (int j = -4; j <= 4 && dry; j++) dry = !g.wet(cx + 6 * i, z + 6 * j);
 			if (dry) { bx = cx; break; }
 		}
 		return new BlockPos(bx, g.y(bx, z) + 1, z);
@@ -275,13 +272,31 @@ final class SelfTestFit {
 		int bud = countAndClear(l, GreenhazeMobs.Budtender.class, bb);
 		check("struct fit: Sesh Hut look (deck on 9 stilts to their own ground, conical hay roof, ladder, stocked chest, Budtender)",
 			t.n(GreenhazeBlocks.KUSHWOOD_LOG) >= 18 && t.n(Blocks.HAY_BLOCK) >= 20 && t.n(Blocks.LADDER) >= 2 && t.loot("sesh_hut") == 1 && bud >= 1 && deck > o.getY(),
-			t.n(GreenhazeBlocks.KUSHWOOD_LOG) + " log blocks, " + t.n(Blocks.HAY_BLOCK) + " hay, deck " + deck + " over ground " + o.getY() + " (" + ground + " nearby), " + bud + " Budtender");
+			t.n(GreenhazeBlocks.KUSHWOOD_LOG) + " log blocks, " + t.n(Blocks.HAY_BLOCK) + " hay, " + t.n(Blocks.LADDER) + " ladder, " + t.loot("sesh_hut") + " chest, deck " + deck + " over ground " + o.getY() + " (" + ground + " nearby), " + bud + " Budtender");
 		BlockPos s = surface(l, o.getX() + 60, z);
 		List<GhFit.Piece> sp = GhFit.buildPlan(l, "lucid_spring", s);
 		Tally w = scan(l, span(sp));
+		// the spring's own water (pool cells and rill cells; any natural lake beside it is not counted): none of it may flow
+		GhFit.Piece pc = sp.get(0);
+		int ox = pc.o.getX(), oz = pc.o.getZ(), wy = pc.o.getY(), own = 0, leaks = 0;
+		List<BlockPos> cells = new ArrayList<>();
+		for (int px = ox - 9; px <= ox + 9; px++) for (int pz = oz - 9; pz <= oz + 9; pz++)
+			if (dev.elsewhere.greenhaze_hush.world.fit.GreenhazeLooks.inPool(pc, px, pz)) for (int y = wy - 4; y <= wy; y++) cells.add(new BlockPos(px, y, pz));
+		Direction dir = Direction.from2DDataValue(pc.p(0));
+		int sx = ox, sz = oz;
+		for (int i = 0; i < 12 && dev.elsewhere.greenhaze_hush.world.fit.GreenhazeLooks.inPool(pc, sx, sz); i++) { sx += dir.getStepX(); sz += dir.getStepZ(); }
+		for (int i = 0; i < pc.p(1); i++) cells.add(new BlockPos(sx + dir.getStepX() * i, pc.p(2 + i), sz + dir.getStepZ() * i));
+		for (BlockPos q : cells) {
+			if (!l.getBlockState(q).getFluidState().is(FluidTags.WATER)) continue;
+			own++;
+			for (Direction d : new Direction[] {Direction.DOWN, Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST}) {
+				BlockState n = l.getBlockState(q.relative(d));
+				if (n.isAir() || (n.canBeReplaced() && n.getFluidState().isEmpty())) leaks++;
+			}
+		}
 		check("struct fit: Lucid Spring look (pool in its hollow, weired rill, solid rim, no water that can flow, sunken offering chest)",
-			w.n(Blocks.WATER) >= 30 && w.leaks() == 0 && w.loot("lucid_spring") == 1 && w.n(Blocks.SEA_LANTERN) >= 1,
-			w.n(Blocks.WATER) + " water, " + w.leaks() + " leaks, " + w.loot("lucid_spring") + " chest");
+			own >= 30 && leaks == 0 && w.loot("lucid_spring") == 1 && w.n(Blocks.SEA_LANTERN) >= 1,
+			own + " own water, " + leaks + " leaks, " + w.loot("lucid_spring") + " chest");
 	}
 
 	static void engine(ServerLevel l, int x, int z) {

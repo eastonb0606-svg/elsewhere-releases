@@ -725,7 +725,7 @@ public final class GreenhazeLooks {
 				o.set(new BlockPos(x, bed, z), bedB);
 				underpin(o, x, bed - 1, z, st(Blocks.CLAY), st(Blocks.DIRT), 6);
 				for (int y = bed + 1; y <= wy; y++) o.set(new BlockPos(x, y, z), st(Blocks.WATER));
-				clear(o, x, wy + 1, wy + 4, z);
+				openAbove(o, x, wy + 1, wy + 4, z);
 				if (hash(sd, x, 2, z) < 0.15 && r > 1.5) o.set(new BlockPos(x, wy + 1, z), st(GreenhazeBlocks.LUCID_LILY));
 			} else {
 				boolean rim = pool.test(x + 1, z) || pool.test(x - 1, z) || pool.test(x, z + 1) || pool.test(x, z - 1);
@@ -759,7 +759,7 @@ public final class GreenhazeLooks {
 					o.set(new BlockPos(x, lv, z), st(Blocks.WATER));
 					o.set(new BlockPos(x, lv - 1, z), st(Blocks.MOSSY_COBBLESTONE));
 					underpin(o, x, lv - 2, z, st(Blocks.COBBLESTONE), st(Blocks.COBBLESTONE), 8);
-					clear(o, x, lv + 1, lv + 3, z);
+					openAbove(o, x, lv + 1, lv + 3, z);
 				}
 			}
 			for (int sgn = -1; sgn <= 1; sgn += 2) {
@@ -790,7 +790,23 @@ public final class GreenhazeLooks {
 	}
 
 	/** Pool cell: always the inner r 2.5; out to r 6.5 where the stored ground lattice, plus a bowl slope, stays under the water line. */
-	static boolean inPool(Piece pc, int x, int z) {
+	/**
+	 * Opens the air over the spring's water without ever freeing natural water (a spring may sit beside a lake): fluids stay where they
+	 * are, and a cell with natural water beside or above it becomes moss instead of air.
+	 */
+	static void openAbove(Out o, int x, int y0, int y1, int z) {
+		if (!o.has(x, z)) return;
+		for (int y = y0; y <= y1; y++) {
+			BlockPos p = new BlockPos(x, y, z);
+			BlockState s = o.get(p);
+			if (s.isAir() || !s.getFluidState().isEmpty()) continue;
+			boolean wet = !o.get(p.above()).getFluidState().isEmpty();
+			for (Direction d : Direction.Plane.HORIZONTAL) wet |= !o.get(p.relative(d)).getFluidState().isEmpty();
+			o.set(p, wet ? st(Blocks.MOSS_BLOCK) : AIR);
+		}
+	}
+
+	public static boolean inPool(Piece pc, int x, int z) {
 		int dx = x - pc.o.getX(), dz = z - pc.o.getZ();
 		double r = Math.sqrt(dx * dx + dz * dz);
 		if (r <= 2.5) return true;

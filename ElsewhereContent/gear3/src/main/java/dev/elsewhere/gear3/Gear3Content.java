@@ -44,5 +44,6 @@ public final class Gear3Content {
 		dev.elsewhere.gear3.setbonus.b.SetBonusesB.init(); // s-setbonus-b: Command, Outrider, Steady Aim, Starsight, Zenith, Wolf-Fury (after SetBonusesA and Gear3Whips)
 		dev.elsewhere.gear3.s3.totems.Totems.init(); // s-totems: entity types elsewhere:bramble_totem / clockwork_sentry / azmar_sunglass_obelisk + attributes, Budtender offer hook; kill switch overhaul3 key gear3_totems
 		dev.elsewhere.gear3.s3.waryak.WarYak.init(); // s-waryak: entity type elsewhere:war_yak + attributes, 7 sound events, 2-slot weight (gear3 minion.MinionSlots); kill switch overhaul3 key gear3_war_yak
+		dev.elsewhere.gear3.s3.meadhorn.MeadHornRefill.init(); // s-meadhorn: Mead-Horn honey-bottle refill (use-item event); kill switch overhaul3 key mead_horn_refill
 	}
 }

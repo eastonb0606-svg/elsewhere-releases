@@ -69,6 +69,26 @@ final class BrainLodTest {
 		BrainLod.enabled = BrainLod.ON;
 		SelfTest.check("villager brain LOD: switched off, the brain is vanilla (nothing skipped or counted)",
 			BrainLod.startsRun == run0 && BrainLod.startsSkipped == skip0, null);
+
+		// futile walk search: a target 60 blocks straight up is unreachable; the first search ends where the villager
+		// stands, the repeats from the same block to the same target are skipped (the walk target is kept)
+		net.minecraft.world.entity.ai.behavior.MoveToTargetSink sink = new net.minecraft.world.entity.ai.behavior.MoveToTargetSink();
+		BlockPos up = v.blockPosition().above(60);
+		long now = level.getGameTime(), s0 = BrainLod.walkSearches, sv0 = BrainLod.walkSearchesSaved;
+		boolean keptTarget = true;
+		for (int i = 0; i < 6; i++) {
+			BrainLod.resetWalkBudget();
+			if (sink.getStatus() == net.minecraft.world.entity.ai.behavior.Behavior.Status.RUNNING) sink.doStop(level, v, now);
+			b.eraseMemory(MemoryModuleType.PATH);
+			b.setMemory(MemoryModuleType.WALK_TARGET, new net.minecraft.world.entity.ai.memory.WalkTarget(up, 0.5F, 0));
+			v.setOnGround(true);
+			sink.tryStart(level, v, now);
+			if (i > 0 && !b.hasMemoryValue(MemoryModuleType.WALK_TARGET)) keptTarget = false;
+		}
+		if (sink.getStatus() == net.minecraft.world.entity.ai.behavior.Behavior.Status.RUNNING) sink.doStop(level, v, now);
+		long searched = BrainLod.walkSearches - s0, saved = BrainLod.walkSearchesSaved - sv0;
+		SelfTest.check("villager walk searches: an unreachable walk target is searched once from a spot, the 5 repeats are skipped and the target kept",
+			searched == 1 && saved == 5 && keptTarget, "searched " + searched + ", skipped " + saved + ", target kept " + keptTarget);
 		v.discard();
 	}
 }
