@@ -534,21 +534,23 @@
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:22:46"
         },
         {
           "file": "s_p13_particles__rimeback_avalanche_20s.png",
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:22:56"
         }
       ]
     }
   },
-  "run": "20:22:27",
+  "run": "20:22:58",
   "totals": {
-    "ok": 53,
+    "ok": 55,
     "fail": 1,
     "manual": 0
   }

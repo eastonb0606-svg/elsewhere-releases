@@ -924,3 +924,28 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:22:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1398.500000, 151.000000, 3696.500000
 [20:22:31] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
 [20:22:32] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6215ms or 124 ticks behind
+[20:22:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p13_particles__rimeback_avalanche_10s.png: 
+[20:22:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p13_particles__rimeback_avalanche_20s.png: 
+[20:22:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 166 (s_p13_particles | Rimeback avalanche wall (elsewhere:glacier_shelf)) done in 28971 ms
+[20:22:56] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:22:56] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:22:56] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:22:56] [Server thread/INFO] (Minecraft) Stopping server
+[20:22:56] [Server thread/INFO] (Minecraft) Saving players
+[20:22:56] [Server thread/INFO] (Minecraft) Saving worlds
+[20:22:57] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:22:57] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:22:57] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:22:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:22:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:22:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:22:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:22:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:22:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:22:58] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:22:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 55 ok, 1 fail, 0 manual
+[20:22:58] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 10m 6s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
