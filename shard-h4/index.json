@@ -1,0 +1,222 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:neferkhet": [
+        {
+          "file": "anim__neferkhet_hurt_peak.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:19"
+        },
+        {
+          "file": "anim__neferkhet_hurt_rest.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:20"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_blocking.png",
+          "scene": 140,
+          "line": 157,
+          "check": "the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
+          "status": "ok",
+          "taken": "23:40:23"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:clan_hold": [
+        {
+          "file": "s_struct_verdigris__clan_hold_s_14_10_14.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_verdigris__clan_hold_downhill_18.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_stone": [
+        {
+          "file": "s_dataclean__villages_aldermark_stone.png",
+          "scene": 173,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "kingdom soldier nameplates, Aldermark (POLISH P3; supersedes polish2's 10:05 nameplate scene in INTEGRATION-REQUESTS)": [
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_6.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "23:40:26"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "23:40:26"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "23:40:27"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:ossyra_matriarch_spire": [
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_20_14_20.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling_stone": [
+        {
+          "file": "s_galesling__sling_stone_in_flight_and_impact.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
+          "status": "ok",
+          "taken": "23:40:29"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_stuck_sprint_cancel.png",
+          "scene": 313,
+          "line": 353,
+          "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
+          "status": "ok",
+          "taken": "23:40:35"
+        }
+      ]
+    },
+    "s_routines": {
+      "Changing of the guard salute": [
+        {
+          "file": "s_routines__changing_of_the_guard_salute.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__changing_of_the_guard_salute_5s.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:40:37"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:40:37"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:40:38"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:40:38"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:40:40"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "23:40:40"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Kingdom rank shapes side by side (Azmar v Mirewick)": [
+        {
+          "file": "s_impostors__battle_azmar_mirewick_110_30s.png",
+          "scene": 440,
+          "line": 490,
+          "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:40:40",
+  "totals": {
+    "ok": 14,
+    "fail": 0,
+    "manual": 0
+  }
+}
