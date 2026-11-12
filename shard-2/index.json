@@ -1,0 +1,673 @@
+{
+  "lanes": {
+    "s_p8_bossanims": {
+      "elsewhere:grimhorn": [
+        {
+          "file": "s_p8_bossanims__grimhorn_death_15t.png",
+          "scene": 245,
+          "line": 275,
+          "check": "legs buckle under it and the neck sags as it tips onto its side; no legs poking through the ground; with `\"bossAnimations3\": false` only the plain vanilla tilt",
+          "status": "ok",
+          "taken": "20:04:18"
+        }
+      ],
+      "elsewhere:strawgrim": [
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "ok",
+          "taken": "20:04:20"
+        },
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3_later.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "ok",
+          "taken": "20:04:23"
+        }
+      ],
+      "P8 kill switch": []
+    },
+    "s_compat_jei": {
+      "elsewhere:loot": [
+        {
+          "file": "s_compat_jei__loot_auto.png",
+          "scene": 248,
+          "line": 278,
+          "check": "title \"Chests of: Hrafnholt Courier\" (or the chest shown) and \"Rolls: n\" above an 8-wide scrolling grid; hovering a slot shows \"Chance per roll: x%\" and \"Count: a-b\"; nothing overlaps the scroll bar",
+          "status": "fail",
+          "detail": "auto: elsewhere:loot is neither an entity type nor an item in this build",
+          "taken": "20:04:23"
+        }
+      ],
+      "elsewhere:highland_yak": [
+        {
+          "file": "s_compat_jei__jei_category_elsewhere_loot_a_creature_p.png",
+          "scene": 249,
+          "line": 279,
+          "check": "\"Dropped by: Highland Yak\" (creatures that have a spawn egg, e.g. `elsewhere:bog_wight`, also show the egg slot top right); drops in the grid with chance tooltips",
+          "status": "ok",
+          "taken": "20:04:24"
+        }
+      ],
+      "elsewhere:kingdom_shop": [
+        {
+          "file": "s_compat_jei__kingdom_shop_auto.png",
+          "scene": 250,
+          "line": 280,
+          "check": "page shows Scrip (count = price, capped at a stack) -> arrow -> Lantern Shield, then \"Mirewick: the Scrip-Desk\", \"Price: 36\", \"Market, sells back for 14\"; the Scrip U view lists every Mirewick line plus auction lots (\"Weekly auction lot: bids from x up to y\"); R on `minecraft:netherite_upgrade_smithing_template` shows the price plus a 20-diamond extra slot",
+          "status": "fail",
+          "detail": "auto: elsewhere:kingdom_shop is neither an entity type nor an item in this build",
+          "taken": "20:04:24"
+        }
+      ],
+      "elsewhere:hacksilver": [
+        {
+          "file": "s_compat_jei__hacksilver_first_person.png",
+          "scene": 251,
+          "line": 281,
+          "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_jei__hacksilver_third_person.png",
+          "scene": 251,
+          "line": 281,
+          "check": "page: the item, \"N Quanta\" and an arrow to the same item; catalysts on the left are the Transmutation Table and Tablet; category absent without Test Meter",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_dinar": [
+        {
+          "file": "s_compat_jei__azmar_dinar_first_person.png",
+          "scene": 252,
+          "line": 282,
+          "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_jei__azmar_dinar_third_person.png",
+          "scene": 252,
+          "line": 282,
+          "check": "each has a readable page: rival pages (coin, Seals) present, the capstan says how to summon Vorlagh and that it drops nothing, the disc names its trader, the Calling line, the creative-only line; no `jei.elsewhere.info.*` raw keys",
+          "status": "pending"
+        }
+      ],
+      "JEI item list hides technical items": []
+    },
+    "s_greenhaze_rework": {
+      "Green Leaf HUD + soft tint at High (Sativa)": [
+        {
+          "file": "s_greenhaze_rework__green_leaf_hud_soft_tint_at_high_sativa.png",
+          "scene": 254,
+          "line": 287,
+          "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__green_leaf_hud_soft_tint_at_high_sativa_5s.png",
+          "scene": 254,
+          "line": 287,
+          "check": "top-left meter \"High 50%\" at (4,4) with the green bud icon; a faint green wash only (no vignette, no tilt); hotbar and meter readable",
+          "status": "pending"
+        }
+      ],
+      "Couch-locked screen, FULL effects (hue drift + wobble)": [
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri.png",
+          "scene": 255,
+          "line": 288,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri_5s.png",
+          "scene": 255,
+          "line": 288,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "pending"
+        }
+      ],
+      "Accessibility: `/greenleaf effects reduced`, then `/greenleaf effects off`": [
+        {
+          "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced.png",
+          "scene": 256,
+          "line": 289,
+          "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced_5s.png",
+          "scene": 256,
+          "line": 289,
+          "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
+          "status": "pending"
+        }
+      ],
+      "Hallucinated mobs": [
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs.png",
+          "scene": 257,
+          "line": 290,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
+          "scene": 257,
+          "line": 290,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "pending"
+        }
+      ],
+      "Munchies line": [
+        {
+          "file": "s_greenhaze_rework__munchies_line.png",
+          "scene": 258,
+          "line": 291,
+          "check": "gold action-bar line like \"Best. Bread. Ever.\" and green sparkles at the mouth; hunger bar shows one extra point",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__munchies_line_5s.png",
+          "scene": 258,
+          "line": 291,
+          "check": "gold action-bar line like \"Best. Bread. Ever.\" and green sparkles at the mouth; hunger bar shows one extra point",
+          "status": "pending"
+        }
+      ],
+      "Thoughts in chat": [
+        {
+          "file": "s_greenhaze_rework__thoughts_in_chat.png",
+          "scene": 259,
+          "line": 292,
+          "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__thoughts_in_chat_5s.png",
+          "scene": 259,
+          "line": 292,
+          "check": "one gray italic line \"(you think) ...\" (e.g. \"Lava is just spicy water.\"), only in your own chat",
+          "status": "pending"
+        }
+      ],
+      "JEI info (with JEI loaded)": []
+    },
+    "s_p2_telegraph": {
+      "elsewhere:grumblegut": [
+        {
+          "file": "s_p2_telegraph__grumblegut_cone_ground_slam_rings_helm_o.png",
+          "scene": 261,
+          "line": 297,
+          "check": "crisp yellow rings and a red cone on the ground, fill grows then the hit lands as it fills; edges pulse faster near the end; no jagged dust, nothing under the floor or floating",
+          "status": "pending"
+        },
+        {
+          "file": "s_p2_telegraph__grumblegut_helm_off_foresight_rule.png",
+          "scene": 262,
+          "line": 298,
+          "check": "NO decals at all (no rings, no cone, no dust); the boss animation and sounds still play",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:lithara": [
+        {
+          "file": "s_p2_telegraph__lithara_triple_rings_6_12_18_falling_roc.png",
+          "scene": 263,
+          "line": 299,
+          "check": "three red rings and yellow circles drawn as clean bands, all visible at once, none missing",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:rimeback": [
+        {
+          "file": "s_p2_telegraph__rimeback_breath_cone_helm_on.png",
+          "scene": 264,
+          "line": 300,
+          "check": "ONE yellow cone that turns with the breath (no stacked or trailing copies)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:verdigrim": [
+        {
+          "file": "s_p2_telegraph__verdigrim_note_shockwave_helm_off.png",
+          "scene": 265,
+          "line": 301,
+          "check": "the yellow shockwave ring travels outward smoothly (attack, not a hint, so it shows without the helm); one ring, no trail of old rings",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aphelion": [
+        {
+          "file": "s_p2_telegraph__aphelion_warning_column_helm_on.png",
+          "scene": 266,
+          "line": 302,
+          "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
+          "status": "pending"
+        }
+      ],
+      "distance LOD, helm ON": [],
+      "`/elsewhere_hud telegraphs hidden`, helm ON": [
+        {
+          "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on.png",
+          "scene": 268,
+          "line": 304,
+          "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
+          "status": "pending"
+        },
+        {
+          "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on_5s.png",
+          "scene": 268,
+          "line": 304,
+          "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
+          "status": "pending"
+        }
+      ],
+      "kill switch: server started with `-Delsewhere.overhaul3.boss_telegraphs=false`, helm ON": []
+    },
+    "s_swarm1": {
+      "swarm-as-one column march (kingdom armies, ARMIES 3.3 ribbon)": [
+        {
+          "file": "s_swarm1__patrol_8_10s.png",
+          "scene": 270,
+          "line": 306,
+          "check": "the column bends round the corner along the leader's own footsteps, two files 0.8 to each side; no one cuts the corner or stalls in a clump; the same squad seen from 10 blocks away behaves as before (per-soldier)",
+          "status": "pending"
+        }
+      ],
+      "swarm-as-one squad targeting (ARMIES 3.4)": [
+        {
+          "file": "s_swarm1__battle_aldermark_mirewick_32_30s.png",
+          "scene": 271,
+          "line": 307,
+          "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
+          "status": "pending"
+        }
+      ],
+      "`/kingdom armies swarm` report": [
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report.png",
+          "scene": 272,
+          "line": 308,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        },
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
+          "scene": 272,
+          "line": 308,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p1_bossbar": {
+      "boss bar v2 labels on a rival bar (the 'glyph_ lare' report)": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl.png",
+          "scene": 273,
+          "line": 309,
+          "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
+          "status": "pending"
+        },
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl_5s.png",
+          "scene": 273,
+          "line": 309,
+          "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:strawgrim": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_on_a_real_boss_strawgrim.png",
+          "scene": 274,
+          "line": 310,
+          "check": "icon left, notches at 65% and 30% (Strawgrim's own thresholds), cream damage trail after the hit, gold flash plus an \"Invulnerable\" chip (steel frame) for ~2 s at the phase change, then \"❖ 2/3\" at the right; the '⚠ <attack>' cast bar is NOT a separate bar: its name sits under the main bar with a thin wind-up line",
+          "status": "pending"
+        }
+      ],
+      "boss bar v2 state chips": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_state_chips.png",
+          "scene": 275,
+          "line": 311,
+          "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_state_chips_5s.png",
+          "scene": 275,
+          "line": 311,
+          "check": "Percolax: gold \"Vulnerable\" chip left under the bar, attack text centred, \"❖ 1/3\" right; Mother Creak: teal \"Warded\" chip, hearts as the info line, no notches or counter; Always-mode rival bar: red pulsing frame + \"Enraged\" chip, NO phase notches (unlisted bosses get none)",
+          "status": "pending"
+        }
+      ],
+      "boss bar v2 module shots (boss_ui runClientGameTest, BossBarShots)": []
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person.png",
+          "scene": 277,
+          "line": 313,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person.png",
+          "scene": 277,
+          "line": 313,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip.png",
+          "scene": 277,
+          "line": 313,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_2.png",
+          "scene": 278,
+          "line": 314,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_2.png",
+          "scene": 278,
+          "line": 314,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person.png",
+          "scene": 278,
+          "line": 314,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person.png",
+          "scene": 278,
+          "line": 314,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use.png",
+          "scene": 278,
+          "line": 314,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_2.png",
+          "scene": 278,
+          "line": 314,
+          "check": "the same axe art (not an arrow) tumbling end over end in the plane of its flight, about head-height, slight drop; subtitle (if on) \"Hurlbat thrown\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:aphelion_shattered_halo": [
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_26_10_26.png",
+          "scene": 285,
+          "line": 324,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
+          "scene": 285,
+          "line": 324,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ossyra_matriarch_spire": [
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_20_14_20.png",
+          "scene": 286,
+          "line": 325,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
+          "scene": 286,
+          "line": 325,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_held.png",
+          "scene": 287,
+          "line": 326,
+          "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip.png",
+          "scene": 287,
+          "line": 326,
+          "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person.png",
+          "scene": 288,
+          "line": 327,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person.png",
+          "scene": 288,
+          "line": 327,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
+          "scene": 288,
+          "line": 327,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person_2.png",
+          "scene": 289,
+          "line": 328,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person_2.png",
+          "scene": 289,
+          "line": 328,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
+          "scene": 289,
+          "line": 328,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_held.png",
+          "scene": 290,
+          "line": 329,
+          "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip.png",
+          "scene": 290,
+          "line": 329,
+          "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_first_person.png",
+          "scene": 291,
+          "line": 330,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person.png",
+          "scene": 291,
+          "line": 330,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person.png",
+          "scene": 291,
+          "line": 330,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person.png",
+          "scene": 291,
+          "line": 330,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use.png",
+          "scene": 291,
+          "line": 330,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_2.png",
+          "scene": 291,
+          "line": 330,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_first_person_2.png",
+          "scene": 292,
+          "line": 331,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person_2.png",
+          "scene": 292,
+          "line": 331,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person_2.png",
+          "scene": 292,
+          "line": 331,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person_2.png",
+          "scene": 292,
+          "line": 331,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use_2.png",
+          "scene": 292,
+          "line": 331,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_3.png",
+          "scene": 292,
+          "line": 331,
+          "check": "raised throwing arm with the sling held high, pouch frame changing between shots; the arm shakes once the 0.5 s charge is full (trident wind-up)",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_first_person_3.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person_3.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person_3.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person_3.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use_3.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_4.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a vanilla wind charge flies (faster than a hand-thrown one) and bursts with the normal knockback; the off-hand wind charge is used, the cobblestone is not",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:gale_sling_stone": [
+        {
+          "file": "s_galesling__sling_stone_in_flight_and_impact.png",
+          "scene": 293,
+          "line": 332,
+          "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:04:24",
+  "totals": {
+    "ok": 4,
+    "fail": 2,
+    "manual": 0
+  }
+}
