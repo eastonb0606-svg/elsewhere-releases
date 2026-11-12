@@ -1,0 +1,898 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36871 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.19.4
+
+> Task :compileJava
+/home/user/elsewhere-releases/ElsewhereBeta/src/main/java/dev/elsewhere/kingdom_villages/VillagesContent.java:93: warning: [removal] PoiHelper in net.fabricmc.fabric.api.object.builder.v1.world.poi has been deprecated and marked for removal
+		if (!BuiltInRegistries.POINT_OF_INTEREST_TYPE.containsKey(COFFER_POI.identifier())) PoiHelper.register(COFFER_POI.identifier(), 1, 1, open);
+		                                                                                    ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 warning
+
+> Task :processResources
+> Task :classes
+
+> Task :compileClientJava
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:6: error: package dev.elsewhere.bossart.ironpeak does not exist
+import static dev.elsewhere.bossart.ironpeak.Anim.ch;
+                                            ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:6: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.ironpeak.Anim.ch;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:7: error: package dev.elsewhere.bossart.ironpeak does not exist
+import static dev.elsewhere.bossart.ironpeak.Anim.k;
+                                            ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:7: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.ironpeak.Anim.k;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:8: error: package dev.elsewhere.bossart.ironpeak does not exist
+import static dev.elsewhere.bossart.ironpeak.Anim.pos;
+                                            ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:8: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.ironpeak.Anim.pos;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:9: error: package dev.elsewhere.bossart.ironpeak does not exist
+import static dev.elsewhere.bossart.ironpeak.Anim.rot;
+                                            ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:9: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.ironpeak.Anim.rot;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:19: error: cannot find symbol
+public class GrimhornModel extends EntityModel<GrimhornRenderState> {
+                                               ^
+  symbol: class GrimhornRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:50: error: cannot find symbol
+	public void setupAnim(GrimhornRenderState s) {
+	                      ^
+  symbol:   class GrimhornRenderState
+  location: class GrimhornModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:16: error: cannot find symbol
+public class HrolfRenderer extends MobRenderer<HrolfBoss, HrolfRenderState, HrolfModel> {
+                                                          ^
+  symbol: class HrolfRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:16: error: cannot find symbol
+public class HrolfRenderer extends MobRenderer<HrolfBoss, HrolfRenderState, HrolfModel> {
+                                                                            ^
+  symbol: class HrolfModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:29: error: cannot find symbol
+	public HrolfRenderState createRenderState() {
+	       ^
+  symbol:   class HrolfRenderState
+  location: class HrolfRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:34: error: cannot find symbol
+	public void extractRenderState(HrolfBoss boss, HrolfRenderState s, float partial) {
+	                                               ^
+  symbol:   class HrolfRenderState
+  location: class HrolfRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:58: error: cannot find symbol
+	public Identifier getTextureLocation(HrolfRenderState s) {
+	                                     ^
+  symbol:   class HrolfRenderState
+  location: class HrolfRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:63: error: cannot find symbol
+	protected void scale(HrolfRenderState s, PoseStack pose) {
+	                     ^
+  symbol:   class HrolfRenderState
+  location: class HrolfRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:14: error: cannot find symbol
+public class HeliodorRenderer extends MobRenderer<Heliodor, HeliodorRenderState, HeliodorModel> {
+                                                            ^
+  symbol: class HeliodorRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:14: error: cannot find symbol
+public class HeliodorRenderer extends MobRenderer<Heliodor, HeliodorRenderState, HeliodorModel> {
+                                                                                 ^
+  symbol: class HeliodorModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:25: error: cannot find symbol
+	private static float glow(HeliodorRenderState s, float t) {
+	                          ^
+  symbol:   class HeliodorRenderState
+  location: class HeliodorRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:32: error: cannot find symbol
+	public HeliodorRenderState createRenderState() {
+	       ^
+  symbol:   class HeliodorRenderState
+  location: class HeliodorRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:37: error: cannot find symbol
+	public Identifier getTextureLocation(HeliodorRenderState state) {
+	                                     ^
+  symbol:   class HeliodorRenderState
+  location: class HeliodorRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:47: error: cannot find symbol
+	public void extractRenderState(Heliodor e, HeliodorRenderState s, float partialTicks) {
+	                                           ^
+  symbol:   class HeliodorRenderState
+  location: class HeliodorRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtRenderer.java:8: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                           ^
+  symbol:   class BossRenderer
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtRenderer.java:27: error: cannot find symbol
+public class AphelionArtRenderer extends BossRenderer<Aphelion, AphelionArtModel.State, AphelionArtModel> {
+                                         ^
+  symbol: class BossRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:3: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:3: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:4: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:4: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:5: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:5: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:6: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:6: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:8: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                           ^
+  symbol:   class BossRenderState
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:27: error: package dev.elsewhere.bossart.nether.HurtAnim does not exist
+	public static class State extends dev.elsewhere.bossart.nether.HurtAnim.State {
+	                                                                       ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:16: error: cannot find symbol
+public class ThurgrimRenderer extends MobRenderer<ThurgrimBoss, ThurgrimRenderState, ThurgrimModel> {
+                                                                ^
+  symbol: class ThurgrimRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:16: error: cannot find symbol
+public class ThurgrimRenderer extends MobRenderer<ThurgrimBoss, ThurgrimRenderState, ThurgrimModel> {
+                                                                                     ^
+  symbol: class ThurgrimModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:29: error: cannot find symbol
+	public ThurgrimRenderState createRenderState() {
+	       ^
+  symbol:   class ThurgrimRenderState
+  location: class ThurgrimRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:34: error: cannot find symbol
+	public void extractRenderState(ThurgrimBoss boss, ThurgrimRenderState s, float partial) {
+	                                                  ^
+  symbol:   class ThurgrimRenderState
+  location: class ThurgrimRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:50: error: cannot find symbol
+	public Identifier getTextureLocation(ThurgrimRenderState s) {
+	                                     ^
+  symbol:   class ThurgrimRenderState
+  location: class ThurgrimRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:55: error: cannot find symbol
+	protected void scale(ThurgrimRenderState s, PoseStack pose) {
+	                     ^
+  symbol:   class ThurgrimRenderState
+  location: class ThurgrimRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:6: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                           ^
+  symbol:   class BossRenderer
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:11: error: cannot find symbol
+public class SolaxisArtRenderer extends BossRenderer<Solaxis, SolaxisArtModel.State, SolaxisArtModel> {
+                                        ^
+  symbol: class BossRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:11: error: package SolaxisArtModel does not exist
+public class SolaxisArtRenderer extends BossRenderer<Solaxis, SolaxisArtModel.State, SolaxisArtModel> {
+                                                                             ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:11: error: cannot find symbol
+public class SolaxisArtRenderer extends BossRenderer<Solaxis, SolaxisArtModel.State, SolaxisArtModel> {
+                                                                                     ^
+  symbol: class SolaxisArtModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:22: error: package SolaxisArtModel does not exist
+	public SolaxisArtModel.State createRenderState() {
+	                      ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:27: error: package SolaxisArtModel does not exist
+	public void extractRenderState(Solaxis entity, SolaxisArtModel.State state, float partialTicks) {
+	                                                              ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:36: error: package SolaxisArtModel does not exist
+	public Identifier getTextureLocation(SolaxisArtModel.State state) {
+	                                                    ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:30: error: cannot find symbol
+public class AnkharaRenderer extends MobRenderer<Ankhara, AnkharaRenderState, AnkharaModel> {
+                                                          ^
+  symbol: class AnkharaRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:30: error: cannot find symbol
+public class AnkharaRenderer extends MobRenderer<Ankhara, AnkharaRenderState, AnkharaModel> {
+                                                                              ^
+  symbol: class AnkharaModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:38: error: cannot find symbol
+	private final AnkharaSegmentModel segment;
+	              ^
+  symbol:   class AnkharaSegmentModel
+  location: class AnkharaRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:52: error: cannot find symbol
+	private static float glow(AnkharaRenderState s) {
+	                          ^
+  symbol:   class AnkharaRenderState
+  location: class AnkharaRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:95: error: cannot find symbol
+	public AnkharaRenderState createRenderState() {
+	       ^
+  symbol:   class AnkharaRenderState
+  location: class AnkharaRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:100: error: cannot find symbol
+	public Identifier getTextureLocation(AnkharaRenderState state) {
+	                                     ^
+  symbol:   class AnkharaRenderState
+  location: class AnkharaRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:110: error: cannot find symbol
+	protected float getShadowRadius(AnkharaRenderState state) {
+	                                ^
+  symbol:   class AnkharaRenderState
+  location: class AnkharaRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:120: error: cannot find symbol
+	public void extractRenderState(Ankhara e, AnkharaRenderState s, float partialTicks) {
+	                                          ^
+  symbol:   class AnkharaRenderState
+  location: class AnkharaRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:155: error: cannot find symbol
+	public void submit(AnkharaRenderState s, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+	                   ^
+  symbol:   class AnkharaRenderState
+  location: class AnkharaRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/glasswaste/BossArtGlasswasteClient.java:3: error: cannot find symbol
+import dev.elsewhere.bossart.ankhara.AnkharaModel;
+                                    ^
+  symbol:   class AnkharaModel
+  location: package dev.elsewhere.bossart.ankhara
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/glasswaste/BossArtGlasswasteClient.java:5: error: cannot find symbol
+import dev.elsewhere.bossart.ankhara.AnkharaSegmentModel;
+                                    ^
+  symbol:   class AnkharaSegmentModel
+  location: package dev.elsewhere.bossart.ankhara
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/glasswaste/BossArtGlasswasteClient.java:6: error: cannot find symbol
+import dev.elsewhere.bossart.heliodor.HeliodorModel;
+                                     ^
+  symbol:   class HeliodorModel
+  location: package dev.elsewhere.bossart.heliodor
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:3: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:3: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:4: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:4: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:5: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:5: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:6: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:6: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:9: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                           ^
+  symbol:   class BossRenderState
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:17: error: cannot find symbol
+public class MournmawArtModel extends EntityModel<BossRenderState> {
+                                                  ^
+  symbol: class BossRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:83: error: cannot find symbol
+	public void setupAnim(BossRenderState s) {
+	                      ^
+  symbol:   class BossRenderState
+  location: class MournmawArtModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:6: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                           ^
+  symbol:   class BossRenderState
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:7: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                           ^
+  symbol:   class BossRenderer
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:12: error: cannot find symbol
+public class MournmawArtRenderer extends BossRenderer<Mournmaw, BossRenderState, MournmawArtModel> {
+                                         ^
+  symbol: class BossRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:12: error: cannot find symbol
+public class MournmawArtRenderer extends BossRenderer<Mournmaw, BossRenderState, MournmawArtModel> {
+                                                                ^
+  symbol: class BossRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:23: error: cannot find symbol
+	public BossRenderState createRenderState() {
+	       ^
+  symbol:   class BossRenderState
+  location: class MournmawArtRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:28: error: cannot find symbol
+	public void extractRenderState(Mournmaw entity, BossRenderState state, float partialTicks) {
+	                                                ^
+  symbol:   class BossRenderState
+  location: class MournmawArtRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:34: error: cannot find symbol
+	public Identifier getTextureLocation(BossRenderState state) {
+	                                     ^
+  symbol:   class BossRenderState
+  location: class MournmawArtRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:3: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:3: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:4: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:4: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:5: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:5: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:8: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                           ^
+  symbol:   class BossRenderState
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:15: error: cannot find symbol
+public class AshtuskArtModel extends EntityModel<BossRenderState> {
+                                                 ^
+  symbol: class BossRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:63: error: cannot find symbol
+	public void setupAnim(BossRenderState s) {
+	                      ^
+  symbol:   class BossRenderState
+  location: class AshtuskArtModel
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:3: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:3: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.def;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:4: error: cannot find symbol
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                          ^
+  symbol:   class ArtAnim
+  location: package dev.elsewhere.bossart.nether
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:4: error: static import only from classes and interfaces
+import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:7: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                           ^
+  symbol:   class BossRenderState
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:16: error: package dev.elsewhere.bossart.nether.HurtAnim does not exist
+	public static class State extends dev.elsewhere.bossart.nether.HurtAnim.State {
+	                                                                       ^
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:6: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                           ^
+  symbol:   class BossRenderState
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:7: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                           ^
+  symbol:   class BossRenderer
+  location: package dev.elsewhere.stub.nether_end_bosses
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:12: error: cannot find symbol
+public class AshtuskArtRenderer extends BossRenderer<Ashtusk, BossRenderState, AshtuskArtModel> {
+                                        ^
+  symbol: class BossRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:12: error: cannot find symbol
+public class AshtuskArtRenderer extends BossRenderer<Ashtusk, BossRenderState, AshtuskArtModel> {
+                                                              ^
+  symbol: class BossRenderState
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:22: error: cannot find symbol
+	public BossRenderState createRenderState() {
+	       ^
+  symbol:   class BossRenderState
+  location: class AshtuskArtRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:27: error: cannot find symbol
+	public void extractRenderState(Ashtusk entity, BossRenderState state, float partialTicks) {
+	                                               ^
+  symbol:   class BossRenderState
+  location: class AshtuskArtRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:33: error: cannot find symbol
+	public Identifier getTextureLocation(BossRenderState state) {
+	                                     ^
+  symbol:   class BossRenderState
+  location: class AshtuskArtRenderer
+/home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtRenderer.java:6: error: cannot find symbol
+import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                           ^
+  symbol:   class BossRenderer
+  location: package dev.elsewhere.stub.nether_end_bosses
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+100 errors
+
+> Task :compileClientJava FAILED
+
+[Incubating] Problems report is available at: file:///home/user/elsewhere-releases/ElsewhereBeta/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileClientJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:6: error: package dev.elsewhere.bossart.ironpeak does not exist
+  import static dev.elsewhere.bossart.ironpeak.Anim.ch;
+                                              ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:7: error: package dev.elsewhere.bossart.ironpeak does not exist
+  import static dev.elsewhere.bossart.ironpeak.Anim.k;
+                                              ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:8: error: package dev.elsewhere.bossart.ironpeak does not exist
+  import static dev.elsewhere.bossart.ironpeak.Anim.pos;
+                                              ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:9: error: package dev.elsewhere.bossart.ironpeak does not exist
+  import static dev.elsewhere.bossart.ironpeak.Anim.rot;
+                                              ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:27: error: package dev.elsewhere.bossart.nether.HurtAnim does not exist
+  	public static class State extends dev.elsewhere.bossart.nether.HurtAnim.State {
+  	                                                                       ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:11: error: package SolaxisArtModel does not exist
+  public class SolaxisArtRenderer extends BossRenderer<Solaxis, SolaxisArtModel.State, SolaxisArtModel> {
+                                                                               ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:22: error: package SolaxisArtModel does not exist
+  	public SolaxisArtModel.State createRenderState() {
+  	                      ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:27: error: package SolaxisArtModel does not exist
+  	public void extractRenderState(Solaxis entity, SolaxisArtModel.State state, float partialTicks) {
+  	                                                              ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:36: error: package SolaxisArtModel does not exist
+  	public Identifier getTextureLocation(SolaxisArtModel.State state) {
+  	                                                    ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:16: error: package dev.elsewhere.bossart.nether.HurtAnim does not exist
+  	public static class State extends dev.elsewhere.bossart.nether.HurtAnim.State {
+  	                                                                       ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:6: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.ironpeak.Anim.ch;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:7: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.ironpeak.Anim.k;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:8: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.ironpeak.Anim.pos;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:9: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.ironpeak.Anim.rot;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:3: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:4: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:5: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:6: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:3: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:4: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:5: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:6: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:3: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:4: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:5: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:3: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:4: error: static import only from classes and interfaces
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+  ^
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:19: error: cannot find symbol
+  public class GrimhornModel extends EntityModel<GrimhornRenderState> {
+                                                 ^
+    symbol: class GrimhornRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:16: error: cannot find symbol
+  public class HrolfRenderer extends MobRenderer<HrolfBoss, HrolfRenderState, HrolfModel> {
+                                                            ^
+    symbol: class HrolfRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:16: error: cannot find symbol
+  public class HrolfRenderer extends MobRenderer<HrolfBoss, HrolfRenderState, HrolfModel> {
+                                                                              ^
+    symbol: class HrolfModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:14: error: cannot find symbol
+  public class HeliodorRenderer extends MobRenderer<Heliodor, HeliodorRenderState, HeliodorModel> {
+                                                              ^
+    symbol: class HeliodorRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:14: error: cannot find symbol
+  public class HeliodorRenderer extends MobRenderer<Heliodor, HeliodorRenderState, HeliodorModel> {
+                                                                                   ^
+    symbol: class HeliodorModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtRenderer.java:27: error: cannot find symbol
+  public class AphelionArtRenderer extends BossRenderer<Aphelion, AphelionArtModel.State, AphelionArtModel> {
+                                           ^
+    symbol: class BossRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:16: error: cannot find symbol
+  public class ThurgrimRenderer extends MobRenderer<ThurgrimBoss, ThurgrimRenderState, ThurgrimModel> {
+                                                                  ^
+    symbol: class ThurgrimRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:16: error: cannot find symbol
+  public class ThurgrimRenderer extends MobRenderer<ThurgrimBoss, ThurgrimRenderState, ThurgrimModel> {
+                                                                                       ^
+    symbol: class ThurgrimModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:11: error: cannot find symbol
+  public class SolaxisArtRenderer extends BossRenderer<Solaxis, SolaxisArtModel.State, SolaxisArtModel> {
+                                          ^
+    symbol: class BossRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:11: error: cannot find symbol
+  public class SolaxisArtRenderer extends BossRenderer<Solaxis, SolaxisArtModel.State, SolaxisArtModel> {
+                                                                                       ^
+    symbol: class SolaxisArtModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:30: error: cannot find symbol
+  public class AnkharaRenderer extends MobRenderer<Ankhara, AnkharaRenderState, AnkharaModel> {
+                                                            ^
+    symbol: class AnkharaRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:30: error: cannot find symbol
+  public class AnkharaRenderer extends MobRenderer<Ankhara, AnkharaRenderState, AnkharaModel> {
+                                                                                ^
+    symbol: class AnkharaModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:17: error: cannot find symbol
+  public class MournmawArtModel extends EntityModel<BossRenderState> {
+                                                    ^
+    symbol: class BossRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:12: error: cannot find symbol
+  public class MournmawArtRenderer extends BossRenderer<Mournmaw, BossRenderState, MournmawArtModel> {
+                                           ^
+    symbol: class BossRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:12: error: cannot find symbol
+  public class MournmawArtRenderer extends BossRenderer<Mournmaw, BossRenderState, MournmawArtModel> {
+                                                                  ^
+    symbol: class BossRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:15: error: cannot find symbol
+  public class AshtuskArtModel extends EntityModel<BossRenderState> {
+                                                   ^
+    symbol: class BossRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:12: error: cannot find symbol
+  public class AshtuskArtRenderer extends BossRenderer<Ashtusk, BossRenderState, AshtuskArtModel> {
+                                          ^
+    symbol: class BossRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:12: error: cannot find symbol
+  public class AshtuskArtRenderer extends BossRenderer<Ashtusk, BossRenderState, AshtuskArtModel> {
+                                                                ^
+    symbol: class BossRenderState
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/GrimhornModel.java:50: error: cannot find symbol
+  	public void setupAnim(GrimhornRenderState s) {
+  	                      ^
+    symbol:   class GrimhornRenderState
+    location: class GrimhornModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:29: error: cannot find symbol
+  	public HrolfRenderState createRenderState() {
+  	       ^
+    symbol:   class HrolfRenderState
+    location: class HrolfRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:34: error: cannot find symbol
+  	public void extractRenderState(HrolfBoss boss, HrolfRenderState s, float partial) {
+  	                                               ^
+    symbol:   class HrolfRenderState
+    location: class HrolfRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:58: error: cannot find symbol
+  	public Identifier getTextureLocation(HrolfRenderState s) {
+  	                                     ^
+    symbol:   class HrolfRenderState
+    location: class HrolfRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/hrolf/HrolfRenderer.java:63: error: cannot find symbol
+  	protected void scale(HrolfRenderState s, PoseStack pose) {
+  	                     ^
+    symbol:   class HrolfRenderState
+    location: class HrolfRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:25: error: cannot find symbol
+  	private static float glow(HeliodorRenderState s, float t) {
+  	                          ^
+    symbol:   class HeliodorRenderState
+    location: class HeliodorRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:32: error: cannot find symbol
+  	public HeliodorRenderState createRenderState() {
+  	       ^
+    symbol:   class HeliodorRenderState
+    location: class HeliodorRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:37: error: cannot find symbol
+  	public Identifier getTextureLocation(HeliodorRenderState state) {
+  	                                     ^
+    symbol:   class HeliodorRenderState
+    location: class HeliodorRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/heliodor/HeliodorRenderer.java:47: error: cannot find symbol
+  	public void extractRenderState(Heliodor e, HeliodorRenderState s, float partialTicks) {
+  	                                           ^
+    symbol:   class HeliodorRenderState
+    location: class HeliodorRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtRenderer.java:8: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                             ^
+    symbol:   class BossRenderer
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:3: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:4: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:5: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:6: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/aphelion/AphelionArtModel.java:8: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                             ^
+    symbol:   class BossRenderState
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:29: error: cannot find symbol
+  	public ThurgrimRenderState createRenderState() {
+  	       ^
+    symbol:   class ThurgrimRenderState
+    location: class ThurgrimRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:34: error: cannot find symbol
+  	public void extractRenderState(ThurgrimBoss boss, ThurgrimRenderState s, float partial) {
+  	                                                  ^
+    symbol:   class ThurgrimRenderState
+    location: class ThurgrimRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:50: error: cannot find symbol
+  	public Identifier getTextureLocation(ThurgrimRenderState s) {
+  	                                     ^
+    symbol:   class ThurgrimRenderState
+    location: class ThurgrimRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/thurgrim/ThurgrimRenderer.java:55: error: cannot find symbol
+  	protected void scale(ThurgrimRenderState s, PoseStack pose) {
+  	                     ^
+    symbol:   class ThurgrimRenderState
+    location: class ThurgrimRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/solaxis/SolaxisArtRenderer.java:6: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                             ^
+    symbol:   class BossRenderer
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:38: error: cannot find symbol
+  	private final AnkharaSegmentModel segment;
+  	              ^
+    symbol:   class AnkharaSegmentModel
+    location: class AnkharaRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:52: error: cannot find symbol
+  	private static float glow(AnkharaRenderState s) {
+  	                          ^
+    symbol:   class AnkharaRenderState
+    location: class AnkharaRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:95: error: cannot find symbol
+  	public AnkharaRenderState createRenderState() {
+  	       ^
+    symbol:   class AnkharaRenderState
+    location: class AnkharaRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:100: error: cannot find symbol
+  	public Identifier getTextureLocation(AnkharaRenderState state) {
+  	                                     ^
+    symbol:   class AnkharaRenderState
+    location: class AnkharaRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:110: error: cannot find symbol
+  	protected float getShadowRadius(AnkharaRenderState state) {
+  	                                ^
+    symbol:   class AnkharaRenderState
+    location: class AnkharaRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:120: error: cannot find symbol
+  	public void extractRenderState(Ankhara e, AnkharaRenderState s, float partialTicks) {
+  	                                          ^
+    symbol:   class AnkharaRenderState
+    location: class AnkharaRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/ankhara/AnkharaRenderer.java:155: error: cannot find symbol
+  	public void submit(AnkharaRenderState s, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+  	                   ^
+    symbol:   class AnkharaRenderState
+    location: class AnkharaRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/glasswaste/BossArtGlasswasteClient.java:3: error: cannot find symbol
+  import dev.elsewhere.bossart.ankhara.AnkharaModel;
+                                      ^
+    symbol:   class AnkharaModel
+    location: package dev.elsewhere.bossart.ankhara
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/glasswaste/BossArtGlasswasteClient.java:5: error: cannot find symbol
+  import dev.elsewhere.bossart.ankhara.AnkharaSegmentModel;
+                                      ^
+    symbol:   class AnkharaSegmentModel
+    location: package dev.elsewhere.bossart.ankhara
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/glasswaste/BossArtGlasswasteClient.java:6: error: cannot find symbol
+  import dev.elsewhere.bossart.heliodor.HeliodorModel;
+                                       ^
+    symbol:   class HeliodorModel
+    location: package dev.elsewhere.bossart.heliodor
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:3: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:4: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.pos;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:5: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:6: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:9: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                             ^
+    symbol:   class BossRenderState
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtModel.java:83: error: cannot find symbol
+  	public void setupAnim(BossRenderState s) {
+  	                      ^
+    symbol:   class BossRenderState
+    location: class MournmawArtModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:6: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                             ^
+    symbol:   class BossRenderState
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:7: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                             ^
+    symbol:   class BossRenderer
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:23: error: cannot find symbol
+  	public BossRenderState createRenderState() {
+  	       ^
+    symbol:   class BossRenderState
+    location: class MournmawArtRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:28: error: cannot find symbol
+  	public void extractRenderState(Mournmaw entity, BossRenderState state, float partialTicks) {
+  	                                                ^
+    symbol:   class BossRenderState
+    location: class MournmawArtRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/mournmaw/MournmawArtRenderer.java:34: error: cannot find symbol
+  	public Identifier getTextureLocation(BossRenderState state) {
+  	                                     ^
+    symbol:   class BossRenderState
+    location: class MournmawArtRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:3: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:4: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:5: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.scale;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:8: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                             ^
+    symbol:   class BossRenderState
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtModel.java:63: error: cannot find symbol
+  	public void setupAnim(BossRenderState s) {
+  	                      ^
+    symbol:   class BossRenderState
+    location: class AshtuskArtModel
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:3: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.def;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:4: error: cannot find symbol
+  import static dev.elsewhere.bossart.nether.ArtAnim.rot;
+                                            ^
+    symbol:   class ArtAnim
+    location: package dev.elsewhere.bossart.nether
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtModel.java:7: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                             ^
+    symbol:   class BossRenderState
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:6: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderState;
+                                             ^
+    symbol:   class BossRenderState
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:7: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                             ^
+    symbol:   class BossRenderer
+    location: package dev.elsewhere.stub.nether_end_bosses
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:22: error: cannot find symbol
+  	public BossRenderState createRenderState() {
+  	       ^
+    symbol:   class BossRenderState
+    location: class AshtuskArtRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:27: error: cannot find symbol
+  	public void extractRenderState(Ashtusk entity, BossRenderState state, float partialTicks) {
+  	                                               ^
+    symbol:   class BossRenderState
+    location: class AshtuskArtRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/AshtuskArtRenderer.java:33: error: cannot find symbol
+  	public Identifier getTextureLocation(BossRenderState state) {
+  	                                     ^
+    symbol:   class BossRenderState
+    location: class AshtuskArtRenderer
+  /home/user/elsewhere-releases/ElsewhereBeta/src/client/java/dev/elsewhere/bossart/grunthar/GruntharArtRenderer.java:6: error: cannot find symbol
+  import dev.elsewhere.stub.nether_end_bosses.BossRenderer;
+                                             ^
+    symbol:   class BossRenderer
+    location: package dev.elsewhere.stub.nether_end_bosses
+  Note: Some input files use or override a deprecated API.
+  Note: Recompile with -Xlint:deprecation for details.
+  100 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 27s
+3 actionable tasks: 3 executed
