@@ -564,14 +564,16 @@
           "scene": 356,
           "line": 404,
           "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:08:27"
         },
         {
           "file": "s_locate__castle_azmar_ground.png",
           "scene": 356,
           "line": 404,
           "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:08:30"
         }
       ],
       "elsewhere:waterfront_hrafnholt": [
@@ -580,14 +582,18 @@
           "scene": 357,
           "line": 405,
           "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
-          "status": "pending"
+          "status": "fail",
+          "detail": "locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "20:08:30"
         },
         {
           "file": "s_locate__waterfront_hrafnholt_ground.png",
           "scene": 357,
           "line": 405,
           "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
-          "status": "pending"
+          "status": "fail",
+          "detail": "locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it",
+          "taken": "20:08:30"
         }
       ],
       "explorer map to a rival castle": [
@@ -715,10 +721,10 @@
       ]
     }
   },
-  "run": "20:07:57",
+  "run": "20:08:33",
   "totals": {
-    "ok": 75,
-    "fail": 1,
-    "manual": 0
+    "ok": 77,
+    "fail": 3,
+    "manual": 13
   }
 }

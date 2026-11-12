@@ -14,3 +14,42 @@ remote: Create a pull request for 'cloud-shots-4' on GitHub by visiting:
 remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-4        
 remote: 
 published 30 PNGs (progress) -> cloud-shots-4 a8c029f
+published 75 PNGs (progress) -> cloud-shots-4 6c13ec7
+client rc=0
+[20:06:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p9_idle__serf_work_animations_all_four_tiers.png: summon: entity type elsewhere:hrafnholt_thrall is not registered in this build
+[20:08:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_locate__waterfront_hrafnholt_overview.png: locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it
+[20:08:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_locate__waterfront_hrafnholt_ground.png: locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 324 (s_p9_idle | Pose.SIT, all four kingdoms (sit at the fire)): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 325 (s_p9_idle | Pose.SALUTE, all four kingdoms + one unarmed Aldermark): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 327 (s_p9_idle | Pose.CARRY, all four kingdoms (carry)): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 329 (s_p9_idle | Pose.LOUNGE, Pose.PRAY and Pose.KNEEL (Azmar siesta, dawn rite)): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 330 (s_p9_idle | Pose.SPAR and Pose.CHEER): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 334 (s_p9_idle | serf hauling (SERF_CARRY)): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 335 (s_p9_idle | serf tier skins on a fresh join (sync fix)): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 336 (s_p9_idle | pose LOD and gating): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 337 (s_p9_idle | kill switches): needs a separate client launch with the kill switch off (config is read at start)
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 344 (s_p10_tabard | tabard emblems, back): needs a live kingdom town/army state the runner cannot set up by command
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 350 (s_p10_tabard | kill switches): needs a separate client launch with the kill switch off (config is read at start)
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 355 (s_rulerarmor | kill switch): needs a separate client launch with the kill switch off (config is read at start)
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 361 (s_setbonus_b | Steady Aim, no spread): no id, view or command in the line
+[20:08:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 77 ok, 3 fail, 13 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[20:05:33] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:05:33] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[20:05:33] [Worker-Main-3/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[20:05:37] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:05:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] 26 flat-stage scenes, 2 worldgen scenes, 13 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[20:05:42] [Worker-Main-2/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+20:08:55Z finished rc=0, 77 PNGs;  TOTAL 77 ok, 3 fail, 13 manual
