@@ -13,3 +13,34 @@ greenleaf-2.1.0.jar
 testmeter-1.1.1.jar
 merged jar elsewhere-3.0.0.jar 133327905 bytes in 76 s
 22:56:25Z client: scenes 429,430,432,433,434,435,482,484, watchdog 90 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+remote: 
+remote: Create a pull request for 'cloud-shots-g2' on GitHub by visiting:        
+remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-g2        
+remote: 
+published 6 PNGs (progress) -> cloud-shots-g2 29ce83e
+client rc=0
+[22:59:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 18 ok, 0 fail, 0 manual
+[22:57:17] [main/WARN] (FabricLoader/Mixin) Error loading class: de/siphalor/amecs/key_modifiers/impl/AmecsKeyModifiersEarlyInit (java.lang.ClassNotFoundException: de/siphalor/amecs/key_modifiers/impl/AmecsKeyModifiersEarlyInit)
+[22:57:18] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
+[22:57:19] [Datafixer Bootstrap #0/INFO] (Minecraft) 307 Datafixer optimizations took 629 milliseconds
+--
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:57:26] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:57:27] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[22:57:27] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[22:57:30] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:57:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] 6 flat-stage scenes, 2 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:57:33] [Worker-Main-1/INFO] (Minecraft) Loaded 1951 advancements
+--
+boss_music client selftest:
+23:00:13Z finished rc=0, 18 PNGs;  TOTAL 18 ok, 0 fail, 0 manual

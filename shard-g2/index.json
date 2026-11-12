@@ -71,14 +71,16 @@
           "scene": 433,
           "line": 483,
           "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:17"
         },
         {
           "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png",
           "scene": 433,
           "line": 483,
           "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:20"
         }
       ],
       "elsewhere:everflow_bong": [
@@ -87,35 +89,40 @@
           "scene": 434,
           "line": 484,
           "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:21"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_third_person.png",
           "scene": 434,
           "line": 484,
           "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:22"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_first_person_2.png",
           "scene": 435,
           "line": 485,
           "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:34"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_third_person_2.png",
           "scene": 435,
           "line": 485,
           "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:34"
         },
         {
           "file": "s_compat_greenhaze__everflow_bong_tooltip.png",
           "scene": 435,
           "line": 485,
           "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:58:35"
         }
       ]
     },
@@ -126,14 +133,16 @@
           "scene": 482,
           "line": 534,
           "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:04"
         },
         {
           "file": "s_struct_greenhaze__sesh_hut_ground.png",
           "scene": 482,
           "line": 534,
           "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:09"
         }
       ],
       "elsewhere:listening_engine": [
@@ -142,21 +151,23 @@
           "scene": 484,
           "line": 536,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:19"
         },
         {
           "file": "s_struct_greenhaze__listening_engine_ground.png",
           "scene": 484,
           "line": 536,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:59:25"
         }
       ]
     }
   },
-  "run": "22:57:55",
+  "run": "22:59:27",
   "totals": {
-    "ok": 7,
+    "ok": 18,
     "fail": 0,
     "manual": 0
   }
