@@ -14,3 +14,42 @@ remote: Create a pull request for 'cloud-shots-6' on GitHub by visiting:
 remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-6        
 remote: 
 published 30 PNGs (progress) -> cloud-shots-6 c42b41d
+published 51 PNGs (progress) -> cloud-shots-6 861799f
+client rc=0
+[20:05:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_pennant__standard_waving_with_minions_gear3.png: view: target is gone before the camera was placed
+[20:05:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_pennant__standard_waving_with_minions_gear3_later.png: view: target is gone before the camera was placed
+[20:08:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_reliquary__echo_knight_entity_idle_beside_its_owner.png: view: target is gone before the camera was placed
+[20:08:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png: view: target is gone before the camera was placed
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 413 (s_vlook_ald | villages_aldermark_overview + villages_aldermark_overview_street + villages_aldermark_palisade (kingdom_villages VillagesScreenshots client gametest, Aldermark village after its rebuild)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 414 (s_vlook_ald | ald_hill_village_overview + ald_hill_village_tower + ald_hill_village_gatehouse + ald_hill_village_palisade_slope (kingdom_villages AldLookShots client gametest)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 415 (s_vlook_ald | ald_hill_outpost_overview + ald_hill_outpost_gate (AldLookShots)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 416 (s_vlook_ald | ald_hamlet_farmstead (AldLookShots)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 417 (s_vlook_ald | kill switches): needs a separate client launch with the kill switch off (config is read at start)
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 420 (s_ascension | Full Ascendant Galeplate set worn (gear3)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 422 (s_pennant | Standard planted (gear3)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 424 (s_pennant | Standard comes down (gear3)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 440 (s_impostors | Break-out moment): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 441 (s_impostors | Ranks marching and fighting by dice at distance): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 444 (s_p7_standing | Trader dialogue in the other three kingdoms): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 69 ok, 4 fail, 11 manual
+MinecraftClientHttpException[type=HTTP_ERROR, status=429, response=null]
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.buildHttpException(MinecraftClient.java:167)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:147)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.getWithEtag(MinecraftClient.java:81)
+--
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[20:05:12] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:05:12] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, vanilla, elsewhere, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader
+[20:05:13] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[20:05:17] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:05:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] 28 flat-stage scenes, 5 worldgen scenes, 11 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[20:05:21] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+20:09:08Z finished rc=0, 69 PNGs;  TOTAL 69 ok, 4 fail, 11 manual

@@ -663,3 +663,291 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:07:23] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [20:07:23] [Server thread/INFO] (Minecraft) System chat: Wave battle aldermark v hrafnholt, 30 a side: 32 live now, the rest come in waves
 [20:07:23] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -48.000000, -23.500000
+[20:07:35] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2004ms or 40 ticks behind
+[20:07:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_impostors__battle_aldermark_hrafnholt_30_30s.png: 
+[20:07:54] [Server thread/INFO] (elsewhere-kingdom) Armies wave battle -1 ended: attacker won; attacker 27/30 left, defender 26/30 left (0 + 0 waves)
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: Stopped 1 wave battle(s)
+[20:07:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 442 (s_impostors | Rout at the end of a battle) done in 31475 ms
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: Summoned new Lawspeaker
+[20:07:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 3.370000, -59.420000, 2.400000
+[20:07:55] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 1000 tick(s)
+[20:07:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on.png: 
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on_later.png: 
+[20:07:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 443 (s_p7_standing | elsewhere:kingdom_lawspeaker) done in 4267 ms
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: Summoned new Market Inspector
+[20:07:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 3.370000, -59.420000, 2.400000
+[20:08:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p7_standing__hostile_trader_dialogue.png: 
+[20:08:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 445 (s_p7_standing | elsewhere:kingdom_market_inspector) done in 1450 ms
+[20:08:00] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:00] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:08:00] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:08:00] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:00] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:08:00] [Server thread/INFO] (Minecraft) System chat: Summoned new Lord Marshal
+[20:08:00] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 3.370000, -59.420000, 2.400000
+[20:08:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p7_standing__standing_chip_when_looking_at_a_ruler.png: 
+[20:08:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 446 (s_p7_standing | elsewhere:court_marshal) done in 1443 ms
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:01] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Echo Reliquary]
+[20:08:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_reliquary__echo_reliquary_held.png: 
+[20:08:02] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:08:02] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:08:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_reliquary__echo_reliquary_tooltip.png: 
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:08:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 447 (s_reliquary | elsewhere:echo_reliquary) done in 1817 ms
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Summoned new Echo Knight
+[20:08:03] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 448 stopped at view: target is gone before the camera was placed
+[20:08:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_reliquary__echo_knight_entity_idle_beside_its_owner.png: view: target is gone before the camera was placed
+[20:08:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png: view: target is gone before the camera was placed
+[20:08:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 448 (s_reliquary | elsewhere:echo_knight) done in 151 ms
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Summoned new Echo Knight
+[20:08:03] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 3.370000, -59.420000, 2.400000
+[20:08:04] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[20:08:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_reliquary__echo_knight_striking.png: 
+[20:08:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_reliquary__echo_knight_striking_later.png: 
+[20:08:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 449 (s_reliquary | elsewhere:echo_knight) done in 4216 ms
+[20:08:07] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:07] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:08:07] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:08:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:08:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:07] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:08:07] [Server thread/INFO] (Minecraft) System chat: Summoned new Sultana Nahira Zahr-Qadir
+[20:08:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 3.370000, -60.000000, 2.400000
+[20:08:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_foresight__boss_bar_during_a_wind_up_azmar_sultana.png: 
+[20:08:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 450 (s_foresight | elsewhere:azmar_sultana) done in 1622 ms
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Stormcrest Helm]
+[20:08:09] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Stormcrest Helm]
+[20:08:09] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[20:08:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_foresight__stormcrest_helm_first_person.png: 
+[20:08:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_foresight__stormcrest_helm_third_person.png: 
+[20:08:11] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:08:11] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[20:08:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_foresight__stormcrest_helm_tooltip.png: 
+[20:08:11] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:08:11] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:08:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 451 (s_foresight | elsewhere:stormcrest_helm) done in 2446 ms
+[20:08:11] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:08:11] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:08:11] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:08:11] [Server thread/INFO] (Minecraft) Stopping server
+[20:08:11] [Server thread/INFO] (Minecraft) Saving players
+[20:08:11] [Server thread/INFO] (Minecraft) Saving worlds
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:08:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:08:13] [Worker-Main-1/INFO] (Minecraft) Loaded 1931 advancements
+[20:08:13] [Render thread/INFO] (Elsewhere) Loaded 7 Wayfinder attunements
+[20:08:13] [Render thread/INFO] (elsewhere-kingdom) Army scale loaded for 4 kingdoms: [elsewhere:mirewick, elsewhere:aldermark, elsewhere:azmar, elsewhere:hrafnholt]
+[20:08:13] [Render thread/INFO] (elsewhere-kingdom) Loaded 4 kingdom factions: [elsewhere:hrafnholt, elsewhere:azmar, elsewhere:aldermark, elsewhere:mirewick]
+[20:08:13] [Render thread/INFO] (elsewhere-kingdom) Townsfolk roles loaded for 4 kingdoms: [elsewhere:mirewick, elsewhere:aldermark, elsewhere:azmar, elsewhere:hrafnholt]
+[20:08:13] [Render thread/INFO] (elsewhere-kingdom) Loaded 80 kingdom unit types
+[20:08:13] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.GenericMessageScreen@97da31c
+[20:08:13] [Render thread/INFO] (BiomeModificationImpl) Applied 58 biome modifications to 35 of 102 new biomes in 7.816 ms
+[20:08:13] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 26.3
+[20:08:13] [Server thread/INFO] (Minecraft) Generating keypair
+[20:08:14] [Server thread/INFO] (Minecraft) Selecting global world spawn...
+[20:08:17] [Server thread/INFO] (Minecraft) Loading 0 persistent chunks...
+[20:08:17] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:08:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:08:17] [Server thread/WARN] (TranslationConventionLogWarnings) 
+	Dev warning - Untranslated Item Tags detected. Please translate your item tags so other mods such as recipe viewers can properly display your tag's name.
+	The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods.
+	To disable this message, set this system property in your runs: `-Dfabric-tag-conventions-v2.missingTagTranslationWarning=SILENCED`.
+	To see individual untranslated item tags found, set the system property to `-Dfabric-tag-conventions-v2.missingTagTranslationWarning=VERBOSE`.
+	Default is `SHORT`.
+
+[20:08:17] [Server thread/INFO] (Elsewhere) Bounty boards: 7 traders
+[20:08:17] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:aldermark realm site: BlockPos{x=1368, y=69, z=-1304}
+[20:08:17] [Server thread/INFO] (elsewhere-kingdom-court) Rival realm placement of [elsewhere:azmar, elsewhere:hrafnholt, elsewhere:mirewick] took 550 ms: {elsewhere:azmar=BlockPos{x=952, y=85, z=-4472}, elsewhere:hrafnholt=BlockPos{x=1576, y=81, z=-7160}, elsewhere:mirewick=BlockPos{x=2888, y=116, z=-3672}}
+[20:08:17] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:azmar realm site: BlockPos{x=952, y=85, z=-4472}
+[20:08:17] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:hrafnholt realm site: BlockPos{x=1576, y=81, z=-7160}
+[20:08:17] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:mirewick realm site: BlockPos{x=2888, y=116, z=-3672}
+[20:08:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Server thread/INFO] (Minecraft) Loading 47 chunks for player spawn...
+[20:08:18] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:08:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:18] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:08:19] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:19] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:08:19] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:19] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[20:08:19] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:19] [Server thread/INFO] (Minecraft) Preparing spawn area: 24%
+[20:08:19] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:19] [Server thread/INFO] (Minecraft) Preparing spawn area: 24%
+[20:08:19] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:19] [Server thread/INFO] (Minecraft) Preparing spawn area: 29%
+[20:08:20] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:20] [Server thread/INFO] (Minecraft) Preparing spawn area: 29%
+[20:08:20] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:20] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2014ms or 40 ticks behind
+[20:08:20] [Server thread/INFO] (Minecraft) Preparing spawn area: 46%
+[20:08:20] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:20] [Server thread/INFO] (Minecraft) Preparing spawn area: 57%
+[20:08:20] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:20] [Server thread/INFO] (Minecraft) Preparing spawn area: 57%
+[20:08:20] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:20] [Server thread/INFO] (Minecraft) Preparing spawn area: 57%
+[20:08:20] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:20] [Server thread/INFO] (Minecraft) Preparing spawn area: 100%
+[20:08:20] [Server thread/INFO] (Minecraft) Time elapsed: 6810 ms
+[20:08:21] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:21] [Server thread/INFO] (Minecraft) ShotRunner[local:E:e3f11fd2] logged in with entity id 315 at (-4.5, 63.0, -8.5)
+[20:08:21] [Server thread/INFO] (Minecraft) System chat: ShotRunner joined the game
+[20:08:21] [Server thread/INFO] (Minecraft) Changing view distance to 5, from 10
+[20:08:21] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[20:08:21] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[20:08:21] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:21] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:21] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:21] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:22] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:22] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:22] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:22] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2967b7d3
+[20:08:22] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: null
+[20:08:25] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Game rule random_tick_speed is now set to 0
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Game rule spawn_mobs is now set to false
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: gamerule do_daylight_cycle false<--[HERE]
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: gamerule do_weather_cycle false<--[HERE]
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: gamerule do_mob_spawning false<--[HERE]
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Game rule send_command_feedback is now set to false
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Spectator Mode
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:08:26] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[20:08:31] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 952.500000, 105.000000, -4409.500000
+[20:08:39] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[20:08:39] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[20:08:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_azmar_c_0_14_62_y180.png: 
+[20:08:40] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 408 (s_layout_azmar | elsewhere:castle_azmar) done in 13729 ms
+[20:08:40] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:40] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:08:40] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:08:40] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[20:08:43] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1408.500000, 129.000000, -1253.500000
+[20:08:49] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 13949ms or 278 ticks behind
+[20:08:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_40_60_50_y140.png: 
+[20:08:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 409 (s_layout_azmar | elsewhere:castle_aldermark) done in 12287 ms
+[20:08:52] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:52] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:08:52] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:08:52] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[20:08:52] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 74.000000, -1293.500000
+[20:08:53] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
+[20:08:53] [Render thread/INFO] (Minecraft) Loaded 7 advancements
+[20:08:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_0_5_10_y180.png: 
+[20:08:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 410 (s_layout_azmar | elsewhere:castle_aldermark) done in 4913 ms
+[20:08:57] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:08:57] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:08:57] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:08:57] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:08:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[20:08:57] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 71.000000, -1306.500000
+[20:09:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_0_2_3_y180.png: 
+[20:09:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 411 (s_layout_azmar | elsewhere:castle_aldermark) done in 3078 ms
+[20:09:00] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:09:00] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:09:00] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:09:00] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:09:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[20:09:00] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 72.000000, -1319.500000
+[20:09:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_0_3_16_y180.png: 
+[20:09:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 412 (s_layout_azmar | elsewhere:castle_aldermark) done in 3327 ms
+[20:09:03] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:09:03] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:09:03] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:09:03] [Server thread/INFO] (Minecraft) Stopping server
+[20:09:03] [Server thread/INFO] (Minecraft) Saving players
+[20:09:03] [Server thread/INFO] (Minecraft) Saving worlds
+[20:09:04] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:09:05] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 413 (s_vlook_ald | villages_aldermark_overview + villages_aldermark_overview_street + villages_aldermark_palisade (kingdom_villages VillagesScreenshots client gametest, Aldermark village after its rebuild)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 414 (s_vlook_ald | ald_hill_village_overview + ald_hill_village_tower + ald_hill_village_gatehouse + ald_hill_village_palisade_slope (kingdom_villages AldLookShots client gametest)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 415 (s_vlook_ald | ald_hill_outpost_overview + ald_hill_outpost_gate (AldLookShots)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 416 (s_vlook_ald | ald_hamlet_farmstead (AldLookShots)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 417 (s_vlook_ald | kill switches): needs a separate client launch with the kill switch off (config is read at start)
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 420 (s_ascension | Full Ascendant Galeplate set worn (gear3)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 422 (s_pennant | Standard planted (gear3)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 424 (s_pennant | Standard comes down (gear3)): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 440 (s_impostors | Break-out moment): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 441 (s_impostors | Ranks marching and fighting by dice at distance): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 444 (s_p7_standing | Trader dialogue in the other three kingdoms): no id, view or command in the line
+[20:09:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 69 ok, 4 fail, 11 manual
+[20:09:05] [Render thread/INFO] (Minecraft) Stopping!
