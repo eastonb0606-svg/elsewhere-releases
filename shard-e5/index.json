@@ -1,0 +1,318 @@
+{
+  "lanes": {
+    "gear": {
+      "/calling readout": [
+        {
+          "file": "gear__calling_readout_chat.png",
+          "scene": 11,
+          "line": 16,
+          "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
+          "status": "ok",
+          "taken": "22:59:38"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:grunthar": [
+        {
+          "file": "anim__grunthar_hurt_peak.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:59:42"
+        },
+        {
+          "file": "anim__grunthar_hurt_rest.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:59:42"
+        }
+      ],
+      "elsewhere:aphelion": [
+        {
+          "file": "anim__aphelion_hurt_peak.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:59:45"
+        },
+        {
+          "file": "anim__aphelion_hurt_rest.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:59:46"
+        }
+      ],
+      "elsewhere:percolax": [
+        {
+          "file": "anim__percolax_hurt_peak.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__percolax_hurt_rest.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:grimhorn": [
+        {
+          "file": "anim__grimhorn_hurt_peak.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__grimhorn_hurt_rest.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ankhara": [
+        {
+          "file": "anim__ankhara_hurt_peak.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__ankhara_hurt_rest.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:mirewick_lantern_crook": [
+        {
+          "file": "items__mirewick_lantern_crook_held.png",
+          "scene": 118,
+          "line": 134,
+          "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__mirewick_lantern_crook_tooltip.png",
+          "scene": 118,
+          "line": 134,
+          "check": "icon matches the sprite page (16x16, Lantern Crook), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_blocking.png",
+          "scene": 146,
+          "line": 161,
+          "check": "rises to the vanilla blocking spot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:duelist_test (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase2.png",
+          "scene": 205,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_in_flight_and_stuck)": [
+        {
+          "file": "s_echoarrow__echo_arrow_in_flight.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "pending"
+        },
+        {
+          "file": "s_echoarrow__echo_arrow_stuck_2_blocks.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "rival kingdoms' plates (each kingdom unique)": [
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_6.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:rimeback": [
+        {
+          "file": "s_p2_telegraph__rimeback_breath_cone_helm_on.png",
+          "scene": 265,
+          "line": 301,
+          "check": "ONE yellow cone that turns with the breath (no stacked or trailing copies)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p1_bossbar": {
+      "boss bar v2 labels on a rival bar (the 'glyph_ lare' report)": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl.png",
+          "scene": 274,
+          "line": 310,
+          "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
+          "status": "pending"
+        },
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl_5s.png",
+          "scene": 274,
+          "line": 310,
+          "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "cape wave in motion": [
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 348,
+          "line": 391,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person.png",
+          "scene": 372,
+          "line": 420,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person.png",
+          "scene": 372,
+          "line": 420,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip.png",
+          "scene": 372,
+          "line": 420,
+          "check": "icon: an open iron jaw-trap seen from above (two toothed jaws, coil springs at the sides, gold trigger pan in the middle, purple cord bindings, crimson tag on a tether at the bottom right), not the old flat box; name \"Mire Snare\" (uncommon) and 4 lore lines, the last one red \"Single use: a sprung snare falls apart after 3 s\"; stack shows 8 max",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:59:46",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
