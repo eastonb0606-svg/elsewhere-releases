@@ -311,21 +311,24 @@
           "scene": 225,
           "line": 255,
           "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:00"
         },
         {
           "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png",
           "scene": 225,
           "line": 255,
           "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:01"
         },
         {
           "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png",
           "scene": 225,
           "line": 255,
           "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:02"
         }
       ],
       "nameplate LOD and range": [
@@ -334,21 +337,24 @@
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:10"
         },
         {
           "file": "s_p3_nameplates__nameplate_lod_and_range_12.png",
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:11"
         },
         {
           "file": "s_p3_nameplates__nameplate_lod_and_range_18.png",
           "scene": 226,
           "line": 256,
           "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:12"
         }
       ],
       "nameplates hidden behind walls and while crouching": [
@@ -357,14 +363,16 @@
           "scene": 227,
           "line": 257,
           "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:16"
         },
         {
           "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
           "scene": 227,
           "line": 257,
           "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:21"
         }
       ],
       "rival kingdoms' plates (each kingdom unique)": [
@@ -373,21 +381,24 @@
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:28"
         },
         {
           "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:30"
         },
         {
           "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
           "scene": 228,
           "line": 258,
           "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:31"
         }
       ],
       "court ruler plates": [
@@ -396,21 +407,24 @@
           "scene": 229,
           "line": 259,
           "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:37"
         },
         {
           "file": "s_p3_nameplates__court_ruler_plates_12.png",
           "scene": 229,
           "line": 259,
           "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:39"
         },
         {
           "file": "s_p3_nameplates__court_ruler_plates_18.png",
           "scene": 229,
           "line": 259,
           "check": "King: gold crown, \"King of Aldermark\" (or the realm's holder name) in light blue, shield crest; Marshal: coronet, \"Lord Marshal\", shield; Mirewick Lord: gold chain of office (never a crown), own name in purple tint, lantern crest; ruler plates still full at 15 blocks, gone at 17 (vanilla white name only when aiming at them)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:40"
         }
       ],
       "nameplate kill switch": []
@@ -422,126 +436,144 @@
           "scene": 231,
           "line": 261,
           "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:41"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_third_person.png",
           "scene": 231,
           "line": 261,
           "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:42"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
           "scene": 231,
           "line": 261,
           "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:42"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
           "scene": 231,
           "line": 261,
           "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:43"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_after_use.png",
           "scene": 231,
           "line": 261,
           "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:44"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_tooltip.png",
           "scene": 231,
           "line": 261,
           "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:44"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_first_person_2.png",
           "scene": 232,
           "line": 262,
           "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:45"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_third_person_2.png",
           "scene": 232,
           "line": 262,
           "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:46"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_in_use_first_person_2.png",
           "scene": 232,
           "line": 262,
           "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:47"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_in_use_third_person_2.png",
           "scene": 232,
           "line": 262,
           "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:47"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_after_use_2.png",
           "scene": 232,
           "line": 262,
           "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:48"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_tooltip_2.png",
           "scene": 232,
           "line": 262,
           "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:49"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
           "scene": 234,
           "line": 264,
           "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:52"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
           "scene": 234,
           "line": 264,
           "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:53"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
           "scene": 234,
           "line": 264,
           "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:54"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
           "scene": 234,
           "line": 264,
           "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:54"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
           "scene": 234,
           "line": 264,
           "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:55"
         },
         {
           "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
           "scene": 234,
           "line": 264,
           "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:56"
         }
       ],
       "elsewhere:gale_rapier": [
@@ -550,21 +582,24 @@
           "scene": 233,
           "line": 263,
           "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:50"
         },
         {
           "file": "s_p6_useanims__gale_rapier_third_person.png",
           "scene": 233,
           "line": 263,
           "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:50"
         },
         {
           "file": "s_p6_useanims__gale_rapier_tooltip.png",
           "scene": 233,
           "line": 263,
           "check": "shot 1: the rapier shows the wind-streak model (`gale_rapier_lunge`: bright blade + dashed pale-cyan line beside it), plain again when walking; shot 2: a straight thrust toward the crosshair (not a sideways swing) with a cyan ribbon",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:51"
         }
       ],
       "elsewhere:amethyst_wand": [
@@ -573,42 +608,48 @@
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:57"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_third_person.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:58"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_in_use_first_person.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:59"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_in_use_third_person.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:16:59"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_after_use.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:00"
         },
         {
           "file": "s_p6_useanims__amethyst_wand_tooltip.png",
           "scene": 235,
           "line": 265,
           "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:01"
         }
       ],
       "elsewhere:sculk_resonator": [
@@ -617,42 +658,48 @@
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:02"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_third_person.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:03"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_in_use_first_person.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:04"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_in_use_third_person.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:04"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_after_use.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:05"
         },
         {
           "file": "s_p6_useanims__sculk_resonator_tooltip.png",
           "scene": 236,
           "line": 266,
           "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:06"
         }
       ],
       "weapon effects level + kill switch": [
@@ -661,14 +708,16 @@
           "scene": 237,
           "line": 267,
           "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:11"
         },
         {
           "file": "s_p6_useanims__weapon_effects_level_kill_switch_5s.png",
           "scene": 237,
           "line": 267,
           "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:16"
         }
       ]
     },
@@ -679,14 +728,16 @@
           "scene": 238,
           "line": 268,
           "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:18"
         },
         {
           "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png",
           "scene": 238,
           "line": 268,
           "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:20"
         }
       ],
       "elsewhere:ironclan_raider": [
@@ -695,7 +746,8 @@
           "scene": 239,
           "line": 269,
           "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:22"
         }
       ],
       "elsewhere:ossuary_chorister": [
@@ -704,7 +756,8 @@
           "scene": 240,
           "line": 270,
           "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:23"
         }
       ],
       "elsewhere:hollow_stag": [
@@ -713,7 +766,8 @@
           "scene": 241,
           "line": 271,
           "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:25"
         }
       ]
     },
@@ -724,7 +778,9 @@
           "scene": 242,
           "line": 272,
           "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
-          "status": "pending"
+          "status": "fail",
+          "detail": "summon: entity type elsewhere:azmar_soldier_spawn_egg is not registered in this build",
+          "taken": "20:17:25"
         }
       ]
     },
@@ -763,10 +819,10 @@
       ]
     }
   },
-  "run": "20:15:52",
+  "run": "20:17:25",
   "totals": {
-    "ok": 24,
-    "fail": 0,
+    "ok": 78,
+    "fail": 1,
     "manual": 0
   }
 }
