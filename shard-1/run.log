@@ -7,3 +7,32 @@ OpenGL core profile version string: 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.0
 20:02:09Z merged jar: merge.py --sync + build dist
 merged jar elsewhere-3.0.0.jar 133168176 bytes in 82 s
 20:03:34Z client: scenes 279-284, watchdog 74 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+remote: 
+remote: Create a pull request for 'cloud-shots-1' on GitHub by visiting:        
+remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-1        
+remote: 
+published 8 PNGs (progress) -> cloud-shots-1 d1b994e
+client rc=0
+[20:05:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 19 ok, 0 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[20:04:42] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:04:42] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[20:04:42] [Worker-Main-1/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[20:04:46] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:04:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] 3 flat-stage scenes, 3 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[20:04:50] [Worker-Main-2/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+20:06:38Z finished rc=0, 19 PNGs;  TOTAL 19 ok, 0 fail, 0 manual
