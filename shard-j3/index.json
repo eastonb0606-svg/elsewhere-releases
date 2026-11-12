@@ -1,0 +1,121 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (azmar realm)": [
+        {
+          "file": "villages__village_near_azmar.png",
+          "scene": 4,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_azmarsize": {
+      "Azmar line relief: rank blocks of 5 (army.scale squad 5, relief wave 5 / 30 s at 85%)": [
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_10s.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "23:55:22"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "23:55:50"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_5s.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "23:55:16"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_palisade": [
+        {
+          "file": "s_dataclean__villages_aldermark_palisade.png",
+          "scene": 172,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Azmar looks (priest, scribe, porter, merchant x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_front.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "23:55:53"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_back.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "23:55:53"
+        }
+      ]
+    },
+    "s_langfix": {
+      "elsewhere:azmar_soldier_spawn_egg": [
+        {
+          "file": "s_langfix__azmar_soldier_spawn_egg_death_15t.png",
+          "scene": 242,
+          "line": 272,
+          "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
+          "status": "ok",
+          "taken": "23:55:56"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Hrafnholt jetty at dawn + hall feast": [
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_23000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_11000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "cape wave in motion": [
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 348,
+          "line": 391,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:55:56",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
