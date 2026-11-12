@@ -211,21 +211,24 @@
           "scene": 438,
           "line": 488,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:30"
         },
         {
           "file": "s_totems__azmar_sunglass_obelisk_third_person.png",
           "scene": 438,
           "line": 488,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:34"
         },
         {
           "file": "s_totems__azmar_sunglass_obelisk_tooltip.png",
           "scene": 438,
           "line": 488,
           "check": "sandstone obelisk with lapis glyphs, gold bands and pyramidion, a floating spinning amber lens; a thin gold beam to the husk that turns wider and whiter after 3 s; at night: no beam, the lens turns slowly",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:35"
         }
       ]
     },
@@ -236,7 +239,8 @@
           "scene": 447,
           "line": 497,
           "check": "a small crimson/gold chip fades in just under the crosshair within 0.2 s: lantern crest, \"the Lantern Republic of Mirewick\", \"Valued Client · Friendly +45\" and a thin band bar; fades out over 0.2 s on looking away; shows through glass, never through stone; /diplomacy standing mirewick -80, look away for 5 s and back: the chip turns to \"Defaulter · Hostile -80\" with a red \"Attacks you on sight\" line; hidden in any open screen, F1, and with the Elsewhere HUD \"standing\" meter off",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:37"
         }
       ]
     },
@@ -247,14 +251,16 @@
           "scene": 450,
           "line": 500,
           "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:41"
         },
         {
           "file": "s_reliquary__echo_knight_striking_later.png",
           "scene": 450,
           "line": 500,
           "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:43"
         }
       ]
     },
@@ -265,21 +271,24 @@
           "scene": 462,
           "line": 514,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:45"
         },
         {
           "file": "s_willolantern__mirewick_will_o_lantern_third_person.png",
           "scene": 462,
           "line": 514,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:46"
         },
         {
           "file": "s_willolantern__mirewick_will_o_lantern_tooltip.png",
           "scene": 462,
           "line": 514,
           "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:47"
         }
       ]
     },
@@ -290,49 +299,55 @@
           "scene": 473,
           "line": 525,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:48"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
           "scene": 473,
           "line": 525,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:49"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
           "scene": 473,
           "line": 525,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:49"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
           "scene": 473,
           "line": 525,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:50"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
           "scene": 473,
           "line": 525,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:51"
         },
         {
           "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
           "scene": 473,
           "line": 525,
           "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:52"
         }
       ]
     }
   },
-  "run": "23:14:29",
+  "run": "23:14:53",
   "totals": {
-    "ok": 21,
+    "ok": 36,
     "fail": 2,
     "manual": 0
   }

@@ -502,3 +502,119 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [23:14:29] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
 [23:14:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
 [23:14:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__azmar_sunglass_obelisk_first_person.png: 
+[23:14:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__azmar_sunglass_obelisk_third_person.png: 
+[23:14:34] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[23:14:34] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[23:14:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_totems__azmar_sunglass_obelisk_tooltip.png: 
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[23:14:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 438 (s_totems | elsewhere:azmar_sunglass_obelisk) done in 5842 ms
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Standing in mirewick set to 45
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Summoned new Lord Marshal
+[23:14:35] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p7_standing__standing_chip_when_looking_at_a_ruler.png: 
+[23:14:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 447 (s_p7_standing | elsewhere:court_marshal) done in 2520 ms
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: The base value for attribute Minion Slots for entity ShotRunner set to 2.0
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Echo Reliquary]
+[23:14:37] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:40] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[23:14:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_reliquary__echo_knight_striking.png: 
+[23:14:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_reliquary__echo_knight_striking_later.png: 
+[23:14:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 450 (s_reliquary | elsewhere:echo_knight) done in 5962 ms
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Lantern]
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Will-o'-Lantern]
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Will-o'-Lantern]
+[23:14:43] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_willolantern__mirewick_will_o_lantern_first_person.png: 
+[23:14:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_willolantern__mirewick_will_o_lantern_third_person.png: 
+[23:14:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_willolantern__mirewick_will_o_lantern_tooltip.png: 
+[23:14:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 462 (s_willolantern | elsewhere:mirewick_will_o_lantern) done in 3474 ms
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: The base value for attribute Minion Slots for entity ShotRunner set to 3.0
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:47] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [War-Yak Horn]
+[23:14:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_first_person_2.png: 
+[23:14:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_third_person_2.png: 
+[23:14:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_in_use_first_person.png: 
+[23:14:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_in_use_third_person.png: 
+[23:14:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_after_use.png: 
+[23:14:51] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[23:14:51] [Server thread/INFO] (Minecraft) System chat: Unable to apply this effect (target is either immune to effects, or has something stronger)
+[23:14:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_tooltip_2.png: 
+[23:14:52] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[23:14:52] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[23:14:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 473 (s_waryak | elsewhere:ironpeak_war_yak_horn) done in 5739 ms
+[23:14:52] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[23:14:52] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[23:14:52] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[23:14:52] [Server thread/INFO] (Minecraft) Stopping server
+[23:14:52] [Server thread/INFO] (Minecraft) Saving players
+[23:14:52] [Server thread/INFO] (Minecraft) Saving worlds
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[23:14:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[23:14:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 36 ok, 2 fail, 0 manual
+[23:14:53] [Render thread/INFO] (Minecraft) Stopping!
