@@ -1,0 +1,220 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_14_9_10_y200.png",
+          "scene": 17,
+          "line": 25,
+          "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Prism beam and Burning Glass beam": [
+        {
+          "file": "s_p13_particles__prism_beam_15.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "ok",
+          "taken": "23:45:50"
+        },
+        {
+          "file": "s_p13_particles__burning_glass_beam_10.png",
+          "scene": 167,
+          "line": 184,
+          "check": "both beams read as continuous lines to the target, not dotted",
+          "status": "ok",
+          "taken": "23:45:52"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:petal_pagoda": [
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_24_16_24.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_0_4_26.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:45:54"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:45:55"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:45:56"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:45:59"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:46:01"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "23:46:02"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:aphelion": [
+        {
+          "file": "s_p2_telegraph__aphelion_warning_column_helm_on.png",
+          "scene": 267,
+          "line": 303,
+          "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "Warg pack hunting (gear3)": [
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:bramble_totem": [
+        {
+          "file": "s_totems__bramble_totem_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_after_use.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_tooltip.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:sesh_hut": [
+        {
+          "file": "s_struct_greenhaze__sesh_hut_overview.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__sesh_hut_ground.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hanging_undercity": [
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_overview.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_ground.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:46:02",
+  "totals": {
+    "ok": 8,
+    "fail": 0,
+    "manual": 0
+  }
+}
