@@ -7,7 +7,8 @@
           "scene": 4,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:15:55"
         }
       ]
     },
@@ -18,21 +19,24 @@
           "scene": 18,
           "line": 26,
           "check": "crow-stepped calcite Counting-House with gilt caps and a lantern belfry, crimson spires with gilt finials, purple bands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:16:24"
         },
         {
           "file": "structures_build__castle_mirewick_c_0_6_48_y180.png",
           "scene": 19,
           "line": 27,
           "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:16:34"
         },
         {
           "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
           "scene": 19,
           "line": 27,
           "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:16:41"
         }
       ],
       "elsewhere:castle_aldermark": [
@@ -41,7 +45,8 @@
           "scene": 22,
           "line": 30,
           "check": "the west curtain's foot follows the ground with a rubble footing, the top steps by at most 1, the corner towers rise with their corner; nothing floats",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:16:57"
         }
       ]
     },
@@ -72,14 +77,16 @@
           "scene": 318,
           "line": 358,
           "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:17:10"
         },
         {
           "file": "s_townsfolk__mirewick_capital_time_set_12500.png",
           "scene": 318,
           "line": 358,
           "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:17:19"
         }
       ]
     },
@@ -110,7 +117,8 @@
           "scene": 410,
           "line": 460,
           "check": "49 x 50 palm-wall enclosure (Aldermark's curtain is 61 x 61) with an undulating top; one processional axis: pylons, palm court with two lapis pools, hypostyle hall (raised nave roof), throne hall with a roof kiosk, naos to the west, mud-brick palace with kiosk and striped awning to the east; terraces stepping up north; nothing floating at the edges",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:17:29"
         }
       ]
     },
@@ -121,14 +129,15 @@
           "scene": 488,
           "line": 540,
           "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:17:39"
         }
       ]
     }
   },
-  "run": "23:15:22",
+  "run": "23:17:41",
   "totals": {
-    "ok": 4,
+    "ok": 13,
     "fail": 0,
     "manual": 0
   }

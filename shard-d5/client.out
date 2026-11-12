@@ -521,3 +521,95 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [23:15:42] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, 98.000000, -4689.500000
 [23:15:49] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
 [23:15:50] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[23:15:54] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[23:15:54] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[23:15:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK villages__village_near_azmar.png: 
+[23:15:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 4 (villages | the faction villages and rebuild styles (azmar realm)) done in 19721 ms
+[23:15:55] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:15:55] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:15:55] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:15:55] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:15:55] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:16:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[23:16:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2940.500000, 156.000000, -3619.500000
+[23:16:10] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 25891ms or 517 ticks behind
+[23:16:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_mirewick_c_52_40_52_y135.png: 
+[23:16:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 18 (structures_build | elsewhere:castle_mirewick) done in 29601 ms
+[23:16:24] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:16:24] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:16:24] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:16:24] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:16:24] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:16:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[23:16:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2888.500000, 122.000000, -3623.500000
+[23:16:33] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 8010ms or 160 ticks behind
+[23:16:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_mirewick_c_0_6_48_y180.png: 
+[23:16:34] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2914.500000, 121.000000, -3629.500000
+[23:16:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_mirewick_c_26_5_42_y140.png: 
+[23:16:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 19 (structures_build | elsewhere:castle_mirewick) done in 17049 ms
+[23:16:41] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:16:41] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:16:41] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:16:41] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:16:41] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:16:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[23:16:44] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1296.500000, 85.000000, -1303.500000
+[23:16:46] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
+[23:16:46] [Render thread/INFO] (Minecraft) Loaded 7 advancements
+[23:16:56] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 8760ms or 175 ticks behind
+[23:16:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_aldermark_c_70_18_0_y_90.png: 
+[23:16:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 22 (structures_build | elsewhere:castle_aldermark) done in 16025 ms
+[23:16:57] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:16:57] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:16:58] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:16:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:16:58] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:16:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[23:16:58] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 3000 tick(s)
+[23:16:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2800.500000, 132.000000, -3627.500000
+[23:17:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__mirewick_capital_time_set_3000.png: 
+[23:17:10] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 12500 tick(s)
+[23:17:10] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2800.500000, 132.000000, -3627.500000
+[23:17:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__mirewick_capital_time_set_12500.png: 
+[23:17:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 318 (s_townsfolk | Mirewick canal market + lamplighters) done in 21754 ms
+[23:17:19] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:17:19] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:17:19] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:17:19] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:17:19] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:17:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[23:17:19] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 995.070000, 153.000000, -4418.440000
+[23:17:21] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 9426ms or 188 ticks behind
+[23:17:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_40_60_50_y140.png: 
+[23:17:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 410 (s_layout_azmar | elsewhere:castle_aldermark) done in 10330 ms
+[23:17:29] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[23:17:29] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[23:17:29] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[23:17:29] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[23:17:29] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[23:17:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[23:17:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 73.000000, -1259.500000
+[23:17:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_asm_court__castle_aldermark_c_0_2_40_y180.png: 
+[23:17:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 488 (s_asm_court | elsewhere:castle_aldermark) done in 9304 ms
+[23:17:39] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[23:17:39] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[23:17:39] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[23:17:39] [Server thread/INFO] (Minecraft) Stopping server
+[23:17:39] [Server thread/INFO] (Minecraft) Saving players
+[23:17:39] [Server thread/INFO] (Minecraft) Saving worlds
+[23:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[23:17:40] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[23:17:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 13 ok, 0 fail, 0 manual
+[23:17:41] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 4m 5s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
