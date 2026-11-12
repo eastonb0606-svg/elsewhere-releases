@@ -1,0 +1,605 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (hrafnholt realm)": [
+        {
+          "file": "villages__village_near_hrafnholt.png",
+          "scene": 3,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "gear": {
+      "/calling readout": [
+        {
+          "file": "gear__calling_readout_chat.png",
+          "scene": 11,
+          "line": 16,
+          "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
+          "status": "ok",
+          "taken": "22:00:35"
+        }
+      ]
+    },
+    "sfx": {
+      "elsewhere:hrafnholt": [
+        {
+          "file": "sfx__hrafnholt_subtitle.png",
+          "scene": 25,
+          "line": 33,
+          "check": "subtitle box shows \"Hrafnholt warriors roar\", not \"Ravager roars\"",
+          "status": "ok",
+          "taken": "22:00:38"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:azmar_falconer": [
+        {
+          "file": "anim__azmar_falconer_move_windup.png",
+          "scene": 39,
+          "line": 52,
+          "check": "Falcon Mark, Perch Post, Falcon Storm = cast, Triple Stoop = thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "22:01:24"
+        },
+        {
+          "file": "anim__azmar_falconer_move_strike.png",
+          "scene": 39,
+          "line": 52,
+          "check": "Falcon Mark, Perch Post, Falcon Storm = cast, Triple Stoop = thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "22:01:24"
+        }
+      ],
+      "elsewhere:gulpmother": [
+        {
+          "file": "anim__gulpmother_hurt_peak.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:01:27"
+        },
+        {
+          "file": "anim__gulpmother_hurt_rest.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:01:27"
+        }
+      ],
+      "elsewhere:verdigrim": [
+        {
+          "file": "anim__verdigrim_hurt_peak.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:01:31"
+        },
+        {
+          "file": "anim__verdigrim_hurt_rest.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:01:31"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:aldermark_parrying_buckler": [
+        {
+          "file": "items__aldermark_parrying_buckler_held.png",
+          "scene": 110,
+          "line": 126,
+          "check": "icon matches the sprite page (16x16, Parrying Buckler), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:01:32"
+        },
+        {
+          "file": "items__aldermark_parrying_buckler_tooltip.png",
+          "scene": 110,
+          "line": 126,
+          "check": "icon matches the sprite page (16x16, Parrying Buckler), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:01:33"
+        }
+      ],
+      "elsewhere:aldermark_quickdraw_quiver": [
+        {
+          "file": "items__aldermark_quickdraw_quiver_held.png",
+          "scene": 122,
+          "line": 138,
+          "check": "icon matches the sprite page (16x16, Quickdraw Quiver), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:01:34"
+        },
+        {
+          "file": "items__aldermark_quickdraw_quiver_tooltip.png",
+          "scene": 122,
+          "line": 138,
+          "check": "icon matches the sprite page (16x16, Quickdraw Quiver), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:01:35"
+        }
+      ]
+    },
+    "structures_build": {
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_mirewick)": [
+        {
+          "file": "structures_build__castle_mirewick_c_0_8_58_y180.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_58_10_30_y_120.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_castle": {
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_azmar)": [
+        {
+          "file": "z_castle__castle_azmar_c_44_8_44_y135.png",
+          "scene": 150,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview.png",
+          "scene": 170,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer": [
+        {
+          "file": "s_censer__choirlight_censer_held.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_censer__choirlight_censer_tooltip.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_amir Camel Charge": [
+        {
+          "file": "s_p4_rivalanims__azmar_amir_camel_charge_windup.png",
+          "scene": 193,
+          "line": 217,
+          "check": "weapon drawn back at the hip, torso turned, weight back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: long lunge, weapon arm straight at the camera, front leg forward; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_amir_camel_charge_strike.png",
+          "scene": 193,
+          "line": 217,
+          "check": "weapon drawn back at the hip, torso turned, weight back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: long lunge, weapon arm straight at the camera, front leg forward; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:duelist_test (phase 3 swirl)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase3.png",
+          "scene": 209,
+          "line": 236,
+          "check": "",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Aldermark looks (peasant_0..2, craftsman_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_front.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_back.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "kingdom soldier nameplates, Aldermark (POLISH P3; supersedes polish2's 10:05 nameplate scene in INTEGRATION-REQUESTS)": [
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_6.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_greenhaze_rework": {
+      "Couch-locked screen, FULL effects (hue drift + wobble)": [
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri_5s.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:rimeback": [
+        {
+          "file": "s_p2_telegraph__rimeback_breath_cone_helm_on.png",
+          "scene": 265,
+          "line": 301,
+          "check": "ONE yellow cone that turns with the breath (no stacked or trailing copies)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:ossyra_matriarch_spire": [
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_20_14_20.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person.png",
+          "scene": 321,
+          "line": 361,
+          "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person.png",
+          "scene": 321,
+          "line": 361,
+          "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip.png",
+          "scene": 321,
+          "line": 361,
+          "check": "icon reads as a barbed harpoon (copper-brass head with a pale edge and swept barbs, verdigris collar and fletching, wooden shaft), not a plain arrow; name \"Harpoon Bolt\" (uncommon, yellow), 3 grey lore lines + the red \"Crossbows only: bows can't fire it\"; no missing-texture",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "elsewhere:kingdom_archer": [
+        {
+          "file": "s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png",
+          "scene": 327,
+          "line": 370,
+          "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers.png",
+          "scene": 350,
+          "line": 393,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers_later.png",
+          "scene": 350,
+          "line": 393,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "elsewhere:mothlight_swarm": [
+        {
+          "file": "s_mothlight__a_moth_falls_mothdust_icon.png",
+          "scene": 405,
+          "line": 455,
+          "check": "a puff of white ash and end-rod sparks, one moth drops with folded wings, then only 2 circle; inventory effect list: a pale moth icon with amber eyespots named \"Mothdust\" (no missing texture)",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__a_moth_falls_mothdust_icon_later.png",
+          "scene": 405,
+          "line": 455,
+          "check": "a puff of white ash and end-rod sparks, one moth drops with folded wings, then only 2 circle; inventory effect list: a pale moth icon with amber eyespots named \"Mothdust\" (no missing texture)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "elsewhere:hrafnholt_wolfcall_horn": [
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_first_person.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_third_person.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_after_use.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_foresight": {
+      "elsewhere:stormcrest_helm": [
+        {
+          "file": "s_foresight__stormcrest_helm_first_person.png",
+          "scene": 452,
+          "line": 504,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        },
+        {
+          "file": "s_foresight__stormcrest_helm_third_person.png",
+          "scene": 452,
+          "line": 504,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        },
+        {
+          "file": "s_foresight__stormcrest_helm_tooltip.png",
+          "scene": 452,
+          "line": 504,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Far soldiers in their baked LOD skin (48-96 blocks, ARMIES 3.7)": [
+        {
+          "file": "s_lod__battle_aldermark_azmar_60_30s.png",
+          "scene": 456,
+          "line": 508,
+          "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:great_hotbox": [
+        {
+          "file": "s_struct_greenhaze__great_hotbox_overview.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__great_hotbox_ground.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:01:35",
+  "totals": {
+    "ok": 10,
+    "fail": 2,
+    "manual": 0
+  }
+}
