@@ -11,3 +11,33 @@ JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_e
 elsewhere-3.0.0.jar
 merged jar elsewhere-3.0.0.jar 133327062 bytes in 84 s
 23:12:57Z client: scenes 238,239,240,231,232,234,301,302,303,315,319,327, watchdog 90 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+published 19 PNGs (progress) -> cloud-shots-f1 be361c8
+client rc=0
+[23:15:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_townsfolk__aldermark_fields_at_14_00_vespers.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:15:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_townsfolk__aldermark_fields_at_14_00_vespers_5s.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:15:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_townsfolk__townsfolk_lod_fold.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:15:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:15:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 39 ok, 4 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[23:14:15] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[23:14:15] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[23:14:15] [Worker-Main-1/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[23:14:19] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[23:14:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] 12 flat-stage scenes, 0 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[23:14:22] [Worker-Main-1/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+boss_music client selftest:
+23:16:02Z finished rc=0, 39 PNGs;  TOTAL 39 ok, 4 fail, 0 manual
