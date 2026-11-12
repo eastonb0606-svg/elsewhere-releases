@@ -59,6 +59,8 @@ public final class FitW {
 			return;
 		}
 		writes++;
+		if (y < wMinY) wMinY = y;
+		if (y > wMaxY) wMaxY = y;
 		p.set(x, y, z);
 		level.setBlock(p, s, Build.FLAGS);
 		Block b = s.getBlock();
@@ -178,12 +180,37 @@ public final class FitW {
 		return Math.floorMod(lx + 1, 6) < 2 && Math.floorMod(lz + 1, 6) < 2;
 	}
 
+	private int wMinY = Integer.MAX_VALUE, wMaxY = Integer.MIN_VALUE;
+
+	private void reshapeAt(BlockPos at) {
+		BlockState st = level.getBlockState(at);
+		Block b = st.getBlock();
+		if (!(b instanceof CrossCollisionBlock || b instanceof WallBlock || b instanceof StairBlock)) return;
+		BlockState fixed = Block.updateFromNeighbourShapes(st, level, at);
+		if (fixed != st) level.setBlock(at, fixed, Build.FLAGS);
+	}
+
 	/** Re-shapes fences, bars, walls and stairs on a live level (world generation marks them for post-processing instead). */
 	public void finish() {
 		for (BlockPos at : shaped) {
 			BlockState st = level.getBlockState(at);
 			BlockState fixed = Block.updateFromNeighbourShapes(st, level, at);
 			if (fixed != st) level.setBlock(at, fixed, Build.FLAGS);
+		}
+		// a shaped block (fence, bars, wall, stairs) just outside this piece's edge, built by a neighbouring chunk earlier, must now connect
+		// to what was written here (a solid block does not trigger a reshape): without this the result depends on which chunk was built first
+		if (clip != null && writes > 0 && wMinY <= wMaxY) {
+			BlockPos.MutableBlockPos nb = new BlockPos.MutableBlockPos();
+			for (int y = wMinY; y <= wMaxY; y++) {
+				for (int i = clip.minX(); i <= clip.maxX(); i++) {
+					reshapeAt(nb.set(i, y, clip.minZ() - 1));
+					reshapeAt(nb.set(i, y, clip.maxZ() + 1));
+				}
+				for (int i = clip.minZ(); i <= clip.maxZ(); i++) {
+					reshapeAt(nb.set(clip.minX() - 1, y, i));
+					reshapeAt(nb.set(clip.maxX() + 1, y, i));
+				}
+			}
 		}
 		shaped.clear();
 	}

@@ -327,7 +327,7 @@ final class SelfTestHrafnholtFort {
 				queue[qt++] = ni;
 			}
 		}
-		int floating = 0, valuables = 0, banners = 0, furnaces = 0;
+		int floating = 0, valuables = 0, banners = 0, furnaces = 0, hoard = 0;
 		first = null;
 		for (int x = 0; x < sx; x++) for (int z = 0; z < sz; z++) {
 			int lx = x0 + x - o.getX(), lz = z0 + z - o.getZ();
@@ -338,6 +338,7 @@ final class SelfTestHrafnholtFort {
 				if (s.isAir()) continue;
 				if (castle) {
 					if (Valuables.isValuable(s)) valuables++;
+					if (s.is(Blocks.SPRUCE_SLAB)) hoard++;
 					if (s.getBlock() instanceof BannerBlock || s.getBlock() instanceof WallBannerBlock) banners++;
 					if (s.is(Blocks.FURNACE) || s.is(Blocks.SMOKER) || s.is(Blocks.BLAST_FURNACE)) furnaces++;
 				}
@@ -348,6 +349,7 @@ final class SelfTestHrafnholtFort {
 		}
 		check(tag + ": nothing floating (every block of the fort and the shore works stands on the ground)", floating == 0, floating + (first == null ? "" : "; " + first));
 		check(tag + ": no valuable block in the fort", valuables == 0, valuables);
+		check(tag + ": w6 palisade timber hoardings (spruce slab roofs along the palisade head)", hoard >= 20, hoard);
 		check(tag + ": at most 12 banners and no furnace, smoker or blast furnace in the fort", banners <= 12 && furnaces == 0, banners + " banners, " + furnaces + " furnaces");
 		if (plan == null) return;
 		waterSites++;

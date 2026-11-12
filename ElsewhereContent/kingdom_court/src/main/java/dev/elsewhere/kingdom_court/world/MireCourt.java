@@ -78,6 +78,7 @@ final class MireCourt {
 			q.palette.putAll(style.palette);
 			for (CastleStyles.Piece p : style.pieces) if (!(p.type().equals("column") && p.a()[0] == 0 && p.a()[2] == 32)) q.pieces.add(p);
 			CastleLayout.fitPieces(q, l.o, l.p);
+			CastleKit.quayDeck(w); // w6-mirewick: deck over natural ground, no foliage inside the quay
 		}
 	}
 

@@ -92,7 +92,11 @@ public final class FitSelfTest {
 			for (int yy = 110; yy >= 40 && y < 0; yy--) {
 				BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos(x, yy, z);
 				if (level.getBlockState(p).isAir() && level.getBlockState(p.below()).isAir() && level.getBlockState(p.below(2)).isAir() && level.getBlockState(p.below(3)).isAir()
-					&& level.getBlockState(p.above()).isAir()) y = yy;
+					&& level.getBlockState(p.above()).isAir()) {
+					// open in the terrain noise too: a carver cave under solid noise ground is air here but "ground" to the metric
+					var nc = col.apply(x, z);
+					if (nc.getBlock(yy - 1).isAir() && nc.getBlock(yy - 2).isAir() && nc.getBlock(yy - 3).isAir()) y = yy;
+				}
 			}
 			if (y < 0) { msg.append(key.identifier().getPath()).append(": no open air column; "); continue; }
 			BlockPos at = new BlockPos(x, y, z);

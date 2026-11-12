@@ -47,7 +47,7 @@ final class MireFort {
 					BlockState b;
 					if (face) b = y <= foot + 1 ? calcite : y == 5 ? purple : y == top ? quartz : CastleLayout.hash(x, y, z) < 30 ? calcite : quartz;
 					else if (inner) b = y == top ? smooth : y == 5 ? purple : calcite;
-					else b = y == top ? grass : mud;
+					else b = y == top ? smooth : mud; // w6-mirewick: no grass on the bastion walk (grass and trees grew on it)
 					w.s(x, y, z, b);
 				}
 				for (int y = top + 1; y <= top + 4; y++) w.s(x, y, z, air);
@@ -80,7 +80,7 @@ final class MireFort {
 				if (nextWet) solidAt(w, x, z, -4, -2, quartz);
 				else {
 					solidAt(w, x, z, -4, -3, dirt);
-					w.s(x, -2, z, grass);
+					w.s(x, -2, z, st(Blocks.GRAVEL)); // w6-mirewick: nothing grows in the dry ditch
 				}
 				for (int y = -1; y <= Math.max(gy, 0) + 2; y++) w.s(x, y, z, air);
 				l.foundation(x, z, x, z, -5, Blocks.DIRT);

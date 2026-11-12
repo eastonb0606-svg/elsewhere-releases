@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 17:36",
+ "generated": "2026-11-12 17:47",
  "scenes": [
   {
    "n": 1,
@@ -38,7 +38,11 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
+    ],
+    [
+     "cmd",
+     "gamerule send_command_feedback false"
     ],
     [
      "cmd",
@@ -53,8 +57,15 @@
      false
     ],
     [
+     "chat",
+     false
+    ],
+    [
      "cmd",
-     "effect give @s night_vision infinite 1 true"
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
     ],
     [
      "locate",
@@ -63,6 +74,62 @@
     [
      "locate_near",
      "#minecraft:village"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     20,
+     0,
+     180,
+     40
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "aldermark siege"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "cmd",
+     "tick sprint 48100"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "tick sprint 15000"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "cmd",
+     "gamemode spectator"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
     ],
     [
      "tp",
@@ -96,7 +163,8 @@
    ],
    "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
    "setup": "the villages lane's queued shot run",
-   "note": "the vanilla village nearest the located castle_aldermark"
+   "note": "the vanilla village nearest the located castle_aldermark",
+   "override": "w6-villages.json"
   },
   {
    "n": 3,
@@ -107,7 +175,11 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
+    ],
+    [
+     "cmd",
+     "gamerule send_command_feedback false"
     ],
     [
      "cmd",
@@ -122,8 +194,15 @@
      false
     ],
     [
+     "chat",
+     false
+    ],
+    [
      "cmd",
-     "effect give @s night_vision infinite 0 true"
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
     ],
     [
      "locate",
@@ -132,6 +211,62 @@
     [
      "locate_near",
      "#minecraft:village"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     20,
+     0,
+     180,
+     40
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "aldermark siege"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "cmd",
+     "tick sprint 48100"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "tick sprint 15000"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "cmd",
+     "gamemode spectator"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
     ],
     [
      "tp",
@@ -163,7 +298,7 @@
    "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
    "setup": "the villages lane's queued shot run",
    "note": "the vanilla village nearest the located castle_hrafnholt",
-   "override": "shard-2.out.json"
+   "override": "w6-villages.json"
   },
   {
    "n": 4,
@@ -174,7 +309,11 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
+    ],
+    [
+     "cmd",
+     "gamerule send_command_feedback false"
     ],
     [
      "cmd",
@@ -189,8 +328,15 @@
      false
     ],
     [
+     "chat",
+     false
+    ],
+    [
      "cmd",
-     "effect give @s night_vision infinite 0 true"
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
     ],
     [
      "locate",
@@ -199,6 +345,62 @@
     [
      "locate_near",
      "#minecraft:village"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     20,
+     0,
+     180,
+     40
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "aldermark siege"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "cmd",
+     "tick sprint 48100"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "tick sprint 15000"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "cmd",
+     "gamemode spectator"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
     ],
     [
      "tp",
@@ -230,7 +432,7 @@
    "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
    "setup": "the villages lane's queued shot run",
    "note": "the vanilla village nearest the located castle_azmar",
-   "override": "shard-3.out.json"
+   "override": "w6-villages.json"
   },
   {
    "n": 5,
@@ -241,7 +443,11 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
+    ],
+    [
+     "cmd",
+     "gamerule send_command_feedback false"
     ],
     [
      "cmd",
@@ -256,8 +462,15 @@
      false
     ],
     [
+     "chat",
+     false
+    ],
+    [
      "cmd",
-     "effect give @s night_vision infinite 0 true"
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
     ],
     [
      "locate",
@@ -266,6 +479,62 @@
     [
      "locate_near",
      "#minecraft:village"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     20,
+     0,
+     180,
+     40
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "aldermark siege"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "cmd",
+     "tick sprint 48100"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "cmd",
+     "tick sprint 15000"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "cmd",
+     "gamemode spectator"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
     ],
     [
      "tp",
@@ -297,7 +566,7 @@
    "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
    "setup": "the villages lane's queued shot run",
    "note": "the vanilla village nearest the located castle_mirewick",
-   "override": "shard-4.out.json"
+   "override": "w6-villages.json"
   },
   {
    "n": 6,
@@ -885,10 +1154,14 @@
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -902,7 +1175,8 @@
     }
    ],
    "check": "steep deepslate spires with blue banners on 4 corners + 2 gate spires, pitched keep roof inside the parapet with 4 bartizans, chapel steeple; curtain steps with the ground (no flat 69x69 cut, no cliff); no gold throne (yellow terracotta)",
-   "setup": "tp C+(52, +40, 52) yaw 135 pitch 32 (castle camera)"
+   "setup": "tp C+(52, +40, 52) yaw 135 pitch 32 (castle camera)",
+   "override": "w6-castles.json"
   },
   {
    "n": 14,
@@ -949,7 +1223,14 @@
     ],
     [
      "wait",
-     100
+     300
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -964,7 +1245,7 @@
    ],
    "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
    "setup": "tp C+(0, +22, 82) yaw 180 pitch 14",
-   "override": "shard-5.out.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 15,
@@ -1011,7 +1292,14 @@
     ],
     [
      "wait",
-     100
+     300
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -1026,7 +1314,7 @@
    ],
    "check": "Jarl's-hall roof over the keep with crossed finials at both ends, timber hoardings on walls and towers, steep spruce spires, stave tower on the hof",
    "setup": "tp C+(52, +40, 52) yaw 135 pitch 32",
-   "override": "shard-6.out.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 16,
@@ -1352,18 +1640,25 @@
     [
      "tp",
      "anchor",
-     -88,
-     26,
-     52,
+     -96,
+     48,
+     40,
      180,
-     26
+     38
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -1378,7 +1673,7 @@
    ],
    "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
    "setup": "tp C+(-88, +26, 52) yaw 180 pitch 26 (west town; east town: C+(88, +26, 52))",
-   "override": "shard-5.out.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 21,
@@ -1414,18 +1709,25 @@
     [
      "tp",
      "anchor",
-     0.0,
-     75.0,
-     150.0,
-     180.0,
-     32.0
+     0,
+     70,
+     120,
+     180,
+     36
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -1440,7 +1742,7 @@
    ],
    "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
    "setup": "tp C+(0, +75, 150) yaw 180 pitch 32 (overview)",
-   "override": "shard-6.out.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 22,
@@ -1480,18 +1782,25 @@
     [
      "tp",
      "anchor",
-     -72.0,
-     16.0,
-     0.0,
-     -90.0,
-     8.0
+     -74,
+     24,
+     0,
+     -90,
+     16
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -1506,7 +1815,7 @@
    ],
    "check": "the west curtain's foot follows the ground with a rubble footing, the top steps by at most 1, the corner towers rise with their corner; nothing floats",
    "setup": "tp C+(-70, +18, 0) yaw -90 pitch 12",
-   "override": "shard-1.out.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 23,
@@ -1741,14 +2050,14 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "shot",
@@ -1763,7 +2072,7 @@
    ],
    "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
    "setup": "C+(52, +40, 52) yaw 135 pitch 32",
-   "override": "castles.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 27,
@@ -1810,14 +2119,14 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "shot",
@@ -1826,25 +2135,25 @@
     [
      "tp",
      "anchor",
-     -70.0,
-     18.0,
-     0.0,
-     -90.0,
-     12.0
+     -74,
+     24,
+     0,
+     -90,
+     16
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "shot",
@@ -1863,7 +2172,7 @@
    ],
    "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
    "setup": "C+(0, +22, 82) yaw 180 pitch 14; C+(-70, +18, 0) yaw -90 pitch 12",
-   "override": "castles.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 28,
@@ -1900,24 +2209,24 @@
      "tp",
      "anchor",
      0,
-     60,
-     100,
+     70,
+     120,
      180,
-     30
+     36
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "shot",
@@ -1926,25 +2235,25 @@
     [
      "tp",
      "anchor",
-     -88.5,
-     34,
-     52.5,
+     -96,
+     48,
+     40,
      180,
-     28
+     38
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "shot",
@@ -1953,25 +2262,25 @@
     [
      "tp",
      "anchor",
-     88.5,
-     34,
-     52.5,
+     96,
+     48,
+     40,
      180,
-     28
+     38
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "shot",
@@ -1994,7 +2303,7 @@
    ],
    "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
    "setup": "C+(0, +75, 150) yaw 180 pitch 32; C+(-/+88.5, +26, 52.5) yaw 180 pitch 26",
-   "override": "castles.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 29,
@@ -11653,21 +11962,25 @@
     [
      "tp",
      "anchor",
-     0.0,
-     10.0,
-     62.0,
-     180.0,
-     18.0
+     0,
+     24,
+     64,
+     180,
+     30
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -11676,21 +11989,25 @@
     [
      "tp",
      "anchor",
-     -61.46,
-     12.0,
-     32.0,
-     -120.0,
-     18.0
+     -63,
+     26,
+     34,
+     -120,
+     30
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -11709,7 +12026,8 @@
    ],
    "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
    "setup": "the fv 2 realm on the most sloped of the 4 sites: tp C+(0, +8, 58) yaw 180 pitch 18 and C+(-58, +10, 30) yaw -120 pitch 18",
-   "note": "nearest located instance (the runner cannot pick the 'most sloped of 4 sites')"
+   "note": "nearest located instance (the runner cannot pick the 'most sloped of 4 sites')",
+   "override": "w6-castles.json"
   },
   {
    "n": 135,
@@ -13896,7 +14214,7 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "fly"
@@ -13907,11 +14225,19 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^12 ^-20 ~ 31"
+     "tp @s ~ ~35 ~ ~ 75"
     ],
     [
      "wait",
-     200
+     100
+    ],
+    [
+     "shot",
+     "battle_azmar_aldermark_60_5s"
+    ],
+    [
+     "wait",
+     100
     ],
     [
      "shot",
@@ -13920,6 +14246,10 @@
     [
      "wait",
      540
+    ],
+    [
+     "gui",
+     true
     ],
     [
      "f3",
@@ -13950,7 +14280,7 @@
    ],
    "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
    "setup": "flat plains, `/time set 6000`, `/kingdom armies battle azmar aldermark 60`, fly 12 up and 20 back facing the Azmar rear; shot 1 at +10 s (fronts engaged), shot 2 when the bell rings (about +30-45 s, F3 open)",
-   "override": "castles.json"
+   "override": "w6-villages.json"
   },
   {
    "n": 165,
@@ -19333,61 +19663,57 @@
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"aldermark/peasant/0\"}",
      -5,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"aldermark/peasant/1\"}",
      -3,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"aldermark/peasant/2\"}",
      -1,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"aldermark/craftsman/0\"}",
      1,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"aldermark/craftsman/1\"}",
      3,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"aldermark/craftsman/2\"}",
      5,
      6
     ],
     [
      "wait",
-     30
-    ],
-    [
-     "cmd",
-     "execute as @e[type=elsewhere:townsfolk,distance=..40] run data merge entity @s {NoAI:1b}"
+     20
     ],
     [
      "tp",
      "stage",
      0,
-     0,
+     0.6,
      1,
      0,
-     5
+     4
     ],
     [
      "chunks"
@@ -19404,10 +19730,10 @@
      "tp",
      "stage",
      0,
-     0,
+     0.6,
      13,
      180,
-     5
+     4
     ],
     [
      "wait",
@@ -19430,7 +19756,8 @@
    ],
    "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
    "setup": "flat plains, noon, 6 townsfolk spawned in a row 2 apart (`Townsfolk.setup(town, elsewhere:aldermark, role, n)` from the client gametest, or stand in an Aldermark town at 09:00-12:00 market), camera 5 back at eye height, then the same row from behind",
-   "note": "plain summons in a row (role/variant set by the mod's own spawn rules, not by Townsfolk.setup)"
+   "note": "plain summons in a row (role/variant set by the mod's own spawn rules, not by Townsfolk.setup)",
+   "override": "w4-kingdom.json"
   },
   {
    "n": 220,
@@ -19458,61 +19785,57 @@
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"hrafnholt/thrall/0\"}",
      -5,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"hrafnholt/thrall/1\"}",
      -3,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"hrafnholt/thrall/2\"}",
      -1,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"hrafnholt/fisherfolk/0\"}",
      1,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"hrafnholt/fisherfolk/1\"}",
      3,
      6
     ],
     [
      "summon",
      "elsewhere:townsfolk",
-     "{PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,NoAI:1b,TownsfolkLook:\"hrafnholt/fisherfolk/2\"}",
      5,
      6
     ],
     [
      "wait",
-     30
-    ],
-    [
-     "cmd",
-     "execute as @e[type=elsewhere:townsfolk,distance=..40] run data merge entity @s {NoAI:1b}"
+     20
     ],
     [
      "tp",
      "stage",
      0,
-     0,
+     0.6,
      1,
      0,
-     5
+     4
     ],
     [
      "chunks"
@@ -19529,10 +19852,10 @@
      "tp",
      "stage",
      0,
-     0,
+     0.6,
      13,
      180,
-     5
+     4
     ],
     [
      "wait",
@@ -19555,7 +19878,8 @@
    ],
    "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
    "setup": "same row setup with elsewhere:hrafnholt (or a Hrafnholt town at 05:00-08:00)",
-   "note": "plain summons in a row (role/variant set by the mod's own spawn rules, not by Townsfolk.setup)"
+   "note": "plain summons in a row (role/variant set by the mod's own spawn rules, not by Townsfolk.setup)",
+   "override": "w4-kingdom.json"
   },
   {
    "n": 221,

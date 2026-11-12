@@ -173,13 +173,15 @@ final class SelfTestMireLayout {
 	static void checks(ServerLevel l, String tag, BlockPos o, RealmFit.HeightField hf, CastleStyles.Style style, int x0, int z0, int w, int[] top, int[] fl) {
 		MireLayout.Plan plan = MireLayout.plan(o, hf);
 		// bastion tips
-		int tipsOk = 0;
+		int tipsOk = 0, grassTips = 0;
 		for (int[] t : MireLayout.tipProbes()) {
 			int tt = 8 + MireLayout.lift(plan, t[0], t[1]), foot = Math.min(0, hf.y(o.getX() + t[0], o.getZ() + t[1]) - o.getY());
 			boolean ok = true;
 			for (int y = foot - 1; y <= tt; y++) ok &= solid(at(l, o, t[0], y, t[1]));
 			if (ok) tipsOk++;
+			if (at(l, o, t[0], tt, t[1]).is(Blocks.GRASS_BLOCK)) grassTips++;
 		}
+		check(tag + ": no bastion walk is grass (w6-mirewick: nothing grows on the walk)", grassTips == 0, grassTips + " grass tips");
 		check(tag + ": five bastion tips solid from the ground to the rampart top", tipsOk == 5, tipsOk + " of 5");
 		// rampart columns founded, batter on its own ground, yard pad solid
 		int ramp = 0, rampBad = 0, bat = 0, batBad = 0, pad = 0, padBad = 0;

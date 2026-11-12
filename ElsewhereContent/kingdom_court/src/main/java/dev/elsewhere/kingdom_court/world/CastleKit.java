@@ -396,6 +396,44 @@ public final class CastleKit {
 		}
 	}
 
+	/** True for foliage that must not stand on castle ground: leaves, logs, saplings, grass, flowers, snow layers, vines. */
+	static boolean foliage(BlockState c) {
+		return c.is(BlockTags.LEAVES) || c.is(BlockTags.LOGS) || c.is(BlockTags.REPLACEABLE_BY_TREES) || c.is(BlockTags.FLOWERS) || c.is(BlockTags.SAPLINGS)
+			|| c.is(Blocks.VINE) || c.is(Blocks.SHORT_GRASS) || c.is(Blocks.TALL_GRASS) || c.is(Blocks.FERN) || c.is(Blocks.LARGE_FERN) || c.is(Blocks.SNOW);
+	}
+
+	/**
+	 * w6-mirewick (generic, any castle): removes foliage (never man-made blocks) from the local box x1..x2, z1..z2, y 0..14 above {@code y0} (local, plus
+	 * the writer's dy), so no oak or birch canopy stands inside a footprint after the structure is written. Only this chunk's columns are touched.
+	 */
+	static void clearFoliage(W w, int x1, int z1, int x2, int z2, int y0, int h) {
+		for (int x = x1; x <= x2; x++) for (int z = z1; z <= z2; z++) for (int y = y0; y <= y0 + h; y++) {
+			int wx = w.l.o.getX() + x, wy = w.l.o.getY() + y + w.dy, wz = w.l.o.getZ() + z;
+			if (!w.l.p.clip.isInside(wx, wy, wz)) continue;
+			if (foliage(w.l.p.level.getBlockState(new BlockPos(wx, wy, wz)))) w.s(x, y, z, Blocks.AIR.defaultBlockState());
+		}
+	}
+
+	/**
+	 * w6-mirewick: the Mirewick quay deck. The style's quay stone (world y = o.y + pieceLift) is laid as smooth stone over natural ground (dirt, grass,
+	 * leaves, air) in the strip z 31..33 beside the gate road (|x| 3..17), and foliage is cleared 1..14 above it over the whole quay and canal strip
+	 * (z 31..37, x -18..18). No-op off fv 2 ground or where the quay was skipped (steep or wet shore: no quay).
+	 */
+	static void quayDeck(W w) {
+		if (!(w.l.p.ground instanceof RealmFit.HeightField) || w.l.p.style == null) return;
+		int dy = CastleLayout.pieceLift(w.l.p.style, w.l.o, w.l.p.ground, 0, 32);
+		if (dy == Integer.MIN_VALUE) return;
+		w.dy = 0;
+		BlockState deck = Blocks.SMOOTH_STONE.defaultBlockState();
+		for (int x = -17; x <= 17; x++) for (int z = 31; z <= 33; z++) {
+			if (Math.abs(x) <= 2) continue;
+			int wx = w.l.o.getX() + x, wy = w.l.o.getY() + dy, wz = w.l.o.getZ() + z;
+			if (!w.l.p.clip.isInside(wx, wy, wz)) continue;
+			if (natural(w.l.p.level.getBlockState(new BlockPos(wx, wy, wz)))) w.s(x, dy, z, deck);
+		}
+		clearFoliage(w, -18, 31, 18, 37, dy + 1, 14);
+	}
+
 	static void wallLine(int m, WallCell c) {
 		for (int t = -m; t <= m; t++) {
 			if (!offWall(t, -m)) c.at(t, -m, Direction.SOUTH, t + 100);

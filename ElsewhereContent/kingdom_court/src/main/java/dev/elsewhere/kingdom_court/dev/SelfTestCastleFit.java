@@ -231,6 +231,12 @@ final class SelfTestCastleFit {
 				if (first == null) first = "air/fluid under the batter at " + b[0] + "," + b[1] + "," + b[2] + " (" + l.getBlockState(p.below()).getBlock() + ")";
 			}
 		}
+		int corb = 0;
+		for (int x = -7; x <= 7; x++) for (int y = -6; y <= 45; y++) {
+			BlockState cs = l.getBlockState(o.offset(x, y, 32));
+			if (cs.getBlock() instanceof net.minecraft.world.level.block.StairBlock && cs.getValue(net.minecraft.world.level.block.StairBlock.HALF) == net.minecraft.world.level.block.state.properties.Half.TOP) corb++;
+		}
+		check(tag + ": w6 gatehouse corbelled projecting parapet (inverted stair corbels at z 32)", corb >= 10, corb);
 		info(tag + ": hillside site " + o + ", " + towerCells + " tower batter + " + (n - towerCells) + " curtain batter blocks, ground " + lo + ".." + hi + " relative to the floor");
 		check(tag + ": tower and curtain batter present on their own ground", missing == 0 && towerCells >= 60, missing + " missing of " + n + (first == null ? "" : "; " + first));
 		check(tag + ": no air or fluid under any batter block", under == 0, under + (first == null ? "" : "; " + first));

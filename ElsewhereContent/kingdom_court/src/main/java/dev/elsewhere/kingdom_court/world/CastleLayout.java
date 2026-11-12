@@ -482,6 +482,11 @@ public final class CastleLayout {
 			for (int y = foot; y <= 8 + lift; y++) l.b(x, y, z, wallBlock(x, y, z));
 			if (m == 30 && ((x + z) & 1) == 0) l.b(x, 9 + lift, z, wallBlock(x, 9 + lift, z));
 			l.foundation(x, z, x, z, foot - 1, Blocks.COBBLESTONE);
+			// w6-castles: visible rubble footing on the outer face (the wall no longer runs straight into the grass); not at the towers or the gate apron
+			if (m == 30 && Math.min(Math.abs(x), Math.abs(z)) <= 25 && !(z == 30 && Math.abs(x) <= 8)) {
+				int ox = x + (Math.abs(x) == 30 ? Integer.signum(x) : 0), oz = z + (Math.abs(z) == 30 ? Integer.signum(z) : 0), go = l.gy(ox, oz);
+				for (int y = go - 1; y <= go; y++) l.b(ox, y, oz, CastleLayout.hash(ox, y, oz) < 45 ? Blocks.MOSSY_COBBLESTONE : Blocks.COBBLESTONE);
+			}
 		}
 		for (int sx = -1; sx <= 1; sx += 2) for (int sz = -1; sz <= 1; sz += 2) {
 			int cx = sx * 30, cz = sz * 30, lift = liftAt(grid, 30, cx, cz), foot = 0;
@@ -501,6 +506,13 @@ public final class CastleLayout {
 		}
 		l.fill(-2, 0, 29, 2, 4, 30, Blocks.AIR);
 		l.fill(-2, 5, 29, 2, 5, 29, Blocks.IRON_BARS);
+		// w6-castles: corbelled projecting parapet along the gatehouse front (inverted stair corbels at z 32, a slab deck and merlons above)
+		for (int x = -7; x <= 7; x++) {
+			int cy = Math.abs(x) <= 2 ? 8 + liftAt(grid, 30, x, 30) : 12 + gl;
+			l.b(x, cy, 32, Blocks.STONE_BRICK_STAIRS.defaultBlockState().setValue(StairBlock.FACING, Direction.SOUTH).setValue(StairBlock.HALF, net.minecraft.world.level.block.state.properties.Half.TOP));
+			l.b(x, cy + 1, 32, Blocks.STONE_BRICK_SLAB);
+			if ((x & 1) == 0) l.b(x, cy + 2, 32, Blocks.STONE_BRICKS);
+		}
 		for (BlockPos g : gates(BlockPos.ZERO))
 			l.b(g.getX(), 0, g.getZ(), Blocks.SPRUCE_FENCE_GATE.defaultBlockState().setValue(FenceGateBlock.FACING, Direction.SOUTH).setValue(FenceGateBlock.OPEN, true));
 		for (int sx = -1; sx <= 1; sx += 2) l.b(sx * 5, 7, 32, Blocks.WALL_BANNER.blue().defaultBlockState().setValue(WallBannerBlock.FACING, Direction.SOUTH));

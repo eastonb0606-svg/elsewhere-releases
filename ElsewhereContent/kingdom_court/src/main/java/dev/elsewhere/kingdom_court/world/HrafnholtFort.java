@@ -406,8 +406,11 @@ public final class HrafnholtFort {
 			h.down(x, t - 2, z, core);
 			if (pal) {
 				BlockState lg = log(x, z);
-				for (int y = t; y <= t + 3; y++) h.s(x, y, z, lg);
-				h.s(x, t + 4, z, Blocks.SPRUCE_FENCE);
+				// w6-castles: timber hoarding along the palisade head (plank gallery between log posts under a slab roof, fence tips on the posts)
+				boolean post = ((x + z) % 3 + 3) % 3 == 0;
+				for (int y = t; y <= t + 3; y++) h.s(x, y, z, y >= t + 2 && !post ? Blocks.DARK_OAK_PLANKS.defaultBlockState() : lg);
+				h.s(x, t + 4, z, Blocks.SPRUCE_SLAB);
+				if (post) h.s(x, t + 5, z, Blocks.SPRUCE_FENCE);
 			}
 		}
 		for (int gi = 0; gi < 4; gi++) if (r.open[gi]) gate(h, r, gi);
@@ -487,7 +490,9 @@ public final class HrafnholtFort {
 			h.s(x, y, z, du == 0 ? Blocks.DARK_OAK_PLANKS.defaultBlockState() : st(Blocks.SPRUCE_STAIRS, du < 0 ? o : in));
 			if (Math.abs(v) == 5 && Math.abs(du) <= 3) for (int yy = dk + 2; yy < y; yy++) h.s(x, yy, z, Blocks.DARK_OAK_PLANKS);
 		}
-		h.s(gx(g, rg, 0), dk + 7, gz(g, rg, 0), Blocks.DARK_OAK_FENCE);
+		// w6-castles: a steep spruce spire needle over the ridge (log shaft, stair flare, fence tip) so the gate tower reads as a spire
+		for (int y = dk + 7; y <= dk + 10; y++) h.s(gx(g, rg, 0), y, gz(g, rg, 0), Blocks.SPRUCE_LOG);
+		for (int y = dk + 11; y <= dk + 14; y++) h.s(gx(g, rg, 0), y, gz(g, rg, 0), Blocks.DARK_OAK_FENCE);
 		h.s(gx(g, rg, 0), 4, gz(g, rg, 0), lantern(true));
 		h.s(gx(g, rg + 3, 0), 7, gz(g, rg + 3, 0), banner((g & 1) == 0 ? DyeColor.GREEN : DyeColor.BROWN, o));
 	}
@@ -739,6 +744,10 @@ public final class HrafnholtFort {
 			h.s(6, ridge + 2, z, Blocks.DARK_OAK_FENCE);
 			h.s(6, ridge + 3, z, lantern(false));
 		}
+		// w6-castles: stave tower spire on the hof (log shaft over the nave ridge, flared spruce stair skirt, fence needle)
+		for (int y = ridge + 1; y <= ridge + 7; y++) h.s(6, y, 11, Blocks.SPRUCE_LOG);
+		for (Direction d : Direction.Plane.HORIZONTAL) h.s(6 + d.getStepX(), ridge + 4, 11 + d.getStepZ(), st(Blocks.SPRUCE_STAIRS, d.getOpposite()));
+		for (int y = ridge + 8; y <= ridge + 11; y++) h.s(6, y, 11, Blocks.DARK_OAK_FENCE);
 		for (int[] c : new int[][] {{2, 7}, {10, 7}, {2, 15}, {10, 15}}) {
 			h.s(c[0], 6, c[1], Blocks.DARK_OAK_FENCE);
 			h.s(c[0], 7, c[1], lantern(false));
