@@ -51,7 +51,8 @@
           "scene": 163,
           "line": 180,
           "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:40"
         }
       ]
     },
@@ -82,14 +83,16 @@
           "scene": 283,
           "line": 322,
           "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:52"
         },
         {
           "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
           "scene": 283,
           "line": 322,
           "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:59"
         }
       ]
     },
@@ -180,14 +183,16 @@
           "scene": 357,
           "line": 405,
           "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:10"
         },
         {
           "file": "s_locate__castle_azmar_ground.png",
           "scene": 357,
           "line": 405,
           "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:32"
         }
       ]
     },
@@ -250,7 +255,8 @@
           "scene": 456,
           "line": 508,
           "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:10"
         }
       ]
     },
@@ -261,21 +267,23 @@
           "scene": 466,
           "line": 518,
           "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:43"
         },
         {
           "file": "s_layout_hraf__castle_hrafnholt_ground.png",
           "scene": 466,
           "line": 518,
           "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:48"
         }
       ]
     }
   },
-  "run": "23:41:40",
+  "run": "23:43:50",
   "totals": {
-    "ok": 21,
+    "ok": 29,
     "fail": 0,
     "manual": 0
   }
