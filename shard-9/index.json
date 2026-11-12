@@ -1,0 +1,869 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:mirewick_thwaite": [
+        {
+          "file": "anim__mirewick_thwaite_move_windup.png",
+          "scene": 40,
+          "line": 53,
+          "check": "Long Thrust and Garnish = thrust; plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:16:39"
+        },
+        {
+          "file": "anim__mirewick_thwaite_move_strike.png",
+          "scene": 40,
+          "line": 53,
+          "check": "Long Thrust and Garnish = thrust; plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:16:39"
+        }
+      ],
+      "elsewhere:mirewick_sorrel": [
+        {
+          "file": "anim__mirewick_sorrel_move_windup.png",
+          "scene": 41,
+          "line": 54,
+          "check": "Pike Brace and Dike Wall = shield bash, Sluice Maul = overhead, Mud Surge and Mire Flood = slam; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:17:25"
+        },
+        {
+          "file": "anim__mirewick_sorrel_move_strike.png",
+          "scene": 41,
+          "line": 54,
+          "check": "Pike Brace and Dike Wall = shield bash, Sluice Maul = overhead, Mud Surge and Mire Flood = slam; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:17:25"
+        }
+      ],
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "anim__mirewick_tolliver_move_windup.png",
+          "scene": 42,
+          "line": 55,
+          "check": "Fowling Net = draw, Heron Flight and Reed Dive = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:18:11"
+        },
+        {
+          "file": "anim__mirewick_tolliver_move_strike.png",
+          "scene": 42,
+          "line": 55,
+          "check": "Fowling Net = draw, Heron Flight and Reed Dive = leap; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:18:11"
+        }
+      ],
+      "elsewhere:mirewick_ames": [
+        {
+          "file": "anim__mirewick_ames_move_windup.png",
+          "scene": 43,
+          "line": 56,
+          "check": "Dusk Rite, Pay the Hands, Dusk Bell, Lantern Rally = cast; Lamp Shove = shield bash; Oil Flask = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:18:56"
+        },
+        {
+          "file": "anim__mirewick_ames_move_strike.png",
+          "scene": 43,
+          "line": 56,
+          "check": "Dusk Rite, Pay the Hands, Dusk Bell, Lantern Rally = cast; Lamp Shove = shield bash; Oil Flask = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:18:56"
+        }
+      ],
+      "elsewhere:mirewick_marrow": [
+        {
+          "file": "anim__mirewick_marrow_move_windup.png",
+          "scene": 44,
+          "line": 57,
+          "check": "Call the Debt and Bog Drum Call = cast, Crossbow Volley = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:19:41"
+        },
+        {
+          "file": "anim__mirewick_marrow_move_strike.png",
+          "scene": 44,
+          "line": 57,
+          "check": "Call the Debt and Bog Drum Call = cast, Crossbow Volley = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "20:19:41"
+        }
+      ],
+      "elsewhere:solaxis": [
+        {
+          "file": "anim__solaxis_hurt_peak.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:43"
+        },
+        {
+          "file": "anim__solaxis_hurt_rest.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:44"
+        }
+      ],
+      "elsewhere:grunthar": [
+        {
+          "file": "anim__grunthar_hurt_peak.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:45"
+        },
+        {
+          "file": "anim__grunthar_hurt_rest.png",
+          "scene": 46,
+          "line": 59,
+          "check": "peak: head snaps back, arms fly out, torso rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:46"
+        }
+      ],
+      "elsewhere:ashtusk": [
+        {
+          "file": "anim__ashtusk_hurt_peak.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:47"
+        },
+        {
+          "file": "anim__ashtusk_hurt_rest.png",
+          "scene": 47,
+          "line": 60,
+          "check": "peak: head jerks up, body rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:48"
+        },
+        {
+          "file": "anim__ashtusk_death_15t.png",
+          "scene": 51,
+          "line": 64,
+          "check": "legs splayed and head sagging while it tips over",
+          "status": "ok",
+          "taken": "20:19:58"
+        }
+      ],
+      "elsewhere:mournmaw": [
+        {
+          "file": "anim__mournmaw_hurt_peak.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:50"
+        },
+        {
+          "file": "anim__mournmaw_hurt_rest.png",
+          "scene": 48,
+          "line": 61,
+          "check": "peak: body recoils and sways back; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:51"
+        }
+      ],
+      "elsewhere:ossyra": [
+        {
+          "file": "anim__ossyra_hurt_peak.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:52"
+        },
+        {
+          "file": "anim__ossyra_hurt_rest.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:53"
+        }
+      ],
+      "elsewhere:aphelion": [
+        {
+          "file": "anim__aphelion_hurt_peak.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:55"
+        },
+        {
+          "file": "anim__aphelion_hurt_rest.png",
+          "scene": 50,
+          "line": 63,
+          "check": "peak: head rears, jaw gapes; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "20:19:55"
+        }
+      ],
+      "elsewhere:gulpmother": [
+        {
+          "file": "anim__gulpmother_hurt_peak.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:00"
+        },
+        {
+          "file": "anim__gulpmother_hurt_rest.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:00"
+        }
+      ],
+      "elsewhere:strawgrim": [
+        {
+          "file": "anim__strawgrim_hurt_peak.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:02"
+        },
+        {
+          "file": "anim__strawgrim_hurt_rest.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:03"
+        }
+      ],
+      "elsewhere:neferkhet": [
+        {
+          "file": "anim__neferkhet_hurt_peak.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:04"
+        },
+        {
+          "file": "anim__neferkhet_hurt_rest.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:05"
+        }
+      ],
+      "elsewhere:rimeback": [
+        {
+          "file": "anim__rimeback_hurt_peak.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:07"
+        },
+        {
+          "file": "anim__rimeback_hurt_rest.png",
+          "scene": 55,
+          "line": 68,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:08"
+        }
+      ],
+      "elsewhere:vorlagh": [
+        {
+          "file": "anim__vorlagh_hurt_peak.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:09"
+        },
+        {
+          "file": "anim__vorlagh_hurt_rest.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:10"
+        }
+      ],
+      "elsewhere:percolax": [
+        {
+          "file": "anim__percolax_hurt_peak.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:12"
+        },
+        {
+          "file": "anim__percolax_hurt_rest.png",
+          "scene": 57,
+          "line": 70,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:13"
+        }
+      ],
+      "elsewhere:grumblegut": [
+        {
+          "file": "anim__grumblegut_hurt_peak.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:14"
+        },
+        {
+          "file": "anim__grumblegut_hurt_rest.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:15"
+        }
+      ],
+      "elsewhere:auris": [
+        {
+          "file": "anim__auris_hurt_peak.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:17"
+        },
+        {
+          "file": "anim__auris_hurt_rest.png",
+          "scene": 59,
+          "line": 72,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:18"
+        }
+      ],
+      "elsewhere:lithara": [
+        {
+          "file": "anim__lithara_hurt_peak.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:19"
+        },
+        {
+          "file": "anim__lithara_hurt_rest.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:20"
+        }
+      ],
+      "elsewhere:thurgrim": [
+        {
+          "file": "anim__thurgrim_hurt_peak.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:22"
+        },
+        {
+          "file": "anim__thurgrim_hurt_rest.png",
+          "scene": 61,
+          "line": 74,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "20:20:22"
+        }
+      ],
+      "elsewhere:hrolf": [
+        {
+          "file": "anim__hrolf_hurt_peak.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrolf_hurt_rest.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:grimhorn": [
+        {
+          "file": "anim__grimhorn_hurt_peak.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__grimhorn_hurt_rest.png",
+          "scene": 63,
+          "line": 76,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:verdigrim": [
+        {
+          "file": "anim__verdigrim_hurt_peak.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__verdigrim_hurt_rest.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:galvanox": [
+        {
+          "file": "anim__galvanox_hurt_peak.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__galvanox_hurt_rest.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:kazehana": [
+        {
+          "file": "anim__kazehana_hurt_peak.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__kazehana_hurt_rest.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:tempestra": [
+        {
+          "file": "anim__tempestra_hurt_peak.png",
+          "scene": 67,
+          "line": 80,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__tempestra_hurt_rest.png",
+          "scene": 67,
+          "line": 80,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:heliodor": [
+        {
+          "file": "anim__heliodor_hurt_peak.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__heliodor_hurt_rest.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ankhara": [
+        {
+          "file": "anim__ankhara_hurt_peak.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__ankhara_hurt_rest.png",
+          "scene": 69,
+          "line": 82,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mother_creak": [
+        {
+          "file": "anim__mother_creak_hurt_peak.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__mother_creak_hurt_rest.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:selenne": [
+        {
+          "file": "anim__selenne_hurt_peak.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__selenne_hurt_rest.png",
+          "scene": 71,
+          "line": 84,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:galeplate_helmet": [
+        {
+          "file": "items__galeplate_helmet_front.png",
+          "scene": 72,
+          "line": 88,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_helmet_side.png",
+          "scene": 72,
+          "line": 88,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_helmet_tooltip.png",
+          "scene": 72,
+          "line": 88,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:galeplate_chestplate": [
+        {
+          "file": "items__galeplate_chestplate_front.png",
+          "scene": 73,
+          "line": 89,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_chestplate_side.png",
+          "scene": 73,
+          "line": 89,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_chestplate_tooltip.png",
+          "scene": 73,
+          "line": 89,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:galeplate_leggings": [
+        {
+          "file": "items__galeplate_leggings_front.png",
+          "scene": 74,
+          "line": 90,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_leggings_side.png",
+          "scene": 74,
+          "line": 90,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_leggings_tooltip.png",
+          "scene": 74,
+          "line": 90,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:galeplate_boots": [
+        {
+          "file": "items__galeplate_boots_front.png",
+          "scene": 75,
+          "line": 91,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_boots_side.png",
+          "scene": 75,
+          "line": 91,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__galeplate_boots_tooltip.png",
+          "scene": 75,
+          "line": 91,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hearthguard_helm": [
+        {
+          "file": "items__hrafnholt_hearthguard_helm_front.png",
+          "scene": 76,
+          "line": 92,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_helm_side.png",
+          "scene": 76,
+          "line": 92,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_helm_tooltip.png",
+          "scene": 76,
+          "line": 92,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hearthguard_greaves": [
+        {
+          "file": "items__hrafnholt_hearthguard_greaves_front.png",
+          "scene": 77,
+          "line": 93,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_greaves_side.png",
+          "scene": 77,
+          "line": 93,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_greaves_tooltip.png",
+          "scene": 77,
+          "line": 93,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_hearthguard_boots": [
+        {
+          "file": "items__hrafnholt_hearthguard_boots_front.png",
+          "scene": 78,
+          "line": 94,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_boots_side.png",
+          "scene": 78,
+          "line": 94,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_boots_tooltip.png",
+          "scene": 78,
+          "line": 94,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_ulfhednar_mask": [
+        {
+          "file": "items__hrafnholt_ulfhednar_mask_front.png",
+          "scene": 79,
+          "line": 95,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_ulfhednar_mask_side.png",
+          "scene": 79,
+          "line": 95,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_ulfhednar_mask_tooltip.png",
+          "scene": 79,
+          "line": 95,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_ulfhednar_breeches": [
+        {
+          "file": "items__hrafnholt_ulfhednar_breeches_front.png",
+          "scene": 80,
+          "line": 96,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_ulfhednar_breeches_side.png",
+          "scene": 80,
+          "line": 96,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_ulfhednar_breeches_tooltip.png",
+          "scene": 80,
+          "line": 96,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_glyphmail_hood": [
+        {
+          "file": "items__azmar_glyphmail_hood_front.png",
+          "scene": 81,
+          "line": 97,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_glyphmail_hood_side.png",
+          "scene": 81,
+          "line": 97,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_glyphmail_hood_tooltip.png",
+          "scene": 81,
+          "line": 97,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_glyphmail_hauberk": [
+        {
+          "file": "items__azmar_glyphmail_hauberk_front.png",
+          "scene": 82,
+          "line": 98,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_glyphmail_hauberk_side.png",
+          "scene": 82,
+          "line": 98,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_glyphmail_hauberk_tooltip.png",
+          "scene": 82,
+          "line": 98,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_outrider_chaps": [
+        {
+          "file": "items__aldermark_outrider_chaps_front.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_outrider_chaps_side.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_outrider_chaps_tooltip.png",
+          "scene": 83,
+          "line": 99,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aldermark_outrider_boots": [
+        {
+          "file": "items__aldermark_outrider_boots_front.png",
+          "scene": 84,
+          "line": 100,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_outrider_boots_side.png",
+          "scene": 84,
+          "line": 100,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__aldermark_outrider_boots_tooltip.png",
+          "scene": 84,
+          "line": 100,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "20:20:22",
+  "totals": {
+    "ok": 33,
+    "fail": 10,
+    "manual": 0
+  }
+}
