@@ -7,14 +7,16 @@
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:57"
         },
         {
           "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:21"
         }
       ]
     },
@@ -57,7 +59,8 @@
           "scene": 171,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:06"
         }
       ]
     },
@@ -96,7 +99,8 @@
           "scene": 285,
           "line": 324,
           "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:18"
         }
       ]
     },
@@ -159,42 +163,48 @@
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:44"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:47"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:49"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:51"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:53"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:40:54"
         }
       ]
     },
@@ -205,14 +215,16 @@
           "scene": 376,
           "line": 424,
           "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:21"
         },
         {
           "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
           "scene": 376,
           "line": 424,
           "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:27"
         }
       ]
     },
@@ -223,14 +235,16 @@
           "scene": 424,
           "line": 474,
           "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:06"
         },
         {
           "file": "s_pennant__standard_waving_with_minions_gear3_later.png",
           "scene": 424,
           "line": 474,
           "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:09"
         }
       ]
     },
@@ -241,21 +255,23 @@
           "scene": 444,
           "line": 494,
           "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:12"
         },
         {
           "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on_later.png",
           "scene": 444,
           "line": 494,
           "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:15"
         }
       ]
     }
   },
-  "run": "23:40:41",
+  "run": "23:44:30",
   "totals": {
-    "ok": 12,
+    "ok": 28,
     "fail": 0,
     "manual": 0
   }
