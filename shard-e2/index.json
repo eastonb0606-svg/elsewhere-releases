@@ -1,0 +1,331 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:neferkhet": [
+        {
+          "file": "anim__neferkhet_hurt_peak.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:39"
+        },
+        {
+          "file": "anim__neferkhet_hurt_rest.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:40"
+        }
+      ],
+      "elsewhere:lithara": [
+        {
+          "file": "anim__lithara_hurt_peak.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:43"
+        },
+        {
+          "file": "anim__lithara_hurt_rest.png",
+          "scene": 60,
+          "line": 73,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:44"
+        }
+      ],
+      "elsewhere:kazehana": [
+        {
+          "file": "anim__kazehana_hurt_peak.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:47"
+        },
+        {
+          "file": "anim__kazehana_hurt_rest.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:58:47"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:mirewick_lanternfang_estoc": [
+        {
+          "file": "items__mirewick_lanternfang_estoc_held.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:48"
+        },
+        {
+          "file": "items__mirewick_lanternfang_estoc_tooltip.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:58:49"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_blocking.png",
+          "scene": 140,
+          "line": 157,
+          "check": "the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
+          "status": "ok",
+          "taken": "22:58:52"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
+        {
+          "file": "s_p13_particles__rimeback_avalanche_10s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__rimeback_avalanche_20s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer (channel)": [
+        {
+          "file": "s_censer__censer_channel_first_person_1s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "22:58:54"
+        },
+        {
+          "file": "s_censer__censer_channel_third_person_2s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "22:58:55"
+        },
+        {
+          "file": "s_censer__censer_channel_top_3s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "22:58:56"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_jarl (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_aura_phase2.png",
+          "scene": 202,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "22:58:59"
+        }
+      ]
+    },
+    "s_langfix": {
+      "elsewhere:azmar_soldier_spawn_egg": [
+        {
+          "file": "s_langfix__azmar_soldier_spawn_egg_death_15t.png",
+          "scene": 242,
+          "line": 272,
+          "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
+          "status": "ok",
+          "taken": "22:59:01"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:strawgrim": [
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "ok",
+          "taken": "22:59:03"
+        },
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3_later.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "ok",
+          "taken": "22:59:05"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "swarm-as-one squad targeting (ARMIES 3.4)": [
+        {
+          "file": "s_swarm1__battle_aldermark_mirewick_32_30s.png",
+          "scene": 272,
+          "line": 308,
+          "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_4.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_4.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_3.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_3.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_3.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_4.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_held.png",
+          "scene": 291,
+          "line": 330,
+          "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip.png",
+          "scene": 291,
+          "line": 330,
+          "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "swarm attacking + Mothdust": [
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "pending"
+        },
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust_5s.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_foresight": {
+      "elsewhere:stormcrest_helm": [
+        {
+          "file": "s_foresight__stormcrest_helm_first_person.png",
+          "scene": 452,
+          "line": 504,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        },
+        {
+          "file": "s_foresight__stormcrest_helm_third_person.png",
+          "scene": 452,
+          "line": 504,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        },
+        {
+          "file": "s_foresight__stormcrest_helm_tooltip.png",
+          "scene": 452,
+          "line": 504,
+          "check": "the bar reads \"<name> · <move name>\" and the boss_ui attack line shows; it clears when the move lands",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:59:05",
+  "totals": {
+    "ok": 16,
+    "fail": 0,
+    "manual": 0
+  }
+}
