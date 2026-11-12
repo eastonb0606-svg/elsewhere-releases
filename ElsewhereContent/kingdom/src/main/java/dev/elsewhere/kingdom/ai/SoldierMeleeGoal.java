@@ -88,10 +88,6 @@ public final class SoldierMeleeGoal extends Goal {
 		mob.getLookControl().setLookAt(t, 30F, 30F);
 		double d2 = mob.distanceToSqr(t);
 		boolean inReach = mob.isWithinMeleeAttackRange(t);
-		// 3.0 fix (s-intreq): a 26.x spear can't jab a target inside its minimum reach, and the old approach walked spearmen right into
-		// it, so foot spears dealt no damage. A spearman holds the middle of its reach band and steps back when crowded.
-		boolean spear = mob.hasMinReach();
-		boolean tooClose = spear && !inReach && mob.reachBand(t, 0.0) < 0;
 		boolean ready = mob.attackReady();
 		// threat: an enemy close enough to hit us while we can't hit back yet
 		boolean windup = t instanceof Player p ? p.getAttackStrengthScale(0.5F) > 0.7F : (t instanceof Mob m && (m.isAggressive() || m.getTarget() == mob));
@@ -117,13 +113,6 @@ public final class SoldierMeleeGoal extends Goal {
 			level.playSound(null, mob.getX(), mob.getY(), mob.getZ(), net.minecraft.sounds.SoundEvents.SHIELD_BLOCK.value(), mob.getSoundSource(), 1F, 0.8F);
 			KingdomSoldier.totalBashes++;
 		}
-		if (tooClose) {
-			mob.getNavigation().stop();
-			mob.setSprinting(false);
-			mob.lookAt(t, 30F, 30F); // strafe moves relative to the body yaw
-			mob.getMoveControl().strafe(-0.6F, strafeOn ? strafeDir * 0.2F : 0F);
-			return;
-		}
 		if (mob.pendingCrit) {
 			if (inReach && mob.canCritNow(t) && mob.getDeltaMovement().y < 0) mob.strike(level, t);
 			else if (!inReach) mob.getMoveControl().setWantedPosition(t.getX(), t.getY(), t.getZ(), 1.0);
@@ -147,13 +136,8 @@ public final class SoldierMeleeGoal extends Goal {
 				// light strafing: rank and file sidestep only part of the time
 				strafeOn = mob.getRandom().nextFloat() < 0.35F + 0.65F * strafe;
 			}
-			int band = spear ? mob.reachBand(t, 0.35) : 0; // spearmen: back off near the minimum reach, close in near the maximum
-			float fwd = spear ? (band < 0 ? -0.4F : band == 0 ? 0F : 0.15F)
-				: mob.hasShield() ? (d2 < 1.3 * 1.3 ? -0.3F : 0.3F) : (d2 < 1.6 * 1.6 ? -0.5F : 0.15F);
+			float fwd = mob.hasShield() ? (d2 < 1.3 * 1.3 ? -0.3F : 0.3F) : (d2 < 1.6 * 1.6 ? -0.5F : 0.15F);
 			float side = strafeOn ? strafeDir * (blocking ? 0.25F : 0.45F) * (0.4F + 0.6F * strafe) : 0F;
-			// 3.0 (s-testfix 12:58, s-intreq): strafe moves relative to the body yaw, which only navigation or Mob.lookAt turns
-			// (setLookAt turns the head only), so face the target first or "circle" and "back away" go wherever the last path pointed
-			mob.lookAt(t, 30F, 30F);
 			mob.getMoveControl().strafe(blocking ? fwd * 0.5F : fwd, side);
 			mob.setSprinting(false);
 			return;

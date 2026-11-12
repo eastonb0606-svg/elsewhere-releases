@@ -283,7 +283,7 @@ public final class AzmarCastle {
 
 	/** Date palm: a jungle trunk leaning by (lx, lz) above 4, a crown of persistent fronds (fronds only into air). */
 	static void palm(A a, int x, int y0, int z, int lx, int lz) {
-		BlockState trunk = Blocks.JUNGLE_LOG.defaultBlockState(), leaf = Blocks.JUNGLE_LEAVES.defaultBlockState().setValue(LeavesBlock.PERSISTENT, true);
+		BlockState trunk = Blocks.JUNGLE_LOG.defaultBlockState(), leaf = Blocks.AZALEA_LEAVES.defaultBlockState().setValue(LeavesBlock.PERSISTENT, true);
 		for (int y = 0; y <= 6; y++) {
 			int k = y >= 4 ? 1 : 0;
 			a.s(x + k * lx, y0 + y, z + k * lz, trunk);
@@ -326,6 +326,8 @@ public final class AzmarCastle {
 			boolean inside = Math.abs(x) <= 21 && z >= -25 && z <= 18 || Math.abs(x) <= 2 && z >= 12 && z <= 20;
 			a.s(x, -1, z, inside ? paving(x, z) : SAND);
 		}
+		// slope skirt instead of a sheer box cut: the hillside is cut back 1:1 outside the pad, a low side is raised, overhangs cleared
+		CastleKit.skirt(l, PAD + 12, (x, z) -> Math.max(Math.abs(x), Math.abs(z)) - PAD, 10, Blocks.SAND, Blocks.SANDSTONE, 30);
 		terraces(a);
 		court(a, w);
 		pylons(a, w);

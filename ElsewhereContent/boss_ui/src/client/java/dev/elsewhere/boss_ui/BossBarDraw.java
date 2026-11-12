@@ -56,7 +56,28 @@ public final class BossBarDraw {
 		BossBarData.Entry entry = lay.entry();
 		int x = centerX - BAR_W / 2, y0 = y;
 		int col = color(e, entry);
-		g.centeredText(font, lay.name(), centerX, y, 0xFFFFFFFF);
+		{
+			// title lives between the icon's right edge and the bar's right end; shrink (min 0.75) then ellipsize
+			String title = lay.name();
+			int availL = (entry != null && !entry.icon().isEmpty()) ? x : x - 4, availW = x + BAR_W - availL;
+			int tw0 = font.width(title);
+			float sc0 = tw0 > availW ? Math.max(0.75F, (float) availW / tw0) : 1F;
+			if (tw0 * sc0 > availW) {
+				String ell = "...";
+				int lim = (int) (availW / sc0) - font.width(ell);
+				while (title.length() > 1 && font.width(title) > lim) title = title.substring(0, title.length() - 1);
+				title = title.stripTrailing() + ell;
+			}
+			int tw1 = font.width(title);
+			int tx = availL + Math.max(0, (int) ((availW - tw1 * sc0) / 2F));
+			if (sc0 < 1F) {
+				g.pose().pushMatrix();
+				g.pose().translate(tx, y);
+				g.pose().scale(sc0, sc0);
+				g.text(font, title, 0, 0, 0xFFFFFFFF);
+				g.pose().popMatrix();
+			} else g.text(font, title, tx, y, 0xFFFFFFFF);
+		}
 		y += 10;
 		boolean fx = BossBarFx.enabled();
 		float prog = Math.max(0F, Math.min(1F, e.getProgress()));

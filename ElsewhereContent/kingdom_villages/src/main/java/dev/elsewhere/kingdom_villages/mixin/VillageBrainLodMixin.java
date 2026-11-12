@@ -35,7 +35,12 @@ public abstract class VillageBrainLodMixin {
 		}
 		if (BrainLod.onPhase(v, elsewhereVillages$every) || BrainLod.urgent(v, self)) {
 			BrainLod.startsRun++;
-			original.call(self, level, body);
+			BrainLod.startPassTick = now;
+			try {
+				original.call(self, level, body);
+			} finally {
+				BrainLod.startPassTick = Long.MIN_VALUE;
+			}
 		} else BrainLod.startsSkipped++;
 	}
 }

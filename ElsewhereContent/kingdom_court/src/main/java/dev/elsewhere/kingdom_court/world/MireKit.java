@@ -33,12 +33,12 @@ final class MireKit {
 		countingHouse(w);
 		for (int i = 0; i < MireCourt.HOUSES.length; i++) houseRoof(w, MireCourt.HOUSES[i], i);
 		int[] g = MireCourt.GUILD, s = MireCourt.SLUICE, b = MireCourt.BARRACKS, a = MireCourt.ARSENAL, t = MireCourt.STABLES;
-		CastleKit.gable(w, g[0], g[1], g[2], g[3], 8, 0, true, Blocks.DEEPSLATE_TILE_STAIRS, TILES, CALCITE, true, GOLD);
+		CastleKit.gable(w, g[0], g[1], g[2], g[3], 8, 0, true, Blocks.CRIMSON_STAIRS, CRIMSON, CALCITE, true, GOLD);
 		w.s(g[2] + 1, 6, 0, Blocks.WALL_BANNER.pick(DyeColor.PURPLE).defaultBlockState().setValue(WallBannerBlock.FACING, Direction.EAST));
 		CastleKit.gable(w, s[0], s[1], s[2], s[3], 6, 0, true, Blocks.CRIMSON_STAIRS, CRIMSON, QUARTZ, true, GOLD);
 		CastleKit.gable(w, b[0], b[1], b[2], b[3], 6, 0, true, Blocks.CRIMSON_STAIRS, CRIMSON, CALCITE, true, GOLD);
-		CastleKit.gable(w, a[0], a[1], a[2], a[3], 6, 0, false, Blocks.DEEPSLATE_TILE_STAIRS, TILES, CALCITE, true, GOLD);
-		CastleKit.gable(w, t[0], t[1], t[2], t[3], 4, 0, true, Blocks.DEEPSLATE_TILE_STAIRS, TILES, null, false, null);
+		CastleKit.gable(w, a[0], a[1], a[2], a[3], 6, 0, false, Blocks.CRIMSON_STAIRS, CRIMSON, CALCITE, true, GOLD);
+		CastleKit.gable(w, t[0], t[1], t[2], t[3], 4, 0, true, Blocks.CRIMSON_STAIRS, CRIMSON, null, false, null);
 		gatehouse(w);
 		windmill(w, plan);
 		int[][] tips = MireLayout.tipProbes();
@@ -55,11 +55,11 @@ final class MireKit {
 		causeway(w);
 	}
 
-	/** The Counting-House: crow-stepped calcite gables north and south with purple courses and gilt copings, a slate roof, clock, belfry. */
+	/** The Counting-House: crow-stepped calcite gables north and south with purple courses and gilt copings, a crimson roof, clock, belfry. */
 	static void countingHouse(CastleKit.W w) {
 		w.dy = 0;
 		CastleKit.clearCrenels(w, -11, -26, 11, -8, 19);
-		CastleKit.gable(w, -11, -26, 11, -8, 19, 0, false, Blocks.DEEPSLATE_TILE_STAIRS, TILES, CALCITE, true, GOLD);
+		CastleKit.gable(w, -11, -26, 11, -8, 19, 0, false, Blocks.CRIMSON_STAIRS, CRIMSON, CALCITE, true, GOLD);
 		for (int z : new int[] {-26, -8}) {
 			for (int x = -9; x <= 9; x++) w.s(x, 21, z, PURPLE); // row 2 of the gable: half-width 9
 			for (int x = -5; x <= 5; x++) w.s(x, 25, z, PURPLE); // row 6: half-width 5

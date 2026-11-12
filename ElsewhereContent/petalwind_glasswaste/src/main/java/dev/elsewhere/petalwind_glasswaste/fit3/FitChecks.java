@@ -259,7 +259,8 @@ public final class FitChecks {
 		// 4. feature twins (/place) go through the same builders, inside their 3x3 chunks
 		if (gw != null) {
 			for (String kind : new String[] {PGStructures.SUNPIT, PGStructures.ZIGGURAT}) {
-				BlockPos spot = new BlockPos(((9000 + new java.util.Random().nextInt(200000)) & ~15) + 8, 0, ((9000 + new java.util.Random().nextInt(200000)) & ~15) + 8);
+				java.util.Random spotRng = new java.util.Random(0x7317L ^ kind.hashCode()); // a fixed spot per kind: the same terrain every run
+				BlockPos spot = new BlockPos(((9000 + spotRng.nextInt(200000)) & ~15) + 8, 0, ((9000 + spotRng.nextInt(200000)) & ~15) + 8);
 				for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) gw.getChunk((spot.getX() >> 4) + dx, (spot.getZ() >> 4) + dz, ChunkStatus.FULL, true);
 				int top = gw.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, spot.getX(), spot.getZ()) - 1;
 				long t0 = System.nanoTime();

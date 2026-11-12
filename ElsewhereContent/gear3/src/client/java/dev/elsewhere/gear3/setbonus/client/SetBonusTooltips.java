@@ -35,6 +35,11 @@ public final class SetBonusTooltips {
 			if (add.isEmpty()) return;
 			lines.addAll(Math.min(lines.size(), 1), add);
 		});
+		// A1: wrap long lines last, after every other listener has added its own
+		net.fabricmc.fabric.api.event.Event<ItemTooltipCallback> ev = ItemTooltipCallback.EVENT;
+		net.minecraft.resources.Identifier late = net.minecraft.resources.Identifier.fromNamespaceAndPath("elsewhere", "gear3_tooltip_wrap");
+		ev.addPhaseOrdering(net.fabricmc.fabric.api.event.Event.DEFAULT_PHASE, late);
+		ev.register(late, (stack, ctx, flag, lines) -> dev.elsewhere.gear3.setbonus.TooltipWrap.wrapAll(lines));
 	}
 
 	/** The lines for {@code stack} as seen by {@code viewer} (may be null: counts as wearing nothing). */

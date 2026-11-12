@@ -94,6 +94,8 @@ public final class SelfTest {
 	static final java.lang.management.ThreadMXBean MX = java.lang.management.ManagementFactory.getThreadMXBean();
 	static long tickStart, cpuStart;
 	static boolean measuring;
+	/** fx-siegeperf: opt-in hotspot sampler (info lines only). TEMP on for one diagnostic run. */
+	static final boolean SAMPLER_ON = true || Boolean.getBoolean("elsewhere.villages.sampler");
 	static VillageRecord outpost, road;
 
 	static void check(String name, boolean ok, @Nullable Object detail) {
@@ -839,7 +841,7 @@ public final class SelfTest {
 				SAMPLES.clear();
 				CPU_SAMPLES.clear();
 				measuring = true;
-				SiegeSampler.start(Thread.currentThread());
+				if (SAMPLER_ON) SiegeSampler.start(Thread.currentThread()); // fx-siegeperf: opt-in hotspot sampler (info lines only)
 				java.util.Map<String, Integer> cen = new java.util.TreeMap<>();
 				int tot = 0;
 				for (var e : level.getEntitiesOfClass(net.minecraft.world.entity.Entity.class, new AABB(-5000, -128, -5000, 5000, 400, 5000), x -> true)) { cen.merge(e.getType().toShortString(), 1, Integer::sum); tot++; }
@@ -849,6 +851,8 @@ public final class SelfTest {
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.startsSkipped = 0;
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearches = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearchesSaved = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearchesDeferred = 0;
 				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxWalkSearchesInTick = 0;
+				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSearches = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSearchesDeferred = 0;
+				dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxPoiSearchesInTick = 0;
 			}
 			if (age() == 700 && lodFar != null) BrainLodTest.live(level, lodFar); // after the measured window (window 2 is info only)
 			if (age() == 640 || age() == 840 || age() == 1040 || age() == 1240) {
@@ -863,7 +867,7 @@ public final class SelfTest {
 				info(String.format("PROFILE window ending age %d: mean %.2f ms p95 %.2f max %.2f; server-thread CPU mean %.2f p95 %.2f; machine load %.1f", age(), wm, wp, w.get(w.size() - 1) / 1e6, cm, cp, loadAvg));
 				if (age() == 640) {
 					SiegeSampler.stop();
-					for (String line : SiegeSampler.report()) info(line);
+					if (SiegeSampler.samples > 0) for (String line : SiegeSampler.report()) info(line);
 					int serfsN = level.getEntitiesOfClass(Serf.class, AABB.of(E.bounds.inflatedBy(32)), e -> true).size();
 					info(String.format("LOAD full siege D=%s (force %d, burned %d) + rebuild E=%s (plan %d/%d, serfs %d), soldiers loaded %d, golems %d: MSPT mean %.2f p95 %.2f over %d ticks; villages manager %.3f ms/tick; block writes %d",
 						D.state, D.forceSpawned, D.journal.size(), E.state, E.planIndex, E.plan.size(), serfsN, KingdomPerf.loaded(level).size(),
@@ -879,6 +883,8 @@ public final class SelfTest {
 						wd = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.walkSearchesDeferred;
 					int wmax = dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxWalkSearchesInTick;
 					info(String.format("SIEGEPERF walk searches %d, futile repeats saved %d, deferred to a later pass %d, most in one tick %d", ws, wsv, wd, wmax));
+					info(String.format("SIEGEPERF POI searches %d, deferred to a later pass %d, most in one tick %d", dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSearches,
+						dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.poiSearchesDeferred, dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.maxPoiSearchesInTick));
 					check("villager walk searches: villagers still walk in the siege, at most " + dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.WALK_SEARCHES_PER_TICK + " searches start per tick",
 						ws > 0 && wmax <= dev.elsewhere.kingdom_villages.s3.brainlod.BrainLod.WALK_SEARCHES_PER_TICK, ws + " searches, max " + wmax + " in a tick");
 					check("load test: full siege mean MSPT under 10", wm < 10, String.format("%.2f", wm));

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -507,7 +508,7 @@ public final class CastleKit {
 			w.s(1, ridge + 1, z, stair(st, Direction.WEST, Half.BOTTOM));
 			w.s(0, ridge + 1, z, dfence);
 			w.s(0, ridge + 2, z, dfence);
-			w.s(0, ridge + 3, z, Blocks.BONE_BLOCK);
+			w.s(0, ridge + 3, z, Blocks.LANTERN);
 		}
 		// longhouse roofs on the yard buildings
 		gable(w, -27, -4, -17, 12, 5, 2, false, st, dark, dark, false, null);
@@ -519,7 +520,7 @@ public final class CastleKit {
 		ring(w, 19, -23, 23, -19, r + 1, st, Half.BOTTOM, dark, null);
 		int top = spire(w, 21, -21, 2, r + 4, st, dark, true);
 		w.s(21, top, -21, dfence);
-		w.s(21, top + 1, -21, Blocks.BONE_BLOCK);
+		w.s(21, top + 1, -21, Blocks.LANTERN);
 	}
 
 	// Azmar: ancient-Egyptian mythic. Flat roofs with cavetto cornices and lapis faience, a battered pylon pair before the keep, obelisks, kiosks,
@@ -608,9 +609,45 @@ public final class CastleKit {
 		w.s(cx, 14, cz, tip);
 	}
 
+	/** Natural terrain (earth, stone, sand, terracotta, snow, foliage): the only blocks a slope skirt may clear or cover, so it never eats a wall. */
+	static boolean natural(BlockState c) {
+		return c.isAir() || c.canBeReplaced() || c.is(BlockTags.DIRT) || c.is(BlockTags.LEAVES) || c.is(BlockTags.LOGS) || c.is(BlockTags.SAND)
+			|| c.is(BlockTags.TERRACOTTA) || c.is(BlockTags.BASE_STONE_OVERWORLD) || c.is(BlockTags.SNOW) || c.is(Blocks.SANDSTONE) || c.is(Blocks.RED_SANDSTONE);
+	}
+
+	/**
+	 * Slope skirt (3.0 terrain fit): around a levelled pad (floor surface at y -1) the hillside is cut back on a 1:1 slope instead of a sheer box
+	 * wall, a low side is raised on the same slope, and natural terrain, leaves and overhanging grass above the skirt are cleared up to {@code clearTo}.
+	 * {@code dist} is the distance of a column outside the pad (<= 0 = on the pad, skipped); columns up to {@code reach} out are fitted. Per column
+	 * and from the generator ground only, so every chunk agrees; man-made blocks (walls, towers) are never touched.
+	 */
+	static void skirt(CastleLayout.L l, int ext, java.util.function.IntBinaryOperator dist, int reach, Block top, Block body, int clearTo) {
+		var c = l.p.clip;
+		int x0 = Math.max(-ext, c.minX() - l.o.getX()), x1 = Math.min(ext, c.maxX() - l.o.getX());
+		int z0 = Math.max(-ext, c.minZ() - l.o.getZ()), z1 = Math.min(ext, c.maxZ() - l.o.getZ());
+		for (int x = x0; x <= x1; x++) for (int z = z0; z <= z1; z++) {
+			int d = dist.applyAsInt(x, z);
+			if (d <= 0 || d > reach) continue;
+			int g = l.gy(x, z) - 1, tgt = g > -1 ? -1 + d : -1 - d;
+			int eff = g > -1 ? Math.min(g, tgt) : Math.max(g, tgt);
+			// clear natural blocks above the target surface (hillside, trees, overhanging grass)
+			for (int y = eff + 1; y <= Math.max(clearTo, g + 12); y++) {
+				BlockPos bp = new BlockPos(l.o.getX() + x, l.o.getY() + y, l.o.getZ() + z);
+				if (!c.isInside(bp.getX(), bp.getY(), bp.getZ())) continue;
+				BlockState cur = l.p.level.getBlockState(bp);
+				if (!cur.isAir() && natural(cur) && cur.getFluidState().isEmpty()) l.p.setRaw(bp.getX(), bp.getY(), bp.getZ(), Blocks.AIR.defaultBlockState());
+			}
+			if (g > -1 && g > tgt) l.p.setSkirt(l.o.getX() + x, l.o.getY() + tgt, l.o.getZ() + z, top.defaultBlockState());
+			else if (g < -1 && g < tgt) {
+				for (int y = g + 1; y <= tgt; y++) l.p.setSkirt(l.o.getX() + x, l.o.getY() + y, l.o.getZ() + z, (y == tgt ? top : body).defaultBlockState());
+				l.foundation(x, z, x, z, g, body);
+			}
+		}
+	}
+
 	/** Date palm: a leaning jungle trunk and a crown of persistent fronds (never decay). */
 	static void palm(W w, int x, int z) {
-		BlockState trunk = Blocks.JUNGLE_LOG.defaultBlockState(), leaf = Blocks.JUNGLE_LEAVES.defaultBlockState().setValue(LeavesBlock.PERSISTENT, true);
+		BlockState trunk = Blocks.JUNGLE_LOG.defaultBlockState(), leaf = Blocks.AZALEA_LEAVES.defaultBlockState().setValue(LeavesBlock.PERSISTENT, true);
 		int lean = ((x * 31 + z * 17) & 1) == 0 ? 1 : -1;
 		for (int y = 0; y <= 6; y++) w.s(x + (y >= 4 ? lean : 0), y, z, trunk);
 		int tx = x + lean, ty = 7;

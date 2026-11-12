@@ -250,6 +250,7 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 	public void setFaction(Identifier faction) {
 		this.factionId = faction;
 		this.entityData.set(DATA_TABARD, Factions.get(faction).tabardColor);
+		if (equipped) this.entityData.set(DATA_SKIN, unit().skin().toString()); // a re-flagged soldier wears its new kingdom's skin, never the old one's (A3)
 		syncNameplate();
 	}
 

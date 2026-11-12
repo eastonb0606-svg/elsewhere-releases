@@ -580,7 +580,13 @@ public final class GreenhazeLooks {
 			o.set(fp, lz == 2 ? mudB : st(Blocks.SPRUCE_PLANKS));
 			underpin(o, fp.getX(), y0 - 2, fp.getZ(), mudB, packed, 6);
 			clear(o, fp.getX(), y0, y0 + 2, fp.getZ());
-			soft(o, fp.getX(), y0 + 3, y0 + 6, fp.getZ());
+			// natural terrain roofing the stall (a stall cut into a slope) is cleared up to the piece's top: it must never be buried
+			clear(o, fp.getX(), y0 + 3, y0 + 6, fp.getZ());
+		}
+		if (role == 1) for (int lx = -hw - 1; lx <= hw + 1; lx++) for (int lz = -3; lz <= 0; lz++) {
+			if (Math.abs(lx) <= hw && lz >= -2) continue;
+			BlockPos cp = f.at(lx, 0, lz);
+			clear(o, cp.getX(), y0 + 4, y0 + 6, cp.getZ()); // the booth's kushwood gable
 		}
 		// a step down (or up) to the street when the pad is off the street level
 		int sw = pc.p(2), d = sw - y0;

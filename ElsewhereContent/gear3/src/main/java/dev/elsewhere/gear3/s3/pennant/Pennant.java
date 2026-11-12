@@ -190,6 +190,7 @@ public final class Pennant {
 	}
 
 	private static void schedule(Standard s) {
+		if (s.timer != null) Gear3Scheduler.cancel(s.timer); // a pulse driven early (not by its timer) leaves no stale timer queued
 		s.timer = Gear3Scheduler.after(s.level.getServer(), PULSE_TICKS, () -> second(s));
 	}
 

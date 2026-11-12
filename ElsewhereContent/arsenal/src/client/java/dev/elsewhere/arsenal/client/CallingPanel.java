@@ -25,7 +25,7 @@ public final class CallingPanel {
 		Player p = mc.player;
 		if (p == null) return;
 		Font font = mc.font;
-		int x = 6, y = dev.elsewhere.arsenal.CallingPanelLayout.top(), w = 132, rowH = 12; // below Green Leaf's high meter when it is loaded
+		int x = 6, y = dev.elsewhere.arsenal.CallingPanelLayout.top(), w = 164, rowH = 12; // below Green Leaf's high meter when it is loaded
 		g.fill(x - 3, y - 3, x + w + 3, y + 14 + 4 * rowH, 0xA0101018);
 		g.text(font, "Callings", x, y, 0xFFE8E0FF, true);
 		y += 12;
@@ -33,7 +33,7 @@ public final class CallingPanel {
 			float m = Calling.mastery(p, path);
 			String label = Calling.name(path) + " " + rank(Calling.rank(p, path));
 			g.text(font, label, x, y, 0xFFD0D0D0, true);
-			int bx = x + 84, bw = 44;
+			int bx = x + 116, bw = 44;
 			g.fill(bx, y + 2, bx + bw, y + 7, 0xFF2A2A33);
 			g.fill(bx, y + 2, bx + Math.round(bw * m), y + 7, COLORS[path.ordinal()]);
 			y += rowH;
@@ -42,10 +42,10 @@ public final class CallingPanel {
 
 	static String rank(Calling.Rank r) {
 		return switch (r) {
-			case PRIMARY -> "P";
-			case SECONDARY -> "S";
-			case OPEN -> "O";
-			case UNATTUNED -> "-";
+			case PRIMARY -> "Primary";
+			case SECONDARY -> "Secondary";
+			case OPEN -> "Open";
+			case UNATTUNED -> "Unattuned";
 		};
 	}
 

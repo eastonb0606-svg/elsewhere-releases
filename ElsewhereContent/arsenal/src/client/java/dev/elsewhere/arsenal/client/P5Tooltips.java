@@ -29,6 +29,11 @@ public final class P5Tooltips {
 	private static boolean registered;
 
 	public static void init() {
+		// A1: wrap long lines last, after every other listener (incl. P5's own phase) has added its lines
+		Identifier wrap = ArsenalContent.id("tooltip_wrap");
+		ItemTooltipCallback.EVENT.addPhaseOrdering(PHASE, wrap);
+		ItemTooltipCallback.EVENT.addPhaseOrdering(Event.DEFAULT_PHASE, wrap);
+		ItemTooltipCallback.EVENT.register(wrap, (stack, ctx, flag, lines) -> dev.elsewhere.arsenal.spell.TooltipWrap.wrapAll(lines));
 		if (registered || !ENABLED) return;
 		registered = true;
 		ItemTooltipCallback.EVENT.addPhaseOrdering(Event.DEFAULT_PHASE, PHASE);

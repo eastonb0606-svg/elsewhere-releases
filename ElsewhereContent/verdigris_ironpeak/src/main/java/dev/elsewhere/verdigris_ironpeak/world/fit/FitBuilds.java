@@ -136,6 +136,8 @@ public final class FitBuilds {
 			// the 2.x/3.0 GenFit limits (cut 6, fill 8; the foundation ladder takes the fill), so density and map targets stay as before
 			case "clan_hold" -> GenFit.Limits.surface(7, 6, 8, 15, lo, hi);
 			case "climbers_cairn" -> GenFit.Limits.surface(3, 6, 8, 15, lo, hi);
+			// the rift ring stands at radius 9: centre + footprint corners in the rift biomes and y range (GENERATION.md #21, as the 2.x radius min(r, 12))
+			case "return_rift_ironpeak" -> GenFit.Limits.surface(9, 6, 8, 15, lo, hi);
 			case "engineers_atoll" -> GenFit.Limits.surface(5, 6, 8, 45, lo, hi);
 			case "proving_grounds", "summit_throne" -> GenFit.Limits.surface(12, 6, 8, 15, lo, hi);
 			// the sea-bed spread test over the nave's 12-block core; buttresses and the foundation carry the rest to the bed
@@ -523,6 +525,17 @@ public final class FitBuilds {
 				}
 			}
 		}
+		// under-deck girders tie the four legs together and knee braces splay out to the deck rim
+		for (int t = -4; t <= 4; t++) {
+			s.set(t, deck - 1, -5, pipe(Direction.Axis.X));
+			s.set(t, deck - 1, 5, pipe(Direction.Axis.X));
+			s.set(-5, deck - 1, t, pipe(Direction.Axis.Z));
+			s.set(5, deck - 1, t, pipe(Direction.Axis.Z));
+		}
+		for (int[] l : new int[][] {{-1, -1}, {1, -1}, {-1, 1}, {1, 1}}) {
+			s.set(l[0] * 6, deck - 1, l[1] * 6, pipe(Direction.Axis.Y));
+			s.set(l[0] * 6, deck - 2, l[1] * 6, VerdigrisBlocks.VERDIGRIS_PIPE_JUNCTION.defaultBlockState());
+		}
 		for (int x = -6; x <= 6; x++) for (int z = -6; z <= 6; z++) {
 			boolean rim = Math.abs(x) == 6 || Math.abs(z) == 6;
 			s.set(x, deck, z, rim ? st(VerdigrisBlocks.RIVETED_VERDIGRIS_PLATE) : st(VerdigrisBlocks.VERDIGRIS_GRATING));
@@ -559,6 +572,12 @@ public final class FitBuilds {
 				else s.set(x, y, z, corner ? log : (y == 2 && (x == 0 || z == 0) ? st(Blocks.GLASS_PANE) : planks));
 			}
 			s.set(x, 4, z, st(VerdigrisBlocks.VERDIGRIS_PLATE_SLAB));
+		}
+		// stepped tuff skirt down from the plinth to the ground on every side, so the hut never sits on a box cut
+		for (int x = -9; x <= 9; x++) for (int z = -9; z <= 9; z++) {
+			int ring = Math.max(Math.abs(x), Math.abs(z));
+			if (ring < 4 || ring > 9) continue;
+			s.underpin(x, -1 - (ring - 4), z, st(Blocks.TUFF_BRICKS), st(Blocks.TUFF), st(Blocks.COBBLESTONE), 24);
 		}
 		// a raised plate eave and a copper weathervane
 		for (int x = -4; x <= 4; x++) for (int z = -4; z <= 4; z++) if (Math.abs(x) == 4 || Math.abs(z) == 4) s.set(x, 3, z, stair(VerdigrisBlocks.VERDIGRIS_PLATE_STAIRS, outward(x, z).getOpposite(), true));
@@ -768,6 +787,22 @@ public final class FitBuilds {
 			s.hollow(x, landing, z);
 			s.hollow(x, landing + 1, z);
 		}
+		// 2b. eight splayed buttresses from under the platform down the tower, flaring out to piers on the sea stack
+		for (int k = 0; k < 8; k++) {
+			double a = Math.toRadians(45 * k);
+			double ca = Math.cos(a), sa = Math.sin(a);
+			int lastX = 0, lastZ = 0;
+			for (int y = -3; y >= landing; y--) {
+				int o = Math.min(3, (-3 - y) / 5);
+				double r = TR + 0.5 + o;
+				int x = (int) Math.round(ca * r), z = (int) Math.round(sa * r);
+				s.set(x, y, z, ((-y) / 4) % 2 == 0 ? teal : white);
+				if (k % 2 == 0) s.set(x + (int) Math.round(-sa), y, z + (int) Math.round(ca), ((-y) / 4) % 2 == 0 ? teal : white);
+				lastX = x;
+				lastZ = z;
+			}
+			s.underpin(lastX, landing - 1, lastZ, white, white, rubble(s, lastX, 0, lastZ), 60);
+		}
 		// 3. the 2.x platform: copper floor with the prismarine cross, plate rim and wall, 10 rods (pedestals in cut copper, not copper blocks)
 		for (int x = -R - 1; x <= R + 1; x++) for (int z = -R - 1; z <= R + 1; z++) {
 			double d = Math.sqrt(x * x + z * z);
@@ -846,12 +881,17 @@ public final class FitBuilds {
 		for (int x = -R - 7; x <= R + 7; x++) for (int z = -R - 7; z <= R + 7; z++) {
 			double d = Math.sqrt(x * x + z * z);
 			if (d <= R + 0.5) {
-				s.underpin(x, -1, z, ice, st(IronpeakBlocks.FROSTGRANITE_BRICKS), st(IronpeakBlocks.FROSTGRANITE), 12);
+				s.underpin(x, -1, z, ice, st(IronpeakBlocks.FROSTGRANITE_BRICKS), st(IronpeakBlocks.FROSTGRANITE), 24);
 				int h = hash(s, x, 0, z);
 				s.set(x, 0, z, d < 5 ? st(IronpeakBlocks.POLISHED_FROSTGRANITE) : h % 5 == 0 ? st(Blocks.SNOW_BLOCK) : h % 3 == 0 ? st(IronpeakBlocks.GLACIER_ICE) : ice);
 				for (int y = 1; y <= ThurgrimArena.HEIGHT; y++) s.hollow(x, y, z);
 			} else if (d <= R + 7) {
 				s.trim(x, z, (int) Math.floor(d - R - 0.5), 16);
+			}
+			if (d > R + 0.5 && d <= R + 14) {
+				// slope skirt: a 1:1 ice and frostgranite bank from the plinth rim down to the ground, so the drum never stands sheer
+				int top = -1 - (int) Math.floor(d - R - 0.5);
+				s.underpin(x, top, z, st(Blocks.SNOW_BLOCK), ice, st(IronpeakBlocks.FROSTGRANITE), 40);
 			}
 		}
 		// the six storm obelisks (the boss strikes them): same offsets, frostgranite and deepslate (no iron blocks), each on an ice plinth

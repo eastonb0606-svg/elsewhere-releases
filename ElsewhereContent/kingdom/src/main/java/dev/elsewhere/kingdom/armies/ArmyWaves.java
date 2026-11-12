@@ -386,8 +386,22 @@ public final class ArmyWaves {
 		BlockPos p = BlockPos.containing(x, 64, z);
 		if (!lv.isLoaded(p)) return fallback;
 		BlockPos g = lv.getHeightmapPos(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, p);
-		if (!lv.getFluidState(g).isEmpty() || !lv.getFluidState(g.below()).isEmpty() || Math.abs(g.getY() - fallback.getY()) > 12) return fallback;
+		if (!lv.getFluidState(g).isEmpty() || !lv.getFluidState(g.below()).isEmpty() || Math.abs(g.getY() - fallback.getY()) > 12) return dry(lv, fallback);
 		return g;
+	}
+
+	/** The fallback itself may be a pool or sea: step out in rings (up to 24 blocks) to the nearest dry standing spot so nobody spawns submerged. */
+	private static BlockPos dry(ServerLevel lv, BlockPos fallback) {
+		if (lv.getFluidState(fallback).isEmpty() && lv.getFluidState(fallback.below()).isEmpty()) return fallback;
+		for (int r = 2; r <= 24; r += 2)
+			for (int i = 0; i < 16; i++) {
+				double a = i * Math.PI / 8;
+				BlockPos p = BlockPos.containing(fallback.getX() + Math.cos(a) * r, 64, fallback.getZ() + Math.sin(a) * r);
+				if (!lv.isLoaded(p)) continue;
+				BlockPos g = lv.getHeightmapPos(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, p);
+				if (lv.getFluidState(g).isEmpty() && lv.getFluidState(g.below()).isEmpty() && Math.abs(g.getY() - fallback.getY()) <= 12) return g;
+			}
+		return fallback;
 	}
 
 	public static void reset() {

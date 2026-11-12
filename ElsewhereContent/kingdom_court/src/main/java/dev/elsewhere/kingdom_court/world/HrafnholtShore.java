@@ -27,6 +27,8 @@ public final class HrafnholtShore {
 
 	private static final Map<String, Plan> PLANS = new ConcurrentHashMap<>();
 	static final int[] BERTHS = {-7, -14};
+	/** fx-hrafwater: the lanes each berth may take, its longship's lane first (vc - 3 >= Waterfront.V_MIN; clear of the jetty and the road). */
+	static final int[][] BERTH_LANES = {{-7, -6, -8, -9}, {-14, -13, -15, -12}};
 	/** s-asm-court: a naust is dug into the bank; its footprint's ground may stand up to this far above the sea (earth stays over the turf roof). */
 	static final int NAUST_BANK = 16;
 
@@ -120,28 +122,43 @@ public final class HrafnholtShore {
 		// naust berths: dry shore behind the waterline at the moored longships' lanes
 		List<int[]> berths = new ArrayList<>();
 		StringBuilder note = new StringBuilder(); // s-asm-court: per lane, why a naust stands or not (self-test detail)
-		for (int vc : BERTHS) {
-			// s-asm-court: the lane's own waterline, the first wet cell right after dry land, anywhere from clear of the ring (a 12-long shed
-			// behind it starts at u >= 38) to just past the shore. It used to need dry land exactly 16 before the shore, which a flat or marshy
-			// coast never has.
-			int ub = -1;
-			for (int u = 51; u <= shore + 2 && ub < 0; u++) if (gw(g, o, dir, u, vc) <= sea + 1 && gw(g, o, dir, u - 1, vc) > sea + 1) ub = u;
+		// fx-hrafwater: each berth tries a few lanes round its longship's (sheds 7 wide never overlap, all inside the waterfront box), and the
+		// shed's front rows and eave columns may stand over the shallows (the floor and walls are founded down to the bed there). A fixed lane
+		// with a dry 12 x 7 footprint behind its waterline almost never existed on a real, ragged coast: 4 water sites had 0 nausts.
+		int lastVc = Integer.MAX_VALUE;
+		for (int[] slot : BERTH_LANES) {
 			if (note.length() > 0) note.append("; ");
-			note.append("lane ").append(vc).append(": ");
-			if (ub < 0 || ub - 13 < 38) {
-				note.append("no waterline after dry land in u 51..").append(shore + 2);
-				continue;
+			String why = "";
+			for (int vc : slot) {
+				if (Math.abs(vc - lastVc) < 7) continue;
+				// s-asm-court: the lane's own waterline, the first wet cell right after dry land, anywhere from clear of the ring (a 12-long shed
+				// behind it starts at u >= 38) to just past the shore.
+				int ub = -1;
+				for (int u = 51; u <= shore + 2 && ub < 0; u++) if (gw(g, o, dir, u, vc) <= sea + 1 && gw(g, o, dir, u - 1, vc) > sea + 1) ub = u;
+				if (ub < 0 || ub - 13 < 38) {
+					why = "lane " + vc + ": no waterline after dry land in u 51.." + (shore + 2);
+					continue;
+				}
+				boolean ok = true;
+				int lo = Integer.MAX_VALUE, hi = Integer.MIN_VALUE, wet = 0;
+				for (int u = ub - 13; u <= ub - 2; u++) for (int v = vc - 3; v <= vc + 3; v++) {
+					int y = gw(g, o, dir, u, v);
+					lo = Math.min(lo, y);
+					hi = Math.max(hi, y);
+					if (y > sea + NAUST_BANK) ok = false;
+					else if (y <= sea) {
+						wet++;
+						if (u < ub - 5 && Math.abs(v - vc) < 3) ok = false; // the back of the shed and its boat bay stand on the bank
+					}
+				}
+				why = "lane " + vc + ": waterline u " + ub + ", bank " + (lo - sea) + ".." + (hi - sea) + ", wet " + wet + (ok ? " -> naust" : " -> none");
+				if (ok) {
+					berths.add(new int[] {vc, ub});
+					lastVc = vc;
+					break;
+				}
 			}
-			boolean ok = true;
-			int lo = Integer.MAX_VALUE, hi = Integer.MIN_VALUE;
-			for (int u = ub - 13; u <= ub - 2; u++) for (int v = vc - 3; v <= vc + 3; v++) {
-				int y = gw(g, o, dir, u, v);
-				lo = Math.min(lo, y);
-				hi = Math.max(hi, y);
-				if (y <= sea || y > sea + NAUST_BANK) ok = false;
-			}
-			note.append("waterline u ").append(ub).append(", bank ").append(lo - sea).append("..").append(hi - sea).append(ok ? " -> naust" : " -> none");
-			if (ok) berths.add(new int[] {vc, ub});
+			note.append(why);
 		}
 		Plan p = new Plan(cells.toArray(new int[0][]), h, hEnd, berths, note.toString());
 		if (PLANS.size() > 64) PLANS.clear();

@@ -136,8 +136,28 @@ public final class SelfTest {
 			if (++ticks[0] < 400 && !arenaTicking(srv.overworld())) return;
 			ran[0] = true;
 			info("arena: all 16 forced chunks entity-ticking=" + arenaTicking(srv.overworld()) + " after " + ticks[0] + " ticks");
+			clearArena(srv.overworld());
 			run(srv);
 		});
+	}
+
+	/**
+	 * fx-gear3: the test world is regenerated with a random seed each run, and the checks assume open air from y 96 up
+	 * (lights at 40,105,40, Blinkstone, arrow/stone flights). A mountain seed put terrain there and failed them, so the
+	 * arena's terrain above y 96 is cleared to air before the checks run.
+	 */
+	static void clearArena(net.minecraft.server.level.ServerLevel l) {
+		var air = net.minecraft.world.level.block.Blocks.AIR.defaultBlockState();
+		var m = new net.minecraft.core.BlockPos.MutableBlockPos();
+		int n = 0;
+		for (int x = 16; x <= 79; x++) for (int z = 16; z <= 79; z++) for (int y = 96; y < 256; y++) {
+			m.set(x, y, z);
+			if (!l.getBlockState(m).isAir()) {
+				l.setBlock(m, air, net.minecraft.world.level.block.Block.UPDATE_CLIENTS);
+				n++;
+			}
+		}
+		info("arena: cleared " + n + " terrain blocks above y 96");
 	}
 
 	/** s-asm-gear3: every forced arena chunk (1..4 x 1..4, blocks 16..79) is entity-ticking. Blocks at x/z 48..79 lie outside the spawn chunks, so 40,100,40 alone is not enough. */
@@ -175,7 +195,7 @@ public final class SelfTest {
 					double a = from.get(i).getAsDouble(), b = to.get(i).getAsDouble();
 					if (a > b || a < -16 || b > 32) return false;
 				}
-				if (from.toString().equals("[-1,-3,-5]") && to.toString().equals("[1,3,1]")) grip = true;
+				if (from.toString().equals("[7,5,3]") && to.toString().equals("[9,11,9]")) grip = true;
 				for (var f : el.getAsJsonObject("faces").entrySet()) {
 					JsonObject face = f.getValue().getAsJsonObject();
 					if (!"#shield".equals(face.get("texture").getAsString())) return false;

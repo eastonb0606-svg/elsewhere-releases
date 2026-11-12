@@ -149,15 +149,20 @@ public final class Conquest {
 	public static VillageRecord foundOutpost(ServerLevel level, VillageLedger ledger, BlockPos c, BlockPos castle, Identifier faction, RandomSource rnd, long now) {
 		Profile prof = FactionVillages.of(faction);
 		dev.elsewhere.kingdom_villages.s3.ald.AldFort.Plan fort = prof.isAldermark() && dev.elsewhere.kingdom_villages.s3.ald.AldLook.FORT ? dev.elsewhere.kingdom_villages.s3.ald.AldFort.plan(level, c, castle) : null; // s-vlook-ald: motte-and-bailey
-		VillageRecord s = newSite(ledger, VillageRecord.Kind.OUTPOST, fort != null ? fort.yard() : c, fort != null ? fort.box() : new BoundingBox(c.getX() - 6, c.getY() - 1, c.getZ() - 6, c.getX() + 6, c.getY() + 8, c.getZ() + 6));
+		Direction gate = Direction.getApproximateNearest((double) (castle.getX() - c.getX()), 0.0, (double) (castle.getZ() - c.getZ()));
+		// s-asm-vill: legacy outposts sit on their own ground; the hint is read before the writes (the post would hide its own ground)
+		BlockPos hint = fort != null ? fort.flag() : prof.isAldermark() ? c.offset(-1, 6, -1) : RivalPlans.hintPos(level, prof, c);
+		List<VillageRecord.Op> ops = fort != null ? fort.ops() : prof.isAldermark() ? Plans.outpost(c, gate) : RivalPlans.outpost(level, prof, c, gate);
+		BoundingBox box = fort != null ? fort.box() : new BoundingBox(c.getX() - 6, c.getY() - 1, c.getZ() - 6, c.getX() + 6, c.getY() + 8, c.getZ() + 6);
+		// fx-siegeperf: a rival hint post (and the platform feet) stand on their own column's ground, which can sit more than the
+		// fixed box allows above or below the site's centre; the site box covers every op of its own plan, so the post is not refused
+		if (fort == null) for (VillageRecord.Op op : ops) box = box.encapsulate(BlockPos.of(op.pos()));
+		VillageRecord s = newSite(ledger, VillageRecord.Kind.OUTPOST, fort != null ? fort.yard() : c, box);
 		s.castle = castle;
 		s.owner = faction.toString();
 		s.state = VillageRecord.State.OCCUPIED;
 		s.builtAt = now;
-		Direction gate = Direction.getApproximateNearest((double) (castle.getX() - c.getX()), 0.0, (double) (castle.getZ() - c.getZ()));
-		// s-asm-vill: legacy outposts sit on their own ground; the hint is read before the writes (the post would hide its own ground)
-		BlockPos hint = fort != null ? fort.flag() : prof.isAldermark() ? c.offset(-1, 6, -1) : RivalPlans.hintPos(level, prof, c);
-		for (VillageRecord.Op op : fort != null ? fort.ops() : prof.isAldermark() ? Plans.outpost(c, gate) : RivalPlans.outpost(level, prof, c, gate)) BlockWriter.write(level, s, BlockPos.of(op.pos()), op.state());
+		for (VillageRecord.Op op : ops) BlockWriter.write(level, s, BlockPos.of(op.pos()), op.state());
 		s.hint = hint;
 		if (faction.equals(Factions.ALDERMARK)) {
 			ledger.outpostsFounded++;

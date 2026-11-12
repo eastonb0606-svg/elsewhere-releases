@@ -69,3 +69,16 @@ java {
 	sourceCompatibility = JavaVersion.VERSION_25
 	targetCompatibility = JavaVersion.VERSION_25
 }
+
+// fit3 self-test determinism: runners (cloud, lean-test) write a fresh run/server.properties without level-seed, so every new
+// world had a random seed and the worldgen fit checks changed from run to run. Pin the module's seed when none is set.
+tasks.matching { it.name == "runServer" }.configureEach {
+	doFirst {
+		def props = file("run/server.properties")
+		def text = props.exists() ? props.getText("UTF-8") : ""
+		if (!(text =~ /(?m)^level-seed=\S/)) {
+			props.parentFile.mkdirs()
+			props.setText(text.replaceAll(/(?m)^level-seed=.*\R?/, "") + (text.isEmpty() || text.endsWith("\n") ? "" : "\n") + "level-seed=elsewhere-nether-end\n", "UTF-8")
+		}
+	}
+}

@@ -1271,8 +1271,32 @@ public final class SelfTest {
 	static void bench() {
 		STEPS.add((srv, l) -> {
 			// the rest of the test world stays force-loaded for the other sections; the benchmark keeps only its own arena ticking so the
-			// measured MSPT is the battle, not 470 idle forced chunks (vanilla random-tick scanning dominated the earlier measurements)
-			for (int cx = -5; cx <= 5; cx++) for (int cz = -6; cz <= 36; cz++) if (cx < -4 || cx > 3 || cz < 23 || cz > 29) l.setChunkForced(cx, cz, false);
+			// measured MSPT is the battle, not idle forced chunks, leftover entities or the test fake players' chunk tickets (restored afterwards)
+			int gone = 0, fakes = 0;
+			List<Entity> all = new ArrayList<>();
+			l.getAllEntities().forEach(all::add);
+			for (Entity e : all) {
+				if (e instanceof FakePlayer f) {
+					try {
+						l.removePlayerImmediately(f, Entity.RemovalReason.DISCARDED);
+						fakes++;
+					} catch (RuntimeException ex) {
+						info("BENCH could not take a fake player out of the level: " + ex);
+					}
+				} else if (!(e instanceof Player) && !e.isRemoved()) {
+					e.discard();
+					gone++;
+				}
+			}
+			BENCH_UNFORCED.clear();
+			for (long c : new ArrayList<>(l.getForceLoadedChunks())) {
+				int cx = (int) (c & 0xFFFFFFFFL), cz = (int) (c >>> 32);
+				if (cx < -4 || cx > 3 || cz < 23 || cz > 29) {
+					l.setChunkForced(cx, cz, false);
+					BENCH_UNFORCED.add(c);
+				}
+			}
+			info(String.format("BENCH cleanup: %d leftover entities discarded, %d test fake players taken out of the level, %d forced chunks released outside the arena", gone, fakes, BENCH_UNFORCED.size()));
 			clean(l);
 			clearBox(l, -60, 400, 60, 460);
 			KingdomApi.setStance(srv, MirewickContent.FACTION, Factions.ALDERMARK, Factions.Stance.WAR);
@@ -1282,10 +1306,20 @@ public final class SelfTest {
 			MirewickTactics.SERVER = srv;
 			MirewickState.get(srv).localTreasury = 600;
 			int made = 0, made2 = 0;
-			for (int i = 0; i < 3; i++) made += KingdomApi.spawnSquad(l, BlockPos.containing(at(-14 + i * 14, 420)), MirewickContent.FACTION, i == 1 ? Squad.Formation.SHIELD_WALL : Squad.Formation.LINE, UnitTypes.SERGEANT,
-				mix(Math.min(4, 14 - made))).size();
-			for (int i = 0; i < 3; i++) made2 += KingdomApi.spawnSquad(l, BlockPos.containing(at(-14 + i * 14, 438)), Factions.ALDERMARK, i == 1 ? Squad.Formation.SHIELD_WALL : Squad.Formation.LINE, UnitTypes.SERGEANT,
-				mix(Math.min(4, 14 - made2))).size();
+			BENCH_MINE.clear();
+			BENCH_THEIRS.clear();
+			for (int i = 0; i < 3; i++) {
+				List<KingdomSoldier> sq = KingdomApi.spawnSquad(l, BlockPos.containing(at(-14 + i * 14, 420)), MirewickContent.FACTION, i == 1 ? Squad.Formation.SHIELD_WALL : Squad.Formation.LINE, UnitTypes.SERGEANT,
+					mix(Math.min(4, 14 - made)));
+				made += sq.size();
+				for (KingdomSoldier k : sq) BENCH_MINE.add(k.getUUID());
+			}
+			for (int i = 0; i < 3; i++) {
+				List<KingdomSoldier> sq = KingdomApi.spawnSquad(l, BlockPos.containing(at(-14 + i * 14, 438)), Factions.ALDERMARK, i == 1 ? Squad.Formation.SHIELD_WALL : Squad.Formation.LINE, UnitTypes.SERGEANT,
+					mix(Math.min(4, 14 - made2)));
+				made2 += sq.size();
+				for (KingdomSoldier k : sq) BENCH_THEIRS.add(k.getUUID());
+			}
 			info("BENCH start: spawned " + made + " Mirewick + " + made2 + " Aldermark");
 			BENCH_N = made + made2;
 			SAMPLES.clear();
@@ -1306,8 +1340,8 @@ public final class SelfTest {
 			double max = s.length == 0 ? 0 : s[s.length - 1] / 1e6;
 			int mire = 0, ald = 0;
 			for (KingdomSoldier k : KingdomPerf.loaded(l)) {
-				if (MirewickContent.FACTION.equals(k.factionId())) mire++;
-				else if (Factions.ALDERMARK.equals(k.factionId())) ald++;
+				if (BENCH_MINE.contains(k.getUUID())) mire++;
+				else if (BENCH_THEIRS.contains(k.getUUID())) ald++;
 			}
 			long dec = TacticsRuntime.decisionsTotal - BENCH_DEC0;
 			String line = String.format("BENCH 15 v 15 Mirewick (tactics on) vs Aldermark: MSPT avg %.2f ms, p95 %.2f, max %.2f over %d ticks | spawned %d, alive %d + %d | %d brain decisions in %d ticks",
@@ -1318,6 +1352,7 @@ public final class SelfTest {
 			float lost = 0;
 			for (KingdomSoldier k : KingdomPerf.loaded(l)) lost += k.getMaxHealth() - k.getHealth();
 			for (int cx = -5; cx <= 5; cx++) for (int cz = -6; cz <= 36; cz++) { l.setChunkForced(cx, cz, true); l.getChunk(cx, cz); }
+			for (long c : BENCH_UNFORCED) l.setChunkForced((int) (c & 0xFFFFFFFFL), (int) (c >>> 32), true);
 			check("both sides fight (soldiers fell or lost health)", mire + ald < BENCH_N || lost > 5F, mire + "/" + ald + ", " + lost + " hp lost");
 			check("15 v 15 MSPT average at most 2.0 ms", avg <= 2.0, String.format("%.2f ms", avg));
 			check("15 v 15 MSPT p95 at most 3.0 ms", p95 <= 3.0, String.format("%.2f ms", p95));
@@ -1330,6 +1365,8 @@ public final class SelfTest {
 	static double SPEED_Z0;
 	static Husk PROBE;
 	static int BENCH_N;
+	static final List<Long> BENCH_UNFORCED = new ArrayList<>();
+	static final java.util.Set<UUID> BENCH_MINE = new java.util.HashSet<>(), BENCH_THEIRS = new java.util.HashSet<>();
 	static long BENCH_DEC0;
 
 	static List<Identifier> mix(int n) {

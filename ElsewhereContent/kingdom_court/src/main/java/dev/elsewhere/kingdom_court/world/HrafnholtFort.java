@@ -616,7 +616,7 @@ public final class HrafnholtFort {
 			h.s(cx + 1, ry + 1, z, st(Blocks.DARK_OAK_STAIRS, Direction.EAST));
 			h.s(cx, ry + 1, z, Blocks.DARK_OAK_FENCE);
 			h.s(cx, ry + 2, z, Blocks.DARK_OAK_FENCE);
-			if (!turf) h.s(cx, ry + 3, z, Blocks.BONE_BLOCK);
+			if (!turf) h.s(cx, ry + 3, z, lantern(false));
 		}
 	}
 
@@ -730,30 +730,18 @@ public final class HrafnholtFort {
 		h.s(8, 1, 11, Blocks.MOSSY_COBBLESTONE);
 		h.s(8, 2, 11, lantern(false));
 		BlockState dark = Blocks.DARK_OAK_PLANKS.defaultBlockState();
-		CastleKit.ring(w, 2, 7, 10, 15, 5, Blocks.SPRUCE_STAIRS, Half.BOTTOM, dark, null);
-		CastleKit.ring(w, 3, 8, 9, 14, 6, Blocks.SPRUCE_STAIRS, Half.BOTTOM, dark, null);
-		for (int x = 4; x <= 8; x++) for (int z = 9; z <= 13; z++) {
-			boolean edge = x == 4 || x == 8 || z == 9 || z == 13, corner = (x == 4 || x == 8) && (z == 9 || z == 13);
-			for (int y = 6; y <= 9; y++) if (edge) h.s(x, y, z, corner ? Blocks.SPRUCE_LOG : Blocks.DARK_OAK_PLANKS);
-			h.s(x, 10, z, dark);
+		// one steep spruce gable over the nave (ridge along z, overhang 1), crossed bargeboard finials at both gable ends, lanterns on the eave posts
+		int ridge = CastleKit.gable(w, 3, 8, 9, 14, 5, 1, false, Blocks.SPRUCE_STAIRS, dark, dark, false, null);
+		for (int z : new int[] {7, 15}) {
+			h.s(5, ridge + 1, z, st(Blocks.DARK_OAK_STAIRS, Direction.EAST));
+			h.s(7, ridge + 1, z, st(Blocks.DARK_OAK_STAIRS, Direction.WEST));
+			h.s(6, ridge + 1, z, Blocks.DARK_OAK_FENCE);
+			h.s(6, ridge + 2, z, Blocks.DARK_OAK_FENCE);
+			h.s(6, ridge + 3, z, lantern(false));
 		}
-		CastleKit.ring(w, 3, 8, 9, 14, 10, Blocks.SPRUCE_STAIRS, Half.BOTTOM, dark, null);
-		CastleKit.ring(w, 4, 9, 8, 13, 11, Blocks.SPRUCE_STAIRS, Half.BOTTOM, dark, null);
-		for (int x = 5; x <= 7; x++) for (int z = 10; z <= 12; z++) {
-			boolean corner = (x == 5 || x == 7) && (z == 10 || z == 12), mid = x == 6 || z == 11;
-			for (int y = 11; y <= 14; y++) {
-				if (x == 6 && z == 11) h.s(x, y, z, AIR);
-				else if (mid && (y == 12 || y == 13)) h.s(x, y, z, AIR);
-				else h.s(x, y, z, corner ? Blocks.SPRUCE_LOG : Blocks.DARK_OAK_PLANKS);
-			}
-			h.s(x, 15, z, dark);
-		}
-		int top = CastleKit.spire(w, 6, 11, 2, 15, Blocks.SPRUCE_STAIRS, dark, true);
-		h.s(6, top, 11, Blocks.DARK_OAK_FENCE);
-		h.s(6, top + 1, 11, Blocks.BONE_BLOCK);
 		for (int[] c : new int[][] {{2, 7}, {10, 7}, {2, 15}, {10, 15}}) {
 			h.s(c[0], 6, c[1], Blocks.DARK_OAK_FENCE);
-			h.s(c[0], 7, c[1], Blocks.BONE_BLOCK);
+			h.s(c[0], 7, c[1], lantern(false));
 		}
 	}
 

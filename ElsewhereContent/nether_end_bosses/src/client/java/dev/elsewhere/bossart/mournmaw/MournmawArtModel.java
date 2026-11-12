@@ -61,7 +61,10 @@ public class MournmawArtModel extends EntityModel<BossRenderState> {
 
 	/** 3.0 (P8): hurt flinch, the body recoils and sways back. */
 	static final AnimationDefinition HURT = def(0.55F, false)
-		.addAnimation("body", rot(0, 0, 0, 0, 0.1F, -18, 0, 0, 0.3F, 6, 0, 0, 0.55F, 0, 0, 0)).build();
+		.addAnimation("body", rot(0, 0, 0, 0, 0.1F, -18, 0, 0, 0.3F, 6, 0, 0, 0.55F, 0, 0, 0))
+		// the four bone spikes (crown part) stay at full size and ride up with the recoil, never dropping out of view
+		.addAnimation("crown", scale(0, 1, 1, 1, 0.1F, 1, 1, 1, 0.55F, 1, 1, 1))
+		.addAnimation("crown", pos(0, 0, 0, 0, 0.1F, 0, 1.0F, 0, 0.55F, 0, 0, 0)).build();
 	private final net.minecraft.client.animation.KeyframeAnimation hurt;
 
 	public MournmawArtModel(ModelPart root) {

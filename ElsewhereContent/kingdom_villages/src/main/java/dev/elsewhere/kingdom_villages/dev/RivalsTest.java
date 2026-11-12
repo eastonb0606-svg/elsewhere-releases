@@ -224,7 +224,7 @@ public final class RivalsTest {
 		check("Mirewick: peat-cutters, integration 10 days, unrest 0.60, 90% army", m.serfKind() == FactionVillages.SerfKind.PEAT_CUTTER && m.policy().integDays() == 10 && m.policy().unrest() == 0.60 && m.sizeMult() == 0.9, m);
 		VH = VillageManager.discover(level, sH, null);
 		// a 16x18 shelving pool 30 blocks east of Hrafnholt's village (1, 2, then 3 deep) for the waterfront (jetty, naust, strand boat) check
-		poolOrigin = VH.center.offset(30, 0, -6);
+		poolOrigin = poolSpot(VH.center);
 		HrafnLooksTest.pool(level, poolOrigin, POOL_X, POOL_Z);
 		poolWater0 = poolWater();
 		VA = VillageManager.discover(level, sA, null);
@@ -250,6 +250,28 @@ public final class RivalsTest {
 	static BlockPos poolOrigin;
 	static int poolWater0;
 	static final int POOL_X = 16, POOL_Z = 18;
+
+	/**
+	 * fx-hrafwater: the pool goes on open, level, natural ground (a margin of 4 included) east of the village. The fixed spot 30 east often
+	 * lay on a random seed's houses, so the "pool" was water on roofs and floors that poured out over the village before the rebuild began
+	 * (541 of 648 water blocks at pool level, then floods, members over flowing water). Every candidate keeps the jetty lane 2 into the pool.
+	 */
+	static BlockPos poolSpot(BlockPos c) {
+		for (int dx = 30; dx <= 110; dx += 2) for (int dz : new int[] {-6, -2, -10, 2, -14, -24, 12, -40, 28, -60, 44}) {
+			BlockPos o = c.offset(dx, 0, dz);
+			int gy = Integer.MIN_VALUE;
+			boolean ok = true;
+			for (int x = -4; x < POOL_X + 4 && ok; x++) for (int z = -4; z < POOL_Z + 4 && ok; z++) {
+				int wx = o.getX() + x, wz = o.getZ() + z, top = level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, wx, wz) - 1;
+				BlockState s = level.getBlockState(new BlockPos(wx, top, wz));
+				ok = (s.is(Blocks.GRASS_BLOCK) || s.is(Blocks.DIRT) || s.is(Blocks.COARSE_DIRT) || s.is(Blocks.SAND)) && (gy == Integer.MIN_VALUE || top == gy);
+				gy = top;
+			}
+			if (ok) return o;
+		}
+		info("[rivals] no clear level ground for the pool; using the old spot 30 east");
+		return c.offset(30, 0, -6);
+	}
 
 	/** Water blocks in the pool and a margin of 8 around it (a flood would raise this). */
 	static int poolWater() {
@@ -563,7 +585,9 @@ public final class RivalsTest {
 		}
 		if (age() == 800) {
 			check("flip-back restores Aldermark blue banners and a blue-flag garrison", banners(VF, net.minecraft.world.item.DyeColor.BLUE) >= 2 && banners(VF, net.minecraft.world.item.DyeColor.GREEN) == 0
-				&& VillageManager.soldiers(level, VF).stream().allMatch(s -> Factions.ALDERMARK.equals(s.factionId())), banners(VF, net.minecraft.world.item.DyeColor.BLUE) + " blue");
+				&& VillageManager.soldiers(level, VF).stream().allMatch(s -> Factions.ALDERMARK.equals(s.factionId())), banners(VF, net.minecraft.world.item.DyeColor.BLUE) + " blue, "
+				+ banners(VF, net.minecraft.world.item.DyeColor.GREEN) + " green, " + banners(VF, net.minecraft.world.item.DyeColor.BROWN) + " brown, " + banners(VF, net.minecraft.world.item.DyeColor.GRAY) + " grey; garrison "
+				+ VillageManager.soldiers(level, VF).stream().map(s -> String.valueOf(s.factionId())).toList() + "; plan " + VF.planIndex + "/" + VF.plan.size() + " kind " + VF.planKind + " swapQueued " + VF.swapQueued);
 			// the other half goes free
 			VillageManager.onVillageChanged(level, Long.toString(VF.id), VF.center, null, Factions.ALDERMARK, "revolt");
 			check("a revolt to free: state FREE, occupier's soldiers gone, walls stay", VF.state == VillageRecord.State.FREE && VillageManager.soldiers(level, VF).isEmpty() && count(VF, Blocks.SPRUCE_FENCE) > 0, VF.state + " " + VillageManager.soldiers(level, VF).size());

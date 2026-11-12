@@ -84,6 +84,21 @@ public final class FitW {
 		return !st.isAir() && st.getFluidState().isEmpty() && !st.canBeReplaced();
 	}
 
+	private final java.util.Map<Long, net.minecraft.world.level.NoiseColumn> noise = new java.util.HashMap<>();
+
+	/**
+	 * Natural ground for a footing: ground now AND solid in the noise column (the terrain itself). A block that a neighbour chunk's
+	 * feature spilled into this column (glowstone, fungus caps, chorus, basalt) is ground or not depending on which chunk generated
+	 * first, so footings resting on it made the arena (and the fit3 float metric) depend on chunk-load order. The noise test does not.
+	 */
+	public boolean natural(int x, int y, int z) {
+		if (!ground(get(x, y, z))) return false;
+		var sl = level.getLevel();
+		var col = noise.computeIfAbsent(BlockPos.asLong(x, 0, z), k -> sl.getChunkSource().getGenerator().getBaseColumn(x, z, level, sl.getChunkSource().randomState()));
+		BlockState n = col.getBlock(y);
+		return !n.isAir() && n.getFluidState().isEmpty();
+	}
+
 	/** Writes only where the world is open (air, fluid or replaceable): roofs and façades that must not cut natural rock. */
 	public void soft(int x, int y, int z, BlockState s) {
 		if (!in(x, y, z)) {
@@ -130,7 +145,7 @@ public final class FitW {
 		if (!inColumn(x, z)) return 0;
 		int n = 0;
 		for (int y = topY; y > level.getMinY() + 1; y--) {
-			if (ground(get(x, y, z))) return n;
+			if (natural(x, y, z)) return n;
 			if (n >= cap) return -1;
 			set(x, y, z, ladder.at(n, hash(x, y, z)));
 			n++;
@@ -142,7 +157,7 @@ public final class FitW {
 	public int footingIfNear(int x, int z, int topY, Ladder ladder, int max) {
 		if (!inColumn(x, z)) return 0;
 		for (int k = 0; k <= max; k++) {
-			if (ground(get(x, topY - k, z))) return k == 0 ? 0 : footing(x, z, topY, ladder, k);
+			if (natural(x, topY - k, z)) return k == 0 ? 0 : footing(x, z, topY, ladder, k);
 		}
 		return -1;
 	}

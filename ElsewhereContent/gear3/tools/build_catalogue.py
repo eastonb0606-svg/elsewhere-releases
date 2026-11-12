@@ -135,7 +135,7 @@ def weapon(wid, name, kind, damage, speed, rarity, lore, calling, recipe, loot, 
 weapon("mirewick_lanternfang_estoc", "Lanternfang Estoc", "sword", 6, 1.8, "epic", ["Duelist estoc of Mirewick, Vanguard weapon", "Reach +0.5"], ["vanguard"],
        smith("elsewhere:mirewick_scrip", "minecraft:diamond_sword", "elsewhere:mirewick_seal_tolliver"), [{"table": "chests/mirewick_courier", "chance": 0.08}],
        repair="elsewhere:mirewick_scrip", attrs=[{"attr": "minecraft:entity_interaction_range", "amount": 0.5, "slot": "mainhand"}])
-weapon("bellbreaker_maul", "Bellbreaker Maul", "sword", 10, 0.9, "epic", ["Tank maul, Vanguard weapon"], ["vanguard"],
+weapon("bellbreaker_maul", "Bellbreaker Maul", "sword", 10, 0.9, "epic", ["Tank maul, Vanguard weapon", "Heavy blows: 10 damage per hit", "!Slow swing: 0.9 attacks per second"], ["vanguard"],
        smith("elsewhere:cantors_bell_shard", "minecraft:diamond_sword", "elsewhere:resonant_shard"), [{"table": "chests/silent_monastery", "chance": 0.08}], repair="elsewhere:resonant_shard")
 weapon("hrafnholt_huginns_bite", "Huginn's Bite", "axe", 12, 1.0, "epic", ["Berserker war-axe of Hrafnholt, Vanguard weapon", "Disables shields for 5 s"], ["vanguard"],
        smith("elsewhere:hrafnholt_seal_jarl", "minecraft:diamond_axe", "elsewhere:hacksilver"), [{"table": "chests/hrafnholt_courier", "chance": 0.08}], repair="elsewhere:hacksilver")

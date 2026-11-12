@@ -1575,7 +1575,7 @@
     "mining_speed": 6.0
    },
    "lore": [
-    "Tank maul, Vanguard weapon"
+    "Tank maul, Vanguard weapon", "Heavy blows: 10 damage per hit", "!Slow swing: 0.9 attacks per second"
    ],
    "calling": [
     "vanguard"

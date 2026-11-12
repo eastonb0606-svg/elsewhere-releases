@@ -37,7 +37,27 @@ def slugify(s, n=48):
 
 
 def reset(mode="creative", gui=True, time_of_day=6000):
-    return [["reset", mode], ["cmd", "time set %d" % time_of_day], ["cmd", "weather clear"], ["gui", gui]]
+    out = [["reset", mode], ["cmd", "time set %d" % time_of_day], ["cmd", "weather clear"], ["gui", gui]]
+    if mode == "spectator" or time_of_day == 18000:   # caves, structures and night scenes: never judged in the dark
+        out.append(["cmd", "effect give @s night_vision infinite 1 true"])
+    return out
+
+
+# Darkness is only used when the check itself needs it (glows, glyphs, lantern spirits ...) or the setup sets the time on purpose.
+DARK_CHECK = re.compile(r"\b(glow\w*|glyphs?|luminous|emissive|lantern spirits?|dark\w*|moonlit|stars?|bioluminescen\w*|pulses?|pulsing)\b", re.I)
+DARK_SETUP = re.compile(r"`/time set 18000`|/time set 18000|dark room|so only the arrow")
+
+
+def needs_dark(check, setup=""):
+    return bool(DARK_CHECK.search(check or "") or DARK_SETUP.search(setup or ""))
+
+
+def back_off(st, back=4.0, up=2.0):
+    """Move a ["tp","anchor",x,y,z,yaw,pitch] view back along its look direction and up, so the camera is not inside blocks."""
+    if st[0] != "tp" or st[1] != "anchor" or len(st) < 7:
+        return st
+    yaw = math.radians(st[5])
+    return ["tp", "anchor", round(st[2] + math.sin(yaw) * back, 2), round(st[3] + up, 2), round(st[4] - math.cos(yaw) * back, 2), st[5], st[6]]
 
 
 def shot(slug):
@@ -172,6 +192,49 @@ def resolve_ids(text):
     return out
 
 
+def b_defaults(steps):
+    """B-class setup defaults from TRIAGE: B1 held shots on a 3/4 third-person camera and tooltips in daytime, B3 summoned mobs
+    fall to the ground before they are frozen (NoAI mobs do not fall), B4 several default-position summons spread 3 apart."""
+    # B4: summons without explicit offsets share the spawn point; spread them
+    idx = [i for i, st in enumerate(steps) if st[0] == "summon" and len(st) < 5]
+    if len(idx) > 1:
+        for k, i in enumerate(idx):
+            steps[i] = list(steps[i][:3] if len(steps[i]) > 2 else steps[i] + ["{}"]) + [round((k - (len(idx) - 1) / 2.0) * 3.0, 1), 6]
+    # B3: let NoAI summons land first, then freeze them
+    out, frozen = [], []
+    for i, st in enumerate(steps):
+        if st[0] == "summon" and len(st) > 2 and "NoAI:1b" in st[2] and not st[1].endswith(("_longship",)):
+            st = list(st)
+            st[2] = st[2].replace("NoAI:1b,", "").replace(",NoAI:1b", "").replace("NoAI:1b", "")
+            if st[2] in ("{}", ""):
+                st[2] = "{}"
+            frozen.append(st[1])
+        out.append(st)
+        nxt = steps[i + 1][0] if i + 1 < len(steps) else None
+        if frozen and nxt != "summon":
+            out.append(["wait", 30])
+            for t in dict.fromkeys(frozen):
+                out.append(["cmd", "execute as @e[type=%s,distance=..40] run data merge entity @s {NoAI:1b}" % t])
+            frozen = []
+    steps = out
+    # B1: held / third-person item shots at 3/4, tooltips in daylight
+    res, i = [], 0
+    for j, st in enumerate(steps):
+        res.append(st)
+        if st == ["camera", "front"]:
+            ahead = next((x[1] for x in steps[j + 1:] if x[0] == "shot"), "")
+            if re.search(r"_held$|third_person", ahead):
+                res.append(["cmd", "tp @s ~ ~ ~ ~40 ~"])
+        if st[0] == "camera" and st[1] == "first" and any(x == ["cmd", "tp @s ~ ~ ~ ~40 ~"] for x in res):
+            pass
+    final = []
+    for st in res:
+        if st[0] == "inventory" and any(x == ["cmd", "time set 18000"] for x in final):
+            final.append(["cmd", "time set 6000"])
+        final.append(st)
+    return final
+
+
 class Compiler:
     def __init__(self):
         self.scenes = []
@@ -193,6 +256,8 @@ class Compiler:
             if st[0] in ("shot", "logcheck"):
                 st[1] = self.unique(lane, slugify(st[1], 60))
                 shots.append({"slug": st[1], "file": "%s__%s.%s" % (lane, st[1], "png" if st[0] == "shot" else "txt")})
+        if any(st[0] in ("summon", "camera", "inventory") for st in steps):
+            steps = b_defaults(steps)
         sc = {"n": len(self.scenes) + 1, "line": lineno, "lane": lane, "item": item, "world": world, "steps": steps,
               "shots": shots, "check": check, "setup": setup}
         if note:
@@ -206,7 +271,7 @@ class Compiler:
             sid = st.split(":")[1]
             steps = reset("spectator", gui=False) + [["locate", st]]
             for v in views:
-                steps += [["tp", "anchor", v[0], v[1], v[2], v[3], v[4]], ["chunks"], ["wait", 40], shot(sid + "_" + view_slug(v))]
+                steps += [back_off(["tp", "anchor", v[0], v[1], v[2], v[3], v[4]]), ["chunks"], ["wait", 100], ["chunks"], shot(sid + "_" + view_slug(v))]
             self.add(lineno, lane, st if len(structs) == 1 else "%s (%s)" % (what.strip(), st), "normal", steps, check, setup, note)
 
     def compile_line(self, lineno, lane, what, setup, check):
@@ -270,9 +335,9 @@ class Compiler:
             self.prev["aura_ids"] = ids2
             frac = 0.18 if "phase 3" in what else 0.58
             for i in ids2:
-                steps = reset("creative", time_of_day=18000) + [["summon", i, "{PersistenceRequired:1b}"], ["hurt_to", frac], ["view", 0.0, 4.0, 30.0], ["chunks"], ["wait", 30],
+                steps = reset("creative") + [["summon", i, "{PersistenceRequired:1b}"], ["hurt_to", frac], ["view", 0.0, 4.0, 30.0], ["chunks"], ["wait", 30],
                                                                ["look_target"], shot(i.split(":")[1] + ("_aura_phase3" if frac < 0.3 else "_aura_phase2"))]
-                self.add(lineno, lane_s, "%s (%s)" % (i, "phase 3 swirl" if frac < 0.3 else "phase 2 glyphs"), "flat", steps, check, setup, "night, %d%% HP" % round(frac * 100))
+                self.add(lineno, lane_s, "%s (%s)" % (i, "phase 3 swirl" if frac < 0.3 else "phase 2 glyphs"), "flat", steps, check, setup, "daytime (moonlight tinted the rival model), %d%% HP" % round(frac * 100))
             return
         if first and re.search(r"in a row|same row setup", setup):
             n = 4 if "one of each" in setup else (12 if "12 in two rows" in setup else 6)
@@ -326,7 +391,7 @@ class Compiler:
         if first and "/damage @e" in setup and "1 tick after" in setup:
             tid = first.split(":")[1]
             steps = reset("creative", gui=False) + [["summon", first, "{NoAI:1b,PersistenceRequired:1b}"], ["view", 1.6, 5.0, 35.0],
-                                                    ["chunks"], ["wait", 20], ["damage", 1], ["wait", 1], shot(tid + "_hurt_peak"),
+                                                    ["chunks"], ["wait", 20], ["look_target"], ["damage", 1], ["wait", 4], shot(tid + "_hurt_peak"),
                                                     ["wait", 7], shot(tid + "_hurt_rest")]
             self.add(lineno, lane_s, first, "flat", steps, check, setup)
             return
@@ -350,7 +415,7 @@ class Compiler:
         if "showsubtitles" in low or "subtitles on" in low:
             tid = first.split(":")[1] if first else "boss"
             frac = 0.68 if "aphelion" in low else 0.45
-            steps = reset("creative", time_of_day=18000 if "night" in low else 6000) + [["subtitles", True],
+            steps = reset("creative", time_of_day=18000 if needs_dark(check, setup) else 6000) + [["subtitles", True],
                      ["summon", first, "{PersistenceRequired:1b}"], ["view", 0.0, 12.0, 20.0], ["chunks"], ["wait", 40],
                      ["hurt_to", frac], ["wait", 10], shot(tid + "_subtitle"), ["subtitles", False]]
             self.add(lineno, lane_s, first, "flat", steps, check, setup,
@@ -426,19 +491,19 @@ class Compiler:
             return
         # gear (arsenal): Calling panel, tooltip, /calling readout, Amberstill set
         if "CallingPanel" in setup or "Calling panel" in what:
-            steps = reset("survival") + [["wear_set", "moonsilk"], ["hold", "mainhand", "elsewhere:sunlance_staff"], ["wait", 60],
+            steps = reset("survival") + [["wear_set", "moonsilk"], ["hold", "mainhand", "elsewhere:sunlance_staff"], ["wait", 120],
                                          ["client_set", "dev.elsewhere.arsenal.client.CallingPanel", "shown", True], ["wait", 3],
                                          shot("calling_panel_caster"), ["client_set", "dev.elsewhere.arsenal.client.CallingPanel", "shown", False]]
             self.add(lineno, lane_s, "Calling panel (moonsilk + sunlance_staff)", "flat", steps, check, setup)
             return
         if "Calling tooltip" in what:
-            steps = reset("survival") + [["wear_set", "moonsilk"], ["hold", "mainhand", "elsewhere:sunlance_staff"], ["wait", 40],
+            steps = reset("survival") + [["wear_set", "moonsilk"], ["hold", "mainhand", "elsewhere:sunlance_staff"], ["wait", 100],
                                          ["inventory", "armor.chest"], ["wait", 5], shot("calling_tooltip_moonsilk_robe"),
                                          ["inventory", "mainhand"], ["wait", 5], shot("calling_tooltip_sunlance_staff"), ["close"]]
             self.add(lineno, lane_s, "Calling tooltip (moonsilk_robe, sunlance_staff)", "flat", steps, check, setup)
             return
         if "/calling" in what or "/calling" in setup:
-            steps = reset("survival") + [["wear_set", "moonsilk"], ["hold", "mainhand", "elsewhere:sunlance_staff"], ["wait", 60],
+            steps = reset("survival") + [["wear_set", "moonsilk"], ["hold", "mainhand", "elsewhere:sunlance_staff"], ["wait", 120],
                                          ["chat", True], ["player_cmd", "calling"], ["wait", 10], shot("calling_readout_chat"), ["chat", False]]
             self.add(lineno, lane_s, "/calling readout", "flat", steps, check, setup)
             return
@@ -455,7 +520,7 @@ class Compiler:
             v = [[0, 45, -30, 180, 40], [-60, 20, -80, -90, 20], [30, 12, -60, 150, 20]]
             steps = reset("spectator", gui=False) + [["locate", "elsewhere:castle_hrafnholt"]]
             for vv, nm in zip(v, ["front", "side", "boathouse"]):
-                steps += [["tp", "anchor"] + vv, ["chunks"], ["wait", 40], shot("court_waterfront_" + nm)]
+                steps += [back_off(["tp", "anchor"] + vv), ["chunks"], ["wait", 100], ["chunks"], shot("court_waterfront_" + nm)]
             self.add(lineno, lane_s, "elsewhere:waterfront_hrafnholt", "normal", steps, check, setup, "views north of the located Hrafnholt castle")
             return
         # every Elsewhere structure on its ground (the release client test's rel_<structure> sites section)
@@ -484,7 +549,7 @@ class Compiler:
         if lane_s == "villages" or what.strip().startswith("the faction villages"):
             for f in FACTIONS:
                 steps = reset("spectator", gui=False) + [["locate", "elsewhere:castle_" + f], ["locate_near", "#minecraft:village"],
-                                                         ["tp", "anchor", 0, 40, 40, 180, 40], ["chunks"], ["wait", 60], shot("village_near_" + f)]
+                                                         ["tp", "anchor", 0, 40, 40, 180, 40], ["chunks"], ["wait", 100], ["chunks"], shot("village_near_" + f)]
                 self.add(lineno, lane_s, "%s (%s realm)" % (what.strip(), f), "normal", steps, check, setup, "the vanilla village nearest the located castle_" + f)
             return
         # structure lanes with their own anchor S (locate the id, in whichever dimension holds it)
@@ -492,13 +557,11 @@ class Compiler:
         if sv and ("S+(" in setup or "kiosk+(" in setup):
             sid = first.split(":")[1]
             steps = reset("spectator", gui=False) + [["locate", first]]
-            if "night vision" in setup:
-                steps.insert(len(steps) - 1, ["cmd", "effect give @s night_vision infinite 0 true"])
             for st, slug in sv:
-                steps += [st, ["chunks"], ["wait", 40], shot(sid + "_" + slug)]
+                steps += [back_off(st), ["chunks"], ["wait", 100], ["chunks"], shot(sid + "_" + slug)]
             note = "the hall view is approximate (altar position unknown): S+(0, -6, 0) facing south" if "altar dais" in setup else None
             if note:
-                steps += [["tp", "anchor", 0, -6, 0, 0, 10], ["chunks"], ["wait", 40], shot(sid + "_hall_altar_facing_south")]
+                steps += [back_off(["tp", "anchor", 0, -6, 0, 0, 10], 3.0, 1.0), ["chunks"], ["wait", 100], ["chunks"], shot(sid + "_hall_altar_facing_south")]
             self.add(lineno, lane_s, first, "normal", steps, check, setup, note)
             return
         # P13 particle diet scenes (no ids in the line: the bosses and items are named)
@@ -539,11 +602,11 @@ class Compiler:
         if "wiki retakes" in what:
             for nm, v in (("overview", [0, 40, 40, 180, 40]), ("overview_street", [0, 12, 24, 180, 20]), ("palisade", [34, 8, 34, 135, 15]), ("stone", [-20, 6, 12, -120, 10])):
                 steps = reset("spectator", gui=False) + [["cmd", "gamerule send_command_feedback false"], ["locate", "elsewhere:castle_aldermark"],
-                         ["locate_near", "#minecraft:village"], ["tp", "anchor"] + v, ["chunks"], ["wait", 60], shot("villages_aldermark_" + nm)]
+                         ["locate_near", "#minecraft:village"], back_off(["tp", "anchor"] + v), ["chunks"], ["wait", 100], ["chunks"], shot("villages_aldermark_" + nm)]
                 self.add(lineno, lane_s, "villages_aldermark_" + nm, "normal", steps, check, setup, "the vanilla village nearest the Aldermark castle; views approximate lane-rv-vill's")
             steps = reset("spectator", gui=False) + [["cmd", "gamerule send_command_feedback false"], ["locate", "elsewhere:castle_mirewick"]]
             for nm, v in (("front", [0, 22, 82, 180, 14]), ("corner", [52, 40, 52, 135, 32]), ("gate", [0, 9, 40, 180, 10]), ("quay", [0, 6, 48, 180, 14])):
-                steps += [["tp", "anchor"] + v, ["chunks"], ["wait", 40], shot("mirewick_castle_mirewick_" + nm)]
+                steps += [back_off(["tp", "anchor"] + v), ["chunks"], ["wait", 100], ["chunks"], shot("mirewick_castle_mirewick_" + nm)]
             self.add(lineno, lane_s, "mirewick_castle_mirewick (elsewhere:castle_mirewick)", "normal", steps, check, setup)
             return
         # an item named as "(item)": held third person front, then its tooltip in the survival inventory
@@ -583,13 +646,13 @@ class Compiler:
         cmds += [c.strip().lstrip("/") for c in re.findall(r"(?<![`\w])(/(?:time set \d+|weather \w+|kingdom [a-z ]+\d*|elsewhere_hud [a-z ]+|greenleaf [a-z ]+))", setup)]
         cmds = [c for c in cmds if not c.startswith(("gamemode", "tp ", "locate"))]
         low = (what + " " + setup).lower()
-        night = re.search(r"\bnight\b|18000", low) is not None
+        night = needs_dark(check, setup)
         cap = re.search(r"(aldermark|hrafnholt|azmar|mirewick) capital", low)
         if cap:
             steps = reset("spectator", gui=False) + [["locate", "elsewhere:castle_" + cap.group(1)]]
             times = [c for c in cmds if c.startswith("time set")] or ["time set 6000"]
             for i, c in enumerate(times):
-                steps += [["cmd", c], ["tp", "anchor", -88, 14, 40, 180, 20], ["chunks"], ["wait", 100], shot("%s_capital_%s" % (cap.group(1), slugify(c)))]
+                steps += [["cmd", c], back_off(["tp", "anchor", -88, 14, 40, 180, 20]), ["chunks"], ["wait", 100], ["chunks"], shot("%s_capital_%s" % (cap.group(1), slugify(c)))]
             self.add(lineno, lane_s, what.strip(), "normal", steps, check, setup, "west town of the located castle_%s at each /time" % cap.group(1))
             return True
         if kind is None and not cmds:
@@ -600,7 +663,7 @@ class Compiler:
             steps = reset("spectator", gui=False, time_of_day=18000 if night else 6000) + [["locate", "elsewhere:" + sid]]
             for c in cmds:
                 steps.append(["cmd", c])
-            steps += [["tp", "anchor", 24, 14, 24, 135, 25], ["chunks"], ["wait", 40], shot(sid + "_overview"), ["tp_downhill", 24], ["chunks"], ["wait", 30], shot(sid + "_ground")]
+            steps += [back_off(["tp", "anchor", 24, 14, 24, 135, 25]), ["chunks"], ["wait", 100], ["chunks"], shot(sid + "_overview"), ["tp_downhill", 24], ["chunks"], ["wait", 60], shot(sid + "_ground")]
             self.add(lineno, lane_s, "elsewhere:" + sid, "normal", steps, check, setup, note)
             return True
         mode = "survival" if "survival" in low else "creative"
@@ -615,10 +678,10 @@ class Compiler:
             nbt = "{NoAI:1b,PersistenceRequired:1b}" if "noai" in low or "flinch" in low or "still" in low else "{PersistenceRequired:1b}"
             steps += [["summon", "elsewhere:" + sid, nbt], ["view", 1.6, 5.0, 35.0], ["chunks"], ["wait", 20]]
             for c in cmds:
-                steps += [["cmd", c], ["wait", 10]]
+                steps += [["cmd", c], ["wait", 40]]
             steps += [["look_target"], shot(base)]
             if cmds:
-                steps += [["wait", 40], ["look_target"], shot(base + "_later")]
+                steps += [["wait", 60], ["look_target"], shot(base + "_later")]
             self.add(lineno, lane_s, "elsewhere:" + sid, "flat", steps, check, setup, note)
             return True
         if kind == "item":
@@ -640,7 +703,7 @@ class Compiler:
         # commands only (HUD, armies, kingdom states, Green Leaf ...)
         steps += [["fly"]] if mode == "creative" else []
         for c in cmds:
-            steps += [["cmd", c], ["wait", 40]]
+            steps += [["cmd", c], ["wait", 80]]
         if "f3" in low:
             steps.append(["f3", True])
         if "chat" in low:
@@ -674,8 +737,111 @@ class Compiler:
             self.compile_line(n, lane, what, setup, check)
 
 
+def apply_overrides(scenes):
+    """Hand-written steps win over templates: ElsewhereQA/vqa/work/author/*.out.json then shots-3.0/overrides/*.json (later files win),
+    keyed by the scene's first shot file. {"n", "steps"} replaces the steps; {"manual": reason} routes the scene to the manual list.
+    The scene's shots (slugs, files) are never changed."""
+    by_file = {s["shots"][0]["file"]: s for s in scenes if s["shots"]}
+    files = ([] if os.environ.get("SHOTS_NO_AUTHOR") else sorted(glob.glob(os.path.join(ROOT, "ElsewhereQA", "vqa", "work", "author", "*.out.json")))) + \
+        sorted(f for f in glob.glob(os.path.join(OUT, "overrides", "*.json"))
+               if not (os.environ.get("SHOTS_NO_IDFIX") and os.path.basename(f) == "idfix.json"))
+    applied = manual = 0
+    for fp in files:
+        try:
+            data = json.load(open(fp, encoding="utf-8"))
+        except Exception as e:
+            print("override: cannot read %s: %s" % (fp, e))
+            continue
+        tag = os.path.basename(fp)
+        for fn, ov in data.items():
+            sc = by_file.get(fn)
+            if sc is None and ov.get("line") is not None and isinstance(ov.get("steps"), list):
+                # a hand-built scene whose md line compiles to a shotless manual scene: match by line, shots come from the steps
+                sc = next((x for x in scenes if x["line"] == ov["line"] and not x["shots"]), None)
+                if sc is not None:
+                    for st in ov["steps"]:
+                        if st[0] in ("shot", "logcheck"):
+                            sc["shots"].append({"slug": st[1], "file": "%s__%s.%s" % (sc["lane"], st[1], "png" if st[0] == "shot" else "txt")})
+                    if sc["shots"] and sc["shots"][0]["file"] != fn:
+                        print("override: %s: %s derived first shot %s" % (tag, fn, sc["shots"][0]["file"]))
+            if sc is None:
+                print("override: %s: no scene with first shot %s" % (tag, fn))
+                continue
+            if ov.get("n") not in (None, "") and str(ov["n"]) != str(sc["n"]):
+                print("override: %s: %s has n=%s, scene is now n=%s (matched by file)" % (tag, fn, ov["n"], sc["n"]))
+            if "manual" in ov:
+                sc["steps"] = [["manual", ov["manual"]]]
+                sc["world"] = "none"
+                manual += 1
+            elif isinstance(ov.get("steps"), list) and ov["steps"]:
+                sc["steps"] = ov["steps"]
+                if sc["world"] == "none":
+                    sc["world"] = "flat"
+                slugs = [st[1] for st in ov["steps"] if st[0] in ("shot", "logcheck")]
+                if slugs != [x["slug"] for x in sc["shots"]]:
+                    print("override: %s: %s shot slugs %s differ from scene shots %s" % (tag, fn, slugs, [x["slug"] for x in sc["shots"]]))
+                applied += 1
+            else:
+                print("override: %s: %s has neither steps nor manual" % (tag, fn))
+                continue
+            sc["override"] = tag
+    print("overrides: %d step sets applied, %d routed to manual (%d files)" % (applied, manual, len(files)))
+
+
+REGISTRY = {}
+try:
+    for _l in open(os.path.join(ROOT, "ElsewhereQA", "vqa", "work", "author", "registry.txt"), encoding="utf-8"):
+        _p = _l.split()
+        if len(_p) >= 2:
+            REGISTRY.setdefault(_p[0], set()).add(_p[1])
+except OSError:
+    pass
+
+
+def invalid_ids(scenes):
+    """Validate elsewhere: ids used by summon (entity), hold/equip (item or block), auto (entity or item) and in cmd strings, against
+    registry.txt (built from the Java registrations by build_registry.py). minecraft: ids are not checked. Returns [(n, step, id)]."""
+    if not REGISTRY:
+        print("ids: registry.txt missing, not validated")
+        return []
+    ent, itm = REGISTRY.get("entity", set()), REGISTRY.get("item", set()) | REGISTRY.get("block", set())
+    bad = []
+    for sc in scenes:
+        for st in sc["steps"]:
+            ids = []
+            if st[0] == "summon":
+                ids = [(st[1], ent)]
+            elif st[0] in ("hold", "equip"):
+                ids = [(st[2], itm)]
+            elif st[0] == "auto":
+                ids = [(st[1], ent | itm)]
+            elif st[0] == "cmd" and isinstance(st[1], str) and not st[1].startswith(("effect", "attribute", "bossbar")):
+                ids = [("elsewhere:" + i, ent if k in ("summon ", "type=") else itm) for k, i in re.findall(r"(summon |type=|give @\w+ |with )elsewhere:([a-z0-9_/]+)", st[1])]
+            for i, ok in ids:
+                if isinstance(i, str) and i.startswith("elsewhere:") and i not in ok:
+                    bad.append((sc["n"], st[0], i))
+    return bad
+
+
+def report_ids(scenes):
+    bad = invalid_ids(scenes)
+    for n, op, i in bad:
+        print("  invalid id: scene %d %s %s" % (n, op, i))
+    print("invalid ids: %d steps in %d scenes" % (len(bad), len({b[0] for b in bad})))
+
+
+def verify_lines(scenes, text):
+    """Cause 1 guard: every scene's check must come from its own md line (lines are renumbered on each run)."""
+    lines = text.splitlines()
+    bad = [s["n"] for s in scenes if s["check"] and "|| strike:" not in s["check"] and s["check"][:60] not in (lines[s["line"] - 1] if s["line"] <= len(lines) else "")]
+    print("line check: %d of %d scenes have a check that does not match md line %s" % (len(bad), len(scenes), bad[:10]))
+
+
 def main():
     text = open(SRC, encoding="utf-8").read()
+    idx_p = os.path.join(OUT, "index.json")
+    if os.path.exists(idx_p) and os.path.getmtime(SRC) > os.path.getmtime(idx_p):
+        print("WARNING: %s is newer than index.json (line numbers in the old index/shotlist are stale); regenerating, then re-run vqa.py checklist" % os.path.basename(SRC))
     c = Compiler()
     c.run(text)
     os.makedirs(OUT, exist_ok=True)
@@ -683,6 +849,11 @@ def main():
     doc = {"source": os.path.relpath(SRC, ROOT), "generated": stamp, "scenes": c.scenes,
            "counts": {"scenes": len(c.scenes), "shots": sum(len(s["shots"]) for s in c.scenes),
                       "manual": sum(1 for s in c.scenes if s["world"] == "none" and s["steps"][0][0] == "manual")}}
+    apply_overrides(c.scenes)
+    verify_lines(c.scenes, text)
+    report_ids(c.scenes)
+    doc["counts"] = {"scenes": len(c.scenes), "shots": sum(len(s["shots"]) for s in c.scenes),
+                     "manual": sum(1 for s in c.scenes if s["steps"] and s["steps"][0][0] == "manual")}
     with open(os.path.join(OUT, "shotlist.json"), "w", encoding="utf-8") as f:
         json.dump(doc, f, indent=1)
     idx_path = os.path.join(OUT, "index.json")

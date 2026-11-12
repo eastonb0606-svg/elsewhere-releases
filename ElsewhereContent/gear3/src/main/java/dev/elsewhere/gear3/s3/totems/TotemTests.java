@@ -99,6 +99,9 @@ public final class TotemTests {
 			GlimmerStub.devDeny = false;
 			GlimmerStub.SPENT.remove(p.getUUID());
 			MinionManager.dismissAll(p.getUUID());
+			// a FakePlayer never ticks, so the 2 s placement cooldowns of an earlier pass would still be running
+			for (Item it : new Item[] {bramble, sentry, obelisk})
+				if (it != null) p.getCooldowns().removeCooldown(p.getCooldowns().getCooldownGroup(new ItemStack(it)));
 			if (slots != null) slots.addOrUpdateTransientModifier(new AttributeModifier(slotMod, 3, AttributeModifier.Operation.ADD_VALUE));
 			info(P + "slot cap with test slot gear: " + MinionApi.maxSlots(p));
 

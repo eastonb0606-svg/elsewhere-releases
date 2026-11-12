@@ -48,6 +48,8 @@ public final class HrafnLooksTest {
 	public static void pool(ServerLevel level, BlockPos origin, int sx, int sz) {
 		for (int px = 0; px < sx; px++) for (int pz = 0; pz < sz; pz++) {
 			int x = origin.getX() + px, z = origin.getZ() + pz, top = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
+			// fx-hrafwater: a plant left standing on the dug cell would hide the water from the surface heightmap
+			for (int py = top + 1; py <= top + 2; py++) if (!level.getBlockState(new BlockPos(x, py, z)).isAir()) level.setBlock(new BlockPos(x, py, z), Blocks.AIR.defaultBlockState(), 2);
 			for (int py = top; py > top - (px < 4 ? 1 : px < 8 ? 2 : 3); py--) level.setBlock(new BlockPos(x, py, z), Blocks.WATER.defaultBlockState(), 2);
 		}
 	}
@@ -116,7 +118,7 @@ public final class HrafnLooksTest {
 		BlockPos pier = rep.spots.get("pier"), boat = rep.spots.get("strand_boat");
 		boolean inPool = pier != null && pier.getX() >= poolOrigin.getX() && pier.getX() < poolOrigin.getX() + poolX && pier.getZ() >= poolOrigin.getZ() && pier.getZ() < poolOrigin.getZ() + poolZ;
 		check("waterfront: one pier box with a jetty on piles to the bed, a naust (boathouse) astride the shore", pierBoxes == 1 && inPool && rep.piles >= 4 && rep.boathouse,
-			"pier boxes " + pierBoxes + " pier " + pier + " piles " + rep.piles + " naust " + rep.boathouse);
+			"pier boxes " + pierBoxes + " pier " + pier + " piles " + rep.piles + " naust " + rep.boathouse + (rep.naustWhy.isEmpty() ? "" : " (" + rep.naustWhy + ")"));
 		boolean dry = boat != null && level.getBlockState(boat.below()).isSolid() && level.getFluidState(boat.below()).isEmpty();
 		check("a boat drawn up on the strand (on dry ground) with a green-and-brown sail", rep.boat && dry && wool >= 9, "boat " + boat + " sail wool " + wool);
 		// the village's own features

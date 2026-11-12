@@ -149,6 +149,12 @@ public final class CastleLayout {
 			placed++;
 		}
 
+		/** Skirt write: only over natural terrain or air (never a wall). */
+		void setSkirt(int x, int y, int z, BlockState s) {
+			if (!clip.isInside(x, y, z) || !CastleKit.natural(level.getBlockState(new BlockPos(x, y, z)))) return;
+			setRaw(x, y, z, s);
+		}
+
 		void setIfAir(int x, int y, int z, BlockState s) {
 			if (!clip.isInside(x, y, z)) return;
 			BlockPos p = new BlockPos(x, y, z);

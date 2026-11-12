@@ -91,7 +91,8 @@ public final class SelfTest {
 		if (idx >= STEPS.size()) { finish(srv); return; }
 		Step s = STEPS.get(idx++);
 		try {
-			wait = s.run(srv, l);
+			int w = s.run(srv, l);
+			if (w < 0) { idx--; wait = 0; } else wait = w;   // a negative return re-runs the same step next tick (bounded waits)
 		} catch (Throwable t) {
 			check("step " + idx + " crashed", false, t);
 			t.printStackTrace();

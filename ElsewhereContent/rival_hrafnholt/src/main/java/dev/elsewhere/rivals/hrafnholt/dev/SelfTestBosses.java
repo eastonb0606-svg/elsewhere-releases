@@ -449,7 +449,9 @@ final class SelfTestBosses {
 		});
 		// Hersir Rally Horn at 50%
 		event("Horn of Three Calls at 50%: Strength I to her and a horn blown", Hrafn.HERSIR, 0.49F, 320, b -> b.hornsBlown >= 1);   // Strength I (160 ticks) is applied in the same call as the count; watch long enough for the random pick
-		event("Verse of Winter at 50%: song ends, the +20% attack-speed window opens", Hrafn.SKALD, 0.49F, 150, b -> b.verseActive() && !b.singing);
+		// the AI may first eat (retreat up to 40 + eat) and try a sprint crit (up to 40) before its 1-in-8 signature pick and the 50-tick song,
+		// so a fixed 150-tick look could land before the window opened: watch (bounded) until it opens
+		eventUntil("Verse of Winter at 50%: song ends, the +20% attack-speed window opens", Hrafn.SKALD, 0.49F, 400, b -> b.verseActive() && !b.singing);
 		// Wolf Howl: the AI picks among eligible signatures at random (1 in 8 per tick, weighted), so waiting for it was a race.
 		// Drive the part that is deterministic: crossing 50% makes the howl eligible, then fire it and count the roar.
 		SelfTest.STEPS.add((srv, l) -> {
@@ -575,6 +577,27 @@ final class SelfTestBosses {
 		});
 		SelfTest.STEPS.add((srv, l) -> {
 			check(label, ok.test(B), "horns " + B.hornsBlown + " howls " + B.howls + " rage " + B.rage + " stats " + B.stats);
+			clean(l);
+			return 0;
+		});
+	}
+
+	static int untilWaited;
+
+	/** Like {@link #event} but polls each tick (up to {@code maxWait}) and passes as soon as {@code ok} holds. */
+	static void eventUntil(String label, Hrafn h, float frac, int maxWait, java.util.function.Predicate<HrafnholtBoss> ok) {
+		SelfTest.STEPS.add((srv, l) -> {
+			clean(l);
+			B = boss(l, h, false, 0, 100);
+			D = dummy(l, 0, 112);
+			B.setTarget(D);
+			B.setHealth(B.getMaxHealth() * frac);
+			untilWaited = 0;
+			return 1;
+		});
+		SelfTest.STEPS.add((srv, l) -> {
+			if (!ok.test(B) && B.isAlive() && ++untilWaited < maxWait) return -1;
+			check(label, ok.test(B), "after " + untilWaited + " ticks: horns " + B.hornsBlown + " howls " + B.howls + " rage " + B.rage + " stats " + B.stats);
 			clean(l);
 			return 0;
 		});

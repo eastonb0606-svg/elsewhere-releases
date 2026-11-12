@@ -77,6 +77,8 @@ public final class HrafnLooks {
 		/** The hall's long axis runs along the contours (the ends differ less than the sides). */
 		public boolean hallAlongContour;
 		public boolean boathouse, boat;
+		/** fx-hrafwater: why no naust stood (each tried lane's first refusal), for the self-test's detail. */
+		public String naustWhy = "";
 	}
 
 	static final Map<Long, Report> REPORTS = new LinkedHashMap<Long, Report>(16, 0.75F, false) {
@@ -343,8 +345,10 @@ public final class HrafnLooks {
 			int[][] bestG = null;
 			Part bestPart = null;
 			int bestScore = Integer.MAX_VALUE, found = 0;
-			for (int t = 0; t < 140 && found < 6; t++) {
-				BlockPos s = b.c.bell.offset(b.c.rnd.nextInt(57) - 28, 0, b.c.rnd.nextInt(57) - 28);
+			for (int t = 0; t < 260 && found < 6; t++) {
+				// the first 140 tries stay near the bell; a big village (120 wide) with no free ground there gets the whole footprint
+				int rad = t < 140 ? 28 : 54;
+				BlockPos s = b.c.bell.offset(b.c.rnd.nextInt(2 * rad + 1) - rad, 0, b.c.rnd.nextInt(2 * rad + 1) - rad);
 				for (int o = 0; o < 2; o++) {
 					Hall h = new Hall(sz[0], sz[1], o == 0, s.getX(), s.getZ());
 					int[][] g = groundMap(b, h);
@@ -660,7 +664,7 @@ public final class HrafnLooks {
 		int bestSpread = 3;
 		// every second cell within 30 of the bell, nearest first (70 random tries missed the open meadow in a crowded village: s-asm-vill)
 		List<int[]> cand = new ArrayList<>();
-		for (int dx = -30; dx <= 30; dx += 2) for (int dz = -30; dz <= 30; dz += 2) cand.add(new int[] {dx, dz});
+		for (int dx = -56; dx <= 56; dx += 2) for (int dz = -56; dz <= 56; dz += 2) cand.add(new int[] {dx, dz});
 		cand.sort(java.util.Comparator.comparingInt(o -> o[0] * o[0] + o[1] * o[1]));
 		for (int t = 0; t < cand.size() && bestSpread > 0; t++) {
 			BlockPos s = b.c.bell.offset(cand.get(t)[0], 0, cand.get(t)[1]);
@@ -1090,15 +1094,21 @@ public final class HrafnLooks {
 		}
 		if (!fits(p, q -> wetOk(b, q, p.ops.get(q.asLong())))) return false;
 		// 2. the naust: a boathouse astride the shoreline beside the jetty (either side), walls on piles over the water, an open boat bay
+		// fx-hrafwater: lanes 3..8 out from the jetty on either side (it used to try only lanes 3..7, so a path, a village block or a planned
+		// cell on that one strip of bank left the waterfront without its naust)
 		Part house = null;
-		int hs = 0;
-		for (int s : new int[] {1, -1}) {
-			house = naust(b, X, Z, sd, d, wy, s);
+		int hs = 0, ho = 3;
+		StringBuilder why = new StringBuilder();
+		for (int off = 3; off <= 8 && house == null; off++) for (int s : new int[] {1, -1}) {
+			house = naust(b, X, Z, sd, d, wy, s, off);
 			if (house != null) {
 				hs = s;
+				ho = off;
 				break;
 			}
+			if (why.length() < 400) why.append(why.length() == 0 ? "" : "; ").append(s * off).append(": ").append(naustWhy);
 		}
+		b.rep.naustWhy = house != null ? "" : why.toString();
 		// 3. a boat drawn up on the strand, mast stepped, green-and-brown sail
 		// (the far side first; on the naust's side only behind its back eave)
 		Part boat = null;
@@ -1125,8 +1135,8 @@ public final class HrafnLooks {
 				b.rep.boathouse = true;
 				for (var e : hp.ops.entrySet()) if (hd.contains(e.getKey()) && e.getValue().getBlock() instanceof WallBannerBlock) b.rep.banners++;
 				b.rep.columns.addAll(naustColumns);
-				b.rep.spots.put("boathouse", new BlockPos(X.applyAsInt(2, hs * 5), wy + 1, Z.applyAsInt(2, hs * 5)));
-			}
+				b.rep.spots.put("boathouse", new BlockPos(X.applyAsInt(2, hs * (ho + 2)), wy + 1, Z.applyAsInt(2, hs * (ho + 2))));
+			} else b.rep.naustWhy = "naust planned but its commit failed";
 		}
 		if (boat != null) {
 			final Part bp = boat;
@@ -1160,26 +1170,29 @@ public final class HrafnLooks {
 	 * the bank or, over the water, on log piles down to the bed; a plank lintel over the mouth; a steep spruce roof with moss turf; a banner on
 	 * the front gable and a lantern hung inside.
 	 */
-	static @Nullable Part naust(B b, java.util.function.IntBinaryOperator X, java.util.function.IntBinaryOperator Z, Direction sd, Direction d, int wy, int s) {
+	static String naustWhy = "";
+
+	static @Nullable Part naust(B b, java.util.function.IntBinaryOperator X, java.util.function.IntBinaryOperator Z, Direction sd, Direction d, int wy, int s, int off) {
 		naustColumns.clear();
 		int[][] base = new int[6][5], dep = new int[6][5];
 		boolean[][] wet = new boolean[6][5];
 		for (int k = 0; k <= 4; k++) for (int u = -3; u <= 2; u++) {
-			int v = s * (3 + k), x = X.applyAsInt(u, v), z = Z.applyAsInt(u, v);
+			int v = s * (off + k), x = X.applyAsInt(u, v), z = Z.applyAsInt(u, v);
 			boolean interior = k >= 1 && k <= 3;
 			int w = wtop(b, x, z);
+			naustWhy = "u " + u + " k " + k + " at " + x + "," + z;
 			if (w == wy) {
-				if (u < 0) return null; // the bank must be dry behind the shoreline
+				if (u < 0) return whyNull("wet bank"); // the bank must be dry behind the shoreline
 				int dp = depth(b, x, z, wy);
-				if (dp == NONE) return null;
+				if (dp == NONE) return whyNull("no bed");
 				wet[u + 3][k] = true;
 				dep[u + 3][k] = dp;
 				base[u + 3][k] = wy + 1;
 			} else {
-				if (w != NONE) return null;
+				if (w != NONE) return whyNull("other water " + w);
 				int lg = ground(b, x, z);
-				if (u >= 0 && interior) return null; // the bay is water
-				if (lg != wy && !(lg == wy + 1 && u < 0)) return null;
+				if (u >= 0 && interior) return whyNull("dry bay"); // the bay is water
+				if (lg != wy && !(lg == wy + 1 && u < 0)) return whyNull("ground " + (lg == NONE ? b.level.getBlockState(new BlockPos(x, b.level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1, z)).getBlock().getDescriptionId() : lg));
 				base[u + 3][k] = lg + 1;
 			}
 		}
@@ -1187,8 +1200,8 @@ public final class HrafnLooks {
 		Part p = new Part();
 		BlockState pile = log(Blocks.SPRUCE_LOG, Direction.Axis.Y), post = log(Blocks.DARK_OAK_LOG, Direction.Axis.Y), plank = st(Blocks.SPRUCE_PLANKS);
 		Direction kd = s > 0 ? sd : sd.getOpposite(); // direction of growing k
-		java.util.function.IntBinaryOperator XK = (u, k) -> X.applyAsInt(u, s * (3 + k));
-		java.util.function.IntBinaryOperator ZK = (u, k) -> Z.applyAsInt(u, s * (3 + k));
+		java.util.function.IntBinaryOperator XK = (u, k) -> X.applyAsInt(u, s * (off + k));
+		java.util.function.IntBinaryOperator ZK = (u, k) -> Z.applyAsInt(u, s * (off + k));
 		for (int k = 0; k <= 4; k++) for (int u = -3; u <= 2; u++) {
 			boolean wallCell = k == 0 || k == 4 || u == -3;
 			if (!wallCell) continue;
@@ -1222,8 +1235,16 @@ public final class HrafnLooks {
 		p.put(p.group(), bn, wallBanner(b, bn, d));
 		p.put(p.group(), new BlockPos(XK.applyAsInt(-1, 2), top + 2, ZK.applyAsInt(-1, 2)), st(Blocks.LANTERN).setValue(LanternBlock.HANGING, true));
 		final Part fp = p;
-		if (!fits(fp, q -> wetOk(b, q, fp.ops.get(q.asLong())))) return null;
+		for (var e : fp.ops.entrySet()) if (!fp.group.containsKey(e.getKey()) && !wetOk(b, BlockPos.of(e.getKey()), e.getValue())) {
+			BlockPos q = BlockPos.of(e.getKey());
+			return whyNull("blocked at " + q.toShortString() + " by " + (b.c.used.contains(e.getKey()) ? "a planned cell" : b.level.getBlockState(q).getBlock().getDescriptionId()));
+		}
 		return p;
+	}
+
+	static @Nullable Part whyNull(String why) {
+		naustWhy = why + " (" + naustWhy + ")";
+		return null;
 	}
 
 	/** A boat drawn up on the strand (lanes {@code s*(3..5)}, rows u0..u0+4, bow to the water): hull of stairs and slabs, a mast, a green-and-brown sail. */

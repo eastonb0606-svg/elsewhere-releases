@@ -74,6 +74,44 @@ public final class BrainLod {
 		return true;
 	}
 
+	/**
+	 * fx-siegeperf: villager POI searches (AcquirePoi) per server tick, counted only inside a villager's brain start pass
+	 * ({@link #startPassTick} is that pass's game time, MIN_VALUE outside it). Over the budget the search waits for the
+	 * villager's next start pass, its own schedule untouched.
+	 */
+	public static final int POI_SEARCHES_PER_TICK = 3;
+	public static long poiSearches, poiSearchesDeferred;
+	public static int maxPoiSearchesInTick;
+	public static long startPassTick = Long.MIN_VALUE;
+	private static long poiTick = Long.MIN_VALUE;
+	private static int poiUsed;
+
+	/** May a villager POI search start now? True outside a villager start pass (no budget there). */
+	public static boolean mayPoiSearch() {
+		if (!enabled || startPassTick == Long.MIN_VALUE) return true;
+		if (startPassTick != poiTick) {
+			poiTick = startPassTick;
+			poiUsed = 0;
+		}
+		if (poiUsed >= POI_SEARCHES_PER_TICK) {
+			poiSearchesDeferred++;
+			return false;
+		}
+		return true;
+	}
+
+	/** A villager POI search ran (counts against this tick's budget). */
+	public static void poiSearched() {
+		if (startPassTick == Long.MIN_VALUE) return;
+		if (startPassTick != poiTick) {
+			poiTick = startPassTick;
+			poiUsed = 0;
+		}
+		poiUsed++;
+		poiSearches++;
+		if (poiUsed > maxPoiSearchesInTick) maxPoiSearchesInTick = poiUsed;
+	}
+
 	/** Self-test: a fresh walk-search budget for this tick. */
 	public static void resetWalkBudget() {
 		budgetTick = Long.MIN_VALUE;

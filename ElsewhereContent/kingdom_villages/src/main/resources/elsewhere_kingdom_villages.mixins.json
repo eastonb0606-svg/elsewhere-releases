@@ -8,7 +8,9 @@
 		"VillageBlockItemMixin",
 		"VillageFarmlandMixin",
 		"VillageBrainLodMixin",
-		"VillageWalkSearchMixin"
+		"VillageWalkSearchMixin",
+		"VillageAcquirePoiMixin",
+		"VillagePoiRecordMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -48,6 +48,8 @@ final class MireCourt {
 	static void build(CastleLayout.L l) {
 		CastleKit.W w = new CastleKit.W(l, false);
 		var c = l.p.clip;
+		// slope skirt outside the trace (retaining slope, no grass or leaf overhang above the footprint)
+		CastleKit.skirt(l, MireLayout.R, (x, z) -> { float dl = MireLayout.delta(x, z); return dl <= -90F || dl > 0F ? 0 : (int) Math.ceil(-dl); }, 8, Blocks.GRASS_BLOCK, Blocks.DIRT, 30);
 		int x0 = Math.max(-36, c.minX() - l.o.getX()), x1 = Math.min(36, c.maxX() - l.o.getX());
 		int z0 = Math.max(-36, c.minZ() - l.o.getZ()), z1 = Math.min(36, c.maxZ() - l.o.getZ());
 		// pad: only inside the trace (the rampart and bastions are filled by WALL); the beard_thin of the CASTLE piece blends the edge

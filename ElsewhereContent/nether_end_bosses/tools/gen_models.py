@@ -75,7 +75,7 @@ def face_deco(spec):
     return deco
 
 def mournmaw():
-    parts = [P("body", "root", (0, 16, 0), (0, 0, 0), [C(-8, -8, -8, 16, 16, 16, "ghast", faces={"north": "sadface"})]),
+    parts = [P("body", "root", (0, 6, 0), (0, 0, 0), [C(-8, -8, -8, 16, 16, 16, "ghast", faces={"north": "sadface"})]),
              P("crown", "body", (0, 0, 0), (0, 0, 0), [C(-6, -11, -2, 2, 3, 2, "bone", name="bone"), C(-1, -12, -2, 2, 4, 2, "bone", name="bone2"),
                                                      C(4, -11, -2, 2, 3, 2, "bone", share="bone"), C(-7, -9, -7, 14, 1, 14, "bone")])]
     for i in range(9):

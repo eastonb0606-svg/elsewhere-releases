@@ -17,17 +17,23 @@ import net.minecraft.world.level.levelgen.structure.BoundingBox;
 /**
  * The clipped writer of the 3.0 Petalwind/Glasswaste sites (STRUCTURES.md 2.13). At worldgen the clip is the piece box inside the chunk being
  * generated, so every write and every read stays in that chunk ("worldgen within +-1 chunk", strictly: within 0). Runtime rebuilds clip to the piece box.
- * Writes use UPDATE_CLIENTS only. Weathering variation comes from a stable hash of the position and the piece seed, never Math.random.
+ * Writes use UPDATE_CLIENTS (plus UPDATE_KNOWN_SHAPE on a live level). Weathering variation comes from a stable hash of the position and the piece seed, never Math.random.
  */
 public final class FitWriter {
 	public final WorldGenLevel level;
 	public final long seed;
 	public final int x0, x1, y0, y1, z0, z1;
 	private final BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
+	/**
+	 * UPDATE_CLIENTS; on a live level (/place twins, runtime rebuilds) also UPDATE_KNOWN_SHAPE: no neighbour shape updates, so a write at the
+	 * edge of the clip never reads (and so never loads or generates) the chunk next to it, and the result equals the worldgen build.
+	 */
+	private final int flags;
 
 	public FitWriter(WorldGenLevel level, BoundingBox clip, long seed) {
 		this.level = level;
 		this.seed = seed;
+		this.flags = level instanceof net.minecraft.server.level.WorldGenRegion ? Block.UPDATE_CLIENTS : Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
 		this.x0 = clip.minX();
 		this.x1 = clip.maxX();
 		this.y0 = clip.minY();
@@ -46,7 +52,7 @@ public final class FitWriter {
 
 	public void set(int x, int y, int z, BlockState s) {
 		if (!in(x, y, z)) return;
-		level.setBlock(m.set(x, y, z), s, Block.UPDATE_CLIENTS);
+		level.setBlock(m.set(x, y, z), s, flags);
 	}
 
 	public BlockState get(int x, int y, int z) {

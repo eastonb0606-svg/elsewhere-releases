@@ -14,7 +14,7 @@ public final class MournmawModelLayer {
 	public static LayerDefinition create() {
 		MeshDefinition mesh = new MeshDefinition();
 		PartDefinition root = mesh.getRoot();
-		PartDefinition p_body = root.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-8F, -8F, -8F, 16, 16, 16), PartPose.offsetAndRotation(0F, 16F, 0F, 0F, 0F, 0F));
+		PartDefinition p_body = root.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-8F, -8F, -8F, 16, 16, 16), PartPose.offsetAndRotation(0F, 6F, 0F, 0F, 0F, 0F));
 		PartDefinition p_crown = p_body.addOrReplaceChild("crown", CubeListBuilder.create().texOffs(20, 32).addBox(-6F, -11F, -2F, 2, 3, 2).texOffs(0, 32).addBox(-1F, -12F, -2F, 2, 4, 2).texOffs(20, 32).addBox(4F, -11F, -2F, 2, 3, 2).texOffs(64, 0).addBox(-7F, -9F, -7F, 14, 1, 14), PartPose.offsetAndRotation(0F, 0F, 0F, 0F, 0F, 0F));
 		PartDefinition p_tentacle0 = p_body.addOrReplaceChild("tentacle0", CubeListBuilder.create().texOffs(120, 0).addBox(-1F, 0F, -1F, 2, 10, 2).texOffs(8, 32).addBox(-1.5F, 10F, -1.5F, 3, 3, 3), PartPose.offsetAndRotation(-5F, 8F, -5F, 0F, 0F, 0F));
 		PartDefinition p_tentacle1 = p_body.addOrReplaceChild("tentacle1", CubeListBuilder.create().texOffs(120, 0).addBox(-1F, 0F, -1F, 2, 10, 2), PartPose.offsetAndRotation(0F, 8F, -5F, 0F, 0F, 0F));

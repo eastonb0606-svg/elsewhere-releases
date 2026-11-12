@@ -85,7 +85,8 @@ public final class SelfTest {
 		if (idx >= STEPS.size()) { finish(srv); return; }
 		Step s = STEPS.get(idx++);
 		try {
-			wait = s.run(srv, srv.overworld());
+			int w = s.run(srv, srv.overworld());
+			if (w < 0) { idx--; wait = 0; } else wait = w;   // a negative return re-runs the same step next tick (bounded waits)
 		} catch (Throwable t) {
 			check("step " + idx + " crashed", false, t);
 			t.printStackTrace();
@@ -293,7 +294,10 @@ public final class SelfTest {
 			check("hearth-ward: -10% fire damage only", Math.abs(fire - 9F) < 1e-4 && Math.abs(other - 10F) < 1e-4 || other < 10F, fire + "/" + other);
 			// raven banner
 			BlockPos bp = new BlockPos(4, -60, 8);
+			// the test world is regenerated (not superflat): clear a small air pocket for the banner and the pet first
+			for (BlockPos q : BlockPos.betweenClosed(bp.offset(-1, 0, -1), bp.offset(3, 3, 2))) lv.setBlock(q, net.minecraft.world.level.block.Blocks.AIR.defaultBlockState(), 2);
 			lv.setBlock(bp.below(), net.minecraft.world.level.block.Blocks.STONE.defaultBlockState(), 3);
+			lv.setBlock(bp.offset(1, -1, 0), net.minecraft.world.level.block.Blocks.STONE.defaultBlockState(), 3);
 			boolean planted = HrafnholtGear.plantBanner(lv, p, bp);
 			check("raven banner plants a black banner", planted && lv.getBlockState(bp).is(net.minecraft.world.level.block.Blocks.BANNER.black()), null);
 			Wolf pet = EntityTypes.WOLF.create(lv, EntitySpawnReason.MOB_SUMMONED);

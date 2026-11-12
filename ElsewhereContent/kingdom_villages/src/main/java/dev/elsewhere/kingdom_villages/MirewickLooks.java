@@ -211,9 +211,9 @@ public final class MirewickLooks {
 				}
 			}
 			if (roofs.isEmpty()) continue;
-			// crimson eaves course and ridge over the slate field
+			// crimson eaves course over the slate field (the ridge stays slate: the village measured over half crimson with it)
 			for (BlockPos p : roofs) {
-				if (p.getY() != lo && p.getY() != hi) continue;
+				if (p.getY() != lo) continue;
 				BlockState o = orig(c, p);
 				set(c, at, p, (o.is(BlockTags.WOODEN_STAIRS) ? Blocks.CRIMSON_STAIRS : Blocks.CRIMSON_SLAB).withPropertiesOf(o));
 			}
