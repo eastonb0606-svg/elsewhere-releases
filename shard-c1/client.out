@@ -784,3 +784,37 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:40:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_hanging_undercity_b.png: elsewhere:the_hush -888, -88, 1336
 [22:40:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_hollow_shrine_a.png: elsewhere:pale_hollow -120, 82, -312
 [22:40:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_hollow_shrine_b.png: elsewhere:pale_hollow -120, 82, -312
+[22:40:35] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 12790ms or 255 ticks behind
+[22:40:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_ironpeak_return_rift_a.png: elsewhere:ironpeak 1712, 387, -1392
+[22:40:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_ironpeak_return_rift_b.png: elsewhere:ironpeak 1712, 387, -1392
+[22:40:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_lantern_road_a.png: elsewhere:pale_hollow 184, 76, 72
+[22:40:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_lantern_road_b.png: elsewhere:pale_hollow 184, 76, 72
+[22:40:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_lighthouse_a.png: elsewhere:verdigris_sea 376, 108, 360
+[22:40:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_lighthouse_b.png: elsewhere:verdigris_sea 376, 108, 360
+[22:40:58] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 8511ms or 170 ticks behind
+[22:41:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_listening_engine_a.png: elsewhere:the_hush 104, -88, 40
+[22:41:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_listening_engine_b.png: elsewhere:the_hush 104, -88, 40
+[22:41:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_lucid_spring_a.png: elsewhere:greenhaze -136, 91, -248
+[22:41:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_lucid_spring_b.png: elsewhere:greenhaze -136, 91, -248
+[22:41:16] [Render thread/INFO] (Minecraft) Loaded 47 advancements
+[22:41:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_mournmaw_weeping_basin_a.png: minecraft:the_nether -168, 40, 2680
+[22:41:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_mournmaw_weeping_basin_b.png: minecraft:the_nether -168, 40, 2680
+[22:41:25] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 11554ms or 231 ticks behind
+[22:41:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_munchie_market_a.png: elsewhere:greenhaze -264, 129, -376
+[22:41:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_munchie_market_b.png: elsewhere:greenhaze -264, 129, -376
+[22:41:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_ossyra_matriarch_spire_a.png: minecraft:the_end -1720, 116, 184
+[22:41:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_ossyra_matriarch_spire_b.png: minecraft:the_end -1720, 116, 184
+[22:41:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_petal_pagoda_a.png: elsewhere:petalwind 216, 176, 88
+[22:41:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_petal_pagoda_b.png: elsewhere:petalwind 216, 176, 88
+[22:41:58] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 18286ms or 365 ticks behind
+[22:42:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_proving_grounds_a.png: elsewhere:ironpeak 72, 641, 1624
+[22:42:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_proving_grounds_b.png: elsewhere:ironpeak 72, 641, 1624
+[22:42:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_resin_kiln_a.png: elsewhere:pale_hollow -328, 86, -296
+[22:42:16] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3399ms or 67 ticks behind
+[22:42:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_resin_kiln_b.png: elsewhere:pale_hollow -328, 86, -296
+[22:42:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_sesh_hut_a.png: elsewhere:greenhaze 152, 93, 152
+[22:42:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_sesh_hut_b.png: elsewhere:greenhaze 152, 93, 152
+[22:42:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_silent_monastery_a.png: elsewhere:the_hush 104, -88, 360
+[22:42:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_silent_monastery_b.png: elsewhere:the_hush 104, -88, 360
+[22:42:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_solaxis_pyre_cradle_a.png: minecraft:the_nether -248, 40, -184
+[22:42:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK generation__site_solaxis_pyre_cradle_b.png: minecraft:the_nether -248, 40, -184
