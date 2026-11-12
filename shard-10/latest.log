@@ -382,3 +382,256 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:14:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__ridgewatch_boots_front.png: 
 [20:14:47] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
 [20:14:47] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__ridgewatch_boots_side.png: 
+[20:14:48] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:14:48] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:14:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__ridgewatch_boots_tooltip.png: 
+[20:14:49] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:14:49] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:14:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 88 (items | elsewhere:ridgewatch_boots) done in 3067 ms
+[20:14:49] [Server thread/INFO] (Minecraft) System chat: Removed 4 item(s) from player ShotRunner
+[20:14:49] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:14:49] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:49] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:14:49] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Starsight Visor]
+[20:14:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__glasswaste_starsight_visor_front.png: 
+[20:14:50] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:14:50] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__glasswaste_starsight_visor_side.png: 
+[20:14:51] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:14:51] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:14:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__glasswaste_starsight_visor_tooltip.png: 
+[20:14:52] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:14:52] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:14:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 89 (items | elsewhere:glasswaste_starsight_visor) done in 2907 ms
+[20:14:52] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:14:52] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:14:52] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:52] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:14:52] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Prism Mantle]
+[20:14:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__glasswaste_prism_mantle_front.png: 
+[20:14:53] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:14:53] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__glasswaste_prism_mantle_side.png: 
+[20:14:54] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:14:54] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:14:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__glasswaste_prism_mantle_tooltip.png: 
+[20:14:54] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:14:54] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:14:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 90 (items | elsewhere:glasswaste_prism_mantle) done in 2854 ms
+[20:14:54] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[20:14:54] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:14:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:55] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:14:55] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Falconer's Kilt]
+[20:14:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__azmar_falconer_kilt_front.png: 
+[20:14:56] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:14:56] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__azmar_falconer_kilt_side.png: 
+[20:14:56] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:14:56] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:14:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__azmar_falconer_kilt_tooltip.png: 
+[20:14:57] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:14:57] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:14:57] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 91 (items | elsewhere:azmar_falconer_kilt) done in 2897 ms
+[20:14:57] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[20:14:57] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:14:57] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:57] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:14:57] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sunscribe Hood]
+[20:14:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_hood_front.png: 
+[20:14:58] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:14:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:14:59] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_hood_side.png: 
+[20:14:59] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:14:59] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_hood_tooltip.png: 
+[20:15:00] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:00] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 92 (items | elsewhere:sunscribe_hood) done in 2982 ms
+[20:15:00] [Server thread/INFO] (Minecraft) System chat: Removed 4 item(s) from player ShotRunner
+[20:15:00] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:00] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:00] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:00] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sunscribe Robe]
+[20:15:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_robe_front.png: 
+[20:15:01] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:01] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_robe_side.png: 
+[20:15:02] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:02] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:02] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2003ms or 40 ticks behind
+[20:15:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_robe_tooltip.png: 
+[20:15:03] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:03] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 93 (items | elsewhere:sunscribe_robe) done in 2961 ms
+[20:15:03] [Server thread/INFO] (Minecraft) System chat: Removed 4 item(s) from player ShotRunner
+[20:15:03] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:03] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:03] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:03] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sunscribe Leggings]
+[20:15:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_leggings_front.png: 
+[20:15:04] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:04] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_leggings_side.png: 
+[20:15:05] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:05] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_leggings_tooltip.png: 
+[20:15:06] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:06] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 94 (items | elsewhere:sunscribe_leggings) done in 2929 ms
+[20:15:06] [Server thread/INFO] (Minecraft) System chat: Removed 4 item(s) from player ShotRunner
+[20:15:06] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:06] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:06] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:06] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sunscribe Boots]
+[20:15:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_boots_front.png: 
+[20:15:07] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_boots_side.png: 
+[20:15:08] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:08] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__sunscribe_boots_tooltip.png: 
+[20:15:09] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:09] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 95 (items | elsewhere:sunscribe_boots) done in 2893 ms
+[20:15:09] [Server thread/INFO] (Minecraft) System chat: Removed 4 item(s) from player ShotRunner
+[20:15:09] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:09] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:09] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Lamplighter Hood]
+[20:15:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__mirewick_lamplighter_hood_front.png: 
+[20:15:10] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:10] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__mirewick_lamplighter_hood_side.png: 
+[20:15:11] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:11] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__mirewick_lamplighter_hood_tooltip.png: 
+[20:15:12] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:12] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 96 (items | elsewhere:mirewick_lamplighter_hood) done in 2889 ms
+[20:15:12] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[20:15:12] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:12] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:12] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:12] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Lamplighter Coat]
+[20:15:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__mirewick_lamplighter_coat_front.png: 
+[20:15:13] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__mirewick_lamplighter_coat_side.png: 
+[20:15:14] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:14] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__mirewick_lamplighter_coat_tooltip.png: 
+[20:15:15] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:15] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 97 (items | elsewhere:mirewick_lamplighter_coat) done in 2915 ms
+[20:15:15] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[20:15:15] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:15] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:15] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Elderbark Mantle]
+[20:15:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_mantle_front.png: 
+[20:15:16] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_mantle_side.png: 
+[20:15:17] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:17] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_mantle_tooltip.png: 
+[20:15:18] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:18] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 98 (items | elsewhere:elderbark_mantle) done in 2856 ms
+[20:15:18] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[20:15:18] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:18] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:18] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:18] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Elderbark Leggings]
+[20:15:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_leggings_front.png: 
+[20:15:19] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:19] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_leggings_side.png: 
+[20:15:20] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:20] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_leggings_tooltip.png: 
+[20:15:21] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:21] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 99 (items | elsewhere:elderbark_leggings) done in 2895 ms
+[20:15:21] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[20:15:21] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:21] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:21] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:21] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Elderbark Boots]
+[20:15:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_boots_front.png: 
+[20:15:22] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:22] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_boots_side.png: 
+[20:15:23] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:23] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__elderbark_boots_tooltip.png: 
+[20:15:24] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:24] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 100 (items | elsewhere:elderbark_boots) done in 2954 ms
+[20:15:24] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[20:15:24] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:24] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:24] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Marshal's Helm]
+[20:15:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_helm_front.png: 
+[20:15:25] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_helm_side.png: 
+[20:15:26] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:26] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_helm_tooltip.png: 
+[20:15:26] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:26] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 101 (items | elsewhere:court_marshals_helm) done in 2901 ms
+[20:15:26] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[20:15:26] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:26] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:27] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:27] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Marshal's Tabard]
+[20:15:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_tabard_front.png: 
+[20:15:28] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:28] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_tabard_side.png: 
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_tabard_tooltip.png: 
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 102 (items | elsewhere:court_marshals_tabard) done in 2861 ms
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:29] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:30] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Marshal's Tassets]
+[20:15:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_tassets_front.png: 
+[20:15:31] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:31] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_tassets_side.png: 
+[20:15:31] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:31] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__court_marshals_tassets_tooltip.png: 
+[20:15:32] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:32] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 103 (items | elsewhere:court_marshals_tassets) done in 2870 ms
+[20:15:32] [Server thread/INFO] (Minecraft) System chat: Removed 3 item(s) from player ShotRunner
+[20:15:32] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:32] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:32] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:32] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Hird Leggings]
+[20:15:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__hrafnholt_hird_leggings_front.png: 
+[20:15:33] [Server thread/INFO] (Minecraft) System chat: Summoned new Mannequin
+[20:15:33] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__hrafnholt_hird_leggings_side.png: 
+[20:15:34] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:15:34] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:15:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK items__hrafnholt_hird_leggings_tooltip.png: 
+[20:15:35] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[20:15:35] [Server thread/INFO] (Minecraft) System chat: Removed effect Resistance from ShotRunner
+[20:15:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 104 (items | elsewhere:hrafnholt_hird_leggings) done in 2877 ms
+[20:15:35] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[20:15:35] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:15:35] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[20:15:35] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:15:35] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Hird Boots]
