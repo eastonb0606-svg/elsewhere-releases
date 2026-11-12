@@ -48,3 +48,11 @@ and one combined log per profile as `modtests-<tag>-<profile>-latest.log` (same 
   2403/2403, duelist 2 fails vs 3, villages 1 vs 3). Two leaks between modules showed up (Hrafnholt's berserker_screen at
   dusk, a villages road outside the old reset radius in Azmar's hash) and are fixed above; see `out-imac/testbatch/tb3`.
 - Gaps between modules are 2 s; a boot is about 20-30 s; no 420 s `haltAfterSeconds` idle per group any more.
+
+## Status (13:52) - read before relying on the flat profiles
+- `world` (11 modules, one JVM): verified green and equal to or better than the old boots. Use it.
+- `flat`/`flat2` (kingdom set sharing a JVM): the three order effects found (time of day, a leftover village road,
+  MSPT under 3 JVMs) are fixed and verified in `tb3`, but `tb3` then failed 4 checks that pass in single-module boots
+  and in `tb2` (hrafnholt: Verse of Winter at 50%, Wolfskin Boots no slipping; azmar: High-Ground Kite, Falcon Mark).
+  Until that is explained, run the kingdom set one module per JVM (old `imac_int.sh modtests-kingdom`), or give each
+  its own flat profile here: `flatk=kingdom flatc=court ...` (each profile is a fresh world).

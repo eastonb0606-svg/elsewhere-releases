@@ -107,6 +107,17 @@ public final class AldLookTest {
 		return bad;
 	}
 
+	/** The ground height at (x, z) as it was before {@code r} was written (journaled cells read as their originals). */
+	static int groundBefore(VillageRecord r, int x, int z) {
+		for (int y = level.getMaxY(); y > level.getMinY(); y--) {
+			BlockPos p = new BlockPos(x, y, z);
+			VillageRecord.Change ch = r.journal.get(p.asLong());
+			BlockState s = ch != null ? ch.original() : level.getBlockState(p);
+			if ((s.blocksMotion() || !s.getFluidState().isEmpty()) && !s.is(BlockTags.LEAVES)) return y;
+		}
+		return Integer.MIN_VALUE;
+	}
+
 	/** Natural ground the build replaced by anything but a track or scorched earth (a carve or a box clear). */
 	static int carved(VillageRecord r) {
 		int n = 0;
@@ -221,7 +232,7 @@ public final class AldLookTest {
 		int base = AldLook.ground(level, v.getX(), v.getZ());
 		VillageRecord r = AldLookScenes.villageScene(level, v, res, plan);
 		Plans.Fortify f = plan[0];
-		int peak = AldLook.ground(level, v.getX() + 8, v.getZ() + 8);
+		int peak = groundBefore(r, v.getX() + 8, v.getZ() + 8); // the hill's own top (the tower may now stand on it)
 		check("hill village: watchtower on the high point", AldRebuild.lastTower != null && AldRebuild.lastTowerGround >= peak - 1 && f.towerTop() != null,
 			AldRebuild.lastTower + " ground " + AldRebuild.lastTowerGround + " peak " + peak + " best " + AldRebuild.lastBestGround);
 		check("hill village: every op stands when written bottom-up (no canSurvive skips)", res[1] == 0, res[0] + " written, " + res[1] + " unsurvivable, " + res[2] + " refused");
@@ -259,7 +270,7 @@ public final class AldLookTest {
 		AldLookScenes.load(level, c, 8, true);
 		int base = AldLook.ground(level, c.getX(), c.getZ());
 		VillageRecord r = AldLookScenes.fortScene(level, c, res, plan);
-		int peak = AldLook.ground(level, c.getX(), c.getZ());
+		int peak = r == null ? AldLook.ground(level, c.getX(), c.getZ()) : groundBefore(r, c.getX(), c.getZ()); // the hill's own top, not the fort on it
 		check("outpost: a motte site on the hill was found", r != null && plan[0] != null, null);
 		if (r == null || plan[0] == null) {
 			AldLookScenes.flatten(level, c, 33, base, 20);

@@ -59,6 +59,7 @@ runprofile() { # <profile> <mods> <port>
   done
 }
 
+rm -rf $M/run-tb-*(N)   # no stale profile of an earlier run reaches the summary
 pids=(); i=0
 for spec in "$@"; do
   prof=${spec%%=*}; mods=${spec#*=}
