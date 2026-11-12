@@ -8,14 +8,14 @@
 # Publishing: at the first PNGs, every ~20 new PNGs (or 8 min with new ones) and at the end, the PNGs plus this shard's
 # index.json and logs are written as ONE commit (author/committer "Elsewhere build" <build@localhost>) built from a
 # private index (the checkout is never touched) and force-pushed to refs/heads/cloud-shots-<shard>. Nothing else is
-# pushed, ever. Hard stop: the client is stopped by 21:24 UTC (shots after 15:30 Chicago are not collected).
+# pushed, ever. Hard stop: the client is stopped by 23:05 UTC (shots after 17:05 Chicago are not collected).
 # Status for the polling agent: ~/cloudshots-<shard>/status (one line), ~/cloudshots-<shard>/DONE when finished.
 set -u
 SHARD="${1:?shard}"; SPEC="${2:?scene spec}"; WD_MAX="${3:-90}"
 R="$(git rev-parse --show-toplevel)"; cd "$R" || exit 2
 W="$HOME/cloudshots-$SHARD"; S="$W/shots"; mkdir -p "$W" "$S" "$W/mods"; rm -f "$W/DONE" "$W/client.done"
 LOG="$W/run.log"; exec > >(tee -a "$LOG") 2>&1
-BRANCH="cloud-shots-$SHARD"; DEADLINE=$(date -u -d '2026-11-12T21:24:00Z' +%s)
+BRANCH="cloud-shots-$SHARD"; DEADLINE=$(date -u -d '2026-11-12T23:05:00Z' +%s)
 st() { echo "$(date -u +%H:%M:%SZ) $*" | tee "$W/status"; }
 export GIT_AUTHOR_NAME="Elsewhere build" GIT_AUTHOR_EMAIL="build@localhost" GIT_COMMITTER_NAME="Elsewhere build" GIT_COMMITTER_EMAIL="build@localhost"
 QALOG="$R/ElsewhereQA/build/run/clientGameTest/logs/latest.log"
@@ -101,7 +101,7 @@ echo "merged jar $(basename "$JAR") $(stat -c %s "$JAR") bytes in $(( $(date +%s
 cd "$R/ElsewhereQA" || fail "no ElsewhereQA"
 chmod +x gradlew
 now=$(date +%s); WD=$(( (DEADLINE - now) / 60 - 6 )); [ "$WD" -gt "$WD_MAX" ] && WD=$WD_MAX
-[ "$WD" -ge 5 ] || fail "too late to start (deadline 21:24Z)"
+[ "$WD" -ge 5 ] || fail "too late to start (deadline 23:05Z)"
 st "client: scenes $SPEC, watchdog $WD min"
 rm -rf build/run/clientGameTest/saves build/run/clientGameTest/logs
 (
