@@ -1,0 +1,262 @@
+{
+  "lanes": {
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:vorlagh": [
+        {
+          "file": "anim__vorlagh_hurt_peak.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:24"
+        },
+        {
+          "file": "anim__vorlagh_hurt_rest.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:40:24"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, idle)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_idle.png",
+          "scene": 145,
+          "line": 160,
+          "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
+          "status": "ok",
+          "taken": "23:40:26"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview_street": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview_street.png",
+          "scene": 171,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "rival kingdoms' plates (each kingdom unique)": [
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_6.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "23:40:29"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "23:40:31"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "23:40:34"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:mournmaw_weeping_basin": [
+        {
+          "file": "s_struct_nether__mournmaw_weeping_basin_s_0_16_26.png",
+          "scene": 285,
+          "line": 324,
+          "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "23:40:36"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "23:40:36"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "23:40:37"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "23:40:38"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "23:40:40"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "23:40:40"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark drill and butts at dawn": [
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_pennant": {
+      "elsewhere:rootling": [
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "pending"
+        },
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3_later.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p7_standing": {
+      "elsewhere:kingdom_lawspeaker": [
+        {
+          "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on.png",
+          "scene": 444,
+          "line": 494,
+          "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
+          "status": "pending"
+        },
+        {
+          "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on_later.png",
+          "scene": 444,
+          "line": 494,
+          "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:40:41",
+  "totals": {
+    "ok": 12,
+    "fail": 0,
+    "manual": 0
+  }
+}
