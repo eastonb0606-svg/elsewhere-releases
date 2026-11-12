@@ -1,0 +1,266 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:gulpmother": [
+        {
+          "file": "anim__gulpmother_hurt_peak.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:39:55"
+        },
+        {
+          "file": "anim__gulpmother_hurt_rest.png",
+          "scene": 52,
+          "line": 65,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:39:56"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:mirewick_lanternfang_estoc": [
+        {
+          "file": "items__mirewick_lanternfang_estoc_held.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "23:39:57"
+        },
+        {
+          "file": "items__mirewick_lanternfang_estoc_tooltip.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "23:39:58"
+        },
+        {
+          "file": "items__mirewick_lanternfang_estoc_held_first_person.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "23:39:58"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:ironpeak_return_rift": [
+        {
+          "file": "s_struct_verdigris__ironpeak_return_rift_s_8_5_8.png",
+          "scene": 157,
+          "line": 174,
+          "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:duelist_test (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase2.png",
+          "scene": 205,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:hollow_shrine": [
+        {
+          "file": "s_struct_core__hollow_shrine_s_9_6_9.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__hollow_shrine_downhill_20.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:aphelion_starpiercer": [
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person_3.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person_3.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_after_use_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_tooltip_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_townsfolk__townsfolk_lod_fold.png",
+          "scene": 319,
+          "line": 359,
+          "check": "nobody pops out of existence in view (they fold beyond 72 blocks, outside the 64-block tracking range); coming back, residents reappear at doors/far streets, never next to you",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_layout_azmar__castle_azmar_c_0_14_62_y180.png",
+          "scene": 409,
+          "line": 459,
+          "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:clockwork_sentry": [
+        {
+          "file": "s_totems__clockwork_sentry_first_person.png",
+          "scene": 437,
+          "line": 487,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__clockwork_sentry_third_person.png",
+          "scene": 437,
+          "line": 487,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__clockwork_sentry_tooltip.png",
+          "scene": 437,
+          "line": 487,
+          "check": "a copper tripod turret with a crossbow head turned to face the husk; a thin teal-white bolt streak flashes from the barrel to the husk once a second, barrel kicks back, brass key turning in its back",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_meadhorn": {
+      "elsewhere:hrafnholt_mead_horn": [
+        {
+          "file": "s_meadhorn__hrafnholt_mead_horn_first_person.png",
+          "scene": 493,
+          "line": 546,
+          "check": "",
+          "status": "pending"
+        },
+        {
+          "file": "s_meadhorn__hrafnholt_mead_horn_third_person.png",
+          "scene": 493,
+          "line": 546,
+          "check": "",
+          "status": "pending"
+        },
+        {
+          "file": "s_meadhorn__hrafnholt_mead_horn_tooltip.png",
+          "scene": 493,
+          "line": 546,
+          "check": "",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:39:58",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
