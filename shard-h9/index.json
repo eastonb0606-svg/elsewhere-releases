@@ -1,0 +1,266 @@
+{
+  "lanes": {
+    "sfx": {
+      "elsewhere:hrafnholt": [
+        {
+          "file": "sfx__hrafnholt_subtitle.png",
+          "scene": 25,
+          "line": 33,
+          "check": "subtitle box shows \"Hrafnholt warriors roar\", not \"Ravager roars\"",
+          "status": "ok",
+          "taken": "23:41:04"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:verdigrim": [
+        {
+          "file": "anim__verdigrim_hurt_peak.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:41:08"
+        },
+        {
+          "file": "anim__verdigrim_hurt_rest.png",
+          "scene": 64,
+          "line": 77,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "23:41:08"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:drowned_cathedral": [
+        {
+          "file": "s_struct_verdigris__drowned_cathedral_s_26_6_26.png",
+          "scene": 161,
+          "line": 178,
+          "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer": [
+        {
+          "file": "s_censer__choirlight_censer_held.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "23:41:09"
+        },
+        {
+          "file": "s_censer__choirlight_censer_tooltip.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "23:41:11"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:lantern_road": [
+        {
+          "file": "s_struct_core__lantern_road_above.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__lantern_road_end_eye_level.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_greenhaze_rework": {
+      "Couch-locked screen, FULL effects (hue drift + wobble)": [
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri_5s.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "night rest (REST: soldiers the night routine rests)": [
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        },
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:glasswaste_starsight_visor": [
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_after_use.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_tooltip.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_2_3_y180.png",
+          "scene": 412,
+          "line": 462,
+          "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:skyiron_ingot": [
+        {
+          "file": "s_compat_transmute__skyiron_ingot_first_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_third_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_tooltip.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "300-soldier battle readout with /kingdomlod": [
+        {
+          "file": "s_lod__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 458,
+          "line": 510,
+          "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:41:11",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
