@@ -1,0 +1,588 @@
+{
+  "lanes": {
+    "gear": {
+      "Calling tooltip (moonsilk_robe, sunlance_staff)": [
+        {
+          "file": "gear__calling_tooltip_moonsilk_robe.png",
+          "scene": 10,
+          "line": 15,
+          "check": "purple line \"Caster 100%: spells x1.15, cost x0.90\" (staff) or the Leaning line on the robe; no line on vanilla items",
+          "status": "ok",
+          "taken": "22:01:36"
+        },
+        {
+          "file": "gear__calling_tooltip_sunlance_staff.png",
+          "scene": 10,
+          "line": 15,
+          "check": "purple line \"Caster 100%: spells x1.15, cost x0.90\" (staff) or the Leaning line on the robe; no line on vanilla items",
+          "status": "ok",
+          "taken": "22:01:36"
+        }
+      ],
+      "Amberstill Plate full set (gear2)": [
+        {
+          "file": "gear__amberstill_plate_standing.png",
+          "scene": 12,
+          "line": 17,
+          "check": "armor renders (amber texture on all 4 pieces); hover the chestplate: lore says \"Brace ... hits keep it, sprinting breaks it\"",
+          "status": "ok",
+          "taken": "22:01:42"
+        },
+        {
+          "file": "gear__amberstill_plate_swing.png",
+          "scene": 12,
+          "line": 17,
+          "check": "armor renders (amber texture on all 4 pieces); hover the chestplate: lore says \"Brace ... hits keep it, sprinting breaks it\"",
+          "status": "ok",
+          "taken": "22:01:42"
+        },
+        {
+          "file": "gear__amberstill_plate_tooltip.png",
+          "scene": 12,
+          "line": 17,
+          "check": "armor renders (amber texture on all 4 pieces); hover the chestplate: lore says \"Brace ... hits keep it, sprinting breaks it\"",
+          "status": "ok",
+          "taken": "22:01:43"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_mirewick": [
+        {
+          "file": "structures_build__castle_mirewick_c_52_40_52_y135.png",
+          "scene": 18,
+          "line": 26,
+          "check": "crow-stepped calcite Counting-House with gilt caps and a lantern belfry, crimson spires with gilt finials, purple bands",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:hrafnholt_skald": [
+        {
+          "file": "anim__hrafnholt_skald_move_windup.png",
+          "scene": 33,
+          "line": 46,
+          "check": "Rune Throw = draw (throwing arm cocked behind the head, off arm aiming, then released across the body), Three Beat Verse = cast; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        },
+        {
+          "file": "anim__hrafnholt_skald_move_strike.png",
+          "scene": 33,
+          "line": 46,
+          "check": "Rune Throw = draw (throwing arm cocked behind the head, off arm aiming, then released across the body), Three Beat Verse = cast; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:solaxis": [
+        {
+          "file": "anim__solaxis_hurt_peak.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "pending"
+        },
+        {
+          "file": "anim__solaxis_hurt_rest.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:grumblegut": [
+        {
+          "file": "anim__grumblegut_hurt_peak.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__grumblegut_hurt_rest.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mother_creak": [
+        {
+          "file": "anim__mother_creak_hurt_peak.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "anim__mother_creak_hurt_rest.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "pending"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:hrafnholt_hearthguard_greaves": [
+        {
+          "file": "items__hrafnholt_hearthguard_greaves_front.png",
+          "scene": 77,
+          "line": 93,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_greaves_side.png",
+          "scene": 77,
+          "line": 93,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        },
+        {
+          "file": "items__hrafnholt_hearthguard_greaves_tooltip.png",
+          "scene": 77,
+          "line": 93,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sunscourge": [
+        {
+          "file": "items__azmar_sunscourge_held.png",
+          "scene": 116,
+          "line": 132,
+          "check": "icon matches the sprite page (16x16, Sunscourge), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__azmar_sunscourge_tooltip.png",
+          "scene": 116,
+          "line": 132,
+          "check": "icon matches the sprite page (16x16, Sunscourge), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:glimmer_lantern": [
+        {
+          "file": "items__glimmer_lantern_held.png",
+          "scene": 128,
+          "line": 144,
+          "check": "icon matches the sprite page (16x16, Glimmer Lantern), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        },
+        {
+          "file": "items__glimmer_lantern_tooltip.png",
+          "scene": 128,
+          "line": 144,
+          "check": "icon matches the sprite page (16x16, Glimmer Lantern), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_items": {
+      "minecraft:shield (reference: third person, blocking)": [
+        {
+          "file": "z_items__vanilla_shield_third_person_blocking.png",
+          "scene": 141,
+          "line": 158,
+          "check": "vanilla reference for: arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:lighthouse": [
+        {
+          "file": "s_struct_verdigris__lighthouse_s_30_10_30.png",
+          "scene": 160,
+          "line": 177,
+          "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
+        {
+          "file": "s_p13_particles__rimeback_avalanche_10s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__rimeback_avalanche_20s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_hersir Horn of Three Calls": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hersir_horn_of_three_calls_windup.png",
+          "scene": 187,
+          "line": 205,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__hrafnholt_hersir_horn_of_three_calls_strike.png",
+          "scene": 187,
+          "line": 205,
+          "check": "off hand holding the horn to the lips, head tipped back, trembling; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mirewick_tolliver Fowling Net": [
+        {
+          "file": "s_p4_rivalanims__mirewick_tolliver_fowling_net_windup.png",
+          "scene": 199,
+          "line": 229,
+          "check": "throwing arm cocked behind the head, off arm aiming; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_tolliver_fowling_net_strike.png",
+          "scene": 199,
+          "line": 229,
+          "check": "throwing arm cocked behind the head, off arm aiming; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:azmar_sultana (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase2.png",
+          "scene": 203,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "nameplates hidden behind walls and while crouching": [
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:ironclan_raider": [
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hotbox_smog": [
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush.png",
+          "scene": 393,
+          "line": 441,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush_later.png",
+          "scene": 393,
+          "line": 441,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p1_bossbar": {
+      "boss bar v2 labels on a rival bar (the 'glyph_ lare' report)": [
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl.png",
+          "scene": 274,
+          "line": 310,
+          "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
+          "status": "pending"
+        },
+        {
+          "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl_5s.png",
+          "scene": 274,
+          "line": 310,
+          "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person.png",
+          "scene": 278,
+          "line": 314,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person.png",
+          "scene": 278,
+          "line": 314,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip.png",
+          "scene": 278,
+          "line": 314,
+          "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_first_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_third_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_first_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_in_use_third_person.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_after_use.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip_2.png",
+          "scene": 292,
+          "line": 331,
+          "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:gale_sling_stone": [
+        {
+          "file": "s_galesling__sling_stone_in_flight_and_impact.png",
+          "scene": 294,
+          "line": 333,
+          "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Azmar bazaar vs siesta": [
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_9000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_6000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:amber_grimoire": [
+        {
+          "file": "s_p5_tooltips__amber_grimoire_first_person.png",
+          "scene": 343,
+          "line": 386,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_third_person.png",
+          "scene": 343,
+          "line": 386,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_in_use_first_person.png",
+          "scene": 343,
+          "line": 386,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_in_use_third_person.png",
+          "scene": 343,
+          "line": 386,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_after_use.png",
+          "scene": 343,
+          "line": 386,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__amber_grimoire_tooltip.png",
+          "scene": 343,
+          "line": 386,
+          "check": "grimoire: NO raw \"elsewhere.tooltip.amber_grimoire\" line (bug fixed), gold \"Cooldown: N s\" under the Caster/cost lines; tonic: purple \"Restores 12 Glimmer, then regen x2 for 10 s. Causes Dazed\" plus one hint; Shift shows red \"Dazed: your spells deal 75% for 10 s; more tonics stack it up to 30 s\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_a": {
+      "elsewhere:galeplate_helmet": [
+        {
+          "file": "s_setbonus_a__galeplate_helmet_first_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__galeplate_helmet_third_person.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_a__galeplate_helmet_tooltip.png",
+          "scene": 352,
+          "line": 395,
+          "check": "gray \"Set bonus: Single Combat (2/4)\" + \"Hold Shift for the bonus\" under the name; with Shift two dark-gray detail lines; with 4/4 the header turns gold and the details yellow",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_3_16_y180.png",
+          "scene": 413,
+          "line": 463,
+          "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip.png",
+          "scene": 426,
+          "line": 476,
+          "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p7_standing": {
+      "elsewhere:kingdom_lawspeaker": [
+        {
+          "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on.png",
+          "scene": 444,
+          "line": 494,
+          "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
+          "status": "pending"
+        },
+        {
+          "file": "s_p7_standing__trader_dialogue_hrafnholt_lawspeaker_on_later.png",
+          "scene": 444,
+          "line": 494,
+          "check": "dark spruce-plank panel with a riveted iron band, raven-on-round-shield crest, title \"Lawspeaker of the Jarldom of Hrafnholt\" and its motto; the Lawspeaker's live 3D portrait in the inset follows the mouse; a Friendly greeting in italics; \"Standing: Shield-friend · Friendly +40\" over a 5-band bar lit green with the marker at +40; price lines \"You pay 85% (or 86%) of the list price here.\" in green, \"The Thing is open until dusk.\", \"Your Arm-Ring takes a further 10% off.\"; buttons Wares / Tribute... / Claim rings / Farewell with tooltips; the chat menu is printed behind it as before",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:listening_engine": [
+        {
+          "file": "s_struct_greenhaze__listening_engine_overview.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__listening_engine_ground.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_asm_court": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_asm_court__castle_aldermark_c_0_2_40_y180.png",
+          "scene": 488,
+          "line": 540,
+          "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:01:43",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
