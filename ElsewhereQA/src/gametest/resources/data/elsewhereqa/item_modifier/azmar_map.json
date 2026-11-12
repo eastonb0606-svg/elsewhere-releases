@@ -1,8 +1,0 @@
-{
-  "function": "minecraft:exploration_map",
-  "destination": "elsewhereqa:azmar_castle",
-  "decoration": "minecraft:target_x",
-  "zoom": 2,
-  "skip_existing_chunks": false,
-  "search_radius": 100
-}

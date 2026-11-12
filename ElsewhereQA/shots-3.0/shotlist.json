@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 16:53",
+ "generated": "2026-11-12 17:06",
  "scenes": [
   {
    "n": 1,
@@ -31968,7 +31968,7 @@
     ],
     [
      "cmd",
-     "item modify entity @s weapon.mainhand elsewhereqa:azmar_map"
+     "item modify entity @s weapon.mainhand {type:\"minecraft:exploration_map\",destination:\"elsewhere:azmar_castle\",decoration:\"minecraft:target_x\",zoom:2,skip_existing_chunks:false,search_radius:100}"
     ],
     [
      "wait",
