@@ -1,0 +1,22 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (azmar realm)": [
+        {
+          "file": "villages__village_near_azmar.png",
+          "scene": 4,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "ok",
+          "taken": "23:41:15"
+        }
+      ]
+    }
+  },
+  "run": "23:41:17",
+  "totals": {
+    "ok": 1,
+    "fail": 0,
+    "manual": 0
+  }
+}
