@@ -756,3 +756,160 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:18:03] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [20:18:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
 [20:18:03] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1576.500000, 89.000000, -7101.500000
+[20:18:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_hrafnholt_c_0_8_58_y180.png: 
+[20:18:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1518.500000, 91.000000, -7129.500000
+[20:18:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_hrafnholt_c_58_10_30_y_120.png: 
+[20:18:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 134 (structures_build | sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_hrafnholt)) done in 15344 ms
+[20:18:18] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:18:18] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:18:18] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:18:18] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:18:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[20:18:31] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2888.500000, 124.000000, -3613.500000
+[20:18:36] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 24814ms or 496 ticks behind
+[20:18:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_mirewick_c_0_8_58_y180.png: 
+[20:18:44] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2830.500000, 126.000000, -3641.500000
+[20:18:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_mirewick_c_58_10_30_y_120.png: 
+[20:18:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 135 (structures_build | sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_mirewick)) done in 34427 ms
+[20:18:52] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:18:52] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:18:52] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:18:52] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:18:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[20:18:52] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2932.500000, 124.000000, -3627.500000
+[20:18:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK z_castle__castle_mirewick_c_44_8_44_y135.png: 
+[20:18:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 149 (z_castle | elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)) done in 5929 ms
+[20:18:58] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:18:58] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:18:58] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:18:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:19:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[20:19:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 996.500000, 99.000000, -4427.500000
+[20:19:05] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 14280ms or 285 ticks behind
+[20:19:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK z_castle__castle_azmar_c_44_8_44_y135.png: 
+[20:19:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 150 (z_castle | elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_azmar)) done in 12075 ms
+[20:19:10] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:19:10] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:19:10] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:19:10] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:19:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:clan_hold in elsewhere:ironpeak at C = 256 362 992
+[20:19:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 270.500000, 372.000000, 1006.500000
+[20:19:14] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[20:19:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__clan_hold_s_14_10_14.png: 
+[20:19:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 243.500000, 348.000000, 1005.500000
+[20:19:26] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5191ms or 103 ticks behind
+[20:19:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__clan_hold_downhill_18.png: 
+[20:19:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 153 (s_struct_verdigris | elsewhere:clan_hold) done in 17044 ms
+[20:19:27] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:19:27] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:19:27] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:19:27] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:19:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:climbers_cairn in elsewhere:ironpeak at C = 32 1233 32
+[20:19:37] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 38.500000, 1237.000000, 38.500000
+[20:19:51] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 10433ms or 208 ticks behind
+[20:20:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__climbers_cairn_s_6_4_6.png: 
+[20:20:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 154 (s_struct_verdigris | elsewhere:climbers_cairn) done in 36360 ms
+[20:20:04] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:20:04] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:20:04] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:20:04] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:20:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:proving_grounds in elsewhere:ironpeak at C = -1392 651 -432
+[20:20:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -1391.500000, 667.000000, -397.500000
+[20:20:14] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 8014ms or 160 ticks behind
+[20:20:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__proving_grounds_s_0_16_34.png: 
+[20:20:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 155 (s_struct_verdigris | elsewhere:proving_grounds) done in 25875 ms
+[20:20:29] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:20:29] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:20:30] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:20:30] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:20:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:summit_throne in elsewhere:ironpeak at C = 5504 1430 4288
+[20:20:44] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 5534.500000, 1448.000000, 4318.500000
+[20:20:45] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 15692ms or 313 ticks behind
+[20:21:11] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2011ms or 40 ticks behind
+[20:21:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__summit_throne_s_30_18_30.png: 
+[20:21:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 156 (s_struct_verdigris | elsewhere:summit_throne) done in 43978 ms
+[20:21:13] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:21:13] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:21:14] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:21:14] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:21:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:ironpeak_return_rift in elsewhere:ironpeak at C = 192 344 1072
+[20:21:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 200.500000, 349.000000, 1080.500000
+[20:21:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__ironpeak_return_rift_s_8_5_8.png: 
+[20:21:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 157 (s_struct_verdigris | elsewhere:ironpeak_return_rift) done in 10669 ms
+[20:21:24] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:21:24] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:21:24] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:21:24] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:21:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:engineers_atoll in elsewhere:verdigris_sea at C = 912 96 -736
+[20:21:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 928.500000, 104.000000, -719.500000
+[20:21:25] [Render thread/INFO] (Minecraft) Loaded 5 advancements
+[20:21:31] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5556ms or 111 ticks behind
+[20:21:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__engineers_atoll_s_16_8_16.png: 
+[20:21:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 158 (s_struct_verdigris | elsewhere:engineers_atoll) done in 9504 ms
+[20:21:34] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:21:34] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:21:34] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:21:34] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:21:35] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:clockwork_rig in elsewhere:verdigris_sea at C = 96 96 128
+[20:21:35] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 114.500000, 98.000000, 146.500000
+[20:21:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__clockwork_rig_s_18_2_18.png: 
+[20:21:42] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 96.500000, 86.000000, 144.500000
+[20:21:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__clockwork_rig_s_0_10_16.png: 
+[20:21:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 159 (s_struct_verdigris | elsewhere:clockwork_rig) done in 11085 ms
+[20:21:45] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:21:45] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:21:45] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:21:45] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:21:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:lighthouse in elsewhere:verdigris_sea at C = 368 96 352
+[20:21:45] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 398.500000, 86.000000, 382.500000
+[20:21:50] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4180ms or 83 ticks behind
+[20:21:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__lighthouse_s_30_10_30.png: 
+[20:21:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 160 (s_struct_verdigris | elsewhere:lighthouse) done in 7175 ms
+[20:21:52] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:21:52] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:21:52] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:21:52] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:21:52] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[20:21:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:drowned_cathedral in elsewhere:verdigris_sea at C = -528 96 2608
+[20:21:53] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -501.500000, 102.000000, 2634.500000
+[20:22:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__drowned_cathedral_s_26_6_26.png: 
+[20:22:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 161 (s_struct_verdigris | elsewhere:drowned_cathedral) done in 8163 ms
+[20:22:00] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:22:00] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:22:00] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:22:00] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:22:00] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[20:22:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:tidelock_vault in elsewhere:verdigris_sea at C = 208 96 16
+[20:22:00] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 208.500000, 99.000000, 30.500000
+[20:22:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__tidelock_vault_s_0_3_14.png: 
+[20:22:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 162 (s_struct_verdigris | elsewhere:tidelock_vault) done in 7305 ms
+[20:22:07] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:22:07] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:22:08] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:22:08] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:22:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:verdigris_sea_return_rift in elsewhere:verdigris_sea at C = 256 96 80
+[20:22:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 264.500000, 100.000000, 88.500000
+[20:22:11] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5723ms or 114 ticks behind
+[20:22:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__verdigris_sea_return_rift_s_8_4_8.png: 
+[20:22:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 163 (s_struct_verdigris | elsewhere:verdigris_sea_return_rift) done in 6684 ms
+[20:22:14] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:22:14] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:22:14] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[20:22:14] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[20:22:14] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:22:14] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:22:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:sunpit in elsewhere:glasswaste at C = 352 54 336
+[20:22:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 352.500000, 60.000000, 358.500000
+[20:22:15] [Render thread/INFO] (Minecraft) Loaded 6 advancements
+[20:22:17] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[20:22:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p13_particles__ankhara_arena_seal_3s.png: 
+[20:22:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p13_particles__ankhara_burrow_trail_8s.png: 
+[20:22:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 165 (s_p13_particles | Ankhara arena seal + burrow trail (elsewhere:sunpit)) done in 13172 ms
+[20:22:27] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:22:27] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[20:22:27] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:22:27] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[20:22:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:glacier_shelf in minecraft:overworld at C = 1376 145 3696
+[20:22:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1398.500000, 151.000000, 3696.500000
+[20:22:31] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[20:22:32] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6215ms or 124 ticks behind

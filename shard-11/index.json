@@ -127,14 +127,16 @@
           "scene": 134,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:11"
         },
         {
           "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
           "scene": 134,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:18"
         }
       ],
       "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_mirewick)": [
@@ -143,14 +145,16 @@
           "scene": 135,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:44"
         },
         {
           "file": "structures_build__castle_mirewick_c_58_10_30_y_120.png",
           "scene": 135,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:52"
         }
       ]
     },
@@ -296,7 +300,8 @@
           "scene": 149,
           "line": 164,
           "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:58"
         }
       ],
       "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_azmar)": [
@@ -305,7 +310,8 @@
           "scene": 150,
           "line": 164,
           "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:10"
         }
       ]
     },
@@ -362,14 +368,16 @@
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:24"
         },
         {
           "file": "s_struct_verdigris__clan_hold_downhill_18.png",
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:27"
         }
       ],
       "elsewhere:climbers_cairn": [
@@ -378,7 +386,8 @@
           "scene": 154,
           "line": 171,
           "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:20:04"
         }
       ],
       "elsewhere:proving_grounds": [
@@ -387,7 +396,8 @@
           "scene": 155,
           "line": 172,
           "check": "round arena ledge cut into the mountain, open cliff edge to the south on a stone foundation, stone-brick spectator tiers climbing the uphill (north) side, sloped banks instead of a cylinder cut, iron-bar rails, 4 red banners, the horn at the north gate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:20:29"
         }
       ],
       "elsewhere:summit_throne": [
@@ -396,7 +406,8 @@
           "scene": 156,
           "line": 173,
           "check": "ice plateau on the true summit cap with a packed-ice/frostgranite plinth down to the rock, 6 deepslate storm obelisks on frostgranite-stair plinths (no iron blocks), throne with the war drum, 1-3 small frostgranite waymark obelisks on ridge points around the cap; snowy banks, no cylinder cut",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:13"
         }
       ],
       "elsewhere:ironpeak_return_rift": [
@@ -405,7 +416,8 @@
           "scene": 157,
           "line": 174,
           "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:24"
         }
       ],
       "elsewhere:engineers_atoll": [
@@ -414,7 +426,8 @@
           "scene": 158,
           "line": 175,
           "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:34"
         }
       ],
       "elsewhere:clockwork_rig": [
@@ -423,14 +436,16 @@
           "scene": 159,
           "line": 176,
           "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:42"
         },
         {
           "file": "s_struct_verdigris__clockwork_rig_s_0_10_16.png",
           "scene": 159,
           "line": 176,
           "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:45"
         }
       ],
       "elsewhere:lighthouse": [
@@ -439,7 +454,8 @@
           "scene": 160,
           "line": 177,
           "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:21:52"
         }
       ],
       "elsewhere:drowned_cathedral": [
@@ -448,7 +464,8 @@
           "scene": 161,
           "line": 178,
           "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:22:00"
         }
       ],
       "elsewhere:tidelock_vault": [
@@ -457,7 +474,8 @@
           "scene": 162,
           "line": 179,
           "check": "the plate chamber set into the sea-bed slope: sediment over the back half of the roof and banked on the sides, riveted portal with a plate lintel and two lit bulbs, a plated apron down to the bed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:22:07"
         }
       ],
       "elsewhere:verdigris_sea_return_rift": [
@@ -466,7 +484,8 @@
           "scene": 163,
           "line": 180,
           "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:22:14"
         }
       ]
     },
@@ -497,14 +516,16 @@
           "scene": 165,
           "line": 182,
           "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:22:22"
         },
         {
           "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
           "scene": 165,
           "line": 182,
           "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:22:27"
         }
       ],
       "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
@@ -525,9 +546,9 @@
       ]
     }
   },
-  "run": "20:18:02",
+  "run": "20:22:27",
   "totals": {
-    "ok": 32,
+    "ok": 53,
     "fail": 1,
     "manual": 0
   }
