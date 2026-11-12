@@ -1,0 +1,605 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (azmar realm)": [
+        {
+          "file": "villages__village_near_azmar.png",
+          "scene": 4,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 13,
+          "line": 21,
+          "check": "steep deepslate spires with blue banners on 4 corners + 2 gate spires, pitched keep roof inside the parapet with 4 bartizans, chapel steeple; curtain steps with the ground (no flat 69x69 cut, no cliff); no gold throne (yellow terracotta)",
+          "status": "pending"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 26,
+          "line": 37,
+          "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:mirewick_thwaite": [
+        {
+          "file": "anim__mirewick_thwaite_move_windup.png",
+          "scene": 40,
+          "line": 53,
+          "check": "Long Thrust and Garnish = thrust; plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Long Thrust' within 120 s",
+          "taken": "22:03:12"
+        },
+        {
+          "file": "anim__mirewick_thwaite_move_strike.png",
+          "scene": 40,
+          "line": 53,
+          "check": "Long Thrust and Garnish = thrust; plain swings cycle overhead, sweep, thrust; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Long Thrust' within 120 s",
+          "taken": "22:03:12"
+        }
+      ],
+      "elsewhere:strawgrim": [
+        {
+          "file": "anim__strawgrim_hurt_peak.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:15"
+        },
+        {
+          "file": "anim__strawgrim_hurt_rest.png",
+          "scene": 53,
+          "line": 66,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:16"
+        }
+      ],
+      "elsewhere:galvanox": [
+        {
+          "file": "anim__galvanox_hurt_peak.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:19"
+        },
+        {
+          "file": "anim__galvanox_hurt_rest.png",
+          "scene": 65,
+          "line": 78,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:03:19"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:hrafnholt_skjaldborg_shield": [
+        {
+          "file": "items__hrafnholt_skjaldborg_shield_held.png",
+          "scene": 111,
+          "line": 127,
+          "check": "icon matches the sprite page (16x16, Skjaldborg Round-Shield), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:20"
+        },
+        {
+          "file": "items__hrafnholt_skjaldborg_shield_tooltip.png",
+          "scene": 111,
+          "line": 127,
+          "check": "icon matches the sprite page (16x16, Skjaldborg Round-Shield), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:21"
+        }
+      ],
+      "elsewhere:mirewick_fowlers_bandolier": [
+        {
+          "file": "items__mirewick_fowlers_bandolier_held.png",
+          "scene": 123,
+          "line": 139,
+          "check": "icon matches the sprite page (16x16, Fowler's Bandolier), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:22"
+        },
+        {
+          "file": "items__mirewick_fowlers_bandolier_tooltip.png",
+          "scene": 123,
+          "line": 139,
+          "check": "icon matches the sprite page (16x16, Fowler's Bandolier), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:03:23"
+        }
+      ]
+    },
+    "s_callingtags": {
+      "Calling tooltip (moonsilk_robe, sunlance_staff)": [
+        {
+          "file": "s_callingtags__calling_tooltip_moonsilk_robe.png",
+          "scene": 151,
+          "line": 165,
+          "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_callingtags__calling_tooltip_sunlance_staff.png",
+          "scene": 151,
+          "line": 165,
+          "check": "a purple line right under the name: Thornlash \"Summoner: Unattuned 40% (x1.00)\", Runeseax \"Vanguard: ...\" (not Caster), Binding Sigil \"Caster: ...\", Glimmer Lantern the Caster cost line (\"Caster 40%: spells x..., cost x...\")",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:climbers_cairn": [
+        {
+          "file": "s_struct_verdigris__climbers_cairn_s_6_4_6.png",
+          "scene": 154,
+          "line": 171,
+          "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview_street": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview_street.png",
+          "scene": 171,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:petal_pagoda": [
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_24_16_24.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_0_4_26.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_wazir Counter-Brew": [
+        {
+          "file": "s_p4_rivalanims__azmar_wazir_counter_brew_windup.png",
+          "scene": 194,
+          "line": 219,
+          "check": "off hand with the flask at the lips, head tipped back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: flask flung down and out, guard back up, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_wazir_counter_brew_strike.png",
+          "scene": 194,
+          "line": 219,
+          "check": "off hand with the flask at the lips, head tipped back; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: flask flung down and out, guard back up, leaning in; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:drowned_chapel": [
+        {
+          "file": "s_struct_core__drowned_chapel_s_14_9_14.png",
+          "scene": 211,
+          "line": 241,
+          "check": "cruciform chapel: nave, transept arms, narrower chancel; broken pale-oak gable roofs (45 degrees, overhang 1) with a fallen-in bay over exposed beams; stone gables with an oculus; buttresses; water only inside the walls (nave 2 deep with submerged pews, one step up into the transept), none outside; ground meets the walls all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Hrafnholt looks (thrall_0..2, fisherfolk_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_front.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_hrafnholt_looks_thrall_0_2_fis_back.png",
+          "scene": 220,
+          "line": 250,
+          "check": "thralls in undyed wadmal with an iron collar at the throat (thrall_1 a woman with a brown kerchief, thrall_2 with a bark hood down); fisherfolk in forest green and bark brown: fisherfolk_0 grey knit cap + forked blond beard + rope over the shoulder, fisherfolk_1 woman in a green apron dress with two oval brooches and a bead string, fisherfolk_2 red beard in a sealskin hood",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "nameplate LOD and range": [
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_6.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_12.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplate_lod_and_range_18.png",
+          "scene": 226,
+          "line": 256,
+          "check": "shot 1: icons only (star + shield, chevrons + shield, shield alone), no words; shot 2: no plates at all",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:amethyst_wand": [
+        {
+          "file": "s_p6_useanims__amethyst_wand_first_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_third_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_in_use_first_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_in_use_third_person.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_after_use.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__amethyst_wand_tooltip.png",
+          "scene": 235,
+          "line": 265,
+          "check": "shot 1: the staff points forward with a small recoil (no vanilla whack); shot 2: the focus is dimmed and grey in hand and hotbar (`*_spent`) until the cooldown sweep clears, then bright again",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_greenhaze_rework": {
+      "Accessibility: `/greenleaf effects reduced`, then `/greenleaf effects off`": [
+        {
+          "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced.png",
+          "scene": 257,
+          "line": 290,
+          "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__accessibility_greenleaf_effects_reduced_5s.png",
+          "scene": 257,
+          "line": 290,
+          "check": "reduced: green chat line \"Green Leaf: screen effects reduced (soft tint, no motion), gags on...\" and only a faint static tint, level horizon; off: no tint at all, meter still shown",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:verdigrim": [
+        {
+          "file": "s_p2_telegraph__verdigrim_note_shockwave_helm_off.png",
+          "scene": 266,
+          "line": 302,
+          "check": "the yellow shockwave ring travels outward smoothly (attack, not a hint, so it shows without the helm); one ring, no trail of old rings",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_held.png",
+          "scene": 288,
+          "line": 327,
+          "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip.png",
+          "scene": 288,
+          "line": 327,
+          "check": "GUI: a brass scoop with 4 dark sieve holes and a verdigris rim on a wooden handle, clearly a shovel, not checkerboard; handheld pose like a shovel; tooltip: \"Tidebrass Dredge\" (epic, magenta), grey \"Tidewright dredging shovel\", then the 3x3 and full-speed lines",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:aphelion_starpiercer": [
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person_2.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_after_use.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_tooltip.png",
+          "scene": 310,
+          "line": 350,
+          "check": "the 3 pull frames (string pulled into a V, star arrow across the grip, head brightens, glint at full); bow held like a vanilla bow (arrow pointing at the crosshair, not tilted 45 degrees); FOV narrows smoothly to 1.5x at full draw, 2x when sneaking; a chime at 1.6 s",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "cape wave in motion": [
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 348,
+          "line": 391,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_locate": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_locate__castle_azmar_overview.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__castle_azmar_ground.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip.png",
+          "scene": 399,
+          "line": 449,
+          "check": "upright glass bow (pale cyan glass limbs, dark wrapped grip on the left, gold string on the right), no missing texture; name \"Prism Bow\" (epic), 3 lore lines + a red 4th (\"Bow enchantments only work on real arrows\")",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "Warg pack hunting (gear3)": [
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_first_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_third_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_after_use.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "pending"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Tier edges (24 / 48 blocks): trims drop, cape stops, nothing pops": [
+        {
+          "file": "s_lod__patrol_8_10s.png",
+          "scene": 457,
+          "line": 509,
+          "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_willolantern": {
+      "elsewhere:mirewick_will_o_lantern": [
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_first_person.png",
+          "scene": 462,
+          "line": 514,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_third_person.png",
+          "scene": 462,
+          "line": 514,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        },
+        {
+          "file": "s_willolantern__mirewick_will_o_lantern_tooltip.png",
+          "scene": 462,
+          "line": 514,
+          "check": "icon reads as a lantern in Mirewick purple glass with a mint-white flame (not the Glimmer Lantern's colours); name \"Will-o'-Lantern\" in epic (light purple) colour, 5 lore lines, the last one red; Caster/Summoner calling line from arsenal",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:bonfire_terrace": [
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_overview.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_ground.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:03:23",
+  "totals": {
+    "ok": 8,
+    "fail": 2,
+    "manual": 0
+  }
+}
