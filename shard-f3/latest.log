@@ -589,3 +589,25 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [23:14:42] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sunglass Arrow]
 [23:14:42] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sunglass Arrow]
 [23:14:42] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[23:14:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sunglass__sunglass_first_person.png: 
+[23:14:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sunglass__sunglass_third_person.png: 
+[23:14:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sunglass__sunglass_tooltip.png: 
+[23:14:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 426 (s_sunglass | elsewhere:sunglass) done in 3376 ms
+[23:14:45] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[23:14:45] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[23:14:45] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[23:14:45] [Server thread/INFO] (Minecraft) Stopping server
+[23:14:45] [Server thread/INFO] (Minecraft) Saving players
+[23:14:45] [Server thread/INFO] (Minecraft) Saving worlds
+[23:14:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[23:14:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[23:14:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 33 ok, 6 fail, 0 manual
+[23:14:46] [Render thread/INFO] (Minecraft) Stopping!

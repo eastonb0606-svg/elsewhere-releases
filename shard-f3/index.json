@@ -333,28 +333,31 @@
           "scene": 426,
           "line": 476,
           "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:43"
         },
         {
           "file": "s_sunglass__sunglass_third_person.png",
           "scene": 426,
           "line": 476,
           "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:44"
         },
         {
           "file": "s_sunglass__sunglass_tooltip.png",
           "scene": 426,
           "line": 476,
           "check": "icon reads as an arrow (vanilla silhouette) with a pale sun-glass head, dark wood shaft and amber fletching; name \"Sunglass Arrow\" (uncommon, yellow) and 3 lore lines; no Calling line; no missing texture",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:14:45"
         }
       ]
     }
   },
-  "run": "23:14:42",
+  "run": "23:14:46",
   "totals": {
-    "ok": 30,
+    "ok": 33,
     "fail": 6,
     "manual": 0
   }

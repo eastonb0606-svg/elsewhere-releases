@@ -14,3 +14,33 @@ merged jar elsewhere-3.0.0.jar 133327057 bytes in 72 s
 fatal: expected 'acknowledgments', received 'packfile'
 warning: push negotiation failed; proceeding anyway with push
 published 7 PNGs (progress) -> cloud-shots-f3 f6c6e6b
+published 30 PNGs (progress) -> cloud-shots-f3 7ac3051
+client rc=0
+[23:13:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_locate__explorer_map_to_a_rival_castle.png: locate: elsewhere:castle_azmar could not be located within 100 chunks in any dimension that can hold it
+[23:13:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_locate__explorer_map_to_a_rival_castle_5s.png: locate: elsewhere:castle_azmar could not be located within 100 chunks in any dimension that can hold it
+[23:14:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_routines__aldermark_muster_day_ranks_and_mock_char.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:14:00] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:14:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_routines__changing_of_the_guard_salute.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:14:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_routines__changing_of_the_guard_salute_5s.png: locate: elsewhere:castle_aldermark could not be located within 100 chunks in any dimension that can hold it
+[23:14:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 33 ok, 6 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[23:13:37] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[23:13:37] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[23:13:37] [Worker-Main-3/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+--
+[23:13:40] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[23:13:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] 12 flat-stage scenes, 0 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[23:13:43] [Worker-Main-2/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+boss_music client selftest:
+23:15:30Z finished rc=0, 33 PNGs;  TOTAL 33 ok, 6 fail, 0 manual
