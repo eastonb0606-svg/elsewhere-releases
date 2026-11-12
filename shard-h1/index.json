@@ -7,7 +7,8 @@
           "scene": 26,
           "line": 37,
           "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:36"
         }
       ]
     },
@@ -50,7 +51,8 @@
           "scene": 170,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:20"
         }
       ]
     },
@@ -81,14 +83,16 @@
           "scene": 284,
           "line": 323,
           "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:31"
         },
         {
           "file": "s_struct_nether__solaxis_pyre_cradle_s_0_3_30.png",
           "scene": 284,
           "line": 323,
           "check": "nether-brick drum with a corbelled stair cornice and fence crenels, eight polished-basalt supports flaring out to the ground, footing of nether brick / red nether brick / basalt (posts past 12 deep, not one solid pillar); two railed fortress bridges N and S, arched between their legs (stair corbels under the deck), legs down to the ground, landing on the slope where there is land; core not over a lava pool",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:38"
         }
       ]
     },
@@ -179,14 +183,16 @@
           "scene": 359,
           "line": 407,
           "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:09"
         },
         {
           "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
           "scene": 359,
           "line": 407,
           "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:15"
         }
       ]
     },
@@ -237,14 +243,15 @@
           "scene": 488,
           "line": 540,
           "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:24"
         }
       ]
     }
   },
-  "run": "23:40:56",
+  "run": "23:43:26",
   "totals": {
-    "ok": 18,
+    "ok": 25,
     "fail": 0,
     "manual": 0
   }
