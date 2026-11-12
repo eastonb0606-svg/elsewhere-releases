@@ -1,0 +1,181 @@
+{
+  "lanes": {
+    "s_p13_particles": {
+      "verdigris arena seal (elsewhere:lighthouse, Galvanox)": [
+        {
+          "file": "s_p13_particles__verdigris_arena_seal_galvanox.png",
+          "scene": 169,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:glacier_shelf": [
+        {
+          "file": "s_struct_overworld__glacier_shelf_s_30_14_30.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__glacier_shelf_downhill_20.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:sunpit": [
+        {
+          "file": "s_struct_petalwind__sunpit_s_0_26_44.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunpit_s_30_6_0.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:45:46"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:45:46"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:45:48"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:45:50"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:45:51"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "23:45:52"
+        }
+      ]
+    },
+    "s_throne": {
+      "Grunthar legacy treasure hall (nether, 2.x saved arena)": [
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        },
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_striking.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "ok",
+          "taken": "23:46:00"
+        },
+        {
+          "file": "s_reliquary__echo_knight_striking_later.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "ok",
+          "taken": "23:46:01"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:bonfire_terrace": [
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_overview.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_ground.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:listening_engine": [
+        {
+          "file": "s_struct_greenhaze__listening_engine_overview.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__listening_engine_ground.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:46:01",
+  "totals": {
+    "ok": 8,
+    "fail": 0,
+    "manual": 0
+  }
+}
