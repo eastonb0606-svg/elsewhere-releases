@@ -1,0 +1,227 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_52_40_52_y135.png",
+          "scene": 16,
+          "line": 24,
+          "check": "flat roofs with cavetto cornices and lapis bands, kiosks on the tower tops, undulating parapet, palms in the court; no pitched roofs, no gold blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
+        {
+          "file": "s_p13_particles__rimeback_avalanche_10s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__rimeback_avalanche_20s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:wreck_ring": [
+        {
+          "file": "s_struct_overworld__wreck_ring_s_26_10_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__wreck_ring_s_0_12_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_in_flight_and_stuck)": [
+        {
+          "file": "s_echoarrow__echo_arrow_in_flight.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "23:46:10"
+        },
+        {
+          "file": "s_echoarrow__echo_arrow_stuck_2_blocks.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "23:46:12"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "23:46:14"
+        },
+        {
+          "file": "s_whips__thornlash_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "23:46:15"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "23:46:16"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "23:46:18"
+        },
+        {
+          "file": "s_whips__thornlash_after_use.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "23:46:19"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "23:46:20"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "elsewhere:hrafnholt_wolfcall_horn": [
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "ok",
+          "taken": "23:46:24"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "ok",
+          "taken": "23:46:24"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_first_person.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "ok",
+          "taken": "23:46:25"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_in_use_third_person.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "ok",
+          "taken": "23:46:25"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_after_use.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "ok",
+          "taken": "23:46:30"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip_2.png",
+          "scene": 407,
+          "line": 457,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
+          "status": "ok",
+          "taken": "23:46:30"
+        }
+      ]
+    },
+    "s_willolantern": {
+      "elsewhere:marsh_wisp": [
+        {
+          "file": "s_willolantern__marsh_wisp_beside_its_owner_at_night_gea.png",
+          "scene": 463,
+          "line": 515,
+          "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
+          "status": "ok",
+          "taken": "23:46:38"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:fern_terrace_farms": [
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_overview.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_ground.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:silent_monastery": [
+        {
+          "file": "s_struct_greenhaze__silent_monastery_overview.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__silent_monastery_ground.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "23:46:38",
+  "totals": {
+    "ok": 15,
+    "fail": 0,
+    "manual": 0
+  }
+}
