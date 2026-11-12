@@ -195,14 +195,16 @@
           "scene": 164,
           "line": 181,
           "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:33"
         },
         {
           "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
           "scene": 164,
           "line": 181,
           "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:00"
         }
       ]
     },
@@ -263,14 +265,18 @@
           "scene": 197,
           "line": 225,
           "check": "hunched, arms beating alternately (two shots 3 ticks apart differ); Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both fists down on the last beat, deeper crouch; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Bog-Drum Call' within 90 s",
+          "taken": "22:07:31"
         },
         {
           "file": "s_p4_rivalanims__mirewick_thwaite_bog_drum_call_strike.png",
           "scene": 197,
           "line": 225,
           "check": "hunched, arms beating alternately (two shots 3 ticks apart differ); Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both fists down on the last beat, deeper crouch; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Bog-Drum Call' within 90 s",
+          "taken": "22:07:31"
         }
       ],
       "elsewhere:hrafnholt_jarl (phase 2 glyphs)": [
@@ -279,7 +285,8 @@
           "scene": 202,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:33"
         }
       ]
     },
@@ -290,7 +297,8 @@
           "scene": 218,
           "line": 248,
           "check": "hit husk and the one 4 away have the white Glowing outline (lasts 5 s), the one 9 away does not; a teal sculk ring at the hit point and vibration lines to each glowing husk (sound is not shot-checkable: silence is covered by the self-test sculk-sensor check)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:38"
         }
       ]
     },
@@ -301,14 +309,16 @@
           "scene": 223,
           "line": 253,
           "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:41"
         },
         {
           "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_back.png",
           "scene": 223,
           "line": 253,
           "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:07:41"
         }
       ]
     },
@@ -319,14 +329,18 @@
           "scene": 269,
           "line": 305,
           "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 75 s",
+          "taken": "22:08:57"
         },
         {
           "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on_5s.png",
           "scene": 269,
           "line": 305,
           "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 75 s",
+          "taken": "22:08:57"
         }
       ]
     },
@@ -337,42 +351,48 @@
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:58"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person_4.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:59"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_3.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:59"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_3.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:01"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_after_use_3.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:04"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_4.png",
           "scene": 281,
           "line": 317,
           "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:05"
         }
       ]
     },
@@ -394,21 +414,24 @@
           "scene": 305,
           "line": 345,
           "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:07"
         },
         {
           "file": "s_whips__tidechain_lash_third_person.png",
           "scene": 305,
           "line": 345,
           "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:08"
         },
         {
           "file": "s_whips__tidechain_lash_tooltip.png",
           "scene": 305,
           "line": 345,
           "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:08"
         }
       ]
     },
@@ -419,14 +442,16 @@
           "scene": 309,
           "line": 349,
           "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:09"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_third_person.png",
           "scene": 309,
           "line": 349,
           "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:10"
         }
       ]
     },
@@ -601,10 +626,10 @@
       ]
     }
   },
-  "run": "22:05:22",
+  "run": "22:09:10",
   "totals": {
-    "ok": 13,
-    "fail": 4,
+    "ok": 30,
+    "fail": 8,
     "manual": 0
   }
 }
