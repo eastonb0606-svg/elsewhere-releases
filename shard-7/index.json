@@ -295,14 +295,16 @@
           "scene": 477,
           "line": 529,
           "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:02"
         },
         {
           "file": "s_struct_greenhaze__great_hotbox_ground.png",
           "scene": 477,
           "line": 529,
           "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:09"
         }
       ],
       "elsewhere:bonfire_terrace": [
@@ -311,14 +313,16 @@
           "scene": 478,
           "line": 530,
           "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:25"
         },
         {
           "file": "s_struct_greenhaze__bonfire_terrace_ground.png",
           "scene": 478,
           "line": 530,
           "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:31"
         }
       ],
       "elsewhere:fern_terrace_farms": [
@@ -327,14 +331,16 @@
           "scene": 479,
           "line": 531,
           "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:48"
         },
         {
           "file": "s_struct_greenhaze__fern_terrace_farms_ground.png",
           "scene": 479,
           "line": 531,
           "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:17:55"
         }
       ],
       "elsewhere:munchie_market": [
@@ -343,14 +349,16 @@
           "scene": 480,
           "line": 532,
           "check": "a 5-wide souk street of path/gravel between mud-brick curbs that steps with the ground, fern verges, lamp posts every 7, a fire-pit bulge with hay benches; 6 stalls on their own pads facing the street (striped awnings sloping to the street, counters, goods), one Budtender booth with a kushwood gable",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:08"
         },
         {
           "file": "s_struct_greenhaze__munchie_market_ground.png",
           "scene": 480,
           "line": 532,
           "check": "a 5-wide souk street of path/gravel between mud-brick curbs that steps with the ground, fern verges, lamp posts every 7, a fire-pit bulge with hay benches; 6 stalls on their own pads facing the street (striped awnings sloping to the street, counters, goods), one Budtender booth with a kushwood gable",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:13"
         }
       ],
       "elsewhere:sesh_hut": [
@@ -359,14 +367,16 @@
           "scene": 481,
           "line": 533,
           "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:25"
         },
         {
           "file": "s_struct_greenhaze__sesh_hut_ground.png",
           "scene": 481,
           "line": 533,
           "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:29"
         }
       ],
       "elsewhere:lucid_spring": [
@@ -375,14 +385,16 @@
           "scene": 482,
           "line": 534,
           "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:46"
         },
         {
           "file": "s_struct_greenhaze__lucid_spring_ground.png",
           "scene": 482,
           "line": 534,
           "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:18:52"
         }
       ],
       "elsewhere:listening_engine": [
@@ -391,14 +403,16 @@
           "scene": 483,
           "line": 535,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:01"
         },
         {
           "file": "s_struct_greenhaze__listening_engine_ground.png",
           "scene": 483,
           "line": 535,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:03"
         }
       ],
       "elsewhere:choir_geode": [
@@ -407,14 +421,16 @@
           "scene": 484,
           "line": 536,
           "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:10"
         },
         {
           "file": "s_struct_greenhaze__choir_geode_ground.png",
           "scene": 484,
           "line": 536,
           "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:12"
         }
       ],
       "elsewhere:silent_monastery": [
@@ -423,14 +439,16 @@
           "scene": 485,
           "line": 537,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:18"
         },
         {
           "file": "s_struct_greenhaze__silent_monastery_ground.png",
           "scene": 485,
           "line": 537,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:20"
         }
       ],
       "elsewhere:hanging_undercity": [
@@ -439,14 +457,16 @@
           "scene": 486,
           "line": 538,
           "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:29"
         },
         {
           "file": "s_struct_greenhaze__hanging_undercity_ground.png",
           "scene": 486,
           "line": 538,
           "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:31"
         }
       ]
     },
@@ -457,17 +477,18 @@
           "scene": 487,
           "line": 539,
           "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
-          "status": "pending"
+          "status": "ok",
+          "taken": "20:19:43"
         }
       ],
       "an Aldermark or Hrafnholt road lamp post beside an embankment, NEW world (fv 2)": [],
       "a corner tower and a town lamp post, NEW world (fv 2)": []
     }
   },
-  "run": "20:16:43",
+  "run": "20:19:44",
   "totals": {
-    "ok": 26,
+    "ok": 47,
     "fail": 4,
-    "manual": 0
+    "manual": 12
   }
 }

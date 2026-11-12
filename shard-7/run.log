@@ -13,3 +13,43 @@ merged jar elsewhere-3.0.0.jar 133209113 bytes in 93 s
 fatal: expected 'acknowledgments', received 'packfile'
 warning: push negotiation failed; proceeding anyway with push
 published 3 PNGs (progress) -> cloud-shots-7 7343da7
+published 26 PNGs (progress) -> cloud-shots-7 eb32102
+client rc=0
+[20:15:53] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_willolantern__marsh_wisp_beside_its_owner_at_night_gea.png: view: target is gone before the camera was placed
+[20:16:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_waryak__war_yak_beside_its_owner_gear3.png: view: target is gone before the camera was placed
+[20:16:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_waryak__war_yak_charge_gear3.png: view: target is gone before the camera was placed
+[20:16:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_waryak__war_yak_charge_gear3_later.png: view: target is gone before the camera was placed
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 454 (s_foresight | kill switch): needs a separate client launch with the kill switch off (config is read at start)
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 458 (s_lod | Live soldiers end at 96 blocks, ranks beyond (with s-impostors)): needs a live kingdom town/army state the runner cannot set up by command
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 460 (s_lod | Kill switch client_lod off = 2.1 soldier detail): needs a separate client launch with the kill switch off (config is read at start)
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 463 (s_willolantern | the wisp's light at night (gear3, wisp-light)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 466 (s_layout_hraf | Jarl's longhall inside (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 467 (s_layout_hraf | south gate tower and archer stages (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 468 (s_layout_hraf | hof, forge and holmgang posts (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 469 (s_layout_hraf | shore road and nausts (Hrafnholt fv 2, waterfront realm)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 470 (s_layout_hraf | watch-fire cairn (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 475 (s_music_stems | in-game boss music self-test (boss_music, realm guard + phase layers)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 488 (s_asm_court | an Aldermark or Hrafnholt road lamp post beside an embankment, NEW world (fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 489 (s_asm_court | a corner tower and a town lamp post, NEW world (fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 47 ok, 4 fail, 12 manual
+MinecraftClientHttpException[type=HTTP_ERROR, status=429, response=null]
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.buildHttpException(MinecraftClient.java:167)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:147)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.getWithEtag(MinecraftClient.java:81)
+--
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[20:14:16] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:14:16] [Worker-Main-2/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[20:14:16] [Worker-Main-3/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+	at knot//com.mojang.blaze3d.audio.Library.init(Library.java:149)
+--
+[20:14:20] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[20:14:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] 13 flat-stage scenes, 12 worldgen scenes, 12 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[20:14:24] [Worker-Main-2/INFO] (Minecraft) Loaded 1931 advancements
+20:19:48Z finished rc=0, 47 PNGs;  TOTAL 47 ok, 4 fail, 12 manual

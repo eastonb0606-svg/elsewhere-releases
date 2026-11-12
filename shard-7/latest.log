@@ -694,3 +694,153 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [20:16:43] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [20:16:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:great_hotbox in elsewhere:greenhaze at C = 48 84 64
 [20:16:45] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 72.500000, 98.000000, 88.500000
+[20:16:45] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[20:16:46] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 17093ms or 341 ticks behind
+[20:17:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__great_hotbox_overview.png: 
+[20:17:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 31.500000, 80.000000, 81.500000
+[20:17:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__great_hotbox_ground.png: 
+[20:17:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 477 (s_struct_greenhaze | elsewhere:great_hotbox) done in 25962 ms
+[20:17:09] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:17:09] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:17:09] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:17:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:bonfire_terrace in elsewhere:greenhaze at C = 720 64 -448
+[20:17:10] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 744.500000, 78.000000, -423.500000
+[20:17:22] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 20841ms or 416 ticks behind
+[20:17:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__bonfire_terrace_overview.png: 
+[20:17:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 703.500000, 64.000000, -430.500000
+[20:17:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__bonfire_terrace_ground.png: 
+[20:17:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 478 (s_struct_greenhaze | elsewhere:bonfire_terrace) done in 22538 ms
+[20:17:31] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:17:31] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:17:31] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:17:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:fern_terrace_farms in elsewhere:greenhaze at C = -288 104 560
+[20:17:33] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -263.500000, 118.000000, 584.500000
+[20:17:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__fern_terrace_farms_overview.png: 
+[20:17:48] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -304.500000, 96.000000, 543.500000
+[20:17:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__fern_terrace_farms_ground.png: 
+[20:17:55] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 479 (s_struct_greenhaze | elsewhere:fern_terrace_farms) done in 24220 ms
+[20:17:55] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:17:55] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:17:56] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:17:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:munchie_market in elsewhere:greenhaze at C = 32 80 80
+[20:17:56] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 56.500000, 94.000000, 104.500000
+[20:17:57] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 20163ms or 403 ticks behind
+[20:18:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__munchie_market_overview.png: 
+[20:18:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 15.500000, 77.000000, 97.500000
+[20:18:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__munchie_market_ground.png: 
+[20:18:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 480 (s_struct_greenhaze | elsewhere:munchie_market) done in 17673 ms
+[20:18:13] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:18:13] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:18:13] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:18:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:sesh_hut in elsewhere:greenhaze at C = 144 64 144
+[20:18:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 168.500000, 78.000000, 168.500000
+[20:18:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__sesh_hut_overview.png: 
+[20:18:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 161.500000, 63.000000, 161.500000
+[20:18:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__sesh_hut_ground.png: 
+[20:18:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 481 (s_struct_greenhaze | elsewhere:sesh_hut) done in 15826 ms
+[20:18:29] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:18:29] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:18:29] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:18:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:lucid_spring in elsewhere:greenhaze at C = -144 80 -256
+[20:18:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -119.500000, 94.000000, -231.500000
+[20:18:31] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 18520ms or 370 ticks behind
+[20:18:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__lucid_spring_overview.png: 
+[20:18:46] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -126.500000, 71.000000, -272.500000
+[20:18:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__lucid_spring_ground.png: 
+[20:18:52] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 482 (s_struct_greenhaze | elsewhere:lucid_spring) done in 23544 ms
+[20:18:52] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:18:52] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:18:53] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:18:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:listening_engine in elsewhere:the_hush at C = 96 84 32
+[20:18:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 120.500000, 98.000000, 56.500000
+[20:18:54] [Render thread/INFO] (Minecraft) Loaded 5 advancements
+[20:19:00] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 14617ms or 292 ticks behind
+[20:19:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__listening_engine_overview.png: 
+[20:19:01] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 120.500000, 256.000000, 32.500000
+[20:19:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__listening_engine_ground.png: 
+[20:19:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 483 (s_struct_greenhaze | elsewhere:listening_engine) done in 10448 ms
+[20:19:03] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:19:03] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:19:03] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:19:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:choir_geode in elsewhere:the_hush at C = 64 80 256
+[20:19:04] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 88.500000, 94.000000, 280.500000
+[20:19:10] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 1024 reached during a single frame. New capacity will be 2048.
+[20:19:10] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[20:19:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__choir_geode_overview.png: 
+[20:19:10] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 88.500000, 256.000000, 256.500000
+[20:19:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__choir_geode_ground.png: 
+[20:19:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 484 (s_struct_greenhaze | elsewhere:choir_geode) done in 9249 ms
+[20:19:12] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:19:12] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:19:12] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:19:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:silent_monastery in elsewhere:the_hush at C = 96 111 352
+[20:19:12] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 120.500000, 125.000000, 376.500000
+[20:19:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__silent_monastery_overview.png: 
+[20:19:18] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 120.500000, 256.000000, 352.500000
+[20:19:19] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3276ms or 65 ticks behind
+[20:19:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__silent_monastery_ground.png: 
+[20:19:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 485 (s_struct_greenhaze | elsewhere:silent_monastery) done in 8088 ms
+[20:19:20] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:19:20] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:19:20] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:19:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:hanging_undercity in elsewhere:the_hush at C = -896 85 1328
+[20:19:21] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -871.500000, 99.000000, 1352.500000
+[20:19:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__hanging_undercity_overview.png: 
+[20:19:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -871.500000, 256.000000, 1328.500000
+[20:19:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__hanging_undercity_ground.png: 
+[20:19:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 486 (s_struct_greenhaze | elsewhere:hanging_undercity) done in 10349 ms
+[20:19:31] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[20:19:31] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[20:19:31] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[20:19:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[20:19:34] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 71.000000, -1263.500000
+[20:19:35] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
+[20:19:35] [Render thread/INFO] (Minecraft) Loaded 10 advancements
+[20:19:39] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5595ms or 111 ticks behind
+[20:19:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_asm_court__castle_aldermark_c_0_2_40_y180.png: 
+[20:19:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 487 (s_asm_court | elsewhere:castle_aldermark) done in 12401 ms
+[20:19:43] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[20:19:43] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[20:19:43] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:19:43] [Server thread/INFO] (Minecraft) Stopping server
+[20:19:43] [Server thread/INFO] (Minecraft) Saving players
+[20:19:43] [Server thread/INFO] (Minecraft) Saving worlds
+[20:19:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[20:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 454 (s_foresight | kill switch): needs a separate client launch with the kill switch off (config is read at start)
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 458 (s_lod | Live soldiers end at 96 blocks, ranks beyond (with s-impostors)): needs a live kingdom town/army state the runner cannot set up by command
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 460 (s_lod | Kill switch client_lod off = 2.1 soldier detail): needs a separate client launch with the kill switch off (config is read at start)
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 463 (s_willolantern | the wisp's light at night (gear3, wisp-light)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 466 (s_layout_hraf | Jarl's longhall inside (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 467 (s_layout_hraf | south gate tower and archer stages (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 468 (s_layout_hraf | hof, forge and holmgang posts (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 469 (s_layout_hraf | shore road and nausts (Hrafnholt fv 2, waterfront realm)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 470 (s_layout_hraf | watch-fire cairn (Hrafnholt fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 475 (s_music_stems | in-game boss music self-test (boss_music, realm guard + phase layers)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 488 (s_asm_court | an Aldermark or Hrafnholt road lamp post beside an embankment, NEW world (fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] MANUAL scene 489 (s_asm_court | a corner tower and a town lamp post, NEW world (fv 2)): no id, view or command in the line
+[20:19:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 47 ok, 4 fail, 12 manual
+[20:19:44] [Render thread/INFO] (Minecraft) Stopping!
+[20:19:44] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
