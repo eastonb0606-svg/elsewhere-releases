@@ -64,14 +64,18 @@
           "scene": 33,
           "line": 46,
           "check": "Rune Throw = draw (throwing arm cocked behind the head, off arm aiming, then released across the body), Three Beat Verse = cast; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "22:02:28"
         },
         {
           "file": "anim__hrafnholt_skald_move_strike.png",
           "scene": 33,
           "line": 46,
           "check": "Rune Throw = draw (throwing arm cocked behind the head, off arm aiming, then released across the body), Three Beat Verse = cast; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 45 s",
+          "taken": "22:02:28"
         }
       ],
       "elsewhere:solaxis": [
@@ -80,14 +84,16 @@
           "scene": 45,
           "line": 58,
           "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:32"
         },
         {
           "file": "anim__solaxis_hurt_rest.png",
           "scene": 45,
           "line": 58,
           "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:33"
         }
       ],
       "elsewhere:grumblegut": [
@@ -96,14 +102,16 @@
           "scene": 58,
           "line": 71,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:37"
         },
         {
           "file": "anim__grumblegut_hurt_rest.png",
           "scene": 58,
           "line": 71,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:37"
         }
       ],
       "elsewhere:mother_creak": [
@@ -112,14 +120,16 @@
           "scene": 70,
           "line": 83,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:41"
         },
         {
           "file": "anim__mother_creak_hurt_rest.png",
           "scene": 70,
           "line": 83,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:42"
         }
       ]
     },
@@ -130,21 +140,24 @@
           "scene": 77,
           "line": 93,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:43"
         },
         {
           "file": "items__hrafnholt_hearthguard_greaves_side.png",
           "scene": 77,
           "line": 93,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:44"
         },
         {
           "file": "items__hrafnholt_hearthguard_greaves_tooltip.png",
           "scene": 77,
           "line": 93,
           "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:45"
         }
       ],
       "elsewhere:azmar_sunscourge": [
@@ -153,14 +166,16 @@
           "scene": 116,
           "line": 132,
           "check": "icon matches the sprite page (16x16, Sunscourge), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:46"
         },
         {
           "file": "items__azmar_sunscourge_tooltip.png",
           "scene": 116,
           "line": 132,
           "check": "icon matches the sprite page (16x16, Sunscourge), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:46"
         }
       ],
       "elsewhere:glimmer_lantern": [
@@ -169,14 +184,16 @@
           "scene": 128,
           "line": 144,
           "check": "icon matches the sprite page (16x16, Glimmer Lantern), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:48"
         },
         {
           "file": "items__glimmer_lantern_tooltip.png",
           "scene": 128,
           "line": 144,
           "check": "icon matches the sprite page (16x16, Glimmer Lantern), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:48"
         }
       ]
     },
@@ -187,7 +204,8 @@
           "scene": 141,
           "line": 158,
           "check": "vanilla reference for: arm in the vanilla block pose, the plank face with the green ring and gold boss faces the camera in front of the body, same place as the vanilla shield reference; nothing clips through the head or floats off the hand",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:02:50"
         }
       ]
     },
@@ -227,14 +245,18 @@
           "scene": 187,
           "line": 205,
           "check": "off hand holding the horn to the lips, head tipped back, trembling; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Horn of Three Calls' within 90 s",
+          "taken": "22:04:25"
         },
         {
           "file": "s_p4_rivalanims__hrafnholt_hersir_horn_of_three_calls_strike.png",
           "scene": 187,
           "line": 205,
           "check": "off hand holding the horn to the lips, head tipped back, trembling; Hrafnholt style: bigger reach, wide stance (legs splayed), long recovery; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: chest thrown out, head flung back, weapon arm flung wide; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Horn of Three Calls' within 90 s",
+          "taken": "22:04:25"
         }
       ],
       "elsewhere:mirewick_tolliver Fowling Net": [
@@ -243,14 +265,18 @@
           "scene": 199,
           "line": 229,
           "check": "throwing arm cocked behind the head, off arm aiming; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Fowling Net' within 90 s",
+          "taken": "22:05:56"
         },
         {
           "file": "s_p4_rivalanims__mirewick_tolliver_fowling_net_strike.png",
           "scene": 199,
           "line": 229,
           "check": "throwing arm cocked behind the head, off arm aiming; Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm released across the body, torso turned through; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
-          "status": "pending"
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label containing 'Fowling Net' within 90 s",
+          "taken": "22:05:56"
         }
       ],
       "elsewhere:azmar_sultana (phase 2 glyphs)": [
@@ -259,7 +285,8 @@
           "scene": 203,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:05:58"
         }
       ]
     },
@@ -270,14 +297,16 @@
           "scene": 227,
           "line": 257,
           "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:00"
         },
         {
           "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
           "scene": 227,
           "line": 257,
           "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:11"
         }
       ]
     },
@@ -288,7 +317,8 @@
           "scene": 239,
           "line": 269,
           "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:13"
         }
       ],
       "elsewhere:hotbox_smog": [
@@ -315,14 +345,16 @@
           "scene": 274,
           "line": 310,
           "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:16"
         },
         {
           "file": "s_p1_bossbar__boss_bar_v2_labels_on_a_rival_bar_the_gl_5s.png",
           "scene": 274,
           "line": 310,
           "check": "the bar reads \"Test Duelist Ruler · Glyph Flare\" (lang name, never the raw id). On the iMac (AMD Radeon Pro 580X, GL 4.1 ATI driver) EVERY lowercase f is invisible in all text, vanilla too (\"Cra ting\" in the inventory, \"Gudrun Ul hednar\"); compare with the inventory's \"Crafting\" label in the same shot run before calling it a mod bug",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:21"
         }
       ]
     },
@@ -333,21 +365,24 @@
           "scene": 278,
           "line": 314,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:22"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_third_person.png",
           "scene": 278,
           "line": 314,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:23"
         },
         {
           "file": "s_hurlbat__hrafnholt_hurlbat_tooltip.png",
           "scene": 278,
           "line": 314,
           "check": "a small steel bearded axe head with a red band on a brown haft, held like an axe (not flat); stack shows 8; tooltip: name \"Hurlbat\", grey \"Hrafnholt throwing axe (Marksman)\", blue stat lines, red \"Breaks on half of its hits\"; no pink/black",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:24"
         }
       ]
     },
@@ -358,42 +393,48 @@
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:26"
         },
         {
           "file": "s_galesling__gale_sling_third_person.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:27"
         },
         {
           "file": "s_galesling__gale_sling_in_use_first_person.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:28"
         },
         {
           "file": "s_galesling__gale_sling_in_use_third_person.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:28"
         },
         {
           "file": "s_galesling__gale_sling_after_use.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:30"
         },
         {
           "file": "s_galesling__gale_sling_tooltip_2.png",
           "scene": 292,
           "line": 331,
           "check": "the arm raises like a trident wind-up and the sling's pouch circles overhead (4 frames, one turn per 0.4 s, a pale wind trail behind the pouch); a breeze-whirl sound (subtitle \"Sling whirls\") on starting; no animation and no sound when the inventory has no cobblestone, gravel or wind charge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:30"
         }
       ],
       "elsewhere:gale_sling_stone": [
@@ -402,7 +443,8 @@
           "scene": 294,
           "line": 333,
           "check": "a small grey pebble (gravel shot: a brown-grey pebble) flies with a small gust puff at release and a crit-spark trail (full charge only), arcs slightly; on the husk: hurt flash, 4 damage (husk 20 -> 16 HP with /data or Jade), a stone-hit sound (subtitle \"Sling stone strikes\") and a little cobblestone/gravel crumble; the pebble never drops as an item; 1 cobblestone used per shot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:06:32"
         }
       ]
     },
@@ -579,10 +621,10 @@
       ]
     }
   },
-  "run": "22:01:43",
+  "run": "22:06:32",
   "totals": {
-    "ok": 5,
-    "fail": 0,
+    "ok": 35,
+    "fail": 6,
     "manual": 0
   }
 }
