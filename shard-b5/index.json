@@ -1,0 +1,602 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (mirewick realm)": [
+        {
+          "file": "villages__village_near_mirewick.png",
+          "scene": 5,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 14,
+          "line": 22,
+          "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:mirewick_sorrel": [
+        {
+          "file": "anim__mirewick_sorrel_move_windup.png",
+          "scene": 41,
+          "line": 54,
+          "check": "Pike Brace and Dike Wall = shield bash, Sluice Maul = overhead, Mud Surge and Mire Flood = slam; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:02:17"
+        },
+        {
+          "file": "anim__mirewick_sorrel_move_strike.png",
+          "scene": 41,
+          "line": 54,
+          "check": "Pike Brace and Dike Wall = shield bash, Sluice Maul = overhead, Mud Surge and Mire Flood = slam; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:02:17"
+        }
+      ],
+      "elsewhere:ashtusk": [
+        {
+          "file": "anim__ashtusk_death_15t.png",
+          "scene": 51,
+          "line": 64,
+          "check": "legs splayed and head sagging while it tips over",
+          "status": "ok",
+          "taken": "22:02:21"
+        }
+      ],
+      "elsewhere:neferkhet": [
+        {
+          "file": "anim__neferkhet_hurt_peak.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:02:24"
+        },
+        {
+          "file": "anim__neferkhet_hurt_rest.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:02:25"
+        }
+      ],
+      "elsewhere:kazehana": [
+        {
+          "file": "anim__kazehana_hurt_peak.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:02:28"
+        },
+        {
+          "file": "anim__kazehana_hurt_rest.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:02:29"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:gear3_forging_template": [
+        {
+          "file": "items__gear3_forging_template_held.png",
+          "scene": 112,
+          "line": 128,
+          "check": "icon matches the sprite page (16x16, Elsewhere Forging Template), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:30"
+        },
+        {
+          "file": "items__gear3_forging_template_tooltip.png",
+          "scene": 112,
+          "line": 128,
+          "check": "icon matches the sprite page (16x16, Elsewhere Forging Template), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:30"
+        }
+      ],
+      "elsewhere:hush_binding_sigil": [
+        {
+          "file": "items__hush_binding_sigil_held.png",
+          "scene": 124,
+          "line": 140,
+          "check": "icon matches the sprite page (16x16, Binding Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:31"
+        },
+        {
+          "file": "items__hush_binding_sigil_tooltip.png",
+          "scene": 124,
+          "line": 140,
+          "check": "icon matches the sprite page (16x16, Binding Sigil), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:02:32"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:clan_hold": [
+        {
+          "file": "s_struct_verdigris__clan_hold_s_14_10_14.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_verdigris__clan_hold_downhill_18.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:proving_grounds": [
+        {
+          "file": "s_struct_verdigris__proving_grounds_s_0_16_34.png",
+          "scene": 155,
+          "line": 172,
+          "check": "round arena ledge cut into the mountain, open cliff edge to the south on a stone foundation, stone-brick spectator tiers climbing the uphill (north) side, sloped banks instead of a cylinder cut, iron-bar rails, 4 red banners, the horn at the north gate",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_palisade": [
+        {
+          "file": "s_dataclean__villages_aldermark_palisade.png",
+          "scene": 172,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:sunwright_ziggurat": [
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_s_30_14_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_downhill_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_falconer Falcon Mark": [
+        {
+          "file": "s_p4_rivalanims__azmar_falconer_falcon_mark_windup.png",
+          "scene": 195,
+          "line": 221,
+          "check": "weapon arm drawn across the chest, torso turned; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__azmar_falconer_falcon_mark_strike.png",
+          "scene": 195,
+          "line": 221,
+          "check": "weapon arm drawn across the chest, torso turned; Azmar style: quick 2-tick snap, low guard, strong torso twist; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: arm pointed straight at the target, off hand on the hip, chin up; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:resin_kiln": [
+        {
+          "file": "s_struct_core__resin_kiln_s_10_7_10.png",
+          "scene": 212,
+          "line": 242,
+          "check": "L-shaped half-timber workshop (stripped pale-oak posts, plank infill, stone plinth course) with steep 2:1 roofs meeting in a valley, stone chimney stack past the ridge, lean-to over a gravel yard, mud-brick beehive kiln with flue, fenced yard, Sap Tapper inside; wings on their own floors (a step between them on slopes), nothing floating",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Azmar looks (priest, scribe, porter, merchant x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_front.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_back.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "rival kingdoms' plates (each kingdom unique)": [
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_6.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:sculk_resonator": [
+        {
+          "file": "s_p6_useanims__sculk_resonator_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_after_use.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_tooltip.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_greenhaze_rework": {
+      "Hallucinated mobs": [
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs.png",
+          "scene": 258,
+          "line": 291,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
+          "scene": 258,
+          "line": 291,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:aphelion": [
+        {
+          "file": "s_p2_telegraph__aphelion_warning_column_helm_on.png",
+          "scene": 267,
+          "line": 303,
+          "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_galesling": {
+      "elsewhere:gale_sling": [
+        {
+          "file": "s_galesling__gale_sling_held.png",
+          "scene": 291,
+          "line": 330,
+          "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
+          "status": "pending"
+        },
+        {
+          "file": "s_galesling__gale_sling_tooltip.png",
+          "scene": 291,
+          "line": 330,
+          "check": "GUI: a wooden handle with a pale cord loop and a grey stone pouch, not checkerboard; held like a tool (handheld pose); tooltip \"Gale Sling\" (uncommon, yellow name), 3 lore lines (grey \"Skirmisher sling\", blue whirl/ammo lines), durability bar after one shot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:aphelion_starpiercer": [
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person_3.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person_3.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_first_person_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_in_use_third_person_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_after_use_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_tooltip_2.png",
+          "scene": 311,
+          "line": 351,
+          "check": "bow held upright in the drawing pose like a vanilla bow in both hands (not lying flat or sideways), pulling frames visible",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:sunlance_staff": [
+        {
+          "file": "s_p5_tooltips__sunlance_staff_first_person.png",
+          "scene": 339,
+          "line": 382,
+          "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_third_person.png",
+          "scene": 339,
+          "line": 382,
+          "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_tooltip.png",
+          "scene": 339,
+          "line": 382,
+          "check": "lines in order: name; grey \"Light lance through a line of foes...\"; purple Caster line; dark purple \"Glimmer cost: N\"; gold \"Spell: 10 damage · 1 s cooldown\"; dark grey italic \"Hold Shift for details\" ONCE (also with boss_ui present); no raw keys, no digits other than the gold/cost numbers",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_locate": {
+      "elsewhere:waterfront_hrafnholt": [
+        {
+          "file": "s_locate__waterfront_hrafnholt_overview.png",
+          "scene": 358,
+          "line": 406,
+          "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__waterfront_hrafnholt_ground.png",
+          "scene": 358,
+          "line": 406,
+          "check": "if this world's Hrafnholt stands by the water: found at the jetty deck where it meets the shore (teleport: plank jetty, boathouse and longships); otherwise \"Could not find\" (that world has no waterfront; the court self-test proves both cases)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "elsewhere:hrafnholt_wolfcall_horn": [
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_first_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_third_person.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__hrafnholt_wolfcall_horn_tooltip.png",
+          "scene": 406,
+          "line": 456,
+          "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_layout_azmar__castle_azmar_c_0_14_62_y180.png",
+          "scene": 409,
+          "line": 459,
+          "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_pennant": {
+      "elsewhere:rootling": [
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "pending"
+        },
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3_later.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:bramble_totem": [
+        {
+          "file": "s_totems__bramble_totem_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_after_use.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        },
+        {
+          "file": "s_totems__bramble_totem_tooltip.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "300-soldier battle readout with /kingdomlod": [
+        {
+          "file": "s_lod__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 458,
+          "line": 510,
+          "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_waryak": {
+      "elsewhere:ironpeak_war_yak_horn": [
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person.png",
+          "scene": 472,
+          "line": 524,
+          "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person.png",
+          "scene": 472,
+          "line": 524,
+          "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip.png",
+          "scene": 472,
+          "line": 524,
+          "check": "an ivory yak horn with skyiron bands at the mouthpiece and bell and a crimson tassel, held at the side like a goat horn; inventory icon matches",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:fern_terrace_farms": [
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_overview.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_ground.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:02:32",
+  "totals": {
+    "ok": 9,
+    "fail": 2,
+    "manual": 0
+  }
+}
