@@ -97,14 +97,16 @@
           "scene": 69,
           "line": 82,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:19"
         },
         {
           "file": "anim__ankhara_hurt_rest.png",
           "scene": 69,
           "line": 82,
           "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:20"
         }
       ]
     },
@@ -115,14 +117,16 @@
           "scene": 113,
           "line": 129,
           "check": "icon matches the sprite page (16x16, Mason's Chisel), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:21"
         },
         {
           "file": "items__aldermark_masons_chisel_tooltip.png",
           "scene": 113,
           "line": 129,
           "check": "icon matches the sprite page (16x16, Mason's Chisel), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:22"
         }
       ]
     },
@@ -133,7 +137,8 @@
           "scene": 155,
           "line": 172,
           "check": "round arena ledge cut into the mountain, open cliff edge to the south on a stone foundation, stone-brick spectator tiers climbing the uphill (north) side, sloped banks instead of a cylinder cut, iron-bar rails, 4 red banners, the horn at the north gate",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:34:37"
         }
       ],
       "elsewhere:clockwork_rig": [
@@ -142,14 +147,16 @@
           "scene": 159,
           "line": 176,
           "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:34:51"
         },
         {
           "file": "s_struct_verdigris__clockwork_rig_s_0_10_16.png",
           "scene": 159,
           "line": 176,
           "check": "deck 4 above the sea, four copper-pipe legs splaying outward to the sea bed with square bracing frames at the waterline and every 8 below, crane boom, boarding ladder; nothing hangs in mid-water",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:34:56"
         }
       ],
       "elsewhere:lighthouse": [
@@ -158,7 +165,8 @@
           "scene": 160,
           "line": 177,
           "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:07"
         }
       ]
     },
@@ -169,14 +177,16 @@
           "scene": 165,
           "line": 182,
           "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:14"
         },
         {
           "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
           "scene": 165,
           "line": 182,
           "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:20"
         }
       ],
       "Percolax phase-0 smoke hide (elsewhere:percolax)": [
@@ -185,7 +195,8 @@
           "scene": 168,
           "line": 185,
           "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:26"
         }
       ],
       "verdigris arena seal (elsewhere:lighthouse, Galvanox)": [
@@ -194,7 +205,8 @@
           "scene": 169,
           "line": 185,
           "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:35:25"
         }
       ]
     },
@@ -239,7 +251,8 @@
           "scene": 205,
           "line": 235,
           "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:28"
         }
       ]
     },
@@ -277,14 +290,16 @@
           "scene": 243,
           "line": 273,
           "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:32"
         },
         {
           "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
           "scene": 243,
           "line": 273,
           "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:37"
         }
       ],
       "elsewhere:grunthar": [
@@ -293,14 +308,16 @@
           "scene": 244,
           "line": 274,
           "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:41"
         },
         {
           "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
           "scene": 244,
           "line": 274,
           "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:43"
         }
       ]
     },
@@ -338,42 +355,48 @@
           "scene": 465,
           "line": 517,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:44"
         },
         {
           "file": "s_willolantern__emberfall_rod_third_person.png",
           "scene": 465,
           "line": 517,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:45"
         },
         {
           "file": "s_willolantern__emberfall_rod_in_use_first_person.png",
           "scene": 465,
           "line": 517,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:46"
         },
         {
           "file": "s_willolantern__emberfall_rod_in_use_third_person.png",
           "scene": 465,
           "line": 517,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:47"
         },
         {
           "file": "s_willolantern__emberfall_rod_after_use.png",
           "scene": 465,
           "line": 517,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:48"
         },
         {
           "file": "s_willolantern__emberfall_rod_tooltip.png",
           "scene": 465,
           "line": 517,
           "check": "a line of mint glow particles from the wisp to the husk and a fire burst on the husk (smaller damage number than your own cast if a damage-numbers mod is on); the player's view did not jerk",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:48"
         }
       ]
     },
@@ -434,21 +457,23 @@
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:52"
         },
         {
           "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:33:55"
         }
       ]
     }
   },
-  "run": "22:33:16",
+  "run": "22:35:25",
   "totals": {
-    "ok": 10,
+    "ok": 35,
     "fail": 0,
     "manual": 0
   }
