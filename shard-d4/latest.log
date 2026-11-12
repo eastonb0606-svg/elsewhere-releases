@@ -534,3 +534,85 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [22:52:44] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
 [22:52:44] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
 [22:52:44] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:52:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
+[22:52:50] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:52:50] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1628.500000, 121.000000, -7107.500000
+[22:52:53] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 18231ms or 364 ticks behind
+[22:53:07] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[22:53:07] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[22:53:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_hrafnholt_c_52_40_52_y135.png: 
+[22:53:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 15 (structures_build | elsewhere:castle_hrafnholt) done in 23638 ms
+[22:53:07] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:53:07] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:53:07] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:53:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:53:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:53:08] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:53:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 144.000000, -1153.500000
+[22:53:13] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5641ms or 112 ticks behind
+[22:53:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_aldermark_c_0_75_150_y180.png: 
+[22:53:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 21 (structures_build | elsewhere:castle_aldermark) done in 9713 ms
+[22:53:17] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:53:17] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:53:17] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:53:17] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:53:17] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:53:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[22:53:23] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 999.330000, 101.000000, -4424.670000
+[22:53:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK z_castle__castle_azmar_c_44_8_44_y135.png: 
+[22:53:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 150 (z_castle | elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_azmar)) done in 16976 ms
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:53:34] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 3000 tick(s)
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1280.500000, 85.000000, -1259.500000
+[22:53:34] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
+[22:53:34] [Render thread/INFO] (Minecraft) Loaded 7 advancements
+[22:53:35] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6669ms or 133 ticks behind
+[22:53:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__aldermark_capital_time_set_3000.png: 
+[22:53:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 314 (s_townsfolk | Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)) done in 12415 ms
+[22:53:46] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[22:53:46] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[22:53:47] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[22:53:47] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[22:53:47] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[22:53:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[22:53:47] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 73.000000, -1302.500000
+[22:53:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_0_2_3_y180.png: 
+[22:53:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 412 (s_layout_azmar | elsewhere:castle_aldermark) done in 8021 ms
+[22:53:54] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[22:53:54] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[22:53:54] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[22:53:54] [Server thread/INFO] (Minecraft) Stopping server
+[22:53:54] [Server thread/INFO] (Minecraft) Saving players
+[22:53:54] [Server thread/INFO] (Minecraft) Saving worlds
+[22:53:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[22:53:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[22:53:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 14 ok, 0 fail, 0 manual
+[22:53:56] [Render thread/INFO] (Minecraft) Stopping!
+[22:53:56] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
