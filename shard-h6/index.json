@@ -179,7 +179,8 @@
           "scene": 319,
           "line": 359,
           "check": "nobody pops out of existence in view (they fold beyond 72 blocks, outside the 64-block tracking range); coming back, residents reappear at doors/far streets, never next to you",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:24"
         }
       ]
     },
@@ -218,7 +219,8 @@
           "scene": 409,
           "line": 459,
           "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:41"
         }
       ]
     },
@@ -279,9 +281,9 @@
       ]
     }
   },
-  "run": "23:41:28",
+  "run": "23:42:43",
   "totals": {
-    "ok": 27,
+    "ok": 29,
     "fail": 0,
     "manual": 0
   }
