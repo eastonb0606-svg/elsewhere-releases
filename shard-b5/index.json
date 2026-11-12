@@ -515,7 +515,8 @@
           "scene": 409,
           "line": 459,
           "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:08:58"
         }
       ]
     },
@@ -638,21 +639,23 @@
           "scene": 480,
           "line": 532,
           "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:16"
         },
         {
           "file": "s_struct_greenhaze__fern_terrace_farms_ground.png",
           "scene": 480,
           "line": 532,
           "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
-          "status": "pending"
+          "status": "ok",
+          "taken": "22:09:27"
         }
       ]
     }
   },
-  "run": "22:08:44",
+  "run": "22:09:29",
   "totals": {
-    "ok": 58,
+    "ok": 61,
     "fail": 6,
     "manual": 0
   }

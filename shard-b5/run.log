@@ -14,3 +14,33 @@ fatal: expected 'acknowledgments', received 'packfile'
 warning: push negotiation failed; proceeding anyway with push
 published 9 PNGs (progress) -> cloud-shots-b5 66adb69
 published 37 PNGs (progress) -> cloud-shots-b5 b651ead
+published 58 PNGs (progress) -> cloud-shots-b5 603dd71
+client rc=0
+[22:02:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_sorrel_move_windup.png: wait_label: no boss bar move label within 90 s
+[22:02:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL anim__mirewick_sorrel_move_strike.png: wait_label: no boss bar move label within 90 s
+[22:04:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__azmar_falconer_falcon_mark_windup.png: wait_label: no boss bar move label containing 'Falcon Mark' within 90 s
+[22:04:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_p4_rivalanims__azmar_falconer_falcon_mark_strike.png: wait_label: no boss bar move label containing 'Falcon Mark' within 90 s
+[22:08:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_locate__waterfront_hrafnholt_overview.png: locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it
+[22:08:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_locate__waterfront_hrafnholt_ground.png: locate: elsewhere:waterfront_hrafnholt could not be located within 100 chunks in any dimension that can hold it
+[22:09:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 61 ok, 6 fail, 0 manual
+MinecraftClientHttpException[type=HTTP_ERROR, status=429, response=null]
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.buildHttpException(MinecraftClient.java:167)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:147)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.getWithEtag(MinecraftClient.java:81)
+--
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[22:00:33] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:00:33] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[22:00:33] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+java.lang.IllegalStateException: Failed to open OpenAL device
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+	at knot//com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:274)
+--
+[22:00:36] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[22:00:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] 20 flat-stage scenes, 10 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[22:00:40] [Worker-Main-1/INFO] (Minecraft) Loaded 1931 advancements
+22:09:35Z finished rc=0, 61 PNGs;  TOTAL 61 ok, 6 fail, 0 manual
