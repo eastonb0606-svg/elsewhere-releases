@@ -1,0 +1,610 @@
+{
+  "lanes": {
+    "armies": {
+      "patrol: Aldermark day patrol of 8 (army.scale.patrol.day)": [
+        {
+          "file": "armies__patrol_8_10s.png",
+          "scene": 8,
+          "line": 13,
+          "check": "8 soldiers in a tidy column, Aldermark livery, nobody stuck or idle at spawn",
+          "status": "ok",
+          "taken": "22:02:04"
+        }
+      ]
+    },
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_14_9_10_y200.png",
+          "scene": 17,
+          "line": 25,
+          "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "anim__hrafnholt_hersir_move_windup.png",
+          "scene": 31,
+          "line": 44,
+          "check": "Raid Charge = thrust (arm drawn back, then a long lunge with the weapon arm straight), Horn of Three Calls = cast (arms raised in a V, head up); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:03:35"
+        },
+        {
+          "file": "anim__hrafnholt_hersir_move_strike.png",
+          "scene": 31,
+          "line": 44,
+          "check": "Raid Charge = thrust (arm drawn back, then a long lunge with the weapon arm straight), Horn of Three Calls = cast (arms raised in a V, head up); limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:03:35"
+        }
+      ],
+      "elsewhere:mirewick_ames": [
+        {
+          "file": "anim__mirewick_ames_move_windup.png",
+          "scene": 43,
+          "line": 56,
+          "check": "Dusk Rite, Pay the Hands, Dusk Bell, Lantern Rally = cast; Lamp Shove = shield bash; Oil Flask = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:05:06"
+        },
+        {
+          "file": "anim__mirewick_ames_move_strike.png",
+          "scene": 43,
+          "line": 56,
+          "check": "Dusk Rite, Pay the Hands, Dusk Bell, Lantern Rally = cast; Lamp Shove = shield bash; Oil Flask = draw; limbs, armor and held weapon move together, feet stay on the ground, no Steve skin; within 48 blocks only",
+          "status": "fail",
+          "detail": "wait_label: no boss bar move label within 90 s",
+          "taken": "22:05:06"
+        }
+      ],
+      "elsewhere:vorlagh": [
+        {
+          "file": "anim__vorlagh_hurt_peak.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:10"
+        },
+        {
+          "file": "anim__vorlagh_hurt_rest.png",
+          "scene": 56,
+          "line": 69,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:10"
+        }
+      ],
+      "elsewhere:heliodor": [
+        {
+          "file": "anim__heliodor_hurt_peak.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:13"
+        },
+        {
+          "file": "anim__heliodor_hurt_rest.png",
+          "scene": 68,
+          "line": 81,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:05:14"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:azmar_falconer_kilt": [
+        {
+          "file": "items__azmar_falconer_kilt_front.png",
+          "scene": 91,
+          "line": 107,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:05:15"
+        },
+        {
+          "file": "items__azmar_falconer_kilt_side.png",
+          "scene": 91,
+          "line": 107,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:05:16"
+        },
+        {
+          "file": "items__azmar_falconer_kilt_tooltip.png",
+          "scene": 91,
+          "line": 107,
+          "check": "worn layer uses the set colours (not the missing-texture checkerboard), inventory icon matches the sprite page, tooltip shows grey line, blue perk line(s), no raw lang keys",
+          "status": "ok",
+          "taken": "22:05:17"
+        }
+      ],
+      "elsewhere:thornlash": [
+        {
+          "file": "items__thornlash_held.png",
+          "scene": 114,
+          "line": 130,
+          "check": "icon matches the sprite page (16x16, Thornlash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:18"
+        },
+        {
+          "file": "items__thornlash_tooltip.png",
+          "scene": 114,
+          "line": 130,
+          "check": "icon matches the sprite page (16x16, Thornlash), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:19"
+        }
+      ],
+      "elsewhere:mirewick_almoners_chalice": [
+        {
+          "file": "items__mirewick_almoners_chalice_held.png",
+          "scene": 126,
+          "line": 142,
+          "check": "icon matches the sprite page (16x16, Almoner's Chalice), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:20"
+        },
+        {
+          "file": "items__mirewick_almoners_chalice_tooltip.png",
+          "scene": 126,
+          "line": 142,
+          "check": "icon matches the sprite page (16x16, Almoner's Chalice), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:05:21"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_blocking.png",
+          "scene": 140,
+          "line": 157,
+          "check": "the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
+          "status": "ok",
+          "taken": "22:05:22"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:engineers_atoll": [
+        {
+          "file": "s_struct_verdigris__engineers_atoll_s_16_8_16.png",
+          "scene": 158,
+          "line": 175,
+          "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_azmarsize": {
+      "Azmar line relief: rank blocks of 5 (army.scale squad 5, relief wave 5 / 30 s at 85%)": [
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_10s.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "pending"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "mirewick_castle_mirewick (elsewhere:castle_mirewick)": [
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_front.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_corner.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_gate.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_quay.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:eye_of_the_gale": [
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_0_8_26.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_20_10_20.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:mirewick_thwaite Bog-Drum Call": [
+        {
+          "file": "s_p4_rivalanims__mirewick_thwaite_bog_drum_call_windup.png",
+          "scene": 197,
+          "line": 225,
+          "check": "hunched, arms beating alternately (two shots 3 ticks apart differ); Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both fists down on the last beat, deeper crouch; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        },
+        {
+          "file": "s_p4_rivalanims__mirewick_thwaite_bog_drum_call_strike.png",
+          "scene": 197,
+          "line": 225,
+          "check": "hunched, arms beating alternately (two shots 3 ticks apart differ); Mirewick style: upright, chin up, little lean, unhurried; armour, held weapon and skin layers follow the limbs; feet on the ground; no Steve skin || strike: both fists down on the last beat, deeper crouch; then eases back to idle within about 10 ticks (Azmar 6, Hrafnholt 12); a staggered wind-up (sprint-crit it mid wind-up) drops back with no strike",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:hrafnholt_jarl (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_aura_phase2.png",
+          "scene": 202,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_pulse_mobs_within_6)": [
+        {
+          "file": "s_echoarrow__echo_arrow_pulse_glow.png",
+          "scene": 218,
+          "line": 248,
+          "check": "hit husk and the one 4 away have the white Glowing outline (lasts 5 s), the one 9 away does not; a teal sculk ring at the hit point and vibration lines to each glowing husk (sound is not shot-checkable: silence is covered by the self-test sculk-sensor check)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:serf variants (serf, thrall, porter, peat_cutter; kingdom_villages SerfRenderer)": [
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_front.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_back.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "`/elsewhere_hud telegraphs hidden`, helm ON": [
+        {
+          "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on.png",
+          "scene": 269,
+          "line": 305,
+          "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
+          "status": "pending"
+        },
+        {
+          "file": "s_p2_telegraph__elsewhere_hud_telegraphs_hidden_helm_on_5s.png",
+          "scene": 269,
+          "line": 305,
+          "check": "nothing drawn; `/elsewhere_hud telegraphs auto` brings them back",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_4.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_4.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_3.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_3.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_3.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_4.png",
+          "scene": 281,
+          "line": 317,
+          "check": "survivor: the husk flinches, the hurlbat bounces back off it and lies on the ground beside it, pickable; break: grey axe-shard particles at the husk, subtitle \"Hurlbat shatters\", nothing left to pick up",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:mournmaw_weeping_basin": [
+        {
+          "file": "s_struct_nether__mournmaw_weeping_basin_s_0_16_26.png",
+          "scene": 285,
+          "line": 324,
+          "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:tidechain_lash": [
+        {
+          "file": "s_whips__tidechain_lash_first_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__tidechain_lash_third_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "pending"
+        },
+        {
+          "file": "s_whips__tidechain_lash_tooltip.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:aphelion_starpiercer": [
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_first_person.png",
+          "scene": 309,
+          "line": 349,
+          "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
+          "status": "pending"
+        },
+        {
+          "file": "s_starpiercer__aphelion_starpiercer_third_person.png",
+          "scene": 309,
+          "line": 349,
+          "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:steam_auger": [
+        {
+          "file": "s_p5_tooltips__steam_auger_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_first_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_in_use_third_person.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_after_use.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__steam_auger_tooltip.png",
+          "scene": 342,
+          "line": 385,
+          "check": "(a) \"fuel left: N blocks\" counts down; (b) \"No anchor set yet\" then \"Anchor: x, y, z in minecraft:overworld\"; (c) gold \"Capacitor: up to 5 charges, each fades after 8 s\"; (d) gold \"Brace: +4 toughness after 2 s without sprinting (12 in all)\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:hrafnholt_wolfskin_boots": [
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_first_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_third_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_tooltip.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Mirewick off-time wards": [
+        {
+          "file": "s_routines__mirewick_off_time_wards.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__mirewick_off_time_wards_5s.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_2_3_y180.png",
+          "scene": 412,
+          "line": 462,
+          "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom.png",
+          "scene": 433,
+          "line": 483,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__high_player_among_elsewhere_npcs_kingdom_later.png",
+          "scene": 433,
+          "line": 483,
+          "check": "no gag on any elsewhere: entity (no silly name, no upside-down flip, no look-swap, no size change), rank nameplates and the boss bar unchanged; a nearby vanilla cow/sheep may show a gag (expected)",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:everflow_bong": [
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person_2.png",
+          "scene": 435,
+          "line": 485,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person_2.png",
+          "scene": 435,
+          "line": 485,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_tooltip.png",
+          "scene": 435,
+          "line": 485,
+          "check": "the Greenhaze Haze bar and Green Leaf's meter show the same level; Green Leaf's label shows the Sativa strain; a second player within 4 blocks gets a small contact high",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_waryak": {
+      "elsewhere:war_yak": [
+        {
+          "file": "s_waryak__war_yak_beside_its_owner_gear3.png",
+          "scene": 474,
+          "line": 526,
+          "check": "a shaggy dark-brown yak a little larger than a cow: low head with a skyiron brow plate, wide cream horns curving up with skyiron caps, shoulder hump, long fur skirt, crimson Ironclan blanket with a frost-grey fringe and a white peak sign on each flank, tufted tail",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:sesh_hut": [
+        {
+          "file": "s_struct_greenhaze__sesh_hut_overview.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__sesh_hut_ground.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:05:22",
+  "totals": {
+    "ok": 13,
+    "fail": 4,
+    "manual": 0
+  }
+}
