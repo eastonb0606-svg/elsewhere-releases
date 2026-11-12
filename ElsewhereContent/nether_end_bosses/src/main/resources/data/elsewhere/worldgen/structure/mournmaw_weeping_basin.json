@@ -1,0 +1,10 @@
+{
+  "type": "elsewhere:nether_end_boss_arena",
+  "biomes": [
+    "minecraft:soul_sand_valley"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "boss": "mournmaw"
+}

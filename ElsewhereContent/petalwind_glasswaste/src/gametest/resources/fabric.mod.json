@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_petalwind_glasswaste_gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere petalwind_glasswaste screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.petalwind_glasswaste.gametest.ScreenshotTest"]
+	},
+	"depends": {
+		"elsewhere_petalwind_glasswaste": "*"
+	}
+}

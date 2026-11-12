@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:base_stone_overworld",
+    "#minecraft:stone_ore_replaceables",
+    "#minecraft:deepslate_ore_replaceables",
+    "minecraft:cobblestone",
+    "minecraft:mossy_cobblestone",
+    "minecraft:cobbled_deepslate",
+    "#minecraft:coal_ores",
+    "#minecraft:iron_ores",
+    "#minecraft:copper_ores",
+    "#minecraft:gold_ores",
+    "#minecraft:redstone_ores",
+    "#minecraft:lapis_ores",
+    "#minecraft:emerald_ores",
+    "#minecraft:diamond_ores",
+    "minecraft:nether_quartz_ore",
+    "minecraft:nether_gold_ore",
+    {
+      "id": "#c:ores",
+      "required": false
+    }
+  ]
+}

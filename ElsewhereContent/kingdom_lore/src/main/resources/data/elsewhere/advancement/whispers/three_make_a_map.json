@@ -1,0 +1,32 @@
+{
+ "display": {
+  "icon": {
+   "id": "elsewhere:lore_royal_survey_map"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.three_make_a_map.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.three_make_a_map.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:inventory_changed",
+   "conditions": {
+    "items": [
+     {
+      "items": [
+       "elsewhere:lore_royal_survey_map"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "parent": "elsewhere:whispers/a_torn_corner"
+}

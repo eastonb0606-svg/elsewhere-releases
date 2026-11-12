@@ -1,0 +1,128 @@
+{
+  "_comment": "Mirewick, the lantern republic (ARMIES.md 2.4): clerks at the Counting-House and the council, bargemen on the quays and canals, lamplighters at dusk and dawn, peat-cutters on the polders (on strike they picket the Counting-House). The busiest towns: 48 live at the capital. Townsfolk lane data (s-townsfolk).",
+  "live": {
+    "capital": 48,
+    "town": 20
+  },
+  "roles": [
+    {
+      "id": "clerk",
+      "weight": 0.3,
+      "held": "minecraft:paper",
+      "day": [
+        {
+          "from": 8,
+          "to": 12,
+          "activity": "work",
+          "where": "counting_house",
+          "pose": "WORK"
+        },
+        {
+          "from": 12,
+          "to": 13,
+          "activity": "market",
+          "where": "quays",
+          "pose": "NONE"
+        },
+        {
+          "from": 13,
+          "to": 17,
+          "activity": "court",
+          "where": "guildhall",
+          "pose": "NONE"
+        },
+        {
+          "from": 17,
+          "to": 20,
+          "activity": "feast",
+          "where": "taverns",
+          "pose": "DRINK"
+        }
+      ]
+    },
+    {
+      "id": "bargeman",
+      "weight": 0.3,
+      "held": "minecraft:lead",
+      "day": [
+        {
+          "from": 5,
+          "to": 8,
+          "activity": "work",
+          "where": "sluices",
+          "pose": "WORK"
+        },
+        {
+          "from": 8,
+          "to": 12,
+          "activity": "market",
+          "where": "quays",
+          "pose": "CARRY"
+        },
+        {
+          "from": 12,
+          "to": 17,
+          "activity": "work",
+          "where": "canals",
+          "pose": "WORK"
+        },
+        {
+          "from": 19,
+          "to": 23,
+          "activity": "feast",
+          "where": "taverns",
+          "pose": "DRINK"
+        }
+      ]
+    },
+    {
+      "id": "lamplighter",
+      "weight": 0.06,
+      "held": "minecraft:torch",
+      "day": [
+        {
+          "from": 5,
+          "to": 7,
+          "activity": "lamplight",
+          "where": "lantern_posts",
+          "pose": "TORCH"
+        },
+        {
+          "from": 17,
+          "to": 20,
+          "activity": "lamplight",
+          "where": "lantern_posts",
+          "pose": "TORCH"
+        },
+        {
+          "from": 20,
+          "to": 22,
+          "activity": "watch",
+          "where": "canals",
+          "pose": "TORCH"
+        }
+      ]
+    },
+    {
+      "id": "peat_cutter",
+      "weight": 0.34,
+      "held": "minecraft:wooden_shovel",
+      "day": [
+        {
+          "from": 6,
+          "to": 17,
+          "activity": "work",
+          "where": "polders",
+          "pose": "WORK"
+        },
+        {
+          "from": 17,
+          "to": 19,
+          "activity": "feast",
+          "where": "taverns",
+          "pose": "DRINK"
+        }
+      ]
+    }
+  ]
+}

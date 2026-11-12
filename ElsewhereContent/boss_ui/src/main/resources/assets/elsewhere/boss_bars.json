@@ -1,0 +1,120 @@
+{
+  "_doc": "Data-driven boss bars, keyed by boss entity id. color = bar fill; icon = 16x16 texture; sub = lowercase substrings of OTHER boss-bar titles that are drawn as sub-bars under this boss (tentacles, plates, rider/mount). Bosses not listed here keep the vanilla bar. Per-player switch: /elsewhere_hud bossbars <auto|always|hidden>.",
+  "bosses": {
+    "elsewhere:gulpmother": {
+      "icon": "elsewhere:textures/gui/boss_icons/gulpmother.png",
+      "color": "#6FA84A"
+    },
+    "elsewhere:strawgrim": {
+      "icon": "elsewhere:textures/gui/boss_icons/strawgrim.png",
+      "color": "#D9822B"
+    },
+    "elsewhere:neferkhet": {
+      "icon": "elsewhere:textures/gui/boss_icons/neferkhet.png",
+      "color": "#D8B54A"
+    },
+    "elsewhere:rimeback": {
+      "icon": "elsewhere:textures/gui/boss_icons/rimeback.png",
+      "color": "#8FD3F0",
+      "sub": [
+        "plate"
+      ]
+    },
+    "elsewhere:vorlagh": {
+      "icon": "elsewhere:textures/gui/boss_icons/vorlagh.png",
+      "color": "#2E7FA8",
+      "sub": [
+        "tentacle"
+      ]
+    },
+    "elsewhere:grunthar": {
+      "icon": "elsewhere:textures/gui/boss_icons/grunthar.png",
+      "color": "#E0B03A",
+      "sub": [
+        "ashtusk"
+      ]
+    },
+    "elsewhere:solaxis": {
+      "icon": "elsewhere:textures/gui/boss_icons/solaxis.png",
+      "color": "#FF7A1A",
+      "sub": [
+        "supernova"
+      ]
+    },
+    "elsewhere:mournmaw": {
+      "icon": "elsewhere:textures/gui/boss_icons/mournmaw.png",
+      "color": "#7FC8E8"
+    },
+    "elsewhere:ossyra": {
+      "icon": "elsewhere:textures/gui/boss_icons/ossyra.png",
+      "color": "#B070E0",
+      "sub": [
+        "shulkling"
+      ]
+    },
+    "elsewhere:aphelion": {
+      "icon": "elsewhere:textures/gui/boss_icons/aphelion.png",
+      "color": "#7A4FD0"
+    },
+    "elsewhere:tempestra": {
+      "icon": "elsewhere:textures/gui/boss_icons/tempestra.png",
+      "color": "#9FD8FF"
+    },
+    "elsewhere:ankhara": {
+      "icon": "elsewhere:textures/gui/boss_icons/ankhara.png",
+      "color": "#E8C060"
+    },
+    "elsewhere:heliodor": {
+      "icon": "elsewhere:textures/gui/boss_icons/heliodor.png",
+      "color": "#FFE27A"
+    },
+    "elsewhere:kazehana": {
+      "icon": "elsewhere:textures/gui/boss_icons/kazehana.png",
+      "color": "#F4A6C8"
+    },
+    "elsewhere:auris": {
+      "icon": "elsewhere:textures/gui/boss_icons/auris.png",
+      "color": "#9CD08F"
+    },
+    "elsewhere:grumblegut": {
+      "icon": "elsewhere:textures/gui/boss_icons/grumblegut.png",
+      "color": "#8A6A3A"
+    },
+    "elsewhere:lithara": {
+      "icon": "elsewhere:textures/gui/boss_icons/lithara.png",
+      "color": "#6FC0A0"
+    },
+    "elsewhere:percolax": {
+      "icon": "elsewhere:textures/gui/boss_icons/percolax.png",
+      "color": "#C07AA0"
+    },
+    "elsewhere:galvanox": {
+      "icon": "elsewhere:textures/gui/boss_icons/galvanox.png",
+      "color": "#5FB0D8"
+    },
+    "elsewhere:hrolf": {
+      "icon": "elsewhere:textures/gui/boss_icons/hrolf.png",
+      "color": "#C86040",
+      "sub": [
+        "rider",
+        "mount"
+      ]
+    },
+    "elsewhere:thurgrim": {
+      "icon": "elsewhere:textures/gui/boss_icons/thurgrim.png",
+      "color": "#A0A0B0"
+    },
+    "elsewhere:verdigrim": {
+      "icon": "elsewhere:textures/gui/boss_icons/verdigrim.png",
+      "color": "#4FA880"
+    },
+    "elsewhere:selenne": {
+      "icon": "elsewhere:textures/gui/boss_icons/selenne.png",
+      "color": "#C8D0F0"
+    },
+    "elsewhere:mother_creak": {
+      "icon": "elsewhere:textures/gui/boss_icons/mother_creak.png",
+      "color": "#8A5A3A"
+    }
+  }
+}

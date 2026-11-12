@@ -1,0 +1,23 @@
+{
+ "display": {
+  "icon": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.azmar_border.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.azmar_border.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:impossible"
+  }
+ },
+ "parent": "elsewhere:whispers/azmar_road"
+}

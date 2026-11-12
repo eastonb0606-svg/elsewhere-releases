@@ -1,0 +1,13 @@
+{
+  "_doc": "s-callingtags: arsenal's client tooltip puts elsewhere.tooltip.<id> under the name of every CasterItem; without these keys the 8 gear3 spell items showed the raw key. One short headline each; the catalogue lore lines keep the numbers.",
+  "lang": {
+    "elsewhere.tooltip.amber_grimoire": "Casts an amber-locking bolt",
+    "elsewhere.tooltip.mirewick_almoners_chalice": "Throws a healing splash",
+    "elsewhere.tooltip.azmar_ka_sigil": "Wards a player with Absorption",
+    "elsewhere.tooltip.glimmer_lantern": "Hangs a light in the air",
+    "elsewhere.tooltip.blinkstone": "Blinks you forward",
+    "elsewhere.tooltip.emberfall_rod": "Lobs a burst of fire",
+    "elsewhere.tooltip.frostwake_scepter": "Lays a lane of frost",
+    "elsewhere.tooltip.starfall_orrery": "Calls down falling stars"
+  }
+}

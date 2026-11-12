@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#elsewhere:moonsilk_base/chest",
+    "elsewhere:moonsilk_thread",
+    "elsewhere:moonsilk_thread",
+    "elsewhere:moonsilk_thread",
+    "elsewhere:moonsilk_thread"
+  ],
+  "result": {
+    "id": "elsewhere:moonsilk_robe"
+  }
+}

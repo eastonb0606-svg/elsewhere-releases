@@ -1,0 +1,57 @@
+{
+ "elsewhere:mirewick_scrip": [
+  "The currency of the Lantern Republic of Mirewick. Dropped by Mirewick soldiers (1-3), officers (4-8), Magnates (16-32) and the Chair (64 treasury plus more).",
+  "Spent at Mirewick's Scrip-Desk shop. The Clerk of the Counting-House also exchanges any currency into Scrip at 4:3, and Scrip into other currencies 1:1 while you are Friendly."
+ ],
+ "elsewhere:mirewick_debt_collectors_leggings": [
+  "Dropped by Ottoline Marrow, Magnate of the Counting-House (100% on a first kill, then 67%). No slowdown from cobweb or mud."
+ ],
+ "elsewhere:mirewick_fen_marshals_waders": [
+  "Dropped by Fen-Marshal Garrick Thwaite. Depth Strider II equivalent; no slowdown from soul sand."
+ ],
+ "elsewhere:mirewick_dikewardens_brigandine": [
+  "Dropped by Dikemaster Hilde Sorrel. Netherite-level armor while in water or rain, weaker when dry."
+ ],
+ "elsewhere:mirewick_fowlers_marshbow": [
+  "Dropped by Wildfowler Wren Tolliver. Arrows keep their speed underwater and float on the surface."
+ ],
+ "elsewhere:mirewick_almoners_cowl": [
+  "Dropped by Lord Almoner Cuthbert Ames. Beneficial potions you drink last 10% longer."
+ ],
+ "elsewhere:mirewick_lantern_coronet": [
+  "Dropped by whichever Magnate holds the Chair when killed (first kill 100%). Night Vision in swamps and underwater."
+ ],
+ "elsewhere:mirewick_marsh_lantern_standard": [
+  "50% from the Chair-holder. Plant it for Water Breathing and Dolphin's Grace within 16 blocks."
+ ],
+ "elsewhere:mirewick_reedcutter_pike": [
+  "20% from Pikemaster Dunstan Reeve, the keep's elite captain. +0.75 blocks of reach."
+ ],
+ "elsewhere:mirewick_armor_trim_smithing_template": [
+  "Dropped by Mirewick Wardmen (captains), 8%. Duplicate with diamonds and mud bricks."
+ ],
+ "elsewhere:mirewick_banner_pattern": [
+  "Dropped by Lantern-Bearers (standard-bearers). Adds the Mirewick lantern to a banner."
+ ],
+ "elsewhere:mirewick_lantern_shield": [
+  "A shield that blocks like the vanilla one (336 durability, an axe disables it), sold at Mirewick's Scrip-Desk."
+ ],
+ "elsewhere:mirewick_oilcloth_dye": [
+  "A cosmetic dye sold at Mirewick's Scrip-Desk."
+ ],
+ "elsewhere:mirewick_seal_marrow": [
+  "A Lord Seal dropped by Ottoline Marrow. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_thwaite": [
+  "A Lord Seal dropped by Fen-Marshal Garrick Thwaite. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_sorrel": [
+  "A Lord Seal dropped by Dikemaster Hilde Sorrel. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_tolliver": [
+  "A Lord Seal dropped by Wildfowler Wren Tolliver. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ],
+ "elsewhere:mirewick_seal_ames": [
+  "A Lord Seal dropped by Lord Almoner Cuthbert Ames. Collectors' token; counts toward the Crown of Aldermark's Rally bonus."
+ ]
+}

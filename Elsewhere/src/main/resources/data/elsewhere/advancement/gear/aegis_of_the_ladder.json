@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:aegis_of_the_ladder"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.gear.aegis_of_the_ladder.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.gear.aegis_of_the_ladder.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elsewhere:root",
+  "criteria": {
+    "has": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elsewhere:aegis_of_the_ladder"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has"
+    ]
+  ]
+}

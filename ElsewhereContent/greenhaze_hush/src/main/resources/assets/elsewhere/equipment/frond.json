@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:frond"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:frond"
+      }
+    ]
+  }
+}

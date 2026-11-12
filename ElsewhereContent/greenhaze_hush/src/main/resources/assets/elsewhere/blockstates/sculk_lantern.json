@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "pulse=0": {
+      "model": "elsewhere:block/sculk_lantern_0"
+    },
+    "pulse=1": {
+      "model": "elsewhere:block/sculk_lantern_1"
+    },
+    "pulse=2": {
+      "model": "elsewhere:block/sculk_lantern_2"
+    },
+    "pulse=3": {
+      "model": "elsewhere:block/sculk_lantern_3"
+    }
+  }
+}

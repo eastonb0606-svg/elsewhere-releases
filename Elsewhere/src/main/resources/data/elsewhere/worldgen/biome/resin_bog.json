@@ -1,0 +1,131 @@
+{
+  "attributes": {
+    "minecraft:visual/sky_color": "#74706a",
+    "minecraft:visual/fog_color": "#a89a86",
+    "minecraft:visual/water_fog_color": "#6b5a3a",
+    "minecraft:visual/ambient_particles": {
+      "argument": [
+        {
+          "particle": {
+            "type": "minecraft:firefly"
+          },
+          "probability": 0.006
+        }
+      ],
+      "modifier": "append"
+    },
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "monster": [
+            {
+              "type": "elsewhere:creaking_husk",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 2,
+                "max_inclusive": 3
+              },
+              "weight": 36
+            },
+            {
+              "type": "elsewhere:eyeblossom_wisp",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 3
+              },
+              "weight": 45
+            },
+            {
+              "type": "minecraft:zombie",
+              "count": 2,
+              "weight": 25
+            },
+            {
+              "type": "minecraft:skeleton",
+              "count": 2,
+              "weight": 25
+            },
+            {
+              "type": "minecraft:spider",
+              "count": 2,
+              "weight": 20
+            },
+            {
+              "type": "minecraft:enderman",
+              "count": 1,
+              "weight": 5
+            }
+          ],
+          "ambient": [
+            {
+              "type": "minecraft:bat",
+              "count": 4,
+              "weight": 10
+            }
+          ]
+        }
+      },
+      "modifier": "overlay"
+    },
+    "minecraft:audio/background_music": {
+      "default": {
+        "min_delay": 6000,
+        "max_delay": 18000,
+        "sound": "minecraft:music_disc.tears"
+      }
+    }
+  },
+  "carvers": [
+    "minecraft:cave"
+  ],
+  "downfall": 0.8,
+  "effects": {
+    "dry_foliage_color": "#8c8a70",
+    "foliage_color": "#8c8a70",
+    "grass_color": "#857f66",
+    "water_color": "#6b5a3a"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_tuff",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_redstone",
+      "minecraft:ore_diamond",
+      "minecraft:ore_lapis",
+      "minecraft:ore_copper",
+      "minecraft:disk_clay",
+      "elsewhere:ore_amber",
+      "elsewhere:ore_amber_buried"
+    ],
+    [],
+    [
+      "minecraft:spring_water"
+    ],
+    [
+      "elsewhere:return_rift",
+      "elsewhere:world_trunk",
+      "minecraft:pale_moss_patch",
+      "minecraft:patch_grass_forest",
+      "minecraft:patch_firefly_bush_near_water",
+      "minecraft:patch_waterlily"
+    ],
+    []
+  ],
+  "has_precipitation": false,
+  "temperature": 0.6
+}

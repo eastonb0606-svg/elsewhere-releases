@@ -1,0 +1,28 @@
+{
+ "role": "melee",
+ "ability": "herald",
+ "skin": "elsewhere:textures/entity/hrafnholt/skald.png",
+ "armor": {
+  "head": "minecraft:chainmail_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 3037740,
+ "main_hand": "minecraft:iron_axe",
+ "off_hand": "minecraft:goat_horn",
+ "stats": {
+  "health": 24,
+  "speed": 0.29,
+  "armor": 1.0
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.04,
+  "crit_cooldown": 200,
+  "retreat_health": 0.3,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.4
+ }
+}

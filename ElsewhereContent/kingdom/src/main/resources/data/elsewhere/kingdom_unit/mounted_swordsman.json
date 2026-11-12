@@ -1,0 +1,34 @@
+{
+ "role": "cavalry",
+ "skin": "elsewhere:textures/entity/kingdom/soldier_b.png",
+ "armor": {
+  "head": "minecraft:chainmail_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:chainmail_boots"
+ },
+ "main_hand": "minecraft:iron_sword",
+ "off_hand": "minecraft:shield",
+ "mount": "minecraft:horse",
+ "mount_armor": "minecraft:leather_horse_armor",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.35,
+  "block_chance": 0.4,
+  "crit_chance": 0.0,
+  "retreat_health": 0.0
+ },
+ "trim": {
+  "material": "minecraft:lapis",
+  "patterns": [
+   "elsewhere:aldermark",
+   "minecraft:bolt"
+  ]
+ }
+}

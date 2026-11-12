@@ -1,0 +1,32 @@
+{
+ "display": {
+  "icon": {
+   "id": "elsewhere:hrafnholt_royal_proclamation"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.hrafnholt_decree.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.hrafnholt_decree.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:inventory_changed",
+   "conditions": {
+    "items": [
+     {
+      "items": [
+       "elsewhere:hrafnholt_royal_proclamation"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "parent": "elsewhere:whispers/hrafnholt_road"
+}

@@ -1,0 +1,103 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:mother_creak",
+    "elsewhere:selenne",
+    {
+      "id": "elsewhere:kazehana",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tempestra",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heliodor",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ankhara",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galvanox",
+      "required": false
+    },
+    {
+      "id": "elsewhere:grimhorn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrolf",
+      "required": false
+    },
+    {
+      "id": "elsewhere:thurgrim",
+      "required": false
+    },
+    {
+      "id": "elsewhere:verdigrim",
+      "required": false
+    },
+    {
+      "id": "elsewhere:auris",
+      "required": false
+    },
+    {
+      "id": "elsewhere:grumblegut",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lithara",
+      "required": false
+    },
+    {
+      "id": "elsewhere:percolax",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gulpmother",
+      "required": false
+    },
+    {
+      "id": "elsewhere:neferkhet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:rimeback",
+      "required": false
+    },
+    {
+      "id": "elsewhere:strawgrim",
+      "required": false
+    },
+    {
+      "id": "elsewhere:vorlagh",
+      "required": false
+    },
+    {
+      "id": "elsewhere:grunthar",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ashtusk",
+      "required": false
+    },
+    {
+      "id": "elsewhere:solaxis",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mournmaw",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ossyra",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aphelion",
+      "required": false
+    }
+  ]
+}

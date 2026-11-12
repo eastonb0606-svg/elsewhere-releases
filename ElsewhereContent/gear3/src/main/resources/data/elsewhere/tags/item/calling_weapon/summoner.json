@@ -1,0 +1,46 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:thornlash",
+    "elsewhere:tidechain_lash",
+    "elsewhere:azmar_sunscourge",
+    "elsewhere:echo_chord",
+    "elsewhere:mirewick_lantern_crook",
+    {
+      "id": "elsewhere:mirewick_will_o_lantern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mothlight_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:bramble_totem",
+      "required": false
+    },
+    {
+      "id": "elsewhere:herdcaller_pennant",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ironpeak_war_yak_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_reliquary",
+      "required": false
+    },
+    {
+      "id": "elsewhere:clockwork_sentry",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_sunglass_obelisk",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_wolfcall_horn",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#elsewhere:kushwood_logs"
+  ],
+  "result": {
+    "count": 4,
+    "id": "elsewhere:kushwood_planks"
+  }
+}

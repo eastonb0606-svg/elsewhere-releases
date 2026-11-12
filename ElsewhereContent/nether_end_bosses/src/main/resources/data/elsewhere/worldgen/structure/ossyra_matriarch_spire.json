@@ -1,0 +1,14 @@
+{
+  "type": "elsewhere:nether_end_boss_arena",
+  "biomes": [
+    "minecraft:end_highlands",
+    "minecraft:end_midlands",
+    "minecraft:end_barrens",
+    "minecraft:small_end_islands"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "boss": "ossyra",
+  "min_distance": 1100
+}

@@ -1,0 +1,13 @@
+{
+ "type": "elsewhere:ph_site",
+ "kind": "road",
+ "biomes": [
+  "elsewhere:hollow_thicket",
+  "elsewhere:silent_clearing",
+  "elsewhere:heartwood_grove",
+  "elsewhere:resin_bog"
+ ],
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "none"
+}

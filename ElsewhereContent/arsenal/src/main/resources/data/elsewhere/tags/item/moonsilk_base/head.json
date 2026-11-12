@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:paleweave_hood",
+      "required": false
+    },
+    {
+      "id": "elsewhere:paleweave_helmet",
+      "required": false
+    },
+    "minecraft:leather_helmet"
+  ]
+}

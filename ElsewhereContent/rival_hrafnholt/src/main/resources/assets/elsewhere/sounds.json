@@ -1,0 +1,6 @@
+{
+  "sfx3.hrafnholt.horn": {"subtitle": "subtitles.elsewhere.sfx3.hrafnholt.horn", "sounds": [{"name": "elsewhere:sfx3/hrafnholt/horn"}, {"name": "elsewhere:sfx3/hrafnholt/horn", "pitch": 0.94}]},
+  "sfx3.hrafnholt.warcry": {"subtitle": "subtitles.elsewhere.sfx3.hrafnholt.warcry", "sounds": [{"name": "elsewhere:sfx3/hrafnholt/warcry"}, {"name": "elsewhere:sfx3/hrafnholt/warcry", "pitch": 1.06}]},
+  "sfx3.hrafnholt.shieldwall": {"subtitle": "subtitles.elsewhere.sfx3.hrafnholt.shieldwall", "sounds": [{"name": "elsewhere:sfx3/hrafnholt/shieldwall"}, {"name": "elsewhere:sfx3/hrafnholt/shieldwall", "pitch": 0.92}]},
+  "sfx3.hrafnholt.pelt_rage": {"subtitle": "subtitles.elsewhere.sfx3.hrafnholt.pelt_rage", "sounds": [{"name": "minecraft:entity.wolf_big.growl", "type": "event", "pitch": 0.7}, {"name": "minecraft:entity.wolf_angry.growl", "type": "event", "pitch": 0.6}]}
+}

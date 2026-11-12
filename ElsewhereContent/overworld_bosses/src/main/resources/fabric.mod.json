@@ -1,0 +1,26 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_overworld_bosses",
+	"version": "${version}",
+	"name": "Elsewhere: Overworld Bosses (dev module)",
+	"description": "Old Gulpmother, Strawgrim, Neferkhet, Rimeback and Vorlagh for Elsewhere. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.overworld_bosses.DevEntry"],
+		"client": ["dev.elsewhere.overworld_bosses.DevClientEntry"]
+	},
+	"mixins": [
+		"elsewhere_overworld_bosses.stub.mixins.json",
+		"elsewhere_overworld_bosses_fit3.mixins.json",
+		{"config": "elsewhere_overworld_bosses.stub.client.mixins.json", "environment": "client"},
+		{"config": "elsewhere_overworld_bosses_anim3.mixins.json", "environment": "client"}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

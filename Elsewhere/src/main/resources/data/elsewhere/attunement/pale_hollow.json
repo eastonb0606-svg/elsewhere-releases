@@ -1,0 +1,12 @@
+{
+  "dimension": "elsewhere:pale_hollow",
+  "ingredients": [
+    "minecraft:resin_clump",
+    "minecraft:open_eyeblossom",
+    "minecraft:pale_oak_log",
+    "minecraft:pale_moss_block",
+    "minecraft:bone_block"
+  ],
+  "requires": "none",
+  "notes": "DIMENSIONS.md section 8: R E R / L W L / M B M. Any layout works through elsewhere:attunement; the shaped recipe is for the recipe book."
+}

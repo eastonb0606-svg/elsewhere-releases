@@ -1,0 +1,29 @@
+{
+ "role": "lancer",
+ "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:iron_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:chainmail_boots"
+ },
+ "main_hand": "minecraft:iron_spear",
+ "mount": "minecraft:horse",
+ "mount_armor": "minecraft:iron_horse_armor",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "retreat_health": 0.0
+ },
+ "trim": {
+  "material": "minecraft:iron",
+  "patterns": [
+   "elsewhere:aldermark",
+   "minecraft:bolt"
+  ]
+ }
+}

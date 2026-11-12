@@ -1,0 +1,41 @@
+{
+  "trader": "elsewhere:dune_factor",
+  "currency": "elsewhere:sunglass_shard",
+  "bounties": [
+    {
+      "type": "deliver",
+      "item": "minecraft:sand",
+      "count": 64,
+      "pay": 3,
+      "xp": 15
+    },
+    {
+      "type": "deliver",
+      "item": "elsewhere:glassfin_darter",
+      "count": 4,
+      "pay": 4,
+      "xp": 25
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:glass_scarab",
+      "count": 5,
+      "pay": 5,
+      "xp": 40
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:sandswimmer",
+      "count": 4,
+      "pay": 6,
+      "xp": 40
+    },
+    {
+      "type": "deliver",
+      "item": "minecraft:cactus",
+      "count": 16,
+      "pay": 3,
+      "xp": 15
+    }
+  ]
+}

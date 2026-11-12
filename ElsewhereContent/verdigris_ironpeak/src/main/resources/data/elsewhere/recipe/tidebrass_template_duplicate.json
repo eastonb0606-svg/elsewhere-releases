@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "DTD",
+  "DBD",
+  "DDD"
+ ],
+ "key": {
+  "D": "minecraft:diamond",
+  "T": "elsewhere:tidebrass_upgrade_smithing_template",
+  "B": "elsewhere:verdigris_plate"
+ },
+ "result": {
+  "id": "elsewhere:tidebrass_upgrade_smithing_template",
+  "count": 2
+ }
+}

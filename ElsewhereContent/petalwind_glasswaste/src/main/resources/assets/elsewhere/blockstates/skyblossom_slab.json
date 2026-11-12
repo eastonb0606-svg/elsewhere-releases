@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elsewhere:block/skyblossom_slab"
+    },
+    "type=double": {
+      "model": "elsewhere:block/skyblossom_planks"
+    },
+    "type=top": {
+      "model": "elsewhere:block/skyblossom_slab_top"
+    }
+  }
+}

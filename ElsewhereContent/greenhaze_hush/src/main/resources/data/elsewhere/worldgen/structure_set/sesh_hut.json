@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470103,
+    "separation": 8,
+    "spacing": 20
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:sesh_hut",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+ "sound_event": {
+  "sound_id": "minecraft:music_disc.pigstep"
+ },
+ "description": {
+  "translate": "jukebox_song.elsewhere.zenith"
+ },
+ "length_in_seconds": 148.0,
+ "comparator_output": 10
+}

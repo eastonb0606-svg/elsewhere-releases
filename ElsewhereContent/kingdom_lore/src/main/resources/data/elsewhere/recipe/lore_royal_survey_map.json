@@ -1,0 +1,12 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "elsewhere:lore_survey_fragment",
+  "elsewhere:lore_survey_fragment",
+  "elsewhere:lore_survey_fragment"
+ ],
+ "result": {
+  "id": "elsewhere:lore_royal_survey_map"
+ }
+}

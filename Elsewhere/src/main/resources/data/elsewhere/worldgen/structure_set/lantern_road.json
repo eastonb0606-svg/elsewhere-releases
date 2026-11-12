@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 88104,
+  "separation": 10,
+  "spacing": 28
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:lantern_road",
+   "weight": 1
+  }
+ ]
+}

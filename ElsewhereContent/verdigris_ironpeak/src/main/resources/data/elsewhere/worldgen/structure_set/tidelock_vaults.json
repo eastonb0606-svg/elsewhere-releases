@@ -1,0 +1,4 @@
+{
+ "placement": {"type": "minecraft:random_spread", "salt": 71291, "separation": 10, "spacing": 24},
+ "structures": [{"structure": "elsewhere:tidelock_vault", "weight": 1}]
+}

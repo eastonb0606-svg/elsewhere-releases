@@ -1,0 +1,14 @@
+{
+	"required": false,
+	"package": "dev.elsewhere.arsenal.client.anim.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"ConditionalPropsAccessor",
+		"RangePropsAccessor",
+		"FirstPersonUseAnimMixin",
+		"HumanoidModelUseAnimMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

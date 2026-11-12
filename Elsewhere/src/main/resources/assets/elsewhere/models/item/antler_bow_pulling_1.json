@@ -1,0 +1,6 @@
+{
+  "parent": "elsewhere:item/antler_bow",
+  "textures": {
+    "layer0": "elsewhere:item/antler_bow_pulling_1"
+  }
+}

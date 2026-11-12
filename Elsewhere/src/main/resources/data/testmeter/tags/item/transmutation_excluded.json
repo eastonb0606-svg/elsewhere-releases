@@ -1,0 +1,673 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:abyssal_eye",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aegis_of_the_ladder",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amethyst_wand",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ankh_of_neferkhet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ashtusk_gland",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ashtusk_harness",
+      "required": false
+    },
+    {
+      "id": "elsewhere:attuned_wayfinder",
+      "required": false
+    },
+    {
+      "id": "elsewhere:avalanche_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:bell_of_the_flock",
+      "required": false
+    },
+    {
+      "id": "elsewhere:blossom_seal",
+      "required": false
+    },
+    {
+      "id": "elsewhere:blossom_seal_charm",
+      "required": false
+    },
+    {
+      "id": "elsewhere:boss_altar",
+      "required": false
+    },
+    {
+      "id": "elsewhere:boss_token",
+      "required": false
+    },
+    {
+      "id": "elsewhere:brassback_key",
+      "required": false
+    },
+    {
+      "id": "elsewhere:brine_lung",
+      "required": false
+    },
+    {
+      "id": "elsewhere:bufo_gland",
+      "required": false
+    },
+    {
+      "id": "elsewhere:burning_glass",
+      "required": false
+    },
+    {
+      "id": "elsewhere:cantors_diadem",
+      "required": false
+    },
+    {
+      "id": "elsewhere:challengers_cleaver",
+      "required": false
+    },
+    {
+      "id": "elsewhere:champions_belt",
+      "required": false
+    },
+    {
+      "id": "elsewhere:couchlock_club",
+      "required": false
+    },
+    {
+      "id": "elsewhere:crimson_fungus_on_a_stick",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_forged_blade",
+      "required": false
+    },
+    {
+      "id": "elsewhere:elder_bark_crown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ember_flick",
+      "required": false
+    },
+    {
+      "id": "elsewhere:endless_snack_pouch",
+      "required": false
+    },
+    {
+      "id": "elsewhere:engineers_harness",
+      "required": false
+    },
+    {
+      "id": "elsewhere:everflow_bong",
+      "required": false
+    },
+    {
+      "id": "elsewhere:frayed_wayfinder",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_heart",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galvanic_trident",
+      "required": false
+    },
+    {
+      "id": "elsewhere:glassfang",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gold_bomb",
+      "required": false
+    },
+    {
+      "id": "elsewhere:grumblegut_tusk",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gulp_tongue",
+      "required": false
+    },
+    {
+      "id": "elsewhere:halo_of_the_outer_end",
+      "required": false
+    },
+    {
+      "id": "elsewhere:harvest_scythe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heartwood_effigy",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heliograph_lens",
+      "required": false
+    },
+    {
+      "id": "elsewhere:herding_crook",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hotbox_lantern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushcloak",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hymnal_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:inverted_crown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ironjaw_gland",
+      "required": false
+    },
+    {
+      "id": "elsewhere:kaze_katana",
+      "required": false
+    },
+    {
+      "id": "elsewhere:kingsplitter",
+      "required": false
+    },
+    {
+      "id": "elsewhere:kitestring_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:kraken_ink_bomb",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lament_harness",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lilycrown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:matriarchs_shell",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moon_eye",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moonring_seed",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mournmaws_blessing",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mournmaws_tear",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ninefold_rod",
+      "required": false
+    },
+    {
+      "id": "elsewhere:petal_glider",
+      "required": false
+    },
+    {
+      "id": "elsewhere:pharaohs_nemes",
+      "required": false
+    },
+    {
+      "id": "elsewhere:phasewalker_greaves",
+      "required": false
+    },
+    {
+      "id": "elsewhere:pyre_crown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:resin_heart_locket",
+      "required": false
+    },
+    {
+      "id": "elsewhere:resonant_tuning",
+      "required": false
+    },
+    {
+      "id": "elsewhere:rift_anchor",
+      "required": false
+    },
+    {
+      "id": "elsewhere:rimeheart_maul",
+      "required": false
+    },
+    {
+      "id": "elsewhere:roc_feather_longbow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:rootcall_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:scarecrows_grin",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sculk_censer",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sculk_resonator",
+      "required": false
+    },
+    {
+      "id": "elsewhere:seed_fireball",
+      "required": false
+    },
+    {
+      "id": "elsewhere:siren_conch",
+      "required": false
+    },
+    {
+      "id": "elsewhere:skyhook",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sonar_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:soul_fireball",
+      "required": false
+    },
+    {
+      "id": "elsewhere:stormcaller_harpoon",
+      "required": false
+    },
+    {
+      "id": "elsewhere:stormcoil_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:stormcrest_helm",
+      "required": false
+    },
+    {
+      "id": "elsewhere:stormsage_mantle",
+      "required": false
+    },
+    {
+      "id": "elsewhere:summit_crown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sun_orb",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunfire_khopesh",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunlance_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunpit_lure",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_mirror_key",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tide_key",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tuning_fork_of_auris",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tyrants_tusk",
+      "required": false
+    },
+    {
+      "id": "elsewhere:unblinking_eye",
+      "required": false
+    },
+    {
+      "id": "elsewhere:undertow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:void_breath",
+      "required": false
+    },
+    {
+      "id": "elsewhere:void_scale",
+      "required": false
+    },
+    {
+      "id": "elsewhere:void_scale_elytra",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder_glasswaste",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder_greenhaze",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder_ironpeak",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder_pale_hollow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder_petalwind",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder_the_hush",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wayfinder_verdigris_sea",
+      "required": false
+    },
+    {
+      "id": "elsewhere:wyrmfang",
+      "required": false
+    },
+    {
+      "id": "elsewhere:zephyr_key",
+      "required": false
+    },
+    {
+      "id": "elsewhere:zephyr_wings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amber",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amber_ore",
+      "required": false
+    },
+    {
+      "id": "elsewhere:boss_trophy",
+      "required": false
+    },
+    {
+      "id": "elsewhere:paleweave_mantle",
+      "required": false
+    },
+    {
+      "id": "elsewhere:antler_bow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heartwood_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heartwood_pickaxe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heartwood_axe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heartwood_shovel",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heartwood_hoe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:paleweave_helmet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:paleweave_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:paleweave_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_helmet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_chestplate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:eel_tooth_spear",
+      "required": false
+    },
+    {
+      "id": "elsewhere:eyeblossom_circlet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hotbox_visor",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lined_moonsilk_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lined_moonsilk_hood",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lined_moonsilk_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lined_moonsilk_robe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moonsilk_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moonsilk_hood",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moonsilk_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moonsilk_robe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:petalstep_sandals",
+      "required": false
+    },
+    {
+      "id": "elsewhere:rimewalker_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_visor",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sporebloom_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:giant_fern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:trichome_quartz",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushward_bell",
+      "required": false
+    },
+    {
+      "id": "elsewhere:pearlite",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_ribbon",
+      "required": false
+    },
+    {
+      "id": "elsewhere:termite_hive_lantern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aphelion_heart",
+      "required": false
+    },
+    {
+      "id": "elsewhere:solaxis_ember",
+      "required": false
+    },
+    {
+      "id": "elsewhere:choir_vestment",
+      "required": false
+    },
+    {
+      "id": "elsewhere:cantors_bell_shard",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_rapier",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_pinion",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gizzard_stone",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gravity_pearl",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heartwood_greatbow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heliodor_mirror_core",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushstep_greaves",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ironclad_chain",
+      "required": false
+    },
+    {
+      "id": "elsewhere:engineers_lantern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:prospectors_pendulum",
+      "required": false
+    },
+    {
+      "id": "elsewhere:seers_hourglass",
+      "required": false
+    },
+    {
+      "id": "elsewhere:soulwick_lantern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:steam_auger_bit",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_plate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:termite_queen",
+      "required": false
+    },
+    {
+      "id": "elsewhere:verdigris_mitre",
+      "required": false
+    },
+    {
+      "id": "elsewhere:void_tether_spool",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ironclad_flail",
+      "required": false
+    },
+    {
+      "id": "elsewhere:steam_auger",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirrorbolt_arbalest",
+      "required": false
+    },
+    {
+      "id": "elsewhere:duel_block",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+ "role": "crossbow",
+ "skin": "elsewhere:textures/entity/hrafnholt/bolt_thrall.png",
+ "armor": {
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 4864552,
+ "main_hand": "minecraft:crossbow",
+ "stats": {
+  "health": 20,
+  "speed": 0.26
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "crit_cooldown": 200,
+  "retreat_health": 0.0,
+  "sprint_chance": 0.3,
+  "strafe": 0.5,
+  "retreat_chance": 0.0
+ }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "elsewhere:item/court_castellan_spawn_egg"
+  }
+}

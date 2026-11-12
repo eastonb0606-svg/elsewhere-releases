@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elsewhere:block/sunwright_brick_slab"
+    },
+    "type=double": {
+      "model": "elsewhere:block/sunwright_bricks"
+    },
+    "type=top": {
+      "model": "elsewhere:block/sunwright_brick_slab_top"
+    }
+  }
+}

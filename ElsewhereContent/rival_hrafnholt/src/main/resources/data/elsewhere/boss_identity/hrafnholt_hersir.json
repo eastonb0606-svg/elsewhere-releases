@@ -1,0 +1,35 @@
+{
+  "id": "elsewhere:hrafnholt_hersir",
+  "kingdom": "hrafnholt",
+  "slots": {
+    "weapons": "raven_war_spear",
+    "movement": "flank_circle",
+    "defence": "spear_parry",
+    "recovery": "horn_rally",
+    "reach": "charge_lunge_10",
+    "last_stand": "standard_plant"
+  },
+  "generic": [
+    "circle_strafe",
+    "sprint_jump_crit"
+  ],
+  "signature": [
+    "raid_charge",
+    "spear_vault",
+    "horn_of_three_calls"
+  ],
+  "telegraph": {
+    "particle": "cloud",
+    "colour": "#8E99A6",
+    "sound": {
+      "event": "event.raid.horn",
+      "pitch": 1.2
+    }
+  },
+  "last_stand": "standard_plant",
+  "idle": "Spins the spear once over her head, plants it butt-first and checks the horn.",
+  "risen_keeps": [
+    "raid_charge",
+    "horn_of_three_calls"
+  ]
+}

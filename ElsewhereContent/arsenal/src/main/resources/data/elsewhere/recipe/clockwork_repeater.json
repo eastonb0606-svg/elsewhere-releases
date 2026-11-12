@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " P ",
+    "GXG",
+    " R "
+  ],
+  "key": {
+    "P": "#elsewhere:repeater_plate",
+    "G": "#elsewhere:repeater_gear",
+    "X": "minecraft:crossbow",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "elsewhere:clockwork_repeater"
+  }
+}

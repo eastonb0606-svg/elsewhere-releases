@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:void_scale",
+  "base": "minecraft:netherite_chestplate",
+  "addition": "minecraft:elytra",
+  "result": {
+    "id": "elsewhere:void_scale_elytra"
+  }
+}

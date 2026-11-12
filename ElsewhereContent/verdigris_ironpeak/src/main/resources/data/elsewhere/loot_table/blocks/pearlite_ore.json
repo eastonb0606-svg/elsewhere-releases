@@ -1,0 +1,27 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:pearlite",
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    }
+   ],
+   "condition": {
+    "type": "minecraft:survives_explosion"
+   }
+  }
+ ]
+}

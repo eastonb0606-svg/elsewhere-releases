@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:hushstep"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:hushstep"
+      }
+    ]
+  }
+}

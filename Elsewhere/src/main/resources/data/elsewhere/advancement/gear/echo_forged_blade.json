@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:echo_forged_blade"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.gear.echo_forged_blade.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.gear.echo_forged_blade.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elsewhere:root",
+  "criteria": {
+    "has": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elsewhere:echo_forged_blade"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has"
+    ]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_arsenal",
+	"version": "${version}",
+	"name": "Elsewhere: Arsenal (dev module)",
+	"description": "The Elsewhere caster resource system, magic projectiles and caster/ranged gear. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.arsenal.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.arsenal.DevClientEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"mixins": [
+		"elsewhere_arsenal.mixins.json",
+		{"config": "elsewhere_arsenal_useanims.mixins.json", "environment": "client"}
+	]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "elsewhere:hrafnholt_huntmaster",
+  "kingdom": "hrafnholt",
+  "slots": {
+    "weapons": "hornbow_hunting_axe",
+    "movement": "lane_runner",
+    "defence": "wolf_screen",
+    "recovery": "wolf_tend",
+    "reach": "pelt_dive_6",
+    "last_stand": "rope_snares"
+  },
+  "generic": [],
+  "signature": [
+    "wolf_pack",
+    "pinning_arrow",
+    "pelt_dive"
+  ],
+  "telegraph": {
+    "particle": "end_rod",
+    "colour": "#F2F2F2",
+    "sound": {
+      "event": "item.goat_horn.sound.2",
+      "pitch": 1.0
+    }
+  },
+  "last_stand": "rope_snares",
+  "idle": "Whistles low through two fingers and scratches a wolf behind the ear.",
+  "risen_keeps": [
+    "wolf_pack",
+    "pinning_arrow"
+  ]
+}

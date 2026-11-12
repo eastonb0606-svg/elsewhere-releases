@@ -1,0 +1,239 @@
+{
+  "type": "minecraft:sequence",
+  "sequence": [
+    "minecraft:bedrock_floor",
+    {
+      "type": "minecraft:condition",
+      "if_true": {
+        "type": "minecraft:above_preliminary_surface"
+      },
+      "then_run": {
+        "type": "minecraft:sequence",
+        "sequence": [
+          {
+            "type": "minecraft:condition",
+            "if_true": "minecraft:on_floor",
+            "then_run": {
+              "type": "minecraft:sequence",
+              "sequence": [
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:not",
+                    "invert": {
+                      "type": "minecraft:water",
+                      "offset": -1,
+                      "surface_depth_multiplier": 0,
+                      "add_stone_depth": false
+                    }
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": "minecraft:mud"
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "elsewhere:resin_bog"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:sequence",
+                    "sequence": [
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:not",
+                          "invert": {
+                            "type": "minecraft:y_above",
+                            "anchor": {
+                              "absolute": 65
+                            },
+                            "surface_depth_multiplier": 0,
+                            "add_stone_depth": false
+                          }
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": "minecraft:mud"
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:noise_threshold",
+                          "noise": "minecraft:surface",
+                          "min_threshold": 0.15,
+                          "max_threshold": 0.4
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": "minecraft:pale_moss_block"
+                        }
+                      },
+                      {
+                        "type": "minecraft:block",
+                        "result_state": "minecraft:grass_block"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "elsewhere:silent_clearing"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:sequence",
+                    "sequence": [
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:noise_threshold",
+                          "noise": "minecraft:surface",
+                          "min_threshold": 0.2,
+                          "max_threshold": 1.8
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": "elsewhere:ashen_moss"
+                        }
+                      },
+                      {
+                        "type": "minecraft:block",
+                        "result_state": "minecraft:grass_block"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "elsewhere:weeping_deeps"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:sequence",
+                    "sequence": [
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:noise_threshold",
+                          "noise": "minecraft:surface",
+                          "min_threshold": -0.2,
+                          "max_threshold": 0.1
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": "minecraft:coarse_dirt"
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:noise_threshold",
+                          "noise": "minecraft:surface",
+                          "min_threshold": 0.3,
+                          "max_threshold": 1.8
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": "minecraft:pale_moss_block"
+                        }
+                      },
+                      {
+                        "type": "minecraft:block",
+                        "result_state": "minecraft:podzol"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:noise_threshold",
+                    "noise": "minecraft:surface",
+                    "min_threshold": 0.25,
+                    "max_threshold": 0.6
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": "minecraft:pale_moss_block"
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:noise_threshold",
+                    "noise": "minecraft:surface",
+                    "min_threshold": -0.6,
+                    "max_threshold": -0.4
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": "elsewhere:ashen_moss"
+                  }
+                },
+                {
+                  "type": "minecraft:block",
+                  "result_state": "minecraft:grass_block"
+                }
+              ]
+            }
+          },
+          {
+            "type": "minecraft:condition",
+            "if_true": "minecraft:under_floor",
+            "then_run": {
+              "type": "minecraft:sequence",
+              "sequence": [
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "elsewhere:resin_bog"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": "minecraft:mud"
+                  }
+                },
+                {
+                  "type": "minecraft:block",
+                  "result_state": "minecraft:dirt"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:condition",
+      "if_true": {
+        "type": "minecraft:vertical_gradient",
+        "random_name": "elsewhere:tuff",
+        "true_at_and_below": {
+          "absolute": 0
+        },
+        "false_at_and_above": {
+          "absolute": 8
+        }
+      },
+      "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:tuff"
+      }
+    }
+  ]
+}

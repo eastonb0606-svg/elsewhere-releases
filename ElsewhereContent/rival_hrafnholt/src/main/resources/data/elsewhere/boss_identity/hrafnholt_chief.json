@@ -1,0 +1,32 @@
+{
+  "id": "elsewhere:hrafnholt_chief",
+  "kingdom": "hrafnholt",
+  "slots": {
+    "weapons": "twin_iron_axes",
+    "movement": "straight_charge",
+    "defence": "unflinching",
+    "recovery": "none",
+    "reach": "rage_leap_7",
+    "last_stand": "pelt_shed"
+  },
+  "generic": [],
+  "signature": [
+    "furrow_run",
+    "pelt_leap",
+    "wolf_howl"
+  ],
+  "telegraph": {
+    "particle": "dust",
+    "colour": "#A01818",
+    "sound": {
+      "event": "entity.wolf.howl",
+      "pitch": 0.8
+    }
+  },
+  "last_stand": "pelt_shed",
+  "idle": "Gnaws her axe haft, crouches, sniffs the air with her head tilted like a wolf.",
+  "risen_keeps": [
+    "furrow_run",
+    "pelt_leap"
+  ]
+}

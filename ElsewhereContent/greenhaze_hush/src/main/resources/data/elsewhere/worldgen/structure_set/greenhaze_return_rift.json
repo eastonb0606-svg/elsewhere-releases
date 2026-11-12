@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470105,
+    "separation": 12,
+    "spacing": 37
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:greenhaze_return_rift",
+      "weight": 1
+    }
+  ]
+}

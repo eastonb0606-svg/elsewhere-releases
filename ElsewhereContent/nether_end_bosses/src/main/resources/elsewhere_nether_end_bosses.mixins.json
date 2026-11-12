@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.stub.nether_end_bosses.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"LevelMixin",
+		"LivingEntityMixin",
+		"ServerLevelMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

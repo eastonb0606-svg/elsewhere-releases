@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "elsewhere:kelpwood_planks"
+ },
+ "pattern": [
+  "#  ",
+  "## ",
+  "###"
+ ],
+ "result": {
+  "id": "elsewhere:kelpwood_stairs",
+  "count": 4
+ }
+}

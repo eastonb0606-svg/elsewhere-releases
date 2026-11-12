@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.boss_music.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"MusicManagerMixin",
+		"SoundManagerMixin",
+		"SoundVolumeAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

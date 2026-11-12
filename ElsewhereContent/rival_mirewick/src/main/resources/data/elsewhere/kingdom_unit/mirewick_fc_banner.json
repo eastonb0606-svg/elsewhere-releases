@@ -1,0 +1,30 @@
+{
+ "role": "melee",
+ "ability": "standard",
+ "skin": "elsewhere:textures/entity/kingdom/mirewick/fc_sellsword.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "main_hand": "minecraft:gray_banner",
+ "stats": {
+  "health": 28,
+  "speed": 0.28,
+  "armor": 2.0,
+  "armor_toughness": 2.0,
+  "knockback_resistance": 0.1
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.5,
+  "block_chance": 0.0,
+  "crit_chance": 0.05,
+  "retreat_health": 0.4
+ },
+ "aggression": 2,
+ "armor_dye": 8421508
+}

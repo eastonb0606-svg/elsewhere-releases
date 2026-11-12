@@ -1,0 +1,9 @@
+{
+ "replace": false,
+ "values": [
+  { "id": "elsewhere:hrafnholt_arm_ring", "required": false },
+  { "id": "elsewhere:azmar_commission_slip", "required": false },
+  { "id": "elsewhere:azmar_letter_of_credit", "required": false },
+  { "id": "elsewhere:mirewick_loan_note", "required": false }
+ ]
+}

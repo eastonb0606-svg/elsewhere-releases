@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_duelist-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere duelist client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.duelist.gametest.DuelistScreenshots"]
+	},
+	"depends": {
+		"elsewhere_duelist": "*"
+	}
+}

@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:smithing_transform",
+ "category": "equipment",
+ "template": "elsewhere:climber_upgrade_smithing_template",
+ "base": "minecraft:diamond_axe",
+ "addition": "elsewhere:skyiron_ingot",
+ "result": {
+  "id": "elsewhere:skyiron_axe",
+  "count": 1
+ }
+}

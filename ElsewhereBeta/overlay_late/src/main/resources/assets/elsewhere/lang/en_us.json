@@ -1,0 +1,11 @@
+{
+  "item.elsewhere.wayfinder_petalwind": "Wayfinder: Petalwind Isles",
+  "item.elsewhere.wayfinder_glasswaste": "Wayfinder: The Glasswaste",
+  "item.elsewhere.wayfinder_verdigris_sea": "Wayfinder: Verdigris Sea",
+  "item.elsewhere.wayfinder_ironpeak": "Wayfinder: Ironpeak",
+  "item.elsewhere.wayfinder_greenhaze": "Wayfinder: The Greenhaze",
+  "item.elsewhere.wayfinder_the_hush": "Wayfinder: The Hush",
+  "message.elsewhere.trips.on": "Accidental trips are on for you. Use /elsewhere trips off to stop them.",
+  "message.elsewhere.trips.off": "Accidental trips are off for you. Use /elsewhere trips on to allow them again.",
+  "message.elsewhere.trips.server_off": "(This server has Overworld content switched off, so no accidental trips happen anyway.)"
+}

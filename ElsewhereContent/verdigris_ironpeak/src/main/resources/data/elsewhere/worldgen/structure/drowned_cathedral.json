@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "elsewhere:foundry_trench",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "drowned_cathedral",
+ "placement": "ocean_floor",
+ "min_height": -60,
+ "max_height": 40,
+ "y_offset": 1
+}

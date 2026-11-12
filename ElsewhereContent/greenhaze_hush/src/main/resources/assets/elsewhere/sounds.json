@@ -1,0 +1,18 @@
+{
+  "sfx3.auris.roar": {"subtitle": "subtitles.elsewhere.sfx3.auris.roar", "sounds": [{"name": "elsewhere:sfx3/auris/roar"}, {"name": "elsewhere:sfx3/auris/roar", "pitch": 0.95}]},
+  "sfx3.auris.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.auris.roar_layer", "sounds": [{"name": "minecraft:entity.warden.heartbeat", "type": "event", "pitch": 0.6}, {"name": "minecraft:entity.warden.listening_angry", "type": "event", "pitch": 0.7, "volume": 0.8}]},
+  "sfx3.auris.tele": {"subtitle": "subtitles.elsewhere.sfx3.auris.tele", "sounds": [{"name": "elsewhere:sfx3/auris/tele"}]},
+  "sfx3.auris.big": {"subtitle": "subtitles.elsewhere.sfx3.auris.big", "sounds": [{"name": "minecraft:entity.warden.sonic_charge", "type": "event", "pitch": 1.1, "volume": 0.8}]},
+  "sfx3.grumblegut.roar": {"subtitle": "subtitles.elsewhere.sfx3.grumblegut.roar", "sounds": [{"name": "elsewhere:sfx3/grumblegut/roar"}, {"name": "elsewhere:sfx3/grumblegut/roar", "pitch": 0.94}]},
+  "sfx3.grumblegut.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.grumblegut.roar_layer", "sounds": [{"name": "minecraft:entity.polar_bear.warning", "type": "event", "pitch": 0.6, "volume": 0.8}, {"name": "minecraft:entity.panda.aggressive_ambient", "type": "event", "pitch": 0.5, "volume": 0.8}]},
+  "sfx3.grumblegut.tele": {"subtitle": "subtitles.elsewhere.sfx3.grumblegut.tele", "sounds": [{"name": "elsewhere:sfx3/grumblegut/tele"}]},
+  "sfx3.grumblegut.big": {"subtitle": "subtitles.elsewhere.sfx3.grumblegut.big", "sounds": [{"name": "minecraft:entity.panda.bite", "type": "event", "pitch": 0.6, "volume": 0.9}]},
+  "sfx3.lithara.roar": {"subtitle": "subtitles.elsewhere.sfx3.lithara.roar", "sounds": [{"name": "elsewhere:sfx3/lithara/roar"}, {"name": "elsewhere:sfx3/lithara/roar", "pitch": 1.06}]},
+  "sfx3.lithara.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.lithara.roar_layer", "sounds": [{"name": "minecraft:block.amethyst_block.resonate", "type": "event", "pitch": 0.6, "volume": 0.8}, {"name": "minecraft:block.bell.resonate", "type": "event", "pitch": 1.3, "volume": 0.6}]},
+  "sfx3.lithara.tele": {"subtitle": "subtitles.elsewhere.sfx3.lithara.tele", "sounds": [{"name": "elsewhere:sfx3/lithara/tele"}]},
+  "sfx3.lithara.big": {"subtitle": "subtitles.elsewhere.sfx3.lithara.big", "sounds": [{"name": "minecraft:block.amethyst_cluster.break", "type": "event", "pitch": 0.6, "volume": 0.9}]},
+  "sfx3.percolax.roar": {"subtitle": "subtitles.elsewhere.sfx3.percolax.roar", "sounds": [{"name": "elsewhere:sfx3/percolax/roar"}, {"name": "elsewhere:sfx3/percolax/roar", "pitch": 0.95}]},
+  "sfx3.percolax.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.percolax.roar_layer", "sounds": [{"name": "minecraft:block.bubble_column.upwards_ambient", "type": "event", "pitch": 0.6, "volume": 0.9}, {"name": "minecraft:block.fire.extinguish", "type": "event", "pitch": 0.5, "volume": 0.7}]},
+  "sfx3.percolax.tele": {"subtitle": "subtitles.elsewhere.sfx3.percolax.tele", "sounds": [{"name": "elsewhere:sfx3/percolax/tele"}]},
+  "sfx3.percolax.big": {"subtitle": "subtitles.elsewhere.sfx3.percolax.big", "sounds": [{"name": "minecraft:block.fire.extinguish", "type": "event", "pitch": 0.4, "volume": 0.9}]}
+}

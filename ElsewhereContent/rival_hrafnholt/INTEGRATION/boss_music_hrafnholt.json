@@ -1,0 +1,17 @@
+{
+ "_comment": "Merge into boss_music.json 'bosses'. Seat ids match the music lane; the Risen ids (hrafnholt_risen_<slot>) are new and share the seat theme.",
+ "bosses": {
+  "elsewhere:hrafnholt_jarl": "elsewhere:boss_music.theme.tyrant",
+  "elsewhere:hrafnholt_hersir": "elsewhere:boss_music.theme.clash_defiant",
+  "elsewhere:hrafnholt_hallwarden": "elsewhere:boss_music.theme.burnt_spirit",
+  "elsewhere:hrafnholt_skald": "elsewhere:boss_music.theme.firesong",
+  "elsewhere:hrafnholt_chief": "elsewhere:boss_music.theme.trouble_with_tribals",
+  "elsewhere:hrafnholt_huntmaster": "elsewhere:boss_music.theme.death_and_axes",
+  "elsewhere:hrafnholt_risen_hersir": "elsewhere:boss_music.theme.clash_defiant",
+  "elsewhere:hrafnholt_risen_hallwarden": "elsewhere:boss_music.theme.burnt_spirit",
+  "elsewhere:hrafnholt_risen_skald": "elsewhere:boss_music.theme.firesong",
+  "elsewhere:hrafnholt_risen_chief": "elsewhere:boss_music.theme.trouble_with_tribals",
+  "elsewhere:hrafnholt_risen_huntmaster": "elsewhere:boss_music.theme.death_and_axes"
+ },
+ "realm": "elsewhere:hrafnholt_music.realm"
+}

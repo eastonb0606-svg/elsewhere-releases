@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 7825,
+    "separation": 20,
+    "spacing": 56
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:aphelion_shattered_halo",
+      "weight": 1
+    }
+  ]
+}

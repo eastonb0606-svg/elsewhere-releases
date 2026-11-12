@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "#elsewhere:has_return_rift/ironpeak",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "return_rift_ironpeak",
+ "placement": "surface",
+ "min_height": 100,
+ "max_height": 400,
+ "y_offset": 1
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "elsewhere:sunglass_shard",
+    "elsewhere:sunglass_shard",
+    "elsewhere:sunglass_shard",
+    "elsewhere:sunglass_shard",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "elsewhere:heliograph_lens"
+  ],
+  "result": {
+    "id": "elsewhere:sunwright_mirror_key",
+    "count": 1
+  }
+}

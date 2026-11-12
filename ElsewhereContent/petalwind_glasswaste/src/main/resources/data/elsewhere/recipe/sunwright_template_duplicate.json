@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "DTD",
+  "DBD",
+  "DDD"
+ ],
+ "key": {
+  "D": "minecraft:diamond",
+  "T": "elsewhere:sunwright_upgrade_smithing_template",
+  "B": "elsewhere:sunwright_bricks"
+ },
+ "result": {
+  "id": "elsewhere:sunwright_upgrade_smithing_template",
+  "count": 2
+ }
+}

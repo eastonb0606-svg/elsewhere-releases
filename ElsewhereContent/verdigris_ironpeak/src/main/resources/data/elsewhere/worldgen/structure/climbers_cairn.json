@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "#elsewhere:is_ironpeak",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "climbers_cairn",
+ "placement": "surface",
+ "min_height": 150,
+ "max_height": 1400,
+ "y_offset": 1
+}

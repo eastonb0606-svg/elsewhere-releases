@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_arsenal-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere arsenal client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.arsenal.gametest.ArsenalScreenshots"]
+	},
+	"depends": {
+		"elsewhere_arsenal": "*"
+	}
+}

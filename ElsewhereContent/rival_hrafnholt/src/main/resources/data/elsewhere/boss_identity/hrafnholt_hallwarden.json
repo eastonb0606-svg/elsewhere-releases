@@ -1,0 +1,34 @@
+{
+  "id": "elsewhere:hrafnholt_hallwarden",
+  "kingdom": "hrafnholt",
+  "slots": {
+    "weapons": "hearth_sword_studded",
+    "movement": "door_hold",
+    "defence": "ward_shield_wall",
+    "recovery": "ward_leech",
+    "reach": "shoulder_charge_8",
+    "last_stand": "door_barred"
+  },
+  "generic": [
+    "shield_block"
+  ],
+  "signature": [
+    "bash_chain",
+    "hearth_ward",
+    "door_breaker"
+  ],
+  "telegraph": {
+    "particle": "lava",
+    "colour": "#C2512B",
+    "sound": {
+      "event": "block.anvil.land",
+      "pitch": 0.7
+    }
+  },
+  "last_stand": "door_barred",
+  "idle": "Knocks the shield boss twice with his sword pommel and bars an imaginary door with his arm.",
+  "risen_keeps": [
+    "hearth_ward",
+    "door_breaker"
+  ]
+}

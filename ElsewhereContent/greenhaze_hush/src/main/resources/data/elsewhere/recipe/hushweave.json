@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:black_wool",
+    "elsewhere:hush_membrane"
+  ],
+  "result": {
+    "count": 1,
+    "id": "elsewhere:hushweave"
+  }
+}

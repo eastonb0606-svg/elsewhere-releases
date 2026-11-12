@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "elsewhere:block/hushstone",
+    "side": "elsewhere:block/hushstone",
+    "top": "elsewhere:block/hushstone"
+  }
+}

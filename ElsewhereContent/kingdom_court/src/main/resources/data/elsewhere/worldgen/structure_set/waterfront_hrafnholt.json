@@ -1,0 +1,12 @@
+{
+  "structures": [
+    {
+      "structure": "elsewhere:waterfront_hrafnholt",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "elsewhere:castle_aldermark",
+    "faction": "elsewhere:hrafnholt"
+  }
+}

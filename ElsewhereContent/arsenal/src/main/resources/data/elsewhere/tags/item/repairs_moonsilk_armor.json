@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:amber",
+      "required": false
+    },
+    "elsewhere:moonsilk_thread"
+  ]
+}

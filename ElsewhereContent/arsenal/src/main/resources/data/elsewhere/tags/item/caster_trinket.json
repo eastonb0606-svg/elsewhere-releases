@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:glimmerstone_focus",
+    {
+      "id": "elsewhere:moon_eye",
+      "required": false
+    }
+  ]
+}

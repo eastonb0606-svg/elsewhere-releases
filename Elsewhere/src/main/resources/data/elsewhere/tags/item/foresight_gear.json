@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:stormcrest_helm",
+    {
+      "id": "elsewhere:seers_hourglass",
+      "required": false
+    }
+  ]
+}

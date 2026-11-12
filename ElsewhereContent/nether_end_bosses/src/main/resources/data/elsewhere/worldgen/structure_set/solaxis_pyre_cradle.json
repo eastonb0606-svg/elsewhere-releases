@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 7822,
+    "separation": 8,
+    "spacing": 20
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:solaxis_pyre_cradle",
+      "weight": 1
+    }
+  ]
+}

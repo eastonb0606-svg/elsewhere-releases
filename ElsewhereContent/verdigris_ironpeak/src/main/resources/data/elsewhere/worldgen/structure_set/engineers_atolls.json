@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 71234,
+  "separation": 6,
+  "spacing": 16
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:engineers_atoll",
+   "weight": 1
+  }
+ ]
+}

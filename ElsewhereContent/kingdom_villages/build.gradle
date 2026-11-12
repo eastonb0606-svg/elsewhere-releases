@@ -1,0 +1,88 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere_kingdom_villages"
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"elsewhere_kingdom_villages" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// `./gradlew runServer` starts a dev server (port 25723, see run/server.properties)
+		// that runs the villages self-test + load test and exits.
+		server {
+			vmArg "-Xmx1536m"
+			property "villages.selftest", "true"
+			property "villages.selftest.exit", "true"
+		}
+		client {
+			vmArg "-Xmx2g"
+		}
+		// `./gradlew runWorldgen`: fresh normal world with structures on (run-wg/). Every faction's rebuild, outpost and hamlet
+		// on real plains/desert/savanna/taiga/snowy villages, judged by dev/FitAudit (floating, buried, flooding, valuables), then restored.
+		worldgen {
+			server()
+			name "Worldgen check"
+			runDir "run-wg"
+			vmArg "-Xmx1536m"
+			property "villages.worldgen", "true"
+		}
+	}
+}
+
+// `./gradlew runClientGameTest` opens a real client, builds a village per rebuild style and saves screenshots to screenshots/.
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere_kingdom_villages-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+	vmArg "-Xmx2g"
+	property "villages.screenshotDir", file("screenshots").absolutePath
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// Dev only: the K-A kingdom base jar (KingdomApi, soldiers, squads). Never shipped: the integrator merges sources.
+	implementation files('devlibs/elsewhere_kingdom.jar')
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+tasks.register('dist', Copy) {
+	dependsOn 'jar'
+	from(tasks.named('jar'))
+	into file('dist')
+}

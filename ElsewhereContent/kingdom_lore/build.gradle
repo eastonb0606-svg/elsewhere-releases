@@ -1,0 +1,76 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere_kingdom_lore"
+}
+
+loom {
+	mods {
+		"elsewhere_kingdom_lore" {
+			sourceSet sourceSets.main
+		}
+	}
+
+	runs {
+		// `./gradlew runServer` starts a dev server (port 25713, see run/server.properties)
+		// that runs the lore self-test and exits.
+		server {
+			vmArg "-Xmx1536m"
+			property "lore.selftest", "true"
+			property "lore.selftest.exit", "true"
+		}
+	}
+}
+
+// `./gradlew runClientGameTest` opens a real client and photographs every lore item in item frames (screenshots/).
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere_kingdom_lore-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+	vmArg "-Xmx2g"
+	property "lore.screenshotDir", file("screenshots").absolutePath
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// Dev only: the K-A kingdom base jar (compile + runtime) and the latest merged Elsewhere jar (runtime), never shipped.
+	implementation files('devlibs/elsewhere_kingdom.jar')
+	if (file('devlibs/elsewhere.jar').exists()) {
+		runtimeOnly files('devlibs/elsewhere.jar')
+	}
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+tasks.register('dist', Copy) {
+	dependsOn 'jar'
+	from(tasks.named('jar'))
+	into file('dist')
+}

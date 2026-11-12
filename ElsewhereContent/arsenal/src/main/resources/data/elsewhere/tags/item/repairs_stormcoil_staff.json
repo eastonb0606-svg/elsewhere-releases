@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:verdigris_gear",
+      "required": false
+    },
+    "minecraft:copper_ingot"
+  ]
+}

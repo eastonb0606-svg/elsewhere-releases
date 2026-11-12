@@ -1,0 +1,52 @@
+{
+ "variants": {
+  "power=0": {
+   "model": "elsewhere:block/storm_coil"
+  },
+  "power=1": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=2": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=3": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=4": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=5": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=6": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=7": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=8": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=9": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=10": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=11": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=12": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=13": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=14": {
+   "model": "elsewhere:block/storm_coil_charged"
+  },
+  "power=15": {
+   "model": "elsewhere:block/storm_coil_charged"
+  }
+ }
+}

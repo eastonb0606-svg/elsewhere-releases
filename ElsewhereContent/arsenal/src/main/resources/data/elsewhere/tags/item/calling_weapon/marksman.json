@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:mirrorbolt_arbalest",
+      "required": false
+    },
+    {
+      "id": "elsewhere:clockwork_repeater",
+      "required": false
+    },
+    {
+      "id": "elsewhere:roc_feather_longbow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hornbow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_fowlers_marshbow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_composite_bow",
+      "required": false
+    }
+  ]
+}

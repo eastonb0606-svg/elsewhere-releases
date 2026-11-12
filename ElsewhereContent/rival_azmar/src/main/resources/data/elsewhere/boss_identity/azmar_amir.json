@@ -1,0 +1,28 @@
+{
+  "id": "elsewhere:azmar_amir",
+  "kingdom": "azmar",
+  "slots": {
+    "weapons": "scarab_spear_javelins",
+    "movement": "mounted_lance_arcs",
+    "defence": "camel_barding",
+    "recovery": "none",
+    "reach": "camel_charge_14",
+    "last_stand": "final_charge"
+  },
+  "generic": [],
+  "signature": [
+    "camel_charge",
+    "javelin_volley",
+    "dismount_lunge"
+  ],
+  "telegraph": {
+    "particle": "dust_plume",
+    "colour": "#B0362B",
+    "sound": {
+      "event": "entity.camel.dash",
+      "pitch": 1.0
+    }
+  },
+  "last_stand": "final_charge",
+  "idle": "The camel rears and bellows while he raises the spear to the sky."
+}

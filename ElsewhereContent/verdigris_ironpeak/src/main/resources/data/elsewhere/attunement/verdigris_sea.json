@@ -1,0 +1,12 @@
+{
+ "dimension": "elsewhere:verdigris_sea",
+ "ingredients": [
+  "minecraft:lightning_rod",
+  "minecraft:nautilus_shell",
+  "minecraft:prismarine_crystals",
+  "minecraft:dried_kelp_block",
+  "minecraft:heart_of_the_sea"
+ ],
+ "requires": "none",
+ "notes": "R N R / P W P / K O K (DIMENSIONS.md section 8). Mid-late."
+}

@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_rival_azmar",
+	"version": "${version}",
+	"name": "Elsewhere: Rival Azmar (dev module)",
+	"description": "The Sultanate of Azmar: the smart, ancient-Egyptian mythic rival kingdom. Faction data, units, khopesh family, headpieces, bosses, field tactics. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.rivals.azmar.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.rivals.azmar.client.AzmarClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"elsewhere_kingdom": "*",
+		"elsewhere_duelist": "*",
+		"elsewhere_kingdom_court": "*"
+	}
+}

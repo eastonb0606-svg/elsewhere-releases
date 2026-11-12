@@ -1,0 +1,31 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/sand_dancer.png",
+ "armor": {
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 15590348,
+ "main_hand": "elsewhere:azmar_twin_khopesh",
+ "stats": {
+  "health": 20,
+  "speed": 0.31
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.35,
+  "strafe": 0.8,
+  "retreat_chance": 0.35,
+  "block_chance": 0.0,
+  "crit_chance": 0.1,
+  "retreat_health": 0.2
+ },
+ "trim": {
+  "material": "minecraft:lapis",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:dune"
+  ]
+ }
+}

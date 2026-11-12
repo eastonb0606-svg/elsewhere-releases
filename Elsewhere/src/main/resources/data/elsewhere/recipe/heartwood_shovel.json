@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "elsewhere:amber",
+    "#": "minecraft:stick"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "elsewhere:heartwood_shovel"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:sunscribe"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:sunscribe"
+      }
+    ]
+  }
+}

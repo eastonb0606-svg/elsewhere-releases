@@ -1,0 +1,6 @@
+{
+  "_doc": "s-censer: arsenal's tooltip line for every CasterItem (elsewhere.tooltip.<id>); the censer's Glimmer cost line is per second of swinging.",
+  "lang": {
+    "elsewhere.tooltip.choirlight_censer": "Swing it to heal allies around you (cost per second)"
+  }
+}

@@ -1,0 +1,73 @@
+{
+ "name": "mirewick_palace",
+ "palette": {
+  "wall": "minecraft:quartz_bricks",
+  "wall_alt": "minecraft:calcite",
+  "pillar": "minecraft:quartz_pillar",
+  "floor": "minecraft:smooth_stone",
+  "roof": "minecraft:red_nether_brick_stairs",
+  "trim": "minecraft:purple_terracotta",
+  "accent": "minecraft:yellow_terracotta",
+  "wood": "minecraft:mangrove_planks",
+  "crimson": "minecraft:crimson_planks",
+  "lantern": "minecraft:lantern",
+  "light": "minecraft:lantern",
+  "window": "minecraft:purple_stained_glass_pane",
+  "path": "minecraft:smooth_stone",
+  "fence": "minecraft:mangrove_fence"
+ },
+ "extra_pieces": [
+  {
+   "id": "counting_house",
+   "size": [
+    15,
+    9,
+    11
+   ],
+   "notes": "Counting-House: purple-and-gold vault, the Clerk's desk, Scrip-Desk block, vault chest (Dark Lanterns opens it)"
+  },
+  {
+   "id": "lantern_hall",
+   "size": [
+    13,
+    8,
+    13
+   ],
+   "notes": "Council chamber: five seats, the First Lantern on a pedestal (never lit by the player)"
+  },
+  {
+   "id": "quay_gate",
+   "size": [
+    9,
+    6,
+    5
+   ],
+   "notes": "gatehouse of pale stone over a dry canal quay, purple banners"
+  },
+  {
+   "id": "dike_tower",
+   "size": [
+    5,
+    12,
+    5
+   ],
+   "notes": "Sluice tower on the dike: lantern roof, Dikemaster's post"
+  },
+  {
+   "id": "scrip_desk_stall",
+   "size": [
+    5,
+    4,
+    4
+   ],
+   "notes": "shop kiosk for the Scrip-Desk villager"
+  }
+ ],
+ "never": [
+  "flood water",
+  "lava",
+  "fire",
+  "block griefing outside the footprint",
+  "valuable blocks (gold, diamond, emerald, iron blocks, gilded blackstone)"
+ ]
+}

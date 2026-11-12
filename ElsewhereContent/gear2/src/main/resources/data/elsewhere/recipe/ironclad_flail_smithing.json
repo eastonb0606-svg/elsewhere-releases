@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:ironclad_chain",
+  "base": "minecraft:diamond_sword",
+  "addition": "elsewhere:skyiron",
+  "result": {
+    "id": "elsewhere:ironclad_flail"
+  }
+}

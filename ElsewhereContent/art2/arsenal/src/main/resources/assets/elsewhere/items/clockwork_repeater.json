@@ -1,0 +1,45 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:component",
+    "predicate": "minecraft:custom_data",
+    "value": "{loaded:3}",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "elsewhere:item/clockwork_repeater_arrow"
+    },
+    "on_false": {
+      "type": "minecraft:condition",
+      "property": "minecraft:using_item",
+      "on_false": {
+        "type": "minecraft:model",
+        "model": "elsewhere:item/clockwork_repeater"
+      },
+      "on_true": {
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:use_duration",
+        "scale": 0.0125,
+        "entries": [
+          {
+            "threshold": 0.4,
+            "model": {
+              "type": "minecraft:model",
+              "model": "elsewhere:item/clockwork_repeater_pulling_1"
+            }
+          },
+          {
+            "threshold": 0.8,
+            "model": {
+              "type": "minecraft:model",
+              "model": "elsewhere:item/clockwork_repeater_pulling_2"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "elsewhere:item/clockwork_repeater_pulling_0"
+        }
+      }
+    }
+  }
+}

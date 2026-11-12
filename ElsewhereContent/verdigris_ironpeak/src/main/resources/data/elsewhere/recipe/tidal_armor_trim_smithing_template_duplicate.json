@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "#S#",
+  "#C#",
+  "###"
+ ],
+ "key": {
+  "#": "minecraft:diamond",
+  "C": "elsewhere:verdigris_plate",
+  "S": "elsewhere:tidal_armor_trim_smithing_template"
+ },
+ "result": {
+  "id": "elsewhere:tidal_armor_trim_smithing_template",
+  "count": 2
+ }
+}

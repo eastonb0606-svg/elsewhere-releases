@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:azmar_dinar",
+  "base": "minecraft:diamond_sword",
+  "addition": "elsewhere:azmar_seal_amir",
+  "result": {
+    "id": "elsewhere:azmar_sunscourge"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:azmar_dinar",
+        "elsewhere:azmar_seal_amir"
+      ]
+    }
+  ]
+}

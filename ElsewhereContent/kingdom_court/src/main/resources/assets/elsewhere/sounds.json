@@ -1,0 +1,61 @@
+{
+  "court_music.king": {
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_king",
+        "stream": true
+      }
+    ]
+  },
+  "court_music.marshal": {
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_marshal",
+        "stream": true
+      }
+    ]
+  },
+  "court_music.castellan": {
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_castellan",
+        "stream": true
+      }
+    ]
+  },
+  "court_music.master_at_arms": {
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_master_at_arms",
+        "stream": true
+      }
+    ]
+  },
+  "court_music.huntsman": {
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_huntsman",
+        "stream": true
+      }
+    ]
+  },
+  "court_music.chancellor": {
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_chancellor",
+        "stream": true
+      }
+    ]
+  },
+  "court_music.realm": {
+    "sounds": [
+      {
+        "name": "elsewhere:music/boss_court_realm",
+        "stream": true
+      }
+    ]
+  },
+  "sfx3.aldermark.trumpet": {"subtitle": "subtitles.elsewhere.sfx3.aldermark.trumpet", "sounds": [{"name": "elsewhere:sfx3/aldermark/trumpet"}, {"name": "elsewhere:sfx3/aldermark/trumpet", "pitch": 1.04}]},
+  "sfx3.aldermark.steel": {"subtitle": "subtitles.elsewhere.sfx3.aldermark.steel", "sounds": [{"name": "elsewhere:sfx3/aldermark/steel"}, {"name": "elsewhere:sfx3/aldermark/steel", "pitch": 1.08}]},
+  "sfx3.aldermark.hunt": {"subtitle": "subtitles.elsewhere.sfx3.aldermark.hunt", "sounds": [{"name": "elsewhere:sfx3/aldermark/trumpet", "pitch": 0.75}, {"name": "elsewhere:sfx3/aldermark/trumpet", "pitch": 0.7}]}
+}

@@ -1,0 +1,21 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_kingdom_lore",
+	"version": "${version}",
+	"name": "Elsewhere: Kingdom lore (dev module)",
+	"description": "Royal patrols, the Royal Proclamation, the Survey Map, Whispers of a Crown advancements, Seals, Reeve and Quartermaster trades and kingdom loot. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.lore.DevEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

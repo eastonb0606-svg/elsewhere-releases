@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:galeweave"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:galeweave"
+      }
+    ]
+  }
+}

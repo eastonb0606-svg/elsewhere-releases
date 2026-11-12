@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "elsewhere:stag_antler",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    " AS",
+    "A S",
+    " AS"
+  ],
+  "result": {
+    "id": "elsewhere:antler_bow"
+  }
+}

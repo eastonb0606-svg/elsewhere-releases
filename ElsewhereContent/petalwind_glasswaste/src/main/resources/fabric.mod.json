@@ -1,0 +1,21 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_petalwind_glasswaste",
+	"version": "${version}",
+	"name": "Elsewhere: Petalwind Isles & The Glasswaste (dev module)",
+	"description": "Dev module for Elsewhere: the Petalwind Isles and the Glasswaste with Kazehana, Tempestra, Heliodor and Ankhara. Every id uses the elsewhere namespace so it merges into the core mod.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.petalwind_glasswaste.DevMain"],
+		"client": ["dev.elsewhere.petalwind_glasswaste.client.DevClient"]
+	},
+	"mixins": ["elsewhere_petalwind_glasswaste.mixins.json", {"config": "elsewhere_petalwind_glasswaste_anim3.mixins.json", "environment": "client"}],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

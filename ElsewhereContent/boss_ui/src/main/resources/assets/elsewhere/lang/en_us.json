@@ -1,0 +1,10 @@
+{
+  "elsewhere.hud.bossbars": "Boss bars",
+  "elsewhere.polish.tooltip.hold": "Hold Shift for details",
+  "elsewhere.polish.tooltip.hit": "Hit: %s damage",
+  "elsewhere.polish.tooltip.dps": "DPS: %s (%s swings/s)",
+  "elsewhere.polish.tooltip.armor": "Armor: %s, toughness %s",
+  "elsewhere.polish.tooltip.kb": "Knockback resistance: %s%%",
+  "elsewhere.polish.tooltip.cooldown": "Cooldown: %ss",
+  "elsewhere.polish.tooltip.uses": "Durability: %s / %s"
+}

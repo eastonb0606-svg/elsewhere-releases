@@ -1,0 +1,32 @@
+{
+  "id": "elsewhere:mirewick_ames",
+  "kingdom": "mirewick",
+  "slots": {
+    "weapons": "lamp_pole_flasks_bell",
+    "movement": "behind_hired_hands",
+    "defence": "hired_hands_screen",
+    "recovery": "drink_draught",
+    "reach": "lamp_pole_shove",
+    "last_stand": "scrip_scatter"
+  },
+  "generic": [
+    "drink",
+    "pearl"
+  ],
+  "signature": [
+    "dusk_rite",
+    "pay_the_hands",
+    "dusk_bell"
+  ],
+  "telegraph": {
+    "particle": "flame",
+    "colour": "#E0A83A",
+    "sound": {
+      "event": "block.bell.use",
+      "pitch": 1.1
+    }
+  },
+  "last_stand": "scrip_scatter",
+  "idle": "Polishes the First Lantern's brass with his sleeve and counts his hired men on one finger.",
+  "chair_last_stand": "lantern_rally"
+}

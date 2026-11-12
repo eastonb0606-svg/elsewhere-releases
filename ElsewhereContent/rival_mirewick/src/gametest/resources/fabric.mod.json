@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_rival_mirewick-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere Mirewick client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.rivals.mirewick.gametest.MirewickScreenshots"]
+	},
+	"depends": {
+		"elsewhere_rival_mirewick": "*"
+	}
+}

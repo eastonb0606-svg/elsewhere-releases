@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "elsewhere:echo_crystal",
+    "elsewhere:echo_crystal",
+    "elsewhere:echo_crystal",
+    "elsewhere:echo_crystal",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard"
+  ],
+  "result": {
+    "id": "elsewhere:echo_alloy",
+    "count": 1
+  }
+}

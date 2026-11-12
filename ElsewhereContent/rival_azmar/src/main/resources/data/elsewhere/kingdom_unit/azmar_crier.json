@@ -1,0 +1,33 @@
+{
+ "role": "melee",
+ "ability": "herald",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/herald.png",
+ "armor": {
+  "head": "minecraft:golden_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "main_hand": "elsewhere:azmar_copper_khopesh",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.35,
+  "block_chance": 0.0,
+  "crit_chance": 0.06,
+  "retreat_health": 0.3
+ },
+ "trim": {
+  "material": "minecraft:gold",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:wayfinder"
+  ]
+ },
+ "aggression": 2
+}

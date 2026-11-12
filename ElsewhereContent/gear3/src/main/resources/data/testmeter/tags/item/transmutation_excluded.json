@@ -1,0 +1,205 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:aldermark_masons_chisel",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aldermark_oath_ring",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aldermark_outrider_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aldermark_outrider_chaps",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aldermark_parrying_buckler",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aldermark_quickdraw_quiver",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_falconer_kilt",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_glyphmail_hauberk",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_glyphmail_hood",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_ka_sigil",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_sunscourge",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_marshals_helm",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_marshals_tabard",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_marshals_tassets",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hearthguard_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hearthguard_greaves",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hearthguard_helm",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hird_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hird_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_huginns_bite",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_mead_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_runeseax",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_skjaldborg_shield",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_ulfhednar_breeches",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_ulfhednar_mask",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_almoners_chalice",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_fowlers_bandolier",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_lamplighter_coat",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_lamplighter_hood",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_lantern_crook",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_lanternfang_estoc",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_sunglass_obelisk",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hurlbat",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_wolfcall_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_lantern_sickle",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_mire_snare",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_will_o_lantern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amber_grimoire",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aphelion_starpiercer",
+      "required": false
+    },
+    {
+      "id": "elsewhere:bramble_totem",
+      "required": false
+    },
+    {
+      "id": "elsewhere:choirlight_censer",
+      "required": false
+    },
+    {
+      "id": "elsewhere:clockwork_sentry",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_reliquary",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_sling",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gear3_ascension_shard",
+      "required": false
+    },
+    {
+      "id": "elsewhere:herdcaller_pennant",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ironpeak_war_yak_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mothlight_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:prism_bow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tidebrass_dredge",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "elsewhere:amber",
+    "#": "elsewhere:heartwood_shard"
+  },
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "result": {
+    "id": "elsewhere:heartwood_sword"
+  }
+}

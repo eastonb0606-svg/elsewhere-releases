@@ -1,0 +1,87 @@
+{
+  "attributes": {
+    "minecraft:visual/sky_color": "#78a7ff",
+    "minecraft:visual/fog_color": "#c0d8ff",
+    "minecraft:visual/water_fog_color": "#050533",
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 6000,
+        "sound": "minecraft:music.overworld.meadow"
+      },
+      "underwater": {
+        "max_delay": 24000,
+        "min_delay": 6000,
+        "sound": "minecraft:music.under_water"
+      }
+    },
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "creature": [
+            {
+              "type": "elsewhere:highland_yak",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 8
+              },
+              "weight": 4
+            }
+          ],
+          "monster": [
+            {
+              "type": "elsewhere:ironclan_raider",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 6
+              },
+              "weight": 18
+            },
+            {
+              "type": "elsewhere:crag_roc",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "weight": 7
+            }
+          ]
+        }
+      },
+      "modifier": "overlay"
+    }
+  },
+  "carvers": [],
+  "downfall": 0.8,
+  "effects": {
+    "water_color": "#3f76e4"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "elsewhere:big_iron_cliffs",
+      "minecraft:ore_emerald",
+      "elsewhere:frostgranite_ore"
+    ],
+    [],
+    [],
+    [
+      "minecraft:trees_taiga",
+      "minecraft:patch_grass_taiga"
+    ],
+    []
+  ],
+  "has_precipitation": true,
+  "temperature": 0.3
+}

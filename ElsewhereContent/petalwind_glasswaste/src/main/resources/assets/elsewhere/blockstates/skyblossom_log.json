@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "elsewhere:block/skyblossom_log_x"
+    },
+    "axis=y": {
+      "model": "elsewhere:block/skyblossom_log_y"
+    },
+    "axis=z": {
+      "model": "elsewhere:block/skyblossom_log_z"
+    }
+  }
+}

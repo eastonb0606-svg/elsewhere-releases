@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": "elsewhere:pearlite",
+    "S": "elsewhere:galvanic_upgrade_smithing_template",
+    "C": "minecraft:copper_block"
+  },
+  "result": {
+    "id": "elsewhere:galvanic_upgrade_smithing_template",
+    "count": 2
+  }
+}

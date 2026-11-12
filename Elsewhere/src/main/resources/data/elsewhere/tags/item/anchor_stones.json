@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pale_oak_log",
+    "elsewhere:heartwood_log",
+    "elsewhere:moonring_stone",
+    {
+      "id": "elsewhere:sunwright_bricks",
+      "required": false
+    },
+    {
+      "id": "elsewhere:verdigris_plate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:zephyrite_block",
+      "required": false
+    },
+    {
+      "id": "elsewhere:skyiron_block",
+      "required": false
+    },
+    "minecraft:tuff_bricks"
+  ]
+}

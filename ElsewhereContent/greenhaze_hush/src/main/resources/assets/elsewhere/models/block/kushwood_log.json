@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "elsewhere:block/kushwood_log_top",
+    "side": "elsewhere:block/kushwood_log"
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "disabled": [],
+  "exclude": {
+    "petalwind_glasswaste": [
+      "^dev/elsewhere/petalwind_glasswaste/DevMain\\.java$",
+      "^dev/elsewhere/petalwind_glasswaste/client/DevClient\\.java$",
+      "^data/elsewhere/loot_table/blocks/(arena_seal|return_rift)\\.json$",
+      "^assets/elsewhere/(items|models/item)/(arena_seal|return_rift)\\.json$"
+    ],
+    "verdigris_ironpeak": [
+      "^dev/elsewhere/verdigris_ironpeak/DevEntry\\.java$",
+      "^dev/elsewhere/verdigris_ironpeak/DevClientEntry\\.java$",
+      "^data/elsewhere/loot_table/blocks/(arena_seal|return_rift)\\.json$",
+      "^assets/elsewhere/(items|models/item)/(arena_seal|return_rift)\\.json$"
+    ],
+    "greenhaze_hush": [
+      "^dev/elsewhere/greenhaze_hush/dev/DevEntrypoint\\.java$",
+      "^dev/elsewhere/greenhaze_hush/dev/DevClientEntrypoint\\.java$",
+      "^data/elsewhere/loot_table/blocks/(arena_seal|return_rift)\\.json$",
+      "^assets/elsewhere/(items|models/item)/(arena_seal|return_rift)\\.json$",
+      "^data/elsewhere/worldgen/(structure|structure_set)/greenhaze_return_rift\\.json$"
+    ],
+    "nether_end_bosses": [
+      "^dev/elsewhere/stub/nether_end_bosses/DevMain\\.java$",
+      "^dev/elsewhere/stub/nether_end_bosses/DevClient\\.java$",
+      "^data/elsewhere/loot_table/blocks/(arena_seal|return_rift)\\.json$",
+      "^assets/elsewhere/(items|models/item)/(arena_seal|return_rift)\\.json$"
+    ],
+    "overworld_bosses": [
+      "^dev/elsewhere/overworld_bosses/DevEntry\\.java$",
+      "^data/elsewhere/loot_table/blocks/(arena_seal|return_rift)\\.json$",
+      "^assets/elsewhere/(items|models/item)/(arena_seal|return_rift)\\.json$",
+      "^dev/elsewhere/overworld_bosses/DevClientEntry\\.java$"
+    ],
+    "arsenal": [
+      "^dev/elsewhere/arsenal/DevEntry\\.java$",
+      "^dev/elsewhere/arsenal/DevClientEntry\\.java$"
+    ],
+    "summoner": [
+      "^dev/elsewhere/summoner/DevEntry\\.java$",
+      "^dev/elsewhere/summoner/client/DevClientEntry\\.java$",
+      "^dev/elsewhere/stub/summoner/mixin/PlayerAttributesMixin\\.java$",
+      "^elsewhere_summoner\\.stub\\.mixins\\.json$"
+    ],
+    "jei_compat": [],
+    "boss_ui": [
+      "^dev/elsewhere/boss_ui/DevEntry\\.java$"
+    ],
+    "boss_music": [
+      "^dev/elsewhere/boss_music/DevClientEntry\\.java$"
+    ],
+    "gear2": [
+      "^dev/elsewhere/gear2/DevEntry\\.java$"
+    ],
+    "kingdom": [
+      "^dev/elsewhere/kingdom/DevEntry\\.java$"
+    ],
+    "kingdom_lore": [
+      "^dev/elsewhere/lore/DevEntry\\.java$"
+    ],
+    "kingdom_court": [
+      "^dev/elsewhere/kingdom_court/DevEntry\\.java$",
+      "^assets/elsewhere/sounds\\.json$",
+      "^assets/elsewhere/sounds/music/boss_court_.*\\.ogg$"
+    ],
+    "kingdom_villages": [
+      "^dev/elsewhere/kingdom_villages/DevEntry\\.java$"
+    ],
+    "kingdom_duelist": [
+      "^dev/elsewhere/duelist/DevEntry\\.java$",
+      "^dev/elsewhere/duelist/DevClientEntry\\.java$"
+    ],
+    "rival_hrafnholt": [
+      "^dev/elsewhere/rivals/hrafnholt/DevEntry\\.java$"
+    ],
+    "rival_azmar": [
+      "^dev/elsewhere/rivals/azmar/DevEntry\\.java$"
+    ],
+    "rival_mirewick": [
+      "^dev/elsewhere/rivals/mirewick/DevEntry\\.java$"
+    ],
+    "gear3": [
+      "^dev/elsewhere/gear3/DevEntry\\.java$",
+      "^dev/elsewhere/gear3/client/DevClientEntry\\.java$"
+    ]
+  },
+  "pre_init": {
+    "nether_end_bosses": [
+      "dev.elsewhere.stub.nether_end_bosses.StubFramework.init()"
+    ]
+  },
+  "post_init": {
+    "petalwind_glasswaste": [
+      "net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback.EVENT.register((d, ctx, sel) -> dev.elsewhere.petalwind_glasswaste.DevCommands.register(d))",
+      "if (Boolean.getBoolean(\"petalwind_glasswaste.selftest\")) net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(dev.elsewhere.petalwind_glasswaste.SelfTest::start)",
+      "for (var t : dev.elsewhere.petalwind_glasswaste.PetalwindGlasswasteContent.TRIPS) dev.elsewhere.beta.GlobalTrips.register(t.id(), t.target(), t.kind() == dev.elsewhere.stub.petalwind_glasswaste.TripTrigger.Kind.ACTIVITY, t::baseChance)"
+    ],
+    "verdigris_ironpeak": [
+      "dev.elsewhere.verdigris_ironpeak.dev.DevCommands.init()",
+      "dev.elsewhere.verdigris_ironpeak.dev.SelfTest.init()",
+      "for (var t : dev.elsewhere.verdigris_ironpeak.VerdigrisIronpeakContent.TRIPS) dev.elsewhere.beta.GlobalTrips.register(t.id(), t.target(), t.kind() == dev.elsewhere.stub.verdigris_ironpeak.TripTrigger.Kind.ACTIVITY, t::baseChance)"
+    ],
+    "greenhaze_hush": [
+      "dev.elsewhere.greenhaze_hush.dev.DevCommands.register()",
+      "if (Boolean.getBoolean(\"greenhaze_hush.selftest\")) dev.elsewhere.greenhaze_hush.dev.SelfTest.register()",
+      "for (var t : dev.elsewhere.greenhaze_hush.GreenhazeHushContent.TRIPS) dev.elsewhere.beta.GlobalTrips.register(t.id(), t.target(), t.kind() == dev.elsewhere.stub.greenhaze_hush.TripTrigger.Kind.ACTIVITY, t::baseChance)"
+    ],
+    "overworld_bosses": [
+      "dev.elsewhere.overworld_bosses.dev.DevCommands.init()",
+      "if (Boolean.getBoolean(\"overworld_bosses.selftest\")) net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(dev.elsewhere.overworld_bosses.dev.SelfTest::run)"
+    ],
+    "arsenal": [
+      "if (Boolean.getBoolean(\"arsenal.selftest\")) net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(dev.elsewhere.arsenal.dev.SelfTest::run)"
+    ],
+    "summoner": [
+      "if (Boolean.getBoolean(\"summoner.selftest\")) net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(dev.elsewhere.summoner.dev.SelfTest::run)"
+    ],
+    "boss_ui": [
+      "if (Boolean.getBoolean(\"boss_ui.selftest\")) net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(dev.elsewhere.boss_ui.dev.SelfTest::run)"
+    ],
+    "gear2": [
+      "if (Boolean.getBoolean(\"gear2.selftest\")) dev.elsewhere.gear2.dev.SelfTest.register()",
+      "if (Boolean.getBoolean(\"bosshealth.selftest\")) dev.elsewhere.beta.BossHealthCheck.register()"
+    ],
+    "kingdom_lore": [
+      "dev.elsewhere.lore.LoreContent.init()",
+      "if (Boolean.getBoolean(\"lore.selftest\")) dev.elsewhere.lore.dev.SelfTest.register()"
+    ],
+    "kingdom": [
+      "if (Boolean.getBoolean(\"kingdom.selftest\")) { net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(srv -> { for (int cx = -4; cx <= 4; cx++) for (int cz = -4; cz <= 4; cz++) srv.overworld().setChunkForced(cx, cz, true); }); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.START_SERVER_TICK.register(dev.elsewhere.kingdom.dev.SelfTest::startTick); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.kingdom.dev.SelfTest::endTick); }"
+    ],
+    "kingdom_court": [
+      "if (Boolean.getBoolean(\"court.selftest\")) { net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(dev.elsewhere.kingdom_court.dev.SelfTest::serverStarted); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.START_SERVER_TICK.register(dev.elsewhere.kingdom_court.dev.SelfTest::startTick); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.kingdom_court.dev.SelfTest::endTick); }"
+    ],
+    "kingdom_villages": [
+      "if (Boolean.getBoolean(\"villages.selftest\")) { net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.START_SERVER_TICK.register(dev.elsewhere.kingdom_villages.dev.SelfTest::startTick); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.kingdom_villages.dev.SelfTest::tick); }"
+    ],
+    "kingdom_duelist": [
+      "dev.elsewhere.duelist.DuelistContent.init()",
+      "if (Boolean.getBoolean(\"duelist.selftest\")) { int[] dt = {0}; boolean[] dran = {false}; net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(srv -> { for (int cx = -6; cx <= 6; cx++) for (int cz = -6; cz <= 6; cz++) srv.overworld().setChunkForced(cx, cz, true); }); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(srv -> { if (dran[0]) return; var l = srv.overworld(); if (++dt[0] < 400 && !l.isPositionEntityTicking(new net.minecraft.core.BlockPos(8, 100, 0))) return; dran[0] = true; dev.elsewhere.duelist.dev.SelfTest.run(srv); }); }"
+    ],
+    "rival_hrafnholt": [
+      "dev.elsewhere.rivals.hrafnholt.HrafnholtContent.init()",
+      "if (Boolean.getBoolean(\"hrafnholt.selftest\")) dev.elsewhere.rivals.hrafnholt.dev.SelfTest.register()"
+    ],
+    "rival_azmar": [
+      "dev.elsewhere.rivals.azmar.AzmarContent.init()",
+      "if (Boolean.getBoolean(\"azmar.selftest\")) { net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(srv -> { for (int cx = -4; cx <= 4; cx++) for (int cz = -4; cz <= 4; cz++) srv.overworld().setChunkForced(cx, cz, true); }); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.START_SERVER_TICK.register(dev.elsewhere.rivals.azmar.dev.SelfTest::startTick); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.rivals.azmar.dev.SelfTest::endTick); }"
+    ],
+    "rival_mirewick": [
+      "dev.elsewhere.rivals.mirewick.MirewickContent.init()",
+      "if (Boolean.getBoolean(\"mirewick.selftest\")) { net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SERVER_STARTED.register(srv -> { for (int cx = -5; cx <= 5; cx++) for (int cz = -5; cz <= 5; cz++) srv.overworld().setChunkForced(cx, cz, true); }); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.START_SERVER_TICK.register(dev.elsewhere.rivals.mirewick.dev.SelfTest::startTick); net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.END_SERVER_TICK.register(dev.elsewhere.rivals.mirewick.dev.SelfTest::endTick); }"
+    ],
+    "gear3": [
+      "if (Boolean.getBoolean(\"gear3.selftest\")) dev.elsewhere.gear3.dev.SelfTest.register()"
+    ]
+  },
+  "post_client": {
+    "boss_ui": [
+      "new dev.elsewhere.boss_ui.BossUiClient().onInitializeClient()"
+    ],
+    "kingdom_duelist": [
+      "dev.elsewhere.duelist.DuelistClient.initClient()"
+    ],
+    "rival_hrafnholt": [
+      "dev.elsewhere.rivals.hrafnholt.client.HrafnholtClient.initClient()"
+    ],
+    "rival_azmar": [
+      "dev.elsewhere.rivals.azmar.client.AzmarClient.initClient()"
+    ],
+    "rival_mirewick": [
+      "dev.elsewhere.rivals.mirewick.MirewickClient.initClient()"
+    ]
+  },
+  "patches": {
+    "petalwind_glasswaste": [
+      {
+        "file": "main/java/dev/elsewhere/petalwind_glasswaste/CreativeTabs.java",
+        "find": "tab\\(\"(\\w+)\", new ItemStack\\(",
+        "replace": "tab(\"\\1\", () -> new ItemStack("
+      },
+      {
+        "file": "main/java/dev/elsewhere/petalwind_glasswaste/CreativeTabs.java",
+        "find": "String name, ItemStack icon\\)",
+        "replace": "String name, java.util.function.Supplier<ItemStack> icon)"
+      },
+      {
+        "file": "main/java/dev/elsewhere/petalwind_glasswaste/CreativeTabs.java",
+        "find": "\\.icon\\(\\(\\) -> icon\\)",
+        "replace": ".icon(icon)"
+      },
+      {
+        "file": "main/java/dev/elsewhere/petalwind_glasswaste/DevCommands.java",
+        "find": "literal\\(\"elsewhere_dev\"\\)",
+        "replace": "literal(\"elsewhere_dev_petalwind_glasswaste\")"
+      },
+      {
+        "file": "main/java/dev/elsewhere/stub/petalwind_glasswaste/TripStub.java",
+        "required": true,
+        "find": "(public static boolean fire\\(TripTrigger trigger, ServerPlayer player\\) \\{)",
+        "replace": "\\1\\n\\t\\tif (true) return dev.elsewhere.beta.GlobalTrips.fire(player, trigger.id(), trigger.target(), trigger.kind() == TripTrigger.Kind.ACTIVITY, trigger::baseChance); // beta: core framework"
+      },
+      {
+        "file": "main/java/dev/elsewhere/boss/heliodor/Heliodor.java",
+        "skip_if": "ARMOR = 18",
+        "find": "BASE_HP = 500, ARMOR = 20,",
+        "replace": "BASE_HP = 500, ARMOR = 18,",
+        "required": true
+      }
+    ],
+    "verdigris_ironpeak": [
+      {
+        "file": "main/java/dev/elsewhere/verdigris_ironpeak/dev/DevCommands.java",
+        "find": "literal\\(\"elsewhere_dev\"\\)",
+        "replace": "literal(\"elsewhere_dev_verdigris_ironpeak\")"
+      },
+      {
+        "file": "main/java/dev/elsewhere/stub/verdigris_ironpeak/Trips.java",
+        "required": true,
+        "find": "(public static double fire\\(ServerPlayer p, TripTrigger trigger\\) \\{)",
+        "replace": "\\1\\n\\t\\tif (true) return dev.elsewhere.beta.GlobalTrips.fire(p, trigger.id(), trigger.target(), trigger.kind() == TripTrigger.Kind.ACTIVITY, trigger::baseChance) ? 1.0 : 0.0; // beta: core framework"
+      },
+      {
+        "file": "client/java/dev/elsewhere/verdigris_ironpeak/client/Shapes.java",
+        "required": true,
+        "skip_if": "1.3125F",
+        "find": "(protected void scale\\(PhantomRenderState state, PoseStack poseStack\\) \\{\\n\\t\\t\\tposeStack\\.scale\\(scale, scale, scale\\);)",
+        "replace": "\\1\\n\\t\\t\\tposeStack.translate(0.0F, 1.3125F, 0.1875F); // beta fix: same lift as vanilla PhantomRenderer, or the body renders underground"
+      },
+      {
+        "file": "client/java/dev/elsewhere/verdigris_ironpeak/VerdigrisIronpeakClient.java",
+        "required": true,
+        "skip_if": "Art2Mobs.register()",
+        "find": "\\n\\t+EntityRendererRegistry\\.register\\(VerdigrisEntities\\.CLOCKWORK_DROWNED, Shapes\\.Clockwork::new\\);",
+        "replace": ""
+      },
+      {
+        "file": "client/java/dev/elsewhere/verdigris_ironpeak/VerdigrisIronpeakClient.java",
+        "required": true,
+        "skip_if": "Art2Mobs.register()",
+        "find": "\\n\\t+EntityRendererRegistry\\.register\\(VerdigrisEntities\\.BARNACLE_GOLEM, ctx -> new Shapes\\.Golem<BarnacleGolem>\\([^\\n]*\\);",
+        "replace": ""
+      },
+      {
+        "file": "client/java/dev/elsewhere/verdigris_ironpeak/VerdigrisIronpeakClient.java",
+        "required": true,
+        "skip_if": "Art2Mobs.register()",
+        "find": "\\n\\t+EntityRendererRegistry\\.register\\(IronpeakEntities\\.IRONCLAN_RAIDER, ctx -> new Shapes\\.Humanoid<>\\([^\\n]*\\);",
+        "replace": ""
+      },
+      {
+        "file": "client/java/dev/elsewhere/verdigris_ironpeak/VerdigrisIronpeakClient.java",
+        "required": true,
+        "skip_if": "Art2Mobs.register()",
+        "find": "(\\n(\\t+)EntityRendererRegistry\\.register\\(IronpeakEntities\\.CLAN_QUARTERMASTER, [^\\n]*;)",
+        "replace": "\\1\\n\\2dev.elsewhere.verdigris_ironpeak.client.art2.Art2Mobs.register(); // art2 (integrator patch)"
+      }
+    ],
+    "greenhaze_hush": [
+      {
+        "file": "main/java/dev/elsewhere/greenhaze_hush/dev/DevCommands.java",
+        "find": "literal\\(\"elsewhere_dev\"\\)",
+        "replace": "literal(\"elsewhere_dev_greenhaze_hush\")"
+      },
+      {
+        "file": "main/java/dev/elsewhere/stub/greenhaze_hush/TripSystem.java",
+        "required": true,
+        "find": "(public static double fire\\(ServerPlayer p, TripTrigger t, RandomSource random\\) \\{)",
+        "replace": "\\1\\n\\t\\tif (true) return dev.elsewhere.beta.GlobalTrips.fire(p, t.id(), t.target(), t.kind() == TripTrigger.Kind.ACTIVITY, t::baseChance) ? 1.0 : 0.0; // beta: core framework"
+      },
+      {
+        "file": "client/java/dev/elsewhere/greenhaze_hush/GreenhazeHushClient.java",
+        "required": true,
+        "skip_if": "Art2Mobs.register()",
+        "find": "(\\t+)EntityRendererRegistry\\.register\\(HushEntities\\.ECHO_STALKER, c -> new Simple<[^;]*?\"echo_stalker\"[^;]*?\\);",
+        "replace": "\\1dev.elsewhere.greenhaze_hush.art2.Art2Mobs.register(); // art2 (integrator patch)"
+      }
+    ],
+    "overworld_bosses": [
+      {
+        "file": "main/java/dev/elsewhere/overworld_bosses/dev/DevCommands.java",
+        "find": "literal\\(\"elsewhere_dev\"\\)",
+        "replace": "literal(\"elsewhere_dev_overworld_bosses\")"
+      }
+    ],
+    "nether_end_bosses": [
+      {
+        "file": "main/java/dev/elsewhere/nether_end_bosses/DevCommands.java",
+        "find": "literal\\(\"elsewhere_dev\"\\)",
+        "replace": "literal(\"elsewhere_dev_nether_end_bosses\")"
+      }
+    ],
+    "core": [
+      {
+        "file": "main/java/dev/elsewhere/command/ElsewhereCommands.java",
+        "required": true,
+        "find": "Commands\\.literal\\(\"elsewhere\"\\)\\.requires\\(Commands\\.hasPermission\\(Commands\\.LEVEL_GAMEMASTERS\\)\\)",
+        "replace": "Commands.literal(\"elsewhere\")",
+        "skip_if": "literal(\"off\")"
+      },
+      {
+        "file": "main/java/dev/elsewhere/command/ElsewhereCommands.java",
+        "required": true,
+        "find": "(?m)^(\\t\\t\\t\\t\\.then\\(Commands\\.literal\\(\"(?!trips\")\\w+\"\\))",
+        "replace": "\\1.requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))",
+        "skip_if": "literal(\"off\")"
+      },
+      {
+        "file": "main/java/dev/elsewhere/ElsewhereConfig.java",
+        "required": true,
+        "find": "(\\n\\tpublic AccidentalTrips accidentalTrips = new AccidentalTrips\\(\\);)",
+        "replace": "\\n\\t/** Beta 2 vanilla-friendly switch: false disables the Overworld boss sites (and their site-only mobs) and every accidental trip. */\\n\\tpublic boolean overworldContent = true;\\1",
+        "skip_if": "overworldContent"
+      }
+    ],
+    "summoner": [
+      {
+        "file": "main/java/dev/elsewhere/stub/summoner/GlimmerStub.java",
+        "skip_if": "\"trySpendScaled\", ServerPlayer.class, float.class",
+        "find": "getMethod\\(\"trySpendScaled\", ServerPlayer\\.class, int\\.class\\)",
+        "replace": "getMethod(\"trySpendScaled\", ServerPlayer.class, float.class)",
+        "required": true
+      }
+    ]
+  },
+  "_doc": "2.0 integrator: snapshot_from pins unfinished modules to their alpha.3 state (path under ROOT holding src/); remove a module from it when its lane's STATUS says done. disabled = not merged yet. shared = identical copies, owner kept.",
+  "snapshot_from": {},
+  "art2_overlay": "ElsewhereContent/art2",
+  "snapshot_extra": {
+    "gear2": [
+      [
+        "ElsewhereContent/gear2/INTEGRATION/jei_info_gear2.json",
+        "src/main/resources/assets/elsewhere/jei/info.json"
+      ]
+    ],
+    "kingdom_lore": [
+      [
+        "ElsewhereContent/kingdom_lore/INTEGRATION/jei_info_kingdom.json",
+        "src/main/resources/assets/elsewhere/jei/info.json"
+      ]
+    ],
+    "gear3": [
+      [
+        "ElsewhereContent/gear3/src/main/resources/elsewhere_gear3/jei_info.json",
+        "src/main/resources/assets/elsewhere/jei/info.json"
+      ]
+    ]
+  },
+  "json_merge": [
+    "assets/elsewhere/jei/info.json",
+    "assets/elsewhere/boss_music.json",
+    "assets/elsewhere/boss_bars.json"
+  ],
+  "shared": {
+    "^dev/elsewhere/boss/kit/Openings\\.java$": "greenhaze_hush",
+    "^dev/elsewhere/boss/kit/[^/]+\\.java$": "core",
+    "^dev/elsewhere/hud/ElsewhereHud\\.java$": "arsenal"
+  }
+}

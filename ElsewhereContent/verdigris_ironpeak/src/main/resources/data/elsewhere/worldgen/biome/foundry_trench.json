@@ -1,0 +1,121 @@
+{
+ "attributes": {
+  "minecraft:visual/sky_color": "#2b4a48",
+  "minecraft:visual/fog_color": "#3e6a64",
+  "minecraft:visual/water_fog_color": "#08201c",
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 6000,
+    "sound": "minecraft:music.overworld.deep_dark"
+   },
+   "underwater": {
+    "max_delay": 24000,
+    "min_delay": 6000,
+    "sound": "minecraft:music.under_water"
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {
+     "monster": [
+      {
+       "type": "elsewhere:clockwork_drowned",
+       "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 6
+       },
+       "weight": 27
+      },
+      {
+       "type": "elsewhere:tidewing_ray",
+       "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 5
+       },
+       "weight": 8
+      },
+      {
+       "type": "elsewhere:brass_guardian",
+       "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 2
+       },
+       "weight": 15
+      }
+     ],
+     "water_creature": [
+      {
+       "type": "minecraft:squid",
+       "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 3
+       },
+       "weight": 4
+      }
+     ],
+     "water_ambient": [
+      {
+       "type": "minecraft:cod",
+       "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 6
+       },
+       "weight": 10
+      }
+     ],
+     "creature": [
+      {
+       "type": "elsewhere:barnacle_golem",
+       "count": 1,
+       "weight": 5
+      }
+     ]
+    }
+   },
+   "modifier": "overlay"
+  },
+  "minecraft:visual/ambient_particles": {
+   "argument": [
+    {
+     "particle": {
+      "type": "minecraft:bubble"
+     },
+     "probability": 0.02
+    }
+   ],
+   "modifier": "append"
+  }
+ },
+ "carvers": [],
+ "downfall": 0.8,
+ "effects": {
+  "water_color": "#147a66"
+ },
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "elsewhere:pearlite_ore",
+   "minecraft:ore_copper"
+  ],
+  [],
+  [],
+  [
+   "minecraft:seagrass_deep"
+  ],
+  []
+ ],
+ "has_precipitation": true,
+ "temperature": 0.5
+}

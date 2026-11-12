@@ -1,0 +1,45 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:hushweave_hood",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushcloak",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushstep_greaves",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushweave_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:choir_vestment",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_pickaxe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_axe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_shovel",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_hoe",
+      "required": false
+    }
+  ]
+}

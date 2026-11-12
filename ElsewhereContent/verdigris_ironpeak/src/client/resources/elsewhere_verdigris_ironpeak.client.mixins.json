@@ -1,0 +1,7 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.verdigris_ironpeak.mixin.client",
+	"compatibilityLevel": "JAVA_25",
+	"client": ["AbstractClientPlayerZoomMixin", "WaterFogMixin"],
+	"injectors": {"defaultRequire": 1}
+}

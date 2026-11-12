@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=0": {
+      "model": "elsewhere:block/giant_fern_0"
+    },
+    "part=1": {
+      "model": "elsewhere:block/giant_fern_1"
+    },
+    "part=2": {
+      "model": "elsewhere:block/giant_fern_2"
+    },
+    "part=3": {
+      "model": "elsewhere:block/giant_fern_3"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "elsewhere:castle_aldermark",
+  "biomes": "#elsewhere:court_realm_biomes",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_box"
+}

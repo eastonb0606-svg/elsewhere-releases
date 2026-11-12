@@ -1,0 +1,23 @@
+{
+ "display": {
+  "icon": {
+   "id": "minecraft:white_banner"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.border_hint.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.border_hint.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:impossible"
+  }
+ },
+ "parent": "elsewhere:whispers/root"
+}

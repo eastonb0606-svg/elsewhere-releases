@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "elsewhere:block/prayer_flags"
+  },
+  "facing=south": {
+   "model": "elsewhere:block/prayer_flags",
+   "y": 180
+  },
+  "facing=east": {
+   "model": "elsewhere:block/prayer_flags",
+   "y": 90
+  },
+  "facing=west": {
+   "model": "elsewhere:block/prayer_flags",
+   "y": 270
+  }
+ }
+}

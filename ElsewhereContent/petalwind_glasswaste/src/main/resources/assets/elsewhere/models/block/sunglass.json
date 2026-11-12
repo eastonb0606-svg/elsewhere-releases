@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": {
+      "sprite": "elsewhere:block/sunglass",
+      "force_translucent": true
+    }
+  }
+}

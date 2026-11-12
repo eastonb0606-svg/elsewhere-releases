@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_kingdom_lore-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere kingdom lore client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.lore.gametest.LoreScreenshots"]
+	},
+	"depends": {
+		"elsewhere_kingdom_lore": "*"
+	}
+}

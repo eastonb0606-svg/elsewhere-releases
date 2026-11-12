@@ -1,0 +1,70 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere_petalwind_glasswaste"
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"elsewhere_petalwind_glasswaste" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// `./gradlew runServer`: dev server on port 25621 (run/server.properties) that runs the self-test and exits.
+		server {
+			vmArg "-Xmx1536m"
+			property "petalwind_glasswaste.selftest", "true"
+			property "petalwind_glasswaste.selftest.exit", "true"
+		}
+		client {
+			vmArg "-Xmx2g"
+		}
+	}
+}
+
+// `./gradlew runClientGameTest` opens a real client, builds test worlds and saves screenshots to screenshots/.
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere_petalwind_glasswaste_gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+	vmArg "-Xmx2g"
+	property "petalwind_glasswaste.screenshotDir", file("screenshots").absolutePath
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

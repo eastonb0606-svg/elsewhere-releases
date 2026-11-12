@@ -1,0 +1,12 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "elsewhere:hrafnholt_survey_fragment",
+  "elsewhere:hrafnholt_survey_fragment",
+  "elsewhere:hrafnholt_survey_fragment"
+ ],
+ "result": {
+  "id": "elsewhere:hrafnholt_survey_map"
+ }
+}

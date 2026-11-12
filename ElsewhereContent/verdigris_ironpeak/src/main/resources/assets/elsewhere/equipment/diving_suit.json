@@ -1,0 +1,14 @@
+{
+ "layers": {
+  "humanoid": [
+   {
+    "texture": "elsewhere:diving_suit"
+   }
+  ],
+  "humanoid_leggings": [
+   {
+    "texture": "elsewhere:diving_suit"
+   }
+  ]
+ }
+}

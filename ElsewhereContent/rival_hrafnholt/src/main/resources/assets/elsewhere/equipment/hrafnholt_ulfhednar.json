@@ -1,0 +1,26 @@
+{
+ "layers": {
+  "humanoid": [
+   {
+    "texture": "minecraft:leather",
+    "dyeable": {
+     "color_when_undyed": 7236198
+    }
+   },
+   {
+    "texture": "minecraft:leather_overlay"
+   }
+  ],
+  "humanoid_leggings": [
+   {
+    "texture": "minecraft:leather",
+    "dyeable": {
+     "color_when_undyed": 7236198
+    }
+   },
+   {
+    "texture": "minecraft:leather_overlay"
+   }
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "ALA",
+    " A "
+  ],
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "L": "minecraft:lantern"
+  },
+  "result": {
+    "id": "elsewhere:glimmer_lantern"
+  }
+}

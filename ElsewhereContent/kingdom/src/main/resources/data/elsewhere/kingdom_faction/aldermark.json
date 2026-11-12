@@ -1,0 +1,265 @@
+{
+ "name": "Kingdom of Aldermark",
+ "name_key": "faction.elsewhere.aldermark",
+ "banner": {
+  "primary": "#2E4C9E",
+  "secondary": "#E8D9A0"
+ },
+ "tabard": {
+  "color": "#2E4C9E",
+  "trim": "#E8D9A0"
+ },
+ "hostile_to_players": true,
+ "allies": [],
+ "peace": [],
+ "roster": {},
+ "biomes": [
+  "#elsewhere:court_realm_biomes"
+ ],
+ "music": "elsewhere:court_music",
+ "realm": true,
+ "rulers": {
+  "king": {
+   "name": "King Osric Vael",
+   "name_key": "entity.elsewhere.court_king",
+   "title": "the Hundredth Crown",
+   "health": 300,
+   "health_cap": 300,
+   "drops": [
+    {
+     "item": "elsewhere:court_crown_of_aldermark"
+    },
+    {
+     "item": "elsewhere:court_sovereigns_standard",
+     "chance": 0.5
+    },
+    {
+     "item": "elsewhere:aldermark_crown",
+     "min": 80,
+     "max": 96
+    },
+    {
+     "item": "minecraft:emerald",
+     "min": 6,
+     "max": 12
+    }
+   ]
+  },
+  "marshal": {
+   "name": "Marshal Ysolde Varr",
+   "name_key": "entity.elsewhere.court_marshal",
+   "title": "Lord Marshal",
+   "health": 190,
+   "drops": [
+    {
+     "item": "elsewhere:court_warmarshal_spurs"
+    },
+    {
+     "item": "elsewhere:lore_seal_marshal"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:aldermark_crown",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "castellan": {
+   "name": "Castellan Bertrand Holm",
+   "name_key": "entity.elsewhere.court_castellan",
+   "title": "Lord Castellan",
+   "health": 210,
+   "drops": [
+    {
+     "item": "elsewhere:court_gatewarden_plate"
+    },
+    {
+     "item": "elsewhere:lore_seal_castellan"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:aldermark_crown",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "master_at_arms": {
+   "name": "Master-at-Arms Corvin Thale",
+   "name_key": "entity.elsewhere.court_master_at_arms",
+   "title": "Master-at-Arms",
+   "health": 165,
+   "drops": [
+    {
+     "item": "elsewhere:court_duelists_sabre"
+    },
+    {
+     "item": "elsewhere:lore_seal_master_at_arms"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:aldermark_crown",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "huntsman": {
+   "name": "Royal Huntsman Lisbet Ashgrove",
+   "name_key": "entity.elsewhere.court_huntsman",
+   "title": "Lord Huntsman",
+   "health": 170,
+   "drops": [
+    {
+     "item": "elsewhere:court_ashgrove_longbow"
+    },
+    {
+     "item": "elsewhere:lore_seal_huntsman"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:aldermark_crown",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "chancellor": {
+   "name": "Lord Chancellor Marek Dunmere",
+   "name_key": "entity.elsewhere.court_chancellor",
+   "title": "Lord Chancellor",
+   "health": 90,
+   "drops": [
+    {
+     "item": "elsewhere:court_chancellors_chaperon"
+    },
+    {
+     "item": "elsewhere:lore_seal_chancellor"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:aldermark_crown",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  }
+ },
+ "society": {
+  "government": "monarchy",
+  "ruler_bonus": {
+   "type": "hp_per_lord",
+   "amount": 12
+  },
+  "leaders": [
+   "king",
+   "marshal",
+   "castellan",
+   "master_at_arms",
+   "huntsman",
+   "chancellor"
+  ],
+  "standing": {
+   "start": 0,
+   "cap_until_ruler_killed": true
+  },
+  "serfs": {
+   "type": "elsewhere:serf",
+   "count_multiplier": 1.0,
+   "health": 18.0
+  }
+ },
+ "economy": {
+  "currency": "elsewhere:aldermark_crown",
+  "shop": [
+   {
+    "item": "elsewhere:oathkeepers_seal",
+    "price": 220,
+    "weekly_limit": 2
+   },
+   {
+    "item": "elsewhere:bodkin_bolt",
+    "count": 8,
+    "price": 27
+   },
+   {
+    "item": "minecraft:netherite_upgrade_smithing_template",
+    "price": 275,
+    "extra": [
+     {
+      "item": "minecraft:diamond",
+      "min": 20
+     }
+    ],
+    "weekly_limit": 2
+   }
+  ]
+ },
+ "army": {
+  "scale": {"patrol": {"day": 8, "night": 6}, "squad_size": 10, "unit_name": "lance", "company_size": 22, "garrison": {"village": [12, 16], "town": [24, 32], "capital": [80, 100]}, "field_army": [120, 180], "battle_side_max": 150, "live_front": 40, "wave": {"style": "sergeant", "size": 10, "interval_s": 40, "interval_jitter_s": 0, "trigger_front": 0.7}, "attack_tokens": {"melee": 3, "ranged": 2}, "formation": {"width": 5, "depth": 2, "spacing": 1.25, "jitter": 0.0}, "hired": {"company": [0, 0]}, "residents": {"capital": 160, "town": 50}, "composition": {"line": 0.5, "heavy": 0.1, "ranged": 0.26, "mounted": 0.06, "special": 0.0, "officers": 0.08}},
+  "routine": {
+   "watch_changes": [6, 12, 18, 22, 2],
+   "watch_jitter_min": 0,
+   "blocks": [
+    {"from": 0, "to": 5, "activity": "sleep", "share": 0.67, "where": "barracks"},
+    {"from": 5, "to": 6, "activity": "work", "share": 0.5, "where": "kitchens"},
+    {"from": 6, "to": 9, "activity": "drill", "share": 0.5, "where": "yard"},
+    {"from": 9, "to": 12, "activity": "market", "share": 0.6, "where": "square"},
+    {"from": 12, "to": 13, "activity": "court", "share": 0.3, "where": "hall"},
+    {"from": 13, "to": 17, "activity": "work", "share": 0.6, "where": "fields"},
+    {"from": 17, "to": 18, "activity": "feast", "share": 0.5, "where": "hall"},
+    {"from": 18, "to": 22, "activity": "watch", "share": 0.34, "where": "walls"},
+    {"from": 22, "to": 24, "activity": "sleep", "share": 0.67, "where": "barracks"}
+   ],
+   "events": [
+    {"id": "muster_day", "every_days": 7, "at": 10, "hours": 3, "activity": "muster", "where": "tilting_field"},
+    {"id": "harvest_fair", "every_days": 8, "at": 9, "hours": 8, "activity": "tourney", "where": "lists"}
+   ]
+  },
+  "units": [
+   "elsewhere:man_at_arms",
+   "elsewhere:knight",
+   "elsewhere:lancer",
+   "elsewhere:mounted_swordsman",
+   "elsewhere:archer",
+   "elsewhere:crossbowman",
+   "elsewhere:sergeant",
+   "elsewhere:captain",
+   "elsewhere:standard_bearer",
+   "elsewhere:herald",
+   "elsewhere:surgeon",
+   "elsewhere:squire",
+   "elsewhere:pikeman"
+  ],
+  "unique_units": [],
+  "health_multiplier": 1.0,
+  "speed_multiplier": 1.0,
+  "damage_multiplier": 1.0,
+  "size_multiplier": 1.0,
+  "patrol_day": 6,
+  "patrol_night": 6,
+  "brain": {
+   "war_frequency": 1.0,
+   "min_attack_odds": 1.2,
+   "retreat_instead_of_die": false,
+   "veterancy_cap": 0.0,
+   "intelligence_noise": 0.25,
+   "supply_line_only": false,
+   "decision_delay_days": 0,
+   "hire_mercenaries": false,
+   "mercenary_daily_cost": 0,
+   "brain_roles": []
+  }
+ }
+}

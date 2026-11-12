@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:paleweave_robe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:paleweave_chestplate",
+      "required": false
+    },
+    "minecraft:leather_chestplate"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "dimension": "elsewhere:the_hush",
+  "ingredients": [
+    "minecraft:echo_shard",
+    "minecraft:sculk_shrieker",
+    "minecraft:sculk_catalyst",
+    "minecraft:disc_fragment_5",
+    "minecraft:dragon_breath"
+  ],
+  "requires": "ender_dragon_killed",
+  "notes": "E S E / K W K / F D F; only craftable after the Ender Dragon dies (recipe condition + crafting-result check, core)."
+}

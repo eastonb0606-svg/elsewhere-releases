@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "elsewhere:block/skyblossom_planks",
+    "side": "elsewhere:block/skyblossom_planks",
+    "top": "elsewhere:block/skyblossom_planks"
+  }
+}

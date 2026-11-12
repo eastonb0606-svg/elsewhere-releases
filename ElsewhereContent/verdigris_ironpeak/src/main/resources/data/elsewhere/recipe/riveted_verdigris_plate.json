@@ -1,0 +1,15 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "building",
+ "ingredients": [
+  "elsewhere:verdigris_plate",
+  "elsewhere:verdigris_plate",
+  "elsewhere:verdigris_plate",
+  "elsewhere:verdigris_plate",
+  "minecraft:iron_nugget"
+ ],
+ "result": {
+  "id": "elsewhere:riveted_verdigris_plate",
+  "count": 4
+ }
+}

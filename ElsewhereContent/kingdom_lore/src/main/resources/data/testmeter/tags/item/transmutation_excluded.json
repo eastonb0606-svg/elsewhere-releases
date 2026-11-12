@@ -1,0 +1,169 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:aldermark_armor_trim_smithing_template",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aldermark_banner_pattern",
+      "required": false
+    },
+    {
+      "id": "elsewhere:aldermark_crown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_royal_proclamation",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_survey_fragment",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_survey_map",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_well_stone",
+      "required": false
+    },
+    {
+      "id": "elsewhere:bodkin_bolt",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_ashgrove_longbow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_chancellors_chaperon",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_crown_of_aldermark",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_duelists_sabre",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_gatewarden_plate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_sovereigns_standard",
+      "required": false
+    },
+    {
+      "id": "elsewhere:court_warmarshal_spurs",
+      "required": false
+    },
+    {
+      "id": "elsewhere:crown_of_aldermark",
+      "required": false
+    },
+    {
+      "id": "elsewhere:fletchers_bundle",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_royal_proclamation",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_survey_fragment",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_survey_map",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_royal_proclamation",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_royal_survey_map",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_castellan",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_chancellor",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_huntsman",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_marshal",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_master_at_arms",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_survey_fragment",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_council_proclamation",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_survey_fragment",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_survey_map",
+      "required": false
+    },
+    {
+      "id": "elsewhere:oathkeepers_seal",
+      "required": false
+    },
+    {
+      "id": "elsewhere:royal_coffer",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sergeants_horn",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sovereigns_standard",
+      "required": false
+    },
+    {
+      "id": "elsewhere:village_ash",
+      "required": false
+    },
+    {
+      "id": "elsewhere:village_charred_planks",
+      "required": false
+    },
+    {
+      "id": "elsewhere:village_royal_coffer",
+      "required": false
+    },
+    {
+      "id": "elsewhere:village_royal_purse",
+      "required": false
+    },
+    {
+      "id": "elsewhere:village_siege_fire",
+      "required": false
+    },
+    {
+      "id": "elsewhere:whetstone",
+      "required": false
+    }
+  ]
+}

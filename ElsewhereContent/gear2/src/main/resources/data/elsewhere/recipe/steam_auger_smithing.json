@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:steam_auger_bit",
+  "base": "minecraft:diamond_pickaxe",
+  "addition": "elsewhere:skyiron",
+  "result": {
+    "id": "elsewhere:steam_auger"
+  }
+}

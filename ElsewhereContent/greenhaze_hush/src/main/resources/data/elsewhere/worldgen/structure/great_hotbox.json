@@ -1,0 +1,13 @@
+{
+  "type": "elsewhere:greenhaze_hush_built",
+  "biomes": [
+    "elsewhere:kush_canopy",
+    "elsewhere:munchie_groves",
+    "elsewhere:sativa_highlands"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "kind": "great_hotbox",
+  "anchor": "surface",
+  "y": 64
+}

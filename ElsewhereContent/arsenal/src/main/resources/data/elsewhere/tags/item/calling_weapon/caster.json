@@ -1,0 +1,49 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:amethyst_wand",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunlance_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:stormcoil_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sculk_resonator",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirrorglass_prism",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushward_bell",
+      "required": false
+    },
+    {
+      "id": "elsewhere:heliograph_lens",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ninefold_rod",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tuning_fork_of_auris",
+      "required": false
+    },
+    {
+      "id": "elsewhere:glimmerstone_focus",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moon_eye",
+      "required": false
+    }
+  ]
+}

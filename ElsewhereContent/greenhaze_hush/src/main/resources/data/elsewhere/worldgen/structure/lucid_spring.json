@@ -1,0 +1,15 @@
+{
+  "type": "elsewhere:greenhaze_hush_built",
+  "biomes": [
+    "elsewhere:kush_canopy",
+    "elsewhere:sativa_highlands",
+    "elsewhere:indica_hollows",
+    "elsewhere:hazebottom_swamp",
+    "elsewhere:munchie_groves"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "kind": "lucid_spring",
+  "anchor": "surface",
+  "y": 64
+}

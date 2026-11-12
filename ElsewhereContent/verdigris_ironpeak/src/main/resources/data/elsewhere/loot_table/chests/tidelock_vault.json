@@ -1,0 +1,134 @@
+{
+ "type": "minecraft:vault",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 2,
+    "max": 3
+   },
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:pearlite",
+     "weight": 10,
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 3,
+        "max": 7
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:verdigris_gear",
+     "weight": 10,
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 8,
+        "max": 16
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:brine_lung",
+     "weight": 6,
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:scraped_patina",
+     "weight": 8,
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 4,
+        "max": 8
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:diamond",
+     "weight": 4,
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:emerald",
+     "weight": 6,
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 4,
+        "max": 10
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.5
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:tidebrass_upgrade_smithing_template"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.3
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:tidal_armor_trim_smithing_template"
+    }
+   ]
+  }
+ ]
+}

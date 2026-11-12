@@ -1,0 +1,29 @@
+{
+  "id": "elsewhere:mirewick_tolliver",
+  "kingdom": "mirewick",
+  "slots": {
+    "weapons": "marshbow_net_axe",
+    "movement": "reed_wader",
+    "defence": "water_hide",
+    "recovery": "reed_breath_regen",
+    "reach": "reed_dive",
+    "last_stand": "duck_blind"
+  },
+  "generic": [],
+  "signature": [
+    "fowling_net",
+    "heron_flight",
+    "reed_dive"
+  ],
+  "telegraph": {
+    "particle": "note",
+    "colour": "#9ACD6E",
+    "sound": {
+      "event": "entity.parrot.ambient",
+      "pitch": 1.8
+    }
+  },
+  "last_stand": "duck_blind",
+  "idle": "Crouches in the reeds, cups her hands and answers a duck call.",
+  "chair_last_stand": "lantern_rally"
+}

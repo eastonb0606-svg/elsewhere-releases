@@ -1,0 +1,21 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/hrafnholt/berserker.png",
+ "armor": {},
+ "main_hand": "minecraft:iron_axe",
+ "off_hand": "minecraft:iron_axe",
+ "stats": {
+  "health": 24,
+  "speed": 0.32
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.2,
+  "crit_cooldown": 100,
+  "retreat_health": 0.0,
+  "sprint_chance": 0.6,
+  "strafe": 0.7,
+  "retreat_chance": 0.0
+ },
+ "aggression": 1
+}

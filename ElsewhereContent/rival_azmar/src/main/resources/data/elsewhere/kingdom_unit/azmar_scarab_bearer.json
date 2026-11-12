@@ -1,0 +1,36 @@
+{
+ "role": "melee",
+ "ability": "standard",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/scarab_bearer.png",
+ "armor": {
+  "head": "minecraft:blue_banner",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:chainmail_boots"
+ },
+ "main_hand": "elsewhere:azmar_copper_khopesh",
+ "stats": {
+  "health": 28,
+  "speed": 0.28,
+  "armor": 2.0,
+  "armor_toughness": 2.0,
+  "knockback_resistance": 0.1
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.5,
+  "block_chance": 0.0,
+  "crit_chance": 0.06,
+  "retreat_health": 0.4
+ },
+ "trim": {
+  "material": "minecraft:gold",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:dune"
+  ]
+ },
+ "aggression": 2
+}

@@ -1,0 +1,138 @@
+{
+ "music_disc.low_tide_engine": {
+  "sounds": [
+   {
+    "name": "minecraft:music_disc.otherside",
+    "type": "event"
+   }
+  ]
+ },
+ "music_disc.thin_air": {
+  "sounds": [
+   {
+    "name": "minecraft:music_disc.precipice",
+    "type": "event"
+   }
+  ]
+ },
+ "music.boss.verdigrim": {
+  "sounds": [
+   {
+    "name": "minecraft:music_disc.otherside",
+    "type": "event"
+   }
+  ]
+ },
+ "music.boss.galvanox": {
+  "sounds": [
+   {
+    "name": "minecraft:music_disc.pigstep",
+    "type": "event"
+   }
+  ]
+ },
+ "music.boss.thurgrim": {
+  "sounds": [
+   {
+    "name": "minecraft:music_disc.precipice",
+    "type": "event"
+   }
+  ]
+ },
+ "music.boss.hrolf": {
+  "sounds": [
+   {
+    "name": "minecraft:music_disc.precipice",
+    "type": "event"
+   }
+  ]
+ },
+ "item.hymnal_horn.blow": {
+  "sounds": [
+   {
+    "name": "minecraft:item.goat_horn.sound.2",
+    "type": "event"
+   }
+  ]
+ },
+ "item.avalanche_horn.blow": {
+  "sounds": [
+   {
+    "name": "minecraft:item.goat_horn.sound.5",
+    "type": "event"
+   }
+  ]
+ },
+ "entity.verdigrim.organ_note": {
+  "sounds": [
+   {
+    "name": "minecraft:block.note_block.flute",
+    "type": "event"
+   }
+  ]
+ },
+ "entity.verdigrim.roar": {
+  "sounds": [
+   {
+    "name": "minecraft:entity.elder_guardian.curse",
+    "type": "event"
+   }
+  ]
+ },
+ "entity.galvanox.hum": {
+  "sounds": [
+   {
+    "name": "minecraft:block.beacon.ambient",
+    "type": "event"
+   }
+  ]
+ },
+ "entity.galvanox.roar": {
+  "sounds": [
+   {
+    "name": "minecraft:entity.iron_golem.damage",
+    "type": "event"
+   }
+  ]
+ },
+ "entity.thurgrim.roar": {
+  "sounds": [
+   {
+    "name": "minecraft:entity.ravager.roar",
+    "type": "event"
+   }
+  ]
+ },
+ "block.summit_war_drum.beat": {
+  "sounds": [
+   {
+    "name": "minecraft:block.note_block.basedrum",
+    "type": "event"
+   }
+  ]
+ },
+ "entity.hrolf.horn": {
+  "sounds": [
+   {
+    "name": "minecraft:item.goat_horn.sound.1",
+    "type": "event"
+   }
+  ]
+ },
+ "ambient.verdigris_sea.storm": {
+  "sounds": [
+   {
+    "name": "minecraft:weather.rain",
+    "type": "event"
+   }
+  ]
+ },
+ "ambient.ironpeak.wind": {
+  "sounds": [
+   {
+    "name": "minecraft:weather.rain.above",
+    "type": "event"
+   }
+  ]
+ }
+}

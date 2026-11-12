@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:hrafnholt_seal_jarl",
+  "base": "minecraft:diamond_axe",
+  "addition": "elsewhere:hacksilver",
+  "result": {
+    "id": "elsewhere:hrafnholt_huginns_bite"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:hrafnholt_seal_jarl",
+        "elsewhere:hacksilver"
+      ]
+    }
+  ]
+}

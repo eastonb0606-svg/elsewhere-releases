@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:resin_kiln",
+ "biomes": [
+  "elsewhere:hollow_thicket",
+  "elsewhere:resin_bog",
+  "elsewhere:silent_clearing"
+ ],
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "none"
+}

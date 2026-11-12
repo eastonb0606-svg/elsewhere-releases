@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:elderbark"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:elderbark"
+      }
+    ]
+  }
+}

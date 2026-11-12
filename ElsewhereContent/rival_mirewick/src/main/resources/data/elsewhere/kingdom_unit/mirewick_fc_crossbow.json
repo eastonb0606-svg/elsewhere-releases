@@ -1,0 +1,21 @@
+{
+ "role": "crossbow",
+ "skin": "elsewhere:textures/entity/kingdom/mirewick/fc_crossbow.png",
+ "armor": {
+  "head": "minecraft:chainmail_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 5921382,
+ "main_hand": "minecraft:crossbow",
+ "stats": {
+  "health": 20,
+  "speed": 0.26
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "retreat_health": 0.0
+ }
+}

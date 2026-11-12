@@ -1,0 +1,85 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:gale_rapier",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ironclad_flail",
+      "required": false
+    },
+    {
+      "id": "elsewhere:glassfang",
+      "required": false
+    },
+    {
+      "id": "elsewhere:kingsplitter",
+      "required": false
+    },
+    {
+      "id": "elsewhere:challengers_cleaver",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunstone_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:eel_tooth_spear",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ice_axe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunfire_khopesh",
+      "required": false
+    },
+    {
+      "id": "elsewhere:echo_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:zephyrite_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:skyiron_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tidesteel_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:trichome_sword",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_skalds_rune_axe",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_reedcutter_pike",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_copper_khopesh",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_gilded_khopesh",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_twin_khopesh",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_scarab_spear",
+      "required": false
+    }
+  ]
+}

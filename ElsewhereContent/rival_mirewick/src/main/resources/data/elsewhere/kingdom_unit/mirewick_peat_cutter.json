@@ -1,0 +1,19 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/kingdom/mirewick/peat_cutter.png",
+ "armor": {},
+ "main_hand": "minecraft:iron_shovel",
+ "stats": {
+  "health": 18.0,
+  "speed": 0.26
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.6,
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "retreat_health": 0.4
+ }
+}

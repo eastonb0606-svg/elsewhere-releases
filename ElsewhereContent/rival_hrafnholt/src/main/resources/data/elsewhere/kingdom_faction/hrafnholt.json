@@ -1,0 +1,571 @@
+{
+ "name": "Jarldom of Hrafnholt",
+ "name_key": "faction.elsewhere.hrafnholt",
+ "banner": {
+  "primary": "#2E5A2C",
+  "secondary": "#6B4A2B"
+ },
+ "tabard": {
+  "color": "#2E5A2C",
+  "trim": "#6B4A2B"
+ },
+ "trim": {
+  "material": "minecraft:iron",
+  "patterns": [
+   "elsewhere:hrafnholt",
+   "minecraft:rib",
+   "minecraft:ward"
+  ]
+ },
+ "hostile_to_players": true,
+ "allies": [],
+ "peace": [],
+ "roster": {
+  "elsewhere:man_at_arms": {
+   "unit": "elsewhere:hrafnholt_huskarl"
+  },
+  "elsewhere:knight": {
+   "unit": "elsewhere:hrafnholt_shield_thane"
+  },
+  "elsewhere:archer": {
+   "unit": "elsewhere:hrafnholt_hunter"
+  },
+  "elsewhere:crossbowman": {
+   "unit": "elsewhere:hrafnholt_bolt_thrall"
+  },
+  "elsewhere:lancer": {
+   "unit": "elsewhere:hrafnholt_wolf_rider"
+  },
+  "elsewhere:mounted_swordsman": {
+   "unit": "elsewhere:hrafnholt_wolf_rider_axe"
+  },
+  "elsewhere:sergeant": {
+   "unit": "elsewhere:hrafnholt_hird_sergeant"
+  },
+  "elsewhere:captain": {
+   "unit": "elsewhere:hrafnholt_hird_captain"
+  },
+  "elsewhere:standard_bearer": {
+   "unit": "elsewhere:hrafnholt_raven_bearer"
+  },
+  "elsewhere:herald": {
+   "unit": "elsewhere:hrafnholt_skald"
+  },
+  "elsewhere:surgeon": {
+   "unit": "elsewhere:hrafnholt_leech"
+  },
+  "elsewhere:squire": {
+   "unit": "elsewhere:hrafnholt_shield_lad"
+  },
+  "elsewhere:pikeman": {
+   "unit": "elsewhere:hrafnholt_spear_thane"
+  }
+ },
+ "rulers": {
+  "king": {
+   "name": "High Jarl Halvard Ironbrow",
+   "name_key": "entity.elsewhere.hrafnholt_jarl",
+   "title": "the Ninth Pine",
+   "health": 300,
+   "drops": [
+    {
+     "item": "elsewhere:hrafnholt_iron_crown"
+    },
+    {
+     "item": "elsewhere:hrafnholt_raven_banner",
+     "chance": 0.5
+    },
+    {
+     "item": "elsewhere:hrafnholt_seal_jarl"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:hacksilver",
+     "min": 80,
+     "max": 96
+    },
+    {
+     "item": "minecraft:emerald",
+     "min": 6,
+     "max": 12
+    }
+   ],
+   "health_cap": 300
+  },
+  "marshal": {
+   "name": "Hersir Sigrun Askeland",
+   "name_key": "entity.elsewhere.hrafnholt_hersir",
+   "title": "war-leader",
+   "health": 236,
+   "drops": [
+    {
+     "item": "elsewhere:hrafnholt_wolfskin_boots"
+    },
+    {
+     "item": "elsewhere:hrafnholt_seal_hersir"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:hacksilver",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "castellan": {
+   "name": "Hallwarden Torvald Eikrem",
+   "name_key": "entity.elsewhere.hrafnholt_hallwarden",
+   "title": "Keeper of the Hearth-Door",
+   "health": 257,
+   "drops": [
+    {
+     "item": "elsewhere:hrafnholt_hearth_ward_mail"
+    },
+    {
+     "item": "elsewhere:hrafnholt_seal_hallwarden"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:hacksilver",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "master_at_arms": {
+   "name": "Weapon-Skald Ulfar Brandsson",
+   "name_key": "entity.elsewhere.hrafnholt_skald",
+   "title": "the Axe-Singer",
+   "health": 236,
+   "drops": [
+    {
+     "item": "elsewhere:hrafnholt_skalds_rune_axe"
+    },
+    {
+     "item": "elsewhere:hrafnholt_seal_skald"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:hacksilver",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "huntsman": {
+   "name": "Gudrun Ulfhednar",
+   "name_key": "entity.elsewhere.hrafnholt_chief",
+   "title": "Wolf-Coat, Chief of the Berserkers",
+   "health": 246,
+   "drops": [
+    {
+     "item": "elsewhere:hrafnholt_ulfhednar_pelt"
+    },
+    {
+     "item": "elsewhere:hrafnholt_seal_chief"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:hacksilver",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "chancellor": {
+   "name": "Huntmaster Eydis Nordvik",
+   "name_key": "entity.elsewhere.hrafnholt_huntmaster",
+   "title": "of the Wolf-Runs",
+   "health": 214,
+   "drops": [
+    {
+     "item": "elsewhere:hrafnholt_hornbow"
+    },
+    {
+     "item": "elsewhere:hrafnholt_seal_huntmaster"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:hacksilver",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  }
+ },
+ "biomes": [
+  "minecraft:taiga",
+  "minecraft:old_growth_pine_taiga",
+  "minecraft:old_growth_spruce_taiga",
+  "minecraft:windswept_forest",
+  "minecraft:river",
+  "minecraft:frozen_river",
+  "minecraft:cold_ocean",
+  "minecraft:ocean",
+  "minecraft:deep_cold_ocean"
+ ],
+ "biome_notes": "Sea-raiders of the fjord forests: pine and spruce taiga and windswept forest first (castle centre on land), with river, frozen river and cold ocean edges for the landing; snowy taiga and grove only as fallback. Build on a rise near water; a taiga village on the water.",
+ "music": "elsewhere:hrafnholt_music",
+ "realm": true,
+ "society": {
+  "government": "monarchy",
+  "ruler_bonus": {
+   "type": "damage_per_champion",
+   "amount": 10
+  },
+  "leaders": [
+   "king",
+   "marshal",
+   "castellan",
+   "master_at_arms",
+   "huntsman",
+   "chancellor"
+  ],
+  "standing": {
+   "start": -30,
+   "cap_until_ruler_killed": false,
+   "loss_multiplier": 1.5,
+   "gain_multiplier": 0.75,
+   "wary_realm_only": true
+  },
+  "serfs": {
+   "type": "elsewhere:thrall",
+   "variant": "thrall",
+   "name_key": "entity.elsewhere.hrafnholt_thrall",
+   "skin": "elsewhere:textures/entity/hrafnholt/thrall.png",
+   "count_multiplier": 2.0,
+   "health": 18.0,
+   "rebuild_blocks_per_20_ticks": 6,
+   "levy": {
+    "fraction": 0.33,
+    "weapon": "minecraft:stone_axe"
+   }
+  },
+  "chair_days": 7,
+  "seat_refill_days": 7,
+  "diplomacy_npc": {
+   "id": "lawspeaker_gunnar",
+   "name": "Lawspeaker Gunnar Hallstein",
+   "duel": "holmgang"
+  },
+  "shop_keeper": {
+   "name": "Silver-Weigher",
+   "job_site": "silver_scales",
+   "master_needs_bosses": 2,
+   "master_pool": [
+    "marshal",
+    "castellan",
+    "master_at_arms",
+    "huntsman",
+    "chancellor"
+   ]
+  }
+ },
+ "economy": {
+  "currency": "elsewhere:hacksilver",
+  "shop": [
+   {
+    "item": "elsewhere:hrafnholt_raven_shield",
+    "price": 30
+   },
+   {
+    "item": "elsewhere:hrafnholt_wolfpelt_blanket",
+    "price": 36
+   },
+   {
+    "item": "elsewhere:hrafnholt_fur_collar_dye",
+    "price": 20
+   },
+   {
+    "item": "elsewhere:hrafnholt_banner_pattern",
+    "price": 40
+   },
+   {
+    "item": "elsewhere:hrafnholt_armor_trim_smithing_template",
+    "price": 40
+   },
+   {
+    "item": "elsewhere:bodkin_bolt",
+    "count": 8,
+    "price": 27
+   },
+   {
+    "item": "elsewhere:oathkeepers_seal",
+    "price": 220,
+    "weekly_limit": 2
+   },
+   {
+    "item": "minecraft:netherite_upgrade_smithing_template",
+    "price": 275,
+    "extra": [
+     {
+      "item": "minecraft:diamond",
+      "min": 20
+     }
+    ],
+    "weekly_limit": 2
+   }
+  ]
+ },
+ "army": {
+  "scale": {"patrol": {"day": 8, "night": 10}, "squad_size": 9, "unit_name": "crew", "company_size": 32, "garrison": {"village": [12, 16], "town": [28, 36], "capital": [100, 120]}, "field_army": [180, 220], "battle_side_max": 150, "live_front": 40, "wave": {"style": "surge", "size": 16, "interval_s": 60, "interval_jitter_s": 0, "trigger_front": 0.7}, "attack_tokens": {"melee": 2, "ranged": 1}, "formation": {"width": 8, "depth": 2, "spacing": 1.1, "jitter": 0.3}, "hired": {"company": [0, 0]}, "residents": {"capital": 180, "town": 60}, "composition": {"line": 0.34, "heavy": 0.26, "ranged": 0.19, "mounted": 0.05, "special": 0.1, "officers": 0.06}},
+  "routine": {
+   "watch_changes": [6, 18],
+   "watch_jitter_min": 0,
+   "blocks": [
+    {"from": 0, "to": 5, "activity": "sleep", "share": 0.8, "where": "longhall"},
+    {"from": 5, "to": 8, "activity": "work", "share": 0.6, "where": "jetty"},
+    {"from": 8, "to": 11, "activity": "spar", "share": 0.5, "where": "yard"},
+    {"from": 11, "to": 14, "activity": "work", "share": 0.6, "where": "shipyard"},
+    {"from": 14, "to": 17, "activity": "spar", "share": 0.4, "where": "thing_stone"},
+    {"from": 17, "to": 21, "activity": "feast", "share": 0.8, "where": "longhall"},
+    {"from": 21, "to": 24, "activity": "watch", "share": 0.3, "where": "shore"}
+   ],
+   "events": [
+    {"id": "thing", "every_days": 6, "at": 14, "hours": 3, "activity": "court", "where": "thing_stone"},
+    {"id": "blot", "every_days": 9, "at": 19, "hours": 4, "activity": "feast", "where": "grove"}
+   ]
+  },
+  "units": [
+   "elsewhere:hrafnholt_huskarl",
+   "elsewhere:hrafnholt_shield_thane",
+   "elsewhere:hrafnholt_hunter",
+   "elsewhere:hrafnholt_bolt_thrall",
+   "elsewhere:hrafnholt_wolf_rider",
+   "elsewhere:hrafnholt_wolf_rider_axe",
+   "elsewhere:hrafnholt_hird_sergeant",
+   "elsewhere:hrafnholt_hird_captain",
+   "elsewhere:hrafnholt_raven_bearer",
+   "elsewhere:hrafnholt_skald",
+   "elsewhere:hrafnholt_leech",
+   "elsewhere:hrafnholt_shield_lad",
+   "elsewhere:hrafnholt_spear_thane"
+  ],
+  "unique_units": [
+   "elsewhere:hrafnholt_berserker",
+   "elsewhere:hrafnholt_wolf_handler"
+  ],
+  "makeup": {
+   "elsewhere:hrafnholt_huskarl": 0.28,
+   "elsewhere:hrafnholt_shield_thane": 0.17,
+   "elsewhere:hrafnholt_spear_thane": 0.15,
+   "elsewhere:hrafnholt_hunter": 0.15,
+   "elsewhere:hrafnholt_bolt_thrall": 0.05,
+   "elsewhere:hrafnholt_wolf_rider": 0.05,
+   "elsewhere:hrafnholt_berserker": 0.05,
+   "elsewhere:hrafnholt_wolf_handler": 0.05,
+   "elsewhere:hrafnholt_shield_lad": 0.05
+  },
+  "health_multiplier": 1.15,
+  "damage_multiplier": 1.1,
+  "speed_multiplier": 0.9,
+  "size_multiplier": 1.2,
+  "patrol_day": 7,
+  "patrol_night": 8,
+  "brain": {
+   "war_frequency": 1.5,
+   "min_attack_odds": 1.0,
+   "retreat_instead_of_die": false,
+   "veterancy_cap": 0.1,
+   "intelligence_noise": 0.45,
+   "supply_line_only": false,
+   "decision_delay_days": 0.0,
+   "hire_mercenaries": false,
+   "mercenary_daily_cost": 0,
+   "brain_roles": [
+    {
+     "role": "king",
+     "degrades": [
+      "war_freq"
+     ]
+    },
+    {
+     "role": "marshal",
+     "degrades": [
+      "pursuit",
+      "retreat_threshold"
+     ]
+    }
+   ],
+   "war_freq": 1.5,
+   "attack_rate": 0.75,
+   "free_siege_rate": 0.32,
+   "commit": 0.5,
+   "min_odds": 1.0,
+   "retreat_threshold": 0.0,
+   "def_retreat": 0.0,
+   "intel_noise": 0.45,
+   "scout_targets": 1,
+   "skirmish_min_odds": 0.0,
+   "vet_gain": 0.02,
+   "vet_cap": 0.1,
+   "vet_decay_per_day": 0.01,
+   "pursuit": 0.12,
+   "supply_rule": false,
+   "fort_rate_per_day": 0.0,
+   "fort_cap": 0.1,
+   "fort_border_only": false,
+   "integration_days": 12,
+   "conquest_unrest": 0.8,
+   "opening_days": 0,
+   "hp_mult": 1.15,
+   "dmg_mult": 1.1,
+   "size_mult": 1.2,
+   "income_base": 8,
+   "income_per_village": 1.5,
+   "income_noise": 0.3,
+   "head_cost": 7.5,
+   "timing_rule": false,
+   "broker": false,
+   "boss_degrade": {
+    "king": {
+     "seat_empty_days": 7,
+     "degraded_days": 30,
+     "fields": {
+      "war_freq": 1.0
+     }
+    },
+    "marshal": {
+     "seat_empty_days": 7,
+     "degraded_days": 30,
+     "fields": {
+      "pursuit": 0.0,
+      "retreat_threshold": 0.55
+     }
+    }
+   }
+  },
+  "landing": "longship"
+ },
+ "standing_rules": {
+  "start": -30,
+  "loss_multiplier": 1.5,
+  "gain_multiplier": 0.75,
+  "wary_only_in_realm": true,
+  "realm_radius_blocks": 1500
+ },
+ "succession": {
+  "jarl_dies": "strongest_living_champion_becomes_jarl",
+  "jarl_successor_bonus": {
+   "health_pct": 5,
+   "damage_pct": 5
+  },
+  "champion_dies": {
+   "after_days": 10,
+   "raise": "senior_living_hird_captain",
+   "max_per_seat": 1,
+   "requires_living_captain": true
+  },
+  "risen": {
+   "base_unit": "elsewhere:hrafnholt_hird_captain",
+   "health_pct": 15,
+   "damage_pct": 15,
+   "takes_seat_title": true,
+   "drop_rule": "repeat_kill_odds",
+   "name_key_prefix": "entity.elsewhere.hrafnholt_risen_",
+   "skin_template": "elsewhere:textures/entity/hrafnholt/boss/risen_%s.png",
+   "moves": {
+    "marshal": [
+     "raid_charge",
+     "horn_of_three_calls"
+    ],
+    "castellan": [
+     "hearth_ward",
+     "door_breaker"
+    ],
+    "master_at_arms": [
+     "rune_throw",
+     "three_beat_verse"
+    ],
+    "huntsman": [
+     "furrow_run",
+     "pelt_leap"
+    ],
+    "chancellor": [
+     "wolf_pack",
+     "pinning_arrow"
+    ]
+   }
+  },
+  "falls_when": "jarl_line_and_all_champion_seats_dead"
+ },
+ "castle": {
+  "palette": {
+   "wall": "minecraft:mossy_stone_bricks",
+   "wall_accent": "minecraft:stone_bricks",
+   "base": "minecraft:mossy_cobblestone",
+   "frame": "minecraft:dark_oak_log",
+   "plank": "minecraft:spruce_planks",
+   "roof_stairs": "minecraft:spruce_stairs",
+   "roof_slab": "minecraft:spruce_slab",
+   "floor": "minecraft:dark_oak_planks",
+   "banding": "minecraft:iron_bars",
+   "window": "minecraft:iron_bars",
+   "light": "minecraft:lantern",
+   "door": "minecraft:spruce_door",
+   "fence": "minecraft:spruce_fence",
+   "gate": "minecraft:spruce_fence_gate",
+   "accent_wood": "minecraft:dark_oak_log",
+   "ember": "minecraft:campfire",
+   "banner": "minecraft:green_banner",
+   "moss": "minecraft:moss_block"
+  },
+  "extra_pieces": [
+   "longhall_roofline",
+   "palisade_wall",
+   "raven_perch_tower",
+   "hearth_pit",
+   "hall_door_steps",
+   "wolf_kennel",
+   "weapon_racks"
+  ],
+  "keep_style": "longhall_keep",
+  "boss_arena": "longhall_floor",
+  "comment": "Spruce and dark-oak timber on mossy stone; longhall roofline and a spruce palisade. The block swap is data/elsewhere/kingdom_castle/hrafnholt.json."
+ },
+ "rebuild_style": {
+  "style": "longhall_palisade",
+  "house_roof": "minecraft:spruce_stairs",
+  "house_wall": "minecraft:spruce_planks",
+  "house_frame": "minecraft:stripped_spruce_log",
+  "wall": "minecraft:spruce_fence",
+  "palisade": [
+   "minecraft:spruce_log",
+   "minecraft:spruce_fence"
+  ],
+  "banner": "minecraft:green_banner",
+  "light": "minecraft:lantern",
+  "extras": [
+   "raven_post",
+   "longhall_in_town_centre"
+  ],
+  "rebuild_speed_multiplier": 1.5,
+  "siege_unrest": 0.8,
+  "flip_back_chance_per_day": 0.12
+ },
+ "ravens": {
+  "border_hint": "raven_post",
+  "tower_flag": "green_banner"
+ },
+ "biomes_fallback": [
+  "minecraft:snowy_taiga",
+  "minecraft:grove"
+ ],
+ "site": {
+  "terrain": "rise",
+  "near_water": true,
+  "waterfront": true
+ }
+}

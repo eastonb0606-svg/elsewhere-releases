@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:phasewalker_greaves"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.gear.phasewalker_greaves.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.gear.phasewalker_greaves.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elsewhere:root",
+  "criteria": {
+    "has": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elsewhere:phasewalker_greaves"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has"
+    ]
+  ]
+}

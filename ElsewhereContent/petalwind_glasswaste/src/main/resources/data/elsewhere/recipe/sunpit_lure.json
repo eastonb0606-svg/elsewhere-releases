@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "elsewhere:sandswimmer_scale",
+    "elsewhere:sandswimmer_scale",
+    "elsewhere:sandswimmer_scale",
+    "elsewhere:sandswimmer_scale",
+    "minecraft:rotten_flesh",
+    "minecraft:rotten_flesh",
+    "minecraft:rotten_flesh",
+    "minecraft:rotten_flesh",
+    "elsewhere:gizzard_stone"
+  ],
+  "result": {
+    "id": "elsewhere:sunpit_lure",
+    "count": 1
+  }
+}

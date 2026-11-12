@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "# ",
+    " X"
+  ],
+  "key": {
+    "#": "minecraft:fishing_rod",
+    "X": "minecraft:crimson_fungus"
+  },
+  "result": {
+    "id": "elsewhere:crimson_fungus_on_a_stick"
+  }
+}

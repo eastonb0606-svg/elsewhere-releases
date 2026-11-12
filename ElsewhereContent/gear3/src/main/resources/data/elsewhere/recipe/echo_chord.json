@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:resonant_shard",
+  "base": "minecraft:diamond_sword",
+  "addition": "elsewhere:echo_alloy",
+  "result": {
+    "id": "elsewhere:echo_chord"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:resonant_shard",
+        "elsewhere:echo_alloy"
+      ]
+    }
+  ]
+}

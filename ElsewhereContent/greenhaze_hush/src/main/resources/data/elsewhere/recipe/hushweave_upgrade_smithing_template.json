@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:diamond",
+    "S": "elsewhere:hushweave_upgrade_smithing_template",
+    "C": "elsewhere:echo_crystal_block"
+  },
+  "result": {
+    "id": "elsewhere:hushweave_upgrade_smithing_template",
+    "count": 2
+  }
+}

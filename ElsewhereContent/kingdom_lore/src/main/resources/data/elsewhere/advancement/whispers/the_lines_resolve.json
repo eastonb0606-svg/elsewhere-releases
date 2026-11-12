@@ -1,0 +1,23 @@
+{
+ "display": {
+  "icon": {
+   "id": "minecraft:filled_map"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.the_lines_resolve.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.the_lines_resolve.desc"
+  },
+  "frame": "goal",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:impossible"
+  }
+ },
+ "parent": "elsewhere:whispers/three_make_a_map"
+}

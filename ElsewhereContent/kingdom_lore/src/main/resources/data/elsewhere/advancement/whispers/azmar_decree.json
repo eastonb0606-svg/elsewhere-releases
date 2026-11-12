@@ -1,0 +1,32 @@
+{
+ "display": {
+  "icon": {
+   "id": "elsewhere:azmar_royal_proclamation"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.azmar_decree.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.azmar_decree.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:inventory_changed",
+   "conditions": {
+    "items": [
+     {
+      "items": [
+       "elsewhere:azmar_royal_proclamation"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "parent": "elsewhere:whispers/azmar_road"
+}

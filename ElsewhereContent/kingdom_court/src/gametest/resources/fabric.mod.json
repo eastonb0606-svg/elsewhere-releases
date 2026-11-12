@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_kingdom_court-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere court client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.kingdom_court.gametest.CourtScreenshots", "dev.elsewhere.kingdom_court.gametest.StructureShots", "dev.elsewhere.kingdom_court.gametest.RealTerrainShots"]
+	},
+	"depends": {
+		"elsewhere_kingdom_court": "*"
+	}
+}

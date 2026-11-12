@@ -1,0 +1,27 @@
+{
+ "role": "melee",
+ "ability": "surgeon",
+ "skin": "elsewhere:textures/entity/hrafnholt/leech.png",
+ "armor": {
+  "head": "minecraft:leather_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 14209200,
+ "main_hand": "minecraft:iron_axe",
+ "off_hand": "minecraft:splash_potion",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.03,
+  "crit_cooldown": 200,
+  "retreat_health": 0.5,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.8
+ }
+}

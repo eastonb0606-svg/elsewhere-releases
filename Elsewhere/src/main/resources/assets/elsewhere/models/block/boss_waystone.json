@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "elsewhere:block/boss_waystone_top",
+    "bottom": "elsewhere:block/boss_waystone_bottom",
+    "side": "elsewhere:block/boss_waystone_side"
+  }
+}

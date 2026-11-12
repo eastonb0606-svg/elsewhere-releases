@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LSL",
+    "LAL",
+    "LLL"
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "S": "minecraft:string",
+    "A": "minecraft:arrow"
+  },
+  "result": {
+    "id": "elsewhere:aldermark_quickdraw_quiver"
+  }
+}

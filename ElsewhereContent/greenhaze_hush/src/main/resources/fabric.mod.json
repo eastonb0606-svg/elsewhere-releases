@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_greenhaze_hush",
+	"version": "${version}",
+	"name": "Elsewhere: Greenhaze & Hush (dev module)",
+	"description": "Elsewhere content module: The Greenhaze, The Hush, Percolax, Grumblegut, Auris and Lithara. At merge the core's entrypoints call GreenhazeHushContent.init() / GreenhazeHushClient.initClient().",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.greenhaze_hush.dev.DevEntrypoint"],
+		"client": ["dev.elsewhere.greenhaze_hush.dev.DevClientEntrypoint"]
+	},
+	"mixins": [
+		"elsewhere_greenhaze_hush.mixins.json",
+		{"config": "elsewhere_greenhaze_hush.client.mixins.json", "environment": "client"},
+		{"config": "elsewhere_greenhaze_hush_anim3.mixins.json", "environment": "client"}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"greenleaf": "*",
+		"testmeter": "*"
+	}
+}

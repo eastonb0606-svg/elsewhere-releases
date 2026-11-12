@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.rivals.mirewick.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"EntityStuckMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

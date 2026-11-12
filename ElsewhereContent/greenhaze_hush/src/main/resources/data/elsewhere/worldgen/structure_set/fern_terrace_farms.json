@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470223,
+    "separation": 10,
+    "spacing": 28
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:fern_terrace_farms",
+      "weight": 1
+    }
+  ]
+}

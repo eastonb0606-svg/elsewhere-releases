@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.stub.overworld_bosses.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"BossHealthOverlayAccessor",
+		"MinecraftMusicMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

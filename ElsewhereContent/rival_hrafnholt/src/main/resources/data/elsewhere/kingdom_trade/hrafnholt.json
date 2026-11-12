@@ -1,0 +1,128 @@
+{
+ "mode": "thing",
+ "goods": {
+  "minecraft:iron_ingot": 30,
+  "minecraft:leather": 20,
+  "minecraft:cod": 10,
+  "minecraft:salmon": 10,
+  "minecraft:wheat": 5
+ },
+ "lines": [
+  {
+   "item": "minecraft:arrow",
+   "price": 6,
+   "count": 16,
+   "tier": "smith"
+  },
+  {
+   "item": "elsewhere:bodkin_bolt",
+   "price": 27,
+   "count": 8,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:iron_axe",
+   "price": 14,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:iron_sword",
+   "price": 14,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:shield",
+   "price": 10,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:bow",
+   "price": 12,
+   "tier": "smith"
+  },
+  {
+   "item": "elsewhere:hrafnholt_raven_shield",
+   "price": 30,
+   "tier": "thing"
+  },
+  {
+   "item": "elsewhere:hrafnholt_wolfpelt_blanket",
+   "price": 36,
+   "tier": "thing"
+  },
+  {
+   "item": "elsewhere:hrafnholt_fur_collar_dye",
+   "price": 20,
+   "tier": "thing"
+  },
+  {
+   "item": "elsewhere:hrafnholt_banner_pattern",
+   "price": 40,
+   "tier": "thing"
+  },
+  {
+   "item": "elsewhere:hrafnholt_armor_trim_smithing_template",
+   "price": 40,
+   "tier": "thing",
+   "weekly_limit": 2
+  },
+  {
+   "item": "elsewhere:hrafnholt_survey_map",
+   "price": 28,
+   "tier": "thing"
+  },
+  {
+   "item": "elsewhere:oathkeepers_seal",
+   "price": 220,
+   "tier": "top",
+   "rings": 4,
+   "weekly_limit": 2
+  },
+  {
+   "item": "elsewhere:hrafnholt_raven_banner",
+   "price": 150,
+   "tier": "top",
+   "rings": 3,
+   "weekly_limit": 1
+  },
+  {
+   "item": "minecraft:netherite_upgrade_smithing_template",
+   "price": 275,
+   "tier": "top",
+   "rings": 6,
+   "weekly_limit": 2,
+   "extra": [
+    {
+     "item": "minecraft:diamond",
+     "count": 20
+    }
+   ]
+  },
+  {
+   "item": "minecraft:iron_helmet",
+   "price": 16,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:iron_chestplate",
+   "price": 26,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:iron_leggings",
+   "price": 22,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:iron_boots",
+   "price": 14,
+   "tier": "smith"
+  },
+  {
+   "item": "minecraft:cooked_beef",
+   "price": 4,
+   "count": 8,
+   "tier": "smith"
+  }
+ ]
+}

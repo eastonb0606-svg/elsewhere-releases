@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elsewhere:block/ossuary_bone_brick_slab"
+    },
+    "type=double": {
+      "model": "elsewhere:block/ossuary_bone_bricks"
+    },
+    "type=top": {
+      "model": "elsewhere:block/ossuary_bone_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere_nether_end_bosses"
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"elsewhere_nether_end_bosses" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// `./gradlew runServer` starts a dev server (port 25661, see run/server.properties)
+		// that runs the built-in self-test and exits.
+		server {
+			property "nether_end_bosses.selftest", "true"
+			property "nether_end_bosses.selftest.exit", "true"
+			vmArg "-Xmx1536m"
+		}
+		client {
+			vmArg "-Xmx2g"
+		}
+	}
+}
+
+// `./gradlew runClientGameTest` opens a real client, builds test arenas and saves screenshots to screenshots/.
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere_nether_end_bosses-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+	property "nether_end_bosses.screenshotDir", file("screenshots").absolutePath
+	vmArg "-Xmx2g"
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

@@ -1,0 +1,82 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere"
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"elsewhere" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// `./gradlew runServer`: dev server on port 25671 that runs the combined beta smoke test and exits.
+		server {
+			vmArg "-Xmx2560m"
+			property "elsewhere.betatest", "true"
+			property "elsewhere.betatest.exit", "true"
+		}
+	}
+}
+
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+	vmArg "-Xmx2g"
+	property "elsewhere.screenshotDir", file("screenshots").absolutePath
+}
+
+repositories {
+	// JEI (optional): only its API is needed to compile the Elsewhere JEI plugin; JEI itself is never bundled.
+	exclusiveContent {
+		forRepository { maven { name = "BlameJared"; url = "https://maven.blamejared.com/" } }
+		filter { includeGroup "mezz.jei" }
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-common-api:${project.jei_version}"
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-fabric-api:${project.jei_version}"
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+	it.options.encoding = "UTF-8"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+tasks.register('dist', Copy) {
+	dependsOn jar
+	from jar.archiveFile
+	into file('dist')
+}

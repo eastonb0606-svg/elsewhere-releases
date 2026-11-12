@@ -1,0 +1,33 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/kingdom/mirewick/pikeman.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:iron_boots"
+ },
+ "main_hand": "minecraft:iron_spear",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.35,
+  "block_chance": 0.0,
+  "crit_chance": 0.05,
+  "retreat_health": 0.3,
+  "mounted_bonus": 2.0
+ },
+ "trim": {
+  "material": "minecraft:amethyst",
+  "patterns": [
+   "elsewhere:mirewick",
+   "minecraft:tide",
+   "minecraft:wild"
+  ]
+ }
+}

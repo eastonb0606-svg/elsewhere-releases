@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "#S#",
+  "#C#",
+  "###"
+ ],
+ "key": {
+  "#": "minecraft:diamond",
+  "C": "elsewhere:polished_frostgranite",
+  "S": "elsewhere:summit_armor_trim_smithing_template"
+ },
+ "result": {
+  "id": "elsewhere:summit_armor_trim_smithing_template",
+  "count": 2
+ }
+}

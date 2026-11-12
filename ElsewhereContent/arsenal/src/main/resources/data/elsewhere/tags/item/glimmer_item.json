@@ -1,0 +1,60 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:amethyst_wand",
+    "elsewhere:sunlance_staff",
+    "elsewhere:stormcoil_staff",
+    "elsewhere:sculk_resonator",
+    "elsewhere:glimmer_tonic",
+    "elsewhere:strong_glimmer_tonic",
+    "elsewhere:glimmerstone_focus",
+    {
+      "id": "elsewhere:heliograph_lens",
+      "required": false
+    },
+    {
+      "id": "elsewhere:ninefold_rod",
+      "required": false
+    },
+    {
+      "id": "elsewhere:moon_eye",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_heart",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gravity_pearl",
+      "required": false
+    },
+    {
+      "id": "elsewhere:cloud_jar",
+      "required": false
+    },
+    {
+      "id": "elsewhere:tuning_fork_of_auris",
+      "required": false
+    },
+    {
+      "id": "elsewhere:kitestring_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:rootcall_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:brassback_key",
+      "required": false
+    },
+    {
+      "id": "elsewhere:herding_crook",
+      "required": false
+    },
+    {
+      "id": "elsewhere:bell_of_the_flock",
+      "required": false
+    }
+  ]
+}

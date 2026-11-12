@@ -1,0 +1,32 @@
+{
+  "id": "elsewhere:mirewick_sorrel",
+  "kingdom": "mirewick",
+  "slots": {
+    "weapons": "sluice_maul_tower_shield",
+    "movement": "plodding_anchor",
+    "defence": "tower_shield_front",
+    "recovery": "none",
+    "reach": "dike_wall_corridor",
+    "last_stand": "sluice_open"
+  },
+  "generic": [
+    "shield_block",
+    "temp_blocks"
+  ],
+  "signature": [
+    "dike_wall",
+    "sluice_maul",
+    "mud_surge"
+  ],
+  "telegraph": {
+    "particle": "falling_water",
+    "colour": "#6B5A44",
+    "sound": {
+      "event": "block.mud_bricks.place",
+      "pitch": 0.6
+    }
+  },
+  "last_stand": "sluice_open",
+  "idle": "Leans on the maul with brick dust falling and raps the tower shield twice like a lock gate.",
+  "chair_last_stand": "lantern_rally"
+}

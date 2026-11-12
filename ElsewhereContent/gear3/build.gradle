@@ -1,0 +1,67 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere_gear3"
+}
+
+loom {
+	// 3.0 swarm: client source set for gear3 renderers (src/client/java; entry dev.elsewhere.gear3.client.Gear3Client).
+	splitEnvironmentSourceSets()
+
+	mods {
+		"elsewhere_gear3" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// `./gradlew runServer` starts a dev server (port 25891, see run/server.properties)
+		// that runs the gear3 self-test and exits.
+		server {
+			vmArg "-Xmx1536m"
+			property "gear3.selftest", "true"
+			property "gear3.selftest.exit", "true"
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// Dev only: the latest merged Elsewhere jar (arsenal, summoner, gear2, bosses...). 26.3 is unobfuscated, so
+	// gear3 compiles directly against arsenal's Calling API etc. Never shipped; at merge the real classes are in the
+	// same source tree.
+	if (file('devlibs/elsewhere.jar').exists()) {
+		compileOnly files('devlibs/elsewhere.jar')
+		runtimeOnly files('devlibs/elsewhere.jar')
+	}
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+// Copies the dev jar to dist/ (`./gradlew dist`).
+tasks.register('dist', Copy) {
+	dependsOn 'jar'
+	from(tasks.named('jar'))
+	into file('dist')
+}

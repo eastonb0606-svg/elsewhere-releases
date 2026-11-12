@@ -1,0 +1,17 @@
+{
+ "replace": false,
+ "values": [
+  {
+   "id": "elsewhere:castle_aldermark",
+   "required": false
+  },
+  {
+   "id": "elsewhere:aldermark_castle",
+   "required": false
+  },
+  {
+   "id": "elsewhere:castle_aldermark_keep",
+   "required": false
+  }
+ ]
+}

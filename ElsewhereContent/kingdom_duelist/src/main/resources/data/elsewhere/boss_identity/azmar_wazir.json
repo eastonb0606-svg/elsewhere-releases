@@ -1,0 +1,30 @@
+{
+  "id": "elsewhere:azmar_wazir",
+  "kingdom": "azmar",
+  "slots": {
+    "weapons": "faience_satchel_dagger",
+    "movement": "glyph_pacing",
+    "defence": "hands_reform",
+    "recovery": "ibis_draught",
+    "reach": "glyph_splash_16",
+    "last_stand": "seal_of_ibis"
+  },
+  "generic": [
+    "drink"
+  ],
+  "signature": [
+    "counter_brew",
+    "glyph_flare",
+    "veil_of_the_ibis"
+  ],
+  "telegraph": {
+    "particle": "glow",
+    "colour": "#2BB3A3",
+    "sound": {
+      "event": "block.enchantment_table.use",
+      "pitch": 1.0
+    }
+  },
+  "last_stand": "seal_of_ibis",
+  "idle": "Reads aloud from a papyrus roll, tracing glyphs in the air with a reed pen."
+}

@@ -1,0 +1,35 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/hrafnholt/hird_a.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:iron_leggings",
+  "feet": "minecraft:iron_boots"
+ },
+ "main_hand": "minecraft:iron_axe",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 24,
+  "speed": 0.28,
+  "knockback_resistance": 0.1,
+  "armor": 1.0
+ },
+ "combat": {
+  "block_chance": 0.5,
+  "crit_chance": 0.08,
+  "crit_cooldown": 180,
+  "retreat_health": 0.15,
+  "sprint_chance": 0.3,
+  "strafe": 0.4,
+  "retreat_chance": 0.1
+ },
+ "trim": {
+  "material": "minecraft:quartz",
+  "patterns": [
+   "elsewhere:hrafnholt",
+   "minecraft:rib",
+   "minecraft:ward"
+  ]
+ }
+}

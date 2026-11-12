@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "elsewhere:block/kelpwood_planks",
+    "side": "elsewhere:block/kelpwood_planks",
+    "top": "elsewhere:block/kelpwood_planks"
+  }
+}

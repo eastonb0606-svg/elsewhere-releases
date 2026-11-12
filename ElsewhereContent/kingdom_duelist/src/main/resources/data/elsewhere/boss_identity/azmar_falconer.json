@@ -1,0 +1,30 @@
+{
+  "id": "elsewhere:azmar_falconer",
+  "kingdom": "azmar",
+  "slots": {
+    "weapons": "composite_bow_khopesh_glove",
+    "movement": "high_ground_kite",
+    "defence": "falcon_intercept",
+    "recovery": "perch_rest",
+    "reach": "dust_dodge_5",
+    "last_stand": "falcon_storm"
+  },
+  "generic": [
+    "temp_blocks"
+  ],
+  "signature": [
+    "falcon_mark",
+    "triple_stoop",
+    "perch_post"
+  ],
+  "telegraph": {
+    "particle": "firework",
+    "colour": "#F2E3A0",
+    "sound": {
+      "event": "entity.phantom.swoop",
+      "pitch": 1.6
+    }
+  },
+  "last_stand": "falcon_storm",
+  "idle": "Strokes the falcon on her glove, points to the sky, and the falcon circles once."
+}

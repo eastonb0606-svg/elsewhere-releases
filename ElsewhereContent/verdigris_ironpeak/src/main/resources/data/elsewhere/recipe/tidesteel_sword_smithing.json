@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:smithing_transform",
+ "category": "equipment",
+ "template": "elsewhere:tidebrass_upgrade_smithing_template",
+ "base": "minecraft:diamond_sword",
+ "addition": "elsewhere:tidebrass_ingot",
+ "result": {
+  "id": "elsewhere:tidesteel_sword",
+  "count": 1
+ }
+}

@@ -1,0 +1,73 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:amberstill_helmet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_chestplate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amberstill_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galvanic_coilmail_helmet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galvanic_coilmail_chestplate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galvanic_coilmail_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galvanic_coilmail_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_helmet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_chestplate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sunwright_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hearth_ward_mail",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_ulfhednar_pelt",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_iron_crown",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_dikewardens_brigandine",
+      "required": false
+    },
+    {
+      "id": "elsewhere:azmar_horned_scarab_crown",
+      "required": false
+    }
+  ]
+}

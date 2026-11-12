@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_greenhaze_hush-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere greenhaze_hush client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.greenhaze_hush.gametest.ScreenshotTest"]
+	},
+	"depends": {
+		"elsewhere_greenhaze_hush": "*"
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:wayfinder"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.root.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.root.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:gui/advancements/backgrounds/adventure"
+  },
+  "criteria": {
+    "has_wayfinder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elsewhere:wayfinder"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wayfinder"
+    ]
+  ]
+}

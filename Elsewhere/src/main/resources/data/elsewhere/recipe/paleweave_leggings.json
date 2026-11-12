@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "elsewhere:amber",
+    "B": "elsewhere:pale_bark"
+  },
+  "pattern": [
+    "XXX",
+    "B B",
+    "X X"
+  ],
+  "result": {
+    "id": "elsewhere:paleweave_leggings"
+  }
+}

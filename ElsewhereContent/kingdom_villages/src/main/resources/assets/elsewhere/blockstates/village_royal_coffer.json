@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,sealed=false": {
+      "model": "elsewhere:block/village_royal_coffer"
+    },
+    "facing=east,sealed=false": {
+      "model": "elsewhere:block/village_royal_coffer",
+      "y": 90
+    },
+    "facing=south,sealed=false": {
+      "model": "elsewhere:block/village_royal_coffer",
+      "y": 180
+    },
+    "facing=west,sealed=false": {
+      "model": "elsewhere:block/village_royal_coffer",
+      "y": 270
+    },
+    "facing=north,sealed=true": {
+      "model": "elsewhere:block/village_royal_coffer_sealed"
+    },
+    "facing=east,sealed=true": {
+      "model": "elsewhere:block/village_royal_coffer_sealed",
+      "y": 90
+    },
+    "facing=south,sealed=true": {
+      "model": "elsewhere:block/village_royal_coffer_sealed",
+      "y": 180
+    },
+    "facing=west,sealed=true": {
+      "model": "elsewhere:block/village_royal_coffer_sealed",
+      "y": 270
+    }
+  }
+}

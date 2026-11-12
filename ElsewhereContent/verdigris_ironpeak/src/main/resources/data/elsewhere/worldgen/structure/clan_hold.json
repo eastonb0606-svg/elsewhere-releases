@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "elsewhere:granite_terraces",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "clan_hold",
+ "placement": "surface",
+ "min_height": 250,
+ "max_height": 700,
+ "y_offset": 1
+}

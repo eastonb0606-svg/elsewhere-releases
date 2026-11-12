@@ -1,0 +1,22 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere",
+	"version": "${version}",
+	"name": "Elsewhere",
+	"description": "New dimensions reached with Wayfinders, and the bosses that guard them. v0.1 adds the Pale Hollow, Mother Creak and Selenne.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"icon": "assets/elsewhere/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.Elsewhere"],
+		"client": ["dev.elsewhere.client.ElsewhereClient"]
+	},
+	"mixins": ["elsewhere.mixins.json", {"config": "elsewhere_core_anim3.mixins.json", "environment": "client"}],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470201,
+    "separation": 14,
+    "spacing": 40
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:listening_engine",
+      "weight": 1
+    }
+  ]
+}

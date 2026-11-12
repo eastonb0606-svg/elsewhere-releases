@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:court_marshals"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:court_marshals"
+      }
+    ]
+  }
+}

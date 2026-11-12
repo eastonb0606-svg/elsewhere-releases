@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "#elsewhere:is_verdigris_sea",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "return_rift_verdigris_sea",
+ "placement": "fixed",
+ "min_height": 99,
+ "max_height": 99,
+ "y_offset": 0
+}

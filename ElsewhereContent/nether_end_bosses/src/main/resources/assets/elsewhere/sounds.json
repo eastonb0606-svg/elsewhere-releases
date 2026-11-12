@@ -1,0 +1,379 @@
+{
+  "music.boss.grunthar": {
+    "category": "music",
+    "subtitle": "subtitles.elsewhere.music",
+    "sounds": [
+      {
+        "name": "minecraft:music/game/nether/crimson_forest/chrysopoeia",
+        "stream": true
+      }
+    ]
+  },
+  "music.boss.solaxis": {
+    "category": "music",
+    "subtitle": "subtitles.elsewhere.music",
+    "sounds": [
+      {
+        "name": "minecraft:music/game/nether/nether_wastes/rubedo",
+        "stream": true
+      }
+    ]
+  },
+  "music.boss.mournmaw": {
+    "category": "music",
+    "subtitle": "subtitles.elsewhere.music",
+    "sounds": [
+      {
+        "name": "minecraft:music/game/nether/soulsand_valley/so_below",
+        "stream": true
+      }
+    ]
+  },
+  "music.boss.ossyra": {
+    "category": "music",
+    "subtitle": "subtitles.elsewhere.music",
+    "sounds": [
+      {
+        "name": "minecraft:music/game/end/alpha",
+        "stream": true
+      }
+    ]
+  },
+  "music.boss.aphelion": {
+    "category": "music",
+    "subtitle": "subtitles.elsewhere.music",
+    "sounds": [
+      {
+        "name": "minecraft:music/game/end/boss",
+        "stream": true
+      }
+    ]
+  },
+  "boss.grunthar.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.piglin_brute.angry",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.grunthar.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.hoglin.angry",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.grunthar.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.iron_golem.attack",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.grunthar.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:block.anvil.land",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.grunthar.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.piglin_brute.death",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.grunthar.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.hoglin.death",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.solaxis.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.blaze.ambient",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.solaxis.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.burn",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.solaxis.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.blaze.shoot",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.solaxis.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.explode",
+        "type": "event",
+        "pitch": 1.2,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.solaxis.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.blaze.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.solaxis.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.explode",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.mournmaw.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ghast.scream",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.mournmaw.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ghast.warn",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.mournmaw.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ghast.warn",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.mournmaw.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ghast.shoot",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.mournmaw.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ghast.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.mournmaw.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.allay.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.ossyra.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.shulker.ambient",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.ossyra.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ender_dragon.growl",
+        "type": "event",
+        "pitch": 1.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.ossyra.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.shulker.shoot",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.ossyra.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:block.end_portal.spawn",
+        "type": "event",
+        "pitch": 1.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.ossyra.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.shulker.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.ossyra.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.enderman.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.aphelion.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ender_dragon.growl",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.aphelion.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ender_dragon.ambient",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.aphelion.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ender_dragon.flap",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.aphelion.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.warden.sonic_boom",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.aphelion.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ender_dragon.death",
+        "type": "event",
+        "pitch": 0.8,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.aphelion.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.explode",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "sfx3.aphelion.roar": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.roar", "sounds": [{"name": "elsewhere:sfx3/aphelion/roar"}, {"name": "elsewhere:sfx3/aphelion/roar", "pitch": 0.94}]},
+  "sfx3.aphelion.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.roar_layer", "sounds": [{"name": "minecraft:entity.warden.roar", "type": "event", "pitch": 0.6, "volume": 0.7}, {"name": "minecraft:entity.elder_guardian.curse", "type": "event", "pitch": 0.5, "volume": 0.6}]},
+  "sfx3.aphelion.tele": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.tele", "sounds": [{"name": "elsewhere:sfx3/aphelion/tele"}]},
+  "sfx3.aphelion.big": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.big", "sounds": [{"name": "minecraft:entity.warden.sonic_charge", "type": "event", "pitch": 0.8, "volume": 0.8}]},
+  "sfx3.aphelion.death": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.death", "sounds": [{"name": "elsewhere:sfx3/aphelion/death"}]},
+  "sfx3.aphelion.growl": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.growl", "sounds": [{"name": "elsewhere:sfx3/aphelion/roar", "pitch": 1.15}, {"name": "elsewhere:sfx3/aphelion/roar", "pitch": 1.25}]},
+  "sfx3.aphelion.breath": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.breath", "sounds": [{"name": "elsewhere:sfx3/aphelion/breath"}, {"name": "elsewhere:sfx3/aphelion/breath", "pitch": 0.92}]},
+  "sfx3.aphelion.coil": {"subtitle": "subtitles.elsewhere.sfx3.aphelion.coil", "sounds": [{"name": "elsewhere:sfx3/aphelion/coil"}, {"name": "elsewhere:sfx3/aphelion/coil", "pitch": 0.9}]},
+  "sfx3.ossyra.roar": {"subtitle": "subtitles.elsewhere.sfx3.ossyra.roar", "sounds": [{"name": "elsewhere:sfx3/ossyra/roar"}, {"name": "elsewhere:sfx3/ossyra/roar", "pitch": 0.95}]},
+  "sfx3.ossyra.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.ossyra.roar_layer", "sounds": [{"name": "minecraft:entity.shulker.ambient", "type": "event", "pitch": 0.5, "volume": 0.8}, {"name": "minecraft:block.conduit.activate", "type": "event", "pitch": 0.7, "volume": 0.7}]},
+  "sfx3.ossyra.tele": {"subtitle": "subtitles.elsewhere.sfx3.ossyra.tele", "sounds": [{"name": "elsewhere:sfx3/ossyra/tele"}]},
+  "sfx3.ossyra.big": {"subtitle": "subtitles.elsewhere.sfx3.ossyra.big", "sounds": [{"name": "minecraft:entity.shulker.shoot", "type": "event", "pitch": 0.5, "volume": 0.9}]},
+  "sfx3.grunthar.roar": {"subtitle": "subtitles.elsewhere.sfx3.grunthar.roar", "sounds": [{"name": "elsewhere:sfx3/grunthar/roar"}, {"name": "elsewhere:sfx3/grunthar/roar", "pitch": 0.95}]},
+  "sfx3.grunthar.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.grunthar.roar_layer", "sounds": [{"name": "minecraft:entity.piglin_brute.angry", "type": "event", "pitch": 0.6, "volume": 0.8}, {"name": "minecraft:entity.hoglin.angry", "type": "event", "pitch": 0.6, "volume": 0.8}]},
+  "sfx3.grunthar.tele": {"subtitle": "subtitles.elsewhere.sfx3.grunthar.tele", "sounds": [{"name": "elsewhere:sfx3/grunthar/tele"}]},
+  "sfx3.grunthar.big": {"subtitle": "subtitles.elsewhere.sfx3.grunthar.big", "sounds": [{"name": "minecraft:entity.hoglin.attack", "type": "event", "pitch": 0.5, "volume": 0.9}]},
+  "sfx3.solaxis.roar": {"subtitle": "subtitles.elsewhere.sfx3.solaxis.roar", "sounds": [{"name": "elsewhere:sfx3/solaxis/roar"}, {"name": "elsewhere:sfx3/solaxis/roar", "pitch": 0.95}]},
+  "sfx3.solaxis.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.solaxis.roar_layer", "sounds": [{"name": "minecraft:entity.blaze.ambient", "type": "event", "pitch": 0.5, "volume": 0.8}, {"name": "minecraft:item.firecharge.use", "type": "event", "pitch": 0.5, "volume": 0.8}]},
+  "sfx3.solaxis.tele": {"subtitle": "subtitles.elsewhere.sfx3.solaxis.tele", "sounds": [{"name": "elsewhere:sfx3/solaxis/tele"}]},
+  "sfx3.solaxis.big": {"subtitle": "subtitles.elsewhere.sfx3.solaxis.big", "sounds": [{"name": "minecraft:entity.blaze.shoot", "type": "event", "pitch": 0.5, "volume": 0.9}]},
+  "sfx3.mournmaw.roar": {"subtitle": "subtitles.elsewhere.sfx3.mournmaw.roar", "sounds": [{"name": "elsewhere:sfx3/mournmaw/roar"}, {"name": "elsewhere:sfx3/mournmaw/roar", "pitch": 0.95}]},
+  "sfx3.mournmaw.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.mournmaw.roar_layer", "sounds": [{"name": "minecraft:entity.ghast.scream", "type": "event", "pitch": 0.55, "volume": 0.6}, {"name": "minecraft:entity.ghast.ambient", "type": "event", "pitch": 0.6, "volume": 0.6}]},
+  "sfx3.mournmaw.tele": {"subtitle": "subtitles.elsewhere.sfx3.mournmaw.tele", "sounds": [{"name": "elsewhere:sfx3/mournmaw/tele"}]},
+  "sfx3.mournmaw.big": {"subtitle": "subtitles.elsewhere.sfx3.mournmaw.big", "sounds": [{"name": "minecraft:entity.ghast.warn", "type": "event", "pitch": 0.5, "volume": 0.8}]},
+  "sfx3.ashtusk.roar": {"subtitle": "subtitles.elsewhere.sfx3.ashtusk.roar", "sounds": [{"name": "minecraft:entity.hoglin.angry", "type": "event", "pitch": 0.5}, {"name": "minecraft:entity.zoglin.angry", "type": "event", "pitch": 0.55}]},
+  "sfx3.ashtusk.tele": {"subtitle": "subtitles.elsewhere.sfx3.ashtusk.tele", "sounds": [{"name": "minecraft:entity.hoglin.step", "type": "event", "pitch": 0.6}, {"name": "minecraft:entity.hoglin.angry", "type": "event", "pitch": 0.75, "volume": 0.8}]},
+  "sfx3.ashtusk.big": {"subtitle": "subtitles.elsewhere.sfx3.ashtusk.big", "sounds": [{"name": "minecraft:entity.zoglin.attack", "type": "event", "pitch": 0.6, "volume": 0.9}]}
+}

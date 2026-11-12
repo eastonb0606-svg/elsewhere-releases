@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:stormcrest"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:stormcrest"
+      }
+    ]
+  }
+}

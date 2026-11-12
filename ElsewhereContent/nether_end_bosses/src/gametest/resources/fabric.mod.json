@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_nether_end_bosses-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere nether_end_bosses client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.nether_end_bosses.gametest.NetherEndScreenshotTest"]
+	},
+	"depends": {
+		"elsewhere_nether_end_bosses": "*"
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:stormcrest_helm"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.gear.stormcrest_helm.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.gear.stormcrest_helm.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elsewhere:root",
+  "criteria": {
+    "has": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elsewhere:stormcrest_helm"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has"
+    ]
+  ]
+}

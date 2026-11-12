@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "#elsewhere:is_ironpeak",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "summit_throne",
+ "placement": "surface",
+ "min_height": 1300,
+ "max_height": 1470,
+ "y_offset": 1
+}

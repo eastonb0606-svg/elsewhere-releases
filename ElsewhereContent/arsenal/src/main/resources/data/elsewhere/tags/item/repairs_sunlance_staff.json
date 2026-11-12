@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:sunglass_shard",
+      "required": false
+    },
+    "minecraft:amethyst_shard"
+  ]
+}

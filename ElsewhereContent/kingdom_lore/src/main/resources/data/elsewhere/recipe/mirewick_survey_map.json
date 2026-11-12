@@ -1,0 +1,12 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "elsewhere:mirewick_survey_fragment",
+  "elsewhere:mirewick_survey_fragment",
+  "elsewhere:mirewick_survey_fragment"
+ ],
+ "result": {
+  "id": "elsewhere:mirewick_survey_map"
+ }
+}

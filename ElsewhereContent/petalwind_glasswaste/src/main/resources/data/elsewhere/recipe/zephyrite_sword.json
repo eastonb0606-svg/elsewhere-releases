@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "M",
+    "M",
+    "S"
+  ],
+  "key": {
+    "M": "elsewhere:zephyrite",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "elsewhere:zephyrite_sword",
+    "count": 1
+  }
+}

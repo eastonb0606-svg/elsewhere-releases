@@ -1,0 +1,20 @@
+{
+  "_comment": "Hrafnholt, the sea raiders (ARMIES.md 2.4): thralls to wood and the shipyard, fisherfolk to the jetty and boats, all at the ring, the Thing-stone and the hall feast. Townsfolk lane data (s-townsfolk).",
+  "live": {"capital": 40, "town": 18},
+  "roles": [
+    {"id": "thrall", "weight": 0.55, "held": "minecraft:wooden_axe", "day": [
+      {"from": 5, "to": 8, "activity": "work", "where": "grove", "pose": "WORK"},
+      {"from": 8, "to": 11, "activity": "spar", "where": "wrestling_ring", "pose": "CHEER"},
+      {"from": 11, "to": 14, "activity": "work", "where": "shipyard", "pose": "WORK"},
+      {"from": 14, "to": 17, "activity": "spar", "where": "holmgang_ring", "pose": "CHEER"},
+      {"from": 17, "to": 21, "activity": "feast", "where": "longhall", "pose": "DRINK"}
+    ]},
+    {"id": "fisherfolk", "weight": 0.45, "held": "minecraft:fishing_rod", "day": [
+      {"from": 4, "to": 8, "activity": "work", "where": "jetty", "pose": "WORK"},
+      {"from": 8, "to": 11, "activity": "work", "where": "boats", "pose": "WORK"},
+      {"from": 11, "to": 14, "activity": "work", "where": "shore", "pose": "WORK"},
+      {"from": 14, "to": 17, "activity": "court", "where": "thing_stone", "pose": "NONE"},
+      {"from": 17, "to": 21, "activity": "feast", "where": "longhall", "pose": "DRINK"}
+    ]}
+  ]
+}

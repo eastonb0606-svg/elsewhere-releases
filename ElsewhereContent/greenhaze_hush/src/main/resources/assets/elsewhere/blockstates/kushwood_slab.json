@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elsewhere:block/kushwood_slab"
+    },
+    "type=double": {
+      "model": "elsewhere:block/kushwood_planks"
+    },
+    "type=top": {
+      "model": "elsewhere:block/kushwood_slab_top"
+    }
+  }
+}

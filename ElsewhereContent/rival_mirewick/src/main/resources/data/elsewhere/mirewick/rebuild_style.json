@@ -1,0 +1,29 @@
+{
+ "style": "canal_quays_dikes",
+ "budget_blocks_per_serf_per_20_ticks": 4,
+ "budget_blocks_per_chunk_load": 400,
+ "swap": {
+  "banner": "mirewick",
+  "lantern": "minecraft:lantern",
+  "decor_wall": "minecraft:quartz_bricks",
+  "road": "minecraft:smooth_stone",
+  "road_edge": "minecraft:mangrove_fence",
+  "quay": "minecraft:stone_bricks",
+  "dike": "minecraft:grass_block",
+  "post": "minecraft:stripped_mangrove_log",
+  "accent": "minecraft:yellow_terracotta",
+  "roof": "minecraft:red_nether_brick_stairs"
+ },
+ "never_place_water": true,
+ "only_replace_tracked_old_rebuild_blocks": true,
+ "builders": "elsewhere:mirewick_peat_cutter",
+ "strike_days_after_counting_house_raid": 3,
+ "counting_house_raid_triggers": [
+  "vault_opened",
+  "clerk_killed",
+  "keep_outpost_sacked"
+ ],
+ "roads_as_canal_quays": true,
+ "quay_blocks_beside_existing_water_only": true,
+ "dikes_raised_with_grass_and_stone_never_flooding": true
+}

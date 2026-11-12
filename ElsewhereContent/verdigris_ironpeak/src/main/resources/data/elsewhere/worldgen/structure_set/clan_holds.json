@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 71237,
+  "separation": 5,
+  "spacing": 14
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:clan_hold",
+   "weight": 1
+  }
+ ]
+}

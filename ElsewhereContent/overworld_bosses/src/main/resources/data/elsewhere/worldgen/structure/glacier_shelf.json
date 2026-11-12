@@ -1,0 +1,8 @@
+{
+  "type": "elsewhere:glacier_shelf",
+  "kind": "glacier_shelf",
+  "biomes": "#elsewhere:has_structure/glacier_shelf",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

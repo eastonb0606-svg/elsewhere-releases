@@ -1,0 +1,102 @@
+{
+  "type": "elsewhere:pale_hollow",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "elsewhere:pale_hollow",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "elsewhere:hollow_thicket",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              0.2
+            ],
+            "humidity": [
+              -0.35,
+              0.35
+            ],
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:resin_bog",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              0.2
+            ],
+            "humidity": [
+              0.35,
+              1.0
+            ],
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:weeping_deeps",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              0.2
+            ],
+            "humidity": [
+              -1.0,
+              -0.35
+            ],
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:heartwood_grove",
+          "parameters": {
+            "temperature": [
+              0.2,
+              1.0
+            ],
+            "humidity": [
+              -0.2,
+              1.0
+            ],
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:silent_clearing",
+          "parameters": {
+            "temperature": [
+              0.2,
+              1.0
+            ],
+            "humidity": [
+              -1.0,
+              -0.2
+            ],
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

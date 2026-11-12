@@ -1,0 +1,54 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "side": "elsewhere:block/verdigris_pipe",
+  "end": "elsewhere:block/verdigris_pipe_end",
+  "particle": "elsewhere:block/verdigris_pipe"
+ },
+ "elements": [
+  {
+   "from": [
+    3,
+    0,
+    3
+   ],
+   "to": [
+    13,
+    16,
+    13
+   ],
+   "faces": {
+    "north": {
+     "texture": "#side"
+    },
+    "south": {
+     "texture": "#side"
+    },
+    "east": {
+     "texture": "#side"
+    },
+    "west": {
+     "texture": "#side"
+    },
+    "up": {
+     "texture": "#end",
+     "uv": [
+      3,
+      3,
+      13,
+      13
+     ]
+    },
+    "down": {
+     "texture": "#end",
+     "uv": [
+      3,
+      3,
+      13,
+      13
+     ]
+    }
+   }
+  }
+ ]
+}

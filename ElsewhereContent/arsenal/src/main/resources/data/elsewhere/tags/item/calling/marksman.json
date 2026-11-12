@@ -1,0 +1,45 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:climber_helmet",
+      "required": false
+    },
+    {
+      "id": "elsewhere:climber_chestplate",
+      "required": false
+    },
+    {
+      "id": "elsewhere:climber_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:climber_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galeweave_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:galeweave_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hushweave_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:frond_leggings",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_wolfskin_boots",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_debt_collectors_leggings",
+      "required": false
+    }
+  ]
+}

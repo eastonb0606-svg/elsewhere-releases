@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ZZZ",
+    " R ",
+    "   "
+  ],
+  "key": {
+    "Z": "elsewhere:zephyr_feather",
+    "R": "minecraft:fishing_rod"
+  },
+  "result": {
+    "id": "elsewhere:skyhook",
+    "count": 1
+  }
+}

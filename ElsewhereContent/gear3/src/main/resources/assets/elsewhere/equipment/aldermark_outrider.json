@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:aldermark_outrider"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:aldermark_outrider"
+      }
+    ]
+  }
+}

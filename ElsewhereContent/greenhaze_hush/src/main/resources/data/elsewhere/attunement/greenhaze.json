@@ -1,0 +1,12 @@
+{
+  "dimension": "elsewhere:greenhaze",
+  "ingredients": [
+    "minecraft:large_fern",
+    "minecraft:campfire",
+    "minecraft:honeycomb",
+    "minecraft:cocoa_beans",
+    "minecraft:glow_berries"
+  ],
+  "requires": "none",
+  "notes": "L C L / H W H / B G B with the base Wayfinder in the centre (DIMENSIONS.md 8)."
+}

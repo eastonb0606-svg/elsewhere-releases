@@ -1,0 +1,365 @@
+{
+ "name": "Lantern Republic of Mirewick",
+ "name_key": "faction.elsewhere.mirewick",
+ "banner": {
+  "primary": "#5B2A86",
+  "secondary": "#9E1B32"
+ },
+ "tabard": {
+  "color": "#5B2A86",
+  "trim": "#D6A832"
+ },
+ "trim": {
+  "material": "minecraft:amethyst",
+  "patterns": [
+   "elsewhere:mirewick",
+   "minecraft:tide",
+   "minecraft:wild"
+  ]
+ },
+ "hostile_to_players": false,
+ "allies": [],
+ "peace": [],
+ "roster": {
+  "elsewhere:man_at_arms": {
+   "unit": "elsewhere:mirewick_dikeguard"
+  },
+  "elsewhere:knight": {
+   "unit": "elsewhere:mirewick_reed_knight"
+  },
+  "elsewhere:archer": {
+   "unit": "elsewhere:mirewick_fowler"
+  },
+  "elsewhere:crossbowman": {
+   "unit": "elsewhere:mirewick_punt_crossbow"
+  },
+  "elsewhere:lancer": {
+   "unit": "elsewhere:mirewick_marsh_rider"
+  },
+  "elsewhere:mounted_swordsman": {
+   "unit": "elsewhere:mirewick_marsh_rider"
+  },
+  "elsewhere:sergeant": {
+   "unit": "elsewhere:mirewick_reeve"
+  },
+  "elsewhere:captain": {
+   "unit": "elsewhere:mirewick_wardman"
+  },
+  "elsewhere:standard_bearer": {
+   "unit": "elsewhere:mirewick_lantern_bearer"
+  },
+  "elsewhere:herald": {
+   "unit": "elsewhere:mirewick_bellman"
+  },
+  "elsewhere:surgeon": {
+   "unit": "elsewhere:mirewick_almoners_hand"
+  },
+  "elsewhere:squire": {
+   "unit": "elsewhere:mirewick_linkboy"
+  },
+  "elsewhere:pikeman": {
+   "unit": "elsewhere:mirewick_pikeman"
+  }
+ },
+ "rulers": {
+  "master_at_arms": {
+   "name": "Ottoline Marrow",
+   "name_key": "entity.elsewhere.mirewick_marrow",
+   "title": "Magnate of the Counting-House",
+   "health": 246,
+   "health_cap": 294,
+   "drops": [
+    {
+     "item": "elsewhere:mirewick_debt_collectors_leggings"
+    },
+    {
+     "item": "elsewhere:mirewick_seal_marrow"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:mirewick_scrip",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "marshal": {
+   "name": "Fen-Marshal Garrick Thwaite",
+   "name_key": "entity.elsewhere.mirewick_thwaite",
+   "title": "Marshal of the Dikes",
+   "health": 246,
+   "health_cap": 294,
+   "drops": [
+    {
+     "item": "elsewhere:mirewick_fen_marshals_waders"
+    },
+    {
+     "item": "elsewhere:mirewick_seal_thwaite"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:mirewick_scrip",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "castellan": {
+   "name": "Dikemaster Hilde Sorrel",
+   "name_key": "entity.elsewhere.mirewick_sorrel",
+   "title": "Warden of the Sluices",
+   "health": 257,
+   "health_cap": 300,
+   "drops": [
+    {
+     "item": "elsewhere:mirewick_dikewardens_brigandine"
+    },
+    {
+     "item": "elsewhere:mirewick_seal_sorrel"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:mirewick_scrip",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "huntsman": {
+   "name": "Wildfowler Wren Tolliver",
+   "name_key": "entity.elsewhere.mirewick_tolliver",
+   "title": "of the Reed Hides",
+   "health": 236,
+   "health_cap": 284,
+   "drops": [
+    {
+     "item": "elsewhere:mirewick_fowlers_marshbow"
+    },
+    {
+     "item": "elsewhere:mirewick_seal_tolliver"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:mirewick_scrip",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "chancellor": {
+   "name": "Lord Almoner Cuthbert Ames",
+   "name_key": "entity.elsewhere.mirewick_ames",
+   "title": "Keeper of the Lantern-Oil",
+   "health": 204,
+   "health_cap": 252,
+   "drops": [
+    {
+     "item": "elsewhere:mirewick_almoners_cowl"
+    },
+    {
+     "item": "elsewhere:mirewick_seal_ames"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:mirewick_scrip",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  }
+ },
+ "biomes": [
+  "#elsewhere:mirewick_realm_biomes"
+ ],
+ "music": "elsewhere:mirewick_music",
+ "realm": true,
+ "society": {
+  "government": "oligarchy",
+  "ruler_bonus": {
+   "type": "hp_per_other_magnate",
+   "amount": 12.0
+  },
+  "leaders": [
+   "marshal",
+   "castellan",
+   "master_at_arms",
+   "huntsman",
+   "chancellor"
+  ],
+  "standing": {
+   "start": 10,
+   "cap_until_ruler_killed": false
+  },
+  "serfs": {
+   "type": "elsewhere:peat_cutter",
+   "count_multiplier": 1.0,
+   "health": 18.0
+  },
+  "chair_days": 7,
+  "seat_refill_days": 7,
+  "succession": {
+   "mode": "inheritance",
+   "delay_days": 7,
+   "heirs_per_family": 2,
+   "inherit_leaning": true,
+   "repeat_kill": true,
+   "heirs": {
+    "master_at_arms": {
+     "surname": "Marrow",
+     "first_names": [
+      "Perpetua",
+      "Hester"
+     ]
+    },
+    "marshal": {
+     "surname": "Thwaite",
+     "first_names": [
+      "Osbert",
+      "Maud"
+     ]
+    },
+    "castellan": {
+     "surname": "Sorrel",
+     "first_names": [
+      "Ivo",
+      "Agnes"
+     ]
+    },
+    "huntsman": {
+     "surname": "Tolliver",
+     "first_names": [
+      "Piers",
+      "Linnet"
+     ]
+    },
+    "chancellor": {
+     "surname": "Ames",
+     "first_names": [
+      "Jory",
+      "Matilda"
+     ]
+    }
+   }
+  }
+ },
+ "economy": {
+  "currency": "elsewhere:mirewick_scrip",
+  "shop": [
+   {
+    "item": "elsewhere:oathkeepers_seal",
+    "price": 220,
+    "weekly_limit": 2
+   },
+   {
+    "item": "elsewhere:mirewick_lantern_shield",
+    "price": 36
+   },
+   {
+    "item": "elsewhere:mirewick_oilcloth_dye",
+    "count": 4,
+    "price": 24
+   },
+   {
+    "item": "elsewhere:bodkin_bolt",
+    "count": 8,
+    "price": 27
+   },
+   {
+    "item": "minecraft:netherite_upgrade_smithing_template",
+    "price": 275,
+    "extra": [
+     {
+      "item": "minecraft:diamond",
+      "min": 20
+     }
+    ],
+    "weekly_limit": 2
+   }
+  ]
+ },
+ "army": {
+  "scale": {"patrol": {"day": 6, "night": 7}, "squad_size": 7, "unit_name": "watch", "company_size": 19, "garrison": {"village": [9, 12], "town": [20, 28], "capital": [60, 80]}, "field_army": [100, 150], "battle_side_max": 150, "live_front": 30, "wave": {"style": "ragged", "size": 6, "interval_s": 28, "interval_jitter_s": 8, "trigger_front": 0.6}, "attack_tokens": {"melee": 4, "ranged": 3}, "formation": {"width": 6, "depth": 2, "spacing": 1.3, "jitter": 0.8}, "hired": {"company": [12, 20]}, "residents": {"capital": 220, "town": 80}, "composition": {"line": 0.36, "heavy": 0.11, "ranged": 0.33, "mounted": 0.05, "special": 0.08, "officers": 0.07}},
+  "routine": {
+   "watch_changes": [7, 19],
+   "watch_jitter_min": 30,
+   "blocks": [
+    {"from": 0, "to": 6, "activity": "watch", "share": 0.34, "where": "canals"},
+    {"from": 6, "to": 8, "activity": "work", "share": 0.5, "where": "polders"},
+    {"from": 8, "to": 12, "activity": "market", "share": 0.7, "where": "quays"},
+    {"from": 12, "to": 13, "activity": "drill", "share": 0.25, "where": "dike_field"},
+    {"from": 13, "to": 17, "activity": "court", "share": 0.3, "where": "guildhall"},
+    {"from": 17, "to": 18, "activity": "feast", "share": 0.5, "where": "fc_camp"},
+    {"from": 18, "to": 19, "activity": "lamplight", "share": 0.2, "where": "canals"},
+    {"from": 19, "to": 24, "activity": "watch", "share": 0.34, "where": "canals"}
+   ],
+   "events": [
+    {"id": "pay_day", "every_days": 7, "at": 9, "hours": 2, "activity": "market", "where": "counting_house"},
+    {"id": "lantern_fair", "every_days": 8, "at": 19, "hours": 5, "activity": "market", "where": "quays"}
+   ]
+  },
+  "units": [
+   "elsewhere:mirewick_dikeguard",
+   "elsewhere:mirewick_reed_knight",
+   "elsewhere:mirewick_fowler",
+   "elsewhere:mirewick_punt_crossbow",
+   "elsewhere:mirewick_marsh_rider",
+   "elsewhere:mirewick_pikeman",
+   "elsewhere:mirewick_reeve",
+   "elsewhere:mirewick_wardman",
+   "elsewhere:mirewick_lantern_bearer",
+   "elsewhere:mirewick_bellman",
+   "elsewhere:mirewick_almoners_hand",
+   "elsewhere:mirewick_linkboy"
+  ],
+  "unique_units": [
+   "elsewhere:mirewick_bog_warden",
+   "elsewhere:mirewick_mire_trapper"
+  ],
+  "makeup": {
+   "elsewhere:mirewick_dikeguard": 0.18,
+   "elsewhere:mirewick_reed_knight": 0.12,
+   "elsewhere:mirewick_fowler": 0.17,
+   "elsewhere:mirewick_punt_crossbow": 0.18,
+   "elsewhere:mirewick_pikeman": 0.2,
+   "elsewhere:mirewick_marsh_rider": 0.05,
+   "elsewhere:mirewick_bog_warden": 0.05,
+   "elsewhere:mirewick_mire_trapper": 0.05
+  },
+  "health_multiplier": 1.0,
+  "speed_multiplier": 1.0,
+  "damage_multiplier": 1.0,
+  "size_multiplier": 0.9,
+  "patrol_day": 6,
+  "patrol_night": 6,
+  "brain": {
+   "war_frequency": 0.5,
+   "min_attack_odds": 0.9,
+   "retreat_instead_of_die": false,
+   "veterancy_cap": 0.0,
+   "intelligence_noise": 0.6,
+   "supply_line_only": false,
+   "decision_delay_days": 1.5,
+   "hire_mercenaries": true,
+   "mercenary_daily_cost": 40,
+   "brain_roles": []
+  }
+ },
+ "biomes_fallback": [
+  "minecraft:forest",
+  "minecraft:birch_forest"
+ ],
+ "site": {
+  "terrain": "flat",
+  "near_water": true
+ }
+}

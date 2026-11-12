@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:hrafnholt_runeseax",
+    "elsewhere:amber_grimoire",
+    "elsewhere:mirewick_almoners_chalice",
+    "elsewhere:azmar_ka_sigil",
+    "elsewhere:glimmer_lantern",
+    "elsewhere:blinkstone",
+    "elsewhere:emberfall_rod",
+    "elsewhere:frostwake_scepter",
+    "elsewhere:starfall_orrery",
+    {
+      "id": "elsewhere:prism_bow",
+      "required": false
+    },
+    {
+      "id": "elsewhere:choirlight_censer",
+      "required": false
+    },
+    {
+      "id": "elsewhere:mirewick_will_o_lantern",
+      "required": false
+    }
+  ]
+}

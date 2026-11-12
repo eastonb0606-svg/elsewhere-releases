@@ -1,0 +1,147 @@
+{
+  "type": "elsewhere:petalwind",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "elsewhere:petalwind",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "elsewhere:blossom_crowns",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              0.0
+            ],
+            "humidity": [
+              -1.0,
+              0.0
+            ],
+            "continentalness": [
+              -1.0,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:gale_steppes",
+          "parameters": {
+            "temperature": [
+              0.0,
+              1.0
+            ],
+            "humidity": [
+              -1.0,
+              -0.2
+            ],
+            "continentalness": [
+              -1.0,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:hanging_gardens",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              0.0
+            ],
+            "humidity": [
+              0.0,
+              1.0
+            ],
+            "continentalness": [
+              -1.0,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:cloud_nine",
+          "parameters": {
+            "temperature": [
+              0.0,
+              1.0
+            ],
+            "humidity": [
+              -0.2,
+              0.4
+            ],
+            "continentalness": [
+              -1.0,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:stormrim",
+          "parameters": {
+            "temperature": [
+              0.0,
+              1.0
+            ],
+            "humidity": [
+              0.4,
+              1.0
+            ],
+            "continentalness": [
+              -1.0,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

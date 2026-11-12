@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "elsewhere:block/kushwood_planks",
+    "side": "elsewhere:block/kushwood_planks",
+    "top": "elsewhere:block/kushwood_planks"
+  }
+}

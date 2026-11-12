@@ -1,0 +1,147 @@
+{
+  "type": "elsewhere:the_hush",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "elsewhere:the_hush",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "elsewhere:the_murmur",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              0.0
+            ],
+            "humidity": [
+              -1.0,
+              0.0
+            ],
+            "continentalness": [
+              -1.2,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:echo_shafts",
+          "parameters": {
+            "temperature": [
+              0.0,
+              1.0
+            ],
+            "humidity": [
+              -1.0,
+              -0.3
+            ],
+            "continentalness": [
+              -1.2,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:ossuary_galleries",
+          "parameters": {
+            "temperature": [
+              0.0,
+              1.0
+            ],
+            "humidity": [
+              -0.3,
+              0.3
+            ],
+            "continentalness": [
+              -1.2,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:amethyst_choir",
+          "parameters": {
+            "temperature": [
+              0.0,
+              1.0
+            ],
+            "humidity": [
+              0.3,
+              1.0
+            ],
+            "continentalness": [
+              -1.2,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "elsewhere:drowned_silence",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              0.0
+            ],
+            "humidity": [
+              0.0,
+              1.0
+            ],
+            "continentalness": [
+              -1.2,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

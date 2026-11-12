@@ -1,0 +1,12 @@
+{
+	"required": false,
+	"package": "dev.elsewhere.petalwind_glasswaste.anim3mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"LivingRendererHurt3Mixin",
+		"RenderStateHurt3Mixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

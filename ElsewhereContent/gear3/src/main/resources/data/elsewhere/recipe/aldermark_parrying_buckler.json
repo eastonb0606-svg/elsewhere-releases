@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PIP",
+    "PSP",
+    " P "
+  ],
+  "key": {
+    "P": "minecraft:oak_planks",
+    "I": "minecraft:iron_ingot",
+    "S": "minecraft:shield"
+  },
+  "result": {
+    "id": "elsewhere:aldermark_parrying_buckler"
+  }
+}

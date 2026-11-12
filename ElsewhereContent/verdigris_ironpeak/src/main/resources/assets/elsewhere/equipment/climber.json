@@ -1,0 +1,14 @@
+{
+ "layers": {
+  "humanoid": [
+   {
+    "texture": "elsewhere:climber"
+   }
+  ],
+  "humanoid_leggings": [
+   {
+    "texture": "elsewhere:climber"
+   }
+  ]
+ }
+}

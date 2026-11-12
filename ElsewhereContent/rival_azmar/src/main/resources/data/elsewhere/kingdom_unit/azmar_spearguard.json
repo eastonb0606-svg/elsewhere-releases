@@ -1,0 +1,34 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/spearguard.png",
+ "armor": {
+  "head": "minecraft:golden_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:chainmail_boots"
+ },
+ "armor_dye": 2047887,
+ "main_hand": "elsewhere:azmar_copper_khopesh",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.35,
+  "block_chance": 0.55,
+  "crit_chance": 0.06,
+  "retreat_health": 0.3
+ },
+ "trim": {
+  "material": "minecraft:lapis",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:dune",
+   "minecraft:wayfinder"
+  ]
+ }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "elsewhere:ossuary_bone_bricks",
+  "result": {
+    "id": "elsewhere:ossuary_bone_brick_wall"
+  }
+}

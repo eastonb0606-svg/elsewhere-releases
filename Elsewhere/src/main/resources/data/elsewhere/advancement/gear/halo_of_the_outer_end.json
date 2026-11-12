@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:halo_of_the_outer_end"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.gear.halo_of_the_outer_end.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.gear.halo_of_the_outer_end.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elsewhere:root",
+  "criteria": {
+    "has": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elsewhere:halo_of_the_outer_end"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has"
+    ]
+  ]
+}

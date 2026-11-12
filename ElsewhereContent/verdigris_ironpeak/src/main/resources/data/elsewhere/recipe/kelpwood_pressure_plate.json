@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "redstone",
+ "key": {
+  "#": "elsewhere:kelpwood_planks"
+ },
+ "pattern": [
+  "##"
+ ],
+ "result": {
+  "id": "elsewhere:kelpwood_pressure_plate",
+  "count": 1
+ }
+}

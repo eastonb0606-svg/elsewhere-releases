@@ -1,0 +1,34 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/kingdom/mirewick/dikeguard.png",
+ "armor": {
+  "head": "minecraft:leather_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "main_hand": "minecraft:iron_sword",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.35,
+  "block_chance": 0.55,
+  "crit_chance": 0.06,
+  "retreat_health": 0.3
+ },
+ "trim": {
+  "material": "minecraft:amethyst",
+  "patterns": [
+   "elsewhere:mirewick",
+   "minecraft:tide",
+   "minecraft:wild"
+  ]
+ },
+ "armor_dye": 5974662
+}

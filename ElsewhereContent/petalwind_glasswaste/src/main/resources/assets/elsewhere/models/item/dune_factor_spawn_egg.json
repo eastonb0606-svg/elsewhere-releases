@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "elsewhere:item/dune_factor_spawn_egg"
+  }
+}

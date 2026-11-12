@@ -1,0 +1,41 @@
+{
+  "trader": "elsewhere:mute_archivist",
+  "currency": "elsewhere:resonant_shard",
+  "bounties": [
+    {
+      "type": "deliver",
+      "item": "elsewhere:hush_lanternfish",
+      "count": 4,
+      "pay": 3,
+      "xp": 25
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:echo_stalker",
+      "count": 3,
+      "pay": 4,
+      "xp": 50
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:catalyst_mimic",
+      "count": 2,
+      "pay": 4,
+      "xp": 50
+    },
+    {
+      "type": "deliver",
+      "item": "minecraft:sculk",
+      "count": 16,
+      "pay": 3,
+      "xp": 20
+    },
+    {
+      "type": "deliver",
+      "item": "minecraft:candle",
+      "count": 8,
+      "pay": 2,
+      "xp": 15
+    }
+  ]
+}

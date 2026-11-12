@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "textures": {
+    "bottom": "elsewhere:block/skyblossom_door_bottom",
+    "top": "elsewhere:block/skyblossom_door_top"
+  }
+}

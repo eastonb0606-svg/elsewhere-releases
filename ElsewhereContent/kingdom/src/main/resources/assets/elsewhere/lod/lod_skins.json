@@ -1,0 +1,932 @@
+{
+ "atlas": "elsewhere:textures/entity/kingdom/lod/atlas.png",
+ "atlas_size": 1024,
+ "slot_size": 64,
+ "columns": 16,
+ "skins": [
+  {
+   "unit": "elsewhere:archer",
+   "skin": "elsewhere:textures/entity/kingdom/archer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/archer.png",
+   "slot": 0,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_arbalester",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/bowman.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_arbalester.png",
+   "slot": 1,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_bowman",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/bowman.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_bowman.png",
+   "slot": 2,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_camel_lancer",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/spearguard.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_camel_lancer.png",
+   "slot": 3,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_crier",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/herald.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_crier.png",
+   "slot": 4,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:golden_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_jackal_guard",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/sunguard.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_jackal_guard.png",
+   "slot": 5,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "elsewhere:azmar_jackal_helm",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:golden_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_jemadar",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/jemadar.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_jemadar.png",
+   "slot": 6,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:golden_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:golden_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_naffatun",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/naffatun.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_naffatun.png",
+   "slot": 7,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_page",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/porter.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_page.png",
+   "slot": 8,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_physician",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/physician.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_physician.png",
+   "slot": 9,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_pikeman",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/spearguard.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_pikeman.png",
+   "slot": 10,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_qaid",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/qaid.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_qaid.png",
+   "slot": 11,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:golden_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_sand_dancer",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/sand_dancer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_sand_dancer.png",
+   "slot": 12,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    null,
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_scarab_bearer",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/scarab_bearer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_scarab_bearer.png",
+   "slot": 13,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:blue_banner",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_spearguard",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/spearguard.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_spearguard.png",
+   "slot": 14,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:golden_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:azmar_sunguard",
+   "skin": "elsewhere:textures/entity/kingdom/azmar/sunguard.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/azmar_sunguard.png",
+   "slot": 15,
+   "faction": "elsewhere:azmar",
+   "tabard": "#1F3F8F",
+   "armor": [
+    "minecraft:golden_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:golden_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:captain",
+   "skin": "elsewhere:textures/entity/kingdom/captain.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/captain.png",
+   "slot": 16,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:crossbowman",
+   "skin": "elsewhere:textures/entity/kingdom/archer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/crossbowman.png",
+   "slot": 17,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:free_company_blade",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_b.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/free_company_blade.png",
+   "slot": 18,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:free_company_bolt",
+   "skin": "elsewhere:textures/entity/kingdom/archer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/free_company_bolt.png",
+   "slot": 19,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:free_company_captain",
+   "skin": "elsewhere:textures/entity/kingdom/officer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/free_company_captain.png",
+   "slot": 20,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:herald",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/herald.png",
+   "slot": 21,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_berserker",
+   "skin": "elsewhere:textures/entity/hrafnholt/berserker.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_berserker.png",
+   "slot": 22,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_bolt_thrall",
+   "skin": "elsewhere:textures/entity/hrafnholt/bolt_thrall.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_bolt_thrall.png",
+   "slot": 23,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    null,
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_hird_captain",
+   "skin": "elsewhere:textures/entity/hrafnholt/captain.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_hird_captain.png",
+   "slot": 24,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_hird_sergeant",
+   "skin": "elsewhere:textures/entity/hrafnholt/sergeant.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_hird_sergeant.png",
+   "slot": 25,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_hunter",
+   "skin": "elsewhere:textures/entity/hrafnholt/hunter.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_hunter.png",
+   "slot": 26,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_huskarl",
+   "skin": "elsewhere:textures/entity/hrafnholt/hird_a.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_huskarl.png",
+   "slot": 27,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_leech",
+   "skin": "elsewhere:textures/entity/hrafnholt/leech.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_leech.png",
+   "slot": 28,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_raven_bearer",
+   "skin": "elsewhere:textures/entity/hrafnholt/raven_bearer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_raven_bearer.png",
+   "slot": 29,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:green_banner",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_shield_lad",
+   "skin": "elsewhere:textures/entity/hrafnholt/shield_lad.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_shield_lad.png",
+   "slot": 30,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_shield_thane",
+   "skin": "elsewhere:textures/entity/hrafnholt/hird_b.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_shield_thane.png",
+   "slot": 31,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_skald",
+   "skin": "elsewhere:textures/entity/hrafnholt/skald.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_skald.png",
+   "slot": 32,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_spear_thane",
+   "skin": "elsewhere:textures/entity/hrafnholt/spear_thane.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_spear_thane.png",
+   "slot": 33,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_wolf_handler",
+   "skin": "elsewhere:textures/entity/hrafnholt/wolf_handler.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_wolf_handler.png",
+   "slot": 34,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_wolf_rider",
+   "skin": "elsewhere:textures/entity/hrafnholt/wolf_rider.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_wolf_rider.png",
+   "slot": 35,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:hrafnholt_wolf_rider_axe",
+   "skin": "elsewhere:textures/entity/hrafnholt/wolf_rider_axe.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/hrafnholt_wolf_rider_axe.png",
+   "slot": 36,
+   "faction": "elsewhere:hrafnholt",
+   "tabard": "#2E5A2C",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:knight",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_b.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/knight.png",
+   "slot": 37,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:lancer",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/lancer.png",
+   "slot": 38,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:man_at_arms",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/man_at_arms.png",
+   "slot": 39,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_almoners_hand",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/almoners_hand.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_almoners_hand.png",
+   "slot": 40,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_bellman",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/bellman.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_bellman.png",
+   "slot": 41,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_bog_warden",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/bog_warden.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_bog_warden.png",
+   "slot": 42,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_dikeguard",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/dikeguard.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_dikeguard.png",
+   "slot": 43,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_fc_banner",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/fc_sellsword.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_fc_banner.png",
+   "slot": 44,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_fc_brute",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/fc_brute.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_fc_brute.png",
+   "slot": 45,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    null,
+    "minecraft:iron_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_fc_captain",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/fc_captain.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_fc_captain.png",
+   "slot": 46,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_fc_crossbow",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/fc_crossbow.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_fc_crossbow.png",
+   "slot": 47,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_fc_sellsword",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/fc_sellsword.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_fc_sellsword.png",
+   "slot": 48,
+   "faction": "elsewhere:free_company",
+   "tabard": "#808080",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_fowler",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/fowler.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_fowler.png",
+   "slot": 49,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_lantern_bearer",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/lantern_bearer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_lantern_bearer.png",
+   "slot": 50,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_linkboy",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/linkboy.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_linkboy.png",
+   "slot": 51,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_marsh_rider",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/marsh_rider.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_marsh_rider.png",
+   "slot": 52,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_mire_trapper",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/mire_trapper.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_mire_trapper.png",
+   "slot": 53,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_peat_cutter",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/peat_cutter.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_peat_cutter.png",
+   "slot": 54,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_pikeman",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/pikeman.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_pikeman.png",
+   "slot": 55,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_punt_crossbow",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/punt_crossbow.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_punt_crossbow.png",
+   "slot": 56,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_reed_knight",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/reed_knight.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_reed_knight.png",
+   "slot": 57,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:iron_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_reeve",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/reeve.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_reeve.png",
+   "slot": 58,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mirewick_wardman",
+   "skin": "elsewhere:textures/entity/kingdom/mirewick/wardman.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mirewick_wardman.png",
+   "slot": 59,
+   "faction": "elsewhere:mirewick",
+   "tabard": "#5B2A86",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:mounted_swordsman",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_b.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/mounted_swordsman.png",
+   "slot": 60,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:pikeman",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/pikeman.png",
+   "slot": 61,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:sergeant",
+   "skin": "elsewhere:textures/entity/kingdom/officer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/sergeant.png",
+   "slot": 62,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:squire",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/squire.png",
+   "slot": 63,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:standard_bearer",
+   "skin": "elsewhere:textures/entity/kingdom/officer.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/standard_bearer.png",
+   "slot": 64,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:blue_banner",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+   ]
+  },
+  {
+   "unit": "elsewhere:surgeon",
+   "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+   "baked": "elsewhere:textures/entity/kingdom/lod/surgeon.png",
+   "slot": 65,
+   "faction": "elsewhere:aldermark",
+   "tabard": "#2E4C9E",
+   "armor": [
+    "minecraft:leather_helmet",
+    "minecraft:leather_chestplate",
+    "minecraft:leather_leggings",
+    "minecraft:leather_boots"
+   ]
+  }
+ ]
+}

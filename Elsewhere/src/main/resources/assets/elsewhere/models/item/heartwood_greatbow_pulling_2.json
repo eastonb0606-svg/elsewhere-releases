@@ -1,0 +1,6 @@
+{
+  "parent": "elsewhere:item/heartwood_greatbow",
+  "textures": {
+    "layer0": "elsewhere:item/heartwood_greatbow_pulling_2"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "trader": "elsewhere:budtender",
+  "currency": "elsewhere:haze_resin",
+  "bounties": [
+    {
+      "type": "deliver",
+      "item": "elsewhere:haze_guppy",
+      "count": 4,
+      "pay": 4,
+      "xp": 25
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:lazy_gorger",
+      "count": 3,
+      "pay": 5,
+      "xp": 40
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:toke_toad",
+      "count": 4,
+      "pay": 5,
+      "xp": 40
+    },
+    {
+      "type": "deliver",
+      "item": "minecraft:sweet_berries",
+      "count": 24,
+      "pay": 3,
+      "xp": 15
+    },
+    {
+      "type": "deliver",
+      "item": "minecraft:moss_block",
+      "count": 16,
+      "pay": 3,
+      "xp": 15
+    }
+  ]
+}

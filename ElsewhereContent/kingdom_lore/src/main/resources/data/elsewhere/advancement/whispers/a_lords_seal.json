@@ -1,0 +1,30 @@
+{
+ "display": {
+  "icon": {
+   "id": "elsewhere:lore_seal_marshal"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.a_lords_seal.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.a_lords_seal.desc"
+  },
+  "frame": "goal",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:inventory_changed",
+   "conditions": {
+    "items": [
+     {
+      "items": "#elsewhere:lore_seals"
+     }
+    ]
+   }
+  }
+ },
+ "parent": "elsewhere:whispers/by_royal_decree"
+}

@@ -1,0 +1,71 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere_gear2"
+}
+
+loom {
+	mods {
+		"elsewhere_gear2" {
+			sourceSet sourceSets.main
+		}
+	}
+
+	runs {
+		// `./gradlew runServer` starts a dev server (port 25697, see run/server.properties)
+		// that runs the gear2 self-test and exits.
+		server {
+			vmArg "-Xmx1536m"
+			property "gear2.selftest", "true"
+			property "gear2.selftest.exit", "true"
+		}
+	}
+}
+
+// Dev only: a copy of the bosses' ForesightGear so the self-test can exercise the Seer's Hourglass mixin. merge.py only
+// copies src/{main,client,gametest}, so this never reaches the merged jar.
+sourceSets {
+	main {
+		java {
+			srcDir 'src/devkit/java'
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// Dev only: the latest merged Elsewhere jar on the runtime classpath, so the self-test sees the real boss loot
+	// tables, materials (Skyiron, Storm Coil, ...) and trinket/foresight code. Never shipped, never compiled against.
+	if (file('devlibs/elsewhere.jar').exists()) {
+		runtimeOnly files('devlibs/elsewhere.jar')
+	}
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+// Copies the dev jar to dist/ (`./gradlew dist`).
+tasks.register('dist', Copy) {
+	dependsOn 'jar'
+	from(tasks.named('jar'))
+	into file('dist')
+}

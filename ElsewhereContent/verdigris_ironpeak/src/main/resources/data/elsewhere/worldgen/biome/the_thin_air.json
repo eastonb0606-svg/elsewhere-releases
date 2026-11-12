@@ -1,0 +1,82 @@
+{
+ "attributes": {
+  "minecraft:visual/sky_color": "#2b4c9a",
+  "minecraft:visual/fog_color": "#9eb4d8",
+  "minecraft:visual/water_fog_color": "#050533",
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 6000,
+    "sound": "minecraft:music_disc.precipice"
+   },
+   "underwater": {
+    "max_delay": 24000,
+    "min_delay": 6000,
+    "sound": "minecraft:music.under_water"
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {
+     "monster": [
+      {
+       "type": "elsewhere:rimeguard",
+       "count": 1,
+       "weight": 20
+      },
+      {
+       "type": "elsewhere:crag_roc",
+       "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 2
+       },
+       "weight": 7
+      }
+     ]
+    }
+   },
+   "modifier": "overlay"
+  },
+  "minecraft:visual/ambient_particles": {
+   "argument": [
+    {
+     "particle": {
+      "type": "minecraft:white_ash"
+     },
+     "probability": 0.004
+    }
+   ],
+   "modifier": "append"
+  },
+  "minecraft:visual/star_brightness": {
+   "argument": 0.6,
+   "modifier": "maximum"
+  }
+ },
+ "carvers": [],
+ "downfall": 0.8,
+ "effects": {
+  "water_color": "#2f4fb0"
+ },
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "elsewhere:skyiron_ore"
+  ],
+  [],
+  [],
+  [],
+  [
+   "minecraft:freeze_top_layer"
+  ]
+ ],
+ "has_precipitation": true,
+ "temperature": -0.7
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "elsewhere:glacier_shelf",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 77120394,
+    "separation": 12,
+    "spacing": 36
+  }
+}

@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "#elsewhere:is_verdigris_sea",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "lighthouse",
+ "placement": "fixed",
+ "min_height": 120,
+ "max_height": 120,
+ "y_offset": 0
+}

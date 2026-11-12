@@ -1,0 +1,8 @@
+{
+  "type": "elsewhere:croaking_shrine",
+  "kind": "croaking_shrine",
+  "biomes": "#elsewhere:has_structure/croaking_shrine",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470211,
+    "separation": 10,
+    "spacing": 26
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:munchie_market",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.petalwind_glasswaste.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"BossGuardMixin",
+		"ConsumableMixin"
+	],
+	"client": [],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

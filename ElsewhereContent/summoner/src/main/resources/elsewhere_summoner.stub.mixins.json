@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.stub.summoner.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"PlayerAttributesMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

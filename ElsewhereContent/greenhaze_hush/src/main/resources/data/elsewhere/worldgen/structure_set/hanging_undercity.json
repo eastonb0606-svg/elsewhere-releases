@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470204,
+    "separation": 12,
+    "spacing": 36
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:hanging_undercity",
+      "weight": 1
+    }
+  ]
+}

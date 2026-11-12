@@ -1,0 +1,41 @@
+{
+  "trader": "elsewhere:clan_quartermaster",
+  "currency": "minecraft:emerald",
+  "bounties": [
+    {
+      "type": "deliver",
+      "item": "minecraft:iron_ingot",
+      "count": 12,
+      "pay": 3,
+      "xp": 20
+    },
+    {
+      "type": "deliver",
+      "item": "elsewhere:frostjaw_trout",
+      "count": 4,
+      "pay": 3,
+      "xp": 25
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:ironclan_raider",
+      "count": 4,
+      "pay": 4,
+      "xp": 40
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:rimeguard",
+      "count": 3,
+      "pay": 4,
+      "xp": 40
+    },
+    {
+      "type": "deliver",
+      "item": "minecraft:coal",
+      "count": 32,
+      "pay": 2,
+      "xp": 15
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+ "replace": false,
+ "values": [
+  "elsewhere:kelpwood_log",
+  "elsewhere:stripped_kelpwood_log",
+  "elsewhere:kelpwood_wood",
+  "elsewhere:stripped_kelpwood_wood",
+  "elsewhere:kelpwood_planks",
+  "elsewhere:kelpwood_stairs",
+  "elsewhere:kelpwood_slab",
+  "elsewhere:kelpwood_fence",
+  "elsewhere:kelpwood_fence_gate",
+  "elsewhere:kelpwood_door",
+  "elsewhere:kelpwood_trapdoor",
+  "elsewhere:kelpwood_button",
+  "elsewhere:kelpwood_pressure_plate",
+  "elsewhere:summit_war_drum"
+ ]
+}

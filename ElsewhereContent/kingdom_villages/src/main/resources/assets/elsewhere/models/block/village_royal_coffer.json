@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "elsewhere:block/village_royal_coffer_top",
+    "front": "elsewhere:block/village_royal_coffer_front",
+    "side": "elsewhere:block/village_royal_coffer_side"
+  }
+}

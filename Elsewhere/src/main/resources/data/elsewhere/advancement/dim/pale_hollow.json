@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:wayfinder_pale_hollow"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.dim.pale_hollow.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.dim.pale_hollow.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "elsewhere:root",
+  "criteria": {
+    "visited": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "elsewhere:pale_hollow"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited"
+    ]
+  ]
+}

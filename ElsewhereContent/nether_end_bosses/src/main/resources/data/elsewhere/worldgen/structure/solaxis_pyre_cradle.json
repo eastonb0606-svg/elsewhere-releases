@@ -1,0 +1,11 @@
+{
+  "type": "elsewhere:nether_end_boss_arena",
+  "biomes": [
+    "minecraft:nether_wastes",
+    "minecraft:basalt_deltas"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "boss": "solaxis"
+}

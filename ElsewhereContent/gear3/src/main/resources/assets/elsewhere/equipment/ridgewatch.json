@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:ridgewatch"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:ridgewatch"
+      }
+    ]
+  }
+}

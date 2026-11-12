@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "elsewhere:block/stripped_kelpwood_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "elsewhere:block/stripped_kelpwood_wood"
+    },
+    "axis=z": {
+      "model": "elsewhere:block/stripped_kelpwood_wood",
+      "x": 90
+    }
+  }
+}

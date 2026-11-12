@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "M M",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": "elsewhere:zephyrite"
+  },
+  "result": {
+    "id": "elsewhere:galeweave_robe",
+    "count": 1
+  }
+}

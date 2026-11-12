@@ -1,0 +1,106 @@
+{
+  "attributes": {
+    "minecraft:visual/sky_color": "#FFF4D6",
+    "minecraft:visual/fog_color": "#F2C98A",
+    "minecraft:visual/water_fog_color": "#D9A441",
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.overworld.desert"
+      }
+    },
+    "minecraft:visual/ambient_particles": [
+      {
+        "particle": {
+          "type": "minecraft:dust_plume"
+        },
+        "probability": 0.002
+      }
+    ],
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "monster": [
+            {
+              "type": "elsewhere:glass_scarab",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 8
+              },
+              "weight": 30
+            },
+            {
+              "type": "elsewhere:sandswimmer",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 1
+              },
+              "weight": 25
+            },
+            {
+              "type": "elsewhere:sunwright_revenant",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 6
+              },
+              "weight": 8
+            },
+            {
+              "type": "elsewhere:sun_mote",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 2,
+                "max_inclusive": 3
+              },
+              "weight": 8
+            }
+          ],
+          "creature": [
+            {
+              "type": "elsewhere:dune_factor",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 1
+              },
+              "weight": 1
+            }
+          ]
+        }
+      },
+      "modifier": "overlay"
+    }
+  },
+  "effects": {
+    "water_color": "#D9A441",
+    "foliage_color": "#C9B060",
+    "grass_color": "#C9B060"
+  },
+  "carvers": [],
+  "downfall": 0.0,
+  "has_precipitation": false,
+  "temperature": 2.0,
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "elsewhere:ore_sunstone"
+    ],
+    [],
+    [],
+    [
+      "minecraft:patch_dead_bush_2",
+      "minecraft:patch_cactus_desert"
+    ],
+    []
+  ]
+}

@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.stub.nether_end_bosses.mixin.client",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"MinecraftMusicMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

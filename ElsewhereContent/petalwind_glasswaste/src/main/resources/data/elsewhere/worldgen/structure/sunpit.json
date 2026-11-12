@@ -1,0 +1,12 @@
+{
+  "type": "elsewhere:pg_boss_site",
+  "biomes": [
+    "elsewhere:ember_dunes",
+    "elsewhere:cinder_basin",
+    "elsewhere:glass_flats"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "kind": "sunpit"
+}

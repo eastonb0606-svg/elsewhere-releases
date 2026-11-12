@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "elsewhere:block/sunwright_bricks",
+    "side": "elsewhere:block/sunwright_bricks",
+    "top": "elsewhere:block/sunwright_bricks"
+  }
+}

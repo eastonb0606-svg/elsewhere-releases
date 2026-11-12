@@ -1,0 +1,31 @@
+{
+  "id": "elsewhere:mirewick_thwaite",
+  "kingdom": "mirewick",
+  "slots": {
+    "weapons": "bog_pike_hammer",
+    "movement": "backpedal_line",
+    "defence": "pike_brace",
+    "recovery": "eat_eel_pie",
+    "reach": "pike_reach_5_5",
+    "last_stand": "mire_flood"
+  },
+  "generic": [
+    "eat"
+  ],
+  "signature": [
+    "long_thrust",
+    "pike_brace",
+    "bog_drum_call"
+  ],
+  "telegraph": {
+    "particle": "bubble",
+    "colour": "#7FA06A",
+    "sound": {
+      "event": "block.note_block.basedrum",
+      "pitch": 0.6
+    }
+  },
+  "last_stand": "mire_flood",
+  "idle": "Taps the pike butt on the boards like a metronome, then sights along the shaft.",
+  "chair_last_stand": "lantern_rally"
+}

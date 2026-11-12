@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:amber_ingot",
+      "required": false
+    },
+    {
+      "id": "elsewhere:amber",
+      "required": false
+    }
+  ]
+}

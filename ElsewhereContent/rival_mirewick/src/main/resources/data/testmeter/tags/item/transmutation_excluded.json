@@ -1,0 +1,77 @@
+{
+ "replace": false,
+ "values": [
+  {
+   "id": "elsewhere:mirewick_scrip",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_marrow",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_thwaite",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_sorrel",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_tolliver",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_ames",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_debt_collectors_leggings",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_fen_marshals_waders",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_dikewardens_brigandine",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_fowlers_marshbow",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_almoners_cowl",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_lantern_coronet",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_marsh_lantern_standard",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_reedcutter_pike",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_armor_trim_smithing_template",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_banner_pattern",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_lantern_shield",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_oilcloth_dye",
+   "required": false
+  }
+ ]
+}

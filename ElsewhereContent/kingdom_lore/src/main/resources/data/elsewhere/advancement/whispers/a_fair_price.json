@@ -1,0 +1,23 @@
+{
+ "display": {
+  "icon": {
+   "id": "minecraft:emerald"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.a_fair_price.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.a_fair_price.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:impossible"
+  }
+ },
+ "parent": "elsewhere:whispers/a_lords_seal"
+}

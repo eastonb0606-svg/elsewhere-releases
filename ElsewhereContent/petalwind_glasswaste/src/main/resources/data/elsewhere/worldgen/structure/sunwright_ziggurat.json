@@ -1,0 +1,11 @@
+{
+  "type": "elsewhere:pg_boss_site",
+  "biomes": [
+    "elsewhere:spirefields",
+    "elsewhere:glass_flats"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "kind": "sunwright_ziggurat"
+}

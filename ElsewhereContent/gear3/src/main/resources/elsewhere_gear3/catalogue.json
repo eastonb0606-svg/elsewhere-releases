@@ -1,0 +1,2569 @@
+{
+ "tab_name": "Elsewhere 3.0 Gear",
+ "placeholder_tables": [
+  "entities/mother_creak",
+  "entities/ossyra"
+ ],
+ "items": [
+  {
+   "id": "galeplate_helmet",
+   "name": "Galeplate Helmet",
+   "kind": "armor",
+   "set": "galeplate",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:zephyrite",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Duelist armor, Vanguard Leaning",
+    "+4% dodge chance per piece (max 25%)"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:dodge_chance",
+     "amount": 0.04,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_helmet",
+    "addition": "elsewhere:zephyrite"
+   },
+   "loot": [
+    {
+     "table": "chests/breeze_temple_vault",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "galeplate_chestplate",
+   "name": "Galeplate Chestplate",
+   "kind": "armor",
+   "set": "galeplate",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 8,
+    "toughness": 2.5,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:zephyrite",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Duelist armor, Vanguard Leaning",
+    "+4% dodge chance per piece (max 25%)"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:dodge_chance",
+     "amount": 0.04,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_chestplate",
+    "addition": "elsewhere:zephyrite"
+   },
+   "loot": [
+    {
+     "table": "chests/breeze_temple_vault",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "galeplate_leggings",
+   "name": "Galeplate Leggings",
+   "kind": "armor",
+   "set": "galeplate",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 2.5,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:zephyrite",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Duelist armor, Vanguard Leaning",
+    "+4% dodge chance per piece (max 25%)"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:dodge_chance",
+     "amount": 0.04,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_leggings",
+    "addition": "elsewhere:zephyrite"
+   },
+   "loot": [
+    {
+     "table": "chests/breeze_temple_vault",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "galeplate_boots",
+   "name": "Galeplate Boots",
+   "kind": "armor",
+   "set": "galeplate",
+   "slot": "boots",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:zephyrite",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Duelist armor, Vanguard Leaning",
+    "+4% dodge chance per piece (max 25%)"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:dodge_chance",
+     "amount": 0.04,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_boots",
+    "addition": "elsewhere:zephyrite"
+   },
+   "loot": [
+    {
+     "table": "chests/breeze_temple_vault",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_hearthguard_helm",
+   "name": "Hearthguard Helm",
+   "kind": "armor",
+   "set": "hrafnholt_hearthguard",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 3.5,
+    "kb": 0.15,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "sound": "iron"
+   },
+   "lore": [
+    "Tank armor of Hrafnholt, Vanguard Leaning",
+    "!-3% movement speed per piece"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [
+    {
+     "attr": "minecraft:movement_speed",
+     "amount": -0.03,
+     "op": "mul_base",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:diamond_helmet",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_hearthguard_greaves",
+   "name": "Hearthguard Greaves",
+   "kind": "armor",
+   "set": "hrafnholt_hearthguard",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 3.5,
+    "kb": 0.15,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "sound": "iron"
+   },
+   "lore": [
+    "Tank armor of Hrafnholt, Vanguard Leaning",
+    "!-3% movement speed per piece"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [
+    {
+     "attr": "minecraft:movement_speed",
+     "amount": -0.03,
+     "op": "mul_base",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:diamond_leggings",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_hearthguard_boots",
+   "name": "Hearthguard Boots",
+   "kind": "armor",
+   "set": "hrafnholt_hearthguard",
+   "slot": "boots",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 3.5,
+    "kb": 0.15,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "sound": "iron"
+   },
+   "lore": [
+    "Tank armor of Hrafnholt, Vanguard Leaning",
+    "!-3% movement speed per piece"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [
+    {
+     "attr": "minecraft:movement_speed",
+     "amount": -0.03,
+     "op": "mul_base",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:diamond_boots",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_ulfhednar_mask",
+   "name": "Ulfhednar Mask",
+   "kind": "armor",
+   "set": "hrafnholt_ulfhednar",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 3.0,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "sound": "leather"
+   },
+   "lore": [
+    "Berserker armor of Hrafnholt, Vanguard Leaning",
+    "No knockback resistance"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:diamond_helmet",
+    "addition": "elsewhere:hrafnholt_wolfpelt_blanket"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_ulfhednar_breeches",
+   "name": "Ulfhednar Breeches",
+   "kind": "armor",
+   "set": "hrafnholt_ulfhednar",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 3.0,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "sound": "leather"
+   },
+   "lore": [
+    "Berserker armor of Hrafnholt, Vanguard Leaning",
+    "No knockback resistance"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "attrs": [],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:diamond_leggings",
+    "addition": "elsewhere:hrafnholt_wolfpelt_blanket"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "azmar_glyphmail_hood",
+   "name": "Glyphmail Hood",
+   "kind": "armor",
+   "set": "azmar_glyphmail",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.1,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:azmar_dinar",
+    "sound": "chain"
+   },
+   "lore": [
+    "Spellblade pair of Azmar, Vanguard and Caster Leaning",
+    "+4 max Glimmer per piece"
+   ],
+   "calling": [
+    "vanguard",
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 4,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:azmar_seal_wazir",
+    "base": "minecraft:diamond_helmet",
+    "addition": "elsewhere:azmar_dinar"
+   },
+   "loot": [
+    {
+     "table": "chests/azmar_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "azmar_glyphmail_hauberk",
+   "name": "Glyphmail Hauberk",
+   "kind": "armor",
+   "set": "azmar_glyphmail",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 8,
+    "toughness": 2.5,
+    "kb": 0.1,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:azmar_dinar",
+    "sound": "chain"
+   },
+   "lore": [
+    "Spellblade pair of Azmar, Vanguard and Caster Leaning",
+    "+4 max Glimmer per piece"
+   ],
+   "calling": [
+    "vanguard",
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 4,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:azmar_seal_wazir",
+    "base": "minecraft:diamond_chestplate",
+    "addition": "elsewhere:azmar_dinar"
+   },
+   "loot": [
+    {
+     "table": "chests/azmar_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "aldermark_outrider_chaps",
+   "name": "Outrider Chaps",
+   "kind": "armor",
+   "set": "aldermark_outrider",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 2.5,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:aldermark_crown",
+    "sound": "leather"
+   },
+   "lore": [
+    "Skirmisher pair of Aldermark, Vanguard and Marksman Leaning",
+    "+3% movement speed per piece"
+   ],
+   "calling": [
+    "vanguard",
+    "marksman"
+   ],
+   "attrs": [
+    {
+     "attr": "minecraft:movement_speed",
+     "amount": 0.03,
+     "op": "mul_base",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:aldermark_crown",
+    "base": "minecraft:diamond_leggings",
+    "addition": "minecraft:gold_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.05
+    }
+   ]
+  },
+  {
+   "id": "aldermark_outrider_boots",
+   "name": "Outrider Boots",
+   "kind": "armor",
+   "set": "aldermark_outrider",
+   "slot": "boots",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:aldermark_crown",
+    "sound": "leather"
+   },
+   "lore": [
+    "Skirmisher pair of Aldermark, Vanguard and Marksman Leaning",
+    "+3% movement speed per piece"
+   ],
+   "calling": [
+    "vanguard",
+    "marksman"
+   ],
+   "attrs": [
+    {
+     "attr": "minecraft:movement_speed",
+     "amount": 0.03,
+     "op": "mul_base",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:aldermark_crown",
+    "base": "minecraft:diamond_boots",
+    "addition": "minecraft:gold_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.05
+    }
+   ]
+  },
+  {
+   "id": "ridgewatch_hood",
+   "name": "Ridgewatch Hood",
+   "kind": "armor",
+   "set": "ridgewatch",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:skyiron_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Sniper armor, Marksman Leaning"
+   ],
+   "calling": [
+    "marksman"
+   ],
+   "attrs": [],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_helmet",
+    "addition": "elsewhere:skyiron_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/climbers_cairn",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "ridgewatch_coat",
+   "name": "Ridgewatch Coat",
+   "kind": "armor",
+   "set": "ridgewatch",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 7,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:skyiron_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Sniper armor, Marksman Leaning",
+    "+1 projectile pierce"
+   ],
+   "calling": [
+    "marksman"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:projectile_pierce",
+     "amount": 1,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_chestplate",
+    "addition": "elsewhere:skyiron_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/climbers_cairn",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "ridgewatch_leggings",
+   "name": "Ridgewatch Leggings",
+   "kind": "armor",
+   "set": "ridgewatch",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:skyiron_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Sniper armor, Marksman Leaning"
+   ],
+   "calling": [
+    "marksman"
+   ],
+   "attrs": [],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_leggings",
+    "addition": "elsewhere:skyiron_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/climbers_cairn",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "ridgewatch_boots",
+   "name": "Ridgewatch Boots",
+   "kind": "armor",
+   "set": "ridgewatch",
+   "slot": "boots",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:skyiron_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Sniper armor, Marksman Leaning"
+   ],
+   "calling": [
+    "marksman"
+   ],
+   "attrs": [],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_boots",
+    "addition": "elsewhere:skyiron_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/climbers_cairn",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "glasswaste_starsight_visor",
+   "name": "Starsight Visor",
+   "kind": "armor",
+   "set": "glasswaste_starsight",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:sunglass_shard",
+    "sound": "netherite"
+   },
+   "lore": [
+    "Arcane archer pair, Marksman and Caster Leaning",
+    "+4 max Glimmer"
+   ],
+   "calling": [
+    "marksman",
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 4,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:sunglass_shard",
+    "base": "minecraft:diamond_helmet",
+    "addition": "elsewhere:sunglass_shard"
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "glasswaste_prism_mantle",
+   "name": "Prism Mantle",
+   "kind": "armor",
+   "set": "glasswaste_starsight",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 8,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:sunglass_shard",
+    "sound": "netherite"
+   },
+   "lore": [
+    "Arcane archer pair, Marksman and Caster Leaning",
+    "+4 max Glimmer",
+    "+1 projectile pierce"
+   ],
+   "calling": [
+    "marksman",
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:projectile_pierce",
+     "amount": 1,
+     "op": "add",
+     "slot": "armor"
+    },
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 4,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:sunglass_shard",
+    "base": "minecraft:diamond_chestplate",
+    "addition": "elsewhere:sunglass_shard"
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "azmar_falconer_kilt",
+   "name": "Falconer's Kilt",
+   "kind": "armor",
+   "set": "azmar_falconer",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 2.5,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:azmar_dinar",
+    "sound": "leather"
+   },
+   "lore": [
+    "Falconer pair (with Sandrunner Sandals), Marksman and Summoner Leaning",
+    "+5% minion damage"
+   ],
+   "calling": [
+    "marksman",
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:azmar_seal_falconer",
+    "base": "minecraft:diamond_leggings",
+    "addition": "elsewhere:azmar_dinar"
+   },
+   "loot": [
+    {
+     "table": "chests/azmar_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "sunscribe_hood",
+   "name": "Sunscribe Hood",
+   "kind": "armor",
+   "set": "sunscribe",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:sunwright_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Artillery vestments, Caster Leaning",
+    "+6% spell power and +3 max Glimmer per piece"
+   ],
+   "calling": [
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:spell_power",
+     "amount": 0.06,
+     "op": "add",
+     "slot": "armor"
+    },
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 3,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_helmet",
+    "addition": "elsewhere:sunwright_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "sunscribe_robe",
+   "name": "Sunscribe Robe",
+   "kind": "armor",
+   "set": "sunscribe",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 8,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:sunwright_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Artillery vestments, Caster Leaning",
+    "+6% spell power and +3 max Glimmer per piece"
+   ],
+   "calling": [
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:spell_power",
+     "amount": 0.06,
+     "op": "add",
+     "slot": "armor"
+    },
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 3,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_chestplate",
+    "addition": "elsewhere:sunwright_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "sunscribe_leggings",
+   "name": "Sunscribe Leggings",
+   "kind": "armor",
+   "set": "sunscribe",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:sunwright_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Artillery vestments, Caster Leaning",
+    "+6% spell power and +3 max Glimmer per piece"
+   ],
+   "calling": [
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:spell_power",
+     "amount": 0.06,
+     "op": "add",
+     "slot": "armor"
+    },
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 3,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_leggings",
+    "addition": "elsewhere:sunwright_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "sunscribe_boots",
+   "name": "Sunscribe Boots",
+   "kind": "armor",
+   "set": "sunscribe",
+   "slot": "boots",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:sunwright_ingot",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Artillery vestments, Caster Leaning",
+    "+6% spell power and +3 max Glimmer per piece"
+   ],
+   "calling": [
+    "caster"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:spell_power",
+     "amount": 0.06,
+     "op": "add",
+     "slot": "armor"
+    },
+    {
+     "attr": "elsewhere:max_glimmer",
+     "amount": 3,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_boots",
+    "addition": "elsewhere:sunwright_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "mirewick_lamplighter_hood",
+   "name": "Lamplighter Hood",
+   "kind": "armor",
+   "set": "mirewick_lamplighter",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:mirewick_scrip",
+    "sound": "leather"
+   },
+   "lore": [
+    "Ritualist pair of Mirewick, Caster and Summoner Leaning",
+    "+5% spell power and +5% minion damage per piece"
+   ],
+   "calling": [
+    "caster",
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:spell_power",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    },
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:mirewick_seal_tolliver",
+    "base": "minecraft:diamond_helmet",
+    "addition": "elsewhere:mirewick_scrip"
+   },
+   "loot": [
+    {
+     "table": "chests/mirewick_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "mirewick_lamplighter_coat",
+   "name": "Lamplighter Coat",
+   "kind": "armor",
+   "set": "mirewick_lamplighter",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 8,
+    "toughness": 2.5,
+    "kb": 0.0,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:mirewick_scrip",
+    "sound": "leather"
+   },
+   "lore": [
+    "Ritualist pair of Mirewick, Caster and Summoner Leaning",
+    "+5% spell power and +5% minion damage per piece"
+   ],
+   "calling": [
+    "caster",
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:spell_power",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    },
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:mirewick_seal_tolliver",
+    "base": "minecraft:diamond_chestplate",
+    "addition": "elsewhere:mirewick_scrip"
+   },
+   "loot": [
+    {
+     "table": "chests/mirewick_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "elderbark_mantle",
+   "name": "Elderbark Mantle",
+   "kind": "armor",
+   "set": "elderbark",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 8,
+    "toughness": 3.0,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:pale_bark",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Elite regalia (with the Elder Bark Crown), Summoner Leaning",
+    "+5% minion damage per piece"
+   ],
+   "calling": [
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_chestplate",
+    "addition": "elsewhere:pale_bark"
+   },
+   "loot": [
+    {
+     "table": "chests/hanging_undercity",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "elderbark_leggings",
+   "name": "Elderbark Leggings",
+   "kind": "armor",
+   "set": "elderbark",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 3.0,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:pale_bark",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Elite regalia (with the Elder Bark Crown), Summoner Leaning",
+    "+5% minion damage per piece"
+   ],
+   "calling": [
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_leggings",
+    "addition": "elsewhere:pale_bark"
+   },
+   "loot": [
+    {
+     "table": "chests/hanging_undercity",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "elderbark_boots",
+   "name": "Elderbark Boots",
+   "kind": "armor",
+   "set": "elderbark",
+   "slot": "boots",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 3.0,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:pale_bark",
+    "sound": "netherite",
+    "fireproof": 1
+   },
+   "lore": [
+    "Elite regalia (with the Elder Bark Crown), Summoner Leaning",
+    "+5% minion damage per piece"
+   ],
+   "calling": [
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:gear3_forging_template",
+    "base": "minecraft:netherite_boots",
+    "addition": "elsewhere:pale_bark"
+   },
+   "loot": [
+    {
+     "table": "chests/hanging_undercity",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "court_marshals_helm",
+   "name": "Marshal's Helm",
+   "kind": "armor",
+   "set": "court_marshals",
+   "slot": "helmet",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 3.0,
+    "kb": 0.1,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:aldermark_crown",
+    "sound": "chain"
+   },
+   "lore": [
+    "Commander panoply (with the Warmarshal's Spurs), Summoner Leaning",
+    "+5% minion damage per piece"
+   ],
+   "calling": [
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:aldermark_crown",
+    "base": "minecraft:diamond_helmet",
+    "addition": "minecraft:gold_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "court_marshals_tabard",
+   "name": "Marshal's Tabard",
+   "kind": "armor",
+   "set": "court_marshals",
+   "slot": "chestplate",
+   "rarity": "epic",
+   "stats": {
+    "armor": 8,
+    "toughness": 3.0,
+    "kb": 0.1,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:aldermark_crown",
+    "sound": "chain"
+   },
+   "lore": [
+    "Commander panoply (with the Warmarshal's Spurs), Summoner Leaning",
+    "+5% minion damage per piece"
+   ],
+   "calling": [
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:aldermark_crown",
+    "base": "minecraft:diamond_chestplate",
+    "addition": "minecraft:gold_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "court_marshals_tassets",
+   "name": "Marshal's Tassets",
+   "kind": "armor",
+   "set": "court_marshals",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 3.0,
+    "kb": 0.1,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:aldermark_crown",
+    "sound": "chain"
+   },
+   "lore": [
+    "Commander panoply (with the Warmarshal's Spurs), Summoner Leaning",
+    "+5% minion damage per piece"
+   ],
+   "calling": [
+    "summoner"
+   ],
+   "attrs": [
+    {
+     "attr": "elsewhere:minion_damage",
+     "amount": 0.05,
+     "op": "add",
+     "slot": "armor"
+    }
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:aldermark_crown",
+    "base": "minecraft:diamond_leggings",
+    "addition": "minecraft:gold_ingot"
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_hird_leggings",
+   "name": "Hird Leggings",
+   "kind": "armor",
+   "set": "hrafnholt_hird",
+   "slot": "leggings",
+   "rarity": "epic",
+   "stats": {
+    "armor": 6,
+    "toughness": 3.0,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "sound": "iron"
+   },
+   "lore": [
+    "Warband pair of Hrafnholt, Vanguard and Summoner Leaning"
+   ],
+   "calling": [
+    "vanguard",
+    "summoner"
+   ],
+   "attrs": [],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:diamond_leggings",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_hird_boots",
+   "name": "Hird Boots",
+   "kind": "armor",
+   "set": "hrafnholt_hird",
+   "slot": "boots",
+   "rarity": "epic",
+   "stats": {
+    "armor": 3,
+    "toughness": 3.0,
+    "kb": 0.05,
+    "durability_mult": 37,
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "sound": "iron"
+   },
+   "lore": [
+    "Warband pair of Hrafnholt, Vanguard and Summoner Leaning"
+   ],
+   "calling": [
+    "vanguard",
+    "summoner"
+   ],
+   "attrs": [],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:diamond_boots",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "id": "mirewick_lanternfang_estoc",
+   "name": "Lanternfang Estoc",
+   "kind": "sword",
+   "rarity": "epic",
+   "stats": {
+    "damage": 6,
+    "speed": 1.8,
+    "durability": 2031,
+    "tier": "netherite",
+    "enchantability": 15,
+    "repair": "elsewhere:mirewick_scrip",
+    "mining_speed": 6.0
+   },
+   "lore": [
+    "Duelist estoc of Mirewick, Vanguard weapon",
+    "Reach +0.5"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:mirewick_scrip",
+    "base": "minecraft:diamond_sword",
+    "addition": "elsewhere:mirewick_seal_tolliver"
+   },
+   "loot": [
+    {
+     "table": "chests/mirewick_courier",
+     "chance": 0.08
+    }
+   ],
+   "attrs": [
+    {
+     "attr": "minecraft:entity_interaction_range",
+     "amount": 0.5,
+     "slot": "mainhand"
+    }
+   ]
+  },
+  {
+   "id": "bellbreaker_maul",
+   "name": "Bellbreaker Maul",
+   "kind": "sword",
+   "rarity": "epic",
+   "stats": {
+    "damage": 10,
+    "speed": 0.9,
+    "durability": 2031,
+    "tier": "netherite",
+    "enchantability": 15,
+    "repair": "elsewhere:resonant_shard",
+    "mining_speed": 6.0
+   },
+   "lore": [
+    "Tank maul, Vanguard weapon"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:cantors_bell_shard",
+    "base": "minecraft:diamond_sword",
+    "addition": "elsewhere:resonant_shard"
+   },
+   "loot": [
+    {
+     "table": "chests/silent_monastery",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_huginns_bite",
+   "name": "Huginn's Bite",
+   "kind": "axe",
+   "rarity": "epic",
+   "stats": {
+    "damage": 12,
+    "speed": 1.0,
+    "durability": 2031,
+    "tier": "netherite",
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "mining_speed": 6.0
+   },
+   "lore": [
+    "Berserker war-axe of Hrafnholt, Vanguard weapon",
+    "Disables shields for 5 s"
+   ],
+   "calling": [
+    "vanguard"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_seal_jarl",
+    "base": "minecraft:diamond_axe",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_runeseax",
+   "name": "Runeseax",
+   "kind": "sword",
+   "rarity": "epic",
+   "stats": {
+    "damage": 7,
+    "speed": 1.7,
+    "durability": 2031,
+    "tier": "netherite",
+    "enchantability": 15,
+    "repair": "elsewhere:hacksilver",
+    "mining_speed": 6.0
+   },
+   "lore": [
+    "Spellblade seax of Hrafnholt, Vanguard weapon"
+   ],
+   "calling": [
+    "vanguard",
+    "caster"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_seal_skald",
+    "base": "minecraft:diamond_sword",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "aldermark_parrying_buckler",
+   "name": "Parrying Buckler",
+   "kind": "shield",
+   "rarity": "rare",
+   "stats": {
+    "durability": 448,
+    "shield_delay": 0.1,
+    "disable_scale": 0.6,
+    "block": 0.9,
+    "melee_only": 1,
+    "repair": "minecraft:oak_planks"
+   },
+   "lore": [
+    "Duelist buckler of Aldermark",
+    "Raises in 0.1 s and blocks 90% of melee; arrows pass through",
+    "Axes disable it for only 3 s"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "PIP",
+     "PSP",
+     " P "
+    ],
+    "key": {
+     "P": "minecraft:oak_planks",
+     "I": "minecraft:iron_ingot",
+     "S": "minecraft:shield"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "hrafnholt_skjaldborg_shield",
+   "name": "Skjaldborg Round-Shield",
+   "kind": "shield",
+   "rarity": "epic",
+   "stats": {
+    "durability": 672,
+    "shield_delay": 0.25,
+    "disable_scale": 1.0,
+    "block": 1.0,
+    "repair": "elsewhere:hacksilver"
+   },
+   "lore": [
+    "Tank shield of Hrafnholt",
+    "Blocks like a vanilla shield, with 672 durability"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:hrafnholt_arm_ring",
+    "base": "minecraft:shield",
+    "addition": "elsewhere:hacksilver"
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "gear3_forging_template",
+   "name": "Elsewhere Forging Template",
+   "kind": "material",
+   "rarity": "epic",
+   "stats": {
+    "stack": 64
+   },
+   "lore": [
+    "Smithing Template (Elsewhere)",
+    "Netherite armor piece + a set material: a G4 set piece"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "DND",
+     "DTD",
+     "DDD"
+    ],
+    "key": {
+     "D": "minecraft:diamond",
+     "N": "minecraft:netherite_scrap",
+     "T": "elsewhere:gear3_forging_template"
+    },
+    "result": {
+     "id": "elsewhere:gear3_forging_template",
+     "count": 2
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.5
+    },
+    {
+     "table": "chests/tidelock_vault",
+     "chance": 0.5
+    },
+    {
+     "table": "chests/clan_hold",
+     "chance": 0.5
+    },
+    {
+     "table": "chests/hanging_undercity",
+     "chance": 0.5
+    },
+    {
+     "table": "chests/breeze_temple_vault",
+     "chance": 0.5
+    }
+   ],
+   "jei": "How to get: about half of the Sunwright Ziggurat, Tidelock Vault, Clan Hold, Hanging Undercity and Breeze Temple chests hold one. Copy it with 7 diamonds and a netherite scrap."
+  },
+  {
+   "id": "aldermark_masons_chisel",
+   "name": "Mason's Chisel",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "chisel",
+   "stats": {
+    "durability": 512
+   },
+   "lore": [
+    "Aldermark stonework tool",
+    "Use on stone, bricks, deepslate, sandstone, blackstone or tuff: plain, bricks, chiseled, cracked, plain"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     " I",
+     "S "
+    ],
+    "key": {
+     "I": "minecraft:iron_ingot",
+     "S": "minecraft:stick"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_market_stall",
+     "chance": 0.25
+    }
+   ]
+  },
+  {
+   "id": "thornlash",
+   "name": "Thornlash",
+   "kind": "sword",
+   "rarity": "uncommon",
+   "mechanic": "whip",
+   "stats": {
+    "damage": 4,
+    "speed": 1.4,
+    "durability": 700,
+    "tier": "diamond",
+    "repair": "elsewhere:haze_resin",
+    "enchantability": 15
+   },
+   "attrs": [
+    {
+     "attr": "minecraft:entity_interaction_range",
+     "amount": 2,
+     "slot": "mainhand"
+    }
+   ],
+   "lore": [
+    "Swarm whip",
+    "Reach +2",
+    "Tags its target like the Gale Ribbon: your minions switch to it"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "  R",
+     " RT",
+     "S  "
+    ],
+    "key": {
+     "R": "elsewhere:haze_resin",
+     "T": "elsewhere:trichome_quartz",
+     "S": "minecraft:stick"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/great_hotbox",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "tidechain_lash",
+   "name": "Tidechain Lash",
+   "kind": "sword",
+   "rarity": "rare",
+   "mechanic": "whip",
+   "stats": {
+    "damage": 5,
+    "speed": 1.3,
+    "durability": 900,
+    "tier": "diamond",
+    "repair": "elsewhere:verdigris_gear",
+    "enchantability": 15
+   },
+   "attrs": [
+    {
+     "attr": "minecraft:entity_interaction_range",
+     "amount": 3,
+     "slot": "mainhand"
+    }
+   ],
+   "lore": [
+    "Commander whip",
+    "Reach +3",
+    "Tags its target like the Gale Ribbon: your minions switch to it"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "VPV",
+     "VPV",
+     " S "
+    ],
+    "key": {
+     "V": "elsewhere:verdigris_gear",
+     "P": "elsewhere:scraped_patina",
+     "S": "minecraft:stick"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/galvanox",
+     "chance": 0.3
+    }
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "azmar_sunscourge",
+   "name": "Sunscourge",
+   "kind": "sword",
+   "rarity": "epic",
+   "mechanic": "whip",
+   "stats": {
+    "damage": 6,
+    "speed": 1.2,
+    "durability": 1200,
+    "tier": "diamond",
+    "repair": "elsewhere:azmar_dinar",
+    "enchantability": 15
+   },
+   "attrs": [
+    {
+     "attr": "minecraft:entity_interaction_range",
+     "amount": 2.5,
+     "slot": "mainhand"
+    }
+   ],
+   "lore": [
+    "Commander whip of Azmar",
+    "Reach +2.5",
+    "Tags its target like the Gale Ribbon: your minions switch to it"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:azmar_dinar",
+    "base": "minecraft:diamond_sword",
+    "addition": "elsewhere:azmar_seal_amir"
+   },
+   "loot": [
+    {
+     "table": "chests/azmar_courier",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "echo_chord",
+   "name": "Echo Chord",
+   "kind": "sword",
+   "rarity": "epic",
+   "mechanic": "whip",
+   "stats": {
+    "damage": 7,
+    "speed": 1.4,
+    "durability": 1600,
+    "tier": "diamond",
+    "repair": "elsewhere:echo_alloy",
+    "enchantability": 15
+   },
+   "attrs": [
+    {
+     "attr": "minecraft:entity_interaction_range",
+     "amount": 3.5,
+     "slot": "mainhand"
+    }
+   ],
+   "lore": [
+    "Commander whip",
+    "Reach +3.5",
+    "Tags its target like the Gale Ribbon: your minions switch to it"
+   ],
+   "recipe": {
+    "type": "minecraft:smithing_transform",
+    "template": "elsewhere:resonant_shard",
+    "base": "minecraft:diamond_sword",
+    "addition": "elsewhere:echo_alloy"
+   },
+   "loot": [
+    {
+     "table": "chests/silent_monastery",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "mirewick_lantern_crook",
+   "name": "Lantern Crook",
+   "kind": "sword",
+   "rarity": "rare",
+   "mechanic": "crook",
+   "stats": {
+    "damage": 6,
+    "speed": 1.6,
+    "durability": 900,
+    "tier": "diamond",
+    "repair": "elsewhere:mirewick_scrip",
+    "enchantability": 15
+   },
+   "attrs": [
+    {
+     "attr": "minecraft:entity_interaction_range",
+     "amount": 1.5,
+     "slot": "mainhand"
+    }
+   ],
+   "lore": [
+    "Commander crook of Mirewick",
+    "Reach +1.5",
+    "Gives the Herding Crook's orders"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     " SS",
+     " T ",
+     " T "
+    ],
+    "key": {
+     "S": "elsewhere:mirewick_scrip",
+     "T": "minecraft:stick"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/mirewick_courier",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "summoner"
+   ]
+  },
+  {
+   "id": "hrafnholt_mead_horn",
+   "name": "Mead-Horn of the Hall",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "mead_horn",
+   "stats": {
+    "stack": 1
+   },
+   "lore": [
+    "Berserker's horn of Hrafnholt",
+    "Drink: heal 6 over 3 s, 30 s cooldown"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "HBH",
+     " H "
+    ],
+    "key": {
+     "H": "elsewhere:hacksilver",
+     "B": "minecraft:honey_bottle"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/hrafnholt_courier",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "rangefinder_lens",
+   "name": "Rangefinder Lens",
+   "kind": "trinket",
+   "rarity": "rare",
+   "stats": {},
+   "lore": [
+    "Sniper trinket (off hand or hotbar)",
+    "Arrows deal +1% damage per block beyond 16 (max +20%)"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "SSS",
+     "SGS",
+     "SSS"
+    ],
+    "key": {
+     "S": "elsewhere:sunglass_shard",
+     "G": "minecraft:spyglass"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "aldermark_oath_ring",
+   "name": "Oath Ring",
+   "kind": "trinket",
+   "rarity": "rare",
+   "stats": {},
+   "lore": [
+    "Vanguard trinket of Aldermark (off hand or hotbar)",
+    "While holding a Vanguard weapon: +1 armor toughness and +1 kill heal"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     " G ",
+     "GDG",
+     " G "
+    ],
+    "key": {
+     "G": "minecraft:gold_ingot",
+     "D": "minecraft:diamond"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "aldermark_quickdraw_quiver",
+   "name": "Quickdraw Quiver",
+   "kind": "trinket",
+   "rarity": "rare",
+   "stats": {},
+   "lore": [
+    "Skirmisher trinket of Aldermark (off hand or hotbar)",
+    "Bow and crossbow draw time -15%"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "LSL",
+     "LAL",
+     "LLL"
+    ],
+    "key": {
+     "L": "minecraft:leather",
+     "S": "minecraft:string",
+     "A": "minecraft:arrow"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_armory",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "mirewick_fowlers_bandolier",
+   "name": "Fowler's Bandolier",
+   "kind": "trinket",
+   "rarity": "rare",
+   "stats": {},
+   "lore": [
+    "Trapper trinket of Mirewick (off hand or hotbar)",
+    "Tipped and spectral arrows are not used up 40% of the time"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "LSL",
+     "ASA",
+     "LLL"
+    ],
+    "key": {
+     "L": "minecraft:leather",
+     "S": "minecraft:string",
+     "A": "minecraft:spectral_arrow"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/mirewick_courier",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "id": "hush_binding_sigil",
+   "name": "Binding Sigil",
+   "kind": "trinket",
+   "rarity": "epic",
+   "stats": {},
+   "lore": [
+    "Control trinket (off hand or hotbar)",
+    "Slowness, Weakness, Blindness, Mining Fatigue, Nausea, Darkness and Levitation you apply last 30% longer on non-bosses"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     "RER",
+     "ECE",
+     "RER"
+    ],
+    "key": {
+     "R": "elsewhere:resonant_shard",
+     "E": "minecraft:ender_pearl",
+     "C": "minecraft:amethyst_shard"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/silent_monastery",
+     "chance": 0.08
+    }
+   ],
+   "tags": [
+    "elsewhere:caster_trinket"
+   ]
+  },
+  {
+   "id": "amber_grimoire",
+   "name": "Amber Grimoire",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "amber_grimoire",
+   "stats": {
+    "durability": 400
+   },
+   "lore": [
+    "Control grimoire (6 Glimmer, 1 s)",
+    "20-block bolt: 4 damage; non-bosses are amber-locked (Slowness IV and Weakness II, 3 s)",
+    "Bosses: Slowness I for 1 s"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "category": "equipment",
+    "ingredients": [
+     "minecraft:book",
+     "elsewhere:amber",
+     "elsewhere:amber",
+     "elsewhere:amber",
+     "elsewhere:amber"
+    ]
+   },
+   "loot": [
+    {
+     "table": "entities/mother_creak",
+     "chance": 0.3
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "mirewick_almoners_chalice",
+   "name": "Almoner's Chalice",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "chalice",
+   "stats": {
+    "durability": 300
+   },
+   "lore": [
+    "Support chalice of Mirewick (8 Glimmer, 2 s)",
+    "Heal splash where you look: 4 HP to players and your minions within 3 blocks",
+    "+25% with the Almoner's Cowl"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     " S ",
+     "SBS",
+     " G "
+    ],
+    "key": {
+     "S": "elsewhere:mirewick_scrip",
+     "B": "minecraft:glass_bottle",
+     "G": "minecraft:gold_ingot"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/mirewick_courier",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "azmar_ka_sigil",
+   "name": "Ka Sigil",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "ka_sigil",
+   "stats": {
+    "durability": 300
+   },
+   "lore": [
+    "Support sigil of Azmar (10 Glimmer, 3 s)",
+    "Ward the player you look at (sneak: yourself): Absorption 6 HP for 8 s"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "GSG",
+     "ASA",
+     "GGG"
+    ],
+    "key": {
+     "G": "minecraft:gold_ingot",
+     "S": "elsewhere:azmar_seal_sultana",
+     "A": "minecraft:amethyst_shard"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/azmar_courier",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "glimmer_lantern",
+   "name": "Glimmer Lantern",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "glimmer_lantern",
+   "stats": {
+    "durability": 256
+   },
+   "lore": [
+    "Light utility (2 Glimmer)",
+    "Places an invisible light (level 14) in the air you look at for 5 minutes, up to 8 at once"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     " A ",
+     "ALA",
+     " A "
+    ],
+    "key": {
+     "A": "minecraft:amethyst_shard",
+     "L": "minecraft:lantern"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/kingdom_market_stall",
+     "chance": 0.2
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "blinkstone",
+   "name": "Blinkstone",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "blinkstone",
+   "stats": {
+    "durability": 200
+   },
+   "lore": [
+    "Utility stone (12 Glimmer, 2 s)",
+    "Teleport up to 8 blocks along your view, stopping before blocks",
+    "!Does not work near a boss"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+     " M ",
+     "MEM",
+     " M "
+    ],
+    "key": {
+     "M": "elsewhere:glimmer_mote",
+     "E": "minecraft:ender_pearl"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/ossyra",
+     "chance": 0.2
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "emberfall_rod",
+   "name": "Emberfall Rod",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "emberfall",
+   "stats": {
+    "durability": 400
+   },
+   "lore": [
+    "Artillery rod (8 Glimmer, 1.2 s)",
+    "Fire burst 24 blocks away: 10 damage within 3 blocks, fire 3 s; never breaks or lights blocks"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "F",
+     "B",
+     "B"
+    ],
+    "key": {
+     "F": "minecraft:fire_charge",
+     "B": "minecraft:blaze_rod"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/sunwright_ziggurat",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "frostwake_scepter",
+   "name": "Frostwake Scepter",
+   "kind": "plain",
+   "rarity": "rare",
+   "mechanic": "frostwake",
+   "stats": {
+    "durability": 400
+   },
+   "lore": [
+    "Control scepter (7 Glimmer)",
+    "10-block frost lane: Slowness II 3 s and 3 freeze damage per second for 3 s"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "  F",
+     " S ",
+     "S  "
+    ],
+    "key": {
+     "F": "elsewhere:frost_shard",
+     "S": "minecraft:stick"
+    }
+   },
+   "loot": [
+    {
+     "table": "chests/climbers_cairn",
+     "chance": 0.08
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "starfall_orrery",
+   "name": "Starfall Orrery",
+   "kind": "plain",
+   "rarity": "epic",
+   "mechanic": "orrery",
+   "stats": {
+    "durability": 300
+   },
+   "lore": [
+    "Artillery orrery (20 Glimmer, 2 s channel)",
+    "Five stars of 9 damage fall in a 4-block circle up to 32 blocks away",
+    "!Taking damage during the channel cancels it"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "NAN",
+     "DRD",
+     " R "
+    ],
+    "key": {
+     "N": "minecraft:nether_star",
+     "A": "minecraft:amethyst_shard",
+     "D": "minecraft:diamond",
+     "R": "minecraft:blaze_rod"
+    }
+   },
+   "loot": [
+    {
+     "table": "entities/ossyra",
+     "chance": 0.3
+    }
+   ],
+   "calling": [
+    "caster"
+   ]
+  },
+  {
+   "id": "echo_arrow",
+   "name": "Echo Arrow",
+   "kind": "plain",
+   "rarity": "uncommon",
+   "mechanic": "echo_arrow",
+   "stats": {},
+   "tags": [
+    "minecraft:arrows"
+   ],
+   "lore": [
+    "Trapper arrow",
+    "Impact: an echo pulse makes every mob within 6 blocks glow for 5 s",
+    "Silent flight: no sound, and sculk sensors and Wardens never hear it"
+   ],
+   "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+     "AAA",
+     "ARA",
+     "AAA"
+    ],
+    "key": {
+     "A": "minecraft:arrow",
+     "R": "elsewhere:resonant_shard"
+    },
+    "result": {
+     "id": "elsewhere:echo_arrow",
+     "count": 8
+    }
+   },
+   "jei": [
+    "How to get: craft 8 arrows around a Resonant Shard (Hush currency) for 8 Echo Arrows.",
+    "Shoot it from any bow, crossbow or dispenser. Where it hits, every mob within 6 blocks glows for 5 s.",
+    "It flies and lands silently: no sound, and no vibration for sculk sensors, shriekers or Wardens."
+   ]
+  }
+ ]
+}

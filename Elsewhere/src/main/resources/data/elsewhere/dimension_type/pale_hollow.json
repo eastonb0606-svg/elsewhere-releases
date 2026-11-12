@@ -1,0 +1,56 @@
+{
+  "ambient_light": 0.05,
+  "attributes": {
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "block_search_extent": 8,
+        "offset": 2.0,
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000
+      }
+    },
+    "minecraft:gameplay/bed_rule": {
+      "can_set_spawn": "never",
+      "can_sleep": "never",
+      "destroy_on_use": true
+    },
+    "minecraft:gameplay/respawn_anchor_works": false,
+    "minecraft:gameplay/creaking_active": true,
+    "minecraft:gameplay/eyeblossom_open": true,
+    "minecraft:gameplay/monsters_burn": false,
+    "minecraft:gameplay/can_start_raid": false,
+    "minecraft:gameplay/sky_light_level": 5.0,
+    "minecraft:visual/sun_angle": 101.0,
+    "minecraft:visual/moon_angle": 281.0,
+    "minecraft:visual/star_angle": 101.0,
+    "minecraft:visual/moon_phase": "full_moon",
+    "minecraft:visual/star_brightness": 0.35,
+    "minecraft:visual/sky_color": "#5d6470",
+    "minecraft:visual/fog_color": "#9da3a6",
+    "minecraft:visual/sunrise_sunset_color": "#b4e88a4c",
+    "minecraft:visual/cloud_color": "#cc8e949b",
+    "minecraft:visual/cloud_height": 200.0,
+    "minecraft:visual/sky_light_color": "#c7b9e6",
+    "minecraft:visual/sky_light_factor": 0.4,
+    "minecraft:visual/ambient_light_color": "#141218",
+    "minecraft:visual/fog_start_distance": 10.0,
+    "minecraft:visual/fog_end_distance": 120.0,
+    "minecraft:visual/sky_fog_end_distance": 180.0
+  },
+  "coordinate_scale": 4.0,
+  "has_ceiling": false,
+  "has_ender_dragon_fight": false,
+  "has_fixed_time": true,
+  "has_skylight": true,
+  "height": 384,
+  "infiniburn": "#minecraft:infiniburn_overworld",
+  "logical_height": 384,
+  "min_y": -64,
+  "monster_spawn_block_light_limit": 0,
+  "monster_spawn_light_level": {
+    "type": "minecraft:uniform",
+    "max_inclusive": 7,
+    "min_inclusive": 0
+  },
+  "skybox": "overworld"
+}

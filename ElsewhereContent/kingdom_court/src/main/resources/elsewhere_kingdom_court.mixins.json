@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.kingdom_court.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"BeardifierMixin",
+		"LivingEntityHurtMixin",
+		"LocateCastleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

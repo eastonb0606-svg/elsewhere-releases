@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "elsewhere:zephyrite",
+    "elsewhere:zephyrite",
+    "elsewhere:zephyrite",
+    "elsewhere:zephyrite",
+    "elsewhere:skyblossom_leaves",
+    "elsewhere:skyblossom_leaves",
+    "elsewhere:skyblossom_leaves",
+    "elsewhere:skyblossom_leaves",
+    "minecraft:bell"
+  ],
+  "result": {
+    "id": "elsewhere:blossom_seal_charm",
+    "count": 1
+  }
+}

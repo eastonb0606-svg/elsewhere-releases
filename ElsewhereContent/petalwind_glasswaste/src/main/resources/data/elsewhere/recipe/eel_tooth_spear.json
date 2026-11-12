@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TTT",
+    " S ",
+    "   "
+  ],
+  "key": {
+    "T": "elsewhere:eel_tooth",
+    "S": "minecraft:iron_spear"
+  },
+  "result": {
+    "id": "elsewhere:eel_tooth_spear",
+    "count": 1
+  }
+}

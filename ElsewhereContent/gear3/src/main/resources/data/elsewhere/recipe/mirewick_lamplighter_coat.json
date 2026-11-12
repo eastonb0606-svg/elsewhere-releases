@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:mirewick_seal_tolliver",
+  "base": "minecraft:diamond_chestplate",
+  "addition": "elsewhere:mirewick_scrip",
+  "result": {
+    "id": "elsewhere:mirewick_lamplighter_coat"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:mirewick_seal_tolliver",
+        "elsewhere:mirewick_scrip"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+ "replace": false,
+ "values": [
+  {
+   "id": "elsewhere:azmar_dinar",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_seal_sultana",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_seal_wazir",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_seal_falconer",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_seal_amir",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_nemes_of_the_uraeus",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_ibis_crest",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_falconers_gauntlet",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_sandrunner_sandals",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_winged_scarab_standard",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_copper_khopesh",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_gilded_khopesh",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_twin_khopesh",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_scarab_spear",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_composite_bow",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_fire_pot",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_jackal_helm",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_falcon_helm",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_horned_scarab_crown",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_sunplate_cuirass",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_armor_trim_smithing_template",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_banner_pattern",
+   "required": false
+  }
+ ]
+}

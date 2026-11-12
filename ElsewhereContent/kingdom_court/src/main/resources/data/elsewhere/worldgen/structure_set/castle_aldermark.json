@@ -1,0 +1,11 @@
+{
+  "structures": [
+    {
+      "structure": "elsewhere:castle_aldermark",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "elsewhere:castle_aldermark"
+  }
+}

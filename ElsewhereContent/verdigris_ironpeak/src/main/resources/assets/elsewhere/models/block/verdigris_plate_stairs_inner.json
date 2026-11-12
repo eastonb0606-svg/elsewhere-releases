@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "elsewhere:block/verdigris_plate",
+    "side": "elsewhere:block/verdigris_plate",
+    "top": "elsewhere:block/verdigris_plate"
+  }
+}

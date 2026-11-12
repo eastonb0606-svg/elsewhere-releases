@@ -1,0 +1,411 @@
+{
+ "name": "Sultanate of Azmar",
+ "name_key": "faction.elsewhere.azmar",
+ "banner": {
+  "primary": "#1F3F8F",
+  "secondary": "#D4A537"
+ },
+ "tabard": {
+  "color": "#1F3F8F",
+  "trim": "#2BB3A3"
+ },
+ "hostile_to_players": false,
+ "allies": [],
+ "peace": [],
+ "roster": {
+  "elsewhere:man_at_arms": {
+   "unit": "elsewhere:azmar_spearguard"
+  },
+  "elsewhere:knight": {
+   "unit": "elsewhere:azmar_sunguard"
+  },
+  "elsewhere:lancer": {
+   "unit": "elsewhere:azmar_camel_lancer"
+  },
+  "elsewhere:archer": {
+   "unit": "elsewhere:azmar_bowman"
+  },
+  "elsewhere:crossbowman": {
+   "unit": "elsewhere:azmar_arbalester"
+  },
+  "elsewhere:sergeant": {
+   "unit": "elsewhere:azmar_jemadar"
+  },
+  "elsewhere:captain": {
+   "unit": "elsewhere:azmar_qaid"
+  },
+  "elsewhere:standard_bearer": {
+   "unit": "elsewhere:azmar_scarab_bearer"
+  },
+  "elsewhere:herald": {
+   "unit": "elsewhere:azmar_crier"
+  },
+  "elsewhere:surgeon": {
+   "unit": "elsewhere:azmar_physician"
+  },
+  "elsewhere:kingdom_royal_envoy": {
+   "skin": "elsewhere:textures/entity/kingdom/azmar/envoy.png"
+  },
+  "elsewhere:squire": {
+   "unit": "elsewhere:azmar_page"
+  },
+  "elsewhere:pikeman": {
+   "unit": "elsewhere:azmar_pikeman"
+  }
+ },
+ "biomes": [
+  "#elsewhere:azmar_realm_biomes"
+ ],
+ "music": "elsewhere:azmar_music",
+ "realm": true,
+ "rulers": {
+  "king": {
+   "name": "Sultana Nahira Zahr-Qadir",
+   "name_key": "entity.elsewhere.azmar_sultana",
+   "title": "Sultana, the Unsetting Sun",
+   "health": 225,
+   "drops": [
+    {
+     "item": "elsewhere:azmar_nemes_of_the_uraeus"
+    },
+    {
+     "item": "elsewhere:azmar_winged_scarab_standard"
+    },
+    {
+     "item": "elsewhere:azmar_seal_sultana"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:azmar_dinar",
+     "min": 80,
+     "max": 96
+    },
+    {
+     "item": "minecraft:emerald",
+     "min": 6,
+     "max": 12
+    }
+   ],
+   "health_cap": 300
+  },
+  "marshal": {
+   "name": "Amir Tariq Vashti",
+   "name_key": "entity.elsewhere.azmar_amir",
+   "title": "Amir of Spears, the Horned Scarab",
+   "health": 182,
+   "drops": [
+    {
+     "item": "elsewhere:azmar_sandrunner_sandals"
+    },
+    {
+     "item": "elsewhere:azmar_horned_scarab_crown"
+    },
+    {
+     "item": "elsewhere:azmar_seal_amir"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:azmar_dinar",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "castellan": {
+   "name": "Grand Wazir Idris Halvane",
+   "name_key": "entity.elsewhere.azmar_wazir",
+   "title": "Grand Wazir, Keeper of the Ibis Glyphs",
+   "health": 161,
+   "drops": [
+    {
+     "item": "elsewhere:azmar_ibis_crest"
+    },
+    {
+     "item": "elsewhere:azmar_seal_wazir"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:azmar_dinar",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  },
+  "huntsman": {
+   "name": "Royal Falconer Leyla Dunmar",
+   "name_key": "entity.elsewhere.azmar_falconer",
+   "title": "Royal Falconer, Mistress of the Falcons",
+   "health": 171,
+   "drops": [
+    {
+     "item": "elsewhere:azmar_falconers_gauntlet"
+    },
+    {
+     "item": "elsewhere:azmar_falcon_helm"
+    },
+    {
+     "item": "elsewhere:azmar_seal_falconer"
+    },
+    {
+     "item": "elsewhere:oathkeepers_seal"
+    },
+    {
+     "item": "elsewhere:azmar_dinar",
+     "min": 16,
+     "max": 32
+    }
+   ]
+  }
+ },
+ "society": {
+  "government": "monarchy",
+  "ruler_bonus": {
+   "type": "hp_per_lord",
+   "amount": 12
+  },
+  "leaders": [
+   "king",
+   "marshal",
+   "castellan",
+   "huntsman"
+  ],
+  "standing": {
+   "start": 0,
+   "cap_until_ruler_killed": false
+  },
+  "succession": {
+   "mode": "regent",
+   "ruler_dies": "highest_living_lord_becomes_regent",
+   "lord_dies": "never_replaced",
+   "brain_loss": "permanent",
+   "never_promoted": [
+    "hajib",
+    "ustad"
+   ],
+   "seat_refill_days": 0,
+   "falls_when": "all_dead"
+  },
+  "serfs": {
+   "count_multiplier": 0.5,
+   "health": 18.0
+  }
+ },
+ "economy": {
+  "currency": "elsewhere:azmar_dinar",
+  "shop": [
+   {
+    "item": "elsewhere:oathkeepers_seal",
+    "price": 220,
+    "weekly_limit": 2
+   },
+   {
+    "item": "elsewhere:azmar_armor_trim_smithing_template",
+    "price": 30,
+    "weekly_limit": 2
+   },
+   {
+    "item": "elsewhere:azmar_banner_pattern",
+    "price": 24
+   },
+   {
+    "item": "elsewhere:azmar_copper_khopesh",
+    "price": 28
+   },
+   {
+    "item": "elsewhere:azmar_composite_bow",
+    "price": 36
+   },
+   {
+    "item": "elsewhere:azmar_scarab_spear",
+    "price": 36
+   },
+   {
+    "item": "elsewhere:azmar_fire_pot",
+    "count": 4,
+    "price": 20
+   },
+   {
+    "item": "minecraft:netherite_upgrade_smithing_template",
+    "price": 275,
+    "extra": [
+     {
+      "item": "minecraft:diamond",
+      "min": 20
+     }
+    ],
+    "weekly_limit": 2
+   }
+  ]
+ },
+ "army": {
+  "scale": {"patrol": {"day": 5, "night": 4}, "squad_size": 5, "unit_name": "rank_block", "company_size": 10, "garrison": {"village": [8, 10], "town": [16, 22], "capital": [55, 70]}, "field_army": [80, 110], "battle_side_max": 110, "live_front": 24, "wave": {"style": "relief", "size": 5, "interval_s": 30, "interval_jitter_s": 0, "trigger_front": 0.85}, "attack_tokens": {"melee": 2, "ranged": 1}, "formation": {"width": 2, "depth": 2, "spacing": 1.1, "jitter": 0.0}, "hired": {"company": [0, 0]}, "residents": {"capital": 120, "town": 36}, "composition": {"line": 0.3, "heavy": 0.14, "ranged": 0.21, "mounted": 0.17, "special": 0.1, "officers": 0.08}},
+  "routine": {
+   "watch_changes": [0, 3, 6, 9, 12, 15, 18, 21],
+   "watch_jitter_min": 0,
+   "blocks": [
+    {"from": 0, "to": 5, "activity": "watch", "share": 0.34, "where": "temple"},
+    {"from": 5, "to": 6, "activity": "temple", "share": 0.3, "where": "temple_steps"},
+    {"from": 6, "to": 9, "activity": "drill", "share": 0.6, "where": "parade_ground"},
+    {"from": 9, "to": 11, "activity": "court", "share": 0.3, "where": "palace_gate"},
+    {"from": 11, "to": 15, "activity": "siesta", "share": 0.7, "where": "shade"},
+    {"from": 15, "to": 20, "activity": "market", "share": 0.7, "where": "bazaar"},
+    {"from": 20, "to": 24, "activity": "watch", "share": 0.34, "where": "avenue"}
+   ],
+   "events": [
+    {"id": "sun_procession", "every_days": 5, "at": 12, "hours": 1, "activity": "procession", "where": "avenue"},
+    {"id": "review_of_the_ranks", "every_days": 7, "at": 8, "hours": 2, "activity": "muster", "where": "parade_ground"},
+    {"id": "flood_festival", "every_days": 10, "at": 19, "hours": 4, "activity": "procession", "where": "river"}
+   ]
+  },
+  "units": [
+   "elsewhere:azmar_spearguard",
+   "elsewhere:azmar_sunguard",
+   "elsewhere:azmar_camel_lancer",
+   "elsewhere:azmar_bowman",
+   "elsewhere:azmar_arbalester",
+   "elsewhere:azmar_jemadar",
+   "elsewhere:azmar_qaid",
+   "elsewhere:azmar_scarab_bearer",
+   "elsewhere:azmar_crier",
+   "elsewhere:azmar_physician",
+   "elsewhere:azmar_page",
+   "elsewhere:azmar_pikeman"
+  ],
+  "unique_units": [
+   "elsewhere:azmar_sand_dancer",
+   "elsewhere:azmar_naffatun"
+  ],
+  "makeup": {
+   "elsewhere:azmar_spearguard": 0.175,
+   "elsewhere:azmar_sunguard": 0.175,
+   "elsewhere:azmar_bowman": 0.25,
+   "elsewhere:azmar_camel_lancer": 0.2,
+   "elsewhere:azmar_sand_dancer": 0.06,
+   "elsewhere:azmar_naffatun": 0.06,
+   "elsewhere:azmar_pikeman": 0.0
+  },
+  "health_multiplier": 0.8,
+  "damage_multiplier": 0.9,
+  "speed_multiplier": 1.1,
+  "size_multiplier": 0.75,
+  "patrol_day": 5,
+  "patrol_night": 4,
+  "brain": {
+   "war_frequency": 1.0,
+   "min_attack_odds": 1.5,
+   "retreat_instead_of_die": true,
+   "veterancy_cap": 0.3,
+   "intelligence_noise": 0.07,
+   "supply_line_only": true,
+   "decision_delay_days": 0,
+   "hire_mercenaries": false,
+   "mercenary_daily_cost": 0,
+   "brain_roles": [
+    {
+     "role": "king",
+     "degrades": [
+      "fort_rate",
+      "retreat",
+      "commit"
+     ]
+    },
+    {
+     "role": "castellan",
+     "degrades": [
+      "timing",
+      "broker",
+      "alliances",
+      "caravan_income"
+     ]
+    },
+    {
+     "role": "huntsman",
+     "degrades": [
+      "noise",
+      "instant_read"
+     ]
+    }
+   ]
+  }
+ },
+ "tactics": {
+  "profile": "azmar",
+  "decision_interval": 10,
+  "min_local_odds": 1.5,
+  "retreat_odds": 0.85,
+  "blunder_rate": 0.03,
+  "reaction_ticks": [
+   6,
+   14
+  ],
+  "behaviours": {
+   "refuse_fight": {
+    "weight": 1.0
+   },
+   "call_help": {
+    "weight": 1.0
+   },
+   "shield_wall": {
+    "weight": 1.0
+   },
+   "hammer_anvil": {
+    "weight": 1.0
+   },
+   "crescent": {
+    "weight": 1.0,
+    "min_ratio": 2.0
+   },
+   "feigned_retreat": {
+    "weight": 1.0
+   },
+   "focus_fire": {
+    "weight": 1.0
+   },
+   "kite_melee": {
+    "weight": 1.0
+   },
+   "break_los": {
+    "weight": 1.0
+   },
+   "back_off_creeper": {
+    "weight": 1.0
+   },
+   "avoid_warden": {
+    "weight": 1.0
+   },
+   "ambush_road": {
+    "weight": 1.0
+   },
+   "regroup_at_obelisk": {
+    "weight": 1.0
+   },
+   "high_ground": {
+    "weight": 1.0
+   }
+  },
+  "roles": {
+   "ARCHER": {
+    "standoff": 10,
+    "strafe": true
+   },
+   "MELEE": {
+    "standoff": 0
+   },
+   "LANCER": {
+    "hold_back": 24
+   }
+  },
+  "mob_policy": "careful",
+  "signals": {
+   "horn": true,
+   "banner": true,
+   "shout_chance": 0.5
+  }
+ }
+}

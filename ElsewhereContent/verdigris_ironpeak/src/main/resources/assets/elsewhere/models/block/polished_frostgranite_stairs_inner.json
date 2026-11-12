@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "elsewhere:block/polished_frostgranite",
+    "side": "elsewhere:block/polished_frostgranite",
+    "top": "elsewhere:block/polished_frostgranite"
+  }
+}

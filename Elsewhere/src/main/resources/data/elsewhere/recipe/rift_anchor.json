@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": "#elsewhere:anchor_stones",
+    "A": "minecraft:amethyst_shard",
+    "L": "minecraft:lodestone"
+  },
+  "pattern": [
+    "SAS",
+    "ALA",
+    "SAS"
+  ],
+  "result": {
+    "id": "elsewhere:rift_anchor"
+  }
+}

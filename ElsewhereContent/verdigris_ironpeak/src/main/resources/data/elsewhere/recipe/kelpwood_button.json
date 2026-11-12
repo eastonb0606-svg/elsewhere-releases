@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "redstone",
+ "ingredients": [
+  "elsewhere:kelpwood_planks"
+ ],
+ "result": {
+  "id": "elsewhere:kelpwood_button",
+  "count": 1
+ }
+}

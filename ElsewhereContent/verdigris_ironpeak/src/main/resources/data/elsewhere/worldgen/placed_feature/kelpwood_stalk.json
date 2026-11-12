@@ -1,0 +1,19 @@
+{
+ "feature": "elsewhere:kelpwood_stalk",
+ "placement": [
+  {
+   "type": "minecraft:count",
+   "count": 6
+  },
+  {
+   "type": "minecraft:in_square"
+  },
+  {
+   "type": "minecraft:heightmap",
+   "heightmap": "OCEAN_FLOOR"
+  },
+  {
+   "type": "minecraft:biome"
+  }
+ ]
+}

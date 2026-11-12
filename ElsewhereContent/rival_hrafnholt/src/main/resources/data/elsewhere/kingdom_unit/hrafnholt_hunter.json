@@ -1,0 +1,33 @@
+{
+ "role": "archer",
+ "skin": "elsewhere:textures/entity/hrafnholt/hunter.png",
+ "armor": {
+  "head": "minecraft:chainmail_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 5204794,
+ "main_hand": "minecraft:bow",
+ "stats": {
+  "health": 20,
+  "speed": 0.27
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "crit_cooldown": 200,
+  "retreat_health": 0.0,
+  "sprint_chance": 0.3,
+  "strafe": 0.5,
+  "retreat_chance": 0.0
+ },
+ "trim": {
+  "material": "minecraft:iron",
+  "patterns": [
+   "elsewhere:hrafnholt",
+   "minecraft:rib",
+   "minecraft:ward"
+  ]
+ }
+}

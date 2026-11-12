@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_kingdom_villages",
+	"version": "${version}",
+	"name": "Elsewhere: Kingdom villages (dev module)",
+	"description": "Aldermark realm life: occupied, besieged and free villages, siege fire, Serfs, fortified rebuild, garrisons, outposts, roads, refugees, liberation and the Royal Steward. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.kingdom_villages.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.kingdom_villages.client.VillagesClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"elsewhere_kingdom": "*"
+	},
+	"mixins": [
+		"elsewhere_kingdom_villages.mixins.json"
+	]
+}

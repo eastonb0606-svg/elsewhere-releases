@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470102,
+    "separation": 14,
+    "spacing": 44
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:bonfire_terrace",
+      "weight": 1
+    }
+  ]
+}

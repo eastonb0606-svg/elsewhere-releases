@@ -1,0 +1,12 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "elsewhere:azmar_survey_fragment",
+  "elsewhere:azmar_survey_fragment",
+  "elsewhere:azmar_survey_fragment"
+ ],
+ "result": {
+  "id": "elsewhere:azmar_survey_map"
+ }
+}

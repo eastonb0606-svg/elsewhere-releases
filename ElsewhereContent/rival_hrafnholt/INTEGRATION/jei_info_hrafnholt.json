@@ -1,0 +1,78 @@
+{
+ "elsewhere:hacksilver": [
+  "Cut silver ring pieces, weighed rather than counted. Spend them with the Silver-Weigher of a liberated Hrafnholt town.",
+  "How to get: Hrafnholt soldiers drop 1 to 3, officers 4 to 8, Lords 16 to 32, the High Jarl 80 to 96 on his first defeat. Thralls drop none."
+ ],
+ "elsewhere:hrafnholt_iron_crown": [
+  "Wolf-Rally: 8 percent less damage taken while a tamed wolf is within 16 blocks. Plus 1 percent per Lord Seal you carry, up to 12 percent. As good as netherite on armor and knockback, one toughness less.",
+  "How to get: the High Jarl Halvard Ironbrow drops it (DropRule: 100 percent first kill, 67 percent repeat, plus pity)."
+ ],
+ "elsewhere:hrafnholt_raven_banner": [
+  "Plant it: Speed I for 30 seconds to you and your allies within 16 blocks. One banner per player; it burns down after 30 seconds.",
+  "How to get: the High Jarl drops it as his second item."
+ ],
+ "elsewhere:hrafnholt_wolfskin_boots": [
+  "No slipping on ice, 10 percent faster on snow and powder snow, no powder-snow freeze. Less toughness than netherite boots, and no knockback resistance.",
+  "How to get: Hersir Sigrun Askeland."
+ ],
+ "elsewhere:hrafnholt_hearth_ward_mail": [
+  "Immune to freezing, 10 percent less fire damage, 5 percent slower. One armor point below netherite.",
+  "How to get: Hallwarden Torvald Eikrem."
+ ],
+ "elsewhere:hrafnholt_skalds_rune_axe": [
+  "The third hit on one target within 5 seconds deals 3 extra damage and more knockback. One damage and 331 durability short of netherite.",
+  "How to get: Weapon-Skald Ulfar Brandsson."
+ ],
+ "elsewhere:hrafnholt_ulfhednar_pelt": [
+  "Pelt-Rage: below 30 percent health, Strength I for 6 seconds, once per 2 minutes. Two armor and two toughness under netherite.",
+  "How to get: Gudrun Ulfhednar."
+ ],
+ "elsewhere:hrafnholt_hornbow": [
+  "Full draw in 0.85 seconds. Arrows slow what they hit for 2 seconds. Shorter-lived than netherite gear, and no Infinity.",
+  "How to get: Huntmaster Eydis Nordvik."
+ ],
+ "elsewhere:hrafnholt_armor_trim_smithing_template": [
+  "Hrafnholt Armor Trim",
+  "How to get: Hird-Captains drop it 8 percent of the time; the Silver-Weigher sells it for 40 Hacksilver."
+ ],
+ "elsewhere:hrafnholt_banner_pattern": [
+  "Hrafnholt Banner Pattern",
+  "How to get: Raven-Bearers drop it; the Silver-Weigher sells a copy for 40 Hacksilver."
+ ],
+ "elsewhere:hrafnholt_raven_shield": [
+  "A cosmetic shield-plaque painted with the raven. Sold by the Silver-Weigher.",
+  "Part of the Jarldom of Hrafnholt."
+ ],
+ "elsewhere:hrafnholt_wolfpelt_blanket": [
+  "A wolf-pelt blanket for a Wolf-Rider's horse. Sold by the Silver-Weigher.",
+  "Part of the Jarldom of Hrafnholt."
+ ],
+ "elsewhere:hrafnholt_fur_collar_dye": [
+  "Dyes a collar the grey of a winter wolf. Sold by the Silver-Weigher.",
+  "Part of the Jarldom of Hrafnholt."
+ ],
+ "elsewhere:hrafnholt_seal_jarl": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of High Jarl Halvard Ironbrow.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_hersir": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Hersir Sigrun Askeland.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_hallwarden": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Hallwarden Torvald Eikrem.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_skald": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Weapon-Skald Ulfar Brandsson.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_chief": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Gudrun Ulfhednar.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ],
+ "elsewhere:hrafnholt_seal_huntmaster": [
+  "A Lord Seal of the Jarldom of Hrafnholt: Seal of Huntmaster Eydis Nordvik.",
+  "How to get: dropped by that boss on every kill. Each Lord Seal you carry adds 1 percent to the Iron Crown's Wolf-Rally."
+ ]
+}

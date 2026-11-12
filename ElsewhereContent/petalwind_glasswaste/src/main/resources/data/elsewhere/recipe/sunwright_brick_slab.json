@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB"
+  ],
+  "key": {
+    "B": "elsewhere:sunwright_bricks"
+  },
+  "result": {
+    "id": "elsewhere:sunwright_brick_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:amberstill_upgrade_smithing_template",
+  "base": "minecraft:diamond_boots",
+  "addition": "#elsewhere:gear2/amber_ingot",
+  "result": {
+    "id": "elsewhere:amberstill_boots"
+  }
+}

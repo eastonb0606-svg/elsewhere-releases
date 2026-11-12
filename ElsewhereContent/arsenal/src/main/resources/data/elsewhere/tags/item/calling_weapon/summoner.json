@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:kitestring_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:rootcall_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:sporebloom_staff",
+      "required": false
+    },
+    {
+      "id": "elsewhere:herding_crook",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_ribbon",
+      "required": false
+    },
+    {
+      "id": "elsewhere:brassback_key",
+      "required": false
+    },
+    {
+      "id": "elsewhere:bell_of_the_flock",
+      "required": false
+    }
+  ]
+}

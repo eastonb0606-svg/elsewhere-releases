@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  F",
+    " S ",
+    "S  "
+  ],
+  "key": {
+    "F": "elsewhere:frost_shard",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "elsewhere:frostwake_scepter"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:frost_shard"
+      ]
+    }
+  ]
+}

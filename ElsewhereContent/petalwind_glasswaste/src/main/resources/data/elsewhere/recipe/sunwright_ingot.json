@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "elsewhere:sunstone",
+  "elsewhere:sunstone",
+  "elsewhere:sunstone",
+  "elsewhere:sunstone",
+  "minecraft:gold_ingot",
+  "minecraft:gold_ingot",
+  "minecraft:gold_ingot",
+  "minecraft:gold_ingot"
+ ],
+ "result": {
+  "id": "elsewhere:sunwright_ingot",
+  "count": 1
+ }
+}

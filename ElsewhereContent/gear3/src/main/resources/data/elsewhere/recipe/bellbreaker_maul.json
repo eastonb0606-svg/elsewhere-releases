@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:cantors_bell_shard",
+  "base": "minecraft:diamond_sword",
+  "addition": "elsewhere:resonant_shard",
+  "result": {
+    "id": "elsewhere:bellbreaker_maul"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:cantors_bell_shard",
+        "elsewhere:resonant_shard"
+      ]
+    }
+  ]
+}

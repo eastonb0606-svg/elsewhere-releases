@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.boss_ui.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"BossHealthOverlayMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

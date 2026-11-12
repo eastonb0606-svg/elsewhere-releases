@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:azmar_falconer"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:azmar_falconer"
+      }
+    ]
+  }
+}

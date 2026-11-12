@@ -1,0 +1,205 @@
+{
+ "elsewhere:lore_royal_proclamation": [
+  "A 12-page written book in the voice of King Osric Vael, the Hundredth Crown. It tells of the five Lords, the Seals, the villages and the Survey.",
+  "How to get: a royal patrol's Sergeant (the courier) hands you one if you right-click him while he is not fighting you; it is also in the courier's pouch if he dies, in the Reeve's stall (3 emeralds) and rarely in castle dungeons."
+ ],
+ "elsewhere:lore_survey_fragment": [
+  "A torn corner of the royal surveyors' chart. Three of them craft one folded Royal Survey Map.",
+  "How to get: Captains drop one 25% of the time, patrol couriers 40%, other patrol soldiers 4%. Also found in Aldermark outpost, armory and dungeon chests, and 12% of village cartographer chests."
+ ],
+ "elsewhere:lore_royal_survey_map": [
+  "Craft 3 Survey Map Fragments (shapeless). Use it in the Overworld to unfold it: it turns into an explorer-style map centred on the nearest Castle Aldermark, with a red X.",
+  "If no castle is known within about 4,000 blocks, the map stays folded and tells you so.",
+  "A cartographer in a village you liberated also sells the finished map: 12 emeralds and a compass."
+ ],
+ "elsewhere:aldermark_crown": [
+  "The coin of the Kingdom of Aldermark. Soldiers carry them: about 1 to 3 per rank-and-file soldier, 4 to 8 per officer, 16 to 32 per Lord and a 64-Crown treasury from the King on his first defeat.",
+  "Spend them with the Royal Steward of a liberated town. Prices are deliberately very high, so Crowns are a long-term alternative to a trading hall, not a shortcut."
+ ],
+ "elsewhere:bodkin_bolt": [
+  "An arrow that ignores 25% of the target's armor. Good against late-game armored targets, not a damage boost.",
+  "How to get: Crossbowmen drop 2 to 6 at 15%. The Royal Steward sells 8 for 32 Crowns (Novice)."
+ ],
+ "elsewhere:whetstone": [
+  "Restores 15% durability to a sword, axe or tool in your other hand. A consumable, not a Mending replacement.",
+  "How to get: Men-at-Arms drop it 5% of the time."
+ ],
+ "elsewhere:fletchers_bundle": [
+  "Use it for 8 arrows and 1 spectral arrow.",
+  "How to get: Archers drop it 10% of the time."
+ ],
+ "elsewhere:sergeants_horn": [
+  "Blow it: allies within 12 blocks get Strength I for 8 seconds. 90 second cooldown.",
+  "How to get: Sergeants drop it 20% of the time."
+ ],
+ "elsewhere:oathkeepers_seal": [
+  "A weaker totem. Held, it saves you from death once: you stay at 3 hearts with Resistance II for 2 seconds. Single use, shares the 30 second death-protection lockout with other extra lives.",
+  "How to get: officers drop it 4% of the time; each Lord drops one on your first kill of him; the Royal Steward sells it for 256 Crowns (Expert, once per in-game week)."
+ ],
+ "elsewhere:aldermark_armor_trim_smithing_template": [
+  "Cosmetic armor trim. Duplicate it like any vanilla template.",
+  "How to get: Captains drop it 8% of the time; the Royal Steward sells copies for 24 to 48 Crowns (Novice)."
+ ],
+ "elsewhere:aldermark_banner_pattern": [
+  "A cosmetic banner pattern: the Aldermark Tower.",
+  "How to get: Standard-Bearers always drop one; the Royal Steward sells copies (24 to 48 Crowns, Novice). Quartermasters sell vanilla patterns for Lord Seals."
+ ],
+ "elsewhere:village_royal_coffer": [
+  "The iron-bound job site of the Royal Steward, the kingdom's former tax collector, who surrendered when the village was liberated and stayed on.",
+  "Serfs build it into the tax office of a fortified town. It cannot be crafted and drops nothing when broken, so a Steward exists only in towns you really liberated: at most one per town. A jobless villager can take the job the vanilla way if the Steward dies.",
+  "Royal Steward trades (Crowns): cosmetics 24-48 and Bodkin Bolts x8 for 32 (Novice); Oathkeeper's Seal 256, one per week (Expert); enchanted books Sharpness V, Protection IV, Efficiency V or Unbreaking III, 192 Crowns + 4 emerald blocks each, 2 of the 4 per Steward, restock weekly (Master); Netherite Upgrade Template 320 Crowns + 24 diamonds, one per week (Master). Master needs at least 2 Lords dead."
+ ],
+ "elsewhere:village_royal_purse": [
+  "The seized village treasury, handed back after a liberation."
+ ],
+ "elsewhere:village_ash": [
+  "Ash left where a siege burned a village. The restore command clears it."
+ ],
+ "elsewhere:village_charred_planks": [
+  "Burnt planks from a besieged village. Restoring the village brings the originals back."
+ ],
+ "elsewhere:village_siege_fire": [
+  "A controlled siege fire. It burns only village blocks and goes out on its own."
+ ],
+ "elsewhere:hrafnholt_royal_proclamation": [
+  "A 10-page written book: High Jarl Halvard Ironbrow's blunt Hearth-Oath. Each page is a few lines in the kingdom's own voice, and it mentions Aldermark's tower-flag.",
+  "How to get: the Hird-Sergeant of a Hrafnholt war-band hands you one if you right-click him while he is not fighting you; also in the courier's pouch if he dies."
+ ],
+ "elsewhere:hrafnholt_survey_fragment": [
+  "A torn corner of a Hrafnholt chart. Three of them craft one folded Hrafnholt Survey Map.",
+  "How to get: Hrafnholt couriers drop one 40% of the time, other patrol soldiers 4%."
+ ],
+ "elsewhere:hrafnholt_survey_map": [
+  "Craft 3 Hrafnholt Survey Map Fragments (shapeless). Use it in the Overworld to unfold it: it becomes an explorer-style map centred on Castle Hrafnholt, with a red X.",
+  "A cartographer in a village you liberated from Hrafnholt also sells the finished map: 12 emeralds and a compass.",
+  "Operators can also run /hrafnholt locate."
+ ],
+ "elsewhere:azmar_royal_proclamation": [
+  "A 10-page written book: the Sultana's Well-Ledger. Each page is a few lines in the kingdom's own voice, and it mentions Aldermark's tower-flag.",
+  "How to get: the Caravan-Master of a Azmar caravan hands you one if you right-click him while he is not fighting you; also in the courier's pouch if he dies."
+ ],
+ "elsewhere:azmar_survey_fragment": [
+  "A torn corner of a Azmar chart. Three of them craft one folded Azmar Survey Map.",
+  "How to get: Azmar couriers drop one 40% of the time, other patrol soldiers 4%."
+ ],
+ "elsewhere:azmar_survey_map": [
+  "Craft 3 Azmar Survey Map Fragments (shapeless). Use it in the Overworld to unfold it: it becomes an explorer-style map centred on the Sultan's Citadel, with a red X.",
+  "A cartographer in a village you liberated from Azmar also sells the finished map: 12 emeralds and a compass.",
+  "Operators can also run /azmar locate."
+ ],
+ "elsewhere:mirewick_council_proclamation": [
+  "A 10-page written book: the Lantern Council's Notice. Each page is a few lines in the kingdom's own voice, and it mentions Aldermark's tower-flag.",
+  "How to get: the Reeve of a Mirewick lantern patrol hands you one if you right-click him while he is not fighting you; also in the courier's pouch if he dies."
+ ],
+ "elsewhere:mirewick_survey_fragment": [
+  "A torn corner of a Mirewick chart. Three of them craft one folded Mirewick Survey Map.",
+  "How to get: Mirewick couriers drop one 40% of the time, other patrol soldiers 4%."
+ ],
+ "elsewhere:mirewick_survey_map": [
+  "Craft 3 Mirewick Survey Map Fragments (shapeless). Use it in the Overworld to unfold it: it becomes an explorer-style map centred on the Counting-House, with a red X.",
+  "A cartographer in a village you liberated from Mirewick also sells the finished map: 12 emeralds and a compass.",
+  "Operators can also run /mirewick locate."
+ ],
+ "elsewhere:azmar_well_stone": [
+  "A carved well-marker of the Sultanate. A keepsake and trade good, it does nothing by itself.",
+  "How to get: always in the Azmar caravan-master's pouch."
+ ],
+ "elsewhere:lore_seal_marshal": [
+  "The seal of Marshal Ysolde Varr, pressed in wax and Glimmer. Quartermasters and the Reeve buy any Seal for 12 emeralds, and swap Marshal and Chancellor Seals plus 6 emeralds for banner patterns.",
+  "How to get: dropped by Marshal Ysolde Varr when defeated. Each Seal counts toward the Sovereign's Standard."
+ ],
+ "elsewhere:lore_seal_castellan": [
+  "The seal of Castellan Bertrand Holm, pressed in wax and Glimmer. Quartermasters and the Reeve buy any Seal for 12 emeralds, and swap Marshal and Chancellor Seals plus 6 emeralds for banner patterns.",
+  "How to get: dropped by Castellan Bertrand Holm when defeated. Each Seal counts toward the Sovereign's Standard."
+ ],
+ "elsewhere:lore_seal_master_at_arms": [
+  "The seal of Master-at-Arms Corvin Thale, pressed in wax and Glimmer. Quartermasters and the Reeve buy any Seal for 12 emeralds, and swap Marshal and Chancellor Seals plus 6 emeralds for banner patterns.",
+  "How to get: dropped by Master-at-Arms Corvin Thale when defeated. Each Seal counts toward the Sovereign's Standard."
+ ],
+ "elsewhere:lore_seal_huntsman": [
+  "The seal of Royal Huntsman Lisbet Ashgrove, pressed in wax and Glimmer. Quartermasters and the Reeve buy any Seal for 12 emeralds, and swap Marshal and Chancellor Seals plus 6 emeralds for banner patterns.",
+  "How to get: dropped by Royal Huntsman Lisbet Ashgrove when defeated. Each Seal counts toward the Sovereign's Standard."
+ ],
+ "elsewhere:lore_seal_chancellor": [
+  "The seal of Lord Chancellor Marek Dunmere, pressed in wax and Glimmer. Quartermasters and the Reeve buy any Seal for 12 emeralds, and swap Marshal and Chancellor Seals plus 6 emeralds for banner patterns.",
+  "How to get: dropped by Lord Chancellor Marek Dunmere when defeated. Each Seal counts toward the Sovereign's Standard."
+ ],
+ "elsewhere:court_ashgrove_longbow": [
+  "Part of the Kingdom of Aldermark: Ashgrove Longbow. See the Kingdom of Aldermark wiki page for how to get it."
+ ],
+ "elsewhere:court_castellan_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:court_chancellor_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:court_chancellors_chaperon": [
+  "Part of the Kingdom of Aldermark: Chancellor's Chaperon. See the Kingdom of Aldermark wiki page for how to get it."
+ ],
+ "elsewhere:court_crown_of_aldermark": [
+  "Part of the Kingdom of Aldermark: Crown of Aldermark. See the Kingdom of Aldermark wiki page for how to get it."
+ ],
+ "elsewhere:court_duelists_sabre": [
+  "Part of the Kingdom of Aldermark: Duelist's Sabre. See the Kingdom of Aldermark wiki page for how to get it."
+ ],
+ "elsewhere:court_gatewarden_plate": [
+  "Part of the Kingdom of Aldermark: Gatewarden Plate. See the Kingdom of Aldermark wiki page for how to get it."
+ ],
+ "elsewhere:court_huntsman_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:court_king_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:court_marshal_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:court_master_at_arms_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:court_sovereigns_standard": [
+  "Part of the Kingdom of Aldermark: Sovereign's Standard. See the Kingdom of Aldermark wiki page for how to get it."
+ ],
+ "elsewhere:court_warmarshal_spurs": [
+  "Part of the Kingdom of Aldermark: Warmarshal's Spurs. See the Kingdom of Aldermark wiki page for how to get it."
+ ],
+ "elsewhere:kingdom_archer_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_captain_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_crossbowman_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_herald_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_knight_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_lancer_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_man_at_arms_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_mounted_swordsman_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_pikeman_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_sergeant_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_squire_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_standard_bearer_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ],
+ "elsewhere:kingdom_surgeon_spawn_egg": [
+  "Creative-only spawn egg for the Kingdom of Aldermark. It ignores the army caps, so it is an operator tool."
+ ]
+}

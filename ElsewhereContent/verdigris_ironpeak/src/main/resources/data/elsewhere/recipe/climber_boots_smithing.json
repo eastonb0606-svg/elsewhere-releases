@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:smithing_transform",
+ "category": "equipment",
+ "template": "elsewhere:climber_upgrade_smithing_template",
+ "base": "#elsewhere:endgame_base/boots",
+ "addition": "elsewhere:skyiron_ingot",
+ "result": {
+  "id": "elsewhere:climber_boots",
+  "count": 1
+ }
+}

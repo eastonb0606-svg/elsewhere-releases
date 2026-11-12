@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "elsewhere:skyblossom_log"
+  ],
+  "result": {
+    "id": "elsewhere:skyblossom_planks",
+    "count": 4
+  }
+}

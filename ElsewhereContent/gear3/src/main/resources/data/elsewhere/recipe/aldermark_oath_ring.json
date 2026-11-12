@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "GDG",
+    " G "
+  ],
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "D": "minecraft:diamond"
+  },
+  "result": {
+    "id": "elsewhere:aldermark_oath_ring"
+  }
+}

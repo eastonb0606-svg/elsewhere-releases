@@ -1,0 +1,41 @@
+{
+  "trader": "elsewhere:windwright",
+  "currency": "elsewhere:zephyr_feather",
+  "bounties": [
+    {
+      "type": "deliver",
+      "item": "minecraft:feather",
+      "count": 16,
+      "pay": 3,
+      "xp": 15
+    },
+    {
+      "type": "deliver",
+      "item": "elsewhere:petalscale_koi",
+      "count": 4,
+      "pay": 4,
+      "xp": 25
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:blossom_breeze",
+      "count": 4,
+      "pay": 5,
+      "xp": 40
+    },
+    {
+      "type": "slay",
+      "entity": "elsewhere:gale_kite",
+      "count": 4,
+      "pay": 5,
+      "xp": 40
+    },
+    {
+      "type": "deliver",
+      "item": "minecraft:pink_petals",
+      "count": 24,
+      "pay": 3,
+      "xp": 15
+    }
+  ]
+}

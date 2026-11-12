@@ -1,0 +1,66 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "side": "elsewhere:block/summit_war_drum",
+  "top": "elsewhere:block/summit_war_drum_top",
+  "particle": "elsewhere:block/summit_war_drum"
+ },
+ "elements": [
+  {
+   "from": [
+    1,
+    0,
+    1
+   ],
+   "to": [
+    15,
+    14,
+    15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#side",
+     "uv": [
+      1,
+      2,
+      15,
+      16
+     ]
+    },
+    "south": {
+     "texture": "#side",
+     "uv": [
+      1,
+      2,
+      15,
+      16
+     ]
+    },
+    "east": {
+     "texture": "#side",
+     "uv": [
+      1,
+      2,
+      15,
+      16
+     ]
+    },
+    "west": {
+     "texture": "#side",
+     "uv": [
+      1,
+      2,
+      15,
+      16
+     ]
+    },
+    "up": {
+     "texture": "#top"
+    },
+    "down": {
+     "texture": "#top"
+    }
+   }
+  }
+ ]
+}

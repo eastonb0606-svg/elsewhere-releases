@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "elsewhere:item/kingdom_captain_spawn_egg"
+  }
+}

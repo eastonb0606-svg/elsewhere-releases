@@ -1,0 +1,36 @@
+# Elsewhere gear2 (dev module `elsewhere_gear2`): NOTES
+
+Specs: `Ideas/v2gear.json` (exact `what`/`tradeoff` numbers), picks in `DECISIONS-2.0.md` "New gear: final picks". Every number is in `dev.elsewhere.gear2.Gear2Stats`.
+Self-test: `./gradlew runServer` (port 25697) runs `dev.elsewhere.gear2.dev.SelfTest` with the latest merged jar (`devlibs/elsewhere.jar`, dev runtime only) on the classpath and exits; log `run/selftest-gear2.log`. Last run (iMac `~/mcbuild/lane-gear2/gear2`, 2026-11-11): **86/86 PASS, 0 ERROR lines**.
+
+## Items (all `elsewhere:`)
+| Spec | Ids | Source | Ability | Con |
+|---|---|---|---|---|
+| gear-armor-b Galvanic Coilmail | `galvanic_coilmail_{helmet,chestplate,leggings,boots}`, `galvanic_upgrade_smithing_template` | Galvanox drops the template (50%); smithing template + diamond piece + Storm Coil; template copy 7 Pearlite + copper block | 3/7/5/3, toughness 3 each, KB 0. Set bonus Capacitor: each hit taken stores a charge (max 5, each fades after 8 s, sparks); next melee hit discharges into up to 3 other mobs within 4 blocks, 2 per charge, armor-ignoring `elsewhere:galvanic_discharge` | 2 armor under netherite, no KB res, lightning (incl. Stormcoil Staff spells) +12.5% per piece (+50% full set), slow Mending |
+| gear-weapon1-b Ironclad Flail | `ironclad_flail`, `ironclad_chain` | Thurgrim drops the chain (50%); smithing chain + diamond sword + Skyiron | 7 dmg, 1.2 speed, 1700 dur, Skyiron repair; +10% per hit on the same target within 2 s, max +50% | target switch or a miss (26.3 punch packet) resets; no Sweeping Edge (not `#swords`); -20% speed while moving backward |
+| gear-weapon2-a Gale Rapier | `gale_rapier` | Tempestra (30%); Windwright trade (integrator) | 5 dmg, 2.4 speed, 1100 dur, Zephyrite repair; sprint hit +3 and a dash | -25% standing still; no Sweeping Edge; frail |
+| gear-ranged-a Mirrorbolt Arbalest | `mirrorbolt_arbalest`, `heliodor_mirror_core` | Heliodor drops the core (50%); shaped: 3 Sunglass Shards, 2 diamonds, core, crossbow | 14 dmg bolts (no random crit), pierce 3 built in, takes Multishot + Quick Charge, 700 dur | 2.5 s reload, arrows only (no fireworks), refuses Piercing and Infinity |
+| gear-drill-a Steam Auger | `steam_auger`, `steam_auger_bit` | Thurgrim drops the bit (50%); smithing bit + diamond pickaxe + Skyiron | 22.5 speed (2.5x netherite) on `#elsewhere:steam_auger_fast` (stone, ores, deepslate), diamond tier, 1200 dur, Skyiron repair | reach 2 (attribute -2.5); 1 coal/charcoal per 100 blocks (component `elsewhere:auger_fuel`), cold = bare-hand speed; no Fortune, no Mending |
+| gear-areaminer-b Termite Hive Lantern | `termite_hive_lantern`, `termite_queen` | Mother Creak drops the queen (50%); shaped 4 Amber (`#elsewhere:gear2/amber`) + queen + lantern; Greenhaze trade (integrator) | mine one block: termites eat the 8 blocks of the 3x3x1 face over 2 s (through `gameMode.destroyBlock`, normal drops, protection respected), 3.0 speed on `#elsewhere:termite_edible`, 800 dur | chews builds (planks/logs/stone bricks), useless on ores/ancient debris; stops if you put it away |
+| gear-trinket1-a Seer's Hourglass | `seers_hourglass` | Selenne (35%) | in `#elsewhere:trinket` and `#elsewhere:foresight_gear`; `SeersHourglass.active(p)` / `leadTicks(p)` = 3 (0.15 s); `Gear2ForesightMixin` (@Pseudo, require 0) makes `ForesightGear.sees` true from the hotbar too | takes a trinket place; no stats |
+| gear-trinket2-b Prospector's Pendulum | `prospectors_pendulum` | Thurgrim (20%), `chests/climbers_cairn` + `chests/clan_hold` (12%); Skyiron trade (integrator) | trinket: every 5 s a spark line toward the nearest ore within 24 (only you see it); use: up to 2 ore types + distance | no diamond / ancient debris, 24 blocks, 300 dur, 1 per swing that finds ore (no Unbreaking/Mending) |
+| gear-trinket3-b Void Tether Spool | `void_tether_spool` | Aphelion (35%), Ossyra (10%) | anchor (component `elsewhere:tether_anchor`), snap back within 64 | 3 min cooldown, 4 hunger points (refused under 4), same dimension only |
+| gear-armor-a Amberstill Plate (extra) | `amberstill_{helmet,chestplate,leggings,boots}`, `amberstill_upgrade_smithing_template` | Mother Creak drops the template (50%); smithing template + diamond piece + `#elsewhere:gear2/amber_ingot` (`amber_ingot` or `amber`, both optional); template copy 7 diamonds + Pale Bark | 3/8/6/3, toughness 2 each, KB 0.1 each; Stillness: after 2 s without sprinting or attacking +4 toughness (12) | toughness 8 while sprinting/fighting (a swing at air counts), slow Mending, not fire-proof |
+
+Calling: only caster/summoner Calling exists (`#elsewhere:caster_armor` / `#elsewhere:summoner_armor`, arsenal `Calling`); there is no melee/ranged Calling in arsenal or core. No gear2 item is in either tag, so both armor sets read Calling 0 like netherite (self-test checks it).
+Trinkets: same rule as arsenal (`#elsewhere:trinket`, off hand or hotbar, 2 active) through `dev.elsewhere.stub.gear2.TrinketStub`.
+
+## Merge
+1. Copy `src/main/java/dev/elsewhere/gear2/**`, `src/main/java/dev/elsewhere/stub/gear2/**`, `src/main/resources/{assets,data}/**` and `elsewhere_gear2.mixins.json`. Drop `DevEntry` and the dev `fabric.mod.json`. **Not** `src/devkit/` (a dev-only copy of the bosses' ForesightGear; merge.py never copies it).
+2. `merge.py`: add `"gear2"` **last** in `ALL_MODULES` (its placeholder loot tables `entities/{tempestra,heliodor,aphelion,ossyra}.json` must lose to any real table).
+3. `modules.json`: `"exclude": {"gear2": ["^dev/elsewhere/gear2/DevEntry\\.java$"]}`, `"post_init": {"gear2": ["if (Boolean.getBoolean(\"gear2.selftest\")) dev.elsewhere.gear2.dev.SelfTest.register()"]}`. `Gear2Content.init()` is found automatically.
+4. Stubs: `TrinketStub` -> arsenal `Trinkets` (same rule), `SetBonusStub` -> core SetBonus (tags `#elsewhere:set/galvanic_coilmail/<slot>`, `#elsewhere:set/amberstill_plate/<slot>` shipped), `BossCheck` -> core boss check.
+5. JEI info pages: merge `INTEGRATION/jei_info_gear2.json` into jei_compat's `assets/elsewhere/jei/info.json` (merge.py keeps the first `jei/info.json`, so a module copy would be dropped).
+
+## Open / for other lanes
+- **Amber:** `elsewhere:amber` (or `amber_ingot`) doesn't exist yet. Until it does, the Termite Lantern recipe and the 4 Amberstill smithing recipes load but are ignored ("empty ingredients" WARN, not ERROR) and both repair tags are empty.
+- **Trades (need another module):** Windwright (Petalwind): 16 Zephyr Feathers + 4 Zephyrite -> Gale Rapier. Ironpeak Skyiron trader: 6 Skyiron + 1 compass -> Prospector's Pendulum. Greenhaze trader: 24 Haze Resin + 1 lantern -> Termite Hive Lantern.
+- **Bosses lane:** call `dev.elsewhere.gear2.SeersHourglass.leadTicks(player)` to start a boss warning 3 ticks earlier for that player (the "0.15 s earlier" half of the Hourglass); hints already work through `#elsewhere:foresight_gear` + the hotbar mixin.
+- **Core G3:** slow Mending is only the `#elsewhere:slow_mending` tag (Coilmail, Amberstill); no Java implements G3 yet (AUDIT).
+- Arbalest pull animation uses the vanilla `crossbow/pull` property (1.25 s), so the drawn model is reached halfway through the 2.5 s reload.
+- Placeholder art: tinted vanilla textures from `tools/gen_textures.py`; the art lane's `art2/gear2/` replaces them (ids match, Amberstill equipment asset is `elsewhere:amberstill`).

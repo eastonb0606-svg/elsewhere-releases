@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:choir_vestment"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:choir_vestment"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_gear3",
+	"version": "${version}",
+	"name": "Elsewhere: Gear 3 (dev module)",
+	"description": "Elsewhere 3.0 new items (GEAR.md catalogue): weapons, armor, trinkets, materials, with textures from the shared sprite data. Dev module; merges into the Elsewhere core. Kill switch: exclude gear3 in modules.json.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.gear3.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.gear3.client.DevClientEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"mixins": [
+		"elsewhere_gear3.mixins.json"
+	]
+}

@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "key": {
+  "F": "elsewhere:giant_fern",
+  "Q": "elsewhere:trichome_quartz"
+ },
+ "pattern": [
+  "F F",
+  "FQF",
+  "FFF"
+ ],
+ "result": {
+  "id": "elsewhere:frond_cloak",
+  "count": 1
+ }
+}

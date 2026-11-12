@@ -1,0 +1,54 @@
+{
+ "display": {
+  "icon": {
+   "id": "elsewhere:lore_royal_proclamation"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.root.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.root.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": false,
+  "hidden": true,
+  "background": "minecraft:gui/advancements/backgrounds/stone"
+ },
+ "criteria": {
+  "heard_march": {
+   "trigger": "minecraft:impossible"
+  },
+  "held_fragment": {
+   "trigger": "minecraft:inventory_changed",
+   "conditions": {
+    "items": [
+     {
+      "items": [
+       "elsewhere:lore_survey_fragment"
+      ]
+     }
+    ]
+   }
+  },
+  "held_decree": {
+   "trigger": "minecraft:inventory_changed",
+   "conditions": {
+    "items": [
+     {
+      "items": [
+       "elsewhere:lore_royal_proclamation"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "requirements": [
+  [
+   "heard_march",
+   "held_fragment",
+   "held_decree"
+  ]
+ ]
+}

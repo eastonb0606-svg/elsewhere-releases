@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_jei_compat",
+	"version": "${version}",
+	"name": "Elsewhere JEI compat (dev module)",
+	"description": "Optional Just Enough Items plugin for Elsewhere. At merge only the jei_mod_plugin entrypoint and the files move into Elsewhere.",
+	"environment": "*",
+	"entrypoints": {
+		"jei_mod_plugin": [
+			"dev.elsewhere.compat.jei.ElsewhereJeiPlugin"
+		],
+		"main": [
+			"dev.elsewhere.compat.jei.dev.JeiDevEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"elsewhere": "*"
+	},
+	"suggests": {
+		"jei": "*"
+	}
+}

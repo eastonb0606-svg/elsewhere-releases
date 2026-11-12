@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_boss_ui-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere boss bar client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.boss_ui.gametest.BossBarShots"]
+	},
+	"depends": {
+		"elsewhere_boss_ui": "*"
+	}
+}

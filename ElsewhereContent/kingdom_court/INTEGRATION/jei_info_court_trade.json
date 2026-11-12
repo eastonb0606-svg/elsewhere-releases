@@ -1,0 +1,19 @@
+{
+ "elsewhere:hrafnholt_arm_ring": [
+  "Hrafnholt's ring-money. The Jarl gives one for every 5 deeds: killing an enemy of Hrafnholt near its realm, or winning a duel.",
+  "Top-tier goods (Seals, the Raven Banner, the best cosmetics) cost Arm-Rings only, and carrying a ring takes 10 percent off every price.",
+  "The Smith cuts a ring into 8 Hacksilver. If the Jarl is dead, the senior champion gives the rings."
+ ],
+ "elsewhere:azmar_commission_slip": [
+  "Proof of an order at Azmar's Royal Workshop: pay half, collect the masterwork after 3 in-game days and pay the rest.",
+  "Only the buyer can collect it, and the finished item carries your name in its lore."
+ ],
+ "elsewhere:azmar_letter_of_credit": [
+  "Dinars deposited at any Azmar treasury (the Envoy, the Market Inspector, the Caravan Master) can be drawn at any other.",
+  "The Sultanate keeps the balance, not the paper: you keep it if you die or lose the letter. Use the letter to read your balance."
+ ],
+ "elsewhere:mirewick_loan_note": [
+  "A Counting-House loan: up to 64 Scrip (more at higher Standing) at 25 percent interest, due in 7 in-game days.",
+  "Overdue: Standing -20, and Marrow's debt-collectors hunt you inside Mirewick's realm. If they kill you, your Scrip pays the debt."
+ ]
+}

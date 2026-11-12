@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:hrafnholt_arm_ring",
+  "base": "minecraft:diamond_boots",
+  "addition": "elsewhere:hacksilver",
+  "result": {
+    "id": "elsewhere:hrafnholt_hird_boots"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:hrafnholt_arm_ring",
+        "elsewhere:hacksilver"
+      ]
+    }
+  ]
+}

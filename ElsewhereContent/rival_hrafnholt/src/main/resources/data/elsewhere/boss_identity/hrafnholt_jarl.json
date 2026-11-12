@@ -1,0 +1,31 @@
+{
+  "id": "elsewhere:hrafnholt_jarl",
+  "kingdom": "hrafnholt",
+  "slots": {
+    "weapons": "nine_notch_axe_heater",
+    "movement": "glacier_march",
+    "defence": "splintering_heater",
+    "recovery": "eat_meat",
+    "reach": "slam_leap_4",
+    "last_stand": "hearth_ember_pool"
+  },
+  "generic": [
+    "shield_block",
+    "eat"
+  ],
+  "signature": [
+    "ninth_winter_slam",
+    "oath_cleave",
+    "hearth_horn"
+  ],
+  "telegraph": {
+    "particle": "snowflake",
+    "colour": "#DCE6EE",
+    "sound": {
+      "event": "entity.ravager.roar",
+      "pitch": 0.6
+    }
+  },
+  "last_stand": "hearth_ember_pool",
+  "idle": "Plants the axe, thumps the shield rim three times with a fist, breath steaming."
+}

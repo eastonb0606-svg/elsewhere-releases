@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:brewing",
+  "input": {
+    "item": "minecraft:potion",
+    "potion_contents": {
+      "potions": "elsewhere:clarity_draught"
+    }
+  },
+  "reagent": {
+    "item": "minecraft:redstone"
+  },
+  "output": {
+    "id": "minecraft:potion",
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "elsewhere:long_clarity_draught"
+      }
+    }
+  }
+}

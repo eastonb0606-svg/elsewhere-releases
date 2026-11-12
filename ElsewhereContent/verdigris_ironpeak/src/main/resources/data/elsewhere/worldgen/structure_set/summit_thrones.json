@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 71240,
+  "separation": 8,
+  "spacing": 24
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:summit_throne",
+   "weight": 1
+  }
+ ]
+}

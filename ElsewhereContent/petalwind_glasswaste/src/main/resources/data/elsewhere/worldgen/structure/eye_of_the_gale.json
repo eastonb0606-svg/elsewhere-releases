@@ -1,0 +1,14 @@
+{
+  "type": "elsewhere:pg_boss_site",
+  "biomes": [
+    "elsewhere:blossom_crowns",
+    "elsewhere:hanging_gardens",
+    "elsewhere:cloud_nine",
+    "elsewhere:gale_steppes",
+    "elsewhere:stormrim"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "kind": "eye_of_the_gale"
+}

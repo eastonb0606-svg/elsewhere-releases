@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.gear2.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"Gear2LivingEntityMixin",
+		"Gear2PunchMixin",
+		"Gear2ArrowAccess",
+		"Gear2ForesightMixin",
+		"Gear2EquipmentInvoker"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

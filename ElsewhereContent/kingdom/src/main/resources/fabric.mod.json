@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_kingdom",
+	"version": "${version}",
+	"name": "Elsewhere: Kingdom base (dev module)",
+	"description": "Player-like kingdom soldiers: data-driven unit types, shield/crit/strafe combat AI, squads with formations and morale, performance caps. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.kingdom.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.kingdom.client.KingdomClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"mixins": [{"config": "elsewhere_kingdom_idle.mixins.json", "environment": "client"}]
+}

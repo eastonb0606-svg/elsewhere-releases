@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:cobbled_deepslate",
+    "minecraft:cobbled_deepslate",
+    "minecraft:cobbled_deepslate",
+    "minecraft:cobbled_deepslate",
+    "elsewhere:hush_membrane"
+  ],
+  "result": {
+    "count": 4,
+    "id": "elsewhere:hushstone"
+  }
+}

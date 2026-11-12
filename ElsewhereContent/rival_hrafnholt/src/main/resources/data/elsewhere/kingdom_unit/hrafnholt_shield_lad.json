@@ -1,0 +1,27 @@
+{
+ "role": "melee",
+ "ability": "squire",
+ "skin": "elsewhere:textures/entity/hrafnholt/shield_lad.png",
+ "armor": {
+  "head": "minecraft:leather_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 7031339,
+ "main_hand": "minecraft:iron_axe",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 16,
+  "speed": 0.3
+ },
+ "combat": {
+  "block_chance": 0.3,
+  "crit_chance": 0.04,
+  "crit_cooldown": 200,
+  "retreat_health": 0.3,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.4
+ }
+}

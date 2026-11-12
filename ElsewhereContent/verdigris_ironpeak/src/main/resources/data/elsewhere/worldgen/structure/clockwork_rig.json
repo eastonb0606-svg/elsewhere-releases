@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "#elsewhere:is_verdigris_sea",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "clockwork_rig",
+ "placement": "fixed",
+ "min_height": 96,
+ "max_height": 96,
+ "y_offset": 0
+}

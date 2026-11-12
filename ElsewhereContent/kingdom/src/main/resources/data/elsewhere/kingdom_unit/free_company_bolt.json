@@ -1,0 +1,21 @@
+{
+ "role": "crossbow",
+ "skin": "elsewhere:textures/entity/kingdom/archer.png",
+ "armor": {
+  "head": "minecraft:chainmail_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 6710886,
+ "main_hand": "minecraft:crossbow",
+ "stats": {
+  "health": 20,
+  "speed": 0.27
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "retreat_health": 0.0
+ }
+}

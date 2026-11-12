@@ -1,0 +1,54 @@
+{
+ "faction": "elsewhere:free_company",
+ "banner": "minecraft:gray_banner",
+ "max_companies": 3,
+ "size": [
+  6,
+  8
+ ],
+ "pay_per_day_scrip": 40,
+ "desert_chance_when_broke": 0.5,
+ "outbid": {
+  "factor": 1.25,
+  "minimum": 100,
+  "turn_days": 3
+ },
+ "units": {
+  "melee": "elsewhere:mirewick_fc_sellsword",
+  "ranged": "elsewhere:mirewick_fc_crossbow",
+  "heavy": "elsewhere:mirewick_fc_brute",
+  "captain": "elsewhere:mirewick_fc_captain",
+  "banner": "elsewhere:mirewick_fc_banner"
+ },
+ "makeup": [
+  [
+   "melee",
+   3
+  ],
+  [
+   "ranged",
+   2
+  ],
+  [
+   "heavy",
+   2
+  ],
+  [
+   "banner",
+   1
+  ]
+ ],
+ "captain_names": [
+  "Black Ned Harrow",
+  "Sister Quill",
+  "Old Brisket",
+  "Tam of the Three Knives",
+  "Corporal Mudd"
+ ],
+ "player_contract": {
+  "min_standing": 30,
+  "pay": "scrip",
+  "per_kill": 6,
+  "hold_village_per_day": 40
+ }
+}

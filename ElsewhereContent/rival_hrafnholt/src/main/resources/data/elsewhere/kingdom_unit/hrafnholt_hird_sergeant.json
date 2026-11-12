@@ -1,0 +1,38 @@
+{
+ "role": "melee",
+ "officer": true,
+ "skin": "elsewhere:textures/entity/hrafnholt/sergeant.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:iron_chestplate",
+  "legs": "minecraft:iron_leggings",
+  "feet": "minecraft:chainmail_boots"
+ },
+ "main_hand": "minecraft:iron_axe",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 28,
+  "speed": 0.28,
+  "knockback_resistance": 0.35,
+  "armor": 2.0,
+  "armor_toughness": 2.0
+ },
+ "combat": {
+  "block_chance": 0.7,
+  "crit_chance": 0.12,
+  "crit_cooldown": 150,
+  "retreat_health": 0.0,
+  "sprint_chance": 0.3,
+  "strafe": 0.5,
+  "retreat_chance": 0.0
+ },
+ "aggression": 2,
+ "trim": {
+  "material": "minecraft:copper",
+  "patterns": [
+   "elsewhere:hrafnholt",
+   "minecraft:rib",
+   "minecraft:ward"
+  ]
+ }
+}

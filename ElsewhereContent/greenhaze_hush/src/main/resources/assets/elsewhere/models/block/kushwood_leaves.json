@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "elsewhere:block/kushwood_leaves"
+  }
+}

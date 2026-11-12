@@ -1,0 +1,58 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+// Optional JEI plugin for Elsewhere. Compile-only on the Elsewhere RC jar (libs/) and JEI's API; the dev runs load
+// Elsewhere + JEI so the plugin can be checked in a real client (runClientGameTest).
+base { archivesName = "elsewhere_jei_compat" }
+repositories {
+	exclusiveContent {
+		forRepository { maven { name = "BlameJared"; url = "https://maven.blamejared.com/" } }
+		filter { includeGroup "mezz.jei" }
+	}
+}
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere_jei_compat-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-common-api:${project.jei_version}"
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-fabric-api:${project.jei_version}"
+	compileOnly files("libs/elsewhere-0.3.0-beta.jar")
+	// dev runs only. -PelsewhereRuntime=<jar> runs against another Elsewhere build (the JEI coverage self-test uses the merged
+	// 3.0.0 jar with its own copy of dev/elsewhere/compat/jei removed, so this module's classes are the only ones).
+	runtimeOnly files(project.findProperty("elsewhereRuntime") ?: "libs/elsewhere-0.3.0-beta.jar")
+	runtimeOnly("mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}") { transitive = false }
+}
+loom {
+	runs {
+		server {
+			vmArg "-Xmx2g"
+			if (project.hasProperty("jeiSelftest")) {
+				vmArg "-Djei.selftest=true"
+				vmArg "-Djei.selftest.exit=true"
+			}
+		}
+		client { vmArg "-Xmx2g" }
+	}
+}
+afterEvaluate {
+	loom.runs.matching { it.name == "clientGameTest" }.configureEach { vmArg "-Xmx2g" }
+}
+processResources {
+	def version = project.version
+	inputs.property "version", version
+	filesMatching("fabric.mod.json") { expand "version": version }
+}
+tasks.withType(JavaCompile).configureEach { it.options.release = 25 }
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

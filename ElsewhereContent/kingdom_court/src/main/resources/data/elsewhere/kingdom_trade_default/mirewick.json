@@ -1,0 +1,139 @@
+{
+ "mode": "floating",
+ "lines": [
+  {
+   "item": "elsewhere:mirewick_lantern_shield",
+   "price": 36,
+   "tier": "market",
+   "sell": 14
+  },
+  {
+   "item": "elsewhere:mirewick_oilcloth_dye",
+   "price": 24,
+   "count": 4,
+   "tier": "market",
+   "sell": 8
+  },
+  {
+   "item": "elsewhere:bodkin_bolt",
+   "price": 27,
+   "count": 8,
+   "tier": "market",
+   "sell": 9
+  },
+  {
+   "item": "elsewhere:mirewick_reedcutter_pike",
+   "price": 44,
+   "tier": "market",
+   "sell": 16
+  },
+  {
+   "item": "elsewhere:mirewick_marsh_lantern_standard",
+   "price": 60,
+   "tier": "market",
+   "sell": 20
+  },
+  {
+   "item": "elsewhere:mirewick_armor_trim_smithing_template",
+   "price": 30,
+   "tier": "market",
+   "weekly_limit": 2,
+   "sell": 10
+  },
+  {
+   "item": "elsewhere:mirewick_banner_pattern",
+   "price": 30,
+   "tier": "market",
+   "sell": 10
+  },
+  {
+   "item": "elsewhere:mirewick_survey_map",
+   "price": 28,
+   "tier": "market",
+   "sell": 10
+  },
+  {
+   "item": "minecraft:arrow",
+   "price": 6,
+   "count": 16,
+   "tier": "market",
+   "sell": 2
+  },
+  {
+   "item": "minecraft:lantern",
+   "price": 8,
+   "tier": "market",
+   "sell": 3
+  },
+  {
+   "item": "minecraft:iron_ingot",
+   "price": 5,
+   "tier": "market",
+   "sell": 2
+  },
+  {
+   "item": "minecraft:emerald",
+   "price": 12,
+   "tier": "market",
+   "sell": 5
+  },
+  {
+   "item": "elsewhere:oathkeepers_seal",
+   "price": 220,
+   "tier": "market",
+   "weekly_limit": 2,
+   "sell": 80
+  },
+  {
+   "item": "minecraft:netherite_upgrade_smithing_template",
+   "price": 275,
+   "tier": "market",
+   "weekly_limit": 2,
+   "sell": 100,
+   "extra": [
+    {
+     "item": "minecraft:diamond",
+     "count": 20
+    }
+   ]
+  }
+ ],
+ "auction": [
+  {
+   "item": "elsewhere:oathkeepers_seal",
+   "start": 120,
+   "max": 260
+  },
+  {
+   "item": "elsewhere:mirewick_lantern_coronet",
+   "start": 90,
+   "max": 240
+  },
+  {
+   "item": "elsewhere:mirewick_marsh_lantern_standard",
+   "start": 60,
+   "max": 150
+  },
+  {
+   "item": "elsewhere:mirewick_survey_map",
+   "start": 30,
+   "max": 90
+  },
+  {
+   "item": "elsewhere:mirewick_oilcloth_dye",
+   "count": 16,
+   "start": 50,
+   "max": 130
+  },
+  {
+   "item": "elsewhere:mirewick_armor_trim_smithing_template",
+   "start": 45,
+   "max": 120
+  },
+  {
+   "item": "minecraft:netherite_upgrade_smithing_template",
+   "start": 200,
+   "max": 420
+  }
+ ]
+}

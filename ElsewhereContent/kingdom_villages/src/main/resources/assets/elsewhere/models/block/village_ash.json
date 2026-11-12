@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "elsewhere:block/village_ash",
+    "particle": "elsewhere:block/village_ash"
+  }
+}

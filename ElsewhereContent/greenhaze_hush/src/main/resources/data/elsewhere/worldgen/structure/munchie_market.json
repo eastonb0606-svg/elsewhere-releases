@@ -1,0 +1,13 @@
+{
+  "type": "elsewhere:greenhaze_hush_built",
+  "biomes": [
+    "elsewhere:munchie_groves",
+    "elsewhere:kush_canopy",
+    "elsewhere:sativa_highlands"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "kind": "munchie_market",
+  "anchor": "surface",
+  "y": 64
+}

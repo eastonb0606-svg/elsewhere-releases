@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elsewhere:block/frostgranite_slab"
+    },
+    "type=double": {
+      "model": "elsewhere:block/frostgranite"
+    },
+    "type=top": {
+      "model": "elsewhere:block/frostgranite_slab_top"
+    }
+  }
+}

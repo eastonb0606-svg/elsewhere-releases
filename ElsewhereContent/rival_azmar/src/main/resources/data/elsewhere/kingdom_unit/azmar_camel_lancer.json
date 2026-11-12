@@ -1,0 +1,29 @@
+{
+ "role": "lancer",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/spearguard.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:chainmail_boots"
+ },
+ "main_hand": "elsewhere:azmar_scarab_spear",
+ "mount": "minecraft:camel",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "retreat_health": 0.0
+ },
+ "trim": {
+  "material": "minecraft:copper",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:dune",
+   "minecraft:wayfinder"
+  ]
+ }
+}

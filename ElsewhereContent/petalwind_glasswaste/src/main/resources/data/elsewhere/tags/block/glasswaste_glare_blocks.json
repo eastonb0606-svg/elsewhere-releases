@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:glass",
+    "minecraft:tinted_glass",
+    "minecraft:orange_stained_glass",
+    "minecraft:yellow_stained_glass",
+    "minecraft:white_stained_glass",
+    "elsewhere:sunglass"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "elsewhere:block/sunglass"
+    },
+    "lit=true": {
+      "model": "elsewhere:block/sunglass"
+    }
+  }
+}

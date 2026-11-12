@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:paleweave_leggings",
+      "required": false
+    },
+    "minecraft:leather_leggings"
+  ]
+}

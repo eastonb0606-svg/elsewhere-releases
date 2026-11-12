@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "elsewhere:pale_bark",
+    "E": "minecraft:closed_eyeblossom",
+    "Y": "minecraft:ender_eye"
+  },
+  "pattern": [
+    "BEB",
+    "EYE",
+    "BEB"
+  ],
+  "result": {
+    "id": "elsewhere:moonring_seed"
+  }
+}

@@ -1,0 +1,80 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+// Elsewhere content module: The Greenhaze, The Hush; Percolax, Grumblegut, Auris, Lithara.
+// Dev mod id elsewhere_greenhaze_hush; every registry id and resource uses the `elsewhere` namespace.
+base {
+	archivesName = "elsewhere_greenhaze_hush"
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"elsewhere_greenhaze_hush" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// `./gradlew runServer` starts a dev server (port 25641, see run/server.properties)
+		// that runs the module self-test and exits.
+		server {
+			vmArg "-Xmx1536m"
+			property "greenhaze_hush.selftest", "true"
+			property "greenhaze_hush.selftest.exit", "true"
+		}
+		client {
+			vmArg "-Xmx2g"
+		}
+	}
+}
+
+// `./gradlew runClientGameTest` opens a real client, builds test worlds and saves screenshots to screenshots/.
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere_greenhaze_hush-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+	vmArg "-Xmx2g"
+	property "greenhaze_hush.screenshotDir", file("screenshots").absolutePath
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+// dist/elsewhere_greenhaze_hush-0.1.0.jar
+tasks.register('dist', Copy) {
+	dependsOn jar
+	from jar.archiveFile
+	into file('dist')
+}

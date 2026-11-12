@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61470202,
+    "separation": 16,
+    "spacing": 48
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:choir_geode",
+      "weight": 1
+    }
+  ]
+}

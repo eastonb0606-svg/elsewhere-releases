@@ -1,0 +1,90 @@
+{
+ "elsewhere:azmar_dinar": [
+  "Azmar Dinar: the Sultanate's gold coin. Dropped by Azmar soldiers (1-3), officers (4-8), Lords (16-32) and the Sultana (80-96).",
+  "How to get: Azmar drops; spend it at the Counting-Table in a liberated Azmar village."
+ ],
+ "elsewhere:azmar_copper_khopesh": [
+  "Copper Khopesh: copper-sword stats, a sickle blade that hooks a raised shield down (3 s, once per 6 s).",
+  "How to get: Azmar Spearguards and Sun-Guards drop it rarely (4%); the Counting-Table sells it."
+ ],
+ "elsewhere:azmar_gilded_khopesh": [
+  "Gilded Khopesh: iron-sword stats with the shield hook.",
+  "How to get: dropped by Azmar officers (Jemadar, Qaid)."
+ ],
+ "elsewhere:azmar_twin_khopesh": [
+  "Twinblade Khopesh: the Sand-Dancers' paired blades; iron stats, quick, with the shield hook.",
+  "How to get: Ustad Zayan Sorel drops it 20% of the time; Sand-Dancers 4%."
+ ],
+ "elsewhere:azmar_scarab_spear": [
+  "Scarab-Head Spear: a diamond-spear-class lance with a gilded scarab head.",
+  "How to get: Camel Lancers and Pikemen (4%); the Counting-Table."
+ ],
+ "elsewhere:azmar_composite_bow": [
+  "Composite Bow: a recurved bow, vanilla bow stats.",
+  "How to get: Azmar Bowmen (4%); the Counting-Table."
+ ],
+ "elsewhere:azmar_fire_pot": [
+  "Faience Fire Pot: throw for 6 damage and a 3x3 ground fire for 3 s (2 per second). It never spreads and never burns blocks.",
+  "How to get: Naffatun drop them; the Counting-Table sells 4 for 20 Dinars."
+ ],
+ "elsewhere:azmar_jackal_helm": [
+  "Jackal Helm: chainmail-helmet values, rendered on the head (not painted on the skin).",
+  "How to get: Jackal Guards of the Sultana drop it 2% of the time."
+ ],
+ "elsewhere:azmar_falcon_helm": [
+  "Falcon Helm: leather-cap values.",
+  "How to get: Royal Falconer Leyla Dunmar's guard and the Falconer drop it."
+ ],
+ "elsewhere:azmar_horned_scarab_crown": [
+  "Horned-Scarab War-Crown: iron-helmet values.",
+  "How to get: dropped by Amir Tariq Vashti (50%)."
+ ],
+ "elsewhere:azmar_sunplate_cuirass": [
+  "Sunplate Cuirass: iron-chestplate values in linen and gold.",
+  "How to get: Hajib Rustam Qalat drops it 20% of the time."
+ ],
+ "elsewhere:azmar_nemes_of_the_uraeus": [
+  "Nemes of the Uraeus: helmet 3/2/0.1 with the Uraeus Ward (10% less damage by day in the open, +1% per Lord Seal up to 12%).",
+  "How to get: the Sultana Nahira Zahr-Qadir (DropRule)."
+ ],
+ "elsewhere:azmar_ibis_crest": [
+  "Ibis Crest: a scribe's helmet, +25% experience from villager trades.",
+  "How to get: Grand Wazir Idris Halvane (DropRule)."
+ ],
+ "elsewhere:azmar_falconers_gauntlet": [
+  "Falconer's Gauntlet: right-click to send a falcon at the target in view: Glowing 8 s and 3 damage, 20 s cooldown.",
+  "How to get: Royal Falconer Leyla Dunmar (DropRule)."
+ ],
+ "elsewhere:azmar_sandrunner_sandals": [
+  "Sandrunner Sandals: boots 3/2/0, +10% speed on sand, red sand and terracotta, fall damage -2.",
+  "How to get: Amir Tariq Vashti (DropRule)."
+ ],
+ "elsewhere:azmar_winged_scarab_standard": [
+  "Winged-Scarab Standard: plant it for Absorption I within 16 blocks (refreshed every 10 s).",
+  "How to get: the Sultana drops it half of the time."
+ ],
+ "elsewhere:azmar_armor_trim_smithing_template": [
+  "Armor trim template: applies the Azmar scarab-wing trim to any trimmable armor with a trim material.",
+  "How to get: the Counting-Table; copy it with 7 Diamonds and a Lapis Block (makes 2)."
+ ],
+ "elsewhere:azmar_banner_pattern": [
+  "Banner pattern: the winged scarab holding a sun disc.",
+  "How to get: the Counting-Table."
+ ],
+ "elsewhere:azmar_seal_sultana": [
+  "Lord Seal of Azmar (sultana): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ],
+ "elsewhere:azmar_seal_wazir": [
+  "Lord Seal of Azmar (wazir): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ],
+ "elsewhere:azmar_seal_falconer": [
+  "Lord Seal of Azmar (falconer): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ],
+ "elsewhere:azmar_seal_amir": [
+  "Lord Seal of Azmar (amir): a trophy that boosts the Nemes of the Uraeus and counts for the Counting-Table.",
+  "How to get: dropped by that boss of Azmar."
+ ]
+}

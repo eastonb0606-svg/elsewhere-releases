@@ -1,0 +1,8 @@
+{
+  "type": "elsewhere:sun_chamber",
+  "kind": "sun_chamber",
+  "biomes": "#elsewhere:has_structure/sun_chamber",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

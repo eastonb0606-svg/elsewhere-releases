@@ -1,0 +1,519 @@
+{
+  "arena.seal": {
+    "sounds": [
+      {
+        "name": "minecraft:block.beacon.activate",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.arena.seal"
+  },
+  "boss.gulpmother.croak": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.frog.ambient",
+        "type": "event",
+        "pitch": 0.45,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.gulpmother.croak"
+  },
+  "boss.gulpmother.gape": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.frog.tongue",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.gulpmother.gape"
+  },
+  "boss.gulpmother.tongue": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.frog.tongue",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.gulpmother.tongue"
+  },
+  "boss.gulpmother.gulp": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.frog.eat",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.gulpmother.gulp"
+  },
+  "boss.gulpmother.splat": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.slime.squish",
+        "type": "event",
+        "pitch": 0.4,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.gulpmother.splat"
+  },
+  "boss.strawgrim.caw": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.parrot.imitate.phantom",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.strawgrim.caw"
+  },
+  "boss.strawgrim.creak": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.creaking.ambient",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.strawgrim.creak"
+  },
+  "boss.strawgrim.sweep": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.player.attack.sweep",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.strawgrim.sweep"
+  },
+  "boss.neferkhet.chant": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.prepare_summon",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.neferkhet.chant"
+  },
+  "boss.neferkhet.lance_charge": {
+    "sounds": [
+      {
+        "name": "minecraft:block.beacon.ambient",
+        "type": "event",
+        "pitch": 1.6,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.neferkhet.lance_charge"
+  },
+  "boss.neferkhet.lance_fire": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.guardian.attack",
+        "type": "event",
+        "pitch": 1.4,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.neferkhet.lance_fire"
+  },
+  "boss.rimeback.groan": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ravager.roar",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.rimeback.groan"
+  },
+  "boss.vorlagh.groan": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.elder_guardian.ambient",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.boss.vorlagh.groan"
+  },
+  "music.boss.gulpmother": {
+    "sounds": [
+      {
+        "name": "minecraft:music.overworld.swamp",
+        "type": "event",
+        "pitch": 1.0,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.music.boss.gulpmother"
+  },
+  "music.boss.strawgrim": {
+    "sounds": [
+      {
+        "name": "minecraft:music_disc.mellohi",
+        "type": "event",
+        "pitch": 1.0,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.music.boss.strawgrim"
+  },
+  "music.boss.neferkhet": {
+    "sounds": [
+      {
+        "name": "minecraft:music.overworld.desert",
+        "type": "event",
+        "pitch": 1.0,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.music.boss.neferkhet"
+  },
+  "music.boss.rimeback": {
+    "sounds": [
+      {
+        "name": "minecraft:music.overworld.frozen_peaks",
+        "type": "event",
+        "pitch": 1.0,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.music.boss.rimeback"
+  },
+  "music.boss.vorlagh": {
+    "sounds": [
+      {
+        "name": "minecraft:music_disc.otherside",
+        "type": "event",
+        "pitch": 1.0,
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.elsewhere.music.boss.vorlagh"
+  },
+  "boss.gulpmother.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.frog.ambient",
+        "type": "event",
+        "pitch": 0.35,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.gulpmother.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.slime.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.gulpmother.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.frog.tongue",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.gulpmother.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.slime.attack",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.gulpmother.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.frog.death",
+        "type": "event",
+        "pitch": 0.4,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.gulpmother.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.slime.death",
+        "type": "event",
+        "pitch": 0.4,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.strawgrim.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.phantom.ambient",
+        "type": "event",
+        "pitch": 0.8,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.strawgrim.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.witch.ambient",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.strawgrim.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.phantom.swoop",
+        "type": "event",
+        "pitch": 0.8,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.strawgrim.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.cast_spell",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.strawgrim.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.phantom.death",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.strawgrim.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:block.wood.break",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.neferkhet.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.husk.ambient",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.neferkhet.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.wither_skeleton.ambient",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.neferkhet.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.prepare_attack",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.neferkhet.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.blaze.shoot",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.neferkhet.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.husk.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.neferkhet.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.wither_skeleton.death",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.rimeback.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.polar_bear.warning",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.rimeback.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ravager.roar",
+        "type": "event",
+        "pitch": 0.8,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.rimeback.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.ravager.attack",
+        "type": "event",
+        "pitch": 0.7,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.rimeback.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:block.glass.break",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.rimeback.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.polar_bear.death",
+        "type": "event",
+        "pitch": 0.4,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.rimeback.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.stray.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.vorlagh.roar": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.elder_guardian.ambient",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.vorlagh.roar_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.elder_guardian.curse",
+        "type": "event",
+        "pitch": 0.8,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.vorlagh.big": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.guardian.attack",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.vorlagh.big_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.splash",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.vorlagh.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.elder_guardian.death",
+        "type": "event",
+        "pitch": 0.6,
+        "volume": 1.0
+      }
+    ]
+  },
+  "boss.vorlagh.death_2": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.squid.death",
+        "type": "event",
+        "pitch": 0.5,
+        "volume": 1.0
+      }
+    ]
+  },
+  "sfx3.gulpmother.tele": {"subtitle": "subtitles.elsewhere.sfx3.gulpmother.tele", "sounds": [{"name": "minecraft:entity.frog.ambient", "type": "event", "pitch": 0.4}, {"name": "minecraft:entity.slime.jump", "type": "event", "pitch": 0.5}]},
+  "sfx3.strawgrim.tele": {"subtitle": "subtitles.elsewhere.sfx3.strawgrim.tele", "sounds": [{"name": "minecraft:entity.creaking.activate", "type": "event", "pitch": 0.8}, {"name": "minecraft:entity.phantom.flap", "type": "event", "pitch": 0.6}]},
+  "sfx3.neferkhet.tele": {"subtitle": "subtitles.elsewhere.sfx3.neferkhet.tele", "sounds": [{"name": "minecraft:entity.evoker.prepare_attack", "type": "event", "pitch": 0.6}, {"name": "minecraft:entity.husk.ambient", "type": "event", "pitch": 0.45}]},
+  "sfx3.rimeback.tele": {"subtitle": "subtitles.elsewhere.sfx3.rimeback.tele", "sounds": [{"name": "minecraft:block.glass.break", "type": "event", "pitch": 0.45, "volume": 0.9}, {"name": "minecraft:entity.player.hurt_freeze", "type": "event", "pitch": 0.5}]},
+  "sfx3.rimeback.roar": {"subtitle": "subtitles.elsewhere.sfx3.rimeback.roar", "sounds": [{"name": "minecraft:entity.polar_bear.warning", "type": "event", "pitch": 0.42}, {"name": "minecraft:entity.polar_bear.warning", "type": "event", "pitch": 0.38}]},
+  "sfx3.rimeback.roar_layer": {"subtitle": "subtitles.elsewhere.sfx3.rimeback.roar_layer", "sounds": [{"name": "minecraft:block.powder_snow.break", "type": "event", "pitch": 0.45}, {"name": "minecraft:block.glass.break", "type": "event", "pitch": 0.4, "volume": 0.8}]},
+  "sfx3.rimeback.groan": {"subtitle": "subtitles.elsewhere.sfx3.rimeback.groan", "sounds": [{"name": "minecraft:entity.polar_bear.warning", "type": "event", "pitch": 0.35}]},
+  "sfx3.vorlagh.tele": {"subtitle": "subtitles.elsewhere.sfx3.vorlagh.tele", "sounds": [{"name": "minecraft:entity.guardian.attack", "type": "event", "pitch": 0.5}, {"name": "minecraft:entity.elder_guardian.curse", "type": "event", "pitch": 1.2, "volume": 0.6}]}
+}

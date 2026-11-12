@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_verdigris_ironpeak",
+	"version": "${version}",
+	"name": "Elsewhere: Verdigris Sea & Ironpeak (dev module)",
+	"description": "Content module for Elsewhere: the Verdigris Sea and Ironpeak dimensions, their blocks, items and mobs, and the bosses Verdigrim, Galvanox, Hrolf Grimhorn and Thurgrim Ironjaw.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.verdigris_ironpeak.DevEntry"],
+		"client": ["dev.elsewhere.verdigris_ironpeak.DevClientEntry"]
+	},
+	"mixins": [
+		"elsewhere_verdigris_ironpeak.mixins.json",
+		{"config": "elsewhere_verdigris_ironpeak.client.mixins.json", "environment": "client"},
+		{"config": "elsewhere_verdigris_ironpeak_anim3.mixins.json", "environment": "client"}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"testmeter": "*",
+		"greenleaf": "*"
+	}
+}

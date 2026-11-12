@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "R": "minecraft:resin_clump",
+    "E": "minecraft:open_eyeblossom",
+    "L": "minecraft:pale_oak_log",
+    "W": "elsewhere:wayfinder",
+    "M": "minecraft:pale_moss_block",
+    "B": "minecraft:bone_block"
+  },
+  "pattern": [
+    "RER",
+    "LWL",
+    "MBM"
+  ],
+  "result": {
+    "id": "elsewhere:wayfinder_pale_hollow"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "elsewhere:greenhaze_hush_built",
+  "biomes": [
+    "elsewhere:kush_canopy",
+    "elsewhere:indica_hollows",
+    "elsewhere:sativa_highlands",
+    "elsewhere:munchie_groves"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "kind": "fern_terrace_farms",
+  "anchor": "surface",
+  "y": 64
+}

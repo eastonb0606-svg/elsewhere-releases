@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "exposed=false": {
+      "model": "elsewhere:block/tympanum_membrane"
+    },
+    "exposed=true": {
+      "model": "elsewhere:block/tympanum_membrane_exposed"
+    }
+  }
+}

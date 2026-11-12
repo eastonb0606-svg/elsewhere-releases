@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:smithing_transform",
+ "category": "equipment",
+ "template": "elsewhere:tidebrass_upgrade_smithing_template",
+ "base": "#elsewhere:endgame_base/chestplate",
+ "addition": "elsewhere:tidebrass_ingot",
+ "result": {
+  "id": "elsewhere:diving_suit_chestplate",
+  "count": 1
+ }
+}

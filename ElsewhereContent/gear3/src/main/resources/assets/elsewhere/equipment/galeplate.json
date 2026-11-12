@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:galeplate"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:galeplate"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+ "_comment": "Merge into boss_music.json 'bosses'. Slot ids only: sounds.json entries and OGGs arrive with the music lane (6 tracks: five Magnates plus the realm; the Chair's theme adds a second fiddle line while the First Lantern is lit).",
+ "bosses": {
+  "elsewhere:mirewick_marrow": "elsewhere:mirewick_music.marrow",
+  "elsewhere:mirewick_thwaite": "elsewhere:mirewick_music.thwaite",
+  "elsewhere:mirewick_sorrel": "elsewhere:mirewick_music.sorrel",
+  "elsewhere:mirewick_tolliver": "elsewhere:mirewick_music.tolliver",
+  "elsewhere:mirewick_ames": "elsewhere:mirewick_music.ames"
+ },
+ "realm": "elsewhere:mirewick_music.realm",
+ "chair_layer": "elsewhere:mirewick_music.chair_layer",
+ "moods": {
+  "marrow": "fiddle and a muffled bell, bog-drum walking pace",
+  "thwaite": "bog-drum, low bowed bass, brass fanfare on Long Thrust",
+  "sorrel": "heartbeat bog-drum, tolling bells, organ drone",
+  "tolliver": "thin pipe, duck-call whistle, reed wind",
+  "ames": "plucked line, soft bell, choir hum on Dusk-Rite"
+ }
+}

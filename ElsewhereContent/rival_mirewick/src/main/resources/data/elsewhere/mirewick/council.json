@@ -1,0 +1,130 @@
+{
+ "succession": "inheritance",
+ "seats": [
+  {
+   "slot": "master_at_arms",
+   "key": "marrow",
+   "leaning": "miser",
+   "boss": "elsewhere:mirewick_marrow",
+   "tier": 3,
+   "surname": "Marrow",
+   "heirs": [
+    "Perpetua Marrow",
+    "Hester Marrow"
+   ],
+   "max_holders": 3
+  },
+  {
+   "slot": "marshal",
+   "key": "thwaite",
+   "leaning": "hawk",
+   "boss": "elsewhere:mirewick_thwaite",
+   "tier": 3,
+   "surname": "Thwaite",
+   "heirs": [
+    "Osbert Thwaite",
+    "Maud Thwaite"
+   ],
+   "max_holders": 3
+  },
+  {
+   "slot": "castellan",
+   "key": "sorrel",
+   "leaning": "dove",
+   "boss": "elsewhere:mirewick_sorrel",
+   "tier": 3,
+   "surname": "Sorrel",
+   "heirs": [
+    "Ivo Sorrel",
+    "Agnes Sorrel"
+   ],
+   "max_holders": 3
+  },
+  {
+   "slot": "huntsman",
+   "key": "tolliver",
+   "leaning": "hawk",
+   "boss": "elsewhere:mirewick_tolliver",
+   "tier": 2,
+   "surname": "Tolliver",
+   "heirs": [
+    "Piers Tolliver",
+    "Linnet Tolliver"
+   ],
+   "max_holders": 3
+  },
+  {
+   "slot": "chancellor",
+   "key": "ames",
+   "leaning": "miser",
+   "boss": "elsewhere:mirewick_ames",
+   "tier": 2,
+   "surname": "Ames",
+   "heirs": [
+    "Jory Ames",
+    "Matilda Ames"
+   ],
+   "max_holders": 3
+  }
+ ],
+ "chair": {
+  "vault_base": 100,
+  "per_village": 10,
+  "per_outpost": 5,
+  "weekly_draw": 20,
+  "tie_goes_to": "marrow",
+  "vacancy_days": 1,
+  "bonus_hp_per_other_magnate": 12,
+  "bonus_damage": 0.15,
+  "totem": true,
+  "lantern_ally_damage_reduction": 0.1,
+  "lantern_out_hits": 3,
+  "lantern_out_ticks": 80,
+  "lantern_out_seconds": 20
+ },
+ "votes": {
+  "hawk": "war",
+  "dove": "peace",
+  "miser": "hire",
+  "tie": [
+   "hire",
+   "peace"
+  ],
+  "decision_delay_days": [
+   1,
+   2
+  ],
+  "bribe_scrip": 80,
+  "bribes_per_week": 1
+ },
+ "dark_lanterns": {
+  "window_days": 7,
+  "villages_contested": true,
+  "vault_opens": true,
+  "vault": {
+   "treasury": 64,
+   "extra": [
+    16,
+    32
+   ],
+   "emeralds": [
+    6,
+    12
+   ]
+  },
+  "ends_contracts": true,
+  "permanent": true
+ },
+ "squabble": {
+  "convene_radius": 64,
+  "escort_each": 2,
+  "ally_lantern_avoid": true,
+  "richest_flees_at": 0.4,
+  "flee_ticks": 1200,
+  "return_heal": 0.1,
+  "almoner_heal_pct": 0.12,
+  "almoner_casts": 3,
+  "payment_first_below": 0.7,
+  "payment_step": 0.2
+ }
+}

@@ -1,0 +1,57 @@
+{
+  "noise": {
+    "min_y": -64,
+    "height": 384
+  },
+  "default_block": "minecraft:stone",
+  "default_fluid": "minecraft:water",
+  "sea_level": 63,
+  "disable_mob_generation": false,
+  "legacy_random_source": false,
+  "material_rule": "elsewhere:pale_hollow",
+  "spawn_target": [],
+  "noise_router": {
+    "temperature": {
+      "type": "minecraft:noise",
+      "noise": "minecraft:temperature",
+      "shift_x": "minecraft:shift_x",
+      "shift_z": "minecraft:shift_z",
+      "xz_scale": 2.0,
+      "y_scale": 0.0
+    },
+    "vegetation": {
+      "type": "minecraft:noise",
+      "noise": "minecraft:vegetation",
+      "shift_x": "minecraft:shift_x",
+      "shift_z": "minecraft:shift_z",
+      "xz_scale": 2.0,
+      "y_scale": 0.0
+    },
+    "continents": 0.0,
+    "erosion": 0.0,
+    "depth": 0.0,
+    "ridges": 0.0,
+    "chunk_surface_level": {
+      "type": "minecraft:interpolated",
+      "cell_size_xz": 16,
+      "cell_size_y": 1,
+      "input": {
+        "type": "minecraft:find_top_surface",
+        "cell_height": 8,
+        "lower_bound": -64,
+        "upper_bound": 200.0,
+        "density": "elsewhere:pale_hollow/terrain"
+      }
+    },
+    "final_density": {
+      "type": "minecraft:min",
+      "left": {
+        "type": "minecraft:interpolated",
+        "cell_size_xz": 4,
+        "cell_size_y": 8,
+        "input": "elsewhere:pale_hollow/terrain"
+      },
+      "right": "minecraft:overworld/caves/noodle"
+    }
+  }
+}

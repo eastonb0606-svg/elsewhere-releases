@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "dev.elsewhere.beta.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "StructureStateMixin",
+    "EntityRemovedMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

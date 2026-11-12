@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 71235,
+  "separation": 20,
+  "spacing": 48
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:drowned_cathedral",
+   "weight": 1
+  }
+ ]
+}

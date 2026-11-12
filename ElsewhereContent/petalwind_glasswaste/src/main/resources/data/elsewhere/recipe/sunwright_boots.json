@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:smithing_transform",
+ "category": "equipment",
+ "template": "elsewhere:sunwright_upgrade_smithing_template",
+ "base": "#elsewhere:sunwright_base/boots",
+ "addition": "elsewhere:sunwright_ingot",
+ "result": {
+  "id": "elsewhere:sunwright_boots",
+  "count": 1
+ }
+}

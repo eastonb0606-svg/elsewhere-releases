@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:mirror_block",
+      "required": false
+    }
+  ]
+}

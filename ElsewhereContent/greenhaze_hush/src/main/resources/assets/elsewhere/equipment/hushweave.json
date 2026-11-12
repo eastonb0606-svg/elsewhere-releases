@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:hushweave"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:hushweave"
+      }
+    ]
+  }
+}

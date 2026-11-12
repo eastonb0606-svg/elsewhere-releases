@@ -1,0 +1,16 @@
+{
+ "variants": {
+  "axis=y": {
+   "model": "elsewhere:block/verdigris_pipe"
+  },
+  "axis=x": {
+   "model": "elsewhere:block/verdigris_pipe",
+   "x": 90,
+   "y": 90
+  },
+  "axis=z": {
+   "model": "elsewhere:block/verdigris_pipe",
+   "x": 90
+  }
+ }
+}

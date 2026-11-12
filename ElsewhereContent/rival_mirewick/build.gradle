@@ -1,0 +1,82 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "elsewhere_rival_mirewick"
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"elsewhere_rival_mirewick" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// `./gradlew runServer` starts a dev server (port 25781, see run/server.properties) that runs the Mirewick self-test and exits.
+		server {
+			vmArg "-Xmx1536m"
+			property "mirewick.selftest", "true"
+			property "mirewick.selftest.exit", "true"
+		}
+		client {
+			vmArg "-Xmx2g"
+		}
+	}
+}
+
+// `./gradlew runClientGameTest` opens a real client, builds a test world and saves screenshots to screenshots/.
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "elsewhere_rival_mirewick-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom.runs.matching { it.name == "clientGameTest" }.configureEach {
+	vmArg "-Xmx2g"
+	property "mirewick.screenshotDir", file("screenshots").absolutePath
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// The war lane's kingdom jar (factions, KingdomSoldier, squads): compiled against, and loaded as a mod in dev.
+	implementation files('devlibs/elsewhere_kingdom.jar')
+	// Optional lane jars (court = oligarchy and exchange, duelist = boss kit): present when the provider lane has published them.
+	if (file('devlibs/elsewhere_kingdom_court.jar').exists()) implementation files('devlibs/elsewhere_kingdom_court.jar')
+	if (file('devlibs/elsewhere_duelist.jar').exists()) implementation files('devlibs/elsewhere_duelist.jar')
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+// Copies the remapped dev jar to dist/ (`./gradlew dist`).
+tasks.register('dist', Copy) {
+	dependsOn 'jar'
+	from(tasks.named('jar'))
+	into file('dist')
+}

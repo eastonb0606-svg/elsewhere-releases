@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:hrafnholt_ulfhednar"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:hrafnholt_ulfhednar"
+      }
+    ]
+  }
+}

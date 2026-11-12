@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "elsewhere:verdigris_plate"
+ },
+ "pattern": [
+  "###"
+ ],
+ "result": {
+  "id": "elsewhere:verdigris_plate_slab",
+  "count": 6
+ }
+}

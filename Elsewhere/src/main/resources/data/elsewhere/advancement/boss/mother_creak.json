@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:boss_trophy"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.boss.mother_creak.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.boss.mother_creak.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elsewhere:root",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "granted"
+    ]
+  ]
+}

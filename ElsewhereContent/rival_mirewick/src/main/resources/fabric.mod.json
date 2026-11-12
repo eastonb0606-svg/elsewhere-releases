@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_rival_mirewick",
+	"version": "${version}",
+	"name": "Elsewhere: Rival kingdom Mirewick (dev module)",
+	"description": "The Lantern Republic of Mirewick: a passive money oligarchy that hires sellswords. Faction data, units, items, the five Magnates. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.rivals.mirewick.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.rivals.mirewick.MirewickClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"elsewhere_kingdom": "*",
+		"elsewhere_kingdom_court": "*",
+		"elsewhere_duelist": "*"
+	},
+	"mixins": [
+		"elsewhere_rival_mirewick.mixins.json"
+	]
+}

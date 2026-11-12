@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:smithing_transform",
+ "category": "equipment",
+ "template": "elsewhere:sunwright_upgrade_smithing_template",
+ "base": "#elsewhere:sunstone_base/hoe",
+ "addition": "elsewhere:sunwright_ingot",
+ "result": {
+  "id": "elsewhere:sunstone_hoe",
+  "count": 1
+ }
+}

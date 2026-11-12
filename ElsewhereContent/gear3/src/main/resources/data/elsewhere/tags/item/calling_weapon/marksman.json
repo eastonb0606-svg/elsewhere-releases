@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:aphelion_starpiercer",
+      "required": false
+    },
+    {
+      "id": "elsewhere:hrafnholt_hurlbat",
+      "required": false
+    },
+    {
+      "id": "elsewhere:gale_sling",
+      "required": false
+    },
+    {
+      "id": "elsewhere:prism_bow",
+      "required": false
+    }
+  ]
+}

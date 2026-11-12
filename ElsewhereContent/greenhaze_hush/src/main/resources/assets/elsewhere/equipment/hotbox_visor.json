@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:hotbox_visor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:hotbox_visor"
+      }
+    ]
+  }
+}

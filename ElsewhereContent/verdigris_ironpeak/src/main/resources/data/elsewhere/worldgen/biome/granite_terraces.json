@@ -1,0 +1,91 @@
+{
+  "attributes": {
+    "minecraft:visual/sky_color": "#6e9bea",
+    "minecraft:visual/fog_color": "#b8ccf0",
+    "minecraft:visual/water_fog_color": "#050533",
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 6000,
+        "sound": "minecraft:music.overworld.stony_peaks"
+      },
+      "underwater": {
+        "max_delay": 24000,
+        "min_delay": 6000,
+        "sound": "minecraft:music.under_water"
+      }
+    },
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "creature": [
+            {
+              "type": "elsewhere:highland_yak",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 8
+              },
+              "weight": 4
+            }
+          ],
+          "monster": [
+            {
+              "type": "elsewhere:ironclan_raider",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 6
+              },
+              "weight": 18
+            },
+            {
+              "type": "elsewhere:crag_roc",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "weight": 7
+            },
+            {
+              "type": "elsewhere:rimeguard",
+              "count": 1,
+              "weight": 4
+            }
+          ]
+        }
+      },
+      "modifier": "overlay"
+    }
+  },
+  "carvers": [],
+  "downfall": 0.8,
+  "effects": {
+    "water_color": "#3d6fd0"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "elsewhere:big_iron_cliffs",
+      "minecraft:ore_emerald",
+      "elsewhere:frostgranite_ore"
+    ],
+    [],
+    [],
+    [
+      "minecraft:spruce_on_snow"
+    ],
+    []
+  ],
+  "has_precipitation": true,
+  "temperature": 0.2
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "slime=0": {
+      "model": "elsewhere:block/gulpmother_shrine_cauldron"
+    },
+    "slime=1": {
+      "model": "elsewhere:block/gulpmother_shrine_cauldron"
+    },
+    "slime=2": {
+      "model": "elsewhere:block/gulpmother_shrine_cauldron"
+    },
+    "slime=3": {
+      "model": "elsewhere:block/gulpmother_shrine_cauldron"
+    }
+  }
+}

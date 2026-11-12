@@ -1,0 +1,106 @@
+{
+  "attributes": {
+    "minecraft:visual/sky_color": "#BFD8F2",
+    "minecraft:visual/fog_color": "#E4F0FA",
+    "minecraft:visual/water_fog_color": "#6FC0E0",
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music_disc.creator_music_box"
+      }
+    },
+    "minecraft:visual/ambient_particles": [
+      {
+        "particle": {
+          "type": "minecraft:spore_blossom_air"
+        },
+        "probability": 0.008
+      }
+    ],
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "monster": [
+            {
+              "type": "elsewhere:gale_kite",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 8
+              },
+              "weight": 10
+            },
+            {
+              "type": "elsewhere:blossom_breeze",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 1
+              },
+              "weight": 20
+            }
+          ],
+          "creature": [
+            {
+              "type": "elsewhere:cumulus",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 5
+              },
+              "weight": 10
+            },
+            {
+              "type": "elsewhere:skywhale",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 1
+              },
+              "weight": 4
+            },
+            {
+              "type": "elsewhere:windwright",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 1
+              },
+              "weight": 1
+            }
+          ]
+        }
+      },
+      "modifier": "overlay"
+    }
+  },
+  "effects": {
+    "water_color": "#6FC0E0",
+    "foliage_color": "#6FAF5A",
+    "grass_color": "#6FAF5A"
+  },
+  "carvers": [],
+  "downfall": 0.4,
+  "has_precipitation": true,
+  "temperature": 0.7,
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "elsewhere:ore_zephyrite"
+    ],
+    [],
+    [],
+    [
+      "elsewhere:skyblossom_trees",
+      "minecraft:patch_grass_plain"
+    ],
+    []
+  ]
+}

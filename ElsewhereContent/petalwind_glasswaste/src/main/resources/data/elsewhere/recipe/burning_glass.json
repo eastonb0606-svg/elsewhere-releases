@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    " G ",
+    "   "
+  ],
+  "key": {
+    "S": "elsewhere:sunglass_shard",
+    "G": "minecraft:spyglass"
+  },
+  "result": {
+    "id": "elsewhere:burning_glass",
+    "count": 1
+  }
+}

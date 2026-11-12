@@ -1,0 +1,119 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 3,
+    "max": 6
+   },
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:iron_ingot",
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 6
+       }
+      }
+     ],
+     "weight": 10
+    },
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:cooked_yak_meat",
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 4
+       }
+      }
+     ],
+     "weight": 8
+    },
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:skyiron",
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:iron_bars",
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 4,
+        "max": 12
+       }
+      }
+     ],
+     "weight": 6
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:emerald",
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+       }
+      }
+     ],
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.5
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:climber_upgrade_smithing_template"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.3
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:summit_armor_trim_smithing_template"
+    }
+   ]
+  }
+ ]
+}

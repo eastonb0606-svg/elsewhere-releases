@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:glasswaste_starsight"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:glasswaste_starsight"
+      }
+    ]
+  }
+}

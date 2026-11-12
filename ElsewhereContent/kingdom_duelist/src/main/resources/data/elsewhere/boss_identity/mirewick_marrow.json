@@ -1,0 +1,30 @@
+{
+  "id": "elsewhere:mirewick_marrow",
+  "kingdom": "mirewick",
+  "slots": {
+    "weapons": "chain_hook_cutlass",
+    "movement": "prowl_chain_range",
+    "defence": "oilcloth_coat",
+    "recovery": "interest_leech",
+    "reach": "chain_hook_pull",
+    "last_stand": "double_debt"
+  },
+  "generic": [
+    "circle_strafe"
+  ],
+  "signature": [
+    "call_the_debt",
+    "garnish"
+  ],
+  "telegraph": {
+    "particle": "wax_on",
+    "colour": "#E8C547",
+    "sound": {
+      "event": "block.chain.hit",
+      "pitch": 0.8
+    }
+  },
+  "last_stand": "double_debt",
+  "idle": "Counts coins into a ledger, licks a thumb and flips the page while the chain swings.",
+  "chair_last_stand": "lantern_rally"
+}

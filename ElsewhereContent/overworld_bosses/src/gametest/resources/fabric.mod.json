@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_overworld_bosses-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere overworld bosses client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.overworld_bosses.gametest.OverworldBossesScreenshots"]
+	},
+	"depends": {
+		"elsewhere_overworld_bosses": "*"
+	}
+}

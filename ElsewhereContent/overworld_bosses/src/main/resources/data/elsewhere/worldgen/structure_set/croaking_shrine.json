@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "elsewhere:croaking_shrine",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 61238811,
+    "separation": 10,
+    "spacing": 28
+  }
+}

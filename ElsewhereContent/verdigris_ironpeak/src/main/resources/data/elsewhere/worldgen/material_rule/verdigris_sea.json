@@ -1,0 +1,403 @@
+{
+ "type": "minecraft:sequence",
+ "sequence": [
+  "minecraft:bedrock_floor",
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:biome",
+    "biome_is": [
+     "elsewhere:storm_pylons"
+    ]
+   },
+   "then_run": {
+    "type": "minecraft:condition",
+    "if_true": {
+     "type": "minecraft:y_above",
+     "add_stone_depth": false,
+     "anchor": {
+      "absolute": 56
+     },
+     "surface_depth_multiplier": 0
+    },
+    "then_run": {
+     "type": "minecraft:sequence",
+     "sequence": [
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 150
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 144
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 138
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 132
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 126
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 120
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 114
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 108
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 102
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 96
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 90
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 84
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 78
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 72
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 66
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:oxidized_copper"
+       }
+      },
+      {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 60
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:dark_prismarine"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:stone_depth",
+    "add_surface_depth": false,
+    "offset": 0,
+    "secondary_depth_range": 0,
+    "surface_type": "floor"
+   },
+   "then_run": {
+    "type": "minecraft:sequence",
+    "sequence": [
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:biome",
+       "biome_is": [
+        "elsewhere:barnacle_atolls"
+       ]
+      },
+      "then_run": {
+       "type": "minecraft:condition",
+       "if_true": {
+        "type": "minecraft:y_above",
+        "add_stone_depth": false,
+        "anchor": {
+         "absolute": 92
+        },
+        "surface_depth_multiplier": 0
+       },
+       "then_run": {
+        "type": "minecraft:block",
+        "result_state": "minecraft:calcite"
+       }
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:biome",
+       "biome_is": [
+        "elsewhere:barnacle_atolls"
+       ]
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:biome",
+       "biome_is": [
+        "elsewhere:foundry_trench"
+       ]
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:gravel"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:biome",
+       "biome_is": [
+        "elsewhere:kelpwood_reaches"
+       ]
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:mud"
+      }
+     },
+     {
+      "type": "minecraft:block",
+      "result_state": "minecraft:sand"
+     }
+    ]
+   }
+  },
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:stone_depth",
+    "add_surface_depth": false,
+    "offset": 3,
+    "secondary_depth_range": 0,
+    "surface_type": "floor"
+   },
+   "then_run": {
+    "type": "minecraft:sequence",
+    "sequence": [
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:biome",
+       "biome_is": [
+        "elsewhere:foundry_trench"
+       ]
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:block",
+      "result_state": "minecraft:sandstone"
+     }
+    ]
+   }
+  },
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:not",
+    "invert": {
+     "type": "minecraft:y_above",
+     "add_stone_depth": false,
+     "anchor": {
+      "absolute": 0
+     },
+     "surface_depth_multiplier": 0
+    }
+   },
+   "then_run": {
+    "type": "minecraft:block",
+    "result_state": "minecraft:deepslate"
+   }
+  }
+ ]
+}

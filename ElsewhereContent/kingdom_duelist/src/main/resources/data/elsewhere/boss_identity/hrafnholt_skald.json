@@ -1,0 +1,35 @@
+{
+  "id": "elsewhere:hrafnholt_skald",
+  "kingdom": "hrafnholt",
+  "slots": {
+    "weapons": "rune_axe_throwers",
+    "movement": "verse_skip",
+    "defence": "none",
+    "recovery": "eat_meat",
+    "reach": "thrown_runes_14",
+    "last_stand": "death_verse"
+  },
+  "generic": [
+    "sprint_jump_crit",
+    "eat"
+  ],
+  "signature": [
+    "rune_throw",
+    "three_beat_verse",
+    "verse_of_winter"
+  ],
+  "telegraph": {
+    "particle": "enchant",
+    "colour": "#8FD0FF",
+    "sound": {
+      "event": "block.amethyst_block.chime",
+      "pitch": 1.6
+    }
+  },
+  "last_stand": "death_verse",
+  "idle": "Taps the haft against his palm in a drum rhythm and hums, a rune glowing.",
+  "risen_keeps": [
+    "rune_throw",
+    "three_beat_verse"
+  ]
+}

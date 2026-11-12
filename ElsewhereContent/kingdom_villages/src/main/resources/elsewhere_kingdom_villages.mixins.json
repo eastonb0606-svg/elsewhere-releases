@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.kingdom_villages.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"VillageAbstractVillagerMixin",
+		"VillageVillagerMixin",
+		"VillageBlockItemMixin",
+		"VillageFarmlandMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

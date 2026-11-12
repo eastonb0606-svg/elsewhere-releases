@@ -1,0 +1,23 @@
+{
+  "_comment": "Aldermark, the bell kingdom (ARMIES.md 2.4): peasants in the strips, craftsmen in the workshops, everyone at the market and vespers. Townsfolk lane data (s-townsfolk); residents come from army.scale.residents.",
+  "live": {"capital": 40, "town": 18},
+  "roles": [
+    {"id": "peasant", "weight": 0.65, "held": "minecraft:wooden_hoe", "day": [
+      {"from": 5, "to": 6, "activity": "temple", "where": "chapel", "pose": "PRAY"},
+      {"from": 6, "to": 9, "activity": "work", "where": "fields", "pose": "WORK"},
+      {"from": 9, "to": 12, "activity": "market", "where": "square", "pose": "NONE"},
+      {"from": 12, "to": 13, "activity": "court", "where": "square", "pose": "NONE"},
+      {"from": 13, "to": 17, "activity": "work", "where": "fields", "pose": "WORK"},
+      {"from": 17, "to": 18, "activity": "temple", "where": "chapel", "pose": "PRAY"},
+      {"from": 18, "to": 21, "activity": "feast", "where": "tavern", "pose": "DRINK"}
+    ]},
+    {"id": "craftsman", "weight": 0.35, "held": "minecraft:stone_axe", "day": [
+      {"from": 6, "to": 9, "activity": "work", "where": "workshops", "pose": "WORK"},
+      {"from": 9, "to": 12, "activity": "market", "where": "square", "pose": "CARRY"},
+      {"from": 12, "to": 13, "activity": "court", "where": "square", "pose": "NONE"},
+      {"from": 13, "to": 17, "activity": "work", "where": "workshops", "pose": "WORK"},
+      {"from": 17, "to": 18, "activity": "temple", "where": "chapel", "pose": "PRAY"},
+      {"from": 18, "to": 22, "activity": "feast", "where": "tavern", "pose": "DRINK"}
+    ]}
+  ]
+}

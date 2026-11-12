@@ -1,0 +1,10 @@
+{
+ "bosses": {
+  "elsewhere:azmar_sultana": "elsewhere:boss_music.theme.azmar_sultana",
+  "elsewhere:azmar_wazir": "elsewhere:boss_music.theme.azmar_wazir",
+  "elsewhere:azmar_falconer": "elsewhere:boss_music.theme.azmar_falconer",
+  "elsewhere:azmar_amir": "elsewhere:boss_music.theme.azmar_amir"
+ },
+ "realm": "elsewhere:boss_music.theme.azmar_realm",
+ "_note": "slot ids only; tracks come later (music lane). Azmar: oud, ney, darbuka."
+}

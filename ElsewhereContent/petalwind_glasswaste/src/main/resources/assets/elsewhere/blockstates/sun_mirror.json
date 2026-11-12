@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "aim=0": {
+      "model": "elsewhere:block/sun_mirror",
+      "y": 0
+    },
+    "aim=1": {
+      "model": "elsewhere:block/sun_mirror_diagonal",
+      "y": 0
+    },
+    "aim=2": {
+      "model": "elsewhere:block/sun_mirror",
+      "y": 90
+    },
+    "aim=3": {
+      "model": "elsewhere:block/sun_mirror_diagonal",
+      "y": 90
+    },
+    "aim=4": {
+      "model": "elsewhere:block/sun_mirror",
+      "y": 180
+    },
+    "aim=5": {
+      "model": "elsewhere:block/sun_mirror_diagonal",
+      "y": 180
+    },
+    "aim=6": {
+      "model": "elsewhere:block/sun_mirror",
+      "y": 270
+    },
+    "aim=7": {
+      "model": "elsewhere:block/sun_mirror_diagonal",
+      "y": 270
+    }
+  }
+}

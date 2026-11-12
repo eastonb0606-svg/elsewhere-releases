@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:add",
+  "left": {
+    "type": "minecraft:gradient",
+    "axis": "y",
+    "from_coordinate": -64,
+    "to_coordinate": 320,
+    "from_value": 10.75,
+    "to_value": -21.25
+  },
+  "right": {
+    "type": "minecraft:add",
+    "left": "elsewhere:pale_hollow/surface_offset",
+    "right": {
+      "type": "minecraft:mul",
+      "left": {
+        "type": "minecraft:noise",
+        "noise": "minecraft:gravel",
+        "xz_scale": 2.0,
+        "y_scale": 2.0
+      },
+      "right": 0.06
+    }
+  }
+}

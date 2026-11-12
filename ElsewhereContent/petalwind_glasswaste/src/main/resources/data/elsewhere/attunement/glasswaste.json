@@ -1,0 +1,12 @@
+{
+  "dimension": "elsewhere:glasswaste",
+  "ingredients": [
+    "minecraft:gold_ingot",
+    "minecraft:chiseled_sandstone",
+    "minecraft:tinted_glass",
+    "minecraft:cactus",
+    "minecraft:blaze_powder"
+  ],
+  "requires": "none",
+  "notes": "G S G / T W T / X Z X around a base Wayfinder (DIMENSIONS.md section 8)."
+}

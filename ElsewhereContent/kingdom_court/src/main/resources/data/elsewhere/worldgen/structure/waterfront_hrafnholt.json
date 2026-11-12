@@ -1,0 +1,9 @@
+{
+  "type": "elsewhere:castle_aldermark",
+  "faction": "elsewhere:hrafnholt",
+  "waterfront": true,
+  "biomes": "#minecraft:is_overworld",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

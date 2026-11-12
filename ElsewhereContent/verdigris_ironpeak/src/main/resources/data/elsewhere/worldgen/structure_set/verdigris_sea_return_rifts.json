@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 71231,
+  "separation": 18,
+  "spacing": 37
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:verdigris_sea_return_rift",
+   "weight": 1
+  }
+ ]
+}

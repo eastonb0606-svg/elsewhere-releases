@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "elsewhere:block/frostgranite_bricks",
+    "side": "elsewhere:block/frostgranite_bricks",
+    "top": "elsewhere:block/frostgranite_bricks"
+  }
+}

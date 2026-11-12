@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 7821,
+    "separation": 9,
+    "spacing": 22
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:grunthar_treasure_hall",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_kingdom_court",
+	"version": "${version}",
+	"name": "Elsewhere: Kingdom court (dev module)",
+	"description": "Kingdom of Aldermark court: the realm (castle, keep, towns), daily life, the five Lords and King Osric, succession, the kingdom's fall, Lord drops and kingdom music. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.kingdom_court.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.kingdom_court.client.CourtClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"elsewhere_kingdom": "*"
+	},
+	"mixins": [
+		"elsewhere_kingdom_court.mixins.json"
+	]
+}

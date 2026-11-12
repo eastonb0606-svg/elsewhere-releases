@@ -1,0 +1,30 @@
+{
+ "role": "melee",
+ "officer": true,
+ "skin": "elsewhere:textures/entity/kingdom/officer.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:iron_leggings",
+  "feet": "minecraft:iron_boots"
+ },
+ "main_hand": "minecraft:iron_sword",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 30,
+  "speed": 0.28,
+  "armor": 4.0,
+  "armor_toughness": 3.0,
+  "knockback_resistance": 0.3,
+  "attack_damage": 2.0
+ },
+ "combat": {
+  "crit_cooldown": 120,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.1,
+  "block_chance": 0.6,
+  "crit_chance": 0.12,
+  "retreat_health": 0.0
+ }
+}

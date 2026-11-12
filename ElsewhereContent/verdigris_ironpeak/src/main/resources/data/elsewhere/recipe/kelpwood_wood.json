@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "group": "bark",
+ "key": {
+  "#": "elsewhere:kelpwood_log"
+ },
+ "pattern": [
+  "##",
+  "##"
+ ],
+ "result": {
+  "id": "elsewhere:kelpwood_wood",
+  "count": 3
+ }
+}

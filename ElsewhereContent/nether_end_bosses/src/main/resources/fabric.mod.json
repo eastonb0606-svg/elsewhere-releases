@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_nether_end_bosses",
+	"version": "${version}",
+	"name": "Elsewhere: Nether & End bosses (dev module)",
+	"description": "Dev build of the Elsewhere Nether and post-dragon End bosses: Grunthar & Ashtusk, Solaxis, Mournmaw, Ossyra and Aphelion. At merge the core's entrypoints call NetherEndBossesContent.init() / NetherEndBossesClient.initClient().",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.stub.nether_end_bosses.DevMain"],
+		"client": ["dev.elsewhere.stub.nether_end_bosses.DevClient"]
+	},
+	"mixins": [
+		"elsewhere_nether_end_bosses.mixins.json",
+		{"config": "elsewhere_nether_end_bosses.client.mixins.json", "environment": "client"}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

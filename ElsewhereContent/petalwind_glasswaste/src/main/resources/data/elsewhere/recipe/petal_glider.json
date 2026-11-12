@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "F F",
+    "PSP",
+    "F F"
+  ],
+  "key": {
+    "F": "minecraft:feather",
+    "P": "minecraft:phantom_membrane",
+    "S": "minecraft:string"
+  },
+  "result": {
+    "id": "elsewhere:petal_glider",
+    "count": 1
+  }
+}

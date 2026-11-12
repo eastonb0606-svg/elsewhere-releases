@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:galvanic_coilmail"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:galvanic_coilmail"
+      }
+    ]
+  }
+}

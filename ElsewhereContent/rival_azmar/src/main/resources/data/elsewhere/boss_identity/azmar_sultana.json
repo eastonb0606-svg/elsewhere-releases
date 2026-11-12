@@ -1,0 +1,30 @@
+{
+  "id": "elsewhere:azmar_sultana",
+  "kingdom": "azmar",
+  "slots": {
+    "weapons": "twin_khopeshes_hook",
+    "movement": "arc_dance",
+    "defence": "mirage_step",
+    "recovery": "sun_elixir",
+    "reach": "jackal_screen",
+    "last_stand": "scarab_shell"
+  },
+  "generic": [
+    "drink"
+  ],
+  "signature": [
+    "screen_and_step",
+    "counter_riposte",
+    "halo_flare"
+  ],
+  "telegraph": {
+    "particle": "dust_color_transition",
+    "colour": "#D4A537",
+    "sound": {
+      "event": "block.beacon.activate",
+      "pitch": 1.4
+    }
+  },
+  "last_stand": "scarab_shell",
+  "idle": "Raises both khopeshes in a crossed salute while a scarab walks up the blade."
+}

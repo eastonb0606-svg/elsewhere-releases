@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:galvanic_upgrade_smithing_template",
+  "base": "minecraft:diamond_boots",
+  "addition": "elsewhere:storm_coil",
+  "result": {
+    "id": "elsewhere:galvanic_coilmail_boots"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "elsewhere:heartwood_shard",
+    "elsewhere:heartwood_shard",
+    "elsewhere:heartwood_shard",
+    "elsewhere:heartwood_shard",
+    "elsewhere:heartwood_shard",
+    "elsewhere:heartwood_shard",
+    "minecraft:ender_eye"
+  ],
+  "result": {
+    "id": "elsewhere:unblinking_eye"
+  }
+}

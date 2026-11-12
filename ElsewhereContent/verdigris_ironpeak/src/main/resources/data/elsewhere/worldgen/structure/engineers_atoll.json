@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:vi_procedural",
+ "biomes": "elsewhere:barnacle_atolls",
+ "spawn_overrides": {},
+ "step": "surface_structures",
+ "blueprint": "engineers_atoll",
+ "placement": "surface",
+ "min_height": 94,
+ "max_height": 140,
+ "y_offset": 1
+}

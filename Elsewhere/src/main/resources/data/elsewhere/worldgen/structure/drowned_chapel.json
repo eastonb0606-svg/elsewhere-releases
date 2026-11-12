@@ -1,0 +1,11 @@
+{
+ "type": "elsewhere:ph_site",
+ "kind": "chapel",
+ "biomes": [
+  "elsewhere:resin_bog",
+  "elsewhere:weeping_deeps"
+ ],
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "none"
+}

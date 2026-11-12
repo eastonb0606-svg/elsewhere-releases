@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "P": "minecraft:ender_pearl",
+    "C": "minecraft:compass"
+  },
+  "pattern": [
+    "APA",
+    "ACA",
+    " P "
+  ],
+  "result": {
+    "id": "elsewhere:wayfinder"
+  }
+}

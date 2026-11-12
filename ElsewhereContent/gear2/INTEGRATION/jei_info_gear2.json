@@ -1,0 +1,39 @@
+{
+ "elsewhere:galvanic_upgrade_smithing_template": [
+  "How to get: Galvanox drops it (50%). Copy it with 7 Pearlite and a copper block."
+ ],
+ "elsewhere:ironclad_chain": [
+  "How to get: Thurgrim drops it (50%). Smith it onto a diamond sword with Skyiron: Ironclad Flail."
+ ],
+ "elsewhere:steam_auger_bit": [
+  "How to get: Thurgrim drops it (50%). Smith it onto a diamond pickaxe with Skyiron: Steam Auger."
+ ],
+ "elsewhere:heliodor_mirror_core": [
+  "How to get: Heliodor drops it (50%). Crafts the Mirrorbolt Arbalest."
+ ],
+ "elsewhere:termite_queen": [
+  "How to get: Mother Creak drops it (50%). Crafts the Termite Hive Lantern with Amber and a lantern."
+ ],
+ "elsewhere:amberstill_upgrade_smithing_template": [
+  "How to get: Mother Creak drops it (50%). Copy it with 7 diamonds and Pale Bark."
+ ],
+ "elsewhere:gale_rapier": [
+  "How to get: Tempestra drops it (30%), or trade with the Windwright (Zephyr Feathers and Zephyrite)."
+ ],
+ "elsewhere:seers_hourglass": [
+  "Trinket: works from your off hand or hotbar (2 trinkets active at most). Boss attack hints appear for you and boss warnings come 0.15 s earlier.",
+  "How to get: Selenne drops it (35%)."
+ ],
+ "elsewhere:prospectors_pendulum": [
+  "Trinket: swings toward the nearest ore within 24 blocks; use it in hand to name up to 2 ore types and their distance. Never finds diamond or ancient debris.",
+  "How to get: Ironpeak chests (Climber's Cairn, Clan Hold, 12%), Thurgrim (20%), or a Skyiron trade."
+ ],
+ "elsewhere:void_tether_spool": [
+  "Sneak + use sets an anchor; use snaps you back within 64 blocks (same dimension, 3-minute cooldown, 4 hunger points).",
+  "How to get: Aphelion drops it (35%), Ossyra (10%)."
+ ],
+ "elsewhere:termite_hive_lantern": [
+  "Mine a block and termites eat the 3x3 face around it over 2 s. Dirt, wood, mud and stone only.",
+  "How to get: craft it (Termite Queen, Amber, lantern) or trade Haze Resin in the Greenhaze."
+ ]
+}

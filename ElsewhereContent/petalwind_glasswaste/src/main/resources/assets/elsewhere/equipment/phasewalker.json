@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:phasewalker"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:phasewalker"
+      }
+    ]
+  }
+}

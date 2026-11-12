@@ -1,0 +1,25 @@
+{
+ "replace": false,
+ "values": [
+  {
+   "id": "elsewhere:mirewick_seal_marrow",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_thwaite",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_sorrel",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_tolliver",
+   "required": false
+  },
+  {
+   "id": "elsewhere:mirewick_seal_ames",
+   "required": false
+  }
+ ]
+}

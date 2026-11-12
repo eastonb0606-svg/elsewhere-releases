@@ -1,0 +1,40 @@
+{
+ "role": "melee",
+ "officer": true,
+ "ability": "captain",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/qaid.png",
+ "armor": {
+  "head": "minecraft:golden_helmet",
+  "chest": "minecraft:iron_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:iron_boots"
+ },
+ "main_hand": "elsewhere:azmar_gilded_khopesh",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 30,
+  "speed": 0.29,
+  "knockback_resistance": 0.6,
+  "armor": 4.0,
+  "armor_toughness": 3.0,
+  "attack_damage": 2.0
+ },
+ "combat": {
+  "crit_cooldown": 120,
+  "sprint_chance": 0.3,
+  "strafe": 0.6,
+  "retreat_chance": 0.35,
+  "block_chance": 0.8,
+  "crit_chance": 0.15,
+  "retreat_health": 0.0
+ },
+ "trim": {
+  "material": "minecraft:gold",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:dune",
+   "minecraft:wayfinder"
+  ]
+ },
+ "aggression": 3
+}

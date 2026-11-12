@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 71238,
+  "separation": 4,
+  "spacing": 10
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:climbers_cairn",
+   "weight": 1
+  }
+ ]
+}

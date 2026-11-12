@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "elsewhere:block/kelpwood_pressure_plate"
+    },
+    "powered=true": {
+      "model": "elsewhere:block/kelpwood_pressure_plate_down"
+    }
+  }
+}

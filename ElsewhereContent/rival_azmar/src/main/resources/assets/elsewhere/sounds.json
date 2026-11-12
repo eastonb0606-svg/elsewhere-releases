@@ -1,0 +1,5 @@
+{
+  "sfx3.azmar.sistrum": {"subtitle": "subtitles.elsewhere.sfx3.azmar.sistrum", "sounds": [{"name": "elsewhere:sfx3/azmar/sistrum"}, {"name": "elsewhere:sfx3/azmar/sistrum", "pitch": 1.08}]},
+  "sfx3.azmar.brass": {"subtitle": "subtitles.elsewhere.sfx3.azmar.brass", "sounds": [{"name": "elsewhere:sfx3/azmar/brass"}, {"name": "elsewhere:sfx3/azmar/brass", "pitch": 1.05}]},
+  "sfx3.azmar.firesand": {"subtitle": "subtitles.elsewhere.sfx3.azmar.firesand", "sounds": [{"name": "elsewhere:sfx3/azmar/firesand"}, {"name": "elsewhere:sfx3/azmar/firesand", "pitch": 0.9}]}
+}

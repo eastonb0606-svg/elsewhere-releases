@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.gear3.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"Gear3LivingEntityMixin",
+		"Gear3WeaponMixins$Bow",
+		"Gear3WeaponMixins$Crossbow",
+		"Gear3AmmoMixin",
+		"Gear3EffectMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

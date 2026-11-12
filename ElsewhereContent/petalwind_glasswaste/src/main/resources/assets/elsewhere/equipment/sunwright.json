@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:sunwright"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:sunwright"
+      }
+    ]
+  }
+}

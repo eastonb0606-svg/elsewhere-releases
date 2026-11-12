@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:lined_herdcaller"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:lined_herdcaller"
+      }
+    ]
+  }
+}

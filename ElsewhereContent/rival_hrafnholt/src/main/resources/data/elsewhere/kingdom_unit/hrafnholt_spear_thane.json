@@ -1,0 +1,34 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/hrafnholt/spear_thane.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:iron_boots"
+ },
+ "armor_dye": 7031339,
+ "main_hand": "minecraft:iron_spear",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.05,
+  "crit_cooldown": 200,
+  "retreat_health": 0.2,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.2,
+  "mounted_bonus": 2.0
+ },
+ "trim": {
+  "material": "minecraft:iron",
+  "patterns": [
+   "elsewhere:hrafnholt",
+   "minecraft:rib",
+   "minecraft:ward"
+  ]
+ }
+}

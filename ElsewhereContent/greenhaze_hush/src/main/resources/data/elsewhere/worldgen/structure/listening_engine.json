@@ -1,0 +1,15 @@
+{
+  "type": "elsewhere:greenhaze_hush_built",
+  "biomes": [
+    "elsewhere:the_murmur",
+    "elsewhere:echo_shafts",
+    "elsewhere:ossuary_galleries",
+    "elsewhere:amethyst_choir",
+    "elsewhere:drowned_silence"
+  ],
+  "step": "underground_structures",
+  "spawn_overrides": {},
+  "kind": "listening_engine",
+  "anchor": "fixed",
+  "y": -20
+}

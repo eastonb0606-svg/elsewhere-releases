@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_rival_hrafnholt",
+	"version": "${version}",
+	"name": "Elsewhere: Jarldom of Hrafnholt (dev module)",
+	"description": "Hrafnholt, the aggressive northern Jarldom: faction data, units, six bosses, gear, Hacksilver, banner and trim, field tactics. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.elsewhere.rivals.hrafnholt.DevEntry"
+		],
+		"client": [
+			"dev.elsewhere.rivals.hrafnholt.client.HrafnholtClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"elsewhere_kingdom": "*"
+	},
+	"mixins": [
+		"elsewhere_rival_hrafnholt.mixins.json"
+	]
+}

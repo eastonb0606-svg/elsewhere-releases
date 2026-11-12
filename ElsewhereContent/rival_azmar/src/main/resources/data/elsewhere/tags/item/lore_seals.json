@@ -1,0 +1,21 @@
+{
+ "replace": false,
+ "values": [
+  {
+   "id": "elsewhere:azmar_seal_sultana",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_seal_wazir",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_seal_falconer",
+   "required": false
+  },
+  {
+   "id": "elsewhere:azmar_seal_amir",
+   "required": false
+  }
+ ]
+}

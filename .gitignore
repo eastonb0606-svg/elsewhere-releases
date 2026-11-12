@@ -1,0 +1,11 @@
+build/
+.gradle/
+run/
+run-*/
+*.log
+*.out
+.DS_Store
+ElsewhereBeta/src/main/
+ElsewhereBeta/src/client/
+ElsewhereBeta/snap/
+ElsewhereBeta/dist/

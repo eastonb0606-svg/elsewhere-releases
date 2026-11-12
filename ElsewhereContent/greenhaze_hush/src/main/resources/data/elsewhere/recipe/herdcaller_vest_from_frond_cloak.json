@@ -1,0 +1,24 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:herdcaller_vest",
+        "elsewhere:gorger_fluff"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "elsewhere:frond_cloak",
+    "elsewhere:gorger_fluff",
+    "elsewhere:gorger_fluff",
+    "elsewhere:gorger_fluff",
+    "elsewhere:gorger_fluff"
+  ],
+  "result": {
+    "id": "elsewhere:herdcaller_vest"
+  }
+}

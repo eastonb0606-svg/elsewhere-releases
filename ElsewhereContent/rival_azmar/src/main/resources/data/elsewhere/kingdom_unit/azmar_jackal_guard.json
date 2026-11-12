@@ -1,0 +1,36 @@
+{
+ "role": "melee",
+ "ability": "bash",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/sunguard.png",
+ "armor": {
+  "head": "elsewhere:azmar_jackal_helm",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:golden_boots"
+ },
+ "main_hand": "elsewhere:azmar_gilded_khopesh",
+ "off_hand": "minecraft:shield",
+ "stats": {
+  "health": 24,
+  "speed": 0.28,
+  "knockback_resistance": 0.1,
+  "armor": 1.0
+ },
+ "combat": {
+  "crit_cooldown": 160,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.35,
+  "block_chance": 0.7,
+  "crit_chance": 0.1,
+  "retreat_health": 0.0
+ },
+ "trim": {
+  "material": "minecraft:gold",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:dune",
+   "minecraft:wayfinder"
+  ]
+ }
+}

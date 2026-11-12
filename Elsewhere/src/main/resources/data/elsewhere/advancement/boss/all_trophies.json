@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "elsewhere:boss_trophy"
+    },
+    "title": {
+      "translate": "advancement.elsewhere.boss.all_trophies.title"
+    },
+    "description": {
+      "translate": "advancement.elsewhere.boss.all_trophies.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elsewhere:boss/aphelion",
+  "criteria": {
+    "all": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "all"
+    ]
+  ]
+}

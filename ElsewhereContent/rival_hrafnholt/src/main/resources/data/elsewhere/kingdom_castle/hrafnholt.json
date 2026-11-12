@@ -1,0 +1,1650 @@
+{
+ "palette": {
+  "minecraft:stone_bricks": "minecraft:moss_block",
+  "minecraft:mossy_stone_bricks": "minecraft:dark_oak_planks",
+  "minecraft:cobblestone": "minecraft:mossy_cobblestone",
+  "minecraft:stone": "minecraft:mossy_cobblestone",
+  "minecraft:stone_brick_wall": "minecraft:mossy_stone_brick_wall",
+  "minecraft:stone_brick_stairs": "minecraft:mossy_stone_brick_stairs",
+  "minecraft:stone_brick_slab": "minecraft:mossy_stone_brick_slab",
+  "minecraft:polished_deepslate": "minecraft:spruce_log",
+  "minecraft:deepslate_bricks": "minecraft:dark_oak_planks",
+  "minecraft:deepslate_tiles": "minecraft:spruce_planks",
+  "minecraft:polished_blackstone_bricks": "minecraft:dark_oak_planks",
+  "minecraft:polished_andesite": "minecraft:spruce_planks",
+  "minecraft:calcite": "minecraft:moss_block",
+  "minecraft:chiseled_stone_bricks": "minecraft:dark_oak_planks",
+  "minecraft:spruce_log": "minecraft:dark_oak_log",
+  "minecraft:spruce_planks": "minecraft:dark_oak_planks",
+  "minecraft:spruce_slab": "minecraft:dark_oak_slab",
+  "minecraft:spruce_fence": "minecraft:dark_oak_fence",
+  "minecraft:spruce_trapdoor": "minecraft:dark_oak_trapdoor",
+  "minecraft:spruce_fence_gate": "minecraft:dark_oak_fence_gate",
+  "minecraft:oak_log": "minecraft:spruce_log",
+  "minecraft:oak_planks": "minecraft:spruce_planks",
+  "minecraft:oak_stairs": "minecraft:spruce_stairs",
+  "minecraft:oak_fence": "minecraft:spruce_fence",
+  "minecraft:dark_oak_stairs": "minecraft:spruce_stairs",
+  "minecraft:dark_oak_slab": "minecraft:spruce_slab",
+  "minecraft:dark_oak_planks": "minecraft:spruce_planks",
+  "minecraft:dark_oak_fence": "minecraft:spruce_fence",
+  "minecraft:gold_block": "minecraft:mud_bricks",
+  "minecraft:blue_wool": "minecraft:green_wool",
+  "minecraft:red_carpet": "minecraft:green_carpet",
+  "minecraft:blue_carpet": "minecraft:green_carpet",
+  "minecraft:white_wool": "minecraft:brown_wool",
+  "minecraft:blue_wall_banner": "minecraft:green_wall_banner",
+  "minecraft:blue_bed": "minecraft:green_bed",
+  "minecraft:red_bed": "minecraft:brown_bed",
+  "minecraft:white_bed": "minecraft:brown_bed",
+  "minecraft:blue_stained_glass_pane": "minecraft:green_stained_glass_pane",
+  "minecraft:cracked_stone_bricks": "minecraft:mossy_stone_bricks",
+  "minecraft:andesite": "minecraft:mossy_cobblestone",
+  "minecraft:hay_block": "minecraft:moss_block",
+  "minecraft:red_wool": "minecraft:brown_wool"
+ },
+ "pieces": [
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -32,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -32,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -32
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -32
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -30,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -30,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -30
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -30
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -28,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -28,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -28
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -28
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -26,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -26,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -26
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -26
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -24,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -24,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -24
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -24
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -22,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -22,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -22
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -22
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -20,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -20,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -20
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -20
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -18,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -18,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -18
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -18
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -16,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -16,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -16
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -16
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -14,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -14,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -14
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -14
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -12,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -12,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -12
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -12
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -10,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -10,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -10
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -10
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -8,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -8,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -8
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -8
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -6,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -6,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -6
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -6
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -4,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -4
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -4
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -2,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    -2
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -2
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    0,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    0
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    0
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    2,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    2
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    2
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    4,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    4
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    4
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    6,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    6,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    6
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    6
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    8,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    8,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    8
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    8
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    10,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    10,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    10
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    10
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    12,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    12,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    12
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    12
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    14,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    14,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    14
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    14
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    16,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    16,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    16
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    16
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    18,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    18,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    18
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    18
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    20,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    20,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    20
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    20
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    22,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    22,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    22
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    22
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    24,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    24,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    24
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    24
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    26,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    26,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    26
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    26
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    28,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    28,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    28
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    28
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    30,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    30,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    30
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    30
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    32,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    32,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    32
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    32
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    -34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "column",
+   "at": [
+    -34,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    34,
+    0,
+    34
+   ],
+   "height": 5,
+   "block": "minecraft:spruce_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "column",
+   "at": [
+    -6,
+    0,
+    33
+   ],
+   "height": 9,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:moss_block"
+  },
+  {
+   "type": "set",
+   "at": [
+    -5,
+    9,
+    33
+   ],
+   "block": "minecraft:spruce_slab"
+  },
+  {
+   "type": "column",
+   "at": [
+    6,
+    0,
+    33
+   ],
+   "height": 9,
+   "block": "minecraft:dark_oak_log",
+   "cap": "minecraft:spruce_fence"
+  },
+  {
+   "type": "set",
+   "at": [
+    5,
+    9,
+    33
+   ],
+   "block": "minecraft:spruce_slab"
+  },
+  {
+   "type": "box",
+   "from": [
+    -6,
+    9,
+    33
+   ],
+   "to": [
+    6,
+    9,
+    33
+   ],
+   "block": "minecraft:spruce_slab",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    -5,
+    10,
+    33
+   ],
+   "to": [
+    5,
+    10,
+    33
+   ],
+   "block": "minecraft:spruce_slab",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    -3,
+    11,
+    33
+   ],
+   "to": [
+    3,
+    11,
+    33
+   ],
+   "block": "minecraft:spruce_slab",
+   "hollow": false
+  }
+ ],
+ "waterfront": {
+  "jetty": {
+   "planks": "minecraft:spruce_planks",
+   "slab": "minecraft:spruce_slab",
+   "post": "minecraft:dark_oak_log",
+   "fence": "minecraft:spruce_fence",
+   "light": "minecraft:lantern"
+  },
+  "boathouse": {
+   "wall": "minecraft:dark_oak_planks",
+   "frame": "minecraft:dark_oak_log",
+   "roof_stairs": "minecraft:spruce_stairs",
+   "roof_slab": "minecraft:spruce_slab",
+   "floor": "minecraft:spruce_planks",
+   "door": "minecraft:spruce_door"
+  },
+  "longship": {
+   "hull": "minecraft:spruce_planks",
+   "keel": "minecraft:dark_oak_log",
+   "rail": "minecraft:spruce_fence",
+   "trim": "minecraft:dark_oak_slab",
+   "stem": "minecraft:dark_oak_log",
+   "mast": "minecraft:spruce_fence",
+   "sail": [
+    "minecraft:green_wool",
+    "minecraft:brown_wool"
+   ],
+   "shield": "minecraft:green_banner",
+   "shield_alt": "minecraft:brown_banner"
+  },
+  "banner": "minecraft:green_banner"
+ }
+}

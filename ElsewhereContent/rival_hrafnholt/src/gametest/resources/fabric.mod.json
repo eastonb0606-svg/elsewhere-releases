@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_rival_hrafnholt-gametest",
+	"version": "1.0.0",
+	"name": "Hrafnholt client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.rivals.hrafnholt.gametest.HrafnholtScreenshots"]
+	},
+	"depends": {
+		"elsewhere_rival_hrafnholt": "*"
+	}
+}

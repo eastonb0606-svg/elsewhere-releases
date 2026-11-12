@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "elsewhere:sculk_censer",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "elsewhere:hushweave_carpet",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "elsewhere:silence_draught",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:candle",
+          "weight": 12
+        },
+        {
+          "type": "minecraft:item",
+          "name": "elsewhere:resonant_shard",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "elsewhere:echo_crystal",
+          "weight": 5,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "elsewhere:hushweave_upgrade_smithing_template",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

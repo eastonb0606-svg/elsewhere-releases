@@ -1,0 +1,9 @@
+{
+ "replace": false,
+ "values": [
+  "elsewhere:kelpwood_log",
+  "elsewhere:stripped_kelpwood_log",
+  "elsewhere:kelpwood_wood",
+  "elsewhere:stripped_kelpwood_wood"
+ ]
+}

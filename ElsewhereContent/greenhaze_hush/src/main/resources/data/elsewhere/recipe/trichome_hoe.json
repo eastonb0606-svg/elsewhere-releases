@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "key": {
+  "Q": "elsewhere:trichome_quartz",
+  "S": "minecraft:stick"
+ },
+ "pattern": [
+  "QQ",
+  " S",
+  " S"
+ ],
+ "result": {
+  "id": "elsewhere:trichome_hoe",
+  "count": 1
+ }
+}

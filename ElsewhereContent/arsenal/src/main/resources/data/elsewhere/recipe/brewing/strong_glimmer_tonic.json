@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:brewing",
+  "input": {
+    "item": "elsewhere:glimmer_tonic"
+  },
+  "reagent": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "output": {
+    "id": "elsewhere:strong_glimmer_tonic"
+  }
+}

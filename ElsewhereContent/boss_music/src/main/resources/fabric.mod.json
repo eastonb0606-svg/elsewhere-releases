@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_boss_music",
+	"version": "${version}",
+	"name": "Elsewhere: Boss Music (dev module)",
+	"description": "A unique music theme for every Elsewhere boss, with summon, phase and victory stingers. Client only; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.elsewhere.boss_music.DevClientEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"mixins": [
+		"elsewhere_boss_music.mixins.json"
+	]
+}

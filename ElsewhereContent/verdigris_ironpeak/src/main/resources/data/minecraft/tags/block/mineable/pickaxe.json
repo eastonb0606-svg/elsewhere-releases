@@ -1,0 +1,29 @@
+{
+ "replace": false,
+ "values": [
+  "elsewhere:verdigris_plate",
+  "elsewhere:riveted_verdigris_plate",
+  "elsewhere:verdigris_plate_stairs",
+  "elsewhere:verdigris_plate_slab",
+  "elsewhere:verdigris_plate_wall",
+  "elsewhere:verdigris_grating",
+  "elsewhere:verdigris_pipe",
+  "elsewhere:verdigris_pipe_junction",
+  "elsewhere:storm_coil",
+  "elsewhere:pearlite_ore",
+  "elsewhere:frostgranite",
+  "elsewhere:frostgranite_stairs",
+  "elsewhere:frostgranite_slab",
+  "elsewhere:frostgranite_wall",
+  "elsewhere:polished_frostgranite",
+  "elsewhere:polished_frostgranite_stairs",
+  "elsewhere:polished_frostgranite_slab",
+  "elsewhere:frostgranite_bricks",
+  "elsewhere:frostgranite_brick_stairs",
+  "elsewhere:frostgranite_brick_slab",
+  "elsewhere:frostgranite_brick_wall",
+  "elsewhere:skyiron_ore",
+  "elsewhere:hearthstone",
+  "elsewhere:glacier_ice"
+ ]
+}

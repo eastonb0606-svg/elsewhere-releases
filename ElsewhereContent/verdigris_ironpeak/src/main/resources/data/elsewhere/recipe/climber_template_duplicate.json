@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "DTD",
+  "DBD",
+  "DDD"
+ ],
+ "key": {
+  "D": "minecraft:diamond",
+  "T": "elsewhere:climber_upgrade_smithing_template",
+  "B": "elsewhere:polished_frostgranite"
+ },
+ "result": {
+  "id": "elsewhere:climber_upgrade_smithing_template",
+  "count": 2
+ }
+}

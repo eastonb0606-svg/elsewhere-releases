@@ -1,0 +1,121 @@
+{
+  "attributes": {
+    "minecraft:visual/sky_color": "#9acd8c",
+    "minecraft:visual/fog_color": "#8fb88a",
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.overworld.jungle"
+      }
+    },
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "monster": [
+            {
+              "type": "elsewhere:munchie_boar",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 5
+              },
+              "weight": 20
+            },
+            {
+              "type": "elsewhere:hotbox_smog",
+              "count": 3,
+              "weight": 40
+            },
+            {
+              "type": "elsewhere:paranoia_shade",
+              "count": 1,
+              "weight": 15
+            },
+            {
+              "type": "minecraft:spider",
+              "count": 2,
+              "weight": 20
+            }
+          ],
+          "creature": [
+            {
+              "type": "elsewhere:lazy_gorger",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "weight": 7
+            },
+            {
+              "type": "elsewhere:toke_toad",
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 7
+              },
+              "weight": 5
+            },
+            {
+              "type": "minecraft:parrot",
+              "count": 2,
+              "weight": 10
+            }
+          ],
+          "ambient": []
+        }
+      },
+      "modifier": "overlay"
+    },
+    "minecraft:visual/ambient_particles": {
+      "argument": [
+        {
+          "particle": {
+            "type": "minecraft:spore_blossom_air"
+          },
+          "probability": 0.008
+        }
+      ],
+      "modifier": "append"
+    }
+  },
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground"
+  ],
+  "downfall": 0.9,
+  "effects": {
+    "water_color": "#3fa58a",
+    "foliage_color": "#3e9b3a",
+    "grass_color": "#4fae44"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_coal_upper",
+      "elsewhere:ore_trichome_quartz"
+    ],
+    [],
+    [],
+    [
+      "minecraft:bamboo_vegetation",
+      "minecraft:trees_jungle",
+      "minecraft:patch_large_fern",
+      "minecraft:patch_grass_jungle",
+      "minecraft:jungle_bush",
+      "minecraft:vines",
+      "elsewhere:kush_tree",
+      "elsewhere:giant_fern"
+    ],
+    []
+  ],
+  "has_precipitation": true,
+  "temperature": 0.95
+}

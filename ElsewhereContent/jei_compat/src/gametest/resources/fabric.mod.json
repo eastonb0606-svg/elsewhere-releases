@@ -1,0 +1,12 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_jei_compat-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere JEI compat client test",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.compat.jei.test.JeiCompatClientTest"],
+		"jei_mod_plugin": ["dev.elsewhere.compat.jei.test.RuntimeGrab"]
+	},
+	"depends": {"jei": "*", "elsewhere": "*", "elsewhere_jei_compat": "*", "fabric-client-gametest-api-v1": "*"}
+}

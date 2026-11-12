@@ -1,0 +1,28 @@
+{
+ "role": "archer",
+ "skin": "elsewhere:textures/entity/kingdom/azmar/naffatun.png",
+ "armor": {
+  "head": "minecraft:leather_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 9198136,
+ "main_hand": "elsewhere:azmar_fire_pot",
+ "stats": {
+  "health": 20,
+  "speed": 0.28
+ },
+ "combat": {
+  "block_chance": 0.0,
+  "crit_chance": 0.0,
+  "retreat_health": 0.3
+ },
+ "trim": {
+  "material": "minecraft:copper",
+  "patterns": [
+   "elsewhere:azmar",
+   "minecraft:dune"
+  ]
+ }
+}

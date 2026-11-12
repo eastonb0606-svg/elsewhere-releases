@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "lit=false,note=0": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=0": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    },
+    "lit=false,note=1": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=1": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    },
+    "lit=false,note=2": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=2": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    },
+    "lit=false,note=3": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=3": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    },
+    "lit=false,note=4": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=4": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    },
+    "lit=false,note=5": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=5": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    },
+    "lit=false,note=6": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=6": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    },
+    "lit=false,note=7": {
+      "model": "elsewhere:block/choir_pillar"
+    },
+    "lit=true,note=7": {
+      "model": "elsewhere:block/choir_pillar_lit"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "elsewhere:greenhaze_hush_built",
+  "biomes": [
+    "elsewhere:kush_canopy",
+    "elsewhere:sativa_highlands",
+    "elsewhere:indica_hollows",
+    "elsewhere:munchie_groves"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "kind": "greenhaze_return_rift",
+  "anchor": "surface",
+  "y": 64
+}

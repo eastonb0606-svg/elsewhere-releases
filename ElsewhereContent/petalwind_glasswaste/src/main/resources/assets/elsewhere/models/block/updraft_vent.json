@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "elsewhere:block/updraft_vent_top",
+    "bottom": "elsewhere:block/updraft_vent_side",
+    "side": "elsewhere:block/updraft_vent_side"
+  }
+}

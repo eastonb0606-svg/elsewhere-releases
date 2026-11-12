@@ -1,0 +1,31 @@
+{
+  "_comment": "Azmar, the clockwork sun kingdom (ARMIES.md 2.4): priests greet the sun, scribes at the diwan, porters with the caravans, merchants at the Grand Bazaar; the streets are empty in the siesta (11-15). The smallest kingdom: 32 live at the capital. Townsfolk lane data (s-townsfolk).",
+  "live": {"capital": 32, "town": 14},
+  "roles": [
+    {"id": "priest", "weight": 0.2, "day": [
+      {"from": 5, "to": 6, "activity": "temple", "where": "temple_steps", "pose": "PRAY"},
+      {"from": 6, "to": 11, "activity": "temple", "where": "temple", "pose": "PRAY"},
+      {"from": 11, "to": 15, "activity": "siesta", "where": "shade", "pose": "NONE"},
+      {"from": 15, "to": 18, "activity": "temple", "where": "temple_steps", "pose": "PRAY"},
+      {"from": 18, "to": 20, "activity": "procession", "where": "avenue", "pose": "NONE"}
+    ]},
+    {"id": "scribe", "weight": 0.2, "held": "minecraft:writable_book", "day": [
+      {"from": 7, "to": 9, "activity": "work", "where": "diwan", "pose": "WORK"},
+      {"from": 9, "to": 11, "activity": "court", "where": "palace_gate", "pose": "WORK"},
+      {"from": 11, "to": 15, "activity": "siesta", "where": "shade", "pose": "NONE"},
+      {"from": 15, "to": 19, "activity": "market", "where": "bazaar", "pose": "WORK"}
+    ]},
+    {"id": "porter", "weight": 0.3, "held": "minecraft:bundle", "day": [
+      {"from": 6, "to": 11, "activity": "caravan", "where": "caravanserai", "pose": "CARRY"},
+      {"from": 11, "to": 15, "activity": "siesta", "where": "shade", "pose": "NONE"},
+      {"from": 15, "to": 16, "activity": "market", "where": "bazaar", "pose": "CARRY"},
+      {"from": 16, "to": 19, "activity": "caravan", "where": "caravanserai", "pose": "CARRY"}
+    ]},
+    {"id": "merchant", "weight": 0.3, "held": "minecraft:emerald", "day": [
+      {"from": 7, "to": 9, "activity": "market", "where": "bazaar", "pose": "WORK"},
+      {"from": 9, "to": 11, "activity": "court", "where": "palace_gate", "pose": "NONE"},
+      {"from": 11, "to": 15, "activity": "siesta", "where": "shade", "pose": "NONE"},
+      {"from": 15, "to": 20, "activity": "market", "where": "bazaar", "pose": "WORK"}
+    ]}
+  ]
+}

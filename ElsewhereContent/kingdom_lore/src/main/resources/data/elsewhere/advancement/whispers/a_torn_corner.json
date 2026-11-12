@@ -1,0 +1,32 @@
+{
+ "display": {
+  "icon": {
+   "id": "elsewhere:lore_survey_fragment"
+  },
+  "title": {
+   "translate": "advancement.elsewhere.whispers.a_torn_corner.title"
+  },
+  "description": {
+   "translate": "advancement.elsewhere.whispers.a_torn_corner.desc"
+  },
+  "frame": "task",
+  "show_toast": true,
+  "announce_to_chat": true,
+  "hidden": false
+ },
+ "criteria": {
+  "done": {
+   "trigger": "minecraft:inventory_changed",
+   "conditions": {
+    "items": [
+     {
+      "items": [
+       "elsewhere:lore_survey_fragment"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "parent": "elsewhere:whispers/root"
+}

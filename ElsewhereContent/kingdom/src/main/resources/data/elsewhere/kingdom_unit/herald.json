@@ -1,0 +1,34 @@
+{
+ "role": "melee",
+ "ability": "herald",
+ "skin": "elsewhere:textures/entity/kingdom/soldier_a.png",
+ "armor": {
+  "head": "minecraft:chainmail_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "armor_dye": 3049374,
+ "main_hand": "minecraft:iron_sword",
+ "off_hand": "minecraft:goat_horn",
+ "stats": {
+  "health": 20,
+  "speed": 0.29
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.6,
+  "block_chance": 0.0,
+  "crit_chance": 0.04,
+  "retreat_health": 0.4
+ },
+ "trim": {
+  "material": "minecraft:gold",
+  "patterns": [
+   "elsewhere:aldermark",
+   "minecraft:coast"
+  ]
+ }
+}

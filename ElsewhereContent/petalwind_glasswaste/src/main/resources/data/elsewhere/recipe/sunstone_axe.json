@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:smithing_transform",
+ "category": "equipment",
+ "template": "elsewhere:sunwright_upgrade_smithing_template",
+ "base": "#elsewhere:sunstone_base/axe",
+ "addition": "elsewhere:sunwright_ingot",
+ "result": {
+  "id": "elsewhere:sunstone_axe",
+  "count": 1
+ }
+}

@@ -1,0 +1,1226 @@
+{
+ "type": "minecraft:sequence",
+ "sequence": [
+  "minecraft:bedrock_floor",
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:stone_depth",
+    "add_surface_depth": false,
+    "offset": 0,
+    "secondary_depth_range": 0,
+    "surface_type": "floor"
+   },
+   "then_run": {
+    "type": "minecraft:sequence",
+    "sequence": [
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 900
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:packed_ice"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 500
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:snow_block"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:biome",
+    "biome_is": [
+     "elsewhere:granite_terraces",
+     "elsewhere:frostbite_shelf",
+     "elsewhere:the_thin_air"
+    ]
+   },
+   "then_run": {
+    "type": "minecraft:sequence",
+    "sequence": [
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1400
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1382
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1364
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1346
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1328
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1310
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1292
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1274
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1256
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1238
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1220
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1202
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1184
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1166
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1148
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1130
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1112
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1094
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1076
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1058
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1040
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1022
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 1004
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 986
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 968
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 950
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 932
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 914
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 896
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 878
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 860
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 842
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 824
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 806
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 788
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 770
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 752
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 734
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 716
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 698
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 680
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 662
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 644
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 626
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 608
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 590
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 572
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 554
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 536
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 518
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 500
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 482
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 464
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 446
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 428
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 410
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 392
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 374
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 356
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 338
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 320
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 302
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 284
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 266
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 248
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 230
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 212
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 194
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:tuff"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 176
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:calcite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 158
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 140
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:andesite"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 122
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:stone"
+      }
+     },
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:y_above",
+       "add_stone_depth": false,
+       "anchor": {
+        "absolute": 104
+       },
+       "surface_depth_multiplier": 0
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:granite"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:stone_depth",
+    "add_surface_depth": false,
+    "offset": 0,
+    "secondary_depth_range": 0,
+    "surface_type": "floor"
+   },
+   "then_run": {
+    "type": "minecraft:sequence",
+    "sequence": [
+     {
+      "type": "minecraft:condition",
+      "if_true": {
+       "type": "minecraft:biome",
+       "biome_is": [
+        "elsewhere:cold_springs"
+       ]
+      },
+      "then_run": {
+       "type": "minecraft:block",
+       "result_state": "minecraft:podzol"
+      }
+     },
+     {
+      "type": "minecraft:block",
+      "result_state": "minecraft:grass_block"
+     }
+    ]
+   }
+  },
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:stone_depth",
+    "add_surface_depth": false,
+    "offset": 2,
+    "secondary_depth_range": 0,
+    "surface_type": "floor"
+   },
+   "then_run": {
+    "type": "minecraft:block",
+    "result_state": "minecraft:dirt"
+   }
+  },
+  {
+   "type": "minecraft:condition",
+   "if_true": {
+    "type": "minecraft:not",
+    "invert": {
+     "type": "minecraft:y_above",
+     "add_stone_depth": false,
+     "anchor": {
+      "absolute": 0
+     },
+     "surface_depth_multiplier": 0
+    }
+   },
+   "then_run": {
+    "type": "minecraft:block",
+    "result_state": "minecraft:deepslate"
+   }
+  }
+ ]
+}

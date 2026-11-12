@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 7823,
+    "separation": 8,
+    "spacing": 20
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:mournmaw_weeping_basin",
+      "weight": 1
+    }
+  ]
+}

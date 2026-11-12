@@ -1,0 +1,86 @@
+{
+  "attributes": {
+    "minecraft:visual/sky_color": "#000000",
+    "minecraft:visual/fog_color": "#0e1a1f",
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.nether.soul_sand_valley"
+      }
+    },
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "monster": [
+            {
+              "type": "elsewhere:echo_stalker",
+              "count": 1,
+              "weight": 30
+            },
+            {
+              "type": "elsewhere:ossuary_chorister",
+              "count": 1,
+              "weight": 20
+            },
+            {
+              "type": "elsewhere:catalyst_mimic",
+              "count": 1,
+              "weight": 10
+            }
+          ],
+          "creature": [],
+          "ambient": [
+            {
+              "type": "elsewhere:shrieker_swarm",
+              "count": 4,
+              "weight": 10
+            }
+          ]
+        }
+      },
+      "modifier": "overlay"
+    },
+    "minecraft:visual/ambient_particles": {
+      "argument": [
+        {
+          "particle": {
+            "type": "minecraft:soul"
+          },
+          "probability": 0.001
+        }
+      ],
+      "modifier": "append"
+    },
+    "minecraft:visual/water_fog_color": "#060e11"
+  },
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground"
+  ],
+  "downfall": 0.0,
+  "effects": {
+    "water_color": "#14262c"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "elsewhere:ore_hushstone",
+      "elsewhere:ore_echo_crystal"
+    ],
+    [
+      "minecraft:sculk_vein"
+    ],
+    [],
+    [],
+    []
+  ],
+  "has_precipitation": false,
+  "temperature": 0.5
+}

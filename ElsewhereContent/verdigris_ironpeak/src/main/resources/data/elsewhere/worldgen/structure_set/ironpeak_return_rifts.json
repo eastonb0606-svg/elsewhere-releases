@@ -1,0 +1,14 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 71232,
+  "separation": 10,
+  "spacing": 30
+ },
+ "structures": [
+  {
+   "structure": "elsewhere:ironpeak_return_rift",
+   "weight": 1
+  }
+ ]
+}

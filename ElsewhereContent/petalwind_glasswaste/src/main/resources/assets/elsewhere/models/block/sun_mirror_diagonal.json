@@ -1,0 +1,83 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "elsewhere:block/sun_mirror",
+    "stand": "elsewhere:block/sun_mirror_stand",
+    "mirror": "elsewhere:block/sun_mirror"
+  },
+  "elements": [
+    {
+      "from": [
+        6,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        8,
+        10
+      ],
+      "faces": {
+        "north": {
+          "texture": "#stand"
+        },
+        "south": {
+          "texture": "#stand"
+        },
+        "east": {
+          "texture": "#stand"
+        },
+        "west": {
+          "texture": "#stand"
+        },
+        "up": {
+          "texture": "#stand"
+        },
+        "down": {
+          "texture": "#stand"
+        }
+      }
+    },
+    {
+      "from": [
+        1,
+        7,
+        7
+      ],
+      "to": [
+        15,
+        16,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45
+      },
+      "faces": {
+        "north": {
+          "texture": "#mirror"
+        },
+        "south": {
+          "texture": "#mirror"
+        },
+        "east": {
+          "texture": "#mirror"
+        },
+        "west": {
+          "texture": "#mirror"
+        },
+        "up": {
+          "texture": "#mirror"
+        },
+        "down": {
+          "texture": "#mirror"
+        }
+      }
+    }
+  ]
+}

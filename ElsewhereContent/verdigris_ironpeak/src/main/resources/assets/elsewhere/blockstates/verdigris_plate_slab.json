@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elsewhere:block/verdigris_plate_slab"
+    },
+    "type=double": {
+      "model": "elsewhere:block/verdigris_plate"
+    },
+    "type=top": {
+      "model": "elsewhere:block/verdigris_plate_slab_top"
+    }
+  }
+}

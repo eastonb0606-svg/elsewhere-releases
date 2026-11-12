@@ -1,0 +1,7 @@
+{
+ "parent": "minecraft:block/cube_column",
+ "textures": {
+  "side": "elsewhere:block/storm_coil",
+  "end": "elsewhere:block/verdigris_pipe_end"
+ }
+}

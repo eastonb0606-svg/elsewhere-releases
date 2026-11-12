@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "elsewhere:polished_frostgranite"
+ },
+ "pattern": [
+  "#  ",
+  "## ",
+  "###"
+ ],
+ "result": {
+  "id": "elsewhere:polished_frostgranite_stairs",
+  "count": 4
+ }
+}

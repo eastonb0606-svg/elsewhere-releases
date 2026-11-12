@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "#S#",
+  "#C#",
+  "###"
+ ],
+ "key": {
+  "#": "minecraft:diamond",
+  "C": "elsewhere:cloud_block",
+  "S": "elsewhere:gale_armor_trim_smithing_template"
+ },
+ "result": {
+  "id": "elsewhere:gale_armor_trim_smithing_template",
+  "count": 2
+ }
+}

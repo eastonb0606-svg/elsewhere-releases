@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "elsewhere:hushstone_bricks",
+  "result": {
+    "id": "elsewhere:hushstone_brick_stairs"
+  }
+}

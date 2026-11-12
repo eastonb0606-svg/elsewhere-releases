@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 7811,
+    "separation": 16,
+    "spacing": 48
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:eye_of_the_gale",
+      "weight": 1
+    }
+  ]
+}

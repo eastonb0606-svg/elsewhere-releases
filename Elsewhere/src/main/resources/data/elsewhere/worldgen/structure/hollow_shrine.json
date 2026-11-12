@@ -1,0 +1,12 @@
+{
+ "type": "elsewhere:ph_site",
+ "kind": "shrine",
+ "biomes": [
+  "elsewhere:hollow_thicket",
+  "elsewhere:heartwood_grove",
+  "elsewhere:silent_clearing"
+ ],
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "none"
+}

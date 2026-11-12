@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " S ",
+    "DMD",
+    "SCS"
+  ],
+  "key": {
+    "S": "elsewhere:sunglass_shard",
+    "D": "minecraft:diamond",
+    "M": "elsewhere:heliodor_mirror_core",
+    "C": "minecraft:crossbow"
+  },
+  "result": {
+    "id": "elsewhere:mirrorbolt_arbalest"
+  }
+}

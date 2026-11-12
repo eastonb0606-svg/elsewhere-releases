@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "F",
+    "B",
+    "B"
+  ],
+  "key": {
+    "F": "minecraft:fire_charge",
+    "B": "minecraft:blaze_rod"
+  },
+  "result": {
+    "id": "elsewhere:emberfall_rod"
+  }
+}

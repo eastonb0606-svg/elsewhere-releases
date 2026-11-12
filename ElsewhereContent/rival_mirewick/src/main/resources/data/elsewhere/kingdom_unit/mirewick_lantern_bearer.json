@@ -1,0 +1,38 @@
+{
+ "role": "melee",
+ "ability": "standard",
+ "skin": "elsewhere:textures/entity/kingdom/mirewick/lantern_bearer.png",
+ "armor": {
+  "head": "minecraft:leather_helmet",
+  "chest": "minecraft:leather_chestplate",
+  "legs": "minecraft:leather_leggings",
+  "feet": "minecraft:leather_boots"
+ },
+ "main_hand": "minecraft:iron_sword",
+ "stats": {
+  "health": 28,
+  "speed": 0.28,
+  "armor": 2.0,
+  "armor_toughness": 2.0,
+  "knockback_resistance": 0.1
+ },
+ "combat": {
+  "crit_cooldown": 200,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.5,
+  "block_chance": 0.0,
+  "crit_chance": 0.05,
+  "retreat_health": 0.4
+ },
+ "trim": {
+  "material": "minecraft:gold",
+  "patterns": [
+   "elsewhere:mirewick",
+   "minecraft:tide",
+   "minecraft:wild"
+  ]
+ },
+ "aggression": 2,
+ "armor_dye": 8010398
+}

@@ -1,0 +1,81 @@
+{
+ "replace": false,
+ "values": [
+  {
+   "id": "elsewhere:hacksilver",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_iron_crown",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_raven_banner",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_wolfskin_boots",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_hearth_ward_mail",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_skalds_rune_axe",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_ulfhednar_pelt",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_hornbow",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_armor_trim_smithing_template",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_banner_pattern",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_raven_shield",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_wolfpelt_blanket",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_fur_collar_dye",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_seal_jarl",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_seal_hersir",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_seal_hallwarden",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_seal_skald",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_seal_chief",
+   "required": false
+  },
+  {
+   "id": "elsewhere:hrafnholt_seal_huntmaster",
+   "required": false
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    "elsewhere:kushwood_planks"
+  ],
+  "result": {
+    "id": "elsewhere:kushwood_button"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 7824,
+    "separation": 16,
+    "spacing": 40
+  },
+  "structures": [
+    {
+      "structure": "elsewhere:ossyra_matriarch_spire",
+      "weight": 1
+    }
+  ]
+}

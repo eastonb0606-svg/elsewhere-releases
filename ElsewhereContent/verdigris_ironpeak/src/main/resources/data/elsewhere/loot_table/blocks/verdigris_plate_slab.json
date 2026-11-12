@@ -1,0 +1,27 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "elsewhere:verdigris_plate_slab",
+     "modifier": [
+      {
+       "type": "minecraft:set_count",
+       "count": 2,
+       "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "elsewhere:verdigris_plate_slab",
+        "state": {
+         "type": "double"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

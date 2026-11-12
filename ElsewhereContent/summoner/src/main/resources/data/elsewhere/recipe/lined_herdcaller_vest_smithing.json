@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:netherite_upgrade_smithing_template",
+  "base": "elsewhere:herdcaller_vest",
+  "addition": "#minecraft:netherite_tool_materials",
+  "result": {
+    "id": "elsewhere:lined_herdcaller_vest"
+  }
+}

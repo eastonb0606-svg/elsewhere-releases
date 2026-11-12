@@ -1,0 +1,184 @@
+{
+ "mode": "posted",
+ "lines": [
+  {
+   "item": "elsewhere:azmar_banner_pattern",
+   "price": 24,
+   "tier": "common"
+  },
+  {
+   "item": "elsewhere:azmar_armor_trim_smithing_template",
+   "price": 30,
+   "tier": "common",
+   "weekly_limit": 2
+  },
+  {
+   "item": "elsewhere:azmar_fire_pot",
+   "price": 20,
+   "count": 4,
+   "tier": "common"
+  },
+  {
+   "item": "elsewhere:azmar_survey_map",
+   "price": 28,
+   "tier": "common"
+  },
+  {
+   "item": "minecraft:arrow",
+   "price": 6,
+   "count": 16,
+   "tier": "common"
+  },
+  {
+   "item": "minecraft:bread",
+   "price": 4,
+   "count": 4,
+   "tier": "common"
+  },
+  {
+   "item": "elsewhere:azmar_copper_khopesh",
+   "price": 28,
+   "tier": "workshop"
+  },
+  {
+   "item": "elsewhere:azmar_composite_bow",
+   "price": 36,
+   "tier": "workshop"
+  },
+  {
+   "item": "elsewhere:azmar_scarab_spear",
+   "price": 36,
+   "tier": "workshop"
+  },
+  {
+   "item": "minecraft:netherite_upgrade_smithing_template",
+   "price": 275,
+   "tier": "workshop",
+   "weekly_limit": 2,
+   "extra": [
+    {
+     "item": "minecraft:diamond",
+     "count": 20
+    }
+   ]
+  },
+  {
+   "item": "elsewhere:azmar_gilded_khopesh",
+   "price": 90,
+   "tier": "royal",
+   "commission": true
+  },
+  {
+   "item": "elsewhere:azmar_twin_khopesh",
+   "price": 110,
+   "tier": "royal",
+   "commission": true
+  },
+  {
+   "item": "elsewhere:azmar_sunplate_cuirass",
+   "price": 140,
+   "tier": "royal",
+   "commission": true
+  },
+  {
+   "item": "elsewhere:azmar_jackal_helm",
+   "price": 80,
+   "tier": "royal",
+   "commission": true
+  },
+  {
+   "item": "elsewhere:azmar_falcon_helm",
+   "price": 80,
+   "tier": "royal",
+   "commission": true
+  },
+  {
+   "item": "elsewhere:azmar_horned_scarab_crown",
+   "price": 96,
+   "tier": "royal",
+   "commission": true
+  },
+  {
+   "item": "elsewhere:oathkeepers_seal",
+   "price": 220,
+   "tier": "royal",
+   "weekly_limit": 2
+  }
+ ],
+ "caravan": [
+  [
+   {
+    "item": "minecraft:orange_dye",
+    "price": 3,
+    "count": 8
+   },
+   {
+    "item": "minecraft:yellow_dye",
+    "price": 3,
+    "count": 8
+   },
+   {
+    "item": "minecraft:cyan_dye",
+    "price": 4,
+    "count": 8
+   },
+   {
+    "item": "minecraft:white_dye",
+    "price": 3,
+    "count": 8
+   }
+  ],
+  [
+   {
+    "item": "minecraft:pumpkin_pie",
+    "price": 5,
+    "count": 4
+   },
+   {
+    "item": "minecraft:rabbit_stew",
+    "price": 6,
+    "count": 2
+   },
+   {
+    "item": "minecraft:golden_carrot",
+    "price": 9,
+    "count": 4
+   },
+   {
+    "item": "minecraft:honey_bottle",
+    "price": 6,
+    "count": 2
+   }
+  ],
+  [
+   {
+    "item": "elsewhere:azmar_survey_map",
+    "price": 36
+   },
+   {
+    "item": "elsewhere:azmar_royal_proclamation",
+    "price": 30
+   },
+   {
+    "item": "elsewhere:azmar_well_stone",
+    "price": 48
+   }
+  ],
+  [
+   {
+    "item": "elsewhere:azmar_armor_trim_smithing_template",
+    "price": 44,
+    "weekly_limit": 2
+   },
+   {
+    "item": "minecraft:sentry_armor_trim_smithing_template",
+    "price": 60,
+    "weekly_limit": 1
+   },
+   {
+    "item": "elsewhere:azmar_banner_pattern",
+    "price": 34
+   }
+  ]
+ ]
+}

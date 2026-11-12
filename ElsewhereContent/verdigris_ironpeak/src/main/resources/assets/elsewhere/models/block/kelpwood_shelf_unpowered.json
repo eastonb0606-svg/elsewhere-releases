@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_shelf_unpowered",
+  "textures": {
+    "all": "elsewhere:block/kelpwood_shelf",
+    "particle": "elsewhere:block/stripped_kelpwood_log"
+  }
+}

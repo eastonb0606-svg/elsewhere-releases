@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=true": {
+      "model": "elsewhere:block/hotbox_vent_open"
+    },
+    "open=false": {
+      "model": "elsewhere:block/hotbox_vent_closed"
+    }
+  }
+}

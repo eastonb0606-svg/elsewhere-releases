@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smithing_transform",
+  "category": "equipment",
+  "template": "elsewhere:gale_pinion",
+  "base": "minecraft:elytra",
+  "addition": "elsewhere:petal_glider",
+  "result": {
+    "id": "elsewhere:zephyr_wings",
+    "count": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+ "role": "melee",
+ "skin": "elsewhere:textures/entity/kingdom/mirewick/reed_knight.png",
+ "armor": {
+  "head": "minecraft:iron_helmet",
+  "chest": "minecraft:chainmail_chestplate",
+  "legs": "minecraft:chainmail_leggings",
+  "feet": "minecraft:iron_boots"
+ },
+ "main_hand": "minecraft:iron_axe",
+ "off_hand": "minecraft:shield",
+ "ability": "bash",
+ "stats": {
+  "health": 24,
+  "speed": 0.28,
+  "knockback_resistance": 0.1,
+  "armor": 1.0
+ },
+ "combat": {
+  "crit_cooldown": 160,
+  "sprint_chance": 0.2,
+  "strafe": 0.4,
+  "retreat_chance": 0.35,
+  "block_chance": 0.7,
+  "crit_chance": 0.1,
+  "retreat_health": 0.25
+ },
+ "trim": {
+  "material": "minecraft:amethyst",
+  "patterns": [
+   "elsewhere:mirewick",
+   "minecraft:tide",
+   "minecraft:wild"
+  ]
+ }
+}

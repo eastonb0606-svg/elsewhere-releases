@@ -1,0 +1,73 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "t": "elsewhere:block/proving_challenge_horn",
+  "particle": "elsewhere:block/proving_challenge_horn"
+ },
+ "elements": [
+  {
+   "from": [
+    6,
+    0,
+    6
+   ],
+   "to": [
+    10,
+    12,
+    10
+   ],
+   "faces": {
+    "north": {
+     "texture": "#t"
+    },
+    "south": {
+     "texture": "#t"
+    },
+    "east": {
+     "texture": "#t"
+    },
+    "west": {
+     "texture": "#t"
+    },
+    "up": {
+     "texture": "#t"
+    },
+    "down": {
+     "texture": "#t"
+    }
+   }
+  },
+  {
+   "from": [
+    3,
+    10,
+    5
+   ],
+   "to": [
+    13,
+    14,
+    11
+   ],
+   "faces": {
+    "north": {
+     "texture": "#t"
+    },
+    "south": {
+     "texture": "#t"
+    },
+    "east": {
+     "texture": "#t"
+    },
+    "west": {
+     "texture": "#t"
+    },
+    "up": {
+     "texture": "#t"
+    },
+    "down": {
+     "texture": "#t"
+    }
+   }
+  }
+ ]
+}

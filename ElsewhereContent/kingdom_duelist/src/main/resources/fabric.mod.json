@@ -1,0 +1,21 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_duelist",
+	"version": "${version}",
+	"name": "Elsewhere: Duelist (dev module)",
+	"description": "The Human Duelist boss kit: HumanBoss base entity, telegraphs, temporary blocks, the adaptive framework. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.duelist.DevEntry"],
+		"client": ["dev.elsewhere.duelist.DevClientEntry"]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"mixins": ["elsewhere_duelist.mixins.json", {"config": "elsewhere_duelist_anim.mixins.json", "environment": "client"}]
+}

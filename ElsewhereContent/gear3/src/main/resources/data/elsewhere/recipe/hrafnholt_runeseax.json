@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:hrafnholt_seal_skald",
+  "base": "minecraft:diamond_sword",
+  "addition": "elsewhere:hacksilver",
+  "result": {
+    "id": "elsewhere:hrafnholt_runeseax"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "elsewhere:hrafnholt_seal_skald",
+        "elsewhere:hacksilver"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+ "type": "elsewhere:ironpeak",
+ "generator": {
+  "type": "minecraft:noise",
+  "settings": "elsewhere:ironpeak",
+  "biome_source": {
+   "type": "minecraft:multi_noise",
+   "biomes": [
+    {
+     "biome": "elsewhere:iron_foothills",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       0.45
+      ],
+      "continentalness": [
+       -1.0,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       -1.0,
+       0.3
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "elsewhere:cold_springs",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       0.45,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       -1.0,
+       0.45
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "elsewhere:granite_terraces",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       0.45
+      ],
+      "continentalness": [
+       -1.0,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.3,
+       0.55
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "elsewhere:frostbite_shelf",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.55,
+       1.1
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "elsewhere:the_thin_air",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       1.1,
+       2.0
+      ],
+      "offset": 0.0
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/crossbow",
+  "textures": {
+    "layer0": "elsewhere:item/clockwork_repeater_pulling_1"
+  }
+}

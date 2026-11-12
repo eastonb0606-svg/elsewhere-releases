@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere-gametest",
+	"version": "1.0.0",
+	"name": "Elsewhere client screenshots",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["dev.elsewhere.gametest.ElsewhereScreenshotTest"]
+	},
+	"depends": {
+		"elsewhere": "*"
+	}
+}

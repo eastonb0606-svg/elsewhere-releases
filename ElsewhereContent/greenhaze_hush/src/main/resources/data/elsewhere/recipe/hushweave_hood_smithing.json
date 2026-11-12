@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "elsewhere:hushweave_upgrade_smithing_template",
+  "base": "minecraft:diamond_helmet",
+  "addition": "elsewhere:echo_alloy",
+  "result": {
+    "id": "elsewhere:hushweave_hood"
+  }
+}

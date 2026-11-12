@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elsewhere:moonsilk"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elsewhere:moonsilk"
+      }
+    ]
+  }
+}

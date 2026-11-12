@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "dev.elsewhere.rivals.hrafnholt.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"LivingEntityHurtMixin",
+		"LivingEntityIceMixin",
+		"ArmorStandStandardMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

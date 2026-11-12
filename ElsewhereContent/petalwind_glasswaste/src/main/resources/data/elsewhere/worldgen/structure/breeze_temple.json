@@ -1,0 +1,13 @@
+{
+ "type": "elsewhere:pg_boss_site",
+ "biomes": [
+  "elsewhere:blossom_crowns",
+  "elsewhere:hanging_gardens",
+  "elsewhere:cloud_nine",
+  "elsewhere:gale_steppes"
+ ],
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "none",
+ "kind": "breeze_temple"
+}

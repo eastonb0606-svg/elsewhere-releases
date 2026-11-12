@@ -1,0 +1,5 @@
+{
+  "sfx3.magnate.bell": {"subtitle": "subtitles.elsewhere.sfx3.magnate.bell", "sounds": [{"name": "elsewhere:sfx3/magnate/bell"}, {"name": "elsewhere:sfx3/magnate/bell", "pitch": 0.94}]},
+  "sfx3.magnate.coins": {"subtitle": "subtitles.elsewhere.sfx3.magnate.coins", "sounds": [{"name": "elsewhere:sfx3/magnate/coins"}, {"name": "elsewhere:sfx3/magnate/coins", "pitch": 1.06}]},
+  "sfx3.magnate.clock": {"subtitle": "subtitles.elsewhere.sfx3.magnate.clock", "sounds": [{"name": "elsewhere:sfx3/magnate/clock"}, {"name": "elsewhere:sfx3/magnate/clock", "pitch": 0.95}]}
+}

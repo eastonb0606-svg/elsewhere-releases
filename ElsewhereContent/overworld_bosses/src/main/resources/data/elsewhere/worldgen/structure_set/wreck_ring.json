@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "elsewhere:wreck_ring",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 39124477,
+    "separation": 14,
+    "spacing": 40
+  }
+}

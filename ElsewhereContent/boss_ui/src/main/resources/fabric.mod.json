@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "elsewhere_boss_ui",
+	"version": "${version}",
+	"name": "Elsewhere: Boss UI (dev module)",
+	"description": "Custom framed boss bars (icon, sub-bars, attack name), data-driven by assets/elsewhere/boss_bars.json. Dev module; merges into the Elsewhere core.",
+	"authors": [],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.elsewhere.boss_ui.DevEntry"],
+		"client": ["dev.elsewhere.boss_ui.BossUiClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"mixins": [
+		{ "config": "elsewhere_boss_ui.mixins.json", "environment": "client" }
+	]
+}

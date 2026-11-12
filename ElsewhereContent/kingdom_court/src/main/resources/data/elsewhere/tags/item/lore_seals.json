@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "elsewhere:lore_seal_marshal",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_castellan",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_master_at_arms",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_huntsman",
+      "required": false
+    },
+    {
+      "id": "elsewhere:lore_seal_chancellor",
+      "required": false
+    }
+  ]
+}

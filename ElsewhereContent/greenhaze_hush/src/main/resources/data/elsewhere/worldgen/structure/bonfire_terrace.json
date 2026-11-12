@@ -1,0 +1,13 @@
+{
+  "type": "elsewhere:greenhaze_hush_built",
+  "biomes": [
+    "elsewhere:sativa_highlands",
+    "elsewhere:munchie_groves",
+    "elsewhere:kush_canopy"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "kind": "bonfire_terrace",
+  "anchor": "surface",
+  "y": 64
+}

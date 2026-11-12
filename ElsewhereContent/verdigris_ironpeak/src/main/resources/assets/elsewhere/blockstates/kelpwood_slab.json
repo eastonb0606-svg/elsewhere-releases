@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elsewhere:block/kelpwood_slab"
+    },
+    "type=double": {
+      "model": "elsewhere:block/kelpwood_planks"
+    },
+    "type=top": {
+      "model": "elsewhere:block/kelpwood_slab_top"
+    }
+  }
+}

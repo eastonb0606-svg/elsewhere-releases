@@ -1,0 +1,355 @@
+{
+ "palette": {
+  "minecraft:stone_bricks": "minecraft:cut_sandstone",
+  "minecraft:cobblestone": "minecraft:sandstone",
+  "minecraft:stone": "minecraft:smooth_sandstone",
+  "minecraft:stone_brick_wall": "minecraft:sandstone_wall",
+  "minecraft:stone_brick_stairs": "minecraft:sandstone_stairs",
+  "minecraft:stone_brick_slab": "minecraft:sandstone_slab",
+  "minecraft:mossy_stone_bricks": "minecraft:chiseled_sandstone",
+  "minecraft:spruce_planks": "minecraft:acacia_planks",
+  "minecraft:spruce_log": "minecraft:acacia_log",
+  "minecraft:spruce_slab": "minecraft:acacia_slab",
+  "minecraft:spruce_fence": "minecraft:acacia_fence",
+  "minecraft:spruce_trapdoor": "minecraft:acacia_trapdoor",
+  "minecraft:spruce_fence_gate": "minecraft:acacia_fence_gate",
+  "minecraft:oak_planks": "minecraft:acacia_planks",
+  "minecraft:oak_log": "minecraft:acacia_log",
+  "minecraft:oak_fence": "minecraft:acacia_fence",
+  "minecraft:oak_stairs": "minecraft:acacia_stairs",
+  "minecraft:glass_pane": "minecraft:iron_bars",
+  "minecraft:blue_stained_glass_pane": "minecraft:iron_bars",
+  "minecraft:blue_wool": "minecraft:blue_terracotta",
+  "minecraft:dirt_path": "minecraft:smooth_sandstone"
+ },
+ "pieces": [
+  {
+   "type": "box",
+   "from": [
+    -9,
+    0,
+    31
+   ],
+   "to": [
+    -5,
+    0,
+    34
+   ],
+   "block": "minecraft:smooth_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    -8,
+    1,
+    31
+   ],
+   "to": [
+    -6,
+    2,
+    33
+   ],
+   "block": "minecraft:cut_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    -8,
+    1,
+    34
+   ],
+   "to": [
+    -8,
+    1,
+    34
+   ],
+   "block": "minecraft:cut_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    -6,
+    1,
+    34
+   ],
+   "to": [
+    -6,
+    1,
+    34
+   ],
+   "block": "minecraft:cut_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    -8,
+    3,
+    33
+   ],
+   "to": [
+    -6,
+    5,
+    33
+   ],
+   "block": "minecraft:chiseled_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    -9,
+    4,
+    33
+   ],
+   "to": [
+    -5,
+    5,
+    33
+   ],
+   "block": "minecraft:blue_glazed_terracotta",
+   "hollow": false
+  },
+  {
+   "type": "set",
+   "at": [
+    -7,
+    5,
+    34
+   ],
+   "block": "minecraft:yellow_terracotta"
+  },
+  {
+   "type": "obelisk",
+   "at": [
+    -13,
+    0,
+    33
+   ],
+   "height": 12,
+   "base": 2,
+   "block": "minecraft:smooth_sandstone",
+   "cap": "minecraft:yellow_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    -16,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    -20,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    -24,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    -28,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "set",
+   "at": [
+    -13,
+    4,
+    34
+   ],
+   "block": "minecraft:blue_glazed_terracotta"
+  },
+  {
+   "type": "box",
+   "from": [
+    5,
+    0,
+    31
+   ],
+   "to": [
+    9,
+    0,
+    34
+   ],
+   "block": "minecraft:smooth_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    6,
+    1,
+    31
+   ],
+   "to": [
+    8,
+    2,
+    33
+   ],
+   "block": "minecraft:cut_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    6,
+    1,
+    34
+   ],
+   "to": [
+    6,
+    1,
+    34
+   ],
+   "block": "minecraft:cut_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    8,
+    1,
+    34
+   ],
+   "to": [
+    8,
+    1,
+    34
+   ],
+   "block": "minecraft:cut_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    6,
+    3,
+    33
+   ],
+   "to": [
+    8,
+    5,
+    33
+   ],
+   "block": "minecraft:chiseled_sandstone",
+   "hollow": false
+  },
+  {
+   "type": "box",
+   "from": [
+    5,
+    4,
+    33
+   ],
+   "to": [
+    9,
+    5,
+    33
+   ],
+   "block": "minecraft:blue_glazed_terracotta",
+   "hollow": false
+  },
+  {
+   "type": "set",
+   "at": [
+    7,
+    5,
+    34
+   ],
+   "block": "minecraft:yellow_terracotta"
+  },
+  {
+   "type": "obelisk",
+   "at": [
+    13,
+    0,
+    33
+   ],
+   "height": 12,
+   "base": 2,
+   "block": "minecraft:smooth_sandstone",
+   "cap": "minecraft:yellow_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    16,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    20,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    24,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "column",
+   "at": [
+    28,
+    0,
+    33
+   ],
+   "height": 6,
+   "block": "minecraft:cut_sandstone",
+   "cap": "minecraft:cyan_terracotta"
+  },
+  {
+   "type": "set",
+   "at": [
+    13,
+    4,
+    34
+   ],
+   "block": "minecraft:blue_glazed_terracotta"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "elsewhere:trichome_quartz_ore",
+    "elsewhere:trichome_quartz_block",
+    "elsewhere:hushstone",
+    "elsewhere:hushstone_stairs",
+    "elsewhere:hushstone_slab",
+    "elsewhere:hushstone_wall",
+    "elsewhere:polished_hushstone",
+    "elsewhere:hushstone_bricks",
+    "elsewhere:hushstone_brick_stairs",
+    "elsewhere:hushstone_brick_slab",
+    "elsewhere:hushstone_brick_wall",
+    "elsewhere:echo_crystal_ore",
+    "elsewhere:echo_crystal_block",
+    "elsewhere:ossuary_bone_bricks",
+    "elsewhere:ossuary_bone_brick_stairs",
+    "elsewhere:ossuary_bone_brick_slab",
+    "elsewhere:ossuary_bone_brick_wall"
+  ]
+}
