@@ -1,0 +1,477 @@
+{
+  "lanes": {
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 26,
+          "line": 37,
+          "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:solaxis": [
+        {
+          "file": "anim__solaxis_hurt_peak.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:33:22"
+        },
+        {
+          "file": "anim__solaxis_hurt_rest.png",
+          "scene": 45,
+          "line": 58,
+          "check": "peak: core jolts back and tilts, column rocks; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:33:23"
+        }
+      ],
+      "elsewhere:ossyra": [
+        {
+          "file": "anim__ossyra_hurt_peak.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:33:26"
+        },
+        {
+          "file": "anim__ossyra_hurt_rest.png",
+          "scene": 49,
+          "line": 62,
+          "check": "peak: shell rattles side to side, pearl winces smaller; rest shot back to idle with no stuck pose",
+          "status": "ok",
+          "taken": "22:33:27"
+        }
+      ],
+      "elsewhere:neferkhet": [
+        {
+          "file": "anim__neferkhet_hurt_peak.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:30"
+        },
+        {
+          "file": "anim__neferkhet_hurt_rest.png",
+          "scene": 54,
+          "line": 67,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:31"
+        }
+      ],
+      "elsewhere:grumblegut": [
+        {
+          "file": "anim__grumblegut_hurt_peak.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:34"
+        },
+        {
+          "file": "anim__grumblegut_hurt_rest.png",
+          "scene": 58,
+          "line": 71,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:35"
+        }
+      ],
+      "elsewhere:hrolf": [
+        {
+          "file": "anim__hrolf_hurt_peak.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:38"
+        },
+        {
+          "file": "anim__hrolf_hurt_rest.png",
+          "scene": 62,
+          "line": 75,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:38"
+        }
+      ],
+      "elsewhere:kazehana": [
+        {
+          "file": "anim__kazehana_hurt_peak.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:41"
+        },
+        {
+          "file": "anim__kazehana_hurt_rest.png",
+          "scene": 66,
+          "line": 79,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:42"
+        }
+      ],
+      "elsewhere:mother_creak": [
+        {
+          "file": "anim__mother_creak_hurt_peak.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:45"
+        },
+        {
+          "file": "anim__mother_creak_hurt_rest.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "22:33:46"
+        }
+      ]
+    },
+    "items": {
+      "elsewhere:amber_grimoire": [
+        {
+          "file": "items__amber_grimoire_held.png",
+          "scene": 125,
+          "line": 141,
+          "check": "icon matches the sprite page (16x16, Amber Grimoire), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:33:47"
+        },
+        {
+          "file": "items__amber_grimoire_tooltip.png",
+          "scene": 125,
+          "line": 141,
+          "check": "icon matches the sprite page (16x16, Amber Grimoire), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "22:33:48"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:ironpeak_return_rift": [
+        {
+          "file": "s_struct_verdigris__ironpeak_return_rift_s_8_5_8.png",
+          "scene": 157,
+          "line": 174,
+          "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:tidelock_vault": [
+        {
+          "file": "s_struct_verdigris__tidelock_vault_s_0_3_14.png",
+          "scene": 162,
+          "line": 179,
+          "check": "the plate chamber set into the sea-bed slope: sediment over the back half of the roof and banked on the sides, riveted portal with a plate lintel and two lit bulbs, a plated apron down to the bed",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
+        {
+          "file": "s_p13_particles__rimeback_avalanche_10s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__rimeback_avalanche_20s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:petal_pagoda": [
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_24_16_24.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_0_4_26.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:eye_of_the_gale": [
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_0_8_26.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_20_10_20.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_sultana (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase2.png",
+          "scene": 203,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "22:33:50"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:hollow_shrine": [
+        {
+          "file": "s_struct_core__hollow_shrine_s_9_6_9.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__hollow_shrine_downhill_20.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:resin_kiln": [
+        {
+          "file": "s_struct_core__resin_kiln_s_10_7_10.png",
+          "scene": 212,
+          "line": 242,
+          "check": "L-shaped half-timber workshop (stripped pale-oak posts, plank infill, stone plinth course) with steep 2:1 roofs meeting in a valley, stone chimney stack past the ridge, lean-to over a gravel yard, mud-brick beehive kiln with flue, fenced yard, Sap Tapper inside; wings on their own floors (a step between them on slopes), nothing floating",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_greenhaze_rework": {
+      "Munchies line": [
+        {
+          "file": "s_greenhaze_rework__munchies_line.png",
+          "scene": 259,
+          "line": 292,
+          "check": "gold action-bar line like \"Best. Bread. Ever.\" and green sparkles at the mouth; hunger bar shows one extra point",
+          "status": "pending"
+        },
+        {
+          "file": "s_greenhaze_rework__munchies_line_5s.png",
+          "scene": 259,
+          "line": 292,
+          "check": "gold action-bar line like \"Best. Bread. Ever.\" and green sparkles at the mouth; hunger bar shows one extra point",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:aphelion": [
+        {
+          "file": "s_p2_telegraph__aphelion_warning_column_helm_on.png",
+          "scene": 267,
+          "line": 303,
+          "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "swarm-as-one column march (kingdom armies, ARMIES 3.3 ribbon)": [
+        {
+          "file": "s_swarm1__patrol_8_10s.png",
+          "scene": 271,
+          "line": 307,
+          "check": "the column bends round the corner along the leader's own footsteps, two files 0.8 to each side; no one cuts the corner or stalls in a clump; the same squad seen from 10 blocks away behaves as before (per-soldier)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:aphelion_shattered_halo": [
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_26_10_26.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sickle": {
+      "elsewhere:mirewick_lantern_sickle": [
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_held.png",
+          "scene": 300,
+          "line": 339,
+          "check": "GUI: a steel crescent blade on a wooden haft with purple wraps and a small purple-and-gold lantern hanging under the blade (reads as a sickle, not checkerboard); handheld pose like a hoe; tooltip: \"Lantern Sickle\" (uncommon, yellow), grey \"Polder sickle of Mirewick\", the 3x3 harvest line and the leaves/vines line",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip.png",
+          "scene": 300,
+          "line": 339,
+          "check": "GUI: a steel crescent blade on a wooden haft with purple wraps and a small purple-and-gold lantern hanging under the blade (reads as a sickle, not checkerboard); handheld pose like a hoe; tooltip: \"Lantern Sickle\" (uncommon, yellow), grey \"Polder sickle of Mirewick\", the 3x3 harvest line and the leaves/vines line",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:sunlance_staff": [
+        {
+          "file": "s_p5_tooltips__sunlance_staff_first_person_2.png",
+          "scene": 340,
+          "line": 383,
+          "check": "grey detail under the gold line: \"Hits up to 3 foes in a 24-block line\", \"Sets them on fire for 2 s\", \"Base cost 5 Glimmer...\", \"Costs 4 under open daytime sky; 6 at night...\", \"Damage scales...\"; Prism: \"Beam: 5 damage/s, rising to 12/s\", \"12 damage/s after 2.5 s on the same target\"; boss_ui \"Durability: x / y\" stays at the bottom; no hint line",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_third_person_2.png",
+          "scene": 340,
+          "line": 383,
+          "check": "grey detail under the gold line: \"Hits up to 3 foes in a 24-block line\", \"Sets them on fire for 2 s\", \"Base cost 5 Glimmer...\", \"Costs 4 under open daytime sky; 6 at night...\", \"Damage scales...\"; Prism: \"Beam: 5 damage/s, rising to 12/s\", \"12 damage/s after 2.5 s on the same target\"; boss_ui \"Durability: x / y\" stays at the bottom; no hint line",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__sunlance_staff_tooltip_2.png",
+          "scene": 340,
+          "line": 383,
+          "check": "grey detail under the gold line: \"Hits up to 3 foes in a 24-block line\", \"Sets them on fire for 2 s\", \"Base cost 5 Glimmer...\", \"Costs 4 under open daytime sky; 6 at night...\", \"Damage scales...\"; Prism: \"Beam: 5 damage/s, rising to 12/s\", \"12 damage/s after 2.5 s on the same target\"; boss_ui \"Durability: x / y\" stays at the bottom; no hint line",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:munchie_market": [
+        {
+          "file": "s_struct_greenhaze__munchie_market_overview.png",
+          "scene": 481,
+          "line": 533,
+          "check": "a 5-wide souk street of path/gravel between mud-brick curbs that steps with the ground, fern verges, lamp posts every 7, a fire-pit bulge with hay benches; 6 stalls on their own pads facing the street (striped awnings sloping to the street, counters, goods), one Budtender booth with a kushwood gable",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__munchie_market_ground.png",
+          "scene": 481,
+          "line": 533,
+          "check": "a 5-wide souk street of path/gravel between mud-brick curbs that steps with the ground, fern verges, lamp posts every 7, a fire-pit bulge with hay benches; 6 stalls on their own pads facing the street (striped awnings sloping to the street, counters, goods), one Budtender booth with a kushwood gable",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sesh_hut": [
+        {
+          "file": "s_struct_greenhaze__sesh_hut_overview.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__sesh_hut_ground.png",
+          "scene": 482,
+          "line": 534,
+          "check": "round stilt hut: 9 kushwood stilts each down to its own ground with knee braces, plank deck with a fence railing and a ladder on the downhill side, bamboo wall with log posts and windows, conical hay roof with a finial lantern; Budtender inside",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:silent_monastery": [
+        {
+          "file": "s_struct_greenhaze__silent_monastery_overview.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__silent_monastery_ground.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_meadhorn": {
+      "elsewhere:hrafnholt_mead_horn": [
+        {
+          "file": "s_meadhorn__hrafnholt_mead_horn_first_person.png",
+          "scene": 493,
+          "line": 546,
+          "check": "",
+          "status": "pending"
+        },
+        {
+          "file": "s_meadhorn__hrafnholt_mead_horn_third_person.png",
+          "scene": 493,
+          "line": 546,
+          "check": "",
+          "status": "pending"
+        },
+        {
+          "file": "s_meadhorn__hrafnholt_mead_horn_tooltip.png",
+          "scene": 493,
+          "line": 546,
+          "check": "",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "22:33:50",
+  "totals": {
+    "ok": 17,
+    "fail": 0,
+    "manual": 0
+  }
+}
