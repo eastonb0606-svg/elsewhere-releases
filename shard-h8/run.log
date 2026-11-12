@@ -11,3 +11,36 @@ JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_e
 elsewhere-3.0.0.jar
 merged jar elsewhere-3.0.0.jar 146913215 bytes in 86 s
 23:38:41Z client: scenes 160,212,329,411,46,65,202,258,309,363,430,460, watchdog 90 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+remote: 
+remote: Create a pull request for 'cloud-shots-h8' on GitHub by visiting:        
+remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-h8        
+remote: 
+published 5 PNGs (progress) -> cloud-shots-h8 4d7034d
+client rc=0
+[23:41:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_first_person.png: menu_click: elsewhere:boss_token is not in the open inventory
+[23:41:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_third_person.png: menu_click: elsewhere:boss_token is not in the open inventory
+[23:41:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_tooltip.png: menu_click: elsewhere:boss_token is not in the open inventory
+[23:44:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 19 ok, 3 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[23:40:04] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[23:40:04] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[23:40:04] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+[23:40:08] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[23:40:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] 8 flat-stage scenes, 4 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[23:40:12] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+boss_music client selftest:
+23:44:45Z finished rc=0, 19 PNGs;  TOTAL 19 ok, 3 fail, 0 manual

@@ -45,7 +45,8 @@
           "scene": 160,
           "line": 177,
           "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:31"
         }
       ]
     },
@@ -68,7 +69,8 @@
           "scene": 212,
           "line": 242,
           "check": "L-shaped half-timber workshop (stripped pale-oak posts, plank infill, stone plinth course) with steep 2:1 roofs meeting in a valley, stone chimney stack past the ridge, lean-to over a gravel yard, mud-brick beehive kiln with flue, fenced yard, Sap Tapper inside; wings on their own floors (a step between them on slopes), nothing floating",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:57"
         }
       ]
     },
@@ -79,14 +81,16 @@
           "scene": 258,
           "line": 291,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:01"
         },
         {
           "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
           "scene": 258,
           "line": 291,
           "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:37"
         }
       ]
     },
@@ -97,14 +101,16 @@
           "scene": 309,
           "line": 349,
           "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:38"
         },
         {
           "file": "s_starpiercer__aphelion_starpiercer_third_person.png",
           "scene": 309,
           "line": 349,
           "check": "upright violet bow (dark grip, star-white string on the right), epic name colour, 3 lore lines (draw 1.6 s / x1.6 speed, pierce, sprint cancel); JEI lines name Aphelion 30% and the recipe",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:39"
         }
       ]
     },
@@ -115,14 +121,16 @@
           "scene": 329,
           "line": 372,
           "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:52"
         },
         {
           "file": "s_p9_idle__pose_drink_and_pose_torch_5s.png",
           "scene": 329,
           "line": 372,
           "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:43:58"
         }
       ]
     },
@@ -133,21 +141,24 @@
           "scene": 363,
           "line": 411,
           "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:42"
         },
         {
           "file": "s_setbonus_b__hrafnholt_wolfskin_boots_third_person.png",
           "scene": 363,
           "line": 411,
           "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:43"
         },
         {
           "file": "s_setbonus_b__hrafnholt_wolfskin_boots_tooltip.png",
           "scene": 363,
           "line": 411,
           "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:43"
         }
       ]
     },
@@ -158,7 +169,8 @@
           "scene": 411,
           "line": 461,
           "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle façade, scarab over its door",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:44:16"
         }
       ]
     },
@@ -169,21 +181,27 @@
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "fail",
+          "detail": "menu_click: elsewhere:boss_token is not in the open inventory",
+          "taken": "23:41:45"
         },
         {
           "file": "s_compat_transmute__boss_token_third_person.png",
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "fail",
+          "detail": "menu_click: elsewhere:boss_token is not in the open inventory",
+          "taken": "23:41:45"
         },
         {
           "file": "s_compat_transmute__boss_token_tooltip.png",
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "fail",
+          "detail": "menu_click: elsewhere:boss_token is not in the open inventory",
+          "taken": "23:41:45"
         }
       ]
     },
@@ -194,22 +212,24 @@
           "scene": 460,
           "line": 512,
           "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:41:56"
         },
         {
           "file": "s_lod__melee_subtitles.png",
           "scene": 460,
           "line": 512,
           "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
-          "status": "pending"
+          "status": "ok",
+          "taken": "23:42:03"
         }
       ]
     }
   },
-  "run": "23:40:34",
+  "run": "23:44:18",
   "totals": {
-    "ok": 5,
-    "fail": 0,
+    "ok": 19,
+    "fail": 3,
     "manual": 0
   }
 }
