@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 17:30",
+ "generated": "2026-11-12 17:36",
  "scenes": [
   {
    "n": 1,
@@ -20776,6 +20776,9 @@
      0
     ],
     [
+     "chunks"
+    ],
+    [
      "cmd",
      "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
     ],
@@ -20792,11 +20795,20 @@
     ],
     [
      "camera",
-     "back"
+     "front"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     180,
+     0
     ],
     [
      "wait",
-     12
+     14
     ],
     [
      "shot",
@@ -20807,7 +20819,48 @@
      "first"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "look_target"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     2
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "camera",
+     "front"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     180,
+     0
     ],
     [
      "wait",
@@ -20818,30 +20871,7 @@
     ],
     [
      "wait",
-     3
-    ],
-    [
-     "shot",
-     "ironclad_flail_in_use_first_person"
-    ],
-    [
-     "wait",
-     25
-    ],
-    [
-     "camera",
-     "back"
-    ],
-    [
-     "wait",
-     8
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     3
+     2
     ],
     [
      "shot",
@@ -20854,6 +20884,15 @@
     [
      "camera",
      "first"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "look_target"
@@ -20916,7 +20955,7 @@
    "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
    "setup": "flat world, noon, survival, `elsewhere:ironclad_flail` in main hand, a NoAI husk 2 blocks ahead; left-click it and shoot 2 ticks after the click (mid-swing), then again 4 ticks after",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "itemsd.json"
+   "override": "w5-useanims.json"
   },
   {
    "n": 232,
@@ -20963,7 +21002,7 @@
      0,
      0,
      0,
-     0,
+     180,
      0
     ],
     [
@@ -20979,21 +21018,6 @@
     ],
     [
      "camera",
-     "first"
-    ],
-    [
-     "look_target"
-    ],
-    [
-     "wait",
-     6
-    ],
-    [
-     "shot",
-     "ironclad_flail_first_person_2"
-    ],
-    [
-     "camera",
      "front"
     ],
     [
@@ -21002,37 +21026,34 @@
     ],
     [
      "shot",
-     "ironclad_flail_third_person_2"
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
-     "look_target"
+     "ironclad_flail_first_person_2"
     ],
     [
      "wait",
-     14
+     8
+    ],
+    [
+     "shot",
+     "ironclad_flail_third_person_2"
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "attack"
     ],
     [
      "wait",
-     3
+     2
     ],
     [
      "shot",
      "ironclad_flail_in_use_first_person_2"
     ],
     [
-     "camera",
-     "front"
-    ],
-    [
      "wait",
-     20
+     30
     ],
     [
      "attack"
@@ -21047,19 +21068,15 @@
     ],
     [
      "wait",
-     20
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
-     "wait",
-     8
+     30
     ],
     [
      "shot",
      "ironclad_flail_after_use_2"
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "hold",
@@ -21111,7 +21128,7 @@
    "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
    "setup": "same scene, F5 (front view), or a second player 6 blocks away swinging; shoot mid-swing for each weapon",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "itemsd.json"
+   "override": "w5-useanims.json"
   },
   {
    "n": 233,
@@ -21296,14 +21313,14 @@
     ],
     [
      "wait",
-     5
+     30
     ],
     [
      "attack"
     ],
     [
      "wait",
-     3
+     6
     ],
     [
      "shot",
@@ -21334,15 +21351,11 @@
     ],
     [
      "wait",
-     40
+     8
     ],
     [
      "shot",
      "ironclad_flail_after_use_3"
-    ],
-    [
-     "camera",
-     "first"
     ],
     [
      "inventory",
@@ -21389,7 +21402,7 @@
    "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
    "setup": "flail in hand, stand still 1 s (shot 1, also the hotbar slot), swing at air and shoot within 4 ticks (shot 2)",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "itemsd.json"
+   "override": "w5-useanims.json"
   },
   {
    "n": 235,
@@ -27531,9 +27544,12 @@
      "stage",
      0,
      0,
-     0,
+     -1,
      0,
      0
+    ],
+    [
+     "chunks"
     ],
     [
      "wait",
@@ -27544,11 +27560,44 @@
     ],
     [
      "wait",
-     20
+     2
     ],
     [
      "shot",
      "mirewick_lantern_sickle_first_person_2"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "tp",
+     "stage",
+     2,
+     0,
+     0,
+     -39,
+     2
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     -1,
+     0,
+     0
     ],
     [
      "camera",
@@ -27607,7 +27656,7 @@
    "check": "leaves: the 3x3 of the front face goes at once (the back row stays), break particles on all 9; vines: the 3x3 of vines goes, the wall stays; sneaking breaks only one",
    "setup": "survival, an oak-leaf hedge 5 wide x 3 high x 2 deep with vines on a stone wall beside it; break the middle leaf of the front face, then one vine",
    "note": "generic: item mirewick_lantern_sickle; framing approximate",
-   "override": "shard-3.out.json"
+   "override": "w5-useanims.json"
   },
   {
    "n": 303,
@@ -27669,12 +27718,24 @@
      "first"
     ],
     [
+     "look_target"
+    ],
+    [
      "wait",
      6
     ],
     [
      "shot",
      "thornlash_first_person"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     180,
+     0
     ],
     [
      "camera",
@@ -27693,8 +27754,20 @@
      "first"
     ],
     [
-     "camera",
-     "first"
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     4
     ],
     [
      "use_down"
@@ -27708,19 +27781,32 @@
     ],
     [
      "wait",
-     4
+     3
     ],
     [
      "shot",
      "thornlash_in_use_first_person"
     ],
     [
+     "wait",
+     20
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     180,
+     0
+    ],
+    [
      "camera",
-     "back"
+     "front"
     ],
     [
      "wait",
-     20
+     10
     ],
     [
      "use_down"
@@ -27734,7 +27820,7 @@
     ],
     [
      "wait",
-     4
+     3
     ],
     [
      "shot",
@@ -27747,6 +27833,18 @@
     [
      "camera",
      "first"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "look_target"
     ],
     [
      "wait",
@@ -27813,7 +27911,7 @@
    "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, cursor on each of Thornlash, Tidechain Lash, Sunscourge, Echo Chord; then survival, each in the main hand, first person and F5 front, noon; right-click once and shoot during the 0.5 s cooldown",
    "note": "generic: item thornlash; framing approximate",
-   "override": "itemsc.json"
+   "override": "w5-useanims.json"
   },
   {
    "n": 304,
@@ -35776,11 +35874,11 @@
    "line": 446,
    "lane": "s_throne",
    "item": "Grunthar legacy treasure hall (nether, 2.x saved arena)",
-   "world": "flat",
+   "world": "normal",
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -35792,43 +35890,34 @@
     ],
     [
      "gui",
-     true
-    ],
-    [
-     "fly"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
-     20,
-     0,
-     0
+     false
     ],
     [
      "cmd",
-     "elsewhere_dev boss grunthar arena"
+     "effect give @s night_vision infinite 1 true"
     ],
     [
-     "wait",
-     60
+     "locate",
+     "elsewhere:grunthar_treasure_hall"
     ],
     [
      "tp",
-     "stage",
-     0,
+     "anchor",
      8,
-     6,
-     0,
-     25
+     14,
+     56,
+     180,
+     15
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     60
+     100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
@@ -35856,7 +35945,7 @@
    "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
    "setup": "`/elsewhere summon grunthar` arena or the legacy hall in a 2.x world, camera 12 out / 6 up across the hoard",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-2.out.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 397,
@@ -36764,7 +36853,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -36779,16 +36868,16 @@
      true
     ],
     [
+     "chat",
+     false
+    ],
+    [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
-     "item replace entity @s hotbar.1 with minecraft:goat_horn"
-    ],
-    [
-     "cmd",
-     "attribute @s elsewhere:minion_slots base set 3"
+     "effect give @s saturation infinite 255 true"
     ],
     [
      "hold",
@@ -36817,18 +36906,12 @@
      "front"
     ],
     [
-     "use_down"
-    ],
-    [
      "wait",
-     15
+     12
     ],
     [
      "shot",
      "hrafnholt_wolfcall_horn_third_person"
-    ],
-    [
-     "use_up"
     ],
     [
      "camera",
@@ -36871,7 +36954,7 @@
    "check": "a charcoal horn with hacksilver bands and a leather strap with a fang charm, held at the side like a goat horn; inventory icon matches",
    "setup": "survival, daytime Hrafnholt or plains, `/give @s elsewhere:hrafnholt_wolfcall_horn`, third person front view, then first person",
    "note": "generic: item hrafnholt_wolfcall_horn, 1 setup command(s); framing approximate",
-   "override": "itemsc.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 407,
@@ -36882,7 +36965,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -36897,12 +36980,32 @@
      true
     ],
     [
+     "chat",
+     false
+    ],
+    [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
      "attribute @s elsewhere:minion_slots base set 3"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "hold",
@@ -36954,10 +37057,6 @@
      "first"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
      "use_down"
     ],
     [
@@ -36981,11 +37080,15 @@
      "hrafnholt_wolfcall_horn_in_use_third_person"
     ],
     [
+     "wait",
+     14
+    ],
+    [
      "use_up"
     ],
     [
      "wait",
-     20
+     50
     ],
     [
      "camera",
@@ -36993,7 +37096,7 @@
     ],
     [
      "wait",
-     8
+     10
     ],
     [
      "shot",
@@ -37056,7 +37159,7 @@
    "check": "the horn is raised to the mouth (goat-horn toot pose); on release a big dark Warg appears beside the player",
    "setup": "as above, hold use for 1 s, shoot at 0.5 s (third person front, then first person)",
    "note": "generic: item hrafnholt_wolfcall_horn; framing approximate",
-   "override": "itemsc.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 408,
@@ -37067,7 +37170,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -37082,8 +37185,8 @@
      true
     ],
     [
-     "cmd",
-     "effect give @s night_vision infinite 1 true"
+     "chat",
+     false
     ],
     [
      "cmd",
@@ -37091,7 +37194,41 @@
     ],
     [
      "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
      "attribute @s elsewhere:minion_slots base set 3"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots modifier add elsewhere:qa_slots 1 add_value"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:herdcaller_cap"
+    ],
+    [
+     "equip",
+     "armor.chest",
+     "elsewhere:herdcaller_vest"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "hold",
@@ -37099,29 +37236,26 @@
      "elsewhere:hrafnholt_wolfcall_horn"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
      "summon",
      "minecraft:zombie",
-     "{NoAI:1b,PersistenceRequired:1b,Health:40.0f,attributes:[{id:\"minecraft:max_health\",base:40.0}]}",
+     "{NoAI:1b,PersistenceRequired:1b,Health:200.0f,attributes:[{id:\"minecraft:max_health\",base:200.0}]}",
      0,
      8
     ],
     [
-     "use_down"
-    ],
-    [
-     "wait",
-     30
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     40
-    ],
-    [
-     "wait",
-     60
+     "look_target"
     ],
     [
      "use_down"
@@ -37138,8 +37272,18 @@
      40
     ],
     [
+     "use_down"
+    ],
+    [
      "wait",
-     60
+     30
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "use_down"
@@ -37163,7 +37307,7 @@
     ],
     [
      "wait",
-     30
+     40
     ],
     [
      "look_target"
@@ -37197,7 +37341,7 @@
    "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
    "setup": "plains, at least 30 Glimmer, blow the horn 3 times (3 summoner slots, e.g. with Summoner gear), `/summon minecraft:zombie ~6 ~ ~`, camera 6 back at the side",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "itemsc.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 409,
@@ -39514,11 +39658,20 @@
     ],
     [
      "wait",
-     15
+     40
     ],
     [
      "shot",
      "bramble_totem_in_use_first_person"
+    ],
+    [
+     "tp",
+     "stage",
+     1.5,
+     0,
+     -1,
+     0,
+     5
     ],
     [
      "camera",
@@ -39594,7 +39747,7 @@
    "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
    "setup": "flat daylight, survival with Glimmer; use the Bramble Totem on grass, then /summon 4 NoAI husks 2-4 blocks around it; camera 5 back, third person, wait 2 s",
    "note": "generic: item bramble_totem; framing approximate",
-   "override": "itemsd.json"
+   "override": "w5-useanims.json"
   },
   {
    "n": 437,
@@ -40462,11 +40615,11 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
-     "time set 18000"
+     "time set 13000"
     ],
     [
      "cmd",
@@ -40477,8 +40630,8 @@
      true
     ],
     [
-     "cmd",
-     "effect give @s night_vision infinite 1 true"
+     "chat",
+     false
     ],
     [
      "cmd",
@@ -40486,11 +40639,45 @@
     ],
     [
      "cmd",
-     "time set 13000"
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
     ],
     [
      "cmd",
      "attribute @s elsewhere:minion_slots base set 2"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots modifier add elsewhere:qa_slots 1 add_value"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:herdcaller_cap"
+    ],
+    [
+     "equip",
+     "armor.chest",
+     "elsewhere:herdcaller_vest"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "cmd",
+     "time set 13000"
     ],
     [
      "hold",
@@ -40507,11 +40694,18 @@
      5
     ],
     [
+     "chunks"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "use_down"
     ],
     [
      "wait",
-     20
+     30
     ],
     [
      "use_up"
@@ -40550,7 +40744,7 @@
    "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
    "setup": "survival flat world, `/time set 13000`, full Glimmer, `/attribute @s elsewhere:minion_slots base set 2`; hold use with the Echo Reliquary for 1 s; shot third person front three-quarter from 4 blocks at +3 s",
    "note": "generic: entity echo_knight, 2 setup command(s); framing approximate",
-   "override": "shard-5.out.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 450,
@@ -40561,7 +40755,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "survival"
     ],
     [
      "cmd",
@@ -40576,12 +40770,46 @@
      true
     ],
     [
+     "chat",
+     false
+    ],
+    [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
      "attribute @s elsewhere:minion_slots base set 2"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots modifier add elsewhere:qa_slots 1 add_value"
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:herdcaller_cap"
+    ],
+    [
+     "equip",
+     "armor.chest",
+     "elsewhere:herdcaller_vest"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "hold",
@@ -40598,25 +40826,32 @@
      5
     ],
     [
-     "use_down"
+     "chunks"
     ],
     [
      "wait",
-     20
+     10
     ],
     [
-     "use_up"
+     "use_down"
     ],
     [
      "wait",
      30
     ],
     [
+     "use_up"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
      "summon",
      "minecraft:husk",
      "{NoAI:1b,PersistenceRequired:1b}",
      0,
-     2.5
+     4
     ],
     [
      "look_target"
@@ -40634,7 +40869,7 @@
     ],
     [
      "camera",
-     "front"
+     "back"
     ],
     [
      "wait",
@@ -40666,7 +40901,7 @@
    "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
    "setup": "same; `/summon husk ~4 ~ ~ {NoAI:1b}`, hit the husk once with the hand; shot side-on from 5 blocks at +2 s",
    "note": "generic: entity echo_knight, 1 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 451,
@@ -40959,10 +41194,6 @@
      "weather clear"
     ],
     [
-     "cmd",
-     "difficulty normal"
-    ],
-    [
      "gui",
      true
     ],
@@ -40976,11 +41207,11 @@
     ],
     [
      "cmd",
-     "effect give @s regeneration infinite 255 true"
+     "effect give @s saturation infinite 255 true"
     ],
     [
      "cmd",
-     "effect give @s saturation infinite 255 true"
+     "difficulty normal"
     ],
     [
      "equip",
@@ -40988,36 +41219,43 @@
      "elsewhere:stormcrest_helm"
     ],
     [
-     "wait",
-     10
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "summon",
      "elsewhere:azmar_wazir",
      "{PersistenceRequired:1b}",
      0,
-     8
-    ],
-    [
-     "view",
-     0.0,
-     6.0,
-     35.0
+     5
     ],
     [
      "chunks"
     ],
     [
-     "wait_label",
-     2400,
-     ""
+     "camera",
+     "back"
     ],
     [
      "wait",
-     6
+     10
     ],
     [
      "look_target"
+    ],
+    [
+     "wait_label",
+     2400,
+     "Counter-Brew"
+    ],
+    [
+     "wait",
+     13
     ],
     [
      "shot",
@@ -41033,7 +41271,7 @@
    "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
    "setup": "stand 5 blocks from where it lands, shot right as it lands",
    "note": "generic: entity azmar_wazir; framing approximate",
-   "override": "hud.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 455,
@@ -41496,8 +41734,8 @@
      false
     ],
     [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
+     "chat",
+     false
     ],
     [
      "cmd",
@@ -41505,7 +41743,28 @@
     ],
     [
      "cmd",
-     "summon elsewhere:marsh_wisp ~1.2 ~3 ~-1.2 {PersistenceRequired:1b}"
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "wait",
+     40
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:mirewick_will_o_lantern"
     ],
     [
      "tp",
@@ -41517,11 +41776,25 @@
      0
     ],
     [
-     "camera",
-     "front"
+     "chunks"
     ],
     [
-     "chunks"
+     "wait",
+     10
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "camera",
+     "front"
     ],
     [
      "wait",
@@ -41541,7 +41814,7 @@
    "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
    "setup": "night, flat world, survival with 20+ Glimmer, hold use 1 s with the lantern; F5 third person from the side, 4 blocks out",
    "note": "generic: entity marsh_wisp; framing approximate",
-   "override": "shard-4.out.json"
+   "override": "w5-summons.json"
   },
   {
    "n": 464,
@@ -42038,10 +42311,6 @@
      "attribute @s elsewhere:minion_slots base set 3"
     ],
     [
-     "cmd",
-     "effect give @s night_vision infinite 1 true"
-    ],
-    [
      "tp",
      "stage",
      0,
@@ -42060,31 +42329,19 @@
      10
     ],
     [
-     "shot",
-     "ironpeak_war_yak_horn_first_person_2"
-    ],
-    [
-     "camera",
-     "front"
-    ],
-    [
-     "wait",
-     15
-    ],
-    [
-     "shot",
-     "ironpeak_war_yak_horn_third_person_2"
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
      "use_down"
     ],
     [
      "wait",
-     10
+     8
+    ],
+    [
+     "shot",
+     "ironpeak_war_yak_horn_first_person_2"
+    ],
+    [
+     "wait",
+     3
     ],
     [
      "shot",
@@ -42100,14 +42357,30 @@
     ],
     [
      "shot",
+     "ironpeak_war_yak_horn_third_person_2"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
      "ironpeak_war_yak_horn_in_use_third_person"
+    ],
+    [
+     "wait",
+     8
     ],
     [
      "use_up"
     ],
     [
+     "camera",
+     "back"
+    ],
+    [
      "wait",
-     30
+     20
     ],
     [
      "shot",
@@ -42116,10 +42389,6 @@
     [
      "camera",
      "first"
-    ],
-    [
-     "cmd",
-     "time set 6000"
     ],
     [
      "inventory",
@@ -42166,7 +42435,7 @@
    "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
    "setup": "give yourself 2 minion slots (e.g. Summoner gear) and 10+ Glimmer, hold use for 1 s, shoot at 0.5 s (third person front, then first person)",
    "note": "generic: item ironpeak_war_yak_horn; framing approximate",
-   "override": "itemsc.json"
+   "override": "w5-useanims.json"
   },
   {
    "n": 474,
