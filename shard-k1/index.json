@@ -1,0 +1,122 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (aldermark realm)": [
+        {
+          "file": "villages__village_near_aldermark.png",
+          "scene": 2,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview.png",
+          "scene": 170,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Aldermark looks (peasant_0..2, craftsman_0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_front.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "ok",
+          "taken": "00:11:07"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_aldermark_looks_peasant_0_2_cr_back.png",
+          "scene": 219,
+          "line": 249,
+          "check": "peasant_0 white coif + woad tunic + leg wraps, peasant_1 woman in a madder kirtle with kerchief and apron, peasant_2 grey tunic + brown cowl; craftsman_0 smith (blue shirt, leather bib apron, beard), craftsman_1 brewster (blue gown, veil, leather apron), craftsman_2 weaver (blue dagged chaperon, russet doublet); no Steve skins, no missing-texture checkerboard, faces not covered by hats",
+          "status": "ok",
+          "taken": "00:11:07"
+        }
+      ],
+      "elsewhere:serf variants (serf, thrall, porter, peat_cutter; kingdom_villages SerfRenderer)": [
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_front.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk_art__serf_variants_serf_thrall_porter_peat_cu_back.png",
+          "scene": 223,
+          "line": 253,
+          "check": "QA fix \"the four Serf variants look identical\": serf = 2.0 brown tunic + straw hair; thrall = bark-brown hood up, wadmal, iron collar, bare feet; porter = bare chest, white headcloth with lapis band, lapis sash, linen kilt; peat_cutter = faded purple smock, crimson cap, apron, mud to the knee, clogs. All four clearly different at a glance",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "`/kingdom armies swarm` report": [
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        },
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Mirewick canal market + lamplighters": [
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_3000.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_12500.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers.png",
+          "scene": 350,
+          "line": 393,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__remnant_heraldry_and_rulers_later.png",
+          "scene": 350,
+          "line": 393,
+          "check": "remnant: grey tabard and cape with the Aldermark emblem darkened (faded), not bright; ruler: the kingdom emblem on its tabard and only the court's own cape (never two capes)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:11:07",
+  "totals": {
+    "ok": 2,
+    "fail": 0,
+    "manual": 0
+  }
+}
