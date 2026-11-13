@@ -1,0 +1,145 @@
+{
+  "lanes": {
+    "s_struct_nether": {
+      "elsewhere:grunthar_treasure_hall": [
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_0_0_21.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:mournmaw_weeping_basin": [
+        {
+          "file": "s_struct_nether__mournmaw_weeping_basin_s_0_16_26.png",
+          "scene": 285,
+          "line": 324,
+          "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:aphelion_shattered_halo": [
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_26_10_26.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:ossyra_matriarch_spire": [
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_20_14_20.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:shrieker_swarm": [
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu.png",
+          "scene": 392,
+          "line": 440,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "ok",
+          "taken": "01:01:11"
+        },
+        {
+          "file": "s_spawngroups__shrieker_swarm_swarm_as_one_greenhaze_hu_later.png",
+          "scene": 392,
+          "line": 440,
+          "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
+          "status": "ok",
+          "taken": "01:01:14"
+        }
+      ],
+      "elsewhere:hotbox_smog": [
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush.png",
+          "scene": 393,
+          "line": 441,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "ok",
+          "taken": "01:01:17"
+        },
+        {
+          "file": "s_spawngroups__hotbox_smog_smog_bank_greenhaze_hush_later.png",
+          "scene": 393,
+          "line": 441,
+          "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
+          "status": "ok",
+          "taken": "01:01:18"
+        }
+      ],
+      "elsewhere:eyeblossom_wisp": [
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core.png",
+          "scene": 394,
+          "line": 442,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "ok",
+          "taken": "01:01:22"
+        },
+        {
+          "file": "s_spawngroups__eyeblossom_wisp_swarm_core_later.png",
+          "scene": 394,
+          "line": 442,
+          "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
+          "status": "ok",
+          "taken": "01:01:23"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "elsewhere:mothlight_staff": [
+        {
+          "file": "s_mothlight__mothlight_staff_held.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "ok",
+          "taken": "01:01:25"
+        },
+        {
+          "file": "s_mothlight__mothlight_staff_tooltip.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "ok",
+          "taken": "01:01:26"
+        }
+      ]
+    }
+  },
+  "run": "01:01:26",
+  "totals": {
+    "ok": 8,
+    "fail": 0,
+    "manual": 0
+  }
+}
