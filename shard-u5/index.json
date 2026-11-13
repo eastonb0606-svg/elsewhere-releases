@@ -19,7 +19,8 @@
           "scene": 157,
           "line": 174,
           "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:28:28"
         }
       ]
     },
@@ -68,14 +69,48 @@
           "scene": 349,
           "line": 392,
           "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:31"
         },
         {
           "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
           "scene": 349,
           "line": 392,
           "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:32"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_30.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "01:27:34"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_40.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "01:27:35"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_low.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "01:27:37"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_low_far.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "01:27:39"
         }
       ]
     },
@@ -86,28 +121,31 @@
           "scene": 363,
           "line": 411,
           "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:44"
         },
         {
           "file": "s_setbonus_b__hrafnholt_wolfskin_boots_third_person.png",
           "scene": 363,
           "line": 411,
           "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:45"
         },
         {
           "file": "s_setbonus_b__hrafnholt_wolfskin_boots_tooltip.png",
           "scene": 363,
           "line": 411,
           "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:46"
         }
       ]
     }
   },
-  "run": "01:27:26",
+  "run": "01:28:30",
   "totals": {
-    "ok": 5,
+    "ok": 15,
     "fail": 0,
     "manual": 0
   }
