@@ -1,0 +1,234 @@
+{
+  "lanes": {
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "00:16:43"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "00:16:43"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "00:16:45"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "00:16:45"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "00:16:52"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_2.png",
+          "scene": 304,
+          "line": 344,
+          "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
+          "status": "ok",
+          "taken": "00:16:53"
+        },
+        {
+          "file": "s_whips__thornlash_first_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "00:17:10"
+        },
+        {
+          "file": "s_whips__thornlash_third_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "00:17:11"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "00:17:12"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "00:17:13"
+        },
+        {
+          "file": "s_whips__thornlash_after_use_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "00:17:15"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip_3.png",
+          "scene": 308,
+          "line": 348,
+          "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
+          "status": "ok",
+          "taken": "00:17:16"
+        }
+      ],
+      "elsewhere:tidechain_lash": [
+        {
+          "file": "s_whips__tidechain_lash_first_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "00:16:55"
+        },
+        {
+          "file": "s_whips__tidechain_lash_third_person.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "00:16:55"
+        },
+        {
+          "file": "s_whips__tidechain_lash_tooltip.png",
+          "scene": 305,
+          "line": 345,
+          "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
+          "status": "ok",
+          "taken": "00:16:56"
+        }
+      ],
+      "elsewhere:azmar_sunscourge": [
+        {
+          "file": "s_whips__azmar_sunscourge_first_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "00:16:58"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_third_person.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "00:16:59"
+        },
+        {
+          "file": "s_whips__azmar_sunscourge_tooltip.png",
+          "scene": 306,
+          "line": 346,
+          "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
+          "status": "ok",
+          "taken": "00:16:59"
+        }
+      ],
+      "elsewhere:echo_chord": [
+        {
+          "file": "s_whips__echo_chord_first_person.png",
+          "scene": 307,
+          "line": 347,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "ok",
+          "taken": "00:17:01"
+        },
+        {
+          "file": "s_whips__echo_chord_third_person.png",
+          "scene": 307,
+          "line": 347,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "ok",
+          "taken": "00:17:02"
+        },
+        {
+          "file": "s_whips__echo_chord_tooltip.png",
+          "scene": 307,
+          "line": 347,
+          "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
+          "status": "ok",
+          "taken": "00:17:03"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:17:16",
+  "totals": {
+    "ok": 21,
+    "fail": 0,
+    "manual": 0
+  }
+}
