@@ -464,3 +464,71 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [01:20:01] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [01:20:01] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
 [01:20:01] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:20:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
+[01:20:08] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 23000 tick(s)
+[01:20:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1576.500000, 105.000000, -7159.500000
+[01:20:10] [Server thread/INFO] (Minecraft) [STDOUT]: [townsfolk-graph] capital:elsewhere:hrafnholt DISCONNECTED: candidates 96, nodes 64, edges 57, link 15.01, rejected (first few): [1570,-7146->1580,-7136 y 81/81 not walkable] [1570,-7146->1560,-7136 y 81/81 not walkable] [1590,-7176->1590,-7186 y 85/82 not walkable] [1590,-7176->1600,-7186 y 85/87 not walkable] [1580,-7136->1590,-7126 y 81/78 not walkable]
+[01:20:28] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 17284ms or 345 ticks behind
+[01:20:47] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[01:21:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1600.006301, 85.000000, -7163.934629
+[01:21:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__hrafnholt_capital_time_set_23000.png: 
+[01:21:17] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 11000 tick(s)
+[01:21:17] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1576.500000, 105.000000, -7159.500000
+[01:21:18] [Server thread/INFO] (Minecraft) System chat: Interrupted the current tick sprint
+[01:21:18] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[01:21:45] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1597.150210, 85.000000, -7165.266309
+[01:21:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__hrafnholt_capital_time_set_11000.png: 
+[01:21:47] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 316 (s_townsfolk | Hrafnholt jetty at dawn + hall feast) done in 106089 ms
+[01:21:47] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:21:47] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:21:48] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 5000 tick(s)
+[01:21:48] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:21:48] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[01:21:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[01:21:51] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 85.000000, -1289.500000
+[01:21:53] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
+[01:21:53] [Render thread/INFO] (Minecraft) Loaded 18 advancements
+[01:22:11] [Server thread/INFO] (Minecraft) System chat: Sprint completed with 11 ticks per second, or 89.06 ms per tick
+[01:22:25] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:22:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1369.362827, 72.000000, -1289.952067
+[01:22:29] [Server thread/INFO] (Minecraft) System chat: Invalid or unknown entity type 'elsewhere:kingdom_lance'
+[01:22:29] [Server thread/INFO] (Minecraft) System chat: ...s @e[type=elsewhere:kingdom_lance,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s<--[HERE]
+[01:22:29] [Server thread/INFO] (Minecraft) System chat: Invalid or unknown entity type 'elsewhere:kingdom_lance'
+[01:22:29] [Server thread/INFO] (Minecraft) System chat: ...y @e[type=elsewhere:kingdom_lance,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s<--[HERE]
+[01:22:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__changing_of_the_guard_salute.png: 
+[01:22:31] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4984ms or 99 ticks behind
+[01:22:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__changing_of_the_guard_salute_5s.png: 
+[01:22:36] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 378 (s_routines | Changing of the guard salute) done in 48264 ms
+[01:22:36] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[01:22:36] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[01:22:36] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[01:22:36] [Server thread/INFO] (Minecraft) Stopping server
+[01:22:36] [Server thread/INFO] (Minecraft) Saving players
+[01:22:36] [Server thread/INFO] (Minecraft) Saving worlds
+[01:22:36] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:22:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:22:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 8 ok, 0 fail, 0 manual
+[01:22:37] [Render thread/INFO] (Minecraft) Stopping!
+[01:22:37] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
