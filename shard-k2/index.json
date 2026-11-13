@@ -1,0 +1,54 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 13,
+          "line": 21,
+          "check": "steep deepslate spires with blue banners on 4 corners + 2 gate spires, pitched keep roof inside the parapet with 4 bartizans, chapel steeple; curtain steps with the ground (no flat 69x69 cut, no cliff); no gold throne (yellow terracotta)",
+          "status": "ok",
+          "taken": "00:12:55"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 14,
+          "line": 22,
+          "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
+          "status": "ok",
+          "taken": "00:13:21"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 20,
+          "line": 28,
+          "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 21,
+          "line": 29,
+          "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_52_40_52_y135.png",
+          "scene": 15,
+          "line": 23,
+          "check": "Jarl's-hall roof over the keep with crossed finials at both ends, timber hoardings on walls and towers, steep spruce spires, stave tower on the hof",
+          "status": "ok",
+          "taken": "00:14:07"
+        }
+      ]
+    }
+  },
+  "run": "00:14:07",
+  "totals": {
+    "ok": 3,
+    "fail": 0,
+    "manual": 0
+  }
+}
