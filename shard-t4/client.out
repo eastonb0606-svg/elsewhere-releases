@@ -489,3 +489,60 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [01:21:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:sunpit in elsewhere:glasswaste at C = 352 54 336
 [01:21:48] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 352.500000, 65.000000, 355.500000
 [01:21:48] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[01:21:57] [Server thread/INFO] (Minecraft) Player ShotRunner standing on air - force-sending blocks below
+[01:22:01] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4200ms or 84 ticks behind
+[01:22:10] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:22:10] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[01:22:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p13_particles__ankhara_arena_seal_3s.png: 
+[01:22:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p13_particles__ankhara_burrow_trail_8s.png: 
+[01:22:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 165 (s_p13_particles | Ankhara arena seal + burrow trail (elsewhere:sunpit)) done in 28401 ms
+[01:22:15] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:22:15] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:22:15] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Spectator Mode
+[01:22:15] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:22:15] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:22:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[01:22:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 952.500000, 94.000000, -4488.500000
+[01:22:21] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5628ms or 112 ticks behind
+[01:23:02] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[01:23:02] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:23:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_layout_azmar__castle_aldermark_c_0_3_16_y180.png: 
+[01:23:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 413 (s_layout_azmar | elsewhere:castle_aldermark) done in 47196 ms
+[01:23:02] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[01:23:02] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[01:23:02] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[01:23:02] [Server thread/INFO] (Minecraft) Stopping server
+[01:23:02] [Server thread/INFO] (Minecraft) Saving players
+[01:23:02] [Server thread/INFO] (Minecraft) Saving worlds
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:23:03] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:23:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 9 ok, 0 fail, 0 manual
+[01:23:04] [Render thread/INFO] (Minecraft) Stopping!
+[01:23:04] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+BUILD SUCCESSFUL in 4m 9s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
