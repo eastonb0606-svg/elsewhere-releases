@@ -7,7 +7,8 @@
           "scene": 14,
           "line": 22,
           "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:37"
         }
       ]
     },
@@ -58,14 +59,16 @@
           "scene": 227,
           "line": 257,
           "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:35"
         },
         {
           "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
           "scene": 227,
           "line": 257,
           "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:46"
         }
       ]
     },
@@ -76,7 +79,8 @@
           "scene": 242,
           "line": 272,
           "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:48"
         }
       ]
     },
@@ -87,14 +91,16 @@
           "scene": 376,
           "line": 424,
           "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:49"
         },
         {
           "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
           "scene": 376,
           "line": 424,
           "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:55"
         }
       ]
     },
@@ -105,7 +111,8 @@
           "scene": 413,
           "line": 463,
           "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:04:29"
         }
       ]
     },
@@ -116,29 +123,35 @@
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "fail",
+          "detail": "scene threw: java.lang.NullPointerException: Cannot invoke \"net.minecraft.client.gui.screens.inventory.AbstractContainerScreen.getMenu()\" because \"scr\" is null",
+          "taken": "01:01:51"
         },
         {
           "file": "s_compat_transmute__boss_token_third_person.png",
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "fail",
+          "detail": "scene threw: java.lang.NullPointerException: Cannot invoke \"net.minecraft.client.gui.screens.inventory.AbstractContainerScreen.getMenu()\" because \"scr\" is null",
+          "taken": "01:01:51"
         },
         {
           "file": "s_compat_transmute__boss_token_tooltip.png",
           "scene": 430,
           "line": 480,
           "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
-          "status": "pending"
+          "status": "fail",
+          "detail": "scene threw: java.lang.NullPointerException: Cannot invoke \"net.minecraft.client.gui.screens.inventory.AbstractContainerScreen.getMenu()\" because \"scr\" is null",
+          "taken": "01:01:51"
         }
       ]
     }
   },
-  "run": "01:01:33",
+  "run": "01:04:32",
   "totals": {
-    "ok": 4,
-    "fail": 0,
+    "ok": 11,
+    "fail": 3,
     "manual": 0
   }
 }
