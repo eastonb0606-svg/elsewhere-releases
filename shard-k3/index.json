@@ -17,14 +17,16 @@
           "scene": 134,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:15:36"
         },
         {
           "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
           "scene": 134,
           "line": 151,
           "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:16:15"
         }
       ]
     },
@@ -43,42 +45,47 @@
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:12:55"
         },
         {
           "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
           "scene": 27,
           "line": 38,
           "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:13:23"
         },
         {
           "file": "generation__castle_aldermark_c_0_75_150_y180.png",
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:13:48"
         },
         {
           "file": "generation__castle_aldermark_c_88_26_52_y180.png",
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:14:21"
         },
         {
           "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
           "scene": 28,
           "line": 39,
           "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:14:46"
         }
       ]
     }
   },
-  "run": "00:12:31",
+  "run": "00:16:17",
   "totals": {
-    "ok": 2,
+    "ok": 9,
     "fail": 0,
     "manual": 0
   }
