@@ -7,7 +7,8 @@
           "scene": 3,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:12:55"
         }
       ]
     },
@@ -18,14 +19,16 @@
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:13:28"
         },
         {
           "file": "s_struct_verdigris__clan_hold_downhill_18.png",
           "scene": 153,
           "line": 170,
           "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:13:46"
         }
       ],
       "elsewhere:verdigris_sea_return_rift": [
@@ -34,7 +37,8 @@
           "scene": 163,
           "line": 180,
           "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:14:26"
         }
       ]
     },
@@ -77,21 +81,24 @@
           "scene": 289,
           "line": 328,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:10:42"
         },
         {
           "file": "s_dredge__tidebrass_dredge_third_person.png",
           "scene": 289,
           "line": 328,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:10:43"
         },
         {
           "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
           "scene": 289,
           "line": 328,
           "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:10:44"
         }
       ]
     },
@@ -102,7 +109,8 @@
           "scene": 463,
           "line": 515,
           "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:10:53"
         }
       ]
     },
@@ -113,21 +121,23 @@
           "scene": 483,
           "line": 535,
           "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:15:24"
         },
         {
           "file": "s_struct_greenhaze__lucid_spring_ground.png",
           "scene": 483,
           "line": 535,
           "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:15:45"
         }
       ]
     }
   },
-  "run": "01:10:40",
+  "run": "01:15:47",
   "totals": {
-    "ok": 3,
+    "ok": 13,
     "fail": 0,
     "manual": 0
   }
