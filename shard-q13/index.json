@@ -1,0 +1,99 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_mirewick": [
+        {
+          "file": "structures_build__castle_mirewick_c_52_40_52_y135.png",
+          "scene": 18,
+          "line": 26,
+          "check": "crow-stepped calcite Counting-House with gilt caps and a lantern belfry, crimson spires with gilt finials, purple bands",
+          "status": "ok",
+          "taken": "01:02:09"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_0_6_48_y180.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "ok",
+          "taken": "01:02:19"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "ok",
+          "taken": "01:02:26"
+        }
+      ],
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_mirewick)": [
+        {
+          "file": "structures_build__castle_mirewick_c_0_8_58_y180.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "ok",
+          "taken": "01:02:36"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_58_10_30_y_120.png",
+          "scene": 135,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "ok",
+          "taken": "01:02:48"
+        }
+      ]
+    },
+    "z_castle": {
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)": [
+        {
+          "file": "z_castle__castle_mirewick_c_44_8_44_y135.png",
+          "scene": 149,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "mirewick_castle_mirewick (elsewhere:castle_mirewick)": [
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_front.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_corner.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_gate.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dataclean__mirewick_castle_mirewick_quay.png",
+          "scene": 174,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:02:48",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
