@@ -539,3 +539,81 @@ java.lang.NullPointerException: Cannot invoke "net.minecraft.client.gui.screens.
 [01:02:06] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
 [01:02:06] [Render thread/INFO] (Minecraft) Loaded 2 advancements
 [01:02:06] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:06] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:07] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:07] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:07] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:07] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:07] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:07] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:08] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@4972d28d
+[01:02:08] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: null
+[01:02:11] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Game rule random_tick_speed is now set to 0
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Game rule spawn_mobs is now set to false
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: gamerule do_daylight_cycle false<--[HERE]
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: gamerule do_weather_cycle false<--[HERE]
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: gamerule do_mob_spawning false<--[HERE]
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Game rule send_command_feedback is now set to false
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[01:02:11] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[01:02:12] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:02:12] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:02:12] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[01:02:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[01:02:15] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 3000 tick(s)
+[01:02:15] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 75.000000, -1279.500000
+[01:02:17] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
+[01:02:17] [Render thread/INFO] (Minecraft) Loaded 7 advancements
+[01:02:33] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 12231ms or 244 ticks behind
+[01:02:37] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[01:03:06] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:03:06] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[01:03:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__aldermark_capital_time_set_3000.png: 
+[01:03:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 314 (s_townsfolk | Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)) done in 55429 ms
+[01:03:07] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:03:07] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:03:07] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Spectator Mode
+[01:03:07] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 13000 tick(s)
+[01:03:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:03:07] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:03:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:bonfire_terrace in elsewhere:greenhaze at C = 720 64 -448
+[01:03:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 728.500000, 68.000000, -439.500000
+[01:03:09] [Render thread/INFO] (Minecraft) Loaded 9 advancements
+[01:03:27] [Server thread/INFO] (Minecraft) System chat: Successfully filled 2918 block(s)
+[01:03:27] [Server thread/INFO] (Minecraft) System chat: Successfully filled 2037 block(s)
+[01:03:27] [Server thread/INFO] (Minecraft) System chat: Successfully filled 2728 block(s)
+[01:03:27] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 728.500000, 84.000000, -417.500000
+[01:03:28] [Server thread/INFO] (Minecraft) System chat: Successfully filled 13 block(s)
+[01:03:28] [Server thread/INFO] (Minecraft) System chat: Successfully filled 29 block(s)
+[01:03:38] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[01:03:38] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:03:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__bonfire_terrace_overview.png: 
+[01:03:38] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 728.500000, 73.000000, -459.500000
+[01:03:38] [Server thread/INFO] (Minecraft) System chat: Successfully filled 16 block(s)
+[01:03:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__bonfire_terrace_ground.png: 
+[01:03:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 479 (s_struct_greenhaze | elsewhere:bonfire_terrace) done in 42229 ms
+[01:03:49] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[01:03:49] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[01:03:49] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[01:03:49] [Server thread/INFO] (Minecraft) Stopping server
+[01:03:49] [Server thread/INFO] (Minecraft) Saving players
+[01:03:49] [Server thread/INFO] (Minecraft) Saving worlds
+[01:03:49] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:03:50] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:03:50] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:03:50] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:03:50] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:03:50] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:03:50] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:03:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:03:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:03:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:03:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 12 ok, 3 fail, 0 manual
+[01:03:51] [Render thread/INFO] (Minecraft) Stopping!
