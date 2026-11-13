@@ -1,0 +1,137 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (aldermark realm)": [
+        {
+          "file": "villages__village_near_aldermark.png",
+          "scene": 2,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ],
+      "the faction villages and rebuild styles (mirewick realm)": [
+        {
+          "file": "villages__village_near_mirewick.png",
+          "scene": 5,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview_street": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview_street.png",
+          "scene": 171,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_in_flight_and_stuck)": [
+        {
+          "file": "s_echoarrow__echo_arrow_in_flight.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "01:10:52"
+        },
+        {
+          "file": "s_echoarrow__echo_arrow_stuck_2_blocks.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "01:10:54"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:ironclan_raider": [
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "ok",
+          "taken": "01:10:57"
+        }
+      ]
+    },
+    "s_waryak": {
+      "elsewhere:ironpeak_war_yak_horn": [
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:great_hotbox": [
+        {
+          "file": "s_struct_greenhaze__great_hotbox_overview.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__great_hotbox_ground.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:10:57",
+  "totals": {
+    "ok": 3,
+    "fail": 0,
+    "manual": 0
+  }
+}
