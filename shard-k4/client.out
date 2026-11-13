@@ -355,3 +355,127 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [00:13:00] [Server thread/INFO] (Minecraft) System chat: Successfully filled 119 block(s)
 [00:13:00] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Ironclad Flail]
 [00:13:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_first_person_3.png: 
+[00:13:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_third_person_3.png: 
+[00:13:04] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_in_use_first_person_3.png: 
+[00:13:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_in_use_third_person_3.png: 
+[00:13:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_after_use_3.png: 
+[00:13:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__ironclad_flail_tooltip_3.png: 
+[00:13:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 234 (s_p6_useanims | elsewhere:ironclad_flail) done in 7669 ms
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Successfully filled 120 block(s)
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Successfully filled 77 block(s)
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:07] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Sculk Resonator]
+[00:13:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_first_person.png: 
+[00:13:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_third_person.png: 
+[00:13:10] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_in_use_first_person_t5.png: 
+[00:13:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_in_use_first_person_t15.png: 
+[00:13:11] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_in_use_first_person.png: 
+[00:13:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_in_use_third_person.png: 
+[00:13:12] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_after_use.png: 
+[00:13:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__sculk_resonator_tooltip.png: 
+[00:13:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 236 (s_p6_useanims | elsewhere:sculk_resonator) done in 6728 ms
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Ironclad Flail]
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Summoned new Husk
+[00:13:14] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:15] [Render thread/INFO] (Minecraft) [System] [CHAT] Elsewhere weapon effects: low
+[00:13:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__weapon_effects_level_kill_switch.png: 
+[00:13:17] [Render thread/INFO] (Minecraft) [System] [CHAT] Elsewhere weapon effects: normal
+[00:13:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p6_useanims__weapon_effects_level_kill_switch_5s.png: 
+[00:13:18] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 237 (s_p6_useanims | weapon effects level + kill switch) done in 4264 ms
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Successfully filled 25 block(s)
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Successfully filled 15 block(s)
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Successfully filled 10 block(s)
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Changed the block at 0, -60, 6
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:18] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Lantern Sickle]
+[00:13:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sickle__mirewick_lantern_sickle_first_person.png: 
+[00:13:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, -0.500000
+[00:13:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sickle__mirewick_lantern_sickle_third_person.png: 
+[00:13:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sickle__mirewick_lantern_sickle_in_use_first_person.png: 
+[00:13:22] [Server thread/INFO] (Minecraft) System chat: Successfully filled 1 block(s)
+[00:13:22] [Server thread/INFO] (Minecraft) System chat: Changed the block at 0, -60, 6
+[00:13:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sickle__mirewick_lantern_sickle_in_use_third_person.png: 
+[00:13:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sickle__mirewick_lantern_sickle_after_use.png: 
+[00:13:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_sickle__mirewick_lantern_sickle_tooltip_2.png: 
+[00:13:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 301 (s_sickle | elsewhere:mirewick_lantern_sickle) done in 7255 ms
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: Successfully filled 25 block(s)
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:13:25] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Ironclad Flail]
+[00:13:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p5_tooltips__ironclad_flail_first_person.png: 
+[00:13:27] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:13:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p5_tooltips__ironclad_flail_third_person.png: 
+[00:13:28] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2001ms or 40 ticks behind
+[00:13:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p5_tooltips__ironclad_flail_tooltip.png: 
+[00:13:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 341 (s_p5_tooltips | elsewhere:ironclad_flail) done in 3352 ms
+[00:13:29] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:13:29] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:13:29] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:13:29] [Server thread/INFO] (Minecraft) Stopping server
+[00:13:29] [Server thread/INFO] (Minecraft) Saving players
+[00:13:29] [Server thread/INFO] (Minecraft) Saving worlds
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:13:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:13:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 37 ok, 0 fail, 0 manual
+[00:13:29] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 3m 28s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
