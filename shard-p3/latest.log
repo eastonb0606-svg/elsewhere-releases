@@ -498,3 +498,112 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [00:44:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_hrafnholt in minecraft:overworld at C = 1576 81 -7160
 [00:44:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 896 95 -7008
 [00:44:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 896.500000, 115.000000, -7007.500000
+[00:44:40] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: RUSH (60 ops per tick).
+[00:44:40] [Server thread/INFO] (Minecraft) System chat: No siege: village is SIEGE
+[00:44:42] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 9307ms or 186 ticks behind
+[00:44:42] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[00:44:47] [Server thread/INFO] (Minecraft) System chat: Interrupted the current tick sprint
+[00:44:47] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[00:44:57] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: normal (1 op per second).
+[00:44:57] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[00:44:57] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:44:57] [Server thread/INFO] (Minecraft) System chat: Set own game mode to Spectator Mode
+[00:44:57] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[00:44:57] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 896.500000, 119.000000, -6973.500000
+[00:45:03] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[00:45:03] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[00:45:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK villages__village_near_hrafnholt.png: 
+[00:45:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 3 (villages | the faction villages and rebuild styles (hrafnholt realm)) done in 41145 ms
+[00:45:03] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:45:03] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:45:03] [Server thread/INFO] (Minecraft) System chat: The difficulty has been set to Peaceful
+[00:45:03] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, 120.000000, 0.500000
+[00:45:07] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[00:45:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:45:07] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[00:45:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:drowned_cathedral in elsewhere:verdigris_sea at C = -528 96 2608
+[00:45:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -481.500000, 114.000000, 2654.500000
+[00:45:07] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[00:45:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__drowned_cathedral_s_26_6_26.png: 
+[00:45:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 161 (s_struct_verdigris | elsewhere:drowned_cathedral) done in 16639 ms
+[00:45:20] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:45:20] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:45:20] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[00:45:20] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:45:20] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[00:45:21] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:sunwright_ziggurat in elsewhere:glasswaste at C = -448 62 -432
+[00:45:21] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -447.500000, 72.000000, -431.500000
+[00:45:21] [Render thread/INFO] (Minecraft) Loaded 5 advancements
+[00:45:32] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -407.500000, 84.000000, -391.500000
+[00:45:41] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[00:45:41] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__sunwright_ziggurat_s_30_14_30.png: 
+[00:45:41] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -471.500000, 48.000000, -455.500000
+[00:45:41] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -471.500000, 70.000000, -455.500000
+[00:45:49] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[00:45:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__sunwright_ziggurat_downhill_30.png: 
+[00:45:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 182 (s_struct_petalwind | elsewhere:sunwright_ziggurat) done in 29270 ms
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:45:49] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 238 stopped at locate: elsewhere:kush_canopy could not be located within 100 chunks in any dimension that can hold it
+[00:45:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd.png: locate: elsewhere:kush_canopy could not be located within 100 chunks in any dimension that can hold it
+[00:45:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png: locate: elsewhere:kush_canopy could not be located within 100 chunks in any dimension that can hold it
+[00:45:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 238 (s_spawngroups | elsewhere:munchie_boar) done in 181 ms
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Spectator Mode
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:45:49] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[00:45:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:lucid_spring in elsewhere:greenhaze at C = -144 80 -256
+[00:45:51] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -135.500000, 84.000000, -247.500000
+[00:45:51] [Render thread/INFO] (Minecraft) Loaded 6 advancements
+[00:46:08] [Server thread/INFO] (Minecraft) System chat: Successfully filled 2222 block(s)
+[00:46:08] [Server thread/INFO] (Minecraft) System chat: Successfully filled 2002 block(s)
+[00:46:08] [Server thread/INFO] (Minecraft) System chat: Successfully filled 2267 block(s)
+[00:46:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -135.500000, 96.000000, -239.500000
+[00:46:08] [Server thread/INFO] (Minecraft) System chat: Successfully filled 6 block(s)
+[00:46:08] [Server thread/INFO] (Minecraft) System chat: Successfully filled 54 block(s)
+[00:46:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__lucid_spring_overview.png: 
+[00:46:19] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -135.500000, 85.000000, -237.500000
+[00:46:19] [Server thread/INFO] (Minecraft) System chat: Successfully filled 58 block(s)
+[00:46:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__lucid_spring_ground.png: 
+[00:46:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 483 (s_struct_greenhaze | elsewhere:lucid_spring) done in 39422 ms
+[00:46:29] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:46:29] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:46:29] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:46:29] [Server thread/INFO] (Minecraft) Stopping server
+[00:46:29] [Server thread/INFO] (Minecraft) Saving players
+[00:46:29] [Server thread/INFO] (Minecraft) Saving worlds
+[00:46:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:46:31] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:46:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 16 ok, 2 fail, 0 manual
+[00:46:31] [Render thread/INFO] (Minecraft) Stopping!
+[00:46:31] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
