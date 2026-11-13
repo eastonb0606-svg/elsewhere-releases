@@ -1,0 +1,187 @@
+{
+  "lanes": {
+    "s_dataclean": {
+      "villages_aldermark_stone": [
+        {
+          "file": "s_dataclean__villages_aldermark_stone.png",
+          "scene": 173,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer": [
+        {
+          "file": "s_censer__choirlight_censer_held.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "00:44:01"
+        },
+        {
+          "file": "s_censer__choirlight_censer_tooltip.png",
+          "scene": 179,
+          "line": 191,
+          "check": "GUI: a gold thurible hanging from a ring on two chains, ice-blue light through the lid and bowl, two light motes (it must not look like the Glimmer Lantern); tooltip: name (epic), grey \"Swing it to heal allies around you (cost per second)\", the Glimmer cost line, grey and blue lore, red \"You walk at 40% speed while swinging it\"",
+          "status": "ok",
+          "taken": "00:44:02"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "kingdom soldier nameplates, Aldermark (POLISH P3; supersedes polish2's 10:05 nameplate scene in INTEGRATION-REQUESTS)": [
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_6.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "00:44:05"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "00:44:06"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "00:44:06"
+        }
+      ],
+      "nameplates hidden behind walls and while crouching": [
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "ok",
+          "taken": "00:44:09"
+        },
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "ok",
+          "taken": "00:44:19"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:44:21"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:44:22"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:44:23"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:44:25"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:44:28"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:44:29"
+        }
+      ]
+    },
+    "s_willolantern": {
+      "elsewhere:marsh_wisp": [
+        {
+          "file": "s_willolantern__marsh_wisp_beside_its_owner_at_night_gea.png",
+          "scene": 463,
+          "line": 515,
+          "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
+          "status": "ok",
+          "taken": "00:44:37"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:great_hotbox": [
+        {
+          "file": "s_struct_greenhaze__great_hotbox_overview.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__great_hotbox_ground.png",
+          "scene": 478,
+          "line": 530,
+          "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_bossdrops": {
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        },
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:44:37",
+  "totals": {
+    "ok": 14,
+    "fail": 0,
+    "manual": 0
+  }
+}
