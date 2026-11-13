@@ -1,0 +1,68 @@
+{
+  "lanes": {
+    "s_greenhaze_rework": {
+      "Couch-locked screen, FULL effects (hue drift + wobble)": [
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "ok",
+          "taken": "00:44:05"
+        },
+        {
+          "file": "s_greenhaze_rework__couch_locked_screen_full_effects_hue_dri_5s.png",
+          "scene": 256,
+          "line": 289,
+          "check": "stronger tint whose hue has drifted from plain green (teal or yellow-green is right), dark top/bottom vignette, horizon tilted at most ~2 degrees; nothing nauseating (no Nausea warp)",
+          "status": "ok",
+          "taken": "00:44:10"
+        }
+      ],
+      "Hallucinated mobs": [
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs.png",
+          "scene": 258,
+          "line": 291,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "ok",
+          "taken": "00:44:37"
+        },
+        {
+          "file": "s_greenhaze_rework__hallucinated_mobs_5s.png",
+          "scene": 258,
+          "line": 291,
+          "check": "a few mobs (~1 in 6) wear silly name tags (\"Kevin\", \"Definitely a Cow\"...), lie upside down, are rainbow (sheep), tiny or chonky, or a cow/pig/sheep drawn as another of the three; zombies only get names or flips; \"Bessie\" unchanged; no pink/black textures, no floating name tags",
+          "status": "ok",
+          "taken": "00:45:13"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "elsewhere:everflow_bong": [
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "ok",
+          "taken": "00:45:17"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "ok",
+          "taken": "00:45:19"
+        }
+      ]
+    }
+  },
+  "run": "00:45:19",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
