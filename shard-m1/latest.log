@@ -387,3 +387,92 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [00:17:32] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
 [00:17:32] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 81.000000, -1289.500000
 [00:17:47] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 13000 tick(s)
+[00:18:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p9_idle__pose_drink_and_pose_torch.png: 
+[00:18:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p9_idle__pose_drink_and_pose_torch_5s.png: 
+[00:18:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 329 (s_p9_idle | Pose.DRINK and Pose.TORCH) done in 42176 ms
+[00:18:14] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:18:14] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:18:14] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 17000 tick(s)
+[00:18:14] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:18:14] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:18:14] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[00:18:14] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[00:18:14] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 81.000000, -1289.500000
+[00:18:29] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 18000 tick(s)
+[00:18:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p9_idle__night_rest_rest_soldiers_the_night_routi.png: 
+[00:19:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png: 
+[00:19:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 332 (s_p9_idle | night rest (REST: soldiers the night routine rests)) done in 46845 ms
+[00:19:01] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:19:01] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:19:01] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 3000 tick(s)
+[00:19:01] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:19:01] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:19:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[00:19:01] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 81.000000, -1289.500000
+[00:19:16] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 4000 tick(s)
+[00:19:34] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2003ms or 40 ticks behind
+[00:19:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_p9_idle__townsfolk_routine_poses_s_townsfolk_resi.png: 
+[00:19:38] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 333 (s_p9_idle | elsewhere:townsfolk) done in 36626 ms
+[00:19:38] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:19:38] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:19:38] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[00:19:38] [Server thread/INFO] (Minecraft) System chat: The difficulty has been set to Peaceful
+[00:19:38] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, 120.000000, 0.500000
+[00:19:41] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[00:19:41] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:19:41] [Server thread/INFO] (Minecraft) System chat: Game rule send_command_feedback is now set to true
+[00:19:41] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:19:41] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[00:19:41] [Server thread/INFO] (Minecraft) System chat: The nearest elsewhere:castle_azmar is at [952, ~, -4472] (4572 blocks away)
+[00:19:41] [Server thread/INFO] (Minecraft) Locating element elsewhere:castle_azmar took 0 ms
+[00:19:43] [Server thread/INFO] (Minecraft) System chat: The nearest elsewhere:castle_hrafnholt is at [1576, ~, -7160] (7331 blocks away)
+[00:19:43] [Server thread/INFO] (Minecraft) Locating element elsewhere:castle_hrafnholt took 0 ms
+[00:19:44] [Server thread/INFO] (Minecraft) System chat: The nearest elsewhere:castle_mirewick is at [2888, ~, -3672] (4671 blocks away)
+[00:19:44] [Server thread/INFO] (Minecraft) Locating element elsewhere:castle_mirewick took 0 ms
+[00:19:46] [Server thread/INFO] (Minecraft) System chat: The nearest elsewhere:castle_aldermark is at [1368, ~, -1304] (1889 blocks away)
+[00:19:46] [Server thread/INFO] (Minecraft) Locating element elsewhere:castle_aldermark took 0 ms
+[00:19:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_locate__castle_azmar_overview.png: 
+[00:19:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[00:19:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 952.500000, 94.000000, -4471.500000
+[00:19:54] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4607ms or 92 ticks behind
+[00:19:55] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[00:20:05] [Server thread/INFO] (Minecraft) Named entity Camel['War Camel'/522, l='ServerLevel[New World]', x=937.05, y=86.00, z=-4474.67] died: War Camel was killed
+[00:20:05] [Server thread/INFO] (Minecraft) Named entity AzmarWazir['Regent Halvane'/508, l='ServerLevel[New World]', x=952.56, y=85.00, z=-4466.75] died: Regent Halvane was killed
+[00:20:05] [Server thread/INFO] (Minecraft) System chat: Killed 21 entities
+[00:20:05] [Server thread/INFO] (Minecraft) System chat: The nearest elsewhere:castle_azmar is at [952, ~, -4472] (0 blocks away)
+[00:20:05] [Server thread/INFO] (Minecraft) Locating element elsewhere:castle_azmar took 0 ms
+[00:20:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_locate__castle_azmar_ground.png: 
+[00:20:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 357 (s_locate | elsewhere:castle_azmar) done in 29835 ms
+[00:20:08] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:20:08] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:20:08] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:20:08] [Server thread/INFO] (Minecraft) Stopping server
+[00:20:08] [Server thread/INFO] (Minecraft) Saving players
+[00:20:08] [Server thread/INFO] (Minecraft) Saving worlds
+[00:20:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:20:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:20:09] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 10 ok, 0 fail, 0 manual
+[00:20:09] [Render thread/INFO] (Minecraft) Stopping!
+[00:20:09] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
