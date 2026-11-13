@@ -1,0 +1,128 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (azmar realm)": [
+        {
+          "file": "villages__village_near_azmar.png",
+          "scene": 4,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview.png",
+          "scene": 170,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:sun_chamber": [
+        {
+          "file": "s_struct_overworld__sun_chamber_s_22_3_6.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__sun_chamber_hall_altar_facing_south.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:duelist_test (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase2.png",
+          "scene": 205,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "01:12:14"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:strawgrim": [
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "ok",
+          "taken": "01:12:16"
+        },
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3_later.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "ok",
+          "taken": "01:12:19"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "ok",
+          "taken": "01:12:22"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "ok",
+          "taken": "01:12:23"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "ok",
+          "taken": "01:12:23"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:listening_engine": [
+        {
+          "file": "s_struct_greenhaze__listening_engine_overview.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__listening_engine_ground.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:12:23",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
