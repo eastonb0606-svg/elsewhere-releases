@@ -470,3 +470,61 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [01:27:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 83.000000, -1273.500000
 [01:27:26] [Server thread/INFO] (Minecraft) System chat: ShotRunner has completed the challenge [Within Sight of the Walls]
 [01:27:26] [Render thread/INFO] (Minecraft) Loaded 22 advancements
+[01:27:41] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 10200ms or 204 ticks behind
+[01:27:51] [Server thread/INFO] (Minecraft) System chat: The game is sprinting
+[01:28:09] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 3000 tick(s)
+[01:28:27] [Server thread/INFO] (Minecraft) System chat: Sprint completed with 16 ticks per second, or 59.37 ms per tick
+[01:28:27] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[01:28:27] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:28:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_townsfolk__aldermark_capital_time_set_3000.png: 
+[01:28:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 314 (s_townsfolk | Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)) done in 66909 ms
+[01:28:27] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:28:27] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:28:28] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 0 tick(s)
+[01:28:28] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:28:28] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[01:28:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[01:28:44] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2888.500000, 132.000000, -3655.500000
+[01:28:46] [Server thread/INFO] (Minecraft) [STDOUT]: [townsfolk-graph] capital:elsewhere:mirewick DISCONNECTED: candidates 96, nodes 64, edges 48, link 15.01, rejected (first few): [2892,-3668->2892,-3678 y 116/116 not walkable] [2892,-3668->2882,-3678 y 116/116 not walkable] [2882,-3668->2892,-3678 y 116/116 not walkable] [2882,-3668->2882,-3678 y 116/116 not walkable] [2882,-3678->2872,-3668 y 116/116 not walkable]
+[01:29:08] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 25898ms or 517 ticks behind
+[01:29:18] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 333 tick(s)
+[01:29:26] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2878.815165, 120.000000, -3651.522448
+[01:29:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__mirewick_off_time_wards.png: 
+[01:29:27] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 900 tick(s)
+[01:29:32] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 8669ms or 173 ticks behind
+[01:29:42] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2876.568607, 120.000000, -3661.003698
+[01:29:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_routines__mirewick_off_time_wards_5s.png: 
+[01:29:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 382 (s_routines | Mirewick off-time wards) done in 74650 ms
+[01:29:42] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[01:29:42] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[01:29:42] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[01:29:42] [Server thread/INFO] (Minecraft) Stopping server
+[01:29:42] [Server thread/INFO] (Minecraft) Saving players
+[01:29:42] [Server thread/INFO] (Minecraft) Saving worlds
+[01:29:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:29:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:29:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 12 ok, 0 fail, 0 manual
+[01:29:45] [Render thread/INFO] (Minecraft) Stopping!
+[01:29:45] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
