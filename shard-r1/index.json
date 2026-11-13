@@ -1,0 +1,144 @@
+{
+  "lanes": {
+    "gear": {
+      "/calling readout": [
+        {
+          "file": "gear__calling_readout_chat.png",
+          "scene": 11,
+          "line": 16,
+          "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
+          "status": "ok",
+          "taken": "01:11:29"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_palisade": [
+        {
+          "file": "s_dataclean__villages_aldermark_palisade.png",
+          "scene": 172,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:petal_pagoda": [
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_24_16_24.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_0_4_26.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:ossuary_chorister": [
+        {
+          "file": "s_spawngroups__ossuary_chorister_choir_greenhaze_hush_t.png",
+          "scene": 240,
+          "line": 270,
+          "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_locate": {
+      "explorer map to a rival castle": [
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:choir_geode": [
+        {
+          "file": "s_struct_greenhaze__choir_geode_overview.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__choir_geode_ground.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:11:29",
+  "totals": {
+    "ok": 1,
+    "fail": 0,
+    "manual": 0
+  }
+}
