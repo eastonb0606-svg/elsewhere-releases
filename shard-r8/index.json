@@ -1,0 +1,57 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_52_40_52_y135.png",
+          "scene": 15,
+          "line": 23,
+          "check": "Jarl's-hall roof over the keep with crossed finials at both ends, timber hoardings on walls and towers, steep spruce spires, stave tower on the hof",
+          "status": "ok",
+          "taken": "01:13:41"
+        }
+      ],
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 20,
+          "line": 28,
+          "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
+          "status": "ok",
+          "taken": "01:14:30"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:14:30",
+  "totals": {
+    "ok": 2,
+    "fail": 0,
+    "manual": 0
+  }
+}
