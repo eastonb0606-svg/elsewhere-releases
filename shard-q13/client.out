@@ -352,3 +352,44 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [01:02:48] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
 [01:02:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
 [01:02:48] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2935.330000, 126.000000, -3624.670000
+[01:02:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK z_castle__castle_mirewick_c_44_8_44_y135.png: 
+[01:02:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 149 (z_castle | elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)) done in 9918 ms
+[01:02:58] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:02:58] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:02:58] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:02:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:02:58] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:02:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[01:02:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2888.500000, 138.000000, -3589.500000
+[01:03:01] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 9672ms or 193 ticks behind
+[01:03:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__mirewick_castle_mirewick_front.png: 
+[01:03:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2940.500000, 156.000000, -3619.500000
+[01:03:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__mirewick_castle_mirewick_corner.png: 
+[01:03:17] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2888.500000, 125.000000, -3631.500000
+[01:03:24] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 7511ms or 150 ticks behind
+[01:03:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__mirewick_castle_mirewick_gate.png: 
+[01:03:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2914.500000, 121.000000, -3629.500000
+[01:03:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__mirewick_castle_mirewick_quay.png: 
+[01:03:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 174 (s_dataclean | mirewick_castle_mirewick (elsewhere:castle_mirewick)) done in 33785 ms
+[01:03:32] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[01:03:32] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[01:03:32] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[01:03:32] [Server thread/INFO] (Minecraft) Stopping server
+[01:03:32] [Server thread/INFO] (Minecraft) Saving players
+[01:03:32] [Server thread/INFO] (Minecraft) Saving worlds
+[01:03:32] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:03:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:03:33] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 10 ok, 0 fail, 0 manual
+[01:03:33] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 3m 37s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
