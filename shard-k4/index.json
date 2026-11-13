@@ -1,0 +1,283 @@
+{
+  "lanes": {
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:12:43"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:12:44"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:12:46"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:12:48"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:12:51"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip.png",
+          "scene": 231,
+          "line": 261,
+          "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
+          "status": "ok",
+          "taken": "00:12:52"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "00:12:54"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "00:12:54"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "00:12:55"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "00:12:57"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "00:12:59"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "ok",
+          "taken": "00:12:59"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        }
+      ],
+      "elsewhere:sculk_resonator": [
+        {
+          "file": "s_p6_useanims__sculk_resonator_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_after_use.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_tooltip.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "pending"
+        }
+      ],
+      "weapon effects level + kill switch": [
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch_5s.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sickle": {
+      "elsewhere:mirewick_lantern_sickle": [
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_after_use.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_2.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p5_tooltips__ironclad_flail_first_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_third_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_tooltip.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:12:59",
+  "totals": {
+    "ok": 12,
+    "fail": 0,
+    "manual": 0
+  }
+}
