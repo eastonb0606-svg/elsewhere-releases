@@ -1,0 +1,144 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 13,
+          "line": 21,
+          "check": "steep deepslate spires with blue banners on 4 corners + 2 gate spires, pitched keep roof inside the parapet with 4 bartizans, chapel steeple; curtain steps with the ground (no flat 69x69 cut, no cliff); no gold throne (yellow terracotta)",
+          "status": "pending"
+        }
+      ],
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_hrafnholt)": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_0_8_58_y180.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 26,
+          "line": 37,
+          "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:lantern_road (night procession)": [
+        {
+          "file": "s_struct_core__lantern_road_procession_night.png",
+          "scene": 215,
+          "line": 245,
+          "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_testfix": {
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "01:00:45"
+        },
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k_later.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "01:00:46"
+        }
+      ]
+    },
+    "s_locate": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_locate__castle_azmar_overview.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__castle_azmar_ground.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_2_3_y180.png",
+          "scene": 412,
+          "line": 462,
+          "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "ok",
+          "taken": "01:00:54"
+        },
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "ok",
+          "taken": "01:00:57"
+        },
+        {
+          "file": "s_reliquary__echo_reliquary_held_face_on_first_person.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "ok",
+          "taken": "01:00:58"
+        },
+        {
+          "file": "s_reliquary__echo_reliquary_held_front_view.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "ok",
+          "taken": "01:00:58"
+        }
+      ]
+    }
+  },
+  "run": "01:00:58",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
