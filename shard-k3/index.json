@@ -1,0 +1,85 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 22,
+          "line": 30,
+          "check": "the west curtain's foot follows the ground with a rubble footing, the top steps by at most 1, the corner towers rise with their corner; nothing floats",
+          "status": "ok",
+          "taken": "00:12:01"
+        }
+      ],
+      "sloped-site style pieces (castle_hrafnholt palisade, castle_mirewick quay) (elsewhere:castle_hrafnholt)": [
+        {
+          "file": "structures_build__castle_hrafnholt_c_0_8_58_y180.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_hrafnholt_c_58_10_30_y_120.png",
+          "scene": 134,
+          "line": 151,
+          "check": "palisade posts outside the wall step with the ground on footings, the quay sits on an underpinned base or is absent on a steep or wet shore; nothing hangs in the air, nothing is buried more than 1",
+          "status": "pending"
+        }
+      ]
+    },
+    "generation": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "generation__castle_aldermark_c_52_40_52_y135.png",
+          "scene": 26,
+          "line": 37,
+          "check": "yard pad level, the slope outside the curtain left natural (no 69x69 cut box, no stone pillars down the hill), curtain foot on the ground with rubble footing, top steps by 1",
+          "status": "ok",
+          "taken": "00:12:31"
+        },
+        {
+          "file": "generation__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_70_18_0_y_90.png",
+          "scene": 27,
+          "line": 38,
+          "check": "gate at the yard floor, road leaving on a 1-step contour; downhill side: thin blend under the yard edge, no overhang, no floating blocks",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        },
+        {
+          "file": "generation__castle_aldermark_c_88_26_52_y180_2.png",
+          "scene": 28,
+          "line": 39,
+          "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:12:31",
+  "totals": {
+    "ok": 2,
+    "fail": 0,
+    "manual": 0
+  }
+}
