@@ -517,3 +517,24 @@ Caused by: java.lang.IllegalStateException: Tried to access entity ID before ID 
 [00:45:19] [Server thread/INFO] (Minecraft) Stopping server
 [00:45:19] [Server thread/INFO] (Minecraft) Saving players
 [00:45:19] [Server thread/INFO] (Minecraft) Saving worlds
+[00:45:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:45:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:45:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:45:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:45:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:45:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:45:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:45:20] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:45:20] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:45:20] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:45:20] [Render thread/INFO] (ClientLifecycleHandler) Stopping JEI
+[00:45:20] [Render thread/INFO] (JeiStarter) Stopping JEI
+[00:45:20] [Render thread/INFO] (PluginCaller) Sending Runtime Unavailable...
+[00:45:20] [Render thread/INFO] (FabricGuiPlugin) Stopping JEI GUI
+[00:45:20] [Render thread/INFO] (PluginCaller) Sending Runtime Unavailable took 3.491 milliseconds
+[00:45:20] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 6 ok, 0 fail, 0 manual
+[00:45:20] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 3m 1s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
