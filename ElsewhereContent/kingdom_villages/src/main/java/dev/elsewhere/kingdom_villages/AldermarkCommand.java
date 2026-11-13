@@ -132,6 +132,7 @@ public final class AldermarkCommand {
 	static int rush(CommandContext<CommandSourceStack> c, boolean on) {
 		VillageManager.opInterval = on ? 1 : VillageManager.OP_INTERVAL;
 		VillageManager.opsPerRun = on ? 60 : 1;
+		VillageManager.siegeLength = on ? 300L : VillageManager.SIEGE_LENGTH;
 		c.getSource().sendSuccess(() -> Component.literal("Village rebuild pace: " + (on ? "RUSH (60 ops per tick)" : "normal (1 op per second)") + "."), true);
 		return 1;
 	}

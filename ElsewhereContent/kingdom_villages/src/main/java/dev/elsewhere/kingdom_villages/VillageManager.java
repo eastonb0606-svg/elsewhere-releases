@@ -83,6 +83,8 @@ public final class VillageManager {
 	public static int opInterval = OP_INTERVAL;
 	/** Self-test: block ops per run (normal 1 = 1 block per second). */
 	public static int opsPerRun = 1;
+	/** Siege length in ticks; the QA {@code /aldermark rush} shortens it so a siege falls within a screenshot script. */
+	public static long siegeLength = SIEGE_LENGTH;
 	/** Self-test: siege chance override (-1 = normal). */
 	public static double siegeChanceOverride = -1;
 
@@ -98,6 +100,7 @@ public final class VillageManager {
 		RealmLocator.reset();
 		opInterval = OP_INTERVAL;
 		opsPerRun = 1;
+		siegeLength = SIEGE_LENGTH;
 		siegeChanceOverride = -1;
 	}
 
@@ -346,7 +349,7 @@ public final class VillageManager {
 		if (!force && (activeSieges(ledger, null) >= MAX_ACTIVE_SIEGES || player != null && activeSieges(ledger, player) > 0)) return false;
 		long now = level.getGameTime();
 		r.siegePlayer = player;
-		r.siegeEnd = now + SIEGE_LENGTH;
+		r.siegeEnd = now + siegeLength;
 		r.forceSpawned = r.forceDead = 0;
 		r.forceSpawnedOnce = false;
 		r.squads.clear();

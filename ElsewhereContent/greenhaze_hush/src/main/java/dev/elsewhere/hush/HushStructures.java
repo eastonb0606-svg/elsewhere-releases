@@ -108,7 +108,7 @@ public final class HushStructures {
 				double d = Math.sqrt(dx * dx + dz * dz + (dy * 0.9) * (dy * 0.9));
 				BlockState b = null;
 				if (d <= R - 1) b = s(Blocks.AIR);
-				else if (d <= R) b = r.nextInt(9) == 0 ? s(Blocks.BUDDING_AMETHYST) : s(Blocks.AMETHYST_BLOCK);
+				else if (d <= R) b = r.nextInt(9) == 0 ? s(Blocks.PURPUR_PILLAR) : s(Blocks.PURPUR_BLOCK);
 				else if (d <= R + 1) b = s(Blocks.CALCITE);
 				else if (d <= R + 2) b = s(Blocks.SMOOTH_BASALT);
 				if (b != null) sk.set(x + dx, y + dy, z + dz, b);
@@ -124,7 +124,7 @@ public final class HushStructures {
 			for (int dx = -18; dx <= 18; dx++) for (int dz = -18; dz <= 18; dz++) {
 				double d = Math.sqrt(dx * dx + dz * dz);
 				if (d > 18) continue;
-				sk.set(x + dx, y - 1, z + dz, Math.floorMod(dx * 3 + dz * 5, 7) == 0 ? s(Blocks.AMETHYST_BLOCK) : s(Blocks.CALCITE));
+				sk.set(x + dx, y - 1, z + dz, Math.floorMod(dx * 3 + dz * 5, 7) == 0 ? s(Blocks.PURPUR_BLOCK) : s(Blocks.CALCITE));
 			}
 			// 8 resonating crystal pillars in a ring (r = 14), one note each
 			for (int i = 0; i < 8; i++) {
