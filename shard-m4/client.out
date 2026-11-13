@@ -416,3 +416,65 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [00:16:11] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [00:16:11] [Server thread/INFO] (Minecraft) System chat: Wave battle aldermark v hrafnholt, 30 a side: 14 live now, the rest come in waves
 [00:16:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -48.000000, -23.500000
+[00:19:11] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -13.735704, -52.000000, 21.204557
+[00:19:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_impostors__battle_aldermark_hrafnholt_30_30s.png: 
+[00:19:12] [Server thread/INFO] (elsewhere-kingdom) Armies wave battle -1 ended: defender won; attacker 18/30 left, defender 21/30 left (3 + 2 waves)
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: Stopped 1 wave battle(s)
+[00:19:12] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 443 (s_impostors | Rout at the end of a battle) done in 181025 ms
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: Wave battle aldermark v azmar, 60 a side: 14 live now, the rest come in waves
+[00:19:12] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -54.000000, -29.500000
+[00:19:24] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 25.832525, -56.000000, -5.494193
+[00:19:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_lod__battle_aldermark_azmar_60_30s.png: 
+[00:19:25] [Server thread/INFO] (elsewhere-kingdom) Armies wave battle -1 ended: defender won; attacker 60/60 left, defender 60/60 left (0 + 0 waves)
+[00:19:25] [Server thread/INFO] (Minecraft) System chat: Stopped 1 wave battle(s)
+[00:19:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 456 (s_lod | Far soldiers in their baked LOD skin (48-96 blocks, ARMIES 3.7)) done in 12918 ms
+[00:19:25] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:19:25] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:19:25] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:19:25] [Server thread/INFO] (Minecraft) Stopping server
+[00:19:25] [Server thread/INFO] (Minecraft) Saving players
+[00:19:25] [Server thread/INFO] (Minecraft) Saving worlds
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:19:25] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:19:25] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 9 ok, 0 fail, 0 manual
+[00:19:25] [Render thread/INFO] (Minecraft) Stopping!
+[00:19:25] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+BUILD SUCCESSFUL in 4m 36s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html

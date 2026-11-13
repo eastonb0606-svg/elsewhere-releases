@@ -75,7 +75,8 @@
           "scene": 443,
           "line": 493,
           "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:19:12"
         }
       ]
     },
@@ -86,14 +87,15 @@
           "scene": 456,
           "line": 508,
           "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:19:25"
         }
       ]
     }
   },
-  "run": "00:16:11",
+  "run": "00:19:25",
   "totals": {
-    "ok": 7,
+    "ok": 9,
     "fail": 0,
     "manual": 0
   }
