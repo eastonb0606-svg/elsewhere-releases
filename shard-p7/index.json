@@ -1,0 +1,179 @@
+{
+  "lanes": {
+    "s_struct_verdigris": {
+      "elsewhere:clan_hold": [
+        {
+          "file": "s_struct_verdigris__clan_hold_s_14_10_14.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_verdigris__clan_hold_downhill_18.png",
+          "scene": 153,
+          "line": 170,
+          "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_palisade": [
+        {
+          "file": "s_dataclean__villages_aldermark_palisade.png",
+          "scene": 172,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:sun_chamber": [
+        {
+          "file": "s_struct_overworld__sun_chamber_s_22_3_6.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__sun_chamber_hall_altar_facing_south.png",
+          "scene": 177,
+          "line": 189,
+          "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_echoarrow": {
+      "elsewhere:echo_arrow (echo_arrow_in_flight_and_stuck)": [
+        {
+          "file": "s_echoarrow__echo_arrow_in_flight.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "00:43:53"
+        },
+        {
+          "file": "s_echoarrow__echo_arrow_stuck_2_blocks.png",
+          "scene": 217,
+          "line": 247,
+          "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
+          "status": "ok",
+          "taken": "00:43:56"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "Warg pack hunting (gear3)": [
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "ok",
+          "taken": "00:44:11"
+        },
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "ok",
+          "taken": "00:44:16"
+        }
+      ]
+    },
+    "s_lod": {
+      "Tier edges (24 / 48 blocks): trims drop, cape stops, nothing pops": [
+        {
+          "file": "s_lod__patrol_8_10s.png",
+          "scene": 457,
+          "line": 509,
+          "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
+          "status": "ok",
+          "taken": "00:44:27"
+        }
+      ]
+    },
+    "s_waryak": {
+      "elsewhere:ironpeak_war_yak_horn": [
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_first_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "00:44:28"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_third_person_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "00:44:29"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_first_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "00:44:29"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_in_use_third_person.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "00:44:29"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_after_use.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "00:44:31"
+        },
+        {
+          "file": "s_waryak__ironpeak_war_yak_horn_tooltip_2.png",
+          "scene": 473,
+          "line": 525,
+          "check": "the horn is raised to the mouth (goat-horn toot pose); on release a War-Yak appears beside the player",
+          "status": "ok",
+          "taken": "00:44:32"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:hanging_undercity": [
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_overview.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__hanging_undercity_ground.png",
+          "scene": 487,
+          "line": 539,
+          "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:44:32",
+  "totals": {
+    "ok": 11,
+    "fail": 0,
+    "manual": 0
+  }
+}
