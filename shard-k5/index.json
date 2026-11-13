@@ -1,0 +1,121 @@
+{
+  "lanes": {
+    "sfx": {
+      "elsewhere:aphelion": [
+        {
+          "file": "sfx__aphelion_subtitle.png",
+          "scene": 24,
+          "line": 32,
+          "check": "subtitle box shows \"Aphelion roars from beyond the End\" and NO \"Ender Dragon ...\" line",
+          "status": "fail",
+          "detail": "hurt_to: hurt_to: target is not a living entity",
+          "taken": "00:11:23"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:munchie_boar": [
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "ok",
+          "taken": "00:11:49"
+        },
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "ok",
+          "taken": "00:11:54"
+        }
+      ],
+      "elsewhere:ironclan_raider": [
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "ok",
+          "taken": "00:11:56"
+        },
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris_hit.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "ok",
+          "taken": "00:11:58"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:skyiron_ingot": [
+        {
+          "file": "s_compat_transmute__skyiron_ingot_first_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "fail",
+          "detail": "menu_click: elsewhere:skyiron_ingot is not in the open inventory",
+          "taken": "00:12:02"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_third_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "fail",
+          "detail": "menu_click: elsewhere:skyiron_ingot is not in the open inventory",
+          "taken": "00:12:02"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_tooltip.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "fail",
+          "detail": "menu_click: elsewhere:skyiron_ingot is not in the open inventory",
+          "taken": "00:12:02"
+        }
+      ],
+      "elsewhere:boss_token": [
+        {
+          "file": "s_compat_transmute__boss_token_first_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "fail",
+          "detail": "menu_click: elsewhere:boss_token is not in the open inventory",
+          "taken": "00:12:05"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_third_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "fail",
+          "detail": "menu_click: elsewhere:boss_token is not in the open inventory",
+          "taken": "00:12:05"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_tooltip.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "fail",
+          "detail": "menu_click: elsewhere:boss_token is not in the open inventory",
+          "taken": "00:12:05"
+        }
+      ]
+    }
+  },
+  "run": "00:12:06",
+  "totals": {
+    "ok": 4,
+    "fail": 7,
+    "manual": 0
+  }
+}

@@ -1,0 +1,442 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36527 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.19.4
+
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :compileGametestJava
+> Task :deleteGameTestRunDir UP-TO-DATE
+> Task :acceptGameTestEula
+> Task :generateLog4jConfig
+> Task :generateDLIConfig
+> Task :configureLaunch
+> Task :downloadAssets
+> Task :configureClientLaunch
+> Task :processGametestResources
+> Task :gametestClasses
+
+> Task :runClientGameTest
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36527 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+[00:10:56] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 26.3 with Fabric Loader 0.20.1
+[00:10:56] [main/INFO] (FabricLoader/Mappings) Mappings not present!
+[00:10:56] [main/INFO] (FabricLoader) Loading 54 mods:
+	- elsewhere 3.0.0
+	- elsewhereqa 1.0.0
+	- elsewhereqa-gametest 1.0.0
+	- fabric-advancement-api-v1 1.0.1+38c7a2d55d
+	- fabric-api 0.166.0+26.3
+	- fabric-api-base 2.0.6+fcdff87f5d
+	- fabric-api-lookup-api-v1 2.0.24+3434d6d95d
+	- fabric-biome-api-v1 20.2.0+423307765d
+	- fabric-block-api-v1 3.1.0+0ae6f9115d
+	- fabric-block-getter-api-v2 2.0.9+3434d6d95d
+	- fabric-client-gametest-api-v1 6.0.12+131f8d475d
+	- fabric-command-api-v2 3.1.2+fcdff87f5d
+	- fabric-content-registries-v0 15.0.7+74ed1ea55d
+	- fabric-convention-tags-v2 4.10.5+187b64905d
+	- fabric-crash-report-info-v1 1.0.7+fcdff87f5d
+	- fabric-creative-tab-api-v1 5.0.22+fcdff87f5d
+	- fabric-data-attachment-api-v1 2.2.34+99fb1a765d
+	- fabric-data-generation-api-v1 27.4.3+187b64905d
+	- fabric-debug-api-v1 1.0.5+5af7744b5d
+	- fabric-dimensions-v1 5.1.20+5af7744b5d
+	- fabric-entity-events-v1 6.0.4+3434d6d95d
+	- fabric-events-interaction-v0 5.3.10+b9b88df45d
+	- fabric-game-rule-api-v1 4.0.10+3434d6d95d
+	- fabric-gametest-api-v1 4.0.36+3434d6d95d
+	- fabric-item-api-v1 14.8.1+8f511c9f5d
+	- fabric-key-mapping-api-v1 2.0.8+3434d6d95d
+	- fabric-lifecycle-events-v1 4.1.9+ffef5f675d
+	- fabric-loot-api-v3 4.0.9+4068fd645d
+	- fabric-menu-api-v1 2.0.31+ed66f0a35d
+	- fabric-message-api-v1 7.1.0+3e5b46335d
+	- fabric-model-loading-api-v1 8.1.0+54bb04825d
+	- fabric-networking-api-v1 6.4.1+c58129785d
+	- fabric-object-builder-api-v1 24.1.13+e2f63d3e5d
+	- fabric-particles-v1 5.0.28+3434d6d95d
+	- fabric-permission-api-v1 1.0.8+fcdff87f5d
+	- fabric-recipe-api-v1 10.0.12+b9b88df45d
+	- fabric-registry-sync-v0 8.0.5+1ca9f6365d
+	- fabric-renderer-api-v1 17.0.18+79385d0b5d
+	- fabric-renderer-indigo 9.1.26+b9d63e335d
+	- fabric-rendering-fluids-v1 6.0.6+3434d6d95d
+	- fabric-rendering-v1 27.3.0+449655715d
+	- fabric-resource-conditions-api-v1 6.2.1+fd3b1d565d
+	- fabric-resource-loader-v0 3.3.27+4fc5413f5d
+	- fabric-resource-loader-v1 3.1.0+5af7744b5d
+	- fabric-screen-api-v1 5.2.4+48607d035d
+	- fabric-serialization-api-v1 2.0.7+74ed1ea55d
+	- fabric-sound-api-v1 2.0.7+3434d6d95d
+	- fabric-tag-api-v1 2.1.11+fcdff87f5d
+	- fabric-transfer-api-v1 8.0.27+c8357e785d
+	- fabric-transitive-access-wideners-v1 8.1.17+e2f63d3e5d
+	- fabricloader 0.20.1
+	- java 25
+	- minecraft 26.3
+	- mixinextras 0.5.5
+[00:10:57] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/root/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.17.5+mixin.0.8.7/cef8519a91129d0c21fa03bb9378f0e8ca810e5/sponge-mixin-0.17.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[00:10:58] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
+[00:10:59] [Datafixer Bootstrap #0/INFO] (Minecraft) 307 Datafixer optimizations took 540 milliseconds
+[00:11:03] [Render thread/INFO] (Minecraft) Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[00:11:03] [Render thread/INFO] (Minecraft) Setting user: ShotRunner
+[00:11:04] [Render thread/INFO] (Elsewhere/spawn_groups/core) [spawn_groups] core: on (5 rows in code, 5 JSON rows, 5 grouped creatures)
+[00:11:04] [Render thread/INFO] (Elsewhere) Elsewhere 0.1.0 ready: Pale Hollow, Mother Creak, Selenne
+[00:11:04] [Render thread/INFO] (Elsewhere/spawn_groups/petalwind_glasswaste) [spawn_groups] petalwind_glasswaste: on (1 rows in code, 25 JSON rows, 6 grouped creatures)
+[00:11:04] [Render thread/INFO] (Elsewhere/petalwind_glasswaste) Petalwind Isles + Glasswaste content registered (92 items)
+[00:11:04] [Render thread/INFO] (Elsewhere/spawn_groups/verdigris_ironpeak) [spawn_groups] verdigris_ironpeak: on (1 rows in code, 23 JSON rows, 6 grouped creatures)
+[00:11:04] [Render thread/INFO] (Elsewhere/verdigris_ironpeak) Verdigris Sea + Ironpeak content registered: 43 blocks, 95 items, 18 entity types
+[00:11:04] [Render thread/INFO] (Elsewhere/spawn_groups/greenhaze_hush) [spawn_groups] greenhaze_hush: on (4 rows in code, 17 JSON rows, 4 grouped creatures)
+[00:11:04] [Render thread/INFO] (Elsewhere/greenhaze_hush) Greenhaze & Hush content registered: 47 blocks, 111 items
+[00:11:04] [Render thread/INFO] (elsewhere/overworld_bosses) [elsewhere/overworld_bosses] registered 5 bosses
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom) Townsfolk registered (switch true, active true)
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom) Armies: 3.0 caps (epic preset): 32 per player, 64 per area, 192 per server, squads of 20
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom) Armies 3.0: watched war assaults use reinforcement waves (kill switch: waves)
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom) Armies swarm-as-one is on (config/elsewhere_armies.json key "swarm")
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom) Armies 3.0: rank impostors on (kill switch: rank_impostors)
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom) P9 idle poses on
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom) Elsewhere kingdom base loaded: 13 soldier types
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom-court) Registered the Aldermark castle locator with kingdom_lore
+[00:11:04] [Render thread/INFO] (elsewhere-kingdom-court) Elsewhere kingdom court loaded: 6 rulers, 11 items
+[00:11:04] [Render thread/INFO] (elsewhere-hrafnholt) Elsewhere Hrafnholt loaded: 19 items
+[00:11:05] [Render thread/INFO] (elsewhere-azmar) Elsewhere Azmar loaded: 22 items
+[00:11:05] [Render thread/INFO] (elsewhere-mirewick) Elsewhere Mirewick loaded: 18 items, 2 unit types, 5 Magnates
+[00:11:05] [Render thread/INFO] (elsewhere-kingdom-lore) Elsewhere kingdom lore loaded: 18 items
+[00:11:05] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[00:11:05] [Render thread/ERROR] (Minecraft) Illegal option value 0 for Anisotropic Filtering
+[00:11:05] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.4.3-snapshot
+[00:11:06] [Render thread/INFO] (Minecraft) SDL [SYSTEM]: App name: Minecraft
+[00:11:06] [Render thread/INFO] (Minecraft) SDL [SYSTEM]: App version: 26.3
+[00:11:06] [Render thread/INFO] (Minecraft) SDL [SYSTEM]: App ID: com.mojang.minecraft
+[00:11:06] [Render thread/INFO] (Minecraft) SDL [SYSTEM]: SDL revision: SDL-3.4.14--128-NOTFOUND
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+[00:11:06] [Render thread/ERROR] (Minecraft) Failed to create backend OpenGL
+
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+	at knot//net.minecraft.client.Minecraft.<init>(Minecraft.java:533)
+	at knot//net.minecraft.client.main.Main.main(Main.java:278)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[00:11:06] [Render thread/INFO] (Minecraft) Optional FeatureSet [NV Diagnostic Checkpoint] not supported
+[00:11:06] [Render thread/INFO] (Minecraft) Enabling optional FeatureSet [Calibrated Timestamps]
+[00:11:06] [Render thread/INFO] (Minecraft) Optional FeatureSet [AMD Buffer Marker] not supported
+[00:11:06] [Render thread/INFO] (Minecraft) Enabling optional FeatureSet [EXT MultiDraw]
+[00:11:06] [Render thread/INFO] (Minecraft) Enabling optional FeatureSet [Wireframe]
+[00:11:06] [Render thread/INFO] (Minecraft) Using graphics backend Vulkan, using drivers: 1.4.318 llvmpipe Mesa 25.2.8-0ubuntu0.24.04.4 (LLVM 20.1.2)
+[00:11:06] [Render thread/INFO] (Minecraft) Using graphics device: llvmpipe (LLVM 20.1.2, 256 bits) (0x10005)
+[00:11:06] [Render thread/INFO] (Minecraft) Using graphics device extensions: VK_EXT_calibrated_timestamps (D), VK_KHR_synchronization2 (D), VK_EXT_multi_draw (D), VK_EXT_vertex_attribute_divisor (D), VK_KHR_swapchain (D), VK_KHR_surface (I), VK_KHR_push_descriptor (D), VK_KHR_xlib_surface (I), VK_EXT_debug_utils (I), VK_KHR_dynamic_rendering (D)
+[00:11:06] [Render thread/INFO] (Minecraft) Created window using SDL video driver: x11
+[00:11:07] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, vanilla, elsewhere, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader
+[00:11:07] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[00:11:07] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[00:11:07] [Worker-Main-1/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+[00:11:07] [Worker-Main-3/INFO] (Minecraft) Found unifont_jp_patch-17.0.01.hex, loading
+[00:11:09] [Render thread/INFO] (Minecraft) OpenAL initialized on device No Output
+[00:11:09] [Render thread/INFO] (Minecraft) Sound engine started
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 2048x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 1024x1024x0 minecraft:textures/atlas/items.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[00:11:09] [Render thread/INFO] (Minecraft) Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[00:11:11] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[00:11:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] 5 flat-stage scenes, 0 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[00:11:14] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+[00:11:14] [Render thread/INFO] (Elsewhere) Loaded 7 Wayfinder attunements
+[00:11:14] [Render thread/INFO] (elsewhere-kingdom) Army scale loaded for 4 kingdoms: [elsewhere:mirewick, elsewhere:aldermark, elsewhere:azmar, elsewhere:hrafnholt]
+[00:11:14] [Render thread/INFO] (elsewhere-kingdom) Loaded 4 kingdom factions: [elsewhere:hrafnholt, elsewhere:azmar, elsewhere:aldermark, elsewhere:mirewick]
+[00:11:14] [Render thread/INFO] (elsewhere-kingdom) Townsfolk roles loaded for 4 kingdoms: [elsewhere:mirewick, elsewhere:aldermark, elsewhere:azmar, elsewhere:hrafnholt]
+[00:11:14] [Render thread/INFO] (elsewhere-kingdom) Loaded 80 kingdom unit types
+[00:11:14] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=854, height=480, presentMode=FIFO]]
+
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.queueLoadScreen(CreateWorldScreen.java:471)
+	at knot//net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.createNewWorld(CreateWorldScreen.java:514)
+	at knot//net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.lambda$openFresh$0(CreateWorldScreen.java:302)
+	at knot//net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.createWorldAndCleanup(CreateWorldScreen.java:504)
+	at knot//net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.lambda$onCreate$0(CreateWorldScreen.java:500)
+	at knot//net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.confirmWorldCreation(WorldOpenFlows.java:249)
+	at knot//net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.onCreate(CreateWorldScreen.java:500)
+	at knot//net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.lambda$init$0(CreateWorldScreen.java:435)
+	at knot//net.minecraft.client.gui.components.Button.onPress(Button.java:109)
+	at knot//net.fabricmc.fabric.impl.client.gametest.context.ClientGameTestContextImpl.pressMatchingButton(ClientGameTestContextImpl.java:283)
+	at knot//net.fabricmc.fabric.impl.client.gametest.context.ClientGameTestContextImpl.tryClickScreenButtonImpl(ClientGameTestContextImpl.java:256)
+	at knot//net.fabricmc.fabric.impl.client.gametest.context.ClientGameTestContextImpl.lambda$clickScreenButton$0(ClientGameTestContextImpl.java:230)
+	at knot//net.fabricmc.fabric.impl.client.gametest.context.ClientGameTestContextImpl.lambda$runOnClient$0(ClientGameTestContextImpl.java:537)
+	at knot//net.fabricmc.fabric.impl.client.gametest.threading.ThreadingImpl.runTaskOnThisThread(ThreadingImpl.java:229)
+	at knot//net.fabricmc.fabric.impl.client.gametest.threading.ThreadingImpl.lambda$runTaskOnOtherThread$0(ThreadingImpl.java:210)
+	at knot//net.minecraft.client.Minecraft.postRunTasks(Minecraft.java:6308)
+	at knot//net.minecraft.client.Minecraft.handler$bfm000$fabric-client-gametest-api-v1$postRunTasksHook(Minecraft.java:6260)
+	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1240)
+	at knot//net.minecraft.client.Minecraft.run$mixinextras$wrapped$272(Minecraft.java:967)
+	at knot//net.minecraft.client.Minecraft.mixinextras$bridge$run$mixinextras$wrapped$272$273(Minecraft.java)
+	at knot//net.minecraft.client.Minecraft.wrapMethod$bfm000$fabric-client-gametest-api-v1$onRun(Minecraft.java:6228)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java)
+	at knot//net.minecraft.client.main.Main.main(Main.java:292)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[00:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.GenericMessageScreen@71064398
+[00:11:15] [Render thread/INFO] (BiomeModificationImpl) Applied 58 biome modifications to 35 of 102 new biomes in 9.098 ms
+[00:11:15] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 26.3
+[00:11:15] [Server thread/INFO] (Minecraft) Generating keypair
+[00:11:15] [Server thread/INFO] (Minecraft) Selecting global world spawn...
+[00:11:15] [Server thread/INFO] (Minecraft) Loading 0 persistent chunks...
+[00:11:15] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:11:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:11:15] [Server thread/INFO] (Elsewhere) Bounty boards: 7 traders
+[00:11:15] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:aldermark realm site: null
+[00:11:15] [Server thread/INFO] (elsewhere-kingdom-court) Rival realm placement of [elsewhere:azmar, elsewhere:hrafnholt, elsewhere:mirewick] took 0 ms: {}
+[00:11:15] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:azmar realm site: null
+[00:11:15] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:hrafnholt realm site: null
+[00:11:15] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:mirewick realm site: null
+[00:11:15] [Server thread/WARN] (TranslationConventionLogWarnings) 
+	Dev warning - Untranslated Item Tags detected. Please translate your item tags so other mods such as recipe viewers can properly display your tag's name.
+	The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods.
+	To disable this message, set this system property in your runs: `-Dfabric-tag-conventions-v2.missingTagTranslationWarning=SILENCED`.
+	To see individual untranslated item tags found, set the system property to `-Dfabric-tag-conventions-v2.missingTagTranslationWarning=VERBOSE`.
+	Default is `SHORT`.
+
+[00:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:16] [Server thread/INFO] (Minecraft) Loading 48 chunks for player spawn...
+[00:11:16] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[00:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:16] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[00:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:16] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[00:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:17] [Server thread/INFO] (Minecraft) Time elapsed: 1828 ms
+[00:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:17] [Server thread/INFO] (Minecraft) ShotRunner[local:E:8a7ec0a0] logged in with entity id 1 at (0.5, -60.0, 0.5)
+[00:11:17] [Server thread/INFO] (Minecraft) System chat: ShotRunner joined the game
+[00:11:17] [Server thread/INFO] (Minecraft) Changing view distance to 5, from 10
+[00:11:17] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[00:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:17] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[00:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:17] [Render thread/WARN] (Minecraft) Requested post effect does not exist: minecraft:end_of_frame
+[00:11:17] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[00:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:17] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:18] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:18] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[00:11:18] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:18] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[00:11:18] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:18] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[00:11:18] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@376bf138
+[00:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: null
+[00:11:19] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[00:11:19] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[00:11:19] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[00:11:19] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Game rule random_tick_speed is now set to 0
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Game rule spawn_mobs is already set to false
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: gamerule do_daylight_cycle false<--[HERE]
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: gamerule do_weather_cycle false<--[HERE]
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: gamerule do_mob_spawning false<--[HERE]
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Game rule send_command_feedback is now set to false
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Marked 49 chunks in minecraft:overworld from [-3, -3] to [3, 3] to be force loaded
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Summoned new Aphelion, the Coil Beyond the End
+[00:11:20] [Server thread/INFO] (ElsewhereQA-shots) [shots] view ground: entity.elsewhere.aphelion y=-59.97263896584612 groundY=-60 noGravity=false
+[00:11:20] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 45.330000, -54.030000, 23.820000
+[00:11:23] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2194ms or 43 ticks behind
+[00:11:23] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 24 stopped at hurt_to: hurt_to: target is not a living entity
+[00:11:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL sfx__aphelion_subtitle.png: hurt_to: hurt_to: target is not a living entity
+[00:11:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 24 (sfx | elsewhere:aphelion) done in 3126 ms
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Summoned new Munchie Boar
+[00:11:23] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -54.000000, -2.500000
+[00:11:49] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[00:11:49] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[00:11:49] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[00:11:49] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd.png: 
+[00:11:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png: 
+[00:11:54] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 238 (s_spawngroups | elsewhere:munchie_boar) done in 31077 ms
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Survival Mode
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Applied effect Regeneration to ShotRunner
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Applied effect Saturation to ShotRunner
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Gave 1 [Iron Sword] to ShotRunner
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:11:54] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Summoned new Ironclan Raider
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Summoned new Ironclan Raider
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Summoned new Ironclan Raider
+[00:11:54] [Server thread/INFO] (Minecraft) System chat: Summoned new Ironclan Raider
+[00:11:56] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__ironclan_raider_raiding_party_verdigris.png: 
+[00:11:56] [Server thread/INFO] (Minecraft) System chat: Applied 1.0 damage to Ironclan Raider
+[00:11:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_spawngroups__ironclan_raider_raiding_party_verdigris_hit.png: 
+[00:11:58] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 239 (s_spawngroups | elsewhere:ironclan_raider) done in 3665 ms
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Removed 1 item(s) from player ShotRunner
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: ...at @p run testo give @s transmutation_tablet<--[HERE]
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: ...at @p run testo transmute set @s 0<--[HERE]
+[00:11:58] [Server thread/INFO] (Minecraft) System chat: Gave 2 [Skyiron Ingot] to ShotRunner
+[00:12:02] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 429 stopped at menu_click: elsewhere:skyiron_ingot is not in the open inventory
+[00:12:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__skyiron_ingot_first_person.png: menu_click: elsewhere:skyiron_ingot is not in the open inventory
+[00:12:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__skyiron_ingot_third_person.png: menu_click: elsewhere:skyiron_ingot is not in the open inventory
+[00:12:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__skyiron_ingot_tooltip.png: menu_click: elsewhere:skyiron_ingot is not in the open inventory
+[00:12:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 429 (s_compat_transmute | elsewhere:skyiron_ingot) done in 3654 ms
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: No blocks were filled
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Removed 2 item(s) from player ShotRunner
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: ...at @p run testo give @s transmutation_tablet<--[HERE]
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: ...at @p run testo transmute set @s 0<--[HERE]
+[00:12:02] [Server thread/INFO] (Minecraft) System chat: Gave 2 [Boss Token] to ShotRunner
+[00:12:05] [Test thread/WARN] (ElsewhereQA-shots) [shots] scene 430 stopped at menu_click: elsewhere:boss_token is not in the open inventory
+[00:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_first_person.png: menu_click: elsewhere:boss_token is not in the open inventory
+[00:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_third_person.png: menu_click: elsewhere:boss_token is not in the open inventory
+[00:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_tooltip.png: menu_click: elsewhere:boss_token is not in the open inventory
+[00:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 430 (s_compat_transmute | elsewhere:boss_token) done in 3645 ms
+[00:12:05] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:12:05] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:12:05] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:12:05] [Server thread/INFO] (Minecraft) Stopping server
+[00:12:05] [Server thread/INFO] (Minecraft) Saving players
+[00:12:05] [Server thread/INFO] (Minecraft) Saving worlds
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:12:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:12:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 4 ok, 7 fail, 0 manual
+[00:12:06] [Render thread/INFO] (Minecraft) Stopping!
+[00:12:06] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+BUILD SUCCESSFUL in 2m 1s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html

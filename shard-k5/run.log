@@ -1,0 +1,43 @@
+00:08:07Z start shard k5 scenes 238,239,24,429,430 on 4 cores, 15 GB, x86_64, commit 344c7e0
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36527 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+00:08:14Z apt
+    Accelerated: no
+OpenGL renderer string: llvmpipe (LLVM 20.1.2, 256 bits)
+OpenGL core profile version string: 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4
+00:08:34Z merged jar: merge.py --sync + build dist
+JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, greenhaze_hush dropped
+JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, overworld_bosses dropped
+JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_end_bosses dropped
+elsewhere-3.0.0.jar
+merged jar elsewhere-3.0.0.jar 146916926 bytes in 91 s
+00:10:05Z client: scenes 238,239,24,429,430, watchdog 90 min
+client rc=0
+[00:11:23] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL sfx__aphelion_subtitle.png: hurt_to: hurt_to: target is not a living entity
+[00:12:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__skyiron_ingot_first_person.png: menu_click: elsewhere:skyiron_ingot is not in the open inventory
+[00:12:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__skyiron_ingot_third_person.png: menu_click: elsewhere:skyiron_ingot is not in the open inventory
+[00:12:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__skyiron_ingot_tooltip.png: menu_click: elsewhere:skyiron_ingot is not in the open inventory
+[00:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_first_person.png: menu_click: elsewhere:boss_token is not in the open inventory
+[00:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_third_person.png: menu_click: elsewhere:boss_token is not in the open inventory
+[00:12:05] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_compat_transmute__boss_token_tooltip.png: menu_click: elsewhere:boss_token is not in the open inventory
+[00:12:06] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 4 ok, 7 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[00:11:07] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[00:11:07] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[00:11:07] [Worker-Main-1/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+[00:11:11] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[00:11:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] 5 flat-stage scenes, 0 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[00:11:14] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+boss_music client selftest:
+00:12:20Z finished rc=0, 4 PNGs;  TOTAL 4 ok, 7 fail, 0 manual
