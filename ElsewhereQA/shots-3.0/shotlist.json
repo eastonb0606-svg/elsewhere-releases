@@ -31887,6 +31887,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
@@ -31930,7 +31934,7 @@
     ],
     [
      "wait",
-     300
+     400
     ],
     [
      "chunks"
@@ -31941,11 +31945,27 @@
     ],
     [
      "wait",
-     300
+     400
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+     "tick sprint 600"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "cmd",
+     "time set 23000"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^12 ^-16 facing entity @s"
     ],
     [
      "wait",
@@ -31972,16 +31992,39 @@
      "chunks"
     ],
     [
+     "wait",
+     400
+    ],
+    [
+     "chunks"
+    ],
+    [
      "cmd",
      "tick sprint 600"
     ],
     [
      "wait",
-     300
+     400
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+     "tick sprint 600"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "cmd",
+     "time set 11000"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^12 ^-16 facing entity @s"
     ],
     [
      "wait",
@@ -32005,7 +32048,7 @@
    "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
    "setup": "Hrafnholt capital, /time set 23000 (05:00), stand on the strand; then /time set 11000 (17:00) at the longhall",
    "note": "west town of the located castle_hrafnholt at each /time",
-   "override": "z2-d-kingcam.json"
+   "override": "z4-f-bugs1.json"
   },
   {
    "n": 317,
@@ -32063,7 +32106,7 @@
     ],
     [
      "wait",
-     300
+     400
     ],
     [
      "chunks"
@@ -32074,10 +32117,11 @@
     ],
     [
      "wait",
-     300
+     400
     ],
     [
-     "chunks"
+     "cmd",
+     "tick sprint 600"
     ],
     [
      "wait",
@@ -32089,7 +32133,15 @@
     ],
     [
      "wait",
-     200
+     60
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^14 ^-18 facing entity @s"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -32112,12 +32164,19 @@
      "chunks"
     ],
     [
+     "wait",
+     400
+    ],
+    [
+     "chunks"
+    ],
+    [
      "cmd",
      "tick sprint 1200"
     ],
     [
      "wait",
-     300
+     400
     ],
     [
      "cmd",
@@ -32133,7 +32192,15 @@
     ],
     [
      "wait",
-     100
+     60
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^14 ^-18 facing entity @s"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -32153,7 +32220,7 @@
    "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
    "setup": "Azmar capital, /time set 9000 (15:00) at the bazaar, then /time set 6000 (12:00)",
    "note": "west town of the located castle_azmar at each /time",
-   "override": "z2-d-kingdom.json"
+   "override": "z4-f-bugs1.json"
   },
   {
    "n": 318,
