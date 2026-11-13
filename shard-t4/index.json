@@ -1,0 +1,97 @@
+{
+  "lanes": {
+    "s_p13_particles": {
+      "Ankhara arena seal + burrow trail (elsewhere:sunpit)": [
+        {
+          "file": "s_p13_particles__ankhara_arena_seal_3s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        }
+      ],
+      "Percolax phase-0 smoke hide (elsewhere:percolax)": [
+        {
+          "file": "s_p13_particles__percolax_smoke_hide_3s.png",
+          "scene": 168,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "ok",
+          "taken": "01:21:11"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "rival kingdoms' plates (each kingdom unique)": [
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_6.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "01:21:16"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "01:21:20"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "01:21:25"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_3_16_y180.png",
+          "scene": 413,
+          "line": 463,
+          "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_striking.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "ok",
+          "taken": "01:21:33"
+        },
+        {
+          "file": "s_reliquary__echo_knight_striking_later.png",
+          "scene": 450,
+          "line": 500,
+          "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
+          "status": "ok",
+          "taken": "01:21:34"
+        }
+      ]
+    }
+  },
+  "run": "01:21:34",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
