@@ -7,14 +7,16 @@
           "scene": 19,
           "line": 27,
           "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:28:39"
         },
         {
           "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
           "scene": 19,
           "line": 27,
           "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:29:14"
         }
       ]
     },
@@ -25,7 +27,8 @@
           "scene": 160,
           "line": 177,
           "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:29:46"
         }
       ]
     },
@@ -36,14 +39,16 @@
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:30:19"
         },
         {
           "file": "s_p13_particles__rimeback_avalanche_20s.png",
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:30:22"
         }
       ]
     },
@@ -54,14 +59,16 @@
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:30:45"
         },
         {
           "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:31:03"
         }
       ]
     },
@@ -92,14 +99,15 @@
           "scene": 409,
           "line": 459,
           "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:31:37"
         }
       ]
     }
   },
-  "run": "01:27:47",
+  "run": "01:31:40",
   "totals": {
-    "ok": 2,
+    "ok": 10,
     "fail": 0,
     "manual": 0
   }
