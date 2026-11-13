@@ -1,0 +1,156 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_14_9_10_y200.png",
+          "scene": 17,
+          "line": 25,
+          "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:engineers_atoll": [
+        {
+          "file": "s_struct_verdigris__engineers_atoll_s_16_8_16.png",
+          "scene": 158,
+          "line": 175,
+          "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Ankhara arena seal + burrow trail (elsewhere:sunpit)": [
+        {
+          "file": "s_p13_particles__ankhara_arena_seal_3s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
+          "scene": 165,
+          "line": 182,
+          "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:grunthar": [
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "ok",
+          "taken": "01:01:04"
+        },
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "ok",
+          "taken": "01:01:06"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_p9_idle__townsfolk_routine_poses_s_townsfolk_resi.png",
+          "scene": 333,
+          "line": 376,
+          "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Changing of the guard salute": [
+        {
+          "file": "s_routines__changing_of_the_guard_salute.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__changing_of_the_guard_salute_5s.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_asm_court": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_asm_court__castle_aldermark_c_0_2_40_y180.png",
+          "scene": 488,
+          "line": 540,
+          "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:01:06",
+  "totals": {
+    "ok": 2,
+    "fail": 0,
+    "manual": 0
+  }
+}
