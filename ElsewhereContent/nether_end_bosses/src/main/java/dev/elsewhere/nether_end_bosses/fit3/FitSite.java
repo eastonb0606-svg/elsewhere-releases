@@ -85,7 +85,7 @@ public final class FitSite {
 					if (solid(st) && py < yy - 2) break;
 				}
 			}
-			if (deep > 2) continue;
+			if (deep > (boss.equals("mournmaw") ? 1 : 2)) continue; // Mournmaw's wide basin: at most one ring sample without ground in reach
 			if (boss.equals("solaxis") && wetCore > 0) continue; // "reject wet cores"
 			if (boss.equals("grunthar") && (lavaUnder >= 3 || wetCore > 0)) continue; // "open lava seas rejected"
 			int score = 0;
@@ -125,7 +125,8 @@ public final class FitSite {
 			lo = Math.min(lo, top);
 			hi = Math.max(hi, top);
 		}
-		if (voids > 3 || hi == Integer.MIN_VALUE || hi - lo > 12) return NONE;
+		// Aphelion's halo floats over the island edge with even a few void samples (6-8% of floor columns over void): none allowed
+		if (voids > (boss.equals("aphelion") ? 0 : 3) || hi == Integer.MIN_VALUE || hi - lo > 12) return NONE;
 		int y = boss.equals("ossyra") ? hi + 27 : hi + 1;
 		return y + 24 > maxY ? NONE : y;
 	}

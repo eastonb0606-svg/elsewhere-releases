@@ -401,7 +401,7 @@ public final class Herds3 {
 			if (!decides(mob) || mob.getTarget() != null || mob.isPassenger() || mob.isLeashed()) return false;
 			leader = leaderOf(mob);
 			if (leader == null) return false;
-			double slack = rule.choir() || rule.shape() == Shape.PAIR ? 2.0 : rule.spacing() + 2.0;
+			double slack = rule.choir() || rule.shape() == Shape.PAIR || rule.shape() == Shape.RING ? 2.0 : rule.spacing() + 2.0;
 			return mob.distanceToSqr(slotPos(leader, rule, slot(mob))) > slack * slack;
 		}
 

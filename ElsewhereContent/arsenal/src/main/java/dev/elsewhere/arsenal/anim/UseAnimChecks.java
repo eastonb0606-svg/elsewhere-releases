@@ -43,6 +43,30 @@ public final class UseAnimChecks {
 		for (String[] w : ARSENAL) itemModel(out, w);
 	}
 
+	static String fpWorst = "", fpLog = "";
+
+	/** Item tip (sprite corner) after the first-person pose, in view space: in front of the camera and inside ~35 degrees vertically. */
+	static boolean fpOnScreen(Style s, int invert) {
+		SwingCurves.Scratch sc = new SwingCurves.Scratch();
+		org.joml.Vector3f t = new org.joml.Vector3f(), tip = new org.joml.Vector3f();
+		org.joml.Quaternionf q = new org.joml.Quaternionf();
+		org.joml.Matrix4f m = new org.joml.Matrix4f();
+		boolean ok = true;
+		float worst = 0;
+		for (int i = 0; i <= 100; i++) {
+			SwingCurves.firstPersonPose(s, i / 100F, invert, sc.v, t, q);
+			SwingCurves.handheldFirstPerson(m.identity(), invert < 0).transformPosition(tip.set(1F, 1F, 0.5F));
+			tip.rotate(q).add(t).add(invert * 0.56F, -0.52F, -0.72F);
+			float ratio = Math.abs(tip.y) / Math.max(1.0E-3F, -tip.z);
+			worst = Math.max(worst, ratio);
+			if (tip.z > -0.1F) fpLog += String.format(" p%d(%.2f,%.2f,%.2f)", i, tip.x, tip.y, tip.z);
+			if (!Float.isFinite(ratio) || tip.z > -0.1F || ratio > 0.62F) ok = false;
+		}
+		fpWorst = String.format("worst tip y/z %.2f", worst) + fpLog;
+		fpLog = "";
+		return ok;
+	}
+
 	static void curves(Out out) {
 		float[] v = new float[7];
 		boolean rest = true, smooth = true;
@@ -84,6 +108,7 @@ public final class UseAnimChecks {
 		out.check("useanim: flail swings a wide overhead arc (>= 140 degrees)", maxRx - minRx >= 140F, (maxRx - minRx) + " deg");
 		float tz = minTz, at = minTzAt;
 		out.check("useanim: rapier lunge thrusts >= 0.45 block forward in the first half of the swing", tz <= -0.45F && at < 0.5F, tz + " at " + at);
+		out.check("useanim: first-person flail stays finite and on screen for the whole swing (item tip within the view)", fpOnScreen(Style.FLAIL, 1) && fpOnScreen(Style.FLAIL, -1), fpWorst);
 		float[] a = new float[7];
 		SwingCurves.thirdPerson(Style.FLAIL, 0.2F, 0F, a);
 		boolean overhead = a[0] < -2.5F;

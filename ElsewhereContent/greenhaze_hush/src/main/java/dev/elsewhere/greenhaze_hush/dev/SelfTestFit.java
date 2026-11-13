@@ -168,12 +168,14 @@ final class SelfTestFit {
 		// the live Ground reads the chunk itself (Level.getHeight answers min y for a chunk that is not visible yet) and skips trees
 		GhFit.Ground g = GhFit.live(l);
 		int bx = x;
-		for (int k = 0; k < 8; k++) {
+		boolean found = false;
+		for (int k = 0; k < 48; k++) {
 			int cx = x + 96 * k;
 			boolean dry = true;
 			for (int i = -4; i <= 4 && dry; i++) for (int j = -4; j <= 4 && dry; j++) dry = !g.wet(cx + 6 * i, z + 6 * j);
-			if (dry) { bx = cx; break; }
+			if (dry) { bx = cx; found = true; break; }
 		}
+		if (!found) throw new IllegalStateException("no dry site within 48 candidates of " + x + "," + z);
 		return new BlockPos(bx, g.y(bx, z) + 1, z);
 	}
 

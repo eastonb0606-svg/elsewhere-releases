@@ -50,9 +50,9 @@ public final class SwingCurves {
 	/** Heavy overhead arc: wind back and up, smash down across the body, slow recovery. */
 	static final float[][] FP_FLAIL = {
 		{0.00F, 0F, 0F, 0F, 0F, 0F, 0F},
-		{0.20F, 0.06F, 0.14F, 0.06F, 40F, 12F, 10F},
-		{0.50F, -0.26F, -0.24F, -0.16F, -110F, -18F, -42F},
-		{0.72F, -0.20F, -0.20F, -0.10F, -96F, -12F, -32F},
+		{0.20F, 0.06F, 0.14F, 0.04F, 32F, 12F, 10F},
+		{0.50F, -0.20F, -0.06F, -0.08F, -110F, -18F, -42F},
+		{0.72F, -0.16F, -0.05F, -0.06F, -96F, -12F, -32F},
 		{1.00F, 0F, 0F, 0F, 0F, 0F, 0F}};
 	/** Lunge: a short draw back, then a straight thrust toward the crosshair, held, then withdrawn. */
 	static final float[][] FP_RAPIER = {

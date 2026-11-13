@@ -711,7 +711,7 @@ public final class AzmarCastle {
 			lo = Math.min(lo, y);
 			if (CastleLayout.wet(g, wx, wz)) return Integer.MIN_VALUE;
 		}
-		if (hi - lo > 3) return Integer.MIN_VALUE;
+		if (hi - lo > 6) return Integer.MIN_VALUE; // w6-castles: was 3, which skipped three of the four rows on a hillside (the plinth is underpinned to the ground)
 		return hi > lo ? hi - 1 : hi;
 	}
 

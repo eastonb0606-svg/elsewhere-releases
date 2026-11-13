@@ -308,7 +308,7 @@ final class InGameTest {
 				} else if (clock - mark == 4) {
 					if (engine && realm != null) check(sm.isActive(realm), "realm track playing again in the engine");
 					conn.handleStopSoundEvent(new ClientboundStopSoundPacket(REALM, SoundSource.MUSIC)); // the court's leave
-				} else if (clock - mark == 8) {
+				} else if (clock - mark == 40) { // SoundEngine keeps a stopped instance 'active' until 20 ticks after it started (soundDeleteTime), so wait past that
 					if (engine && realm != null) check(!sm.isActive(realm), "court leave-stop still stops the realm track");
 					finish(mc);
 				}

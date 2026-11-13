@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 17:47",
+ "generated": "2026-11-12 18:02",
  "scenes": [
   {
    "n": 1,
@@ -1868,6 +1868,10 @@
      true
     ],
     [
+     "cmd",
+     "difficulty normal"
+    ],
+    [
      "summon",
      "elsewhere:aphelion",
      "{PersistenceRequired:1b}"
@@ -1915,7 +1919,7 @@
    "check": "subtitle box shows \"Aphelion roars from beyond the End\" and NO \"Ender Dragon ...\" line",
    "setup": "spawn Aphelion in its arena (night, End), `/damage` it just past its first phase threshold, screenshot 0.5 s later, camera 12 blocks away facing it",
    "note": "hurt to 68% of max HP (just past the first threshold); flat stage instead of the arena",
-   "override": "w4-stage-misc.json"
+   "override": "w6-misc.json"
   },
   {
    "n": 25,
@@ -21979,7 +21983,23 @@
     ],
     [
      "wait",
-     30
+     5
+    ],
+    [
+     "shot",
+     "sculk_resonator_in_use_first_person_t5"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "shot",
+     "sculk_resonator_in_use_first_person_t15"
+    ],
+    [
+     "wait",
+     15
     ],
     [
      "shot",
@@ -21990,8 +22010,17 @@
      "front"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     40,
+     10
+    ],
+    [
      "wait",
-     15
+     10
     ],
     [
      "shot",
@@ -22003,6 +22032,15 @@
     [
      "camera",
      "first"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "wait",
@@ -22057,7 +22095,7 @@
    "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
    "setup": "Glimmer full, hold right-click with each; resonator shots at 5, 15 and 30 ticks held; prism and bell one shot each at 10 ticks held",
    "note": "generic: item sculk_resonator; framing approximate",
-   "override": "itemsd.json"
+   "override": "w6-flail.json"
   },
   {
    "n": 237,
@@ -22100,7 +22138,7 @@
      "minecraft:husk",
      "{NoAI:1b,PersistenceRequired:1b}",
      0,
-     3
+     4
     ],
     [
      "tp",
@@ -22109,7 +22147,7 @@
      0,
      0,
      0,
-     0
+     8
     ],
     [
      "cmd",
@@ -22135,7 +22173,7 @@
     ],
     [
      "wait",
-     3
+     2
     ],
     [
      "shot",
@@ -22158,7 +22196,7 @@
     ],
     [
      "wait",
-     3
+     2
     ],
     [
      "shot",
@@ -22182,7 +22220,7 @@
    "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
    "setup": "`/elsewhere_weaponfx low`, swing the flail (shot 1); `/elsewhere_weaponfx normal`; then `\"use_anims\": false` in config/elsewhere-overhaul3.json and restart (shot 2 mid-swing)",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "itemsd.json"
+   "override": "w6-flail.json"
   },
   {
    "n": 238,
@@ -22216,7 +22254,19 @@
     ],
     [
      "cmd",
-     "execute positioned ~ ~ ~9 run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run summon elsewhere:munchie_boar ~1 ~ ~1"
+     "execute positioned ~ ~ ~9 run summon elsewhere:munchie_boar ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:munchie_boar ~2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:munchie_boar ~-2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:munchie_boar ~1 ~ ~1"
     ],
     [
      "tp",
@@ -22232,7 +22282,7 @@
     ],
     [
      "wait",
-     300
+     500
     ],
     [
      "shot",
@@ -22260,7 +22310,7 @@
    "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
    "setup": "Greenhaze kush_canopy, noon, survival-safe spot; spawn 4 in ONE tick: `/execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run execute summon elsewhere:munchie_boar run summon elsewhere:munchie_boar ~1 ~ ~1`; creative, step 10 back and 6 up, shoot at +15 s",
    "note": "generic: entity munchie_boar, 1 setup command(s); framing approximate",
-   "override": "spawn.json"
+   "override": "w6-herds.json"
   },
   {
    "n": 239,
@@ -22319,11 +22369,23 @@
     ],
     [
      "cmd",
-     "execute positioned ~ ~ ~10 run execute summon elsewhere:ironclan_raider run execute summon elsewhere:ironclan_raider run execute summon elsewhere:ironclan_raider run execute summon elsewhere:ironclan_raider run summon elsewhere:ironclan_raider ~1 ~ ~1"
+     "execute positioned ~ ~ ~16 run summon elsewhere:ironclan_raider ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~16 run summon elsewhere:ironclan_raider ~2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~16 run summon elsewhere:ironclan_raider ~-2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~16 run summon elsewhere:ironclan_raider ~1 ~ ~1"
     ],
     [
      "wait",
-     60
+     20
     ],
     [
      "shot",
@@ -22351,7 +22413,7 @@
    "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
    "setup": "Ironpeak iron_foothills, noon, same one-tick chain with 5 `elsewhere:ironclan_raider`; survival, hit one with a sword, shoot at +2 s from 8 back",
    "note": "generic: entity ironclan_raider; framing approximate",
-   "override": "spawn.json"
+   "override": "w6-herds.json"
   },
   {
    "n": 240,
@@ -22406,11 +22468,23 @@
     ],
     [
      "cmd",
-     "execute positioned ~ ~ ~7 run execute summon elsewhere:ossuary_chorister run execute summon elsewhere:ossuary_chorister run execute summon elsewhere:ossuary_chorister run summon elsewhere:ossuary_chorister ~1 ~ ~1"
+     "execute positioned ~ ~ ~9 run summon elsewhere:ossuary_chorister ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:ossuary_chorister ~2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:ossuary_chorister ~-2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:ossuary_chorister ~1 ~ ~1"
     ],
     [
      "wait",
-     60
+     120
     ],
     [
      "shot",
@@ -22438,7 +22512,7 @@
    "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
    "setup": "the Hush, any cave floor, same one-tick chain with 4 choristers; survival player 6 blocks away for 10 s, then hit one",
    "note": "generic: entity ossuary_chorister; framing approximate",
-   "override": "spawn.json"
+   "override": "w6-herds.json"
   },
   {
    "n": 241,
@@ -22488,11 +22562,23 @@
     ],
     [
      "cmd",
-     "execute positioned ~ ~ ~9 run execute summon elsewhere:hollow_stag run execute summon elsewhere:hollow_stag run execute summon elsewhere:hollow_stag run summon elsewhere:hollow_stag ~1 ~ ~1"
+     "execute positioned ~ ~ ~9 run summon elsewhere:hollow_stag ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:hollow_stag ~2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:hollow_stag ~-2 ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ ~ ~9 run summon elsewhere:hollow_stag ~1 ~ ~1"
     ],
     [
      "wait",
-     100
+     200
     ],
     [
      "shot",
@@ -22520,7 +22606,7 @@
    "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
    "setup": "Pale Hollow hollow_thicket, noon, one-tick chain with 4 `elsewhere:hollow_stag`; hit one",
    "note": "generic: entity hollow_stag; framing approximate",
-   "override": "spawn.json"
+   "override": "w6-herds.json"
   },
   {
    "n": 242,
@@ -27656,7 +27742,7 @@
      "stage",
      0,
      0,
-     3,
+     0,
      0,
      30
     ],
@@ -27677,8 +27763,17 @@
      "mirewick_lantern_sickle_first_person"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     -1,
+     0,
+     35
+    ],
+    [
      "camera",
-     "front"
+     "back"
     ],
     [
      "wait",
@@ -27817,7 +27912,7 @@
    "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
    "setup": "survival, noon, a 5x5 wheat/carrot field on hydrated farmland, all ripe except one young wheat in the middle 3x3; stand 2 back, look at the centre crop, use the sickle once; shot 1 third person at +0.2 s, shot 2 first person at +1 s",
    "note": "generic: item mirewick_lantern_sickle; framing approximate",
-   "override": "shard-2.out.json"
+   "override": "w6-flail.json"
   },
   {
    "n": 302,
@@ -35938,20 +36033,16 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "fill -10 -61 -6 10 -54 18 minecraft:stone hollow"
-    ],
-    [
      "summon",
      "elsewhere:shrieker_swarm",
-     "{}",
+     "{attributes:[{id:\"minecraft:follow_range\",base:16.0d,modifiers:[{id:\"minecraft:random_spawn_bonus\",amount:0.05d,operation:\"add_multiplied_base\"}]}]}",
      0,
      8
     ],
     [
      "view",
      0.0,
-     4.0,
+     8.0,
      35.0
     ],
     [
@@ -36005,7 +36096,7 @@
    "check": "one entity drawn as 8-12 bat-sized bats in a drifting cloud (not one big bat); after the hits fewer bats; F3+B hitbox wider than a bat",
    "setup": "the Hush, a cave floor, `/execute summon elsewhere:shrieker_swarm` (one summon is enough; it runs finalizeSpawn), camera 5 back, shoot at +3 s, then hit it twice with a sword and shoot again",
    "note": "generic: entity shrieker_swarm, 1 setup command(s); framing approximate",
-   "override": "spawn.json"
+   "override": "w6-swarms.json"
   },
   {
    "n": 393,
@@ -36035,14 +36126,20 @@
      "effect give @s night_vision infinite 1 true"
     ],
     [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
      "summon",
      "elsewhere:hotbox_smog",
-     "{}"
+     "{attributes:[{id:\"minecraft:follow_range\",base:16.0d,modifiers:[{id:\"minecraft:random_spawn_bonus\",amount:0.05d,operation:\"add_multiplied_base\"}]}]}",
+     0,
+     8
     ],
     [
      "view",
      0.0,
-     4.0,
+     8.0,
      40.0
     ],
     [
@@ -36050,7 +36147,7 @@
     ],
     [
      "wait",
-     40
+     60
     ],
     [
      "look_target"
@@ -36088,7 +36185,7 @@
    "check": "three smog puffs of the slime's size bobbing together as one mob; hit it: puffs drop off as it loses health",
    "setup": "Greenhaze kush_canopy, night, `/summon elsewhere:hotbox_smog`, camera 6 back",
    "note": "generic: entity hotbox_smog, 1 setup command(s); framing approximate",
-   "override": "spawn.json"
+   "override": "w6-swarms.json"
   },
   {
    "n": 394,
@@ -36114,28 +36211,24 @@
      true
     ],
     [
-     "chat",
-     false
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
     ],
     [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
-    ],
-    [
      "summon",
      "elsewhere:eyeblossom_wisp",
-     "{}",
+     "{attributes:[{id:\"minecraft:follow_range\",base:16.0d,modifiers:[{id:\"minecraft:random_spawn_bonus\",amount:0.05d,operation:\"add_multiplied_base\"}]}]}",
      0,
      8
     ],
     [
      "view",
      0.0,
-     4.5,
+     8.0,
      35.0
     ],
     [
@@ -36143,7 +36236,10 @@
     ],
     [
      "wait",
-     30
+     60
+    ],
+    [
+     "look_target"
     ],
     [
      "shot",
@@ -36151,7 +36247,7 @@
     ],
     [
      "wait",
-     40
+     20
     ],
     [
      "look_target"
@@ -36174,7 +36270,7 @@
    "check": "3-6 normal-size wisps with their glow circling one spot; at 40 blocks at most 3 drawn",
    "setup": "Pale Hollow heartwood_grove, night, `/summon elsewhere:eyeblossom_wisp`, camera 5 back",
    "note": "generic: entity eyeblossom_wisp, 1 setup command(s); framing approximate",
-   "override": "spawn.json"
+   "override": "w6-swarms.json"
   },
   {
    "n": 395,
@@ -37712,10 +37808,14 @@
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -37730,7 +37830,7 @@
    ],
    "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
    "setup": "tp C+(0, +14, 62) yaw 180 pitch 8",
-   "override": "castles.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 410,
@@ -37972,10 +38072,14 @@
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "wait",
+     150
     ],
     [
      "shot",
@@ -37990,7 +38094,7 @@
    ],
    "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
    "setup": "tp C+(0, +3, -16) yaw 180 pitch 0",
-   "override": "castles.json"
+   "override": "w6-castles.json"
   },
   {
    "n": 414,
@@ -39156,14 +39260,20 @@
      10
     ],
     [
-     "use_down"
+     "player_cmd",
+     "testo transmute search skyiron"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "wait",
      6
-    ],
-    [
-     "use_up"
     ],
     [
      "wait",
@@ -39243,7 +39353,7 @@
    "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
    "setup": "survival, craft the table (obsidian corners, amethyst shards, diamonds, eye of ender) and place it, `/give @s elsewhere:skyiron_ingot 2`, open the table, put both ingots in the burn slot",
    "note": "generic: item skyiron_ingot, 1 setup command(s); framing approximate",
-   "override": "w4-stage-misc.json"
+   "override": "w6-misc.json"
   },
   {
    "n": 430,
@@ -39298,14 +39408,20 @@
      10
     ],
     [
-     "use_down"
+     "player_cmd",
+     "testo transmute search boss"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "wait",
      6
-    ],
-    [
-     "use_up"
     ],
     [
      "wait",
@@ -39385,7 +39501,7 @@
    "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
    "setup": "same table, try `elsewhere:boss_token`, then `elsewhere:climber_upgrade_smithing_template`, then `elsewhere:aldermark_oath_ring`",
    "note": "generic: item boss_token; framing approximate",
-   "override": "w4-stage-misc.json"
+   "override": "w6-misc.json"
   },
   {
    "n": 431,

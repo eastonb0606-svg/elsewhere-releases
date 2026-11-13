@@ -114,7 +114,9 @@ public final class GhFit {
 			}
 
 			public boolean wet(int x, int z) {
-				return !l.getChunk(x >> 4, z >> 4).getFluidState(new BlockPos(x, y(x, z) + 1, z)).isEmpty();
+				int gy = y(x, z);
+				LevelChunk c = l.getChunk(x >> 4, z >> 4);
+				return !c.getFluidState(new BlockPos(x, gy + 1, z)).isEmpty() || !c.getFluidState(new BlockPos(x, gy + 2, z)).isEmpty();
 			}
 		};
 	}
@@ -418,7 +420,8 @@ public final class GhFit {
 	}
 
 	public static boolean ground(BlockState s) {
-		return solid(s) && !s.is(net.minecraft.tags.BlockTags.LEAVES) && !s.is(net.minecraft.tags.BlockTags.LOGS);
+		// a lily pad floats on water: it is never ground (it hid ponds from the live wet test and stopped foundations at the water line)
+		return solid(s) && !s.is(net.minecraft.tags.BlockTags.LEAVES) && !s.is(net.minecraft.tags.BlockTags.LOGS) && !(s.getBlock() instanceof net.minecraft.world.level.block.LilyPadBlock);
 	}
 
 	/**

@@ -115,6 +115,7 @@ public final class UseAnims {
 			}
 		}
 		SwingCurves.firstPersonPose(s, attack, invert, FP_V, FP_T, FP_Q);
+		if (!Float.isFinite(FP_T.x + FP_T.y + FP_T.z + FP_Q.x + FP_Q.y + FP_Q.z + FP_Q.w)) return false; // never lose the item to a NaN pose
 		pose.translate(FP_T.x, FP_T.y, FP_T.z);
 		pose.rotate(FP_Q);
 		return true;

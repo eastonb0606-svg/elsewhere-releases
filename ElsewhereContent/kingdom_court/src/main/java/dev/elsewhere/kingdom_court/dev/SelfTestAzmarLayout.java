@@ -313,6 +313,9 @@ final class SelfTestAzmarLayout {
 			for (int kx = 3; kx <= 7; kx++) for (int z = z0; z <= z0 + 1; z++) ok &= solid(at(l, o, s * kx, b, z)) && solid(at(l, o, s * kx, b - 1, z));
 			if (!ok) unsound++;
 		}
+		int ceil = 0;
+		for (int y = 6; y <= 14; y++) if (!at(l, o, 0, y, -20).isAir()) ceil++;
+		check(tag + ": w6 throne hall has its ceiling and roof over the dais (no sky over (0, 6..14, -20))", ceil >= 2, ceil);
 		check(tag + ": sphinx avenue: every sphinx stands on its own ground, supported and not buried (at least 4 of 8 placed)", placed >= 4 && unsound == 0, placed + " placed, " + unsound + " unsound");
 		// the pad: no air or fluid under the paving (outside the pools, the lake and the crypt), no stray water, water contained
 		int holes = 0, stray = 0, leak = 0;
