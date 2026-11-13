@@ -110,7 +110,7 @@ public final class PGFit {
 					int gx = i / 3 - 1, gz = i % 3 - 1, y = floors[i];
 					int x0 = ox + FitBuilders.lo(gx) - (gx < 0 ? 1 : 0), x1 = ox + FitBuilders.hi(gx) + (gx > 0 ? 1 : 0);
 					int z0 = oz + FitBuilders.lo(gz) - (gz < 0 ? 1 : 0), z1 = oz + FitBuilders.hi(gz) + (gz > 0 ? 1 : 0);
-					out.add(new FitPiece(kind, "court", o, y, i, 0, seed, box(x0, y - 13, z0, x1, Math.max(y + 11, oy + 1), z1)));
+					out.add(new FitPiece(kind, "court", o, y, i, 0, seed, box(x0, y - 40, z0, x1, Math.max(y + 11, oy + 1), z1)));
 				}
 			}
 			case PGStructures.BREEZE -> {

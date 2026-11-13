@@ -104,7 +104,7 @@ public final class FitBuilders {
 					if (c == hw) {
 						boolean corner = Math.abs(dx) == Math.abs(dz);
 						int a = along(dx, dz, c);
-						if (dy % 3 == 2) s = chis;                                                  // a continuous chiseled band on the top course of each tier
+						if (dy % 3 == 2) s = gilt;                                                  // 2.x: the gilt (yellow terracotta) band on the top course of each tier
 						else if (corner) s = chis;                                                 // chiseled quoins on every course
 						else if (dy % 3 == 1 && Math.floorMod(a, 4) == 0) s = gilt;                // gilt studs under the band
 					}
