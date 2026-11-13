@@ -122,12 +122,6 @@ public class Ankhara extends BossBase implements Burrowing {
 		}
 	}
 
-	/** The Sunpit rim is solid from r > 21, so the seal ring stands just inside it (at r + 1.5 it was buried in the rim). */
-	@Override
-	protected double sealRingRadius() {
-		return Sunpit.ARENA_RADIUS - 0.5;
-	}
-
 	/** Lowest allowed y above the level's minimum build height (the clamp margin). */
 	public static final int MIN_MARGIN = 2;
 
