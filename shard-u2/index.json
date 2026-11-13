@@ -1,0 +1,123 @@
+{
+  "lanes": {
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_blocking.png",
+          "scene": 146,
+          "line": 161,
+          "check": "rises to the vanilla blocking spot",
+          "status": "ok",
+          "taken": "01:26:44"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:aphelion_shattered_halo": [
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_26_10_26.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "ok",
+          "taken": "01:27:12"
+        },
+        {
+          "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
+          "scene": 286,
+          "line": 325,
+          "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
+          "status": "ok",
+          "taken": "01:27:21"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)": [
+        {
+          "file": "s_townsfolk__aldermark_capital_time_set_3000.png",
+          "scene": 314,
+          "line": 354,
+          "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Mirewick off-time wards": [
+        {
+          "file": "s_routines__mirewick_off_time_wards.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__mirewick_off_time_wards_5s.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_prismbow": {
+      "elsewhere:prism_bow": [
+        {
+          "file": "s_prismbow__prism_bow_first_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "01:26:46"
+        },
+        {
+          "file": "s_prismbow__prism_bow_third_person_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "01:26:47"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_first_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "01:26:47"
+        },
+        {
+          "file": "s_prismbow__prism_bow_in_use_third_person.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "01:26:48"
+        },
+        {
+          "file": "s_prismbow__prism_bow_after_use.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "01:26:49"
+        },
+        {
+          "file": "s_prismbow__prism_bow_tooltip_2.png",
+          "scene": 400,
+          "line": 450,
+          "check": "the bow sits in the hand at the vanilla bow's angle (not 45 degrees off) with the hand on the dark grip; the string pulls back in 3 stages and the nocked light arrow brightens from dim gold to white-gold with a glow at full draw; third person: vanilla aim pose, grip in the fist",
+          "status": "ok",
+          "taken": "01:26:50"
+        }
+      ]
+    }
+  },
+  "run": "01:27:21",
+  "totals": {
+    "ok": 9,
+    "fail": 0,
+    "manual": 0
+  }
+}
