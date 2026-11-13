@@ -1,0 +1,89 @@
+{
+  "lanes": {
+    "s_struct_verdigris": {
+      "elsewhere:engineers_atoll": [
+        {
+          "file": "s_struct_verdigris__engineers_atoll_s_16_8_16.png",
+          "scene": 158,
+          "line": 175,
+          "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:glacier_shelf": [
+        {
+          "file": "s_struct_overworld__glacier_shelf_s_30_14_30.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__glacier_shelf_downhill_20.png",
+          "scene": 176,
+          "line": 188,
+          "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:grunthar": [
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "ok",
+          "taken": "01:18:38"
+        },
+        {
+          "file": "s_p8_bossanims__grunthar_attacks_call_the_enforcers_and_later.png",
+          "scene": 244,
+          "line": 274,
+          "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
+          "status": "ok",
+          "taken": "01:18:40"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "swarm-as-one squad targeting (ARMIES 3.4)": [
+        {
+          "file": "s_swarm1__battle_aldermark_mirewick_32_30s.png",
+          "scene": 272,
+          "line": 308,
+          "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
+          "status": "ok",
+          "taken": "01:19:08"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark drill and butts at dawn": [
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:19:08",
+  "totals": {
+    "ok": 3,
+    "fail": 0,
+    "manual": 0
+  }
+}
