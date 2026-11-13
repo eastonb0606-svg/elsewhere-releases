@@ -7,7 +7,8 @@
           "scene": 4,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:14:38"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 170,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:16:54"
         }
       ]
     },
@@ -29,14 +31,16 @@
           "scene": 177,
           "line": 189,
           "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:17:22"
         },
         {
           "file": "s_struct_overworld__sun_chamber_hall_altar_facing_south.png",
           "scene": 177,
           "line": 189,
           "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:17:53"
         }
       ]
     },
@@ -107,21 +111,23 @@
           "scene": 484,
           "line": 536,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:18:23"
         },
         {
           "file": "s_struct_greenhaze__listening_engine_ground.png",
           "scene": 484,
           "line": 536,
           "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:18:29"
         }
       ]
     }
   },
-  "run": "01:12:23",
+  "run": "01:18:31",
   "totals": {
-    "ok": 6,
+    "ok": 12,
     "fail": 0,
     "manual": 0
   }
