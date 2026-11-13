@@ -19,14 +19,16 @@
           "scene": 283,
           "line": 322,
           "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:18"
         },
         {
           "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
           "scene": 283,
           "line": 322,
           "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:43"
         }
       ]
     },
@@ -101,14 +103,16 @@
           "scene": 377,
           "line": 425,
           "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:28:30"
         },
         {
           "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
           "scene": 377,
           "line": 425,
           "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:28:38"
         }
       ]
     },
@@ -119,14 +123,15 @@
           "scene": 456,
           "line": 508,
           "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:26:38"
         }
       ]
     }
   },
-  "run": "01:26:21",
+  "run": "01:28:39",
   "totals": {
-    "ok": 8,
+    "ok": 13,
     "fail": 0,
     "manual": 0
   }
