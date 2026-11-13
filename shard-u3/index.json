@@ -1,0 +1,114 @@
+{
+  "lanes": {
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, blocking)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_blocking.png",
+          "scene": 140,
+          "line": 157,
+          "check": "the shield swings up and in to the vanilla blocking spot (covers the lower middle of the screen); no flicker or jump between models",
+          "status": "ok",
+          "taken": "01:26:30"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "`/kingdom armies swarm` report": [
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "ok",
+          "taken": "01:26:45"
+        },
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "ok",
+          "taken": "01:26:51"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:mournmaw_weeping_basin": [
+        {
+          "file": "s_struct_nether__mournmaw_weeping_basin_s_0_16_26.png",
+          "scene": 285,
+          "line": 324,
+          "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_locate": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_locate__castle_azmar_overview.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__castle_azmar_ground.png",
+          "scene": 357,
+          "line": 405,
+          "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rout at the end of a battle": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 443,
+          "line": 493,
+          "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_reliquary": {
+      "elsewhere:echo_knight": [
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_reliquary_held_face_on_first_person.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        },
+        {
+          "file": "s_reliquary__echo_reliquary_held_front_view.png",
+          "scene": 449,
+          "line": 499,
+          "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:26:51",
+  "totals": {
+    "ok": 3,
+    "fail": 0,
+    "manual": 0
+  }
+}
