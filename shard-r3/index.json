@@ -1,0 +1,144 @@
+{
+  "lanes": {
+    "s_struct_verdigris": {
+      "elsewhere:drowned_cathedral": [
+        {
+          "file": "s_struct_verdigris__drowned_cathedral_s_26_6_26.png",
+          "scene": 161,
+          "line": 178,
+          "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:azmar_sultana (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__azmar_sultana_aura_phase2.png",
+          "scene": 203,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "01:10:40"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:hollow_shrine": [
+        {
+          "file": "s_struct_core__hollow_shrine_s_9_6_9.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__hollow_shrine_downhill_20.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_wolfcall": {
+      "Warg pack hunting (gear3)": [
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        },
+        {
+          "file": "s_wolfcall__warg_pack_hunting_gear3_5s.png",
+          "scene": 408,
+          "line": 458,
+          "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Tier edges (24 / 48 blocks): trims drop, cape stops, nothing pops": [
+        {
+          "file": "s_lod__patrol_8_10s.png",
+          "scene": 457,
+          "line": 509,
+          "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_bossdrops": {
+      "elsewhere:mirewick_tolliver": [
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        },
+        {
+          "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
+          "scene": 491,
+          "line": 544,
+          "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:10:40",
+  "totals": {
+    "ok": 1,
+    "fail": 0,
+    "manual": 0
+  }
+}
