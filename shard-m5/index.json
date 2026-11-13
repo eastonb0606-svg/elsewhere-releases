@@ -1,0 +1,176 @@
+{
+  "lanes": {
+    "s_locate": {
+      "explorer map to a rival castle": [
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "00:16:29"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "00:16:30"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_2.png",
+          "scene": 373,
+          "line": 421,
+          "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
+          "status": "ok",
+          "taken": "00:16:31"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "00:16:32"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "00:16:33"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "00:16:33"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "00:16:36"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "00:16:40"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_first_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "00:16:43"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_third_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "00:16:44"
+        },
+        {
+          "file": "s_sunglass__sunglass_after_use.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "00:16:45"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "00:16:45"
+        },
+        {
+          "file": "s_sunglass__sunglass_first_person_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "00:16:48"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "00:16:49"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_3.png",
+          "scene": 428,
+          "line": 478,
+          "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
+          "status": "ok",
+          "taken": "00:16:50"
+        }
+      ]
+    },
+    "s_compat_greenhaze": {
+      "elsewhere:everflow_bong": [
+        {
+          "file": "s_compat_greenhaze__everflow_bong_first_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "ok",
+          "taken": "00:16:54"
+        },
+        {
+          "file": "s_compat_greenhaze__everflow_bong_third_person.png",
+          "scene": 434,
+          "line": 484,
+          "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
+          "status": "ok",
+          "taken": "00:16:55"
+        }
+      ]
+    }
+  },
+  "run": "00:16:55",
+  "totals": {
+    "ok": 17,
+    "fail": 0,
+    "manual": 0
+  }
+}
