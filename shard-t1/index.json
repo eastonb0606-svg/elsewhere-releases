@@ -7,14 +7,16 @@
           "scene": 317,
           "line": 357,
           "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:23:19"
         },
         {
           "file": "s_townsfolk__azmar_capital_time_set_6000.png",
           "scene": 317,
           "line": 357,
           "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:24:00"
         }
       ]
     },
@@ -77,7 +79,8 @@
           "scene": 411,
           "line": 461,
           "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle façade, scarab over its door",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:24:38"
         }
       ]
     },
@@ -88,21 +91,23 @@
           "scene": 460,
           "line": 512,
           "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:21:58"
         },
         {
           "file": "s_lod__melee_subtitles.png",
           "scene": 460,
           "line": 512,
           "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:22:02"
         }
       ]
     }
   },
-  "run": "01:21:19",
+  "run": "01:24:40",
   "totals": {
-    "ok": 6,
+    "ok": 11,
     "fail": 0,
     "manual": 0
   }
