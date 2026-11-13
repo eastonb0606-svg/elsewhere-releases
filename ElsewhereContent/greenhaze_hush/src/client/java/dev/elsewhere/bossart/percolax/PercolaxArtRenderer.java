@@ -109,7 +109,7 @@ public class PercolaxArtRenderer extends MobRenderer<Percolax, PercolaxArtState,
 
 	@Override
 	protected int getModelTint(PercolaxArtState state) {
-		return state.hidden ? 0x1EFFFFFF : 0xFFFFFFFF; // fades into its smoke while hiding
+		return state.hidden ? 0x66FFFFFF : 0xFFFFFFFF; // fades into its smoke while hiding
 	}
 
 	/** Emissive water, eyes and ember, plus the smoke column tinted by strain. */
@@ -120,7 +120,7 @@ public class PercolaxArtRenderer extends MobRenderer<Percolax, PercolaxArtState,
 
 		@Override
 		public void submit(PoseStack pose, SubmitNodeCollector collector, int light, PercolaxArtState state, float yRot, float xRot) {
-			int glow = state.ember || !state.hidden ? 0xFFFFFFFF : 0x28606060;
+			int glow = state.ember || !state.hidden ? 0xFFFFFFFF : 0xFF808080;
 			collector.order(1).submitModel(getParentModel(), state, pose, GLOW, light, OverlayTexture.NO_OVERLAY, glow, null, state.outlineColor);
 			int tint = state.strainShown ? STRAIN_TINT[Math.floorMod(state.strain, 3)] : HAZE_TINT;
 			if (state.deathTime > 0) tint = 0xFF404040;

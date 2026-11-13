@@ -139,12 +139,6 @@ public class Townsfolk extends PathfinderMob implements dev.elsewhere.kingdom.id
 				} catch (NumberFormatException ignored) {}
 			}
 		}
-		// QA/commands: {TownsfolkPose:"CARRY"} sets the routine pose of a /summoned resident (CARRY, PRAY, LOUNGE, SIT, WORK ...)
-		String tp = in.getStringOr("TownsfolkPose", "");
-		if (!tp.isEmpty()) {
-			dev.elsewhere.kingdom.armies.routine.RoutinePoses.Pose rp = dev.elsewhere.kingdom.armies.routine.RoutinePoses.Pose.byName(tp, dev.elsewhere.kingdom.armies.routine.RoutinePoses.Pose.NONE);
-			if (rp != dev.elsewhere.kingdom.armies.routine.RoutinePoses.Pose.NONE) dev.elsewhere.kingdom.armies.routine.RoutinePoses.set(this, rp);
-		}
 	}
 
 	@Override
