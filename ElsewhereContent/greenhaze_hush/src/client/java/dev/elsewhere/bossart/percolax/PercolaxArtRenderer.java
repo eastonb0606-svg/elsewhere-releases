@@ -109,7 +109,7 @@ public class PercolaxArtRenderer extends MobRenderer<Percolax, PercolaxArtState,
 
 	@Override
 	protected int getModelTint(PercolaxArtState state) {
-		return state.hidden ? 0x00FFFFFF : 0xFFFFFFFF; // fades into its smoke while hiding
+		return state.hidden ? 0x1EFFFFFF : 0xFFFFFFFF; // fades into its smoke while hiding
 	}
 
 	/** Emissive water, eyes and ember, plus the smoke column tinted by strain. */
@@ -120,10 +120,8 @@ public class PercolaxArtRenderer extends MobRenderer<Percolax, PercolaxArtState,
 
 		@Override
 		public void submit(PoseStack pose, SubmitNodeCollector collector, int light, PercolaxArtState state, float yRot, float xRot) {
-			if (state.hidden && !state.ember) return; // hidden in its smoke: nothing of the body draws, the ember glow is all that shows
-			int glow = 0xFFFFFFFF;
+			int glow = state.ember || !state.hidden ? 0xFFFFFFFF : 0x28606060;
 			collector.order(1).submitModel(getParentModel(), state, pose, GLOW, light, OverlayTexture.NO_OVERLAY, glow, null, state.outlineColor);
-			if (state.hidden) return; // the ember glow only; the full-body smoke layer would show the cuboids through the haze
 			int tint = state.strainShown ? STRAIN_TINT[Math.floorMod(state.strain, 3)] : HAZE_TINT;
 			if (state.deathTime > 0) tint = 0xFF404040;
 			collector.order(1).submitModel(getParentModel(), state, pose, SMOKE, light, OverlayTexture.NO_OVERLAY, tint, null, state.outlineColor);
