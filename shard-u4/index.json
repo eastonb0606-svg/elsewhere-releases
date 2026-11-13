@@ -7,7 +7,8 @@
           "scene": 21,
           "line": 29,
           "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:27:44"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 149,
           "line": 164,
           "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:28:35"
         }
       ]
     },
@@ -77,7 +79,8 @@
           "scene": 327,
           "line": 370,
           "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:29:11"
         }
       ],
       "night rest (REST: soldiers the night routine rests)": [
@@ -86,21 +89,23 @@
           "scene": 332,
           "line": 375,
           "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:29:40"
         },
         {
           "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
           "scene": 332,
           "line": 375,
           "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:29:46"
         }
       ]
     }
   },
-  "run": "01:26:46",
+  "run": "01:29:47",
   "totals": {
-    "ok": 5,
+    "ok": 10,
     "fail": 0,
     "manual": 0
   }
