@@ -1,0 +1,108 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:mother_creak": [
+        {
+          "file": "anim__mother_creak_hurt_peak.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "01:26:53"
+        },
+        {
+          "file": "anim__mother_creak_hurt_rest.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "01:26:53"
+        }
+      ]
+    },
+    "s_struct_overworld": {
+      "elsewhere:croaking_shrine": [
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_22_9_22.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_overworld__croaking_shrine_s_0_3_34.png",
+          "scene": 175,
+          "line": 187,
+          "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:lantern_road (night procession)": [
+        {
+          "file": "s_struct_core__lantern_road_procession_night.png",
+          "scene": 215,
+          "line": 245,
+          "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark fields at 14:00 + vespers": [
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers.png",
+          "scene": 315,
+          "line": 355,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__aldermark_fields_at_14_00_vespers_5s.png",
+          "scene": 315,
+          "line": 355,
+          "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "swarm attacking + Mothdust": [
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "ok",
+          "taken": "01:27:00"
+        },
+        {
+          "file": "s_mothlight__swarm_attacking_mothdust_5s.png",
+          "scene": 404,
+          "line": 454,
+          "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
+          "status": "ok",
+          "taken": "01:27:01"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_2_3_y180.png",
+          "scene": 412,
+          "line": 462,
+          "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:27:01",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
