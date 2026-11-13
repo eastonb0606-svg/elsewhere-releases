@@ -1,0 +1,90 @@
+{
+  "lanes": {
+    "s_struct_overworld": {
+      "elsewhere:wreck_ring": [
+        {
+          "file": "s_struct_overworld__wreck_ring_s_26_10_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "ok",
+          "taken": "01:19:46"
+        },
+        {
+          "file": "s_struct_overworld__wreck_ring_s_0_12_26.png",
+          "scene": 178,
+          "line": 190,
+          "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
+          "status": "ok",
+          "taken": "01:20:01"
+        }
+      ]
+    },
+    "s_langfix": {
+      "elsewhere:azmar_soldier_spawn_egg": [
+        {
+          "file": "s_langfix__azmar_soldier_spawn_egg_death_15t.png",
+          "scene": 242,
+          "line": 272,
+          "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
+          "status": "ok",
+          "taken": "01:18:51"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Hrafnholt jetty at dawn + hall feast": [
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_23000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__hrafnholt_capital_time_set_11000.png",
+          "scene": 316,
+          "line": 356,
+          "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Changing of the guard salute": [
+        {
+          "file": "s_routines__changing_of_the_guard_salute.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__changing_of_the_guard_salute_5s.png",
+          "scene": 378,
+          "line": 426,
+          "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Kingdom rank shapes side by side (Azmar v Mirewick)": [
+        {
+          "file": "s_impostors__battle_azmar_mirewick_110_30s.png",
+          "scene": 440,
+          "line": 490,
+          "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
+          "status": "ok",
+          "taken": "01:19:04"
+        }
+      ]
+    }
+  },
+  "run": "01:20:01",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
