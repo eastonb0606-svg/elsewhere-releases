@@ -1,0 +1,106 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_mirewick": [
+        {
+          "file": "structures_build__castle_mirewick_c_0_6_48_y180.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        },
+        {
+          "file": "structures_build__castle_mirewick_c_26_5_42_y140.png",
+          "scene": 19,
+          "line": 27,
+          "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:lighthouse": [
+        {
+          "file": "s_struct_verdigris__lighthouse_s_30_10_30.png",
+          "scene": 160,
+          "line": 177,
+          "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
+        {
+          "file": "s_p13_particles__rimeback_avalanche_10s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__rimeback_avalanche_20s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:ossyra_matriarch_spire": [
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_20_14_20.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
+          "scene": 287,
+          "line": 326,
+          "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_mothlight": {
+      "elsewhere:mothlight_staff": [
+        {
+          "file": "s_mothlight__mothlight_staff_held.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "ok",
+          "taken": "01:27:47"
+        },
+        {
+          "file": "s_mothlight__mothlight_staff_tooltip.png",
+          "scene": 402,
+          "line": 452,
+          "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
+          "status": "ok",
+          "taken": "01:27:47"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "s_layout_azmar__castle_azmar_c_0_14_62_y180.png",
+          "scene": 409,
+          "line": 459,
+          "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:27:47",
+  "totals": {
+    "ok": 2,
+    "fail": 0,
+    "manual": 0
+  }
+}
