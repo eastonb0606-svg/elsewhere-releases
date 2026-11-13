@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 19:20",
+ "generated": "2026-11-12 19:33",
  "scenes": [
   {
    "n": 1,
@@ -93,6 +93,10 @@
     ],
     [
      "cmd",
+     "aldermark claim"
+    ],
+    [
+     "cmd",
      "aldermark rush on"
     ],
     [
@@ -170,7 +174,7 @@
    "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
    "setup": "the villages lane's queued shot run",
    "note": "the vanilla village nearest the located castle_aldermark",
-   "override": "z1-villages.json"
+   "override": "z4-f-villages.json"
   },
   {
    "n": 3,
@@ -957,10 +961,6 @@
      true
     ],
     [
-     "chat",
-     true
-    ],
-    [
      "wear_set",
      "moonsilk"
     ],
@@ -978,12 +978,8 @@
      "gamerule send_command_feedback true"
     ],
     [
-     "chat",
-     true
-    ],
-    [
-     "player_cmd",
-     "calling"
+     "wait",
+     5
     ],
     [
      "chat",
@@ -991,7 +987,23 @@
     ],
     [
      "wait",
-     25
+     5
+    ],
+    [
+     "player_cmd",
+     "calling"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "chat",
+     true
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -1014,7 +1026,7 @@
    ],
    "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
    "setup": "same player types `/calling` with chat visible",
-   "override": "z1-items.json"
+   "override": "z4-f-villages.json"
   },
   {
    "n": 12,
@@ -2362,10 +2374,10 @@
      "tp",
      "anchor",
      0,
-     70,
-     120,
+     52,
+     92,
      180,
-     36
+     30
     ],
     [
      "chunks"
@@ -2456,7 +2468,7 @@
    ],
    "check": "towns on per-house pads with contour palisades, roads follow the terrain from gate to gates, no flooded or buried road",
    "setup": "C+(0, +75, 150) yaw 180 pitch 32; C+(-/+88.5, +26, 52.5) yaw 180 pitch 26",
-   "override": "w6-castles.json"
+   "override": "z4-f-castles.json"
   },
   {
    "n": 29,
@@ -13551,11 +13563,11 @@
     [
      "tp",
      "anchor",
-     16,
-     12,
-     16,
+     24,
+     18,
+     24,
      135.0,
-     19
+     24
     ],
     [
      "chunks"
@@ -13596,11 +13608,11 @@
     [
      "tp",
      "anchor",
-     -16,
-     12,
-     -16,
+     -10,
+     10,
+     -10,
      -45.0,
-     19
+     16
     ],
     [
      "chunks"
@@ -13651,7 +13663,7 @@
    ],
    "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
    "setup": "tp S+(14, +10, 14) facing S, pitch 25, then a second shot from the downhill side 18 out at eye height",
-   "override": "z1-structcam.json"
+   "override": "z4-f-villages.json"
   },
   {
    "n": 154,
@@ -13704,23 +13716,17 @@
      "elsewhere:climbers_cairn"
     ],
     [
+     "cmd",
+     "gamerule advance_time false"
+    ],
+    [
      "tp",
      "anchor",
-     7,
-     6,
-     7,
+     12,
+     12,
+     12,
      135.0,
-     17
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "wait",
-     250
-    ],
-    [
-     "chunks"
+     28
     ],
     [
      "cmd",
@@ -13739,10 +13745,29 @@
     ],
     [
      "wait",
-     80
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "shot",
@@ -13757,7 +13782,7 @@
    ],
    "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
    "setup": "tp S+(6, +4, 6) facing S, pitch 15",
-   "override": "z1-structcam.json"
+   "override": "z4-f-structa.json"
   },
   {
    "n": 155,
@@ -14318,20 +14343,16 @@
     ],
     [
      "cmd",
-     "weather clear 1000000"
-    ],
-    [
-     "cmd",
-     "gamerule advance_weather false"
+     "gamerule advance_time false"
     ],
     [
      "tp",
      "anchor",
-     24,
-     12,
-     24,
+     22,
+     6,
+     22,
      135.0,
-     12
+     10
     ],
     [
      "chunks"
@@ -14345,25 +14366,22 @@
     ],
     [
      "cmd",
-     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+     "weather clear 1000000"
     ],
     [
      "cmd",
-     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+     "time set 6000"
     ],
     [
-     "cmd",
-     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+     "wait",
+     60
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     80
-    ],
-    [
-     "chunks"
+     40
     ],
     [
      "shot",
@@ -14378,7 +14396,7 @@
    ],
    "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
    "setup": "underwater, tp S+(26, +6, 26) facing S, pitch 10 (night vision)",
-   "override": "z1-structcam.json"
+   "override": "z4-f-structa.json"
   },
   {
    "n": 162,
@@ -14511,20 +14529,16 @@
     ],
     [
      "cmd",
-     "weather clear 1000000"
-    ],
-    [
-     "cmd",
-     "gamerule advance_weather false"
+     "gamerule advance_time false"
     ],
     [
      "tp",
      "anchor",
-     9,
-     8,
-     9,
+     12,
+     6,
+     12,
      135.0,
-     29
+     22
     ],
     [
      "chunks"
@@ -14538,25 +14552,22 @@
     ],
     [
      "cmd",
-     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+     "weather clear 1000000"
     ],
     [
      "cmd",
-     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+     "time set 6000"
     ],
     [
-     "cmd",
-     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+     "wait",
+     60
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     80
-    ],
-    [
-     "chunks"
+     40
     ],
     [
      "shot",
@@ -14571,7 +14582,7 @@
    ],
    "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
    "setup": "tp S+(8, +4, 8) facing S, pitch 20",
-   "override": "z1-structcam.json"
+   "override": "z4-f-structa.json"
   },
   {
    "n": 164,
@@ -15296,6 +15307,10 @@
     ],
     [
      "cmd",
+     "aldermark claim"
+    ],
+    [
+     "cmd",
      "aldermark rush on"
     ],
     [
@@ -15370,7 +15385,7 @@
    "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
    "setup": "run `/gamerule sendCommandFeedback false` before the `/gamemode spectator` switch (or wait 12 s or press F1) so no chat line is captured; player alive (the 08:54 lane-rv-mirelook castle views were the You Died! screen)",
    "note": "the vanilla village nearest the Aldermark castle; views approximate lane-rv-vill's",
-   "override": "z1-villages.json"
+   "override": "z4-f-villages.json"
   },
   {
    "n": 171,
@@ -15433,6 +15448,10 @@
     [
      "wait",
      100
+    ],
+    [
+     "cmd",
+     "aldermark claim"
     ],
     [
      "cmd",
@@ -15506,7 +15525,7 @@
    "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
    "setup": "run `/gamerule sendCommandFeedback false` before the `/gamemode spectator` switch (or wait 12 s or press F1) so no chat line is captured; player alive (the 08:54 lane-rv-mirelook castle views were the You Died! screen)",
    "note": "the vanilla village nearest the Aldermark castle; views approximate lane-rv-vill's",
-   "override": "z1-villages.json"
+   "override": "z4-f-villages.json"
   },
   {
    "n": 172,
@@ -15569,6 +15588,10 @@
     [
      "wait",
      100
+    ],
+    [
+     "cmd",
+     "aldermark claim"
     ],
     [
      "cmd",
@@ -15642,7 +15665,7 @@
    "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
    "setup": "run `/gamerule sendCommandFeedback false` before the `/gamemode spectator` switch (or wait 12 s or press F1) so no chat line is captured; player alive (the 08:54 lane-rv-mirelook castle views were the You Died! screen)",
    "note": "the vanilla village nearest the Aldermark castle; views approximate lane-rv-vill's",
-   "override": "z1-villages.json"
+   "override": "z4-f-villages.json"
   },
   {
    "n": 173,
@@ -15708,6 +15731,10 @@
     ],
     [
      "cmd",
+     "aldermark claim"
+    ],
+    [
+     "cmd",
      "aldermark rush on"
     ],
     [
@@ -15756,10 +15783,10 @@
      "tp",
      "anchor",
      -22,
-     10,
+     18,
      14,
      -122,
-     14
+     22
     ],
     [
      "chunks"
@@ -15782,7 +15809,7 @@
    "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
    "setup": "run `/gamerule sendCommandFeedback false` before the `/gamemode spectator` switch (or wait 12 s or press F1) so no chat line is captured; player alive (the 08:54 lane-rv-mirelook castle views were the You Died! screen)",
    "note": "the vanilla village nearest the Aldermark castle; views approximate lane-rv-vill's",
-   "override": "z1-villages.json"
+   "override": "z4-f-villages.json"
   },
   {
    "n": 174,
@@ -16724,21 +16751,11 @@
     [
      "tp",
      "anchor",
-     26,
-     26,
-     26,
+     24,
+     22,
+     24,
      135.0,
-     15
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "wait",
-     250
-    ],
-    [
-     "chunks"
+     28
     ],
     [
      "cmd",
@@ -16757,10 +16774,29 @@
     ],
     [
      "wait",
-     80
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "shot",
@@ -16770,20 +16806,10 @@
      "tp",
      "anchor",
      0,
-     24,
-     40,
+     16,
+     34,
      180.0,
-     11
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "wait",
-     250
-    ],
-    [
-     "chunks"
+     18
     ],
     [
      "cmd",
@@ -16802,10 +16828,29 @@
     ],
     [
      "wait",
-     80
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "shot",
@@ -16824,7 +16869,7 @@
    ],
    "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
    "setup": "tp S+(24, +16, 24) facing S, pitch 22, then S+(0, +4, 26) yaw 180 pitch 5",
-   "override": "z1-structcam.json"
+   "override": "z4-f-structa.json"
   },
   {
    "n": 182,
@@ -18968,6 +19013,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 18000"
     ],
     [
@@ -18976,11 +19025,7 @@
     ],
     [
      "gui",
-     false
-    ],
-    [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
+     true
     ],
     [
      "summon",
@@ -18993,46 +19038,50 @@
     ],
     [
      "hurt_to",
-     0.45
+     0.42
     ],
     [
      "view",
      0.0,
-     4.0,
-     30.0
+     3.2,
+     25.0
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     60
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     60
     ],
     [
      "cmd",
      "execute as @e[type=elsewhere:azmar_sultana,distance=..40] run data merge entity @s {NoAI:1b}"
     ],
     [
-     "look_target"
+     "cmd",
+     "time set 18000"
     ],
     [
      "wait",
-     100
+     40
+    ],
+    [
+     "look_target"
     ],
     [
      "cmd",
      "time set 18000"
     ],
     [
-     "cmd",
-     "weather clear"
-    ],
-    [
      "wait",
-     20
-    ],
-    [
-     "look_target"
+     5
     ],
     [
      "shot",
@@ -19048,7 +19097,7 @@
    "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
    "setup": "each at 60% HP (`/damage` to just under the first phase line), night or a dark room, 4 blocks away",
    "note": "daytime (moonlight tinted the rival model), 58% HP",
-   "override": "z1-aura.json"
+   "override": "z4-f-rivals.json"
   },
   {
    "n": 204,
@@ -19063,6 +19112,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 18000"
     ],
     [
@@ -19071,11 +19124,7 @@
     ],
     [
      "gui",
-     false
-    ],
-    [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
+     true
     ],
     [
      "summon",
@@ -19088,46 +19137,50 @@
     ],
     [
      "hurt_to",
-     0.45
+     0.42
     ],
     [
      "view",
      0.0,
-     4.0,
-     30.0
+     3.2,
+     25.0
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     60
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     60
     ],
     [
      "cmd",
      "execute as @e[type=elsewhere:mirewick_ames,distance=..40] run data merge entity @s {NoAI:1b}"
     ],
     [
-     "look_target"
+     "cmd",
+     "time set 18000"
     ],
     [
      "wait",
-     100
+     40
+    ],
+    [
+     "look_target"
     ],
     [
      "cmd",
      "time set 18000"
     ],
     [
-     "cmd",
-     "weather clear"
-    ],
-    [
      "wait",
-     20
-    ],
-    [
-     "look_target"
+     5
     ],
     [
      "shot",
@@ -19143,7 +19196,7 @@
    "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
    "setup": "each at 60% HP (`/damage` to just under the first phase line), night or a dark room, 4 blocks away",
    "note": "daytime (moonlight tinted the rival model), 58% HP",
-   "override": "z1-aura.json"
+   "override": "z4-f-rivals.json"
   },
   {
    "n": 205,
@@ -19518,6 +19571,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
@@ -19614,18 +19671,18 @@
     ],
     [
      "tp_downhill",
-     12.0
+     14.0
     ],
     [
      "cmd",
-     "tp @s ~ ~9 ~ ~ 30"
+     "tp @s ~ ~15 ~ ~ 42"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
@@ -19647,7 +19704,7 @@
    ],
    "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
    "setup": "tp S+(9, +6, 9) facing S, pitch 25; second shot from the downhill side (lowest ground) at 10 out, +3",
-   "override": "z1-structcam.json"
+   "override": "z4-f-structa.json"
   },
   {
    "n": 211,
@@ -22020,10 +22077,10 @@
     ],
     [
      "summon",
-     "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
      0,
-     3
+     2.5
     ],
     [
      "tp",
@@ -22038,15 +22095,15 @@
      "chunks"
     ],
     [
-     "cmd",
-     "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
+     "wait",
+     40
     ],
     [
      "look_target"
     ],
     [
      "wait",
-     15
+     30
     ],
     [
      "shot",
@@ -22054,16 +22111,41 @@
     ],
     [
      "camera",
-     "back"
+     "first"
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     27,
+     0.5
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     21,
+     0.5
     ],
     [
      "tp",
      "stage",
-     0,
+     24,
      0,
      0,
      0,
      10
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     50
+    ],
+    [
+     "camera",
+     "front"
     ],
     [
      "wait",
@@ -22074,26 +22156,6 @@
      "ironclad_flail_third_person"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     0,
-     8
-    ],
-    [
-     "look_target"
-    ],
-    [
-     "wait",
-     14
-    ],
-    [
      "attack"
     ],
     [
@@ -22102,54 +22164,99 @@
     ],
     [
      "shot",
-     "ironclad_flail_in_use_first_person"
+     "ironclad_flail_in_use_third_person_t2"
     ],
     [
      "wait",
-     30
+     1
     ],
     [
-     "camera",
-     "front"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     40,
-     10
+     "shot",
+     "ironclad_flail_in_use_third_person_t3"
     ],
     [
      "wait",
-     14
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     3
+     1
     ],
     [
      "shot",
      "ironclad_flail_in_use_third_person"
     ],
     [
-     "wait",
-     30
-    ],
-    [
      "camera",
      "first"
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     48,
+     2.5
+    ],
+    [
+     "tp",
+     "stage",
+     48,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     50
     ],
     [
      "look_target"
     ],
     [
      "wait",
-     10
+     20
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person_t1"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person_t2"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person_t4"
+    ],
+    [
+     "wait",
+     30
     ],
     [
      "shot",
@@ -22205,7 +22312,7 @@
    "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
    "setup": "flat world, noon, survival, `elsewhere:ironclad_flail` in main hand, a NoAI husk 2 blocks ahead; left-click it and shoot 2 ticks after the click (mid-swing), then again 4 ticks after",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "z1-items.json"
+   "override": "z4-f-flail.json"
   },
   {
    "n": 232,
@@ -22235,16 +22342,16 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "summon",
-     "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
-     0,
-     3
-    ],
-    [
      "hold",
      "mainhand",
      "elsewhere:ironclad_flail"
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     0,
+     2.5
     ],
     [
      "tp",
@@ -22253,26 +22360,21 @@
      0,
      0,
      0,
-     8
+     0
     ],
     [
      "chunks"
     ],
     [
-     "cmd",
-     "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
+     "wait",
+     40
+    ],
+    [
+     "look_target"
     ],
     [
      "wait",
-     20
-    ],
-    [
-     "camera",
-     "back"
-    ],
-    [
-     "wait",
-     12
+     30
     ],
     [
      "shot",
@@ -22280,16 +22382,41 @@
     ],
     [
      "camera",
-     "front"
+     "first"
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     75,
+     0.5
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     69,
+     0.5
     ],
     [
      "tp",
      "stage",
+     72,
      0,
      0,
      0,
-     40,
      10
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     50
+    ],
+    [
+     "camera",
+     "front"
     ],
     [
      "wait",
@@ -22300,7 +22427,15 @@
     ],
     [
      "wait",
-     3
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_third_person_2_t1"
+    ],
+    [
+     "wait",
+     1
     ],
     [
      "shot",
@@ -22308,31 +22443,137 @@
     ],
     [
      "wait",
-     20
+     1
     ],
     [
-     "camera",
-     "first"
+     "shot",
+     "ironclad_flail_third_person_2_t3"
     ],
     [
      "wait",
-     25
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_third_person_2_t4"
+    ],
+    [
+     "wait",
+     30
     ],
     [
      "camera",
      "first"
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     96,
+     2.5
     ],
     [
      "tp",
      "stage",
+     96,
      0,
      0,
      0,
-     0,
-     8
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     50
     ],
     [
      "look_target"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person_2_t1"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person_2"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person_2_t3"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_first_person_2_t4"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     123,
+     0.5
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     117,
+     0.5
+    ],
+    [
+     "tp",
+     "stage",
+     120,
+     0,
+     0,
+     0,
+     10
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     50
+    ],
+    [
+     "camera",
+     "front"
     ],
     [
      "wait",
@@ -22347,39 +22588,15 @@
     ],
     [
      "shot",
-     "ironclad_flail_in_use_first_person_2"
+     "ironclad_flail_in_use_third_person_2"
     ],
     [
      "wait",
-     30
-    ],
-    [
-     "camera",
-     "front"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     40,
-     10
-    ],
-    [
-     "wait",
-     14
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     3
+     2
     ],
     [
      "shot",
-     "ironclad_flail_in_use_third_person_2"
+     "ironclad_flail_in_use_third_person_2_t4"
     ],
     [
      "wait",
@@ -22443,7 +22660,7 @@
    "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
    "setup": "same scene, F5 (front view), or a second player 6 blocks away swinging; shoot mid-swing for each weapon",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "z1-items.json"
+   "override": "z4-f-flail.json"
   },
   {
    "n": 233,
@@ -22590,24 +22807,23 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "cmd",
-     "fill ~-6 ~ ~-4 ~6 ~5 ~-4 minecraft:light_gray_concrete"
-    ],
-    [
-     "cmd",
-     "fill ~-8 ~ ~8 ~8 ~6 ~8 minecraft:light_gray_concrete"
-    ],
-    [
      "hold",
      "mainhand",
      "elsewhere:ironclad_flail"
     ],
     [
      "summon",
-     "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
-     0,
-     3
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     3,
+     0.5
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     -3,
+     0.5
     ],
     [
      "tp",
@@ -22616,21 +22832,14 @@
      0,
      0,
      0,
-     8
+     0
     ],
     [
      "chunks"
     ],
     [
-     "cmd",
-     "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
-    ],
-    [
-     "look_target"
-    ],
-    [
      "wait",
-     25
+     50
     ],
     [
      "shot",
@@ -22638,35 +22847,75 @@
     ],
     [
      "camera",
-     "back"
+     "front"
     ],
     [
      "wait",
-     10
+     30
     ],
     [
      "shot",
      "ironclad_flail_third_person_3"
     ],
     [
+     "attack"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "shot",
+     "ironclad_flail_in_use_third_person_3"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
      "camera",
      "first"
     ],
     [
+     "wait",
+     25
+    ],
+    [
+     "shot",
+     "ironclad_flail_after_use_3"
+    ],
+    [
+     "summon",
+     "minecraft:cow",
+     "{PersistenceRequired:1b}",
+     48,
+     2.5
+    ],
+    [
      "tp",
      "stage",
+     48,
      0,
      0,
      0,
-     0,
-     8
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     50
     ],
     [
      "look_target"
     ],
     [
      "wait",
-     14
+     20
+    ],
+    [
+     "look_target"
     ],
     [
      "attack"
@@ -22681,47 +22930,7 @@
     ],
     [
      "wait",
-     30
-    ],
-    [
-     "camera",
-     "front"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     40,
-     10
-    ],
-    [
-     "wait",
-     14
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     3
-    ],
-    [
-     "shot",
-     "ironclad_flail_in_use_third_person_3"
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
-     "wait",
-     8
-    ],
-    [
-     "shot",
-     "ironclad_flail_after_use_3"
+     40
     ],
     [
      "inventory",
@@ -22768,7 +22977,7 @@
    "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
    "setup": "flail in hand, stand still 1 s (shot 1, also the hotbar slot), swing at air and shoot within 4 ticks (shot 2)",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "z1-items.json"
+   "override": "z4-f-flail.json"
   },
   {
    "n": 235,
@@ -27632,15 +27841,35 @@
     ],
     [
      "cmd",
+     "fill ~-4 ~-5 ~-2 ~4 ~-5 ~10 minecraft:stone"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~-2 ~4 ~-1 ~10 minecraft:water"
+    ],
+    [
+     "cmd",
      "fill ~-4 ~-5 ~-2 ~4 ~-5 ~10 minecraft:sea_lantern"
     ],
     [
      "cmd",
-     "fill ~-4 ~-3 ~-2 ~4 ~-1 ~10 minecraft:water"
+     "fill ~-4 ~-4 ~-2 ~-4 ~-1 ~10 minecraft:sea_lantern"
     ],
     [
      "cmd",
-     "fill ~-4 ~-4 ~-2 ~4 ~-4 ~10 minecraft:sand"
+     "fill ~4 ~-4 ~-2 ~4 ~-1 ~10 minecraft:sea_lantern"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~-2 ~4 ~-1 ~-2 minecraft:sea_lantern"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~10 ~4 ~-1 ~10 minecraft:sea_lantern"
+    ],
+    [
+     "cmd",
+     "fill ~-3 ~-4 ~-1 ~3 ~-4 ~9 minecraft:sand"
     ],
     [
      "cmd",
@@ -27669,14 +27898,14 @@
     ],
     [
      "wait",
-     30
+     60
     ],
     [
      "attack"
     ],
     [
      "wait",
-     8
+     2
     ],
     [
      "shot",
@@ -27684,7 +27913,11 @@
     ],
     [
      "wait",
-     4
+     6
+    ],
+    [
+     "shot",
+     "tidebrass_dredge_first_person_t8"
     ],
     [
      "camera",
@@ -27695,13 +27928,13 @@
      "stage",
      0,
      -3,
-     5,
+     3,
      0,
-     50
+     45
     ],
     [
      "wait",
-     12
+     14
     ],
     [
      "shot",
@@ -27765,7 +27998,7 @@
    "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
    "setup": "survival, a 9x9 pool 3 deep over a sand floor with a gravel and a clay block in it; stand on the floor, eyes under water, look straight down, break one sand block with the dredge; shot 1 first person mid-break, shot 2 first person just after, shot 3 from 6 up looking down",
    "note": "generic: item tidebrass_dredge; framing approximate",
-   "override": "z1-items.json"
+   "override": "z4-f-flail.json"
   },
   {
    "n": 290,
@@ -27792,19 +28025,7 @@
     ],
     [
      "cmd",
-     "difficulty normal"
-    ],
-    [
-     "cmd",
-     "effect give @s resistance infinite 255 true"
-    ],
-    [
-     "cmd",
      "effect give @s water_breathing infinite 0 true"
-    ],
-    [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
     ],
     [
      "cmd",
@@ -27812,19 +28033,43 @@
     ],
     [
      "cmd",
-     "fill ~-4 ~-5 ~-2 ~4 ~-5 ~9 minecraft:stone"
+     "effect give @s night_vision infinite 0 true"
     ],
     [
      "cmd",
-     "fill ~-4 ~-4 ~-2 ~4 ~-1 ~6 minecraft:water"
+     "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
-     "fill ~-4 ~-4 ~7 ~4 ~-1 ~7 minecraft:sand"
+     "fill ~-4 ~-5 ~-2 ~4 ~-5 ~10 minecraft:stone"
     ],
     [
      "cmd",
-     "fill ~-4 ~-4 ~8 ~4 ~-1 ~8 minecraft:sea_lantern"
+     "fill ~-4 ~-4 ~-2 ~4 ~-1 ~10 minecraft:water"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~-2 ~-4 ~-1 ~10 minecraft:sea_lantern"
+    ],
+    [
+     "cmd",
+     "fill ~4 ~-4 ~-2 ~4 ~-1 ~10 minecraft:sea_lantern"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~-2 ~4 ~-1 ~-2 minecraft:sea_lantern"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-4 ~10 ~4 ~-1 ~10 minecraft:sea_lantern"
+    ],
+    [
+     "cmd",
+     "fill ~-3 ~-4 ~7 ~3 ~-1 ~7 minecraft:clay"
+    ],
+    [
+     "cmd",
+     "fill ~-3 ~-4 ~8 ~3 ~-1 ~9 minecraft:sea_lantern"
     ],
     [
      "hold",
@@ -27835,7 +28080,7 @@
      "tp",
      "stage",
      0,
-     -4,
+     -3,
      4,
      0,
      0
@@ -27845,18 +28090,26 @@
     ],
     [
      "wait",
-     30
+     60
     ],
     [
      "attack"
     ],
     [
      "wait",
-     8
+     3
     ],
     [
      "shot",
      "tidebrass_dredge_first_person_2"
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "shot",
+     "tidebrass_dredge_first_person_2_t9"
     ],
     [
      "camera",
@@ -27907,7 +28160,7 @@
    "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
    "setup": "same pool, swim to a sand wall at eye height (not touching the floor) and break one block; then on dry land break one sand block",
    "note": "generic: item tidebrass_dredge; framing approximate",
-   "override": "z1-items.json"
+   "override": "z4-f-flail.json"
   },
   {
    "n": 291,
@@ -36202,11 +36455,21 @@
     [
      "hold",
      "mainhand",
-     "minecraft:map"
+     "elsewhere:azmar_survey_map"
     ],
     [
-     "cmd",
-     "item modify entity @s weapon.mainhand {function:\"minecraft:exploration_map\",destination:\"#elsewhere:azmar_castle\",decoration:\"minecraft:target_x\",zoom:2,skip_existing_chunks:false,search_radius:100}"
+     "use_down"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "wait",
@@ -36279,7 +36542,7 @@
    "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
    "setup": "same world, `/give @s minecraft:map`, hold it, then `/item modify entity @s weapon.mainhand {\"type\":\"minecraft:exploration_map\",\"destination\":\"#elsewhere:azmar_castle\"}`; hold the map, first person",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "z1-items.json"
+   "override": "z4-f-misc.json"
   },
   {
    "n": 360,
@@ -38638,17 +38901,17 @@
      "tp",
      "anchor",
      8,
-     46,
-     36,
+     30,
+     6,
      180,
-     55
+     30
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     120
     ],
     [
      "chunks"
@@ -38660,15 +38923,15 @@
     [
      "tp",
      "anchor",
-     30,
-     34,
-     14,
-     150,
-     45
+     8,
+     22,
+     -6,
+     180,
+     12
     ],
     [
      "wait",
-     60
+     80
     ],
     [
      "chunks"
@@ -38695,7 +38958,7 @@
    "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
    "setup": "`/elsewhere summon grunthar` arena or the legacy hall in a 2.x world, camera 12 out / 6 up across the hoard",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "z1-hush.json"
+   "override": "z4-f-structb.json"
   },
   {
    "n": 397,
@@ -40124,7 +40387,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=minecraft:zombie,limit=1,sort=nearest] at @s run tp @p ^6 ^1.5 ^0 facing entity @s"
+     "execute as @e[type=minecraft:zombie,limit=1,sort=nearest] at @s run tp @p ^11 ^4 ^0 facing entity @s"
     ],
     [
      "wait",
@@ -40132,7 +40395,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=minecraft:zombie,limit=1,sort=nearest] at @s run tp @p ^6 ^1.5 ^0 facing entity @s"
+     "execute as @e[type=minecraft:zombie,limit=1,sort=nearest] at @s run tp @p ^11 ^4 ^0 facing entity @s"
     ],
     [
      "wait",
@@ -40148,7 +40411,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=minecraft:zombie,limit=1,sort=nearest] at @s run tp @p ^6 ^1.5 ^0 facing entity @s"
+     "execute as @e[type=minecraft:zombie,limit=1,sort=nearest] at @s run tp @p ^11 ^4 ^0 facing entity @s"
     ],
     [
      "wait",
@@ -40172,7 +40435,7 @@
    "check": "three Wargs 1.3x wolf size with a charcoal coat, amber eyes and a leather harness, hackles up and tails raised while biting the zombie; they relax (tail down) once it dies",
    "setup": "plains, at least 30 Glimmer, blow the horn 3 times (3 summoner slots, e.g. with Summoner gear), `/summon minecraft:zombie ~6 ~ ~`, camera 6 back at the side",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "z1-mobs.json"
+   "override": "z4-f-misc.json"
   },
   {
    "n": 409,
@@ -44638,7 +44901,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=!minecraft:player,type=!minecraft:item,limit=1,sort=nearest] at @s run tp @p ^2 ^1.5 ^9 facing entity @s"
+     "execute as @e[type=!minecraft:player,type=!minecraft:item,limit=1,sort=nearest] at @s run tp @p ^2 ^3 ^20 facing entity @s"
     ],
     [
      "wait",
@@ -44646,7 +44909,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=!minecraft:player,type=!minecraft:item,limit=1,sort=nearest] at @s run tp @p ^2 ^1.5 ^9 facing entity @s"
+     "execute as @e[type=!minecraft:player,type=!minecraft:item,limit=1,sort=nearest] at @s run tp @p ^2 ^3 ^20 facing entity @s"
     ],
     [
      "wait",
@@ -44665,7 +44928,7 @@
    ],
    "check": "at 20: trims and a waving cape; at 30: same armour without trim colour, cape hangs still, tabard kept; at 52: baked skin, no cape; pacing back and forth across 24 or 48 does not make the soldier flicker between looks",
    "setup": "stand by a trimmed, caped officer (`/kingdom patrol 8`, the leader), walk slowly backwards from 18 to 54 blocks; shots at 20, 30 and 52 blocks",
-   "override": "z1-mobs.json"
+   "override": "z4-f-castles.json"
   },
   {
    "n": 458,
@@ -44801,7 +45064,7 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^4 ^-50"
+     "tp @s ^ ^4 ^-38"
     ],
     [
      "wait",
@@ -44809,7 +45072,7 @@
     ],
     [
      "wait",
-     60
+     120
     ],
     [
      "shot",
@@ -44825,7 +45088,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^1.7 ^-6 facing entity @s"
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=furthest,distance=..60] at @s run tp @p ^3 ^1.7 ^-6 facing entity @s"
     ],
     [
      "wait",
@@ -44857,7 +45120,7 @@
    "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
    "setup": "Options > Accessibility > Show Subtitles on; same battle, stand 50 blocks from the fighting",
    "note": "hurt to 45% of max HP (just past the first threshold); flat stage instead of the arena",
-   "override": "z2-d-kingdom.json"
+   "override": "z4-f-rivals.json"
   },
   {
    "n": 461,
@@ -45058,6 +45321,30 @@
      "chunks"
     ],
     [
+     "cmd",
+     "execute at @s run fill ~-14 ~-10 ~-14 ~14 ~-1 ~14 minecraft:grass_block"
+    ],
+    [
+     "cmd",
+     "execute at @s run fill ~-14 ~ ~-14 ~14 ~12 ~14 minecraft:air"
+    ],
+    [
+     "cmd",
+     "tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
+     "time set 18000"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
      "wait",
      10
     ],
@@ -45084,6 +45371,10 @@
      20
     ],
     [
+     "cmd",
+     "time set 18000"
+    ],
+    [
      "shot",
      "marsh_wisp_beside_its_owner_at_night_gea"
     ]
@@ -45097,7 +45388,7 @@
    "check": "a small glowing mote 2-4 blocks above and behind the player's shoulder: mint-white core inside a purple translucent shell, gold flame on top, three crimson motes circling, a fading purple tail; full-bright (not dark at night), no shadow; mint glow and purple dust particles drifting off it",
    "setup": "night, flat world, survival with 20+ Glimmer, hold use 1 s with the lantern; F5 third person from the side, 4 blocks out",
    "note": "generic: entity marsh_wisp; framing approximate",
-   "override": "z1-mobs.json"
+   "override": "z4-f-misc.json"
   },
   {
    "n": 464,
@@ -46686,27 +46977,43 @@
     [
      "tp",
      "anchor",
-     8,
-     20,
+     14,
+     10,
      -8,
      0,
-     45
+     40
     ],
     [
      "cmd",
-     "fill ~-16 ~-10 ~-10 ~16 ~10 ~20 air replace #minecraft:leaves"
+     "fill ~-8 ~-6 ~-20 ~28 ~10 ~0 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-16 ~-10 ~-10 ~16 ~10 ~20 air replace #minecraft:logs"
+     "fill ~-8 ~-6 ~-20 ~28 ~10 ~0 air replace #minecraft:logs"
     ],
     [
      "cmd",
-     "fill ~-16 ~-10 ~20 ~16 ~10 ~32 air replace #minecraft:leaves"
+     "fill ~-8 ~-6 ~0 ~28 ~10 ~20 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-16 ~-10 ~20 ~16 ~10 ~32 air replace #minecraft:logs"
+     "fill ~-8 ~-6 ~0 ~28 ~10 ~20 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-8 ~10 ~-20 ~28 ~24 ~0 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "fill ~-8 ~10 ~-20 ~28 ~24 ~0 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-8 ~10 ~0 ~28 ~24 ~20 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "fill ~-8 ~10 ~0 ~28 ~24 ~20 air replace #minecraft:logs"
     ],
     [
      "chunks"
@@ -46725,26 +47032,15 @@
     [
      "tp",
      "anchor",
-     8,
-     6,
-     -6,
+     14,
+     5,
+     -4,
      0,
-     25
-    ],
-    [
-     "cmd",
-     "fill ~-14 ~-5 ~-6 ~14 ~12 ~22 air replace #minecraft:leaves"
-    ],
-    [
-     "cmd",
-     "fill ~-14 ~-5 ~-6 ~14 ~12 ~22 air replace #minecraft:logs"
-    ],
-    [
-     "chunks"
+     28
     ],
     [
      "wait",
-     200
+     100
     ],
     [
      "chunks"
@@ -46771,7 +47067,7 @@
    "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
    "setup": "Greenhaze fresh chunks, noon, camera 8 up beside the pool",
    "note": "generic: structure lucid_spring; framing approximate",
-   "override": "z1-hush.json"
+   "override": "z4-f-structb.json"
   },
   {
    "n": 484,
@@ -46840,22 +47136,22 @@
     [
      "tp",
      "anchor",
-     22,
+     30,
      0,
-     22,
-     135,
-     25
+     8,
+     270,
+     -12
     ],
     [
      "cmd",
-     "tp @s ~ -12 ~ 135 25"
+     "tp @s ~ -14 ~ 270 -12"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     120
+     150
     ],
     [
      "chunks"
@@ -46867,22 +47163,22 @@
     [
      "tp",
      "anchor",
-     12,
+     44,
      0,
      8,
      270,
-     6
+     -14
     ],
     [
      "cmd",
-     "tp @s ~ -19 ~ 270 6"
+     "tp @s ~ -6 ~ 270 -14"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     120
     ],
     [
      "chunks"
@@ -46909,7 +47205,7 @@
    "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
    "setup": "the Hush, `/locate structure elsewhere:listening_engine`, spectator inside at the throne, then in the east tunnel",
    "note": "generic: structure listening_engine; framing approximate",
-   "override": "z1-hush.json"
+   "override": "z4-f-structb.json"
   },
   {
    "n": 485,
@@ -47865,7 +48161,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~26 ~-34 0 35"
+     "tp @s ~ ~9 ~-24 0 20"
     ],
     [
      "chunks"
@@ -47883,7 +48179,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~-26 ~34 0 25"
+     "tp @s ~ ~-9 ~24 180 5"
     ],
     [
      "wait",
@@ -47891,7 +48187,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~-2.6 ~ ~ 4"
+     "tp @s ~ ~-3 ~-2 180 5"
     ],
     [
      "chunks"
@@ -47925,7 +48221,7 @@
    "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
    "setup": "the Hush, `/locate structure elsewhere:silent_monastery`, spectator outside then inside the chapel",
    "note": "generic: structure silent_monastery; framing approximate",
-   "override": "z1-hush.json"
+   "override": "z4-f-structb.json"
   },
   {
    "n": 487,
@@ -48341,6 +48637,14 @@
      100
     ],
     [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
      "shot",
      "castle_aldermark_c_0_2_40_y180"
     ]
@@ -48353,7 +48657,7 @@
    ],
    "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
    "setup": "/locate structure elsewhere:castle_aldermark, tp C+(0, +2, 40) yaw 180 pitch 5",
-   "override": "z2-d-castles.json"
+   "override": "z4-f-castles.json"
   },
   {
    "n": 489,
@@ -48409,10 +48713,6 @@
      "weather clear"
     ],
     [
-     "gui",
-     true
-    ],
-    [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
@@ -48426,13 +48726,25 @@
      "{PersistenceRequired:1b}"
     ],
     [
+     "cmd",
+     "clear @s"
+    ],
+    [
+     "cmd",
+     "item replace entity @s weapon.offhand with air"
+    ],
+    [
      "view",
-     1.4,
-     11.0,
-     35.0
+     0.0,
+     5.5,
+     20.0
     ],
     [
      "chunks"
+    ],
+    [
+     "wait",
+     120
     ],
     [
      "wait",
@@ -48451,12 +48763,20 @@
      8
     ],
     [
+     "cmd",
+     "tp @s ~ ~ ~ ~ 20"
+    ],
+    [
      "shot",
      "a_rival_boss_pays_xp_and_its_drops_on_a"
     ],
     [
      "wait",
      60
+    ],
+    [
+     "cmd",
+     "tp @s ~ ~ ~ ~ 20"
     ],
     [
      "shot",
@@ -48476,7 +48796,7 @@
    "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
    "setup": "flat world, survival, netherite sword + Strength II; `/summon elsewhere:mirewick_tolliver ~ ~ ~6`, kill it; shot within 1 s of death, F1, looking at the spot; repeat with `elsewhere:azmar_sultana` and `elsewhere:hrafnholt_jarl`",
    "note": "generic: entity mirewick_tolliver, 1 setup command(s); framing approximate",
-   "override": "z1-mobs.json"
+   "override": "z4-f-rivals.json"
   },
   {
    "n": 492,

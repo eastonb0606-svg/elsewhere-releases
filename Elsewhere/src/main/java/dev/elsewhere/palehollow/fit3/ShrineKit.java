@@ -66,7 +66,8 @@ public final class ShrineKit {
 			for (int y = top + 1; y <= f + 4; y++) {
 				if (d <= 3) w.room(lx, y, lz);
 				else if (!w.get(lx, y, lz).getFluidState().isEmpty()) continue;
-				else w.room(lx, y, lz);
+				else if (d == 4 && y <= top + 1) w.room(lx, y, lz);
+				else w.soft(lx, y, lz); // outer rings: only plants/leaves go, solid hillside stays (no square pit with dirt walls)
 			}
 			if (d <= 3 && d >= 1 && !(lx == 0 && Math.abs(lz) == 2) && w.chance(lx, f + 1, lz, 12)) w.set(lx, f + 1, lz, Blocks.PALE_MOSS_CARPET.defaultBlockState());
 		}

@@ -445,13 +445,18 @@ public final class CastleLayout {
 
 	/** {@link #ringLift(L, int)} with the lift allowed down to {@code minLift} (a town palisade follows a dropping slope down instead of standing tall over it). */
 	static int[] ringLift(L l, int m, int minLift) {
+		return ringLift(l, m, minLift, 1);
+	}
+
+	/** f-castles: {@code step} = the largest allowed top difference between neighbouring ring cells (the timber palisade uses 3 so it hugs a steep slope instead of standing as a tall slab). */
+	static int[] ringLift(L l, int m, int minLift, int step) {
 		int[][] cells = ringCells(m);
 		int n = cells.length;
 		int[] s = new int[n];
 		for (int i = 0; i < n; i++) s[i] = l.gy(cells[i][0], cells[i][1]);
 		for (int rep = 0; rep < 2; rep++) {
-			for (int i = 0; i < n; i++) s[i] = Math.max(s[i], s[(i - 1 + n) % n] - 1);
-			for (int i = n - 1; i >= 0; i--) s[i] = Math.max(s[i], s[(i + 1) % n] - 1);
+			for (int i = 0; i < n; i++) s[i] = Math.max(s[i], s[(i - 1 + n) % n] - step);
+			for (int i = n - 1; i >= 0; i--) s[i] = Math.max(s[i], s[(i + 1) % n] - step);
 		}
 		int w = 2 * m + 1;
 		int[] grid = new int[w * w];
@@ -898,7 +903,7 @@ public final class CastleLayout {
 		// palisade; 3.0 fit (fv 2): each post stands on its own ground and the top follows the smoothed contour
 		boolean azmar = CastleKit.kitOf(l.p) == CastleKit.Kit.AZMAR;
 		// 3.0 visual QA (generation): the timber palisade's top may drop with the ground (follows the ground all the way down; f-castles2: was clamped at -8, which left a tall wall slab on a deeper drop); Azmar's banded curtain keeps its floor-level course
-		int[] pal = l.p.ground != null ? ringLift(l, 22, azmar ? 0 : -64) : null;
+		int[] pal = l.p.ground != null ? ringLift(l, 22, azmar ? 0 : -64, azmar ? 1 : 3) : null;
 		for (int x = -22; x <= 22; x++) for (int z = -22; z <= 22; z++) {
 			if (Math.max(Math.abs(x), Math.abs(z)) != 22) continue;
 			if (z == 22 && Math.abs(x) <= 1) continue;

@@ -110,7 +110,7 @@ public final class SoldierNameplates {
 		state.nameTagAttachment = att.add(0.0, declutter(mc, e, att, plate), 0.0);
 		// Vanilla's discrete draw is one depth-tested pass at half alpha (the faint plate the QA judges flagged). A soldier with a clear line of sight
 		// from the camera gets the normal full-alpha draw instead; a plate behind a wall or a block stays discrete so it never shows through.
-		state.isDiscrete = !(lod == Nameplate.FULL && headClear);
+		state.isDiscrete = false; // occlusion already handled above (returns when neither head nor body is visible)
 		s.plate = (byte) lod;
 	}
 

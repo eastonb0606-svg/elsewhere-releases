@@ -28,6 +28,7 @@ public final class AldermarkCommand {
 				.then(Commands.literal("on").executes(c -> conquest(c, true)))
 				.then(Commands.literal("off").executes(c -> conquest(c, false))))
 			.then(Commands.literal("siege").executes(AldermarkCommand::siege))
+			.then(Commands.literal("claim").executes(AldermarkCommand::claim))
 			.then(Commands.literal("liberate").executes(AldermarkCommand::liberate))
 			.then(Commands.literal("rush")
 				.then(Commands.literal("on").executes(c -> rush(c, true)))
@@ -145,6 +146,27 @@ public final class AldermarkCommand {
 			return 0;
 		}
 		c.getSource().sendSuccess(() -> Component.literal("Siege started at " + r.center.toShortString() + "."), true);
+		return 1;
+	}
+
+	/** QA helper (shot staging): makes the nearest FREE village an Aldermark realm village (owner = Aldermark, castle = Aldermark's), so a following {@code siege} gives it the Aldermark look even if another realm's castle is nearer. */
+	static int claim(CommandContext<CommandSourceStack> c) {
+		ServerLevel level = overworld(c);
+		VillageRecord r = nearestVillage(level, BlockPos.containing(c.getSource().getPosition()), 256);
+		if (r == null || r.state != VillageRecord.State.FREE) {
+			c.getSource().sendFailure(Component.literal("No free village nearby."));
+			return 0;
+		}
+		BlockPos castle = RealmLocator.find(level, r.center);
+		if (castle == null) {
+			c.getSource().sendFailure(Component.literal("No Aldermark castle known."));
+			return 0;
+		}
+		r.owner = dev.elsewhere.kingdom.Factions.ALDERMARK.toString();
+		r.castle = castle;
+		r.castleDist = RealmLocator.horizontal(castle, r.center);
+		VillageLedger.get(level).dirty();
+		c.getSource().sendSuccess(() -> Component.literal("Village at " + r.center.toShortString() + " is now held by Aldermark's realm."), true);
 		return 1;
 	}
 

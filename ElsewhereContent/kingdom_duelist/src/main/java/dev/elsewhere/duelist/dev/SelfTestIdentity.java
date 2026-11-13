@@ -355,7 +355,7 @@ final class SelfTestIdentity {
 			for (BossIdentity c : BossIdentity.all()) {
 				try {
 					TelegraphStyle s = c.style(TelegraphStyle.Shape.HALO);
-					if (s.colour() == c.telegraph().rgb() && s.pitch() == c.telegraph().pitch() && s.sound().location().getPath().equals(c.telegraph().sound())) styles++;
+					if (s.colour() == c.telegraph().rgb() && s.pitch() == c.telegraph().pitch() && (c.telegraph().sound().contains(":") ? s.sound().location().toString() : s.sound().location().getPath()).equals(c.telegraph().sound())) styles++;
 					looks.add(s.particle().getType() + "|" + s.colour() + "|" + s.sound().location());
 				} catch (RuntimeException e) {
 					h.info("style of " + c.key() + ": " + e);

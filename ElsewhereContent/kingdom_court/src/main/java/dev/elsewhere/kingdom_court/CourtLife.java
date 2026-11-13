@@ -471,6 +471,15 @@ public final class CourtLife {
 	public static void schedule(ServerLevel level, CourtState st) {
 		BlockPos o = st.site;
 		int ph = phaseOf(level.getDefaultClockTime());
+		// f-castles: keep the gate leaves in step with the hour even if the phase did not change while the gate chunk was away (time set, late generation)
+		{
+			boolean nightNow = ph == 4 || ph == 5;
+			for (BlockPos g : CastleLayout.gates(o)) {
+				if (!level.isLoaded(g)) continue;
+				BlockState s = level.getBlockState(g);
+				if (s.hasProperty(FenceGateBlock.OPEN) && s.getValue(FenceGateBlock.OPEN) == nightNow) level.setBlock(g, s.setValue(FenceGateBlock.OPEN, !nightNow), 3);
+			}
+		}
 		if (ph != st.lastPhase) {
 			boolean night = ph == 4 || ph == 5;
 			for (BlockPos g : CastleLayout.gates(o)) {
