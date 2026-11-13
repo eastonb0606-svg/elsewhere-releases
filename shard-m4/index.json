@@ -1,0 +1,100 @@
+{
+  "lanes": {
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "ok",
+          "taken": "00:16:01"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "ok",
+          "taken": "00:16:01"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "ok",
+          "taken": "00:16:02"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_stuck_sprint_cancel.png",
+          "scene": 313,
+          "line": 353,
+          "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
+          "status": "ok",
+          "taken": "00:16:07"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "ok",
+          "taken": "00:16:09"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "ok",
+          "taken": "00:16:10"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_3.png",
+          "scene": 323,
+          "line": 363,
+          "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
+          "status": "ok",
+          "taken": "00:16:11"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rout at the end of a battle": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 443,
+          "line": 493,
+          "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Far soldiers in their baked LOD skin (48-96 blocks, ARMIES 3.7)": [
+        {
+          "file": "s_lod__battle_aldermark_azmar_60_30s.png",
+          "scene": 456,
+          "line": 508,
+          "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:16:11",
+  "totals": {
+    "ok": 7,
+    "fail": 0,
+    "manual": 0
+  }
+}
