@@ -7,7 +7,8 @@
           "scene": 173,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:45:47"
         }
       ]
     },
@@ -148,14 +149,16 @@
           "scene": 478,
           "line": 530,
           "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:46:21"
         },
         {
           "file": "s_struct_greenhaze__great_hotbox_ground.png",
           "scene": 478,
           "line": 530,
           "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:46:31"
         }
       ]
     },
@@ -166,21 +169,23 @@
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:44:41"
         },
         {
           "file": "s_bossdrops__a_rival_boss_pays_xp_and_its_drops_on_a_later.png",
           "scene": 491,
           "line": 544,
           "check": "a burst of XP orbs (400 XP for Tolliver, 600 for the Sultana and the Jarl) plus his or her Seal (Seal of the Reed Hides / Seal of the Unsetting Sun / Seal of High Jarl Halvard Ironbrow), an Oathkeeper's Seal and a stack of the kingdom's coin (Lantern Scrip / Azmar Dinars / Hacksilver), often the boss's unique; before 3.0 there were no orbs and (Tolliver, Sultana) nothing on the ground",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:44:44"
         }
       ]
     }
   },
-  "run": "00:44:37",
+  "run": "00:46:33",
   "totals": {
-    "ok": 14,
+    "ok": 19,
     "fail": 0,
     "manual": 0
   }
