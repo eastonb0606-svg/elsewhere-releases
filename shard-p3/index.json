@@ -1,0 +1,178 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (hrafnholt realm)": [
+        {
+          "file": "villages__village_near_hrafnholt.png",
+          "scene": 3,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:drowned_cathedral": [
+        {
+          "file": "s_struct_verdigris__drowned_cathedral_s_26_6_26.png",
+          "scene": 161,
+          "line": 178,
+          "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:sunwright_ziggurat": [
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_s_30_14_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunwright_ziggurat_downhill_30.png",
+          "scene": 182,
+          "line": 197,
+          "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:duelist_test (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__duelist_test_aura_phase2.png",
+          "scene": 205,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "00:43:59"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "00:44:01"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "00:44:02"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "00:44:03"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "00:44:06"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "00:44:06"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_3.png",
+          "scene": 234,
+          "line": 264,
+          "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
+          "status": "ok",
+          "taken": "00:44:07"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:munchie_boar": [
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        },
+        {
+          "file": "s_spawngroups__munchie_boar_sounder_greenhaze_hush_herd_later.png",
+          "scene": 238,
+          "line": 268,
+          "check": "one boar visibly larger (the tusked sow) and the other three trailing her in a loose ring, nobody stuck at the spawn point",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "ok",
+          "taken": "00:44:09"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "ok",
+          "taken": "00:44:10"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_2.png",
+          "scene": 289,
+          "line": 328,
+          "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
+          "status": "ok",
+          "taken": "00:44:11"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:lucid_spring": [
+        {
+          "file": "s_struct_greenhaze__lucid_spring_overview.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__lucid_spring_ground.png",
+          "scene": 483,
+          "line": 535,
+          "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:44:11",
+  "totals": {
+    "ok": 10,
+    "fail": 0,
+    "manual": 0
+  }
+}
