@@ -1,0 +1,113 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 14,
+          "line": 22,
+          "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "verdigris arena seal (elsewhere:lighthouse, Galvanox)": [
+        {
+          "file": "s_p13_particles__verdigris_arena_seal_galvanox.png",
+          "scene": 169,
+          "line": 185,
+          "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "Pose.DRINK and Pose.TORCH": [
+        {
+          "file": "s_p9_idle__pose_drink_and_pose_torch.png",
+          "scene": 329,
+          "line": 372,
+          "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
+          "status": "pending"
+        },
+        {
+          "file": "s_p9_idle__pose_drink_and_pose_torch_5s.png",
+          "scene": 329,
+          "line": 372,
+          "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_sunglass": {
+      "elsewhere:sunglass": [
+        {
+          "file": "s_sunglass__sunglass_first_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "01:20:19"
+        },
+        {
+          "file": "s_sunglass__sunglass_third_person_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "01:20:22"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_first_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "01:20:25"
+        },
+        {
+          "file": "s_sunglass__sunglass_in_use_third_person.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "01:20:26"
+        },
+        {
+          "file": "s_sunglass__sunglass_after_use.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "01:20:26"
+        },
+        {
+          "file": "s_sunglass__sunglass_tooltip_2.png",
+          "scene": 427,
+          "line": 477,
+          "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
+          "status": "ok",
+          "taken": "01:20:27"
+        }
+      ]
+    },
+    "s_asm_court": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_asm_court__castle_aldermark_c_0_2_40_y180.png",
+          "scene": 488,
+          "line": 540,
+          "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:20:27",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
