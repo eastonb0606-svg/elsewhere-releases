@@ -1,0 +1,144 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_0_22_82_y180.png",
+          "scene": 14,
+          "line": 22,
+          "check": "gatehouse at the yard floor, corbelled projecting parapet and batter, road leaving the gate on a 1-step contour (no wall of dirt, no floating path)",
+          "status": "pending"
+        }
+      ]
+    },
+    "anim": {
+      "elsewhere:ashtusk": [
+        {
+          "file": "anim__ashtusk_death_15t.png",
+          "scene": 51,
+          "line": 64,
+          "check": "legs splayed and head sagging while it tips over",
+          "status": "ok",
+          "taken": "01:01:28"
+        }
+      ]
+    },
+    "s_censer": {
+      "elsewhere:choirlight_censer (channel)": [
+        {
+          "file": "s_censer__censer_channel_first_person_1s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "01:01:30"
+        },
+        {
+          "file": "s_censer__censer_channel_third_person_2s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "01:01:31"
+        },
+        {
+          "file": "s_censer__censer_channel_top_3s.png",
+          "scene": 180,
+          "line": 192,
+          "check": "the arm sways the censer (brush-style swing); white incense smoke and gold sparks at the hand; a ring of gold sparks 6 blocks out once a second; a coloured music note over the wolf each second; Glimmer bar draining (3 a second); no sprinting",
+          "status": "ok",
+          "taken": "01:01:33"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "nameplates hidden behind walls and while crouching": [
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        },
+        {
+          "file": "s_p3_nameplates__nameplates_hidden_behind_walls_and_while_5s.png",
+          "scene": 227,
+          "line": 257,
+          "check": "shot 1: no captain plate through the wall (the other two still show); shot 2: the crouched, resting soldier has no plate; plates of standing soldiers are dimmer at night (vanilla sneaking-tag style), still legible",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_langfix": {
+      "elsewhere:azmar_soldier_spawn_egg": [
+        {
+          "file": "s_langfix__azmar_soldier_spawn_egg_death_15t.png",
+          "scene": 242,
+          "line": 272,
+          "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark drill and butts at dawn": [
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_drill_and_butts_at_dawn_5s.png",
+          "scene": 376,
+          "line": 424,
+          "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_3_16_y180.png",
+          "scene": 413,
+          "line": 463,
+          "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:boss_token": [
+        {
+          "file": "s_compat_transmute__boss_token_first_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_third_person.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "pending"
+        },
+        {
+          "file": "s_compat_transmute__boss_token_tooltip.png",
+          "scene": 430,
+          "line": 480,
+          "check": "each is refused with \"... can't be transmuted.\" and stays in the slot/inventory; nothing is learned, Quanta unchanged",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:01:33",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
