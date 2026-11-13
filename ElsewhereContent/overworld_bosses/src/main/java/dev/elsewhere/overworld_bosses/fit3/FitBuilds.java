@@ -327,20 +327,7 @@ public final class FitBuilds {
 		BlockState snow = Blocks.SNOW_BLOCK.defaultBlockState();
 		// the foundation reads as ice and snow down the visible drop (no grey wall), stone only deep down
 		BlockState[] ladder = {Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(),
-			Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.STONE.defaultBlockState()};
-		// batter: an ice-and-snow apron around the rim (south, east, west) stepping down 2 per block, so the plateau edge is a slope, not a box cut
-		for (int dx = -24; dx <= 24; dx++) {
-			for (int dz = -12; dz <= 24; dz++) {
-				double d = Math.sqrt(dx * dx + dz * dz);
-				if (d <= 18.0 || d > 24.0 || inGate(p.a, dx, dz)) continue;
-				int x = o.getX() + dx, z = o.getZ() + dz;
-				if (!s.writes(x, z)) continue;
-				int top = g - (int) Math.ceil((d - 18.0) * 2.0);
-				if (solid(s.get(x, top, z))) continue;
-				s.set(x, top, z, d < 20 ? snow : Blocks.PACKED_ICE.defaultBlockState());
-				underpin(s, x, top - 1, z, ladder, OwbFit.CAP);
-			}
-		}
+			Blocks.PACKED_ICE.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.COBBLESTONE.defaultBlockState()};
 		for (int dx = -18; dx <= 18; dx++) {
 			for (int dz = -17; dz <= 18; dz++) {
 				double d = Math.sqrt(dx * dx + dz * dz);

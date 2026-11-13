@@ -425,7 +425,7 @@ public final class AzmarCastle {
 			CastleKit.ringFull(w, x1, 11, x2, 18, 17, slabB(Blocks.SMOOTH_SANDSTONE_SLAB), null);
 			// w6-castles (scene 16, L24.1): a kiosk on each pylon roof (pillars stand on the solid core top at y 15; the archers' posts stay clear)
 			CastleKit.kiosk(w, s * 6, 14, 16, CUT, slabB(Blocks.SMOOTH_SANDSTONE_SLAB), GOLD);
-			for (int k : new int[] {4, 6, 8, 10}) {
+			for (int k : new int[] {6, 10}) {
 				for (int y = 1; y <= 11; y++) a.s(s * k, y, 20 - y / 4, AIR);
 				a.s(s * k, 10, 18, banner());
 			}
@@ -701,7 +701,7 @@ public final class AzmarCastle {
 			}
 			a.s(x, -1, z, Math.abs(x) == 2 ? CUT : SMOOTH);
 		}
-		for (int s = -1; s <= 1; s += 2) { CastleKit.obelisk(w, s * 6, 23, CUT, CHISELED, GOLD, SMOOTH); w.s(s * 6, 13, 23, GOLD); w.s(s * 6, 15, 23, GOLD); }
+		for (int s = -1; s <= 1; s += 2) CastleKit.obelisk(w, s * 6, 23, CUT, CHISELED, GOLD, SMOOTH);
 		for (int s = -1; s <= 1; s += 2) for (int z0 : SPHINX_Z) sphinx(a, s, z0);
 		lake(a);
 		palm(a, -11, 0, 24, 0, 1);
