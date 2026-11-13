@@ -11,3 +11,35 @@ JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_e
 elsewhere-3.0.0.jar
 merged jar elsewhere-3.0.0.jar 146938811 bytes in 73 s
 00:59:34Z client: scenes 27,138,213,225,267,318,439,454, watchdog 54 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+remote: 
+remote: Create a pull request for 'cloud-shots-q9' on GitHub by visiting:        
+remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-q9        
+remote: 
+published 5 PNGs (progress) -> cloud-shots-q9 80656ac
+client rc=0
+[01:03:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_foresight__ground_patch_pre_arm_ring_duelist_ground_foresight_off.png: wait_label: no boss bar move label containing 'Counter-Brew' within 120 s
+[01:03:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] FAIL s_foresight__ground_patch_pre_arm_ring_duelist_ground.png: wait_label: no boss bar move label containing 'Counter-Brew' within 120 s
+[01:06:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 12 ok, 2 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[01:00:40] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[01:00:40] [Worker-Main-3/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+[01:00:40] [Worker-Main-2/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+--
+[01:00:43] [Download-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[01:00:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] 5 flat-stage scenes, 3 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[01:00:46] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+boss_music client selftest:
+01:06:22Z finished rc=0, 12 PNGs;  TOTAL 12 ok, 2 fail, 0 manual
