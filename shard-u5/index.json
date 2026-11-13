@@ -1,0 +1,114 @@
+{
+  "lanes": {
+    "z_items": {
+      "elsewhere:hrafnholt_skjaldborg_shield (first person, idle)": [
+        {
+          "file": "z_items__hrafnholt_skjaldborg_shield_first_person_idle.png",
+          "scene": 138,
+          "line": 156,
+          "check": "a solid 3D round shield (14 px wooden-plank disc, green emblem ring, gold boss, dark rim, handle behind) where the vanilla shield sits, back/handle side toward the camera; NOT a flat 16x16 sprite, no purple/black checkerboard",
+          "status": "ok",
+          "taken": "01:26:43"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:ironpeak_return_rift": [
+        {
+          "file": "s_struct_verdigris__ironpeak_return_rift_s_8_5_8.png",
+          "scene": 157,
+          "line": 174,
+          "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "ok",
+          "taken": "01:26:49"
+        },
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "ok",
+          "taken": "01:26:54"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "cape wave in motion": [
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 348,
+          "line": 391,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "ok",
+          "taken": "01:27:25"
+        },
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s_later.png",
+          "scene": 348,
+          "line": 391,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "ok",
+          "taken": "01:27:26"
+        }
+      ],
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:hrafnholt_wolfskin_boots": [
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_first_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_third_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_tooltip.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:27:26",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
