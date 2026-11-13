@@ -1,0 +1,199 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (azmar realm)": [
+        {
+          "file": "villages__village_near_azmar.png",
+          "scene": 4,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:verdigris_sea_return_rift": [
+        {
+          "file": "s_struct_verdigris__verdigris_sea_return_rift_s_8_4_8.png",
+          "scene": 163,
+          "line": 180,
+          "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:sunpit": [
+        {
+          "file": "s_struct_petalwind__sunpit_s_0_26_44.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__sunpit_s_30_6_0.png",
+          "scene": 183,
+          "line": 198,
+          "check": "a round sand crater shaped to the dunes: smooth sand slopes at the angle of repose from a cut-sandstone kerb up to the dune line (no vertical air cut, no overhangs), sandstone outcrops, five bone ribs and a spine half-buried on one slope, a broken sandstone marker on each quadrant rim; the arena keeps its sand/magma rings and 6 glass pillars",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:sculk_resonator": [
+        {
+          "file": "s_p6_useanims__sculk_resonator_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:06"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:07"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_first_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:09"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_third_person.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:10"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_after_use.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:11"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_tooltip.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:12"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_first_person_t5.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:08"
+        },
+        {
+          "file": "s_p6_useanims__sculk_resonator_in_use_first_person_t15.png",
+          "scene": 236,
+          "line": 266,
+          "check": "resonator: dim teal -> brighter -> bright cyan with a white core (`sculk_resonator_charging_0/1`, `_charged`) and a growing tremble in first person; prism: bright glass with 4 sparkles, gently shimmering; bell: glowing glyph with cyan rings on both sides, rocking side to side",
+          "status": "ok",
+          "taken": "00:43:08"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:ironclan_raider": [
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "ok",
+          "taken": "00:43:13"
+        },
+        {
+          "file": "s_spawngroups__ironclan_raider_raiding_party_verdigris_hit.png",
+          "scene": 239,
+          "line": 269,
+          "check": "leader 15% larger; the party two abreast behind it before the hit; after the hit all five turn on the player and a raid horn sounds (check subtitles: \"Raid horn blares\")",
+          "status": "ok",
+          "taken": "00:43:15"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:strawgrim": [
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "pending"
+        },
+        {
+          "file": "s_p8_bossanims__hurt_flinch_direction_whole_body_flinch3_later.png",
+          "scene": 246,
+          "line": 276,
+          "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dredge": {
+      "elsewhere:tidebrass_dredge": [
+        {
+          "file": "s_dredge__tidebrass_dredge_first_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_third_person_2.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        },
+        {
+          "file": "s_dredge__tidebrass_dredge_tooltip_3.png",
+          "scene": 290,
+          "line": 329,
+          "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:listening_engine": [
+        {
+          "file": "s_struct_greenhaze__listening_engine_overview.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__listening_engine_ground.png",
+          "scene": 484,
+          "line": 536,
+          "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:43:15",
+  "totals": {
+    "ok": 10,
+    "fail": 0,
+    "manual": 0
+  }
+}
