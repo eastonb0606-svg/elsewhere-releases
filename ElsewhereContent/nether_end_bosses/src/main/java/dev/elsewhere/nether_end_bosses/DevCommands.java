@@ -38,11 +38,12 @@ public final class DevCommands {
 	private DevCommands() {}
 
 	static void register(CommandDispatcher<CommandSourceStack> d) {
-		SuggestionProvider<CommandSourceStack> bosses = (c, b) -> SharedSuggestionProvider.suggest(ArenaBuilder.BY_BOSS.keySet(), b);
+		// Literal child per id (not a shared <id> argument): Brigadier merges same-named argument nodes across modules and only one executor survives.
+		var bossNode = Commands.literal("boss");
+		for (String id : new String[]{"grunthar", "solaxis", "mournmaw", "ossyra", "aphelion"})
+			bossNode.then(Commands.literal(id).executes(c -> boss(c, id, true)).then(Commands.literal("arena").executes(c -> boss(c, id, false))));
 		d.register(Commands.literal("elsewhere_dev").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
-			.then(Commands.literal("boss").then(Commands.argument("id", StringArgumentType.word()).suggests(bosses)
-				.executes(c -> boss(c, true))
-				.then(Commands.literal("arena").executes(c -> boss(c, false)))))
+			.then(bossNode)
 			.then(Commands.literal("tp")
 				.then(Commands.literal("nether").executes(c -> tp(c, Level.NETHER)))
 				.then(Commands.literal("end").executes(c -> tp(c, Level.END)))
@@ -52,8 +53,7 @@ public final class DevCommands {
 			.then(Commands.literal("hp").then(Commands.argument("ratio", FloatArgumentType.floatArg(0.01F, 1.0F)).executes(DevCommands::hp))));
 	}
 
-	private static int boss(CommandContext<CommandSourceStack> c, boolean summon) {
-		String id = StringArgumentType.getString(c, "id");
+	private static int boss(CommandContext<CommandSourceStack> c, String id, boolean summon) {
 		ArenaBuilder builder = ArenaBuilder.BY_BOSS.get(id);
 		if (builder == null) {
 			c.getSource().sendFailure(Component.literal("Unknown boss " + id));

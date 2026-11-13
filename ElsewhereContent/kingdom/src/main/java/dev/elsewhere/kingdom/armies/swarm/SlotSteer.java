@@ -73,9 +73,7 @@ public final class SlotSteer {
 		double d2 = dx * dx + dz * dz;
 		if (d2 < 0.6 * 0.6) {
 			nav.stop();
-			mob.setYRot(mob.formationYaw);
-			mob.yBodyRot = mob.formationYaw;
-			mob.yHeadRot = mob.formationYaw;
+			mob.faceYaw(mob.formationYaw);
 			stuck = 0;
 			triedLeaderPath = false;
 			return;

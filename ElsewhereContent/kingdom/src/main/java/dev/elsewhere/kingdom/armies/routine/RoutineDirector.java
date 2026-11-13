@@ -562,8 +562,11 @@ public final class RoutineDirector {
 		q.activitySpots = ps;
 		q.activityYaws = ys;
 		if (lead != null) {
-			lead.setYRot(spots.get(0).yaw());
-			lead.setYHeadRot(spots.get(0).yaw());
+			if (lead instanceof KingdomSoldier ls) ls.faceYaw(spots.get(0).yaw());
+			else {
+				lead.setYRot(spots.get(0).yaw());
+				lead.setYHeadRot(spots.get(0).yaw());
+			}
 			RoutinePoses.set(lead, spots.get(0).pose());
 		}
 	}

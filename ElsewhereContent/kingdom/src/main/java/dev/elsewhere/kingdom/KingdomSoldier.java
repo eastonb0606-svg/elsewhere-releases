@@ -422,6 +422,21 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 		this.startRiding(mount, true, false);
 	}
 
+	/**
+	 * Faces {@code yaw} body, head and all. A rider turns its mount as well: the client draws a passenger's body from the mount's
+	 * body yaw (head within 85 degrees of it), so turning only the rider left it facing one way on a horse facing another.
+	 */
+	public void faceYaw(float yaw) {
+		setYRot(yaw);
+		this.yBodyRot = yaw;
+		this.yHeadRot = yaw;
+		if (getVehicle() instanceof LivingEntity v) {
+			v.setYRot(yaw);
+			v.yBodyRot = yaw;
+			v.yHeadRot = yaw;
+		}
+	}
+
 	// ---- per-tick combat state ------------------------------------------------------------------------------------
 
 	/** True when this soldier runs its full AI (a player is within {@code perf.activeRadius} and under the per-player cap). */
@@ -492,6 +507,10 @@ public class KingdomSoldier extends Monster implements CrossbowAttackMob {
 	protected void customServerAiStep(ServerLevel level) {
 		if (((phase ^ getId()) & 1) != 0) phase ^= 1; // keep the goal gates on goal-evaluation ticks (see phase)
 		super.customServerAiStep(level);
+		if (getVehicle() instanceof LivingEntity v) { // a rider sits square on its mount, looking up to 50 degrees to either side
+			this.yBodyRot = v.yBodyRot;
+			this.yHeadRot = v.yBodyRot + net.minecraft.util.Mth.clamp(net.minecraft.util.Mth.wrapDegrees(this.yHeadRot - v.yBodyRot), -50F, 50F);
+		}
 		if (!equipped) applyLoadout();
 		if (!mountSpawned) {
 			if (unit().mounted()) spawnMount(level);

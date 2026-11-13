@@ -22,8 +22,8 @@
     "particle": "snowflake",
     "colour": "#DCE6EE",
     "sound": {
-      "event": "entity.ravager.roar",
-      "pitch": 0.6
+      "event": "elsewhere:sfx3.hrafnholt.warcry",
+      "pitch": 0.9
     }
   },
   "last_stand": "hearth_ember_pool",

@@ -43,6 +43,9 @@ public class GalvanoxArtRenderer extends MobRenderer<GalvanoxBoss, GalvanoxArtSt
 	@Override
 	public void extractRenderState(GalvanoxBoss entity, GalvanoxArtState state, float partialTicks) {
 		super.extractRenderState(entity, state, partialTicks);
+		// 3.0 (f-anim): vanilla kicks walkAnimationSpeed to 1.5 on every hit, which played the WALK keyframes (arms swung out)
+		// over the flinch; a standing boss flinches by the whole-body rock only
+		if (((dev.elsewhere.verdigris_ironpeak.anim3.Hurt3Holder) state).elsewhere$vipHurt3() >= 0F && entity.getDeltaMovement().horizontalDistanceSqr() < 1.0E-4) state.walkAnimationSpeed = 0F;
 		state.hammer.copyFrom(entity.attackAnims[GalvanoxBoss.A_HAMMER]);
 		state.bolt.copyFrom(entity.attackAnims[GalvanoxBoss.A_BOLT]);
 		state.wax.copyFrom(entity.attackAnims[GalvanoxBoss.A_WAX]);

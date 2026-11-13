@@ -60,6 +60,7 @@ public final class Nameplate {
 		"free_company", new Kit("free_company", C_FREE, "Free Company", "Company Captain", "Company Captain", "Company Lord", "Company Lord", G_CORONET, G_CORONET));
 
 	private static final int GOLD = 0xFFD75A, WHITE = 0xFFFFFF, GREY = 0xAAAAAA;
+	private static final int NIGHT_TITLE = 0xA8A8B4, NIGHT_DOT = 0x80808A;
 	private static final Style GLYPH = Style.EMPTY.withFont(FONT).withColor(WHITE);
 	private static final Style TITLE = Style.EMPTY.withColor(WHITE);
 	private static final Style DOT = Style.EMPTY.withColor(GREY);
@@ -108,9 +109,19 @@ public final class Nameplate {
 	 * @param name the ruler's synced custom name (rank {@link #LORD} and up); null falls back to the kingdom's title
 	 */
 	public static Component text(int rank, String factionId, int argb, @Nullable Component name, int lod) {
+		return text(rank, factionId, argb, name, lod, false);
+	}
+
+	/**
+	 * Same, for night: the rank text (title and dot) is dimmed toward grey (sneaking-tag style, L257.3) while the faction name is
+	 * lifted toward white so it stays legible on the dark plate (it was nearly invisible at night).
+	 */
+	public static Component text(int rank, String factionId, int argb, @Nullable Component name, int lod, boolean night) {
 		Kit k = kit(factionId);
-		Style faction = Style.EMPTY.withColor(tint(argb));
-		Style crest = k.crest() == C_BANNER ? GLYPH.withColor(tint(argb)) : GLYPH;
+		Style faction = Style.EMPTY.withColor(night ? lift(tint(argb)) : tint(argb));
+		Style TITLE = night ? Style.EMPTY.withColor(NIGHT_TITLE) : Nameplate.TITLE;
+		Style DOT = night ? Style.EMPTY.withColor(NIGHT_DOT) : Nameplate.DOT;
+		Style crest = k.crest() == C_BANNER ? GLYPH.withColor(night ? lift(tint(argb)) : tint(argb)) : GLYPH;
 		MutableComponent out = Component.empty();
 		if (rank >= LORD) {
 			char mark = rank >= SOVEREIGN ? k.sovereignMark() : k.lordMark();
@@ -171,6 +182,15 @@ public final class Nameplate {
 			g += (int) ((255 - g) * t);
 			b += (int) ((255 - b) * t);
 		}
+		return r << 16 | g << 8 | b;
+	}
+
+	/** Lifts a colour 45% toward white: the night faction name, so it never reads darker than the plate behind it. */
+	static int lift(int rgb) {
+		int r = rgb >> 16 & 0xFF, g = rgb >> 8 & 0xFF, b = rgb & 0xFF;
+		r += (int) ((255 - r) * 0.45);
+		g += (int) ((255 - g) * 0.45);
+		b += (int) ((255 - b) * 0.45);
 		return r << 16 | g << 8 | b;
 	}
 

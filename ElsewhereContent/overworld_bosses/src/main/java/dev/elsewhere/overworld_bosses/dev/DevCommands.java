@@ -20,21 +20,23 @@ public final class DevCommands {
 	private DevCommands() {}
 
 	public static void init() {
-		CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(Commands.literal("elsewhere_dev")
-			.requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
-			.then(Commands.literal("boss").then(Commands.argument("id", StringArgumentType.word())
-				.suggests((c, b) -> SharedSuggestionProvider.suggest(BOSSES, b))
-				.executes(c -> {
-					ServerPlayer p = c.getSource().getPlayerOrException();
-					String id = StringArgumentType.getString(c, "id");
-					ElsewhereBoss boss = spawnWithArena(c.getSource().getLevel(), id, p.blockPosition().offset(0, 0, 18));
-					if (boss == null) {
-						c.getSource().sendFailure(Component.literal("Unknown boss " + id));
-						return 0;
-					}
-					c.getSource().sendSuccess(() -> Component.literal("Summoned " + id + " at " + boss.blockPosition().toShortString()), true);
-					return 1;
-				})))));
+		CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> {
+			// Literal child per id (not a shared <id> argument): Brigadier merges same-named argument nodes across modules and only one executor survives.
+			var boss = Commands.literal("boss");
+			for (String id : BOSSES) boss.then(Commands.literal(id).executes(c -> run(c.getSource(), id)));
+			dispatcher.register(Commands.literal("elsewhere_dev").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS)).then(boss));
+		});
+	}
+
+	private static int run(net.minecraft.commands.CommandSourceStack src, String id) throws com.mojang.brigadier.exceptions.CommandSyntaxException {
+		ServerPlayer p = src.getPlayerOrException();
+		ElsewhereBoss boss = spawnWithArena(src.getLevel(), id, p.blockPosition().offset(0, 0, 18));
+		if (boss == null) {
+			src.sendFailure(Component.literal("Unknown boss " + id));
+			return 0;
+		}
+		src.sendSuccess(() -> Component.literal("Summoned " + id + " at " + boss.blockPosition().toShortString()), true);
+		return 1;
 	}
 
 	/** Builds the arena with its centre at `center` and summons the boss through its real summon path. */

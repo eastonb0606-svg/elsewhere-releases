@@ -101,6 +101,35 @@ public class WarYakEntity extends MinionEntity {
 		startCharge(level, owner, target);
 	}
 
+	/**
+	 * Lands beside the owner, never on them: the yak's 1.3 x 1.7 box almost never fits the base class's 1-2 block random
+	 * search, which then fell back to the owner's own position. Searches a ring 2.5 to 4.5 blocks out (the owner's front
+	 * and sides first, then behind) for a free standing spot, and as a last resort takes the clear column 2.5 blocks out.
+	 */
+	@Override
+	public void teleportToOwner(ServerPlayer owner) {
+		Vec3 op = owner.position();
+		double base = Math.toRadians(owner.getYRot());
+		double[] turns = {0, 0.5, -0.5, 1.0, -1.0, 1.5, -1.5, 2.0, -2.0, Math.PI - 0.5, Math.PI + 0.5, Math.PI}; // radians off the facing
+		for (double r = 2.5; r <= 4.5; r += 1.0) {
+			for (double t : turns) {
+				double a = base + t;
+				double x = op.x - Math.sin(a) * r, z = op.z + Math.cos(a) * r;
+				for (int dy : new int[] {0, 1, -1, 2, -2}) {
+					BlockPos p = BlockPos.containing(x, op.y + dy, z);
+					BlockPos below = p.below();
+					if (!level().getBlockState(below).isFaceSturdy(level(), below, net.minecraft.core.Direction.UP)) continue;
+					Vec3 at = new Vec3(x, p.getY(), z);
+					if (!level().noCollision(this, getType().getDimensions().makeBoundingBox(at))) continue;
+					snapTo(at.x, at.y, at.z, getYRot(), 0);
+					return;
+				}
+			}
+		}
+		// no free ground nearby: still not on the owner; stand 2.5 blocks out on the facing side
+		snapTo(op.x - Math.sin(base) * 2.5, op.y, op.z + Math.cos(base) * 2.5, getYRot(), 0);
+	}
+
 	/** While charging the run steers itself; no pathing toward the target or the owner. */
 	@Override
 	protected void moveTowardTarget(ServerPlayer owner, LivingEntity target) {

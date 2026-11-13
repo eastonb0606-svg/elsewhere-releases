@@ -419,6 +419,8 @@ public final class AzmarCastle {
 			CastleKit.ringFull(w, x1, 11, x2, 18, 15, CUT, null);
 			CastleKit.ringFull(w, x1, 11, x2, 18, 16, CUT, null);
 			CastleKit.ringFull(w, x1, 11, x2, 18, 17, slabB(Blocks.SMOOTH_SANDSTONE_SLAB), null);
+			// w6-castles (scene 16, L24.1): a kiosk on each pylon roof (pillars stand on the solid core top at y 15; the archers' posts stay clear)
+			CastleKit.kiosk(w, s * 6, 14, 16, CUT, slabB(Blocks.SMOOTH_SANDSTONE_SLAB), GOLD);
 			for (int k : new int[] {6, 10}) {
 				for (int y = 1; y <= 11; y++) a.s(s * k, y, 20 - y / 4, AIR);
 				a.s(s * k, 10, 18, banner());
@@ -480,6 +482,11 @@ public final class AzmarCastle {
 		for (int x = 1; x <= 2; x++) {
 			a.s(x, 7, -2, LAPIS);
 			a.s(-x, 7, -2, LAPIS);
+		}
+		// w6-castles (scene 17, L25.1): battered stair piers and blue banners flanking the keep door
+		for (int s = -1; s <= 1; s += 2) {
+			a.s(s * 3, 1, -1, stair(Direction.NORTH, Half.BOTTOM));
+			a.s(s * 3, 3, -1, banner());
 		}
 		// back door up to the throne hall (one step)
 		a.fill(-1, 1, -14, 1, 4, -14, AIR);

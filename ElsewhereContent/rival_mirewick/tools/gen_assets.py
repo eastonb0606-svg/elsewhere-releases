@@ -30,6 +30,12 @@ def rect(img, box, col, noise=7, seed=0):
             img.putpixel((x, y), tuple(max(0, min(255, c + n)) for c in col[:3]) + (255,))
 
 
+def clear(img, box):
+    """Real transparency (rect() always writes alpha 255, so clearing with it painted opaque black)."""
+    for x in range(box[0], box[2]):
+        for y in range(box[1], box[3]): img.putpixel((x, y), (0, 0, 0, 0))
+
+
 def cube(img, u, v, w, h, d, col, seed, noise=7):
     rect(img, (u + d, v, u + d + w, v + d), col, noise, seed)
     rect(img, (u + d + w, v, u + d + 2 * w, v + d), col, noise, seed + 1)
@@ -75,11 +81,11 @@ def skin(name, tone=(190, 150, 118), hair=(80, 60, 40), beard=None, shirt=(110, 
             for xx in range(20, 28): img.putpixel((xx, yy), c2 + (255,))
         for (u, v) in ((40, 32), (48, 48)):
             cube(img, u, v, 4, 12, 4, coat, seed + 21, 4)
-            rect(img, (u, v + 13, u + 16, v + 16), (0, 0, 0, 0), 0, 0)    # hands stay bare
+            clear(img, (u, v + 13, u + 16, v + 16))    # hands stay bare
         for xx in range(20, 28): img.putpixel((xx, 33 + 5), shade(coat, .6) + (255,))
         for xx in range(20, 28): img.putpixel((xx, 33 + 11), shade(coat, .7) + (255,))
         img.putpixel((23, 33 + 2), AMBER + (255,)); img.putpixel((24, 33 + 2), AMBER + (255,))   # lantern clasp
-        rect(img, (16, 44, 40, 45), (0, 0, 0, 0), 0, 0)
+        clear(img, (16, 44, 40, 45))
     if waders:                                                 # chest-high waders: leg overlays plus two shoulder straps
         for (u, v) in ((0, 32), (0, 48)):
             cube(img, u, v, 4, 12, 4, waders, seed + 24, 4)

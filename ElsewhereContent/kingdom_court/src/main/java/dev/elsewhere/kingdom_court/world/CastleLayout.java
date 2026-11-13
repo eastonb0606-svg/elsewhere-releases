@@ -500,6 +500,14 @@ public final class CastleLayout {
 			for (int a = -4; a <= 4; a += 4) for (int b = -4; b <= 4; b += 4) foot = Math.min(foot, l.gy(cx + a, cz + b));
 			if (lift > foot) l.fill(cx - 4, foot, cz - 4, cx + 4, lift - 1, cz + 4, Blocks.STONE_BRICKS);
 			l.foundation(cx - 4, cz - 4, cx + 4, cz + 4, foot - 1, Blocks.COBBLESTONE);
+			// w6-castles (scene 26, L37.1): rubble footing ring round the corner tower foot, outside the curtain
+			for (int a = -5; a <= 5; a++) for (int b = -5; b <= 5; b++) {
+				if (Math.max(Math.abs(a), Math.abs(b)) != 5) continue;
+				int ox = cx + a, oz = cz + b;
+				if (Math.max(Math.abs(ox), Math.abs(oz)) <= 30) continue;
+				int go = l.gy(ox, oz);
+				for (int y = go - 1; y <= go; y++) l.b(ox, y, oz, CastleLayout.hash(ox, y, oz) < 45 ? Blocks.MOSSY_COBBLESTONE : Blocks.COBBLESTONE);
+			}
 			l.dy = lift;
 			tower(l, cx, cz, 4, 13, sx, sz);
 			l.dy = 0;

@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 18:07",
+ "generated": "2026-11-12 18:19",
  "scenes": [
   {
    "n": 1,
@@ -933,6 +933,10 @@
      true
     ],
     [
+     "chat",
+     true
+    ],
+    [
      "wear_set",
      "moonsilk"
     ],
@@ -959,7 +963,7 @@
     ],
     [
      "wait",
-     30
+     12
     ],
     [
      "shot",
@@ -982,7 +986,7 @@
    ],
    "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
    "setup": "same player types `/calling` with chat visible",
-   "override": "w4-stage-misc.json"
+   "override": "w8-items.json"
   },
   {
    "n": 12,
@@ -13333,11 +13337,30 @@
     ],
     [
      "cmd",
+     "difficulty peaceful"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..80]"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -13354,11 +13377,11 @@
     [
      "tp",
      "anchor",
-     25,
      30,
-     25,
+     30,
+     30,
      135,
-     30
+     28
     ],
     [
      "chunks"
@@ -13372,7 +13395,7 @@
     ],
     [
      "cmd",
-     "execute positioned over motion_blocking_no_leaves run tp @s ~ ~14 ~ 135 30"
+     "execute positioned over motion_blocking_no_leaves run tp @s ~ ~22 ~ 135 28"
     ],
     [
      "chunks"
@@ -13390,11 +13413,11 @@
     ],
     [
      "tp_downhill",
-     26.0
+     12.0
     ],
     [
      "cmd",
-     "tp @s ~ ~8 ~ ~ ~12"
+     "tp @s ~ ~10 ~ ~ 18"
     ],
     [
      "chunks"
@@ -13423,7 +13446,7 @@
    ],
    "check": "earth-sheltered hall: soil banked to the eaves on both sides and the back, steep spruce roof with a stripped-log ridge and dark-oak finials, timber gable with the door facing downhill, porch on two posts, paved terrace with stone-brick steps down to the ground; nothing floating, no flat 11x11 box, no lit campfire",
    "setup": "tp S+(14, +10, 14) facing S, pitch 25, then a second shot from the downhill side 18 out at eye height",
-   "override": "w4-structcam.json"
+   "override": "w8-world.json"
   },
   {
    "n": 154,
@@ -13438,11 +13461,30 @@
     ],
     [
      "cmd",
+     "difficulty peaceful"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..80]"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -13459,11 +13501,11 @@
     [
      "tp",
      "anchor",
-     19,
-     30,
-     19,
+     9,
+     5,
+     9,
      135,
-     22
+     14
     ],
     [
      "chunks"
@@ -13471,13 +13513,6 @@
     [
      "wait",
      60
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "cmd",
-     "execute positioned over motion_blocking_no_leaves run tp @s ~ ~10 ~ 135 22"
     ],
     [
      "chunks"
@@ -13502,7 +13537,7 @@
    ],
    "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
    "setup": "tp S+(6, +4, 6) facing S, pitch 15",
-   "override": "w4-structcam.json"
+   "override": "w8-world.json"
   },
   {
    "n": 155,
@@ -13973,11 +14008,30 @@
     ],
     [
      "cmd",
+     "difficulty peaceful"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..80]"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -13994,11 +14048,11 @@
     [
      "tp",
      "anchor",
-     24,
-     30,
-     24,
+     46,
+     18,
+     46,
      135,
-     -8
+     16
     ],
     [
      "chunks"
@@ -14006,13 +14060,6 @@
     [
      "wait",
      120
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "cmd",
-     "execute positioned over ocean_floor run tp @s ~ ~6 ~ 135 -8"
     ],
     [
      "chunks"
@@ -14037,7 +14084,7 @@
    ],
    "check": "the domed nave on one floor level, a prismarine/tuff foundation down to the bed, 10 stepped prismarine buttresses descending to the sea floor, south doors clear",
    "setup": "underwater, tp S+(26, +6, 26) facing S, pitch 10 (night vision)",
-   "override": "w4-structcam.json"
+   "override": "w8-world.json"
   },
   {
    "n": 162,
@@ -14131,11 +14178,30 @@
     ],
     [
      "cmd",
+     "difficulty peaceful"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..80]"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -14152,9 +14218,9 @@
     [
      "tp",
      "anchor",
-     17,
-     30,
-     17,
+     26,
+     13,
+     26,
      135,
      25
     ],
@@ -14166,18 +14232,23 @@
      60
     ],
     [
-     "chunks"
+     "cmd",
+     "weather clear 1000000"
     ],
     [
      "cmd",
-     "execute positioned over world_surface run tp @s ~ ~7 ~ 135 25"
+     "gamerule advance_weather false"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     60
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
     ],
     [
      "chunks"
@@ -14195,7 +14266,7 @@
    ],
    "check": "the dais and 8 leaning prismarine ring stones each on a kelpwood pile down to the sea bed; no beacon or iron blocks",
    "setup": "tp S+(8, +4, 8) facing S, pitch 20",
-   "override": "w4-structcam.json"
+   "override": "w8-world.json"
   },
   {
    "n": 164,
@@ -14210,11 +14281,19 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..120]"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -14229,19 +14308,11 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~35 ~ ~ 75"
+     "tp @s ^ ^12 ^-20 ~ 20"
     ],
     [
      "wait",
-     100
-    ],
-    [
-     "shot",
-     "battle_azmar_aldermark_60_5s"
-    ],
-    [
-     "wait",
-     100
+     200
     ],
     [
      "shot",
@@ -14284,7 +14355,7 @@
    ],
    "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
    "setup": "flat plains, `/time set 6000`, `/kingdom armies battle azmar aldermark 60`, fly 12 up and 20 back facing the Azmar rear; shot 1 at +10 s (fronts engaged), shot 2 when the bell rings (about +30-45 s, F3 open)",
-   "override": "w6-villages.json"
+   "override": "w8-world.json"
   },
   {
    "n": 165,
@@ -14373,11 +14444,30 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player]"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -14392,8 +14482,31 @@
      "effect give @s regeneration infinite 255 true"
     ],
     [
+     "locate",
+     "elsewhere:glacier_shelf"
+    ],
+    [
+     "tp",
+     "anchor",
+     22,
+     6,
+     0,
+     90,
+     10
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "chunks"
+    ],
+    [
      "cmd",
-     "kill @e[type=!minecraft:player]"
+     "kill @e[type=!minecraft:player,type=!minecraft:item]"
     ],
     [
      "cmd",
@@ -14405,6 +14518,14 @@
     [
      "wait",
      40
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:rimeback] run summon elsewhere:rimeback ~ ~ ~18 {PersistenceRequired:1b}"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "cmd",
@@ -14447,7 +14568,7 @@
    "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
    "setup": "Rimeback fight, trigger the avalanche; side view from the arena wall, shot when the wave is mid-arena",
    "note": "two timed shots of the started fight; the avalanche is not forced",
-   "override": "w4-vfx.json"
+   "override": "w8-world.json"
   },
   {
    "n": 167,
@@ -14588,11 +14709,30 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player]"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -14608,10 +14748,6 @@
     ],
     [
      "cmd",
-     "kill @e[type=!minecraft:player]"
-    ],
-    [
-     "cmd",
      "elsewhere_dev boss percolax"
     ],
     [
@@ -14620,6 +14756,14 @@
     [
      "wait",
      40
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:percolax] run summon elsewhere:percolax ~ ~ ~18 {PersistenceRequired:1b}"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "cmd",
@@ -14645,7 +14789,7 @@
    ],
    "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
    "setup": "Percolax: shot 3 s into \"Hides in the smoke\"; any verdigris boss (Galvanox) at fight start from the arena edge",
-   "override": "w4-vfx.json"
+   "override": "w8-world.json"
   },
   {
    "n": 169,
@@ -14683,8 +14827,31 @@
      "effect give @s saturation infinite 255 true"
     ],
     [
+     "locate",
+     "elsewhere:lighthouse"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     1,
+     0,
+     0,
+     6
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "chunks"
+    ],
+    [
      "cmd",
-     "kill @e[type=!minecraft:player]"
+     "kill @e[type=!minecraft:player,distance=..40]"
     ],
     [
      "cmd",
@@ -14699,7 +14866,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:galvanox,limit=1] at @s run tp @p ~ ~2 ~-9 0 6"
+     "execute as @e[type=elsewhere:galvanox,limit=1,sort=nearest] at @s run tp @p ~ ~2 ~-9 0 6"
     ],
     [
      "wait",
@@ -14719,7 +14886,7 @@
    "check": "Percolax body hidden in thick smoke (only the ember glow); verdigris seal is a light wall about 1-6 high all round",
    "setup": "Percolax: shot 3 s into \"Hides in the smoke\"; any verdigris boss (Galvanox) at fight start from the arena edge",
    "note": "fight started by walking in",
-   "override": "w4-vfx.json"
+   "override": "w8-verd.json"
   },
   {
    "n": 170,
@@ -15650,11 +15817,11 @@
     [
      "tp",
      "anchor",
-     16,
+     22,
      7,
-     15,
-     180,
-     12
+     6,
+     135,
+     18
     ],
     [
      "chunks"
@@ -15671,10 +15838,33 @@
      "tp",
      "anchor",
      0,
-     -10,
-     -6,
+     0,
+     -9,
      0,
      5
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
+    ],
+    [
+     "cmd",
+     "execute if block ~ 31 ~1 elsewhere:neferkhet_sun_altar run tp @s ~ 34 ~ 0 5"
+    ],
+    [
+     "cmd",
+     "execute if block ~ 24 ~1 elsewhere:neferkhet_sun_altar run tp @s ~ 27 ~ 0 5"
+    ],
+    [
+     "cmd",
+     "execute if block ~ 17 ~1 elsewhere:neferkhet_sun_altar run tp @s ~ 20 ~ 0 5"
+    ],
+    [
+     "cmd",
+     "execute if block ~ 10 ~1 elsewhere:neferkhet_sun_altar run tp @s ~ 13 ~ 0 5"
     ],
     [
      "chunks"
@@ -15701,7 +15891,7 @@
    "check": "kiosk: cut-sandstone shrine with an orange band, chiselled corners, blue lintel over the south door and a stepped sandstone-stair pyramid cap with a yellow-terracotta pyramidion; hall: blue faience bands and pilasters, cavetto cornice of upside-down stairs, sarcophagi lids in yellow/blue terracotta (no gold or lapis blocks), no cave opening into the hall",
    "setup": "at the pyramid: kiosk at pyramid centre +16 east; noon; shot 1 tp kiosk+(6, +3, 6) facing it; shot 2 inside the hall from the altar dais facing south (spectator)",
    "note": "the hall view is approximate (altar position unknown): S+(0, -6, 0) facing south",
-   "override": "w4-structfix.json"
+   "override": "w8-pw.json"
   },
   {
    "n": 178,
@@ -16058,15 +16248,27 @@
     ],
     [
      "cmd",
-     "fill ~-26 ~-1 ~-26 ~26 ~17 ~-9 air replace #minecraft:leaves"
+     "fill ~-30 ~-10 ~-30 ~0 ~24 ~-10 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-26 ~-1 ~-8 ~26 ~17 ~8 air replace #minecraft:leaves"
+     "fill ~-30 ~-10 ~-9 ~0 ~24 ~9 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-26 ~-1 ~9 ~26 ~17 ~26 air replace #minecraft:leaves"
+     "fill ~-30 ~-10 ~10 ~0 ~24 ~30 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "fill ~1 ~-10 ~-30 ~30 ~24 ~-10 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "fill ~1 ~-10 ~-9 ~30 ~24 ~9 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "fill ~1 ~-10 ~10 ~30 ~24 ~30 air replace #minecraft:leaves"
     ],
     [
      "tp",
@@ -16121,7 +16323,7 @@
    ],
    "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
    "setup": "tp S+(24, +16, 24) facing S, pitch 22, then S+(0, +4, 26) yaw 180 pitch 5",
-   "override": "w4-structfix.json"
+   "override": "w8-pw.json"
   },
   {
    "n": 182,
@@ -16199,7 +16401,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~8 ~"
+     "tp @s ~ ~22 ~ ~ 22"
     ],
     [
      "chunks"
@@ -16225,7 +16427,7 @@
    ],
    "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
    "setup": "tp S+(30, +14, 30) facing S, pitch 18, then the downhill side 30 out at eye height",
-   "override": "w4-structfix.json"
+   "override": "w8-pw.json"
   },
   {
    "n": 183,
@@ -19447,7 +19649,7 @@
     ],
     [
      "cmd",
-     "fill ~-4 ~ ~12 ~4 ~5 ~12 minecraft:stone"
+     "fill ~-6 ~ ~12 ~6 ~5 ~12 minecraft:stone_bricks"
     ],
     [
      "cmd",
@@ -19464,11 +19666,22 @@
      0,
      0,
      0,
-     -2
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     15
     ],
     [
      "camera",
-     "back"
+     "front"
+    ],
+    [
+     "wait",
+     5
     ],
     [
      "use_down"
@@ -19482,7 +19695,7 @@
     ],
     [
      "wait",
-     2
+     1
     ],
     [
      "shot",
@@ -19490,7 +19703,7 @@
     ],
     [
      "wait",
-     30
+     40
     ],
     [
      "camera",
@@ -19499,15 +19712,15 @@
     [
      "tp",
      "stage",
+     1.2,
      0,
-     0,
-     9.5,
-     0,
-     12
+     9.4,
+     24,
+     0
     ],
     [
      "wait",
-     5
+     10
     ],
     [
      "shot",
@@ -19526,7 +19739,7 @@
    ],
    "check": "the flying and stuck arrow use the teal echo-arrow texture (not the vanilla arrow, no pink/black), faint sculk \"pop\" trail in flight only, no trail once stuck",
    "setup": "flat daylight, fire a full-draw bow at a stone wall 12 blocks away; third person F5, one shot mid-flight, one of the arrow stuck in the wall from 2 blocks",
-   "override": "w4-vfx.json"
+   "override": "w8-items.json"
   },
   {
    "n": 218,
@@ -22827,19 +23040,14 @@
     ],
     [
      "wait",
-     20
+     60
     ],
     [
      "fly"
     ],
     [
-     "tp",
-     "stage",
-     0,
-     5,
-     17,
-     180,
-     -25
+     "cmd",
+     "tp @s ~ ~7 ~17 180 22"
     ],
     [
      "chunks"
@@ -22890,7 +23098,7 @@
    "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
    "setup": "`/elsewhere_dev boss mournmaw arena`, stand 14 blocks in front at its height, then `/elsewhere_dev attack tear_rain` and shoot at +1.2 s; repeat with `soul_fireball` (+0.9 s), `mourners` (+1.5 s, phase 2: `/elsewhere_dev hp 0.6` first), `grief_storm` (+1.6 s, phase 3: `/elsewhere_dev hp 0.3` first)",
    "note": "generic: entity mournmaw, 4 setup command(s); framing approximate",
-   "override": "w4-flinch.json"
+   "override": "w8-neb.json"
   },
   {
    "n": 244,
@@ -22901,7 +23109,7 @@
    "steps": [
     [
      "reset",
-     "survival"
+     "creative"
     ],
     [
      "cmd",
@@ -22929,16 +23137,14 @@
     ],
     [
      "wait",
-     40
+     80
     ],
     [
-     "tp",
-     "stage",
-     4,
-     0,
-     8,
-     161.6,
-     -3
+     "fly"
+    ],
+    [
+     "cmd",
+     "tp @s ~ ~6 ~15 180 15"
     ],
     [
      "chunks"
@@ -22993,7 +23199,7 @@
    "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
    "setup": "`/elsewhere_dev boss grunthar arena`, `/elsewhere_dev hp 0.6`, three-quarter front view 6 blocks away; `/elsewhere_dev attack call_enforcers`, shoot at +1.2 s; `/elsewhere_dev hp 0.3`, `/elsewhere_dev attack molten_hoard`, shoot at +1.3 s and +1.6 s",
    "note": "generic: entity grunthar, 5 setup command(s); framing approximate",
-   "override": "w4-flinch.json"
+   "override": "w8-neb.json"
   },
   {
    "n": 245,
@@ -23100,11 +23306,13 @@
      8
     ],
     [
-     "view",
-     0.0,
-     8.0,
-     90.0,
-     "ground"
+     "tp",
+     "stage",
+     8,
+     0,
+     8,
+     90,
+     3
     ],
     [
      "chunks"
@@ -23153,7 +23361,7 @@
    "check": "the top of the boss leans AWAY from the way it faces (recoil), not forward into a bow",
    "setup": "`elsewhere:strawgrim` NoAI on flat ground, camera exactly side-on (90 degrees to its facing) 8 blocks away; `/damage @e[type=elsewhere:strawgrim,limit=1] 1 minecraft:generic`, shoot 1 tick after",
    "note": "generic: entity strawgrim, 1 setup command(s); framing approximate",
-   "override": "w4-flinch.json"
+   "override": "w8-items.json"
   },
   {
    "n": 247,
@@ -24423,8 +24631,11 @@
      "elsewhere_dev boss aphelion"
     ],
     [
+     "chunks"
+    ],
+    [
      "wait",
-     20
+     40
     ],
     [
      "cmd",
@@ -24432,22 +24643,22 @@
     ],
     [
      "cmd",
-     "elsewhere_dev attack devour_dive"
+     "execute as @e[type=elsewhere:aphelion,limit=1] at @s run tp @p ~ ~2 ~-15 0 -8"
     ],
     [
      "wait",
-     3
-    ],
-    [
-     "cmd",
-     "tp @s ~ ~2 ~-15 0 -8"
+     5
     ],
     [
      "chunks"
     ],
     [
+     "cmd",
+     "elsewhere_dev attack devour_dive"
+    ],
+    [
      "wait",
-     10
+     8
     ],
     [
      "shot",
@@ -24463,7 +24674,7 @@
    "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
    "setup": "look at the column from 15 blocks",
    "note": "generic: entity aphelion; framing approximate",
-   "override": "w4-vfx.json"
+   "override": "w8-items.json"
   },
   {
    "n": 268,
@@ -25503,7 +25714,7 @@
     ],
     [
      "camera",
-     "back"
+     "front"
     ],
     [
      "wait",
@@ -25564,6 +25775,15 @@
      0,
      0,
      0
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     45,
+     5
     ],
     [
      "camera",
@@ -25656,7 +25876,7 @@
    "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
    "setup": "throw level into an oak-plank wall from 6 blocks, shot from the side and from behind",
    "note": "generic: item hrafnholt_hurlbat; framing approximate",
-   "override": "itemsb.json"
+   "override": "w8-items.json"
   },
   {
    "n": 281,
@@ -25953,11 +26173,11 @@
     [
      "tp",
      "anchor",
-     8,
-     8,
-     56,
+     0,
+     10,
+     28,
      180,
-     5
+     8
     ],
     [
      "chunks"
@@ -25976,10 +26196,10 @@
     [
      "tp",
      "anchor",
-     30,
+     18,
      12,
-     52,
-     127.7,
+     24,
+     150,
      12
     ],
     [
@@ -26009,7 +26229,7 @@
    ],
    "check": "bastion gate fa\u00e7ade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
    "setup": "stand on the terrace south of the gate (S+(0, 0, 21)) facing N, pitch 10; second shot S+(18, +6, 34) facing NW, pitch 15",
-   "override": "w4-structcam.json"
+   "override": "w8-neb.json"
   },
   {
    "n": 284,
@@ -26308,11 +26528,11 @@
     [
      "tp",
      "anchor",
-     39,
      30,
-     39,
+     14,
+     30,
      135,
-     0
+     5
     ],
     [
      "chunks"
@@ -26323,10 +26543,6 @@
     ],
     [
      "chunks"
-    ],
-    [
-     "cmd",
-     "execute positioned over world_surface run tp @s ~ ~-22 ~ 135 0"
     ],
     [
      "chunks"
@@ -26345,11 +26561,11 @@
     [
      "tp",
      "anchor",
-     30,
-     30,
-     8,
+     24,
+     26,
+     2,
      90,
-     -15
+     8
     ],
     [
      "chunks"
@@ -26360,10 +26576,6 @@
     ],
     [
      "chunks"
-    ],
-    [
-     "cmd",
-     "execute positioned over world_surface run tp @s ~ ~-37 ~ 90 -15"
     ],
     [
      "chunks"
@@ -26392,7 +26604,7 @@
    ],
    "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
    "setup": "S+(20, -14, 20) facing S, pitch -10 (looking up the spire), then from S+(12, -26, 0) at the foot facing W",
-   "override": "w4-structcam.json"
+   "override": "w8-neb.json"
   },
   {
    "n": 288,
@@ -26497,15 +26709,19 @@
     ],
     [
      "cmd",
-     "effect give @s resistance infinite 255 true"
-    ],
-    [
-     "cmd",
      "effect give @s water_breathing infinite 0 true"
     ],
     [
      "cmd",
      "effect give @s haste infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-5 ~2 ~4 ~-5 ~10 minecraft:red_concrete"
     ],
     [
      "cmd",
@@ -26577,10 +26793,18 @@
      "tidebrass_dredge_third_person"
     ],
     [
+     "cmd",
+     "effect clear @s"
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
      "tp",
      "stage",
      0,
-     -3,
+     3,
      3,
      0,
      60
@@ -26626,7 +26850,7 @@
    "check": "the block breaks about as fast as on land (no slow underwater mining); a 3x3 hole opens in the floor at once with break particles on all 9 blocks; 9 item drops float up; nothing outside the 3x3 changes",
    "setup": "survival, a 9x9 pool 3 deep over a sand floor with a gravel and a clay block in it; stand on the floor, eyes under water, look straight down, break one sand block with the dredge; shot 1 first person mid-break, shot 2 first person just after, shot 3 from 6 up looking down",
    "note": "generic: item tidebrass_dredge; framing approximate",
-   "override": "w4-gear.json"
+   "override": "w8-items.json"
   },
   {
    "n": 290,
@@ -42683,7 +42907,7 @@
     ],
     [
      "wait",
-     600
+     400
     ],
     [
      "chat",
@@ -42726,7 +42950,7 @@
    ],
    "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
    "setup": "`/kingdom armies battle aldermark hrafnholt 150`, fly 12 up and 30 back facing the lines, wait 20 s, run `/kingdomlod`, F3 open",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 459,
@@ -43257,7 +43481,30 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
+    ],
+    [
+     "cmd",
+     "difficulty peaceful"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..80]"
+    ],
+    [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
@@ -43270,6 +43517,10 @@
     [
      "gui",
      false
+    ],
+    [
+     "cmd",
+     "gamemode spectator"
     ],
     [
      "locate",
@@ -43333,7 +43584,7 @@
    "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
    "setup": "new world, /locate structure elsewhere:castle_hrafnholt, tp 60 blocks south-east of the site 40 up, look at the centre",
    "note": "generic: structure castle_hrafnholt; framing approximate",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 467,
@@ -43899,9 +44150,9 @@
     [
      "tp",
      "anchor",
-     0,
+     8,
      4,
-     0,
+     8,
      0,
      0
     ],
@@ -43936,23 +44187,43 @@
      "tp @s ~ ~12 ~ ~ 20"
     ],
     [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
+    ],
+    [
      "chunks"
     ],
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
      "great_hotbox_overview"
     ],
     [
-     "tp_downhill",
-     14.0
+     "tp",
+     "anchor",
+     12,
+     2,
+     12,
+     135,
+     25
     ],
     [
      "cmd",
-     "tp @s ~ ~3 ~ ~ 12"
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
     ],
     [
      "chunks"
@@ -43960,6 +44231,9 @@
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
@@ -43979,7 +44253,7 @@
    "check": "ribbed lime/green glass dome on a battered mud-brick drum with a tuff string course and cupola; 6 shuttered vents with a lever under each; arched door and bamboo porch with the stocked chest; two smaller ribbed annexes downhill, each on its own floor, joined by covered 3-wide stair walks (steps of 1); floors meet the ground (no voids, no stone platforms)",
    "setup": "Greenhaze, fresh chunks (`/locate structure elsewhere:great_hotbox` 3000+ blocks out), noon, camera 25 out and 12 up on the downhill side, then inside at the altar",
    "note": "generic: structure great_hotbox; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 479,
@@ -44015,9 +44289,9 @@
     [
      "tp",
      "anchor",
-     0,
+     8,
      4,
-     0,
+     8,
      0,
      0
     ],
@@ -44037,20 +44311,28 @@
     ],
     [
      "cmd",
-     "fill ~-28 ~-1 ~-9 ~28 ~17 ~9 air replace #minecraft:leaves"
+     "fill ~-28 ~-1 ~-9 ~28 ~17 ~10 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-28 ~-1 ~10 ~28 ~17 ~28 air replace #minecraft:leaves"
+     "fill ~-28 ~-1 ~11 ~28 ~17 ~28 air replace #minecraft:leaves"
     ],
     [
      "tp",
      "anchor",
-     0,
+     8,
      20,
-     22,
+     30,
      180,
      40
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
     ],
     [
      "chunks"
@@ -44058,18 +44340,30 @@
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
      "bonfire_terrace_overview"
     ],
     [
-     "tp_downhill",
-     18.0
+     "tp",
+     "anchor",
+     8,
+     9,
+     -12,
+     0,
+     25
     ],
     [
      "cmd",
-     "tp @s ~ ~4 ~ ~ 14"
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
     ],
     [
      "chunks"
@@ -44077,6 +44371,9 @@
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
@@ -44096,7 +44393,7 @@
    "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
    "setup": "Greenhaze fresh chunks, dusk, camera 20 up over the rim looking at the fire",
    "note": "generic: structure bonfire_terrace; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 480,
@@ -44132,9 +44429,9 @@
     [
      "tp",
      "anchor",
-     0,
+     8,
      4,
-     0,
+     8,
      0,
      0
     ],
@@ -44161,12 +44458,21 @@
      "fill ~-30 ~-1 ~11 ~30 ~17 ~30 air replace #minecraft:leaves"
     ],
     [
-     "tp_downhill",
-     30.0
+     "tp",
+     "anchor",
+     8,
+     26,
+     20,
+     180,
+     55
     ],
     [
      "cmd",
-     "tp @s ~ ~15 ~ ~ 25"
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
     ],
     [
      "chunks"
@@ -44174,18 +44480,30 @@
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
      "fern_terrace_farms_overview"
     ],
     [
-     "tp_downhill",
-     14.0
+     "tp",
+     "anchor",
+     8,
+     7,
+     24,
+     180,
+     25
     ],
     [
      "cmd",
-     "tp @s ~ ~3 ~ ~ 18"
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
     ],
     [
      "chunks"
@@ -44193,6 +44511,9 @@
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
@@ -44212,7 +44533,7 @@
    "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
    "setup": "Greenhaze fresh chunks, morning, camera 15 up downhill of the field",
    "note": "generic: structure fern_terrace_farms; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 481,
@@ -44452,9 +44773,9 @@
     [
      "tp",
      "anchor",
-     0,
+     8,
      4,
-     0,
+     8,
      0,
      0
     ],
@@ -44474,20 +44795,28 @@
     ],
     [
      "cmd",
-     "fill ~-28 ~-1 ~-9 ~28 ~17 ~9 air replace #minecraft:leaves"
+     "fill ~-28 ~-1 ~-9 ~28 ~17 ~10 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-28 ~-1 ~10 ~28 ~17 ~28 air replace #minecraft:leaves"
+     "fill ~-28 ~-1 ~11 ~28 ~17 ~28 air replace #minecraft:leaves"
     ],
     [
      "tp",
      "anchor",
-     10,
      8,
-     10,
-     135,
-     25
+     16,
+     16,
+     180,
+     50
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
     ],
     [
      "chunks"
@@ -44495,18 +44824,30 @@
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
      "lucid_spring_overview"
     ],
     [
-     "tp_downhill",
-     14.0
+     "tp",
+     "anchor",
+     8,
+     5,
+     18,
+     180,
+     22
     ],
     [
      "cmd",
-     "tp @s ~ ~3 ~ ~ 18"
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
+    ],
+    [
+     "cmd",
+     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
     ],
     [
      "chunks"
@@ -44514,6 +44855,9 @@
     [
      "wait",
      100
+    ],
+    [
+     "chunks"
     ],
     [
      "shot",
@@ -44533,7 +44877,7 @@
    "check": "a pool that takes the hollow's shape (clay/moss/sand bed, sea-lantern glow, lucid lilies), a solid mossy rim at the water line, a rill stepping downhill through mossy weirs into a gravel soak; no water running anywhere, mossy boulders around",
    "setup": "Greenhaze fresh chunks, noon, camera 8 up beside the pool",
    "note": "generic: structure lucid_spring; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 484,
@@ -44569,30 +44913,10 @@
     [
      "tp",
      "anchor",
-     14,
-     -14,
-     14,
-     135,
-     20
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "wait",
-     150
-    ],
-    [
-     "shot",
-     "listening_engine_overview"
-    ],
-    [
-     "tp",
-     "anchor",
-     24,
-     -18,
+     8,
      0,
-     90,
+     8,
+     0,
      0
     ],
     [
@@ -44603,8 +44927,79 @@
      150
     ],
     [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "forceload add ~-40 ~-40 ~40 ~40"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "tp",
+     "anchor",
+     22,
+     0,
+     22,
+     135,
+     25
+    ],
+    [
+     "cmd",
+     "tp @s ~ -12 ~ 135 25"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "shot",
+     "listening_engine_overview"
+    ],
+    [
+     "tp",
+     "anchor",
+     16,
+     0,
+     8,
+     90,
+     8
+    ],
+    [
+     "cmd",
+     "tp @s ~ -19 ~ 90 8"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "chunks"
+    ],
+    [
      "shot",
      "listening_engine_ground"
+    ],
+    [
+     "cmd",
+     "forceload remove all"
     ]
    ],
    "shots": [
@@ -44620,7 +45015,7 @@
    "check": "tile vault with 12 deepslate-brick ribs and a chiseled crown, terraced funnel with stair lips and a sculk cochlea spiralling down to the catalyst throne, 4 membranes on corbelled pillars; an arched lined tunnel east climbing 1 in 2 to a real cave, the surveyor's chest in it",
    "setup": "the Hush, `/locate structure elsewhere:listening_engine`, spectator inside at the throne, then in the east tunnel",
    "note": "generic: structure listening_engine; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 485,
@@ -44656,11 +45051,11 @@
     [
      "tp",
      "anchor",
+     8,
      0,
-     -24,
-     12,
-     180,
-     15
+     8,
+     0,
+     0
     ],
     [
      "chunks"
@@ -44670,17 +45065,61 @@
      150
     ],
     [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "forceload add ~-40 ~-40 ~40 ~40"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "tp",
+     "anchor",
+     8,
+     0,
+     24,
+     180,
+     12
+    ],
+    [
+     "cmd",
+     "tp @s ~ -62 ~ 180 12"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "chunks"
+    ],
+    [
      "shot",
      "choir_geode_overview"
     ],
     [
      "tp",
      "anchor",
+     8,
      0,
-     -26,
-     -8,
+     16,
      180,
-     5
+     4
+    ],
+    [
+     "cmd",
+     "tp @s ~ -70 ~ 180 4"
     ],
     [
      "chunks"
@@ -44690,8 +45129,15 @@
      100
     ],
     [
+     "chunks"
+    ],
+    [
      "shot",
      "choir_geode_ground"
+    ],
+    [
+     "cmd",
+     "forceload remove all"
     ]
    ],
    "shots": [
@@ -44707,7 +45153,7 @@
    "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
    "setup": "the Hush, `/locate structure elsewhere:choir_geode`, spectator in the middle",
    "note": "generic: structure choir_geode; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 486,
@@ -44743,11 +45189,11 @@
     [
      "tp",
      "anchor",
-     12,
-     6,
-     12,
-     135,
-     22
+     8,
+     0,
+     8,
+     0,
+     0
     ],
     [
      "chunks"
@@ -44757,17 +45203,779 @@
      150
     ],
     [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "forceload add ~-40 ~-40 ~40 ~40"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 60 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 59 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 58 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 57 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 56 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 55 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 54 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 53 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 52 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 51 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 50 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 49 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 48 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 47 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 46 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 45 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 44 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 43 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 42 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 41 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 40 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 39 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 38 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 37 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 36 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 35 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 34 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 33 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 32 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 31 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 30 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 29 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 28 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 27 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 26 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 25 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 24 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 23 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 22 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 21 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 20 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 19 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 18 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 17 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 16 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 15 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 14 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 13 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 12 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 11 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 10 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 9 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 8 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 7 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 6 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 5 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 4 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 3 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 2 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 1 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 0 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -1 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -2 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -3 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -4 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -5 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -6 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -7 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -8 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -9 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -10 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -11 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -12 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -13 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -14 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -15 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -16 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -17 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -18 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -19 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -20 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -21 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -22 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -23 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -24 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -25 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -26 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -27 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -28 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -29 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -30 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -31 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -32 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -33 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -34 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -35 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -36 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -37 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -38 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -39 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -40 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -41 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -42 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -43 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -44 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -45 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -46 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -47 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -48 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -49 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -50 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -51 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -52 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -53 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -54 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -55 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -56 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -57 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -58 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -59 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -60 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -61 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -62 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -63 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -64 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -65 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -66 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -67 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -68 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -69 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -70 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -71 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -72 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -73 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -74 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -75 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -76 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -77 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -78 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -79 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -80 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -81 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -82 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -83 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -84 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -85 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -86 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -87 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -88 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -89 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -90 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -91 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -92 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -93 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -94 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -95 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -96 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -97 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -98 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -99 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -100 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -101 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -102 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -103 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -104 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -105 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -106 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -107 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -108 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -109 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -110 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -111 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -112 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -113 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -114 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -115 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -116 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -117 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -118 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -119 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ -120 ~ if block ~ ~ ~ elsewhere:hushweave_carpet run tp @s ~ ~4 ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~3 ~-4 ~0 if block ~ ~ ~ minecraft:lectern run tp @s ~-5 ~4 ~0 270 25"
+    ],
+    [
+     "cmd",
+     "execute positioned ~-3 ~-4 ~0 if block ~ ~ ~ minecraft:lectern run tp @s ~5 ~4 ~0 90 25"
+    ],
+    [
+     "cmd",
+     "execute positioned ~0 ~-4 ~3 if block ~ ~ ~ minecraft:lectern run tp @s ~0 ~4 ~-5 0 25"
+    ],
+    [
+     "cmd",
+     "execute positioned ~0 ~-4 ~-3 if block ~ ~ ~ minecraft:lectern run tp @s ~0 ~4 ~5 180 25"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
+    ],
+    [
+     "chunks"
+    ],
+    [
      "shot",
      "silent_monastery_overview"
     ],
     [
-     "tp",
-     "anchor",
-     0,
-     -6,
-     3,
-     0,
-     5
+     "cmd",
+     "tp @s ~ ~-2.6 ~ ~ 4"
     ],
     [
      "chunks"
@@ -44777,8 +45985,15 @@
      100
     ],
     [
+     "chunks"
+    ],
+    [
      "shot",
      "silent_monastery_ground"
+    ],
+    [
+     "cmd",
+     "forceload remove all"
     ]
    ],
    "shots": [
@@ -44794,7 +46009,7 @@
    "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
    "setup": "the Hush, `/locate structure elsewhere:silent_monastery`, spectator outside then inside the chapel",
    "note": "generic: structure silent_monastery; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 487,
@@ -44820,10 +46035,6 @@
      false
     ],
     [
-     "chat",
-     false
-    ],
-    [
      "cmd",
      "effect give @s night_vision infinite 1 true"
     ],
@@ -44834,11 +46045,11 @@
     [
      "tp",
      "anchor",
-     10,
-     2,
-     10,
-     135,
-     -30
+     8,
+     0,
+     8,
+     0,
+     0
     ],
     [
      "chunks"
@@ -44848,17 +46059,275 @@
      150
     ],
     [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "forceload add ~-40 ~-40 ~40 ~40"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 165 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 164 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 163 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 162 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 161 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 160 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 159 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 158 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 157 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 156 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 155 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 154 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 153 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 152 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 151 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 150 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 149 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 148 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 147 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 146 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 145 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 144 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 143 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 142 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 141 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 140 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 139 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 138 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 137 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 136 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 135 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 134 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 133 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 132 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 131 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 130 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 129 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 128 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 127 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 126 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 125 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 124 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 123 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 122 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 121 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 120 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 119 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 118 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 117 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 116 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 115 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 114 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 113 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 112 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 111 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute positioned ~ 110 ~ if block ~ ~ ~ minecraft:chest run tp @s ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "tp @s ~11 ~8 ~11 135 5"
+    ],
+    [
+     "cmd",
+     "fill ~-2 ~-1 ~-2 ~2 ~3 ~2 air"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     150
+    ],
+    [
+     "chunks"
+    ],
+    [
      "shot",
      "hanging_undercity_overview"
     ],
     [
-     "tp",
-     "anchor",
-     0,
-     1,
-     16,
-     180,
-     -45
+     "cmd",
+     "tp @s ~ ~-16 ~ 135 -25"
+    ],
+    [
+     "cmd",
+     "fill ~-2 ~-1 ~-2 ~2 ~3 ~2 air"
     ],
     [
      "chunks"
@@ -44868,8 +46337,15 @@
      100
     ],
     [
+     "chunks"
+    ],
+    [
      "shot",
      "hanging_undercity_ground"
+    ],
+    [
+     "cmd",
+     "forceload remove all"
     ]
    ],
    "shots": [
@@ -44885,7 +46361,7 @@
    "check": "octagonal deepslate towers each hung from the real cave ceiling by an anchor plate and 4 chains, banded walls with windows, inverted spires with a soul lantern at the tip; chain-railed bridges from the central tower; no flat artificial ceiling slab",
    "setup": "the Hush, `/locate structure elsewhere:hanging_undercity`, spectator below looking up",
    "note": "generic: structure hanging_undercity; framing approximate",
-   "override": "w4-structfix.json"
+   "override": "w8-hush-cams.json"
   },
   {
    "n": 488,

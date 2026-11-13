@@ -40,6 +40,9 @@ public class MotherCreakArtRenderer extends MobRenderer<MotherCreak, MotherCreak
 	@Override
 	public void extractRenderState(final MotherCreak e, final MotherCreakArtState s, final float pt) {
 		super.extractRenderState(e, s, pt);
+		// 3.0 (f-anim): vanilla kicks walkAnimationSpeed to 1.5 on every hit, which played the WALK keyframes (arms and torso
+		// swung about 30 degrees) over the flinch; a standing boss flinches by the whole-body rock only
+		if (((dev.elsewhere.core.anim3.Hurt3Holder) s).elsewhere$coreHurt3() >= 0F && e.getDeltaMovement().horizontalDistanceSqr() < 1.0E-4) s.walkAnimationSpeed = 0F;
 		Anims a = this.anims.computeIfAbsent(e, k -> new Anims());
 		int tc = e.tickCount;
 		boolean awake = e.isAwake();

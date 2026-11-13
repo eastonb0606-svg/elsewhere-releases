@@ -28,13 +28,15 @@ public final class FitBuilds {
 	private FitBuilds() {}
 
 	private static final BlockState AIR = Blocks.AIR.defaultBlockState();
+	/** How far above the deck a piece clears swamp trees (mangrove trunks reach about 15-20 above the water). */
+	static final int TREE_TOP = 24;
 
 	// ---- boxes ---------------------------------------------------------------------------------------------------------------
 
 	public static BoundingBox box(String kind, String part, BlockPos o, BlockPos at, int a, int b, int[] prof) {
 		int x = o.getX(), z = o.getZ(), g = o.getY() - 1;
 		return switch (kind + "/" + part) {
-			case "croaking_shrine/walk" -> lineBox(o, a, 16, 16 + Math.max(1, b), min(prof, g) - 15, max(prof, g) + 4);
+			case "croaking_shrine/walk" -> lineBox(o, a, 16, 16 + Math.max(1, b), min(prof, g) - 15, max(prof, g) + TREE_TOP);
 			// the shelf and the chamber carry a noise rule that reaches 12 past its box: their piece box includes that reach, so every chunk the
 			// rule touches holds a reference to the start (vanilla inflates beard structures the same way)
 			case "glacier_shelf/core" -> new BoundingBox(x - 30, g - 15, z - 29, x + 30, g + 13, z + 30);
@@ -51,7 +53,7 @@ public final class FitBuilds {
 			case "wreck_ring/core" -> new BoundingBox(x - 19, g - 1, z - 19, x + 19, g + 15, z + 19);
 			case "wreck_ring/stack" -> new BoundingBox(at.getX() - 1, at.getY() - 6, at.getZ() - 1, at.getX() + 1, g - 1, at.getZ() + 1);
 			case "wreck_ring/hulk" -> new BoundingBox(at.getX() - 6, at.getY() - 8, at.getZ() - 6, at.getX() + 6, g + 4, at.getZ() + 6);
-			default -> new BoundingBox(x - 16, g - 16, z - 16, x + 16, g + 9, z + 16); // croaking_shrine/core
+			default -> new BoundingBox(x - 16, g - 16, z - 16, x + 16, g + TREE_TOP, z + 16); // croaking_shrine/core (tall: swamp trees are cleared from the footprint)
 		};
 	}
 
@@ -104,6 +106,20 @@ public final class FitBuilds {
 
 	static void softClear(BlockSink s, int x, int y0, int y1, int z) {
 		for (int y = y0; y <= y1; y++) if (soft(s.get(x, y, z))) s.set(x, y, z, AIR);
+	}
+
+	/** Whole trees: logs, leaves, mangrove roots (waterlogged ones leave water), propagules, vines, plus the soft blocks. */
+	static boolean treeStuff(BlockState s) {
+		return s.is(BlockTags.LOGS) || s.is(BlockTags.LEAVES) || s.is(Blocks.MANGROVE_ROOTS) || s.is(Blocks.MUDDY_MANGROVE_ROOTS)
+			|| s.is(Blocks.MANGROVE_PROPAGULE) || s.is(Blocks.VINE) || s.is(Blocks.BEE_NEST) || soft(s);
+	}
+
+	/** Clears every tree block in the column slice; a waterlogged one (mangrove roots) becomes water so the pool stays a pool. */
+	static void treeClear(BlockSink s, int x, int y0, int y1, int z) {
+		for (int y = y0; y <= y1; y++) {
+			BlockState st = s.get(x, y, z);
+			if (treeStuff(st)) s.set(x, y, z, st.getFluidState().isEmpty() ? AIR : Blocks.WATER.defaultBlockState());
+		}
 	}
 
 	/** Room interior only: everything above the floor goes, except water (an arena never drains the sea). */
@@ -176,6 +192,7 @@ public final class FitBuilds {
 				int x = o.getX() + dx, z = o.getZ() + dz;
 				if (!s.writes(x, z)) continue;
 				boolean dais = Math.abs(dx) <= 4 && dz >= -14 && dz <= -10;
+				treeClear(s, x, g - 8, g + TREE_TOP, z); // swamp trees stood here before the shrine: trunks, roots, canopy all go
 				if (d <= 9.5 && !dais) {
 					// the pool: open water one below the deck, enclosed by the rim, on a mud bed
 					int depth = d <= 3.5 ? 3 : 2;
@@ -277,7 +294,7 @@ public final class FitBuilds {
 			for (int k = -1; k <= 1; k++) {
 				int x = cx + lx * k, z = cz + lz * k;
 				if (!s.writes(x, z)) continue;
-				softClear(s, x, y + 1, y + 3, z);
+				treeClear(s, x, Math.min(y, prev) - 6, y + TREE_TOP, z);
 				BlockState plank = y > prev ? stair(Blocks.MANGROVE_STAIRS, out, false)
 					: y < prev ? stair(Blocks.MANGROVE_STAIRS, out.getOpposite(), false)
 					: k == 0 ? log(Blocks.STRIPPED_MANGROVE_LOG, along) : Blocks.MANGROVE_PLANKS.defaultBlockState();
@@ -291,6 +308,7 @@ public final class FitBuilds {
 		int last = p.prof.length - 1, ly = p.prof[last];
 		int ex = o.getX() + d[0] * (16 + last) + lx * 2, ez = o.getZ() + d[1] * (16 + last) + lz * 2;
 		if (s.writes(ex, ez)) {
+			treeClear(s, ex, ly - 6, ly + 12, ez);
 			underpin(s, ex, ly, ez, new BlockState[] {Blocks.MANGROVE_LOG.defaultBlockState()}, 16);
 			s.set(ex, ly + 1, ez, Blocks.MANGROVE_FENCE.defaultBlockState());
 			s.set(ex, ly + 2, ez, Blocks.MANGROVE_FENCE.defaultBlockState());
@@ -307,7 +325,9 @@ public final class FitBuilds {
 		BlockPos o = p.o;
 		int g = o.getY() - 1;
 		BlockState snow = Blocks.SNOW_BLOCK.defaultBlockState();
-		BlockState[] ladder = {Blocks.STONE.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.ANDESITE.defaultBlockState(), Blocks.COBBLESTONE.defaultBlockState()};
+		// the foundation reads as ice and snow down the visible drop (no grey wall), stone only deep down
+		BlockState[] ladder = {Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(),
+			Blocks.PACKED_ICE.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.COBBLESTONE.defaultBlockState()};
 		for (int dx = -18; dx <= 18; dx++) {
 			for (int dz = -17; dz <= 18; dz++) {
 				double d = Math.sqrt(dx * dx + dz * dz);
@@ -317,18 +337,18 @@ public final class FitBuilds {
 				interior(s, x, g + 1, g + 12, z);
 				boolean powder = d > 5 && d < 14 && hash(o, dx >> 1, 0, dz >> 1, 31) < 0.08;
 				s.set(x, g, z, powder ? Blocks.POWDER_SNOW.defaultBlockState() : snow);
-				s.set(x, g - 1, z, d > 16 ? Blocks.STONE.defaultBlockState() : Blocks.PACKED_ICE.defaultBlockState());
-				s.set(x, g - 2, z, Blocks.STONE.defaultBlockState());
+				s.set(x, g - 1, z, Blocks.PACKED_ICE.defaultBlockState());
+				s.set(x, g - 2, z, d > 16 ? Blocks.PACKED_ICE.defaultBlockState() : Blocks.STONE.defaultBlockState());
 				underpin(s, x, g - 3, z, ladder, OwbFit.CAP);
 				// a low packed-ice kerb on the rim, broken, so the edge reads from below (open at the entrance)
 				if (d > 17.3 && dz > -12 && !inGate(p.a, dx, dz) && hash(o, dx, 3, dz, 33) < 0.45) s.set(x, g + 1, z, Blocks.PACKED_ICE.defaultBlockState());
 			}
 		}
-		// the 4 braziers stay LIT campfires: they are Rimeback's mechanic (phase 3 blizzard shelter, Campfire Stomp puts them out); the
-		// only lit campfires in any boss site. Other light comes from rim lanterns.
+		// the 4 braziers are built UNLIT (spec L188.1); Rimeback lights them when the whiteout starts (phase 3 blizzard shelter, Campfire
+		// Stomp puts them out). Other light comes from rim lanterns.
 		for (int[] c : Blueprints.CAMPFIRES) {
 			s.set(o.getX() + c[0], g + 1, o.getZ() + c[2], Blocks.STONE_BRICKS.defaultBlockState());
-			s.set(o.getX() + c[0], g + 2, o.getZ() + c[2], Blocks.CAMPFIRE.defaultBlockState().setValue(CampfireBlock.LIT, true));
+			s.set(o.getX() + c[0], g + 2, o.getZ() + c[2], Blocks.CAMPFIRE.defaultBlockState().setValue(CampfireBlock.LIT, false));
 		}
 		for (int i = 0; i < 6; i++) {
 			double a = Math.PI * 2 * i / 6 + Math.PI / 6;
@@ -365,13 +385,16 @@ public final class FitBuilds {
 		BlockPos o = p.o;
 		int g = o.getY() - 1;
 		BlockState snow = Blocks.SNOW_BLOCK.defaultBlockState();
-		BlockState[] core = {Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.COBBLESTONE.defaultBlockState()};
+		BlockState[] core = {Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.PACKED_ICE.defaultBlockState(), Blocks.SNOW_BLOCK.defaultBlockState(), Blocks.STONE.defaultBlockState()};
 		for (int dx = -16; dx <= 16; dx++) {
 			for (int dz = -28; dz <= -18; dz++) {
 				int x = o.getX() + dx, z = o.getZ() + dz;
 				if (!s.writes(x, z)) continue;
 				// the ramp rises 1.25 per block northwards; where the hillside is higher it stays (the ramp runs into it)
-				int top = g + Math.min(13, (int) ((-dz - 17) * 1.25 + 1)) - (Math.abs(dx) >= 15 ? 1 : 0);
+				int ramp = g + Math.min(13, (int) ((-dz - 17) * 1.25 + 1)) - (Math.abs(dx) >= 15 ? 1 : 0);
+				// blend: where the natural ground is well below the ramp the slope follows it (+1) instead of standing as a wedge above it
+				int nat = naturalTop(s, x, g + 16, g - 24, z);
+				int top = nat >= ramp ? ramp : Math.max(g, Math.min(ramp, nat + 1));
 				softClear(s, x, top + 1, top + 4, z);
 				if (solid(s.get(x, top + 1, z))) continue; // anchored: the uphill ground is above the ramp here
 				s.set(x, top, z, snow);
@@ -380,6 +403,12 @@ public final class FitBuilds {
 				if (hash(o, dx, 1, dz, 32) < 0.5) s.set(x, top + 1, z, Blocks.SNOW.defaultBlockState());
 			}
 		}
+	}
+
+	/** Highest solid natural block of the column between yFrom and yTo (yTo when none). */
+	static int naturalTop(BlockSink s, int x, int yFrom, int yTo, int z) {
+		for (int y = yFrom; y >= yTo; y--) if (solid(s.get(x, y, z))) return y;
+		return yTo;
 	}
 
 	static void glacierButtress(OwbFitPiece p, BlockSink s) {
@@ -635,15 +664,18 @@ public final class FitBuilds {
 			double a = Math.PI * 2 * i / 3 + Math.PI / 6;
 			double cx = Math.cos(a), cz = Math.sin(a);
 			int hx = o.getX() + (int) Math.round(cx * 12.5), hz = o.getZ() + (int) Math.round(cz * 12.5);
-			int mastH = 7 + (int) (hash(o, i, 5, 0, 45) * 6);
+			int mastH = 12; // all three masts the same tall height so none reads as a stub
 			for (int y = 1; y <= mastH; y++) s.set(hx, deck + y, hz, Blocks.SPRUCE_LOG.defaultBlockState());
+			// yard near the top and a continuous sail hung under it (every block touches the yard or its neighbour, nothing floats)
 			for (int k = -3; k <= 3; k++) {
 				int sx = hx + (int) Math.round(-cz * k), sz = hz + (int) Math.round(cx * k);
 				s.set(sx, deck + mastH - 1, sz, Blocks.STRIPPED_SPRUCE_LOG.defaultBlockState());
-				for (int y = 2; y <= mastH - 2; y++) {
-					if (Math.abs(k) <= 2 && hash(o, k, y, i, 46) < 0.55) s.set(sx, deck + y, sz, Blocks.WOOL.white().defaultBlockState());
+				if (k != 0 && Math.abs(k) <= 2) {
+					for (int y = 4; y <= mastH - 2; y++) s.set(sx, deck + y, sz, Blocks.WOOL.white().defaultBlockState());
 				}
 			}
+			// crow's nest rail under the lantern so the mast top reads from far away
+			s.set(hx, deck + mastH, hz, Blocks.SPRUCE_FENCE.defaultBlockState());
 			// a raised bow and gunwale along the outer edge of this hull
 			for (int k = -6; k <= 6; k++) {
 				int gx = o.getX() + (int) Math.round(cx * 17 - cz * k), gz = o.getZ() + (int) Math.round(cz * 17 + cx * k);

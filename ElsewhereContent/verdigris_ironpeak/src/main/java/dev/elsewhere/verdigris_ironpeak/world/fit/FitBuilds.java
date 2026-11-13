@@ -67,7 +67,7 @@ public final class FitBuilds {
 		Blueprint.FIT.put("clan_hold", fit(21, 12, 14, FitBuilds::clanHold));
 		Blueprint.FIT.put("climbers_cairn", fit(6, 9, 14, FitBuilds::cairn));
 		Blueprint.FIT.put("clockwork_rig", fit(14, 12, 130, FitBuilds::rig));
-		Blueprint.FIT.put("engineers_atoll", fit(22, 8, 30, FitBuilds::atoll));
+		Blueprint.FIT.put("engineers_atoll", fit(26, 8, 30, FitBuilds::atoll));
 		Blueprint.FIT.put("tidelock_vault", fit(10, 9, 16, FitBuilds::vault));
 		Blueprint.FIT.put("drowned_cathedral", fit(VerdigrimArena.RADIUS + 9, VerdigrimArena.HEIGHT + 2, 24, FitBuilds::cathedral));
 		Blueprint.FIT.put("lighthouse", fit(GalvanoxArena.RADIUS + 4, GalvanoxArena.HEIGHT, 160, FitBuilds::lighthouse));
@@ -600,11 +600,11 @@ public final class FitBuilds {
 		if (best != null) {
 			Direction d = best;
 			int sea = s.water(d.getStepX() * bestDist, d.getStepZ() * bestDist);
-			int deckY = 0, end = Math.min(21, bestDist + 5);
+			int deckY = 0, end = Math.min(25, bestDist + 8);
 			// a doorway on the jetty side
 			for (int y = 1; y <= 2; y++) s.hollow(d.getStepX() * 3, y, d.getStepZ() * 3);
 			for (int k = 4; k <= end; k++) {
-				int target = Math.max(sea + 1, Math.min(0, s.ground(d.getStepX() * k, d.getStepZ() * k) + 1));
+				int target = Math.max(sea, Math.min(0, s.ground(d.getStepX() * k, d.getStepZ() * k) + 1)); // deck lands flush with the water: the first wet block steps down
 				int ny = Math.max(target, deckY - 1);
 				boolean step = ny < deckY;
 				deckY = ny;
@@ -625,10 +625,10 @@ public final class FitBuilds {
 				s.set(x, deckY + 3, z, Blocks.COPPER_LANTERN.weathering().unaffected().defaultBlockState());
 			}
 		}
-		// quay: where dry land meets water within 9 blocks, a tuff-brick edge at the waterline with a bollard every few blocks
-		for (int x = -9; x <= 9; x++) for (int z = -9; z <= 9; z++) {
+		// quay: where dry land meets water within 14 blocks, a tuff-brick edge at the waterline with a bollard every few blocks
+		for (int x = -14; x <= 14; x++) for (int z = -14; z <= 14; z++) {
 			if (Math.abs(x) <= 4 && Math.abs(z) <= 4) continue;
-			if (x * x + z * z > 81 || s.wet(x, z)) continue;
+			if (x * x + z * z > 196 || s.wet(x, z)) continue;
 			boolean shore = s.wet(x + 1, z) || s.wet(x - 1, z) || s.wet(x, z + 1) || s.wet(x, z - 1);
 			if (!shore) continue;
 			int g = realTop(s, x, z, s.ground(x, z));
@@ -663,10 +663,18 @@ public final class FitBuilds {
 			if (dx == 0 && dzb == 0 && dzf == 0) {
 				// on the roof: one layer of sediment over the back half
 				BlockPos p = s.at(x, 6, z);
-				if (z <= 1 && s.inside(p) && (s.level.getBlockState(p).isAir() || s.level.getBlockState(p).is(Blocks.WATER))) s.set(x, 6, z, sediment(s, x, z));
+				if (z <= 0 && s.inside(p)) {
+					// the back half of the roof is buried under 1-3 layers of sediment rising toward the back
+					int roofTop = 6 + (-z) / 2;
+					for (int y = 6; y <= roofTop; y++) {
+						BlockPos q = s.at(x, y, z);
+						if (s.inside(q) && (s.level.getBlockState(q).isAir() || s.level.getBlockState(q).is(Blocks.WATER))) s.set(x, y, z, sediment(s, x, z));
+					}
+				}
 				continue;
 			}
-			int top = 5 - Math.max(dx, Math.max(dzb, dzf)) * 2;
+			int away = Math.max(dx, Math.max(dzb, dzf));
+			int top = 7 - ((away - 1) * 3) / 2; // banked above the roof line beside the vault, shelving away
 			if (top < 1) continue;
 			mound(s, x, z, top);
 		}
@@ -758,11 +766,13 @@ public final class FitBuilds {
 		int sea = s.water(0, 0);
 		int landing = Math.max(sea + 1, s.ground(TR + 2, 0) + 1);
 		// 1. the sea stack: rubble from the bed up past the waterline, widest at the water, every column on its own ground
-		for (int x = -TR - 4; x <= TR + 4; x++) for (int z = -TR - 4; z <= TR + 4; z++) {
+		for (int x = -TR - 6; x <= TR + 6; x++) for (int z = -TR - 6; z <= TR + 6; z++) {
 			double d = Math.sqrt(x * x + z * z);
-			if (d > TR + 4.3) continue;
+			if (d > TR + 6.3) continue;
 			int g = s.ground(x, z);
-			int top = d <= TR + 0.3 ? landing - 1 : Math.min(landing - 1, sea + 2 - (int) Math.round((d - TR) * 1.5));
+			// a visible stack: 4 above the water beside the tower, shelving down to the bed and widest at the waterline; the door approach stays low
+			int top = d <= TR + 0.3 ? landing - 1 : sea + 5 - (int) Math.round(d - TR);
+			if (x > 0 && Math.abs(z) <= 2) top = Math.min(top, landing - 1);
 			if (top <= g) continue;
 			for (int y = g + 1; y <= top; y++) s.set(x, y, z, rubble(s, x, y, z));
 			s.underpin(x, g, z, rubble(s, x, g, z), rubble(s, x, g, z), rubble(s, x, g, z), 12);
@@ -977,7 +987,13 @@ public final class FitBuilds {
 			for (int y = 0; y < h; y++) s.set(x, base + y, z, y == h - 1 && hash(s, x, y, z) % 2 == 0 ? st(Blocks.CRACKED_STONE_BRICKS) : pillar);
 			// a lean: the cap stone tips outward
 			Direction out = outward(x, z);
-			if (lean.hasProperty(StairBlock.FACING)) s.set(x + out.getStepX(), base + h - 1, z + out.getStepZ(), lean.setValue(StairBlock.FACING, out.getOpposite()).setValue(StairBlock.HALF, Half.TOP));
+			if (lean.hasProperty(StairBlock.FACING)) {
+				int lx = x + out.getStepX(), lz = z + out.getStepZ();
+				s.set(lx, base + h - 1, lz, lean.setValue(StairBlock.FACING, out.getOpposite()).setValue(StairBlock.HALF, Half.TOP));
+				// the leaning cap always has its own footing (a hanging beam off the pillar top is an R-ground failure)
+				if (piles) pile(s, lx, base + h - 2, lz, log);
+				else s.underpin(lx, base + h - 2, lz, pillar, pillar, st(Blocks.COBBLESTONE), 12);
+			}
 		}
 	}
 }

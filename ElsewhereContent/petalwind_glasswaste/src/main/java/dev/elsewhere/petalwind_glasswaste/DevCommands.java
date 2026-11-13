@@ -22,21 +22,15 @@ public final class DevCommands {
 	private DevCommands() {}
 
 	public static void register(CommandDispatcher<CommandSourceStack> d) {
+		// Literal children only: same-named argument nodes from other modules' /elsewhere_dev would merge and overwrite this executor.
+		var tp = Commands.literal("tp");
+		for (String dim : new String[]{"petalwind", "glasswaste"}) tp.then(Commands.literal(dim).executes(c -> tp(c.getSource(), dim)));
+		var boss = Commands.literal("boss");
+		for (String id : Bosses.IDS) boss.then(Commands.literal(id).executes(c -> boss(c.getSource(), id)));
 		d.register(Commands.literal("elsewhere_dev").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
-			.then(Commands.literal("tp").then(Commands.argument("dimension", StringArgumentType.word())
-				.suggests((c, b) -> {
-					b.suggest("petalwind");
-					b.suggest("glasswaste");
-					return b.buildFuture();
-				})
-				.executes(c -> tp(c.getSource(), StringArgumentType.getString(c, "dimension")))))
+			.then(tp)
 			.then(Commands.literal("home").executes(c -> home(c.getSource())))
-			.then(Commands.literal("boss").then(Commands.argument("id", StringArgumentType.word())
-				.suggests((c, b) -> {
-					Bosses.IDS.forEach(b::suggest);
-					return b.buildFuture();
-				})
-				.executes(c -> boss(c.getSource(), StringArgumentType.getString(c, "id"))))));
+			.then(boss));
 	}
 
 	public static ResourceKey<Level> dimension(String name) {

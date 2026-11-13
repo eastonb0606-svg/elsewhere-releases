@@ -361,6 +361,17 @@ public class RimebackEntity extends ElsewhereBoss {
 			if (speed != null && speed.getModifier(SHATTER_SPEED) == null) speed.addPermanentModifier(new AttributeModifier(SHATTER_SPEED, 0.3, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 			level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, Blocks.PACKED_ICE.defaultBlockState()), getX(), getY() + 4, getZ(), 120, 1.2, 2.0, 1.2, 0.3);
 			playSound(SoundEvents.GLASS_BREAK, 3.0F, 0.4F);
+			lightBraziers(level);
+		}
+	}
+
+	/** The shelf's braziers are built unlit (3.0 look); the whiteout lights them so the shelter and the stomp mechanic still work. */
+	private void lightBraziers(ServerLevel level) {
+		if (this.arena == null) return;
+		BlockPos c = this.arena.center;
+		for (BlockPos p : BlockPos.betweenClosed(c.offset(-this.arena.radius, -2, -this.arena.radius), c.offset(this.arena.radius, 4, this.arena.radius))) {
+			BlockState s = level.getBlockState(p);
+			if (s.getBlock() instanceof CampfireBlock && !s.getValue(CampfireBlock.LIT)) level.setBlock(p, s.setValue(CampfireBlock.LIT, true), 3);
 		}
 	}
 

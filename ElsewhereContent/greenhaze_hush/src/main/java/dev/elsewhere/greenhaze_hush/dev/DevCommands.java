@@ -21,41 +21,37 @@ public final class DevCommands {
 	private DevCommands() {}
 
 	public static void register() {
-		CommandRegistrationCallback.EVENT.register((dispatcher, ctx, sel) -> dispatcher.register(Commands.literal("elsewhere_dev")
-			.requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
-			.then(Commands.literal("tp").then(Commands.argument("dimension", StringArgumentType.word())
-				.suggests((c, b) -> SharedSuggestionProvider.suggest(new String[]{"greenhaze", "the_hush"}, b))
-				.executes(c -> {
-					ServerPlayer p = c.getSource().getPlayerOrException();
-					String d = StringArgumentType.getString(c, "dimension");
-					if (d.equals("greenhaze")) DimTravel.sendTo(p, Greenhaze.LEVEL);
-					else if (d.equals("the_hush")) DimTravel.sendTo(p, Hush.LEVEL);
-					else { c.getSource().sendFailure(Component.literal("This module has greenhaze and the_hush")); return 0; }
+		CommandRegistrationCallback.EVENT.register((dispatcher, ctx, sel) -> {
+			// Literal children only: same-named argument nodes from other modules' /elsewhere_dev would merge and overwrite this executor.
+			var boss = Commands.literal("boss");
+			for (String id : new String[]{"percolax", "grumblegut", "auris", "lithara"}) boss.then(Commands.literal(id).executes(c -> summon(c.getSource().getPlayerOrException(), id)));
+			dispatcher.register(Commands.literal("elsewhere_dev")
+				.requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+				.then(Commands.literal("tp")
+					.then(Commands.literal("greenhaze").executes(c -> { DimTravel.sendTo(c.getSource().getPlayerOrException(), Greenhaze.LEVEL); return 1; }))
+					.then(Commands.literal("the_hush").executes(c -> { DimTravel.sendTo(c.getSource().getPlayerOrException(), Hush.LEVEL); return 1; })))
+				.then(Commands.literal("silence").executes(c -> {
+					ServerLevel l = c.getSource().getPlayerOrException().level();
+					return dev.elsewhere.hush.HushSilence.start(l) ? 1 : 0;
+				}))
+				.then(Commands.literal("home").executes(c -> {
+					DimTravel.home(c.getSource().getPlayerOrException());
 					return 1;
-				})))
-			.then(Commands.literal("silence").executes(c -> {
-				ServerLevel l = c.getSource().getPlayerOrException().level();
-				return dev.elsewhere.hush.HushSilence.start(l) ? 1 : 0;
-			}))
-			.then(Commands.literal("home").executes(c -> {
-				DimTravel.home(c.getSource().getPlayerOrException());
-				return 1;
-			}))
-			.then(Commands.literal("boss").then(Commands.argument("id", StringArgumentType.word())
-				.suggests((c, b) -> SharedSuggestionProvider.suggest(new String[]{"percolax", "grumblegut", "auris", "lithara"}, b))
-				.executes(c -> {
-					ServerPlayer p = c.getSource().getPlayerOrException();
-					ServerLevel level = p.level();
-					BlockPos at = p.blockPosition();
-					String id = StringArgumentType.getString(c, "id");
-					switch (id) {
-						case "percolax" -> Percolax.buildAndSummon(level, at);
-						case "grumblegut" -> Grumblegut.buildAndSummon(level, at);
-						case "auris" -> Auris.buildAndSummon(level, at);
-						case "lithara" -> Lithara.buildAndSummon(level, at);
-						default -> { c.getSource().sendFailure(Component.literal("Unknown boss " + id)); return 0; }
-					}
-					return 1;
-				})))));
+				}))
+				.then(boss));
+		});
+	}
+
+	private static int summon(ServerPlayer p, String id) {
+		ServerLevel level = p.level();
+		BlockPos at = p.blockPosition();
+		switch (id) {
+			case "percolax" -> Percolax.buildAndSummon(level, at);
+			case "grumblegut" -> Grumblegut.buildAndSummon(level, at);
+			case "auris" -> Auris.buildAndSummon(level, at);
+			case "lithara" -> Lithara.buildAndSummon(level, at);
+			default -> { return 0; }
+		}
+		return 1;
 	}
 }

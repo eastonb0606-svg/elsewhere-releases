@@ -194,14 +194,36 @@ public class ChoirlightCenser extends CasterItem {
 		return user.position().add(0, user.getBbHeight() * 0.45, 0).add(fwd.scale(0.45 + sway)).add(right.scale(rightHand ? 0.38 : -0.38));
 	}
 
+	/** Set by the gear3 client entry: true when the user is the local player in the first-person camera. Always false on a server. */
+	public static volatile java.util.function.Predicate<LivingEntity> FIRST_PERSON = e -> false;
+
+	/** First person: the held censer as seen on screen, low in the lower right of the view (in front of the eye, to the hand side, below it). */
+	public static Vec3 handPos(LivingEntity user, int elapsed) {
+		float yaw = user.getYRot() * Mth.DEG_TO_RAD;
+		Vec3 right = new Vec3(-Mth.cos(yaw), 0, -Mth.sin(yaw));
+		boolean rightHand = (user.getUsedItemHand() == InteractionHand.MAIN_HAND) == (user.getMainArm() == HumanoidArm.RIGHT);
+		double sway = Mth.sin(elapsed * 0.628F) * 0.06;
+		return user.getEyePosition().add(user.getLookAngle().scale(0.7 + sway)).add(right.scale(rightHand ? 0.3 : -0.3)).add(0, -0.3, 0);
+	}
+
 	private static void clientFx(Level level, LivingEntity user, int elapsed) {
 		if (!ENABLED) return;
 		boolean ring = elapsed % PULSE_TICKS == 0; // checked before the 3-tick gate below: 20 is not a multiple of 3, the ring only came every 3 s
 		if (elapsed % 3 != 0 && !ring) return;
 		RandomSource r = level.getRandom();
 		Vec3 c = censerPos(user, elapsed);
-		if (elapsed % 3 == 0) level.addParticle(ParticleTypes.WHITE_SMOKE, c.x, c.y, c.z, (r.nextDouble() - 0.5) * 0.02, 0.035, (r.nextDouble() - 0.5) * 0.02);
-		if (elapsed % 9 == 0) level.addParticle(ParticleTypes.WAX_ON, c.x, c.y + 0.1, c.z, 0, 0.02, 0);
+		// first person: the hip-height anchor is below the bottom of the screen, so the fx spawn at the visible held item instead
+		Vec3 hand = FIRST_PERSON.test(user) ? handPos(user, elapsed) : c;
+		if (elapsed % 3 == 0) level.addParticle(ParticleTypes.WHITE_SMOKE, hand.x, hand.y, hand.z, (r.nextDouble() - 0.5) * 0.02, 0.035, (r.nextDouble() - 0.5) * 0.02);
+		if (elapsed % 3 == 0) {
+			// gold sparks at the hand: two small gold dust motes drifting up (dust has its own sprite, so nothing can render untextured)
+			net.minecraft.core.particles.DustParticleOptions spark = new net.minecraft.core.particles.DustParticleOptions(0xFFD24A, 0.9F);
+			for (int i = 0; i < 2; i++) {
+				level.addParticle(spark, hand.x + (r.nextDouble() - 0.5) * 0.18, hand.y + r.nextDouble() * 0.12, hand.z + (r.nextDouble() - 0.5) * 0.18,
+					(r.nextDouble() - 0.5) * 0.03, 0.03 + r.nextDouble() * 0.03, (r.nextDouble() - 0.5) * 0.03);
+			}
+		}
+		if (elapsed % 6 == 0) level.addParticle(ParticleTypes.WAX_ON, hand.x, hand.y + 0.1, hand.z, 0, 0.02, 0);
 		if (ring) {
 			// the reach of the choirlight: a ring of gold sparks at 6 blocks, once a second
 			net.minecraft.core.particles.DustParticleOptions gold = new net.minecraft.core.particles.DustParticleOptions(0xFFD24A, 1.5F); // dust lives scale x longer, so the ring outlasts the 1 s beat

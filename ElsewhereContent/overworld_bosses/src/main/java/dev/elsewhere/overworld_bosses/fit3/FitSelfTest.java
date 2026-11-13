@@ -188,8 +188,7 @@ public final class FitSelfTest {
 			}
 		}
 		check(valuable == 0, f("owb_fit synthetic %s: no valuable blocks (%d)", name, valuable));
-		int braziers = name.startsWith("glacier") ? Blueprints.CAMPFIRES.length : 0;
-		check(lit == braziers, f("owb_fit synthetic %s: lit campfires only as the fight's braziers (%d, expected %d)", name, lit, braziers));
+		check(lit == 0, f("owb_fit synthetic %s: no lit campfires, the glacier braziers are built unlit and Rimeback lights them in phase 3 (%d)", name, lit));
 		check(floating == 0, f("owb_fit synthetic %s: nothing floating: %d of %d columns unsupported%s", name, floating, lowest.size(), firstFloat));
 		check(leaks == 0, f("owb_fit synthetic %s: placed water enclosed (%d open faces)", name, leaks));
 		check(lights <= 40 && bes <= 10, f("owb_fit synthetic %s: budgets: %d light sources (<= 40), %d block entities (<= 10)", name, lights, bes));

@@ -450,6 +450,25 @@ public final class GhFit {
 		}
 	}
 
+	/**
+	 * Clears wild trees (logs, leaves, vines) from a piece's footprint, from just under its walk level up to 12 over its box top, so no
+	 * jungle tree grows out of seat rings, terraces or pools. Terrain is never cut; only the part inside the writable chunk is touched.
+	 */
+	public static void clearTrees(Piece pc, Out o) {
+		BoundingBox b = pc.getBoundingBox();
+		BlockState air = Blocks.AIR.defaultBlockState();
+		int y0 = pc.o.getY() - 1, y1 = b.maxY() + 12;
+		for (int x = b.minX(); x <= b.maxX(); x++) for (int z = b.minZ(); z <= b.maxZ(); z++) {
+			if (!o.has(x, z)) continue;
+			for (int y = y0; y <= y1; y++) {
+				BlockPos p = new BlockPos(x, y, z);
+				BlockState s = o.get(p);
+				if (s.isAir()) continue;
+				if (s.is(net.minecraft.tags.BlockTags.LEAVES) || s.is(net.minecraft.tags.BlockTags.LOGS) || s.is(Blocks.VINE)) o.set(p, air);
+			}
+		}
+	}
+
 	/** Removes only soft blocks (plants, leaves, snow, replaceables) from y0 to y1: no terrain is cut. */
 	public static void soft(Out o, int x, int y0, int y1, int z) {
 		if (!o.has(x, z)) return;

@@ -43,7 +43,7 @@ public final class AphelionArena implements ArenaBuilder {
 		island(level, o, 10.5);
 		Build.ring(level, o, o.getY() - 1, 3.5, 4.5, Blocks.END_STONE_BRICKS.defaultBlockState());
 		for (int dy = 0; dy < 14; dy++) Build.disc(level, o, o.getY() + dy, dy < 10 ? 1.5 : 0.9, dy % 4 == 3 ? Blocks.CRYING_OBSIDIAN.defaultBlockState() : Blocks.OBSIDIAN.defaultBlockState());
-		Build.set(level, o.offset(0, 14, 0), Blocks.AMETHYST_BLOCK.defaultBlockState());
+		Build.set(level, o.offset(0, 14, 0), Blocks.PURPUR_BLOCK.defaultBlockState());
 		for (int[] c : CRYSTALS) {
 			for (int dy = 0; dy < 4; dy++) Build.set(level, o.getX() + c[0], o.getY() + dy, o.getZ() + c[1], Blocks.OBSIDIAN.defaultBlockState());
 			Build.set(level, o.getX() + c[0], o.getY() + 4, o.getZ() + c[1], Blocks.BEDROCK.defaultBlockState());

@@ -315,6 +315,7 @@ public final class GreenhazeLooks {
 
 	/** Amphitheatre (Greek cavea): stepped seat rings on their own contours round a bowl-bottom bonfire; aisles at the cardinals. */
 	static void bonfire(Piece pc, Out o) {
+		clearTrees(pc, o);
 		Frame f = pc.frame();
 		int y0 = f.oy();
 		long sd = pc.seed;
@@ -435,6 +436,7 @@ public final class GreenhazeLooks {
 	}
 
 	static void farms(Piece pc, Out o) {
+		clearTrees(pc, o);
 		long sd = pc.seed;
 		int ox = pc.o.getX(), oz = pc.o.getZ();
 		int n = pc.p(3), off = 4 + n * n;
@@ -715,6 +717,7 @@ public final class GreenhazeLooks {
 
 	/** Spring in a hollow: the pool takes the hollow's shape, its rim is solid to the water line, and a rill of weired, enclosed pools runs downhill. */
 	static void spring(Piece pc, Out o) {
+		clearTrees(pc, o);
 		int ox = pc.o.getX(), oz = pc.o.getZ(), wy = pc.o.getY();
 		long sd = pc.seed;
 		int rillDir = pc.p(0), rillLen = pc.p(1);

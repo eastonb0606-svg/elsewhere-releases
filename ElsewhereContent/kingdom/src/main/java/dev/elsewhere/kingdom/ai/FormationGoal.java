@@ -63,9 +63,7 @@ public final class FormationGoal extends Goal {
 		double d2 = dx * dx + dz * dz;
 		if (d2 < 0.6 * 0.6) {
 			mob.getNavigation().stop();
-			mob.setYRot(mob.formationYaw);
-			mob.yBodyRot = mob.formationYaw;
-			mob.yHeadRot = mob.formationYaw;
+			mob.faceYaw(mob.formationYaw);
 			stuck = 0;
 			return;
 		}

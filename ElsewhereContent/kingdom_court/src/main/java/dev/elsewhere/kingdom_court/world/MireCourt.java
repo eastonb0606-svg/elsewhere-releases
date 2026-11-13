@@ -149,7 +149,7 @@ final class MireCourt {
 			glass = st(Blocks.STAINED_GLASS_PANE.pick(DyeColor.PURPLE)), post = Blocks.CRIMSON_STEM.defaultBlockState().setValue(RotatedPillarBlock.AXIS, Direction.Axis.Y);
 		Direction out = front > 0 ? Direction.SOUTH : Direction.NORTH;
 		// crimson-stem quoins only under the slate roofs (odd houses); the crimson-roofed ones get purple quoins, so purple leads crimson
-		BlockState quoin = (java.util.Arrays.asList(HOUSES).indexOf(h) & 1) == 1 ? post : purple;
+		BlockState quoin = purple; // all roofs crimson now: purple quoins everywhere
 		for (int x = x0; x <= x1; x++) for (int z = z0; z <= z1; z++) {
 			boolean edge = x == x0 || x == x1 || z == z0 || z == z1, corner = (x == x0 || x == x1) && (z == z0 || z == z1);
 			w.s(x, -1, z, edge ? calcite : floor);

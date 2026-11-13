@@ -149,8 +149,9 @@ final class SelfTestStructFit {
 				check(rods == 6 && level.getBlockState(o.offset(D[0], D[1], D[2])).is(IronpeakBlocks.SUMMIT_WAR_DRUM), f("struct fit summit_throne: war drum and the 6 storm obelisks at their offsets (%d rods)", rods));
 			}
 			case "tidelock_vault" -> check(level.getBlockState(o.offset(0, 1, -3)).is(Blocks.VAULT) && level.getBlockEntity(o.offset(0, 1, -3)) instanceof net.minecraft.world.level.block.entity.vault.VaultBlockEntity v
-				&& v.getConfig().keyItem().is(VerdigrisItems.TIDE_KEY) && !level.getBlockState(o.offset(0, 6, -3)).isAir() && !level.getBlockState(o.offset(0, 6, -3)).is(Blocks.WATER),
-				"struct fit tidelock_vault: the Tide Key vault at (0, 1, -3), the back half buried in sediment");
+				&& v.getConfig().keyItem().is(VerdigrisItems.TIDE_KEY) && !level.getBlockState(o.offset(0, 6, -3)).isAir() && !level.getBlockState(o.offset(0, 6, -3)).is(Blocks.WATER)
+				&& !level.getBlockState(o.offset(0, 7, -3)).isAir() && !level.getBlockState(o.offset(0, 7, -3)).is(Blocks.WATER),
+				"struct fit tidelock_vault: the Tide Key vault at (0, 1, -3), the back half of the roof buried under 2+ layers of sediment");
 			case "drowned_cathedral" -> {
 				int ok = level.getBlockState(o.offset(VerdigrimArena.ORGAN[0], VerdigrimArena.ORGAN[1], VerdigrimArena.ORGAN[2])).is(VerdigrisBlocks.DROWNED_ORGAN) ? 1 : 0;
 				for (int k = 0; k < VerdigrimArena.PIPES; k++) if (level.getBlockState(VerdigrimArena.noteBlock(o, k)).is(Blocks.NOTE_BLOCK)) ok++;
@@ -169,6 +170,12 @@ final class SelfTestStructFit {
 				int[] L = GalvanoxArena.LANTERN;
 				check(rods == 10 && level.getBlockState(o.offset(L[0], L[1], L[2])).is(VerdigrisBlocks.LIGHTHOUSE_LANTERN) && oy > FitBuilds.SEA_TOP + 24,
 					f("struct fit lighthouse: lantern and 10 rods at their offsets, platform at Y %d on the shoal (not fixed at 120)", oy));
+				int stackY = FitBuilds.SEA_TOP - oy + 3, stack = 0;
+				for (int[] sd : new int[][] {{-1, 0}, {0, -1}, {0, 1}}) {
+					BlockState rb = level.getBlockState(o.offset(sd[0] * (GalvanoxArena.TOWER_RADIUS + 2), stackY, sd[1] * (GalvanoxArena.TOWER_RADIUS + 2)));
+					if (!rb.isAir() && !rb.is(Blocks.WATER)) stack++;
+				}
+				check(stack == 3, f("struct fit lighthouse: a rubble sea stack stands 3 above the water beside the tower (%d of 3 sides)", stack));
 			}
 			case "clockwork_rig" -> {
 				int feet = 0;
@@ -203,6 +210,16 @@ final class SelfTestStructFit {
 					int base = name.endsWith("sea") ? -1 : ground.applyAsInt(cx + x, cz + z) - oy + 1;
 					if (!level.getBlockState(o.offset(x, base, z)).isAir() && !level.getBlockState(o.offset(x, base - 1, z)).isAir() && !level.getBlockState(o.offset(x, base - 1, z)).is(Blocks.WATER)) stones++;
 				}
+				int leans = 0;
+				for (int k = 0; k < 8; k++) {
+					double a = Math.toRadians(45 * k + 22.5);
+					int x = (int) Math.round(Math.cos(a) * 5), z = (int) Math.round(Math.sin(a) * 5);
+					int base = name.endsWith("sea") ? -1 : ground.applyAsInt(cx + x, cz + z) - oy + 1;
+					int ox = Math.abs(x) >= Math.abs(z) ? (x >= 0 ? 1 : -1) : 0, oz = ox != 0 ? 0 : (z >= 0 ? 1 : -1);
+					BlockState under = level.getBlockState(o.offset(x + ox, base, z + oz));
+					if (!under.isAir() && !under.is(Blocks.WATER)) leans++;
+				}
+				check(leans == 8, f("struct fit %s: every leaning cap stone has its own footing, no hanging beam (%d of 8)", name, leans));
 				check(stones == 8 && !level.getBlockState(o).isAir(), f("struct fit %s: 8 ring stones each on its own %s (%d), the rift on its dais", name, name.endsWith("sea") ? "pile" : "ground", stones));
 			}
 			default -> {}

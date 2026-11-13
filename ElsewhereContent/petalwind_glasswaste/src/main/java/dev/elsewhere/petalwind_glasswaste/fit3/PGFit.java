@@ -99,7 +99,7 @@ public final class PGFit {
 				for (int q = 0; q < 4; q++) {
 					boolean west = (q & 1) != 0, north = (q & 2) != 0;
 					int x0 = west ? ox - bowlR : ox, x1 = west ? ox - 1 : ox + bowlR, z0 = north ? oz - bowlR : oz, z1 = north ? oz - 1 : oz + bowlR;
-					out.add(new FitPiece(kind, "bowl", o, oy, q, bowlR, seed, box(x0, oy - 7, z0, x1, oy + 31, z1)));
+					out.add(new FitPiece(kind, "bowl", o, oy, q, bowlR, seed, box(x0, oy - 7, z0, x1, oy + 47, z1)));
 				}
 			}
 			case PGStructures.PAGODA -> {
@@ -126,7 +126,7 @@ public final class PGFit {
 				// the eye itself (writes nothing): lets the summon lookup and the wind-charge listener find the site anywhere in the eye, as in 2.x
 				out.add(new FitPiece(kind, "volume", o, oy, 0, 0, seed, box(ox - 24, oy - 30, oz - 24, ox + 24, oy + 34, oz + 24)));
 				int by = oy - 14;
-				out.add(new FitPiece(kind, "basin", o, by, 0, 0, seed, box(ox - 6, by - 13, oz - 6, ox + 6, by + 3, oz + 6)));
+				out.add(new FitPiece(kind, "basin", o, by, 0, 0, seed, box(ox - 9, by - 13, oz - 9, ox + 9, by + 3, oz + 9)));
 			}
 			default -> {
 			}

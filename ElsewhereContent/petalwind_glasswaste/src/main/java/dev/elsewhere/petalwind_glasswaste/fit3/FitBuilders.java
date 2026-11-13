@@ -104,8 +104,9 @@ public final class FitBuilders {
 					if (c == hw) {
 						boolean corner = Math.abs(dx) == Math.abs(dz);
 						int a = along(dx, dz, c);
-						if (dy % 3 == 2) s = !corner && Math.floorMod(a, 4) == 0 ? gilt : chis; // band with gilt studs
-						else if (corner) s = chis;                                                 // quoins
+						if (dy % 3 == 2) s = chis;                                                  // a continuous chiseled band on the top course of each tier
+						else if (corner) s = chis;                                                 // chiseled quoins on every course
+						else if (dy % 3 == 1 && Math.floorMod(a, 4) == 0) s = gilt;                // gilt studs under the band
 					}
 					w.set(x, oy + dy, z, s);
 				}
@@ -121,9 +122,9 @@ public final class FitBuilders {
 				} else if (top > oy + 2 + (c - 16)) {
 					// sloped apron where the ground rises: the lowest terrace is never buried
 					int limit = oy + 2 + (c - 16);
-					BlockState surf = w.get(x, top, z);
 					w.clear(x, z, limit + 1, top + 4);
-					w.set(x, limit, z, FitWriter.soft(surf) ? Blocks.SAND.defaultBlockState() : surf);
+					w.set(x, limit, z, Blocks.SAND.defaultBlockState()); // always sand over sandstone: never the red badlands ground heaped against the terrace
+					w.set(x, limit - 1, z, sst);
 				}
 			}
 		}
@@ -252,19 +253,20 @@ public final class FitBuilders {
 			double r = Math.sqrt(dx * dx + dz * dz);
 			if (r <= 23.5 || r > R) continue;
 			int yb = bowlY(oy, r, R);
-			int top = w.surface(x, z, oy + 30, oy - 6);
-			if (top >= oy + 30) continue; // a dune taller than the scan: the slope ends against it, nothing is left hanging
+			int top = w.surface(x, z, oy + 46, oy - 6);
+			if (top >= oy + 46) continue; // a dune taller than the scan: the slope ends against it, nothing is left hanging
 			int surf;
 			if (top > yb) {
 				// near the rim the cut rises to meet the dune: a steeper sand slope, never a sheer wall at the crater edge
 				double t = Math.max(0.0, Math.min(1.0, (r - (R - 12)) / 12.0));
 				int yc = Math.min(top, yb + (int) Math.floor((top - yb) * t));
-				w.clear(x, z, yc + 1, oy + 30);
+				w.clear(x, z, yc + 1, oy + 46);
 				w.set(x, yc, z, w.h(x, 1, z) % 17 == 0 ? sst : sand);
 				if (!w.solid(x, yc - 1, z)) w.set(x, yc - 1, z, sst);
 				surf = yc;
-			} else if (r <= 28 && top < yb) {
-				int to = Math.min(yb, top + 5); // a low sand rampart so the pit never opens sideways
+			} else if (top < yb && (r <= 28 || yb - top <= 10)) {
+				// a dip in the dunes is filled up to the slope (a rampart at the pit, a smooth slope beyond): no rectangular notch with vertical walls
+				int to = r <= 28 ? Math.min(yb, top + 5) : yb;
 				for (int y = top + 1; y < to; y++) w.set(x, y, z, sst);
 				w.set(x, to, z, sand);
 				surf = to;
@@ -554,11 +556,17 @@ public final class FitBuilders {
 		int bx = p.origin.getX(), by = p.floor, bz = p.origin.getZ();
 		for (int x = w.x0; x <= w.x1; x++) for (int z = w.z0; z <= w.z1; z++) {
 			int dx = x - bx, dz = z - bz, d2 = dx * dx + dz * dz;
-			if (d2 > 26) continue;
+			if (d2 > 60) continue; // a wider disc (the 2.x one is d2 <= 26, inside it), so the basin reads from the far camera
 			w.set(x, by, z, Blocks.CALCITE.defaultBlockState());
-			if (d2 > 18) w.set(x, by + 1, z, Blocks.CALCITE.defaultBlockState());
-			else if (Math.abs(dx) <= 1 && Math.abs(dz) <= 1) w.set(x, by + 1, z, PetalwindBlocks.UPDRAFT_VENT.defaultBlockState());
-			taper(w, x, z, by, (int) Math.round(10.0 - 1.9 * Math.sqrt(d2)) + w.h(x, 4, z) % 3 - 1, 2, 11);
+			if (d2 > 18 && d2 <= 26) w.set(x, by + 1, z, Blocks.CALCITE.defaultBlockState());
+			else if (d2 > 26) { // the raised lip: calcite courses on a polished-tuff ring, then a flat tuff apron
+				w.set(x, by, z, Blocks.POLISHED_TUFF.defaultBlockState());
+				if (d2 <= 44) {
+					w.set(x, by + 1, z, Blocks.CALCITE.defaultBlockState());
+					if (d2 > 30) w.set(x, by + 2, z, Blocks.CALCITE.defaultBlockState());
+				}
+			} else if (Math.abs(dx) <= 1 && Math.abs(dz) <= 1) w.set(x, by + 1, z, PetalwindBlocks.UPDRAFT_VENT.defaultBlockState());
+			taper(w, x, z, by, (int) Math.round(12.0 - 1.9 * Math.sqrt(d2)) + w.h(x, 4, z) % 3 - 1, 2, 11);
 		}
 	}
 

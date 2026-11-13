@@ -48,7 +48,7 @@ public final class AphelionHalo implements FitArena {
 			double r = dy < 10 ? 1.5 : 0.9;
 			w.disc(o, y + dy, r, dy % 4 == 3 ? Blocks.CRYING_OBSIDIAN.defaultBlockState() : Blocks.OBSIDIAN.defaultBlockState());
 		}
-		w.set(x, y + 14, z, Blocks.AMETHYST_BLOCK.defaultBlockState());
+		w.set(x, y + 14, z, Blocks.PURPUR_BLOCK.defaultBlockState());
 		for (int[] c : AphelionArena.CRYSTALS) {
 			for (int dy = 0; dy < 4; dy++) w.set(x + c[0], y + dy, z + c[1], Blocks.OBSIDIAN.defaultBlockState());
 			w.set(x + c[0], y + 4, z + c[1], Blocks.BEDROCK.defaultBlockState());

@@ -85,7 +85,7 @@ public final class KingdomEntities {
 		} else {
 			ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, rid);
 			type = Registry.register(BuiltInRegistries.ENTITY_TYPE, key,
-				EntityType.Builder.of(factory, MobCategory.MISC).sized(0.6F, 1.8F).eyeHeight(1.62F).clientTrackingRange(10).build(key));
+				EntityType.Builder.of(factory, MobCategory.MISC).sized(0.6F, 1.8F).eyeHeight(1.62F).vehicleAttachment(net.minecraft.world.entity.Avatar.DEFAULT_VEHICLE_ATTACHMENT).clientTrackingRange(10).build(key));
 			FabricDefaultAttributeRegistry.register(type, KingdomSoldier.createAttributes());
 			Identifier eggId = KingdomContent.id(path + "_spawn_egg");
 			ResourceKey<Item> ik = ResourceKey.create(Registries.ITEM, eggId);

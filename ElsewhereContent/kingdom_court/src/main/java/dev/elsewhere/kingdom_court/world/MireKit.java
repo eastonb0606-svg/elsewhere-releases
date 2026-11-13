@@ -85,8 +85,8 @@ final class MireKit {
 		int x0 = h[0], z0 = h[1], x1 = h[2], z1 = h[3], front = h[4], y0 = 4 * h[5];
 		int zf = front > 0 ? z1 : z0, zb = front > 0 ? z0 : z1;
 		w.dy = 0;
-		boolean crimson = (i & 1) == 0;
-		CastleKit.gable(w, x0, z0, x1, z1, y0, 0, false, crimson ? Blocks.CRIMSON_STAIRS : Blocks.DEEPSLATE_TILE_STAIRS, crimson ? CRIMSON : TILES, null, true, null);
+		// w6-mirewick: every house roof is crimson (the slate alternation read as Aldermark)
+		CastleKit.gable(w, x0, z0, x1, z1, y0, 0, false, Blocks.CRIMSON_STAIRS, CRIMSON, null, true, null);
 		int ft = facade(w, x0, zf, y0, h[6]);
 		facade(w, x0, zb, y0, 0);
 		w.s(x0 + 2, ft - 1, zf + front, st(Blocks.CRIMSON_FENCE)); // hoist beam

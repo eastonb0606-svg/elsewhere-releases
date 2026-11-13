@@ -50,7 +50,7 @@ public final class HrafnholtProfiles {
 	/** The card's telegraph look (RIVAL-BOSSES v3, boss_identity/hrafnholt_*.json). */
 	static TelegraphStyle style(Hrafn h) {
 		return switch (h) {
-			case JARL -> TelegraphStyle.of("snowflake", 0xDCE6EE, "entity.ravager.roar", TelegraphStyle.Shape.COLUMN, 0.6F);
+			case JARL -> TelegraphStyle.of("snowflake", 0xDCE6EE, "elsewhere:sfx3.hrafnholt.warcry", TelegraphStyle.Shape.COLUMN, 0.9F);
 			case HERSIR -> TelegraphStyle.of("cloud", 0x8E99A6, "event.raid.horn", TelegraphStyle.Shape.SPIRAL, 1.2F);
 			case HALLWARDEN -> TelegraphStyle.of("lava", 0xC2512B, "block.anvil.land", TelegraphStyle.Shape.RING, 0.7F);
 			case SKALD -> TelegraphStyle.of("enchant", 0x8FD0FF, "block.amethyst_block.chime", TelegraphStyle.Shape.HALO, 1.6F);
