@@ -1,0 +1,114 @@
+{
+  "lanes": {
+    "s_azmarsize": {
+      "Azmar line relief: rank blocks of 5 (army.scale squad 5, relief wave 5 / 30 s at 85%)": [
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_10s.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "01:27:13"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "01:27:39"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_30s_relief.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "01:27:29"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:lantern_road": [
+        {
+          "file": "s_struct_core__lantern_road_above.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__lantern_road_end_eye_level.png",
+          "scene": 213,
+          "line": 243,
+          "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p2_telegraph": {
+      "elsewhere:aphelion": [
+        {
+          "file": "s_p2_telegraph__aphelion_warning_column_helm_on.png",
+          "scene": 267,
+          "line": 303,
+          "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Mirewick canal market + lamplighters": [
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_3000.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__mirewick_capital_time_set_12500.png",
+          "scene": 318,
+          "line": 358,
+          "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rank impostors behind a 150-a-side wave battle (Aldermark v Hrafnholt)": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 439,
+          "line": 489,
+          "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:bonfire_terrace": [
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_overview.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_ground.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:27:39",
+  "totals": {
+    "ok": 3,
+    "fail": 0,
+    "manual": 0
+  }
+}
