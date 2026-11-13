@@ -1,0 +1,186 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (mirewick realm)": [
+        {
+          "file": "villages__village_near_mirewick.png",
+          "scene": 5,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview.png",
+          "scene": 170,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:eye_of_the_gale": [
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_0_8_26.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__eye_of_the_gale_s_20_10_20.png",
+          "scene": 185,
+          "line": 200,
+          "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:ossuary_chorister": [
+        {
+          "file": "s_spawngroups__ossuary_chorister_choir_greenhaze_hush_t.png",
+          "scene": 240,
+          "line": 270,
+          "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
+          "status": "ok",
+          "taken": "00:45:10"
+        },
+        {
+          "file": "s_spawngroups__ossuary_chorister_choir_greenhaze_hush_t_hit.png",
+          "scene": 240,
+          "line": 270,
+          "check": "before the hit: three choristers ringed round a larger leader, not attacking; after: all four hunt",
+          "status": "ok",
+          "taken": "00:45:12"
+        }
+      ]
+    },
+    "s_hurlbat": {
+      "elsewhere:hrafnholt_hurlbat": [
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_first_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "00:45:13"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_third_person_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "00:45:14"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_first_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "00:45:15"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_in_use_third_person_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "00:45:16"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_after_use_2.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "00:45:16"
+        },
+        {
+          "file": "s_hurlbat__hrafnholt_hurlbat_tooltip_3.png",
+          "scene": 280,
+          "line": 316,
+          "check": "the blade buried in the face it hit, the haft standing out behind it (no spinning once stuck, a brief quiver on impact); subtitle \"Hurlbat bites wood\"; walking into it picks it back up (stack +1)",
+          "status": "ok",
+          "taken": "00:45:18"
+        }
+      ]
+    },
+    "s_p5_tooltips": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p5_tooltips__ironclad_flail_first_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "ok",
+          "taken": "00:45:20"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_third_person.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "ok",
+          "taken": "00:45:20"
+        },
+        {
+          "file": "s_p5_tooltips__ironclad_flail_tooltip.png",
+          "scene": 341,
+          "line": 384,
+          "check": "gold \"Chain: +12% per hit on the same target within 2 s, up to +60%\" right under the reworded lore and ABOVE the blank line + \"When in Main Hand\" block; Shift adds grey \"A full chain hits for 11.2 (base 7)\" and red \"20% slower while moving backward\"; boss_ui Hit/DPS lines stay at the end; one hint only",
+          "status": "ok",
+          "taken": "00:45:21"
+        }
+      ]
+    },
+    "s_locate": {
+      "explorer map to a rival castle": [
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        },
+        {
+          "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
+          "scene": 359,
+          "line": 407,
+          "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:choir_geode": [
+        {
+          "file": "s_struct_greenhaze__choir_geode_overview.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__choir_geode_ground.png",
+          "scene": 485,
+          "line": 537,
+          "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:45:21",
+  "totals": {
+    "ok": 11,
+    "fail": 0,
+    "manual": 0
+  }
+}
