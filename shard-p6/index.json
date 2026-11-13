@@ -1,0 +1,187 @@
+{
+  "lanes": {
+    "gear": {
+      "/calling readout": [
+        {
+          "file": "gear__calling_readout_chat.png",
+          "scene": 11,
+          "line": 16,
+          "check": "4 path lines (\"Caster: Primary 100% (x1.15)\"...), Spells and Minions lines, no \"settles in\" line once settled",
+          "status": "ok",
+          "taken": "00:44:19"
+        }
+      ]
+    },
+    "s_dataclean": {
+      "villages_aldermark_overview_street": [
+        {
+          "file": "s_dataclean__villages_aldermark_overview_street.png",
+          "scene": 171,
+          "line": 186,
+          "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_core": {
+      "elsewhere:hollow_shrine": [
+        {
+          "file": "s_struct_core__hollow_shrine_s_9_6_9.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_core__hollow_shrine_downhill_20.png",
+          "scene": 210,
+          "line": 240,
+          "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_spawngroups": {
+      "elsewhere:hollow_stag": [
+        {
+          "file": "s_spawngroups__hollow_stag_herd_core.png",
+          "scene": 241,
+          "line": 271,
+          "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
+          "status": "ok",
+          "taken": "00:44:30"
+        },
+        {
+          "file": "s_spawngroups__hollow_stag_herd_core_hit.png",
+          "scene": 241,
+          "line": 271,
+          "check": "leader larger, herd grazes as a group; after the hit the whole herd bolts, not just the one hit",
+          "status": "ok",
+          "taken": "00:44:31"
+        }
+      ]
+    },
+    "s_sickle": {
+      "elsewhere:mirewick_lantern_sickle": [
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "00:44:32"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "00:44:33"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_first_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "00:44:34"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_in_use_third_person.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "00:44:37"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_after_use.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "00:44:36"
+        },
+        {
+          "file": "s_sickle__mirewick_lantern_sickle_tooltip_2.png",
+          "scene": 301,
+          "line": 340,
+          "check": "one use: the 8 ripe crops of the 3x3 pop their drops with break particles, a sweep sound and one sweep particle; every crop is back at age 0 (wheat stays wheat, carrots stay carrots); the young wheat and the ring outside the 3x3 untouched",
+          "status": "ok",
+          "taken": "00:44:38"
+        }
+      ]
+    },
+    "s_miresnare": {
+      "elsewhere:mirewick_mire_snare": [
+        {
+          "file": "s_miresnare__mirewick_mire_snare_first_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "00:44:39"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_third_person_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "00:44:40"
+        },
+        {
+          "file": "s_miresnare__mirewick_mire_snare_tooltip_3.png",
+          "scene": 374,
+          "line": 422,
+          "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
+          "status": "ok",
+          "taken": "00:44:41"
+        }
+      ]
+    },
+    "s_throne": {
+      "Grunthar legacy treasure hall (nether, 2.x saved arena)": [
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        },
+        {
+          "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
+          "scene": 396,
+          "line": 446,
+          "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:silent_monastery": [
+        {
+          "file": "s_struct_greenhaze__silent_monastery_overview.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__silent_monastery_ground.png",
+          "scene": 486,
+          "line": 538,
+          "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:44:41",
+  "totals": {
+    "ok": 12,
+    "fail": 0,
+    "manual": 0
+  }
+}
