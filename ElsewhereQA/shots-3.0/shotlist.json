@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 19:15",
+ "generated": "2026-11-12 19:20",
  "scenes": [
   {
    "n": 1,
@@ -1590,11 +1590,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -1602,7 +1606,7 @@
     ],
     [
      "cmd",
-     "effect give @s night_vision infinite 0 true"
+     "effect give @s night_vision infinite 1 true"
     ],
     [
      "locate",
@@ -1611,18 +1615,40 @@
     [
      "tp",
      "anchor",
-     0.0,
-     6.0,
-     48.0,
-     180.0,
-     14.0
+     0,
+     6,
+     48,
+     180,
+     14
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -1631,22 +1657,40 @@
     [
      "tp",
      "anchor",
-     26.0,
-     5.0,
-     42.0,
-     140.0,
-     16.0
-    ],
-    [
-     "cmd",
-     "fill ~-10 ~-3 ~-4 ~10 ~12 ~12 air replace #minecraft:leaves"
+     0,
+     22,
+     75,
+     180,
+     25
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -1665,7 +1709,7 @@
    ],
    "check": "the quay is clearly visible: smooth-stone quay with 5 lantern posts and quartz parapet in front of the gate, water canal in two basins either side of the road (canal only where the ground there is within 1 of the castle floor)",
    "setup": "tp C+(0, +6, 48) yaw 180 pitch 14, then C+(26, +5, 42) yaw 140 pitch 16",
-   "override": "w6-mirewick.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 20,
@@ -1749,46 +1793,79 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
      false
     ],
     [
-     "locate",
-     "elsewhere:castle_aldermark"
-    ],
-    [
      "cmd",
      "effect give @s night_vision infinite 1 true"
+    ],
+    [
+     "locate",
+     "elsewhere:castle_aldermark"
     ],
     [
      "tp",
      "anchor",
      0,
-     70,
-     120,
+     45,
+     90,
      180,
-     36
+     24
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     300
+     350
+    ],
+    [
+     "chunks"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     150
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     250
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -1803,7 +1880,7 @@
    ],
    "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
    "setup": "tp C+(0, +75, 150) yaw 180 pitch 32 (overview)",
-   "override": "w6-castles.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 22,
@@ -13110,11 +13187,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -13131,21 +13212,40 @@
     [
      "tp",
      "anchor",
-     46.83,
-     10.0,
-     46.83,
-     135.0,
-     20.0
+     0,
+     22,
+     75,
+     180,
+     25
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -13159,7 +13259,8 @@
     }
    ],
    "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
-   "setup": "same views as the quay line above; Azmar: tp C+(44, +8, 44) yaw 135 pitch 20"
+   "setup": "same views as the quay line above; Azmar: tp C+(44, +8, 44) yaw 135 pitch 20",
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 150,
@@ -13799,11 +13900,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -13820,35 +13925,52 @@
     [
      "tp",
      "anchor",
-     17,
-     30,
-     17,
+     22,
+     14,
+     22,
      135,
-     30
+     35
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     60
+     250
     ],
     [
      "chunks"
     ],
     [
      "cmd",
-     "execute positioned over motion_blocking_no_leaves run tp @s ~ ~8 ~ 135 30"
+     "fill ~-14 ~-1 ~-14 ~14 ~20 ~14 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+    ],
+    [
+     "cmd",
+     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     80
     ],
     [
-     "chunks"
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -13863,7 +13985,7 @@
    ],
    "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
    "setup": "tp S+(8, +5, 8) facing S, pitch 20",
-   "override": "w4-structcam.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 158,
@@ -14057,11 +14179,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -14078,35 +14204,52 @@
     [
      "tp",
      "anchor",
-     35,
-     30,
-     35,
+     26,
+     22,
+     26,
      135,
-     -20
+     25
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     120
+     250
     ],
     [
      "chunks"
     ],
     [
      "cmd",
-     "execute positioned over world_surface run tp @s ~ ~4 ~ 135 -20"
+     "fill ~-10 ~-1 ~-10 ~10 ~12 ~10 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
+    ],
+    [
+     "cmd",
+     "execute at @s unless block ~ ~1 ~ #minecraft:air run tp @s ~ ~10 ~"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     80
     ],
     [
-     "chunks"
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -14121,7 +14264,7 @@
    ],
    "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
    "setup": "tp S+(30, -10, 30) facing S, pitch -5",
-   "override": "w4-structcam.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 161,
@@ -14481,8 +14624,20 @@
      "battle_azmar_aldermark_60_10s"
     ],
     [
+     "cmd",
+     "tp @s ^ ^10 ^-6 ~ 28"
+    ],
+    [
      "wait",
-     540
+     300
+    ],
+    [
+     "shot",
+     "battle_azmar_aldermark_60_30s_relief"
+    ],
+    [
+     "wait",
+     200
     ],
     [
      "gui",
@@ -14517,7 +14672,7 @@
    ],
    "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
    "setup": "flat plains, `/time set 6000`, `/kingdom armies battle azmar aldermark 60`, fly 12 up and 20 back facing the Azmar rear; shot 1 at +10 s (fronts engaged), shot 2 when the bell rings (about +30-45 s, F3 open)",
-   "override": "w8-world.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 165,
@@ -14610,7 +14765,7 @@
    "steps": [
     [
      "reset",
-     "survival"
+     "creative"
     ],
     [
      "cmd",
@@ -14679,6 +14834,9 @@
      "kill @e[type=!minecraft:player,type=!minecraft:item]"
     ],
     [
+     "fly"
+    ],
+    [
      "cmd",
      "elsewhere_dev boss rimeback"
     ],
@@ -14713,12 +14871,20 @@
      200
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:rimeback,limit=1] at @s run tp @p ~-14 ~3 ~ -90 10"
+    ],
+    [
      "shot",
      "rimeback_avalanche_10s"
     ],
     [
      "wait",
      60
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:rimeback,limit=1] at @s run tp @p ~-14 ~3 ~ -90 10"
     ],
     [
      "shot",
@@ -14738,7 +14904,7 @@
    "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
    "setup": "Rimeback fight, trigger the avalanche; side view from the arena wall, shot when the wave is mid-arena",
    "note": "two timed shots of the started fight; the avalanche is not forced",
-   "override": "w8-world.json"
+   "override": "z3-e-bosses.json"
   },
   {
    "n": 167,
@@ -15773,11 +15939,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -15805,7 +15975,7 @@
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "chunks"
@@ -15825,18 +15995,40 @@
     [
      "tp",
      "anchor",
-     22,
-     13,
-     22,
+     20,
+     38,
+     20,
      135,
-     30
+     52
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     250
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -15846,17 +16038,39 @@
      "tp",
      "anchor",
      0,
-     5,
-     30,
+     36,
+     34,
      180,
-     12
+     55
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     250
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -15875,7 +16089,7 @@
    ],
    "check": "mangrove-plank deck ring one block above the water on log piles (no 14-high cut, swamp trees left standing outside it), the lily-pad pool enclosed by a mud-brick rim under the deck edge, the mossy dais with a gabled mangrove roof over the cauldron (chains, hanging lanterns), lantern posts on the ring, boardwalks east/south/west stepping to dry land on piles with fence rails and an end lantern post",
    "setup": "`/locate structure elsewhere:croaking_shrine` = S; noon; tp S+(22, +9, 22) facing S, pitch 25; second shot tp S+(0, +3, 34) yaw 180 pitch 5",
-   "override": "w4-structfix.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 176,
@@ -19676,11 +19890,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -19697,74 +19915,76 @@
     [
      "tp",
      "anchor",
-     8,
+     18,
+     30,
+     18,
      0,
-     8,
-     135,
-     30
+     90
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     80
+     250
     ],
     [
      "chunks"
     ],
     [
      "cmd",
-     "fill ~-32 ~1 ~-32 ~32 ~7 ~32 air replace #minecraft:leaves"
+     "fill ~-32 ~-20 ~-32 ~32 ~-14 ~32 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-32 ~8 ~-32 ~32 ~14 ~32 air replace #minecraft:leaves"
+     "fill ~-32 ~-14 ~-32 ~32 ~-8 ~32 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-32 ~15 ~-32 ~32 ~21 ~32 air replace #minecraft:leaves"
+     "fill ~-32 ~-8 ~-32 ~32 ~-2 ~32 air replace #minecraft:leaves"
     ],
     [
      "cmd",
-     "fill ~-32 ~22 ~-32 ~32 ~28 ~32 air replace #minecraft:leaves"
+     "fill ~-32 ~-2 ~-32 ~32 ~4 ~32 air replace #minecraft:leaves"
     ],
     [
-     "wait",
-     40
+     "cmd",
+     "fill ~-32 ~4 ~-32 ~32 ~10 ~32 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "fill ~-32 ~10 ~-32 ~32 ~16 ~32 air replace #minecraft:leaves"
+    ],
+    [
+     "cmd",
+     "fill ~-32 ~16 ~-32 ~32 ~22 ~32 air replace #minecraft:leaves"
     ],
     [
      "tp",
      "anchor",
      18,
-     30,
+     48,
      18,
-     135,
-     50
+     0,
+     90
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     60
+     200
     ],
     [
      "chunks"
     ],
     [
      "cmd",
-     "execute positioned over motion_blocking_no_leaves run tp @s ~ ~16 ~ 135 50"
-    ],
-    [
-     "chunks"
+     "weather clear 1000000"
     ],
     [
      "wait",
      40
-    ],
-    [
-     "chunks"
     ],
     [
      "shot",
@@ -19783,12 +20003,12 @@
      "chunks"
     ],
     [
-     "cmd",
-     "fill ~-14 ~0 ~-14 ~14 ~28 ~14 air replace #minecraft:logs"
+     "wait",
+     150
     ],
     [
-     "wait",
-     20
+     "cmd",
+     "fill ~-14 ~0 ~-14 ~14 ~28 ~14 air replace #minecraft:logs"
     ],
     [
      "cmd",
@@ -19799,7 +20019,7 @@
     ],
     [
      "wait",
-     40
+     80
     ],
     [
      "chunks"
@@ -19821,7 +20041,7 @@
    ],
    "check": "a 40-80 block road that curves with the land (not a straight bar), 3 wide, stone-brick centre with path/earth edges, slab half-steps and stair steps, timber trestle with rails over a dip if one is there, hanging-lantern posts on the outside of bends; a Return Rift pad at the middle on every third road; no 4-high air tunnel",
    "setup": "stand at S, fly to +14 above the road's middle and look down 50 degrees along it; second shot at eye level from one end",
-   "override": "w9-smisc.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 214,
@@ -19900,6 +20120,14 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
+     "gamerule doDaylightCycle false"
+    ],
+    [
+     "cmd",
      "time set 18000"
     ],
     [
@@ -19962,6 +20190,10 @@
      "time set 18000"
     ],
     [
+     "cmd",
+     "time set 18000"
+    ],
+    [
      "tp",
      "anchor",
      30,
@@ -20001,6 +20233,10 @@
      20
     ],
     [
+     "cmd",
+     "time set 18000"
+    ],
+    [
      "shot",
      "lantern_road_procession_night"
     ]
@@ -20014,7 +20250,7 @@
    "check": "the 5 lantern spirits follow the road's curve (not a straight line through the trees) and the resin chest appears 2 blocks past the road's end",
    "setup": "`/time set 18000`, stand on the road, wait for a Lantern Procession (or run the self-test hook)",
    "note": "waits 20 s on the road for a procession; none is forced",
-   "override": "w9-smisc.json"
+   "override": "z3-e-itemcam.json"
   },
   {
    "n": 216,
@@ -21007,7 +21243,7 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "chat",
@@ -21026,21 +21262,11 @@
      "elsewhere:hrafnholt_hersir",
      "{PersistenceRequired:1b}",
      0,
-     12
+     10
     ],
     [
      "wait",
-     60
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
-     "view",
-     0.0,
-     5.0,
-     14.0
+     40
     ],
     [
      "chunks"
@@ -21049,8 +21275,12 @@
      "look_target"
     ],
     [
+     "camera",
+     "back"
+    ],
+    [
      "wait",
-     2
+     50
     ],
     [
      "look_target"
@@ -21061,13 +21291,7 @@
     ],
     [
      "wait",
-     20
-    ],
-    [
-     "view",
-     0.0,
-     5.0,
-     14.0
+     30
     ],
     [
      "look_target"
@@ -21097,7 +21321,7 @@
    "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
    "setup": "survival player on flat ground in plains, noon, `/summon elsewhere:hrafnholt_hersir` 12 blocks away and let her close in; camera 10 up and 10 back, shoot 3 frames 1 s apart while she circles (Marrow `elsewhere:mirewick_marrow` the same, at chain range)",
    "note": "generic: entity hrafnholt_hersir, 1 setup command(s); framing approximate",
-   "override": "w8-kingdom3.json"
+   "override": "z3-e-bosses.json"
   },
   {
    "n": 225,
@@ -21112,7 +21336,11 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 15000"
+    ],
+    [
+     "cmd",
+     "gamerule advance_time false"
     ],
     [
      "cmd",
@@ -21121,6 +21349,10 @@
     [
      "cmd",
      "difficulty normal"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
     ],
     [
      "gui",
@@ -21176,6 +21408,10 @@
      40
     ],
     [
+     "cmd",
+     "time set 15000"
+    ],
+    [
      "shot",
      "kingdom_soldier_nameplates_aldermark_pol_6"
     ],
@@ -21188,6 +21424,10 @@
      10
     ],
     [
+     "cmd",
+     "time set 15000"
+    ],
+    [
      "shot",
      "kingdom_soldier_nameplates_aldermark_pol_12"
     ],
@@ -21198,6 +21438,10 @@
     [
      "wait",
      10
+    ],
+    [
+     "cmd",
+     "time set 15000"
     ],
     [
      "shot",
@@ -21221,7 +21465,7 @@
    "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
    "setup": "flat world, noon, clear, F1 off, survival; `KingdomApi.spawnSoldier(level, UnitTypes.CAPTAIN / SERGEANT / MAN_AT_ARMS, Factions.ALDERMARK, pos, null)` side by side 2 apart, 5 blocks in front of the player, player facing them at eye level",
    "note": "an Aldermark patrol of 8 (/kingdom patrol 8) at 6, 12 and 18 blocks; not KingdomApi.spawnSoldier per rank",
-   "override": "hud.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 226,
@@ -23570,7 +23814,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~7 ~17 180 22"
+     "execute as @e[type=elsewhere:mournmaw,limit=1] at @s run tp @p ~ ~5 ~17 facing entity @s"
     ],
     [
      "chunks"
@@ -23588,6 +23832,14 @@
      24
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:mournmaw,limit=1] at @s run tp @p ~ ~5 ~17 facing entity @s"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
      "shot",
      "mournmaw_attacks_tear_rain_soul_fireball"
     ],
@@ -23602,6 +23854,14 @@
     [
      "wait",
      18
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:mournmaw,limit=1] at @s run tp @p ~ ~5 ~17 facing entity @s"
+    ],
+    [
+     "wait",
+     1
     ],
     [
      "shot",
@@ -23621,7 +23881,7 @@
    "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
    "setup": "`/elsewhere_dev boss mournmaw arena`, stand 14 blocks in front at its height, then `/elsewhere_dev attack tear_rain` and shoot at +1.2 s; repeat with `soul_fireball` (+0.9 s), `mourners` (+1.5 s, phase 2: `/elsewhere_dev hp 0.6` first), `grief_storm` (+1.6 s, phase 3: `/elsewhere_dev hp 0.3` first)",
    "note": "generic: entity mournmaw, 4 setup command(s); framing approximate",
-   "override": "w8-neb.json"
+   "override": "z3-e-bosses.json"
   },
   {
    "n": 244,
@@ -25201,11 +25461,27 @@
     ],
     [
      "cmd",
+     "execute at @s run summon marker ~ ~ ~ {Tags:[\"colref\"]}"
+    ],
+    [
+     "cmd",
      "elsewhere_dev attack devour_dive"
     ],
     [
      "wait",
-     8
+     3
+    ],
+    [
+     "cmd",
+     "tp @s ~13 ~3 ~ facing entity @e[type=marker,tag=colref,limit=1]"
+    ],
+    [
+     "gui",
+     false
+    ],
+    [
+     "wait",
+     6
     ],
     [
      "shot",
@@ -25221,7 +25497,7 @@
    "check": "a purple vertical beam (two crossed translucent ribbons), not a particle column",
    "setup": "look at the column from 15 blocks",
    "note": "generic: entity aphelion; framing approximate",
-   "override": "w8-items.json"
+   "override": "z3-e-bosses.json"
   },
   {
    "n": 268,
@@ -25570,16 +25846,12 @@
      true
     ],
     [
-     "cmd",
+     "player_cmd",
      "kingdom armies swarm"
     ],
     [
-     "chat",
-     true
-    ],
-    [
      "wait",
-     20
+     15
     ],
     [
      "shot",
@@ -25590,16 +25862,12 @@
      100
     ],
     [
-     "cmd",
+     "player_cmd",
      "kingdom armies swarm"
     ],
     [
-     "chat",
-     true
-    ],
-    [
      "wait",
-     20
+     15
     ],
     [
      "shot",
@@ -25631,7 +25899,7 @@
    "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
    "setup": "op, after any big battle (e.g. the armies 32 v 32)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w8-kingdom3.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 274,
@@ -26731,11 +26999,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -26753,20 +27025,39 @@
      "tp",
      "anchor",
      0,
-     10,
-     28,
+     16,
+     50,
      180,
-     8
+     15
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -26775,21 +27066,40 @@
     [
      "tp",
      "anchor",
-     18,
-     12,
-     24,
-     150,
-     12
+     30,
+     20,
+     46,
+     155,
+     20
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -26808,7 +27118,7 @@
    ],
    "check": "bastion gate fa\u00e7ade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
    "setup": "stand on the terrace south of the gate (S+(0, 0, 21)) facing N, pitch 10; second shot S+(18, +6, 34) facing NW, pitch 15",
-   "override": "w8-neb.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 284,
@@ -26936,18 +27246,18 @@
     [
      "tp",
      "anchor",
-     8,
-     18,
-     38,
+     6,
+     16,
+     30,
      180,
-     30
+     28
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
@@ -26965,7 +27275,7 @@
    ],
    "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
    "setup": "S+(0, +16, 26) facing N, pitch 30",
-   "override": "w4-structcam.json"
+   "override": "z3-e-structbug.json"
   },
   {
    "n": 286,
@@ -27024,11 +27334,11 @@
     [
      "tp",
      "anchor",
-     32,
-     -10,
+     26,
+     -6,
      3,
      90,
-     -15
+     -8
     ],
     [
      "chunks"
@@ -27067,7 +27377,7 @@
    ],
    "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
    "setup": "S+(26, +10, 26) facing S, pitch 20; second shot from below the rim S+(14, -10, 0) facing E, pitch -15",
-   "override": "w8-neb.json"
+   "override": "z3-e-structbug.json"
   },
   {
    "n": 287,
@@ -27082,11 +27392,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 6000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -27114,7 +27428,7 @@
     ],
     [
      "wait",
-     100
+     250
     ],
     [
      "chunks"
@@ -27124,10 +27438,19 @@
     ],
     [
      "wait",
-     60
+     80
     ],
     [
-     "chunks"
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -27136,18 +27459,18 @@
     [
      "tp",
      "anchor",
+     40,
      24,
-     26,
-     2,
-     90,
-     8
+     12,
+     100,
+     10
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     250
     ],
     [
      "chunks"
@@ -27157,10 +27480,19 @@
     ],
     [
      "wait",
-     60
+     80
     ],
     [
-     "chunks"
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -27179,7 +27511,7 @@
    ],
    "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
    "setup": "S+(20, -14, 20) facing S, pitch -10 (looking up the spire), then from S+(12, -26, 0) at the foot facing W",
-   "override": "w8-neb.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 288,
@@ -29069,12 +29401,12 @@
      0,
      0,
      0,
-     180,
+     0,
      0
     ],
     [
      "camera",
-     "front"
+     "back"
     ],
     [
      "wait",
@@ -29092,7 +29424,7 @@
     ],
     [
      "wait",
-     3
+     2
     ],
     [
      "shot",
@@ -29183,7 +29515,7 @@
    "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, cursor on each of Thornlash, Tidechain Lash, Sunscourge, Echo Chord; then survival, each in the main hand, first person and F5 front, noon; right-click once and shoot during the 0.5 s cooldown",
    "note": "generic: item thornlash; framing approximate",
-   "override": "w5-useanims.json"
+   "override": "z3-e-gear.json"
   },
   {
    "n": 304,
@@ -30908,22 +31240,35 @@
      10
     ],
     [
-     "camera",
-     "back"
-    ],
-    [
      "use_down"
     ],
     [
      "wait",
-     12
+     28
     ],
     [
      "use_up"
     ],
     [
      "wait",
-     3
+     2
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     9,
+     3,
+     0,
+     80
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "wait",
+     1
     ],
     [
      "shot",
@@ -30939,7 +31284,7 @@
    "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
    "setup": "shoot level along a flat 60-block field at full draw, F5 back view, screenshot at ~0.3 s",
    "note": "generic: entity starpiercer_arrow; framing approximate",
-   "override": "w7z-gearfx.json"
+   "override": "z3-e-itemcam.json"
   },
   {
    "n": 313,
@@ -31067,7 +31412,11 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 3000"
+    ],
+    [
+     "cmd",
+     "gamerule advance_time false"
     ],
     [
      "cmd",
@@ -31085,42 +31434,46 @@
      "fly"
     ],
     [
-     "locate",
-     "elsewhere:castle_aldermark"
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
     ],
     [
-     "cmd",
-     "time set 3000"
+     "locate",
+     "elsewhere:castle_aldermark"
     ],
     [
      "tp",
      "anchor",
      0,
-     6,
-     24,
+     14,
+     30,
      180,
-     6
+     20
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
     ],
     [
      "cmd",
-     "tick sprint 1200"
+     "tick sprint 600"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
+    ],
+    [
+     "cmd",
+     "time set 3000"
     ],
     [
      "wait",
@@ -31140,7 +31493,7 @@
    "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
    "setup": "survival, stand in the Aldermark capital square, /time set 3000 (09:00), wait 30 s for the residents to walk out (/kingdom townsfolk shows \"live 40/40\")",
    "note": "west town of the located castle_aldermark at each /time",
-   "override": "w8-kingdom3.json"
+   "override": "z3-e-towns.json"
   },
   {
    "n": 315,
@@ -31159,6 +31512,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "weather clear"
     ],
     [
@@ -31173,6 +31530,10 @@
      "fly"
     ],
     [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
+    ],
+    [
      "locate",
      "elsewhere:castle_aldermark"
     ],
@@ -31180,24 +31541,20 @@
      "tp",
      "anchor",
      0,
-     26,
-     24,
-     0,
-     28
+     12,
+     34,
+     180,
+     14
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
-    ],
-    [
-     "wait",
-     100
     ],
     [
      "cmd",
@@ -31212,21 +31569,29 @@
      "aldermark_fields_at_14_00_vespers"
     ],
     [
+     "cmd",
+     "time set 11000"
+    ],
+    [
      "tp",
      "anchor",
      0,
      12,
-     16,
+     26,
      180,
-     22
+     18
     ],
     [
      "cmd",
-     "time set 10000"
+     "gamerule advance_time true"
     ],
     [
-     "wait",
-     100
+     "cmd",
+     "tick sprint 200"
+    ],
+    [
+     "cmd",
+     "gamerule advance_time false"
     ],
     [
      "cmd",
@@ -31254,7 +31619,7 @@
    "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
    "setup": "same capital, /time set 8000 (14:00), then 11000 (17:00)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-towns.json"
   },
   {
    "n": 316,
@@ -31550,7 +31915,11 @@
     ],
     [
      "cmd",
-     "time set 6000"
+     "time set 3000"
+    ],
+    [
+     "cmd",
+     "gamerule advance_time false"
     ],
     [
      "cmd",
@@ -31568,6 +31937,10 @@
      "fly"
     ],
     [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
+    ],
+    [
      "locate",
      "elsewhere:castle_mirewick"
     ],
@@ -31579,10 +31952,10 @@
      "tp",
      "anchor",
      -88,
-     14,
-     40,
+     22,
+     46,
      180,
-     16
+     24
     ],
     [
      "chunks"
@@ -31590,24 +31963,29 @@
     [
      "wait",
      200
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "cmd",
+     "tick sprint 600"
+    ],
+    [
+     "wait",
+     300
     ],
     [
      "chunks"
     ],
     [
      "cmd",
-     "tick sprint 1200"
+     "time set 3000"
     ],
     [
      "wait",
      200
-    ],
-    [
-     "chunks"
-    ],
-    [
-     "wait",
-     300
     ],
     [
      "shot",
@@ -31618,24 +31996,40 @@
      "time set 12500"
     ],
     [
+     "cmd",
+     "gamerule advance_time true"
+    ],
+    [
+     "cmd",
+     "tick sprint 300"
+    ],
+    [
+     "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
+     "time set 12500"
+    ],
+    [
      "tp",
      "anchor",
      -88,
-     14,
-     40,
+     22,
+     46,
      180,
-     16
+     24
     ],
     [
      "chunks"
     ],
     [
-     "cmd",
-     "tick sprint 600"
-    ],
-    [
      "wait",
      200
+    ],
+    [
+     "cmd",
+     "time set 12500"
     ],
     [
      "wait",
@@ -31659,7 +32053,7 @@
    "check": "09:00: about 48 clerks, bargemen (rope) and peat-cutters (shovels) in purple/crimson/gold on the quays; 18:30: lamplighters with torches at the lantern posts",
    "setup": "Mirewick capital, /time set 3000 (09:00) on the quays, then /time set 12500 (18:30)",
    "note": "west town of the located castle_mirewick at each /time",
-   "override": "w8-kingdom3.json"
+   "override": "z3-e-towns.json"
   },
   {
    "n": 319,
@@ -33064,6 +33458,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "weather clear"
     ],
     [
@@ -33079,7 +33477,7 @@
     ],
     [
      "cmd",
-     "weather clear"
+     "effect give @s night_vision infinite 0 true"
     ],
     [
      "locate",
@@ -33099,7 +33497,7 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
@@ -33110,30 +33508,27 @@
     ],
     [
      "cmd",
-     "execute at @p run summon elsewhere:kingdom_man_at_arms ~-4.5 ~-2 ~-6 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}"
+     "execute at @p run summon elsewhere:kingdom_man_at_arms ~-4.5 ~-2 ~-5 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],Tags:[\"elsewhere_rpose:WORK\"],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}"
     ],
     [
      "cmd",
-     "execute at @p run summon elsewhere:kingdom_man_at_arms ~-1.5 ~-2 ~-6 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:hrafnholt\"}"
+     "execute at @p run summon elsewhere:kingdom_man_at_arms ~-1.5 ~-2 ~-5 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],Tags:[\"elsewhere_rpose:WORK\"],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:hrafnholt\"}"
     ],
     [
      "cmd",
-     "execute at @p run summon elsewhere:kingdom_man_at_arms ~1.5 ~-2 ~-6 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:azmar\"}"
+     "execute at @p run summon elsewhere:kingdom_man_at_arms ~1.5 ~-2 ~-5 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],Tags:[\"elsewhere_rpose:WORK\"],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:azmar\"}"
     ],
     [
      "cmd",
-     "execute at @p run summon elsewhere:kingdom_man_at_arms ~4.5 ~-2 ~-6 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:mirewick\"}"
+     "execute at @p run summon elsewhere:kingdom_man_at_arms ~4.5 ~-2 ~-5 {NoAI:1b,PersistenceRequired:1b,Rotation:[0f,0f],Tags:[\"elsewhere_rpose:WORK\"],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:mirewick\"}"
     ],
     [
-     "chunks"
+     "cmd",
+     "time set 2000"
     ],
     [
      "wait",
-     100
-    ],
-    [
-     "wait",
-     100
+     200
     ],
     [
      "shot",
@@ -33149,7 +33544,7 @@
    "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
    "setup": "the row plus the archer at the end, two shots 1 s apart",
    "note": "generic: entity kingdom_archer; framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-towns.json"
   },
   {
    "n": 328,
@@ -33347,6 +33742,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "weather clear"
     ],
     [
@@ -33359,10 +33758,6 @@
     ],
     [
      "fly"
-    ],
-    [
-     "cmd",
-     "weather clear"
     ],
     [
      "cmd",
@@ -33386,7 +33781,7 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
@@ -33416,15 +33811,12 @@
      "execute at @p run summon elsewhere:kingdom_man_at_arms ~1.5 ~-2 ~-8 {PersistenceRequired:1b,Rotation:[0f,0f],KingdomUnit:\"elsewhere:man_at_arms\",KingdomFaction:\"elsewhere:aldermark\"}"
     ],
     [
-     "chunks"
+     "cmd",
+     "time set 18000"
     ],
     [
      "wait",
-     100
-    ],
-    [
-     "wait",
-     400
+     200
     ],
     [
      "shot",
@@ -33452,7 +33844,7 @@
    "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
    "setup": "a real Aldermark garrison (or 3 soldiers with AI on near their post), `/time set 18000`, wait for the night routine to rest them, camera 5 blocks away",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-towns.json"
   },
   {
    "n": 333,
@@ -34659,7 +35051,7 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "fly"
@@ -34669,24 +35061,20 @@
      "kingdom armies battle aldermark hrafnholt 30"
     ],
     [
-     "cmd",
-     "tp @s ^ ^12 ^-24 ~ 25"
-    ],
-    [
      "wait",
      600
     ],
     [
      "cmd",
-     "execute if entity @e[type=elsewhere:kingdom_captain] as @e[type=elsewhere:kingdom_captain,limit=1,sort=random] at @s run tp @p ^8 ^1 ^0 facing entity @s"
+     "execute if entity @e[type=elsewhere:kingdom_captain] as @e[type=elsewhere:kingdom_captain,limit=1,sort=random] at @s run tp @p ^5 ^0.3 ^0 facing entity @s eyes"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_captain] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=random] at @s run tp @p ^8 ^1 ^0 facing entity @s"
+     "execute unless entity @e[type=elsewhere:kingdom_captain] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=random] at @s run tp @p ^5 ^0.3 ^0 facing entity @s eyes"
     ],
     [
      "camera",
-     "back"
+     "first"
     ],
     [
      "wait",
@@ -34705,10 +35093,6 @@
      "battle_aldermark_hrafnholt_30_30s_later"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
      "cmd",
      "kingdom armies battle stop"
     ]
@@ -34721,7 +35105,7 @@
    ],
    "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
    "setup": "flat plains, `/time set 6000`, `/kingdom armies battle aldermark hrafnholt 30`; F5 side view of a walking captain or sergeant about 8 blocks away, two shots 10 ticks apart, then one of an idle one",
-   "override": "w8-kingdom3.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 349,
@@ -34740,10 +35124,6 @@
     ],
     [
      "cmd",
-     "fill ~-10 ~ ~-6 ~10 ~8 ~14 minecraft:air"
-    ],
-    [
-     "cmd",
      "time set 6000"
     ],
     [
@@ -34752,23 +35132,19 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
+     "cmd",
+     "gamerule fall_damage false"
+    ],
+    [
      "player_cmd",
-     "kingdomdetail low"
-    ],
-    [
-     "chat",
-     true
-    ],
-    [
-     "wait",
-     10
+     "kingdomdetail medium"
     ],
     [
      "summon",
@@ -34776,31 +35152,18 @@
      "{NoAI:1b,PersistenceRequired:1b}"
     ],
     [
-     "view",
-     0.0,
-     10.0,
-     150.0
+     "fly"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     60
     ],
     [
-     "shot",
-     "cape_and_emblem_lod"
-    ],
-    [
-     "chat",
-     false
-    ],
-    [
-     "view",
-     0.0,
-     8.0,
-     150.0
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest] at @s run tp @p ^4 ^1.5 ^9 facing entity @s eyes"
     ],
     [
      "wait",
@@ -34808,7 +35171,71 @@
     ],
     [
      "shot",
+     "cape_and_emblem_lod"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest] at @s run tp @p ^4 ^1.5 ^9 facing entity @s eyes"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "shot",
      "cape_and_emblem_lod_later"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest] at @s run tp @p ^10 ^2 ^28 facing entity @s eyes"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "shot",
+     "cape_and_emblem_lod_30"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest] at @s run tp @p ^12 ^2 ^38 facing entity @s eyes"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "shot",
+     "cape_and_emblem_lod_40"
+    ],
+    [
+     "player_cmd",
+     "kingdomdetail low"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest] at @s run tp @p ^3 ^1.5 ^7.5 facing entity @s eyes"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "shot",
+     "cape_and_emblem_lod_low"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest] at @s run tp @p ^10 ^2 ^28 facing entity @s eyes"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "shot",
+     "cape_and_emblem_lod_low_far"
     ],
     [
      "player_cmd",
@@ -34828,7 +35255,7 @@
    "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
    "setup": "one NoAI Aldermark captain; camera at 10, 30 and 40 blocks (medium detail), then `/kingdomdetail low` at 8 blocks",
    "note": "generic: entity kingdom_captain, 1 setup command(s); framing approximate",
-   "override": "w8-kingdom3.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 350,
@@ -35486,10 +35913,6 @@
      true
     ],
     [
-     "chat",
-     true
-    ],
-    [
      "cmd",
      "effect give @s resistance infinite 255 true"
     ],
@@ -35525,7 +35948,11 @@
     ],
     [
      "cmd",
-     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..60]"
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..250]"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "cmd",
@@ -35533,7 +35960,7 @@
     ],
     [
      "wait",
-     30
+     25
     ],
     [
      "cmd",
@@ -35541,7 +35968,7 @@
     ],
     [
      "wait",
-     30
+     25
     ],
     [
      "cmd",
@@ -35549,7 +35976,7 @@
     ],
     [
      "wait",
-     30
+     25
     ],
     [
      "cmd",
@@ -35557,15 +35984,23 @@
     ],
     [
      "wait",
-     30
+     25
+    ],
+    [
+     "chat",
+     true
     ],
     [
      "wait",
-     40
+     10
     ],
     [
      "shot",
      "castle_azmar_overview"
+    ],
+    [
+     "chat",
+     false
     ],
     [
      "tp",
@@ -35585,11 +36020,23 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..250]"
+    ],
+    [
+     "cmd",
      "locate structure elsewhere:castle_azmar"
     ],
     [
      "wait",
-     40
+     25
+    ],
+    [
+     "chat",
+     true
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "shot",
@@ -35613,7 +36060,7 @@
    "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
    "setup": "normal survival world with structures on, op player at spawn, chat open, run the 4 commands one after another",
    "note": "generic: structure castle_azmar; framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-itemcam.json"
   },
   {
    "n": 358,
@@ -36317,8 +36764,8 @@
     ],
     [
      "summon",
-     "minecraft:zombie",
-     "{NoAI:1b,PersistenceRequired:1b,Health:200f,attributes:[{id:\"minecraft:max_health\",base:200.0d}]}",
+     "minecraft:iron_golem",
+     "{NoAI:1b,PersistenceRequired:1b,Health:400f,attributes:[{id:\"minecraft:max_health\",base:400.0d}]}",
      0,
      3
     ],
@@ -36333,7 +36780,7 @@
     ],
     [
      "cmd",
-     "effect give @e[type=minecraft:zombie,distance=..12] minecraft:regeneration infinite 10 true"
+     "effect give @e[type=minecraft:iron_golem,distance=..12] minecraft:regeneration infinite 10 true"
     ],
     [
      "look_target"
@@ -36386,8 +36833,20 @@
      "hrafnholt_wolfskin_boots_first_person"
     ],
     [
+     "cmd",
+     "tp @e[type=minecraft:iron_golem,distance=..12] ~ ~ ~ ~ ~"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=minecraft:iron_golem,distance=..12] at @s run tp @s ~6 ~ ~-3"
+    ],
+    [
      "camera",
-     "back"
+     "front"
+    ],
+    [
+     "cmd",
+     "tp @s ~ ~ ~ ~40 ~"
     ],
     [
      "wait",
@@ -36454,7 +36913,7 @@
    "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
    "setup": "survival, full Ulfhednar set (Mask, Pelt, Breeches, Wolfskin Boots), attack indicator on (crosshair), hit a zombie 5 times fast, then stop for 4 s",
    "note": "generic: item hrafnholt_wolfskin_boots; framing approximate",
-   "override": "w7z-gearfx.json"
+   "override": "z3-e-itemcam.json"
   },
   {
    "n": 364,
@@ -37254,11 +37713,15 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
     ],
     [
      "cmd",
      "time set 171000"
+    ],
+    [
+     "cmd",
+     "gamerule advance_time false"
     ],
     [
      "cmd",
@@ -37281,9 +37744,9 @@
      "anchor",
      0,
      16,
-     14,
+     30,
      180,
-     40
+     30
     ],
     [
      "chunks"
@@ -37365,7 +37828,7 @@
    "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
    "setup": "`/time set` so the day number is a multiple of 7, then 10:00 (`/time set 4000`), stand in front of the gate on the road",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-towns.json"
   },
   {
    "n": 378,
@@ -37552,7 +38015,7 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
     ],
     [
      "cmd",
@@ -37569,6 +38032,9 @@
     [
      "cmd",
      "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "fly"
     ],
     [
      "locate",
@@ -37671,7 +38137,7 @@
    "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
    "setup": "Mirewick realm, watch the gate from 06:20 to 07:40 (`/time set 333`)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-bosses.json"
   },
   {
    "n": 383,
@@ -38763,6 +39229,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "weather clear"
     ],
     [
@@ -38770,17 +39240,41 @@
      true
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "hold",
      "mainhand",
      "elsewhere:mothlight_staff"
     ],
     [
-     "camera",
-     "first"
+     "chunks"
     ],
     [
      "wait",
-     30
+     20
+    ],
+    [
+     "camera",
+     "front"
+    ],
+    [
+     "cmd",
+     "tp @s ~ ~ ~ ~40 ~"
+    ],
+    [
+     "cmd",
+     "time set 6000"
+    ],
+    [
+     "wait",
+     25
     ],
     [
      "shot",
@@ -38819,7 +39313,7 @@
    "check": "icon: a brown wooden staff with a dark outline, topped by a pale lilac-and-white lamp head (no missing texture), held like a tool; tooltip: \"Mothlight Staff\" (rare), 4 grey lore lines (10 Glimmer, 3 moths in one slot, -10% damage 3 s, sneak-use) and the Summoner Calling line",
    "setup": "creative inventory, Elsewhere 3.0 Gear tab, cursor on the staff; then survival, staff in the main hand, third person front, noon",
    "note": "survival inventory tooltip (not the creative tab)",
-   "override": "itemsa.json"
+   "override": "z3-e-itemcam.json"
   },
   {
    "n": 403,
@@ -38909,6 +39403,10 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 18000"
     ],
     [
@@ -38925,6 +39423,14 @@
     ],
     [
      "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.2"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
@@ -38938,7 +39444,7 @@
     [
      "summon",
      "minecraft:husk",
-     "{PersistenceRequired:1b,Silent:1b}",
+     "{NoAI:1b,PersistenceRequired:1b,Silent:1b,Health:400f,attributes:[{id:\"minecraft:max_health\",base:400.0d}]}",
      3,
      0
     ],
@@ -38955,9 +39461,6 @@
      "look_target"
     ],
     [
-     "attack"
-    ],
-    [
      "wait",
      5
     ],
@@ -38965,6 +39468,34 @@
      "hold",
      "mainhand",
      "elsewhere:mothlight_staff"
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     12
     ],
     [
      "use_down"
@@ -39031,7 +39562,7 @@
    "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
    "setup": "same; `/summon husk ~5 ~ ~ {NoAI:1b}`, hit the husk once with the hand; shot side-on from 4 blocks at +2 s, a second at +3 s",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w9-smisc2.json"
+   "override": "z3-e-itemcam.json"
   },
   {
    "n": 405,
@@ -39678,10 +40209,10 @@
      "tp",
      "anchor",
      0.0,
-     13.0,
-     48.0,
+     22.0,
+     46.0,
      180.0,
-     9.0
+     24.0
     ],
     [
      "chunks"
@@ -39710,7 +40241,7 @@
    ],
    "check": "sphinx avenue (8 couchant sandstone sphinxes on lapis-fronted plinths, each on its own ground) leading to the obelisk pair (yellow tips) and the twin battered pylons: faces stepping back as they rise, cavetto cornices, blue banners in tall niches, gold scarab between lapis wings over the gateway; sacred lake with ghat steps and papyrus to the right; low battered mud-brick palm wall either side; no gold blocks, no glass",
    "setup": "tp C+(0, +14, 62) yaw 180 pitch 8",
-   "override": "w6-castles.json"
+   "override": "z3-e-structbug.json"
   },
   {
    "n": 410,
@@ -39888,17 +40419,17 @@
      "tp",
      "anchor",
      0,
-     2,
+     3,
      -3,
      180,
-     -5
+     -32
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     300
     ],
     [
      "chunks"
@@ -39944,7 +40475,7 @@
    ],
    "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
    "setup": "tp C+(0, +2, -3) yaw 180 pitch -15",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-structbug.json"
   },
   {
    "n": 413,
@@ -42531,10 +43062,14 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "fly"
+    ],
+    [
+     "cmd",
+     "gamerule send_command_feedback true"
     ],
     [
      "cmd",
@@ -42542,31 +43077,46 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^18 ^-22 facing entity @s"
+     "tp @s ^ ^30 ^-34 ~ 24"
     ],
     [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:azmar_soldier,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^18 ^-22 facing entity @s"
-    ],
-    [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^18 ^-22 facing entity @s"
-    ],
-    [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^18 ^-22 facing entity @s"
+     "chunks"
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "shot",
      "battle_aldermark_hrafnholt_150_30s"
+    ],
+    [
+     "gui",
+     true
+    ],
+    [
+     "chat",
+     true
+    ],
+    [
+     "player_cmd",
+     "kingdom armies ranks"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "shot",
+     "battle_aldermark_hrafnholt_150_30s_ranks"
+    ],
+    [
+     "chat",
+     false
     ],
     [
      "cmd",
@@ -42581,7 +43131,7 @@
    ],
    "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
    "setup": "flat open grass, noon; stand at the battle point, /kingdom armies battle aldermark hrafnholt 150; wait 15 s, fly 30 blocks up and back (F1), one wide shot of both armies, then /kingdom armies ranks",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 440,
@@ -42711,7 +43261,7 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "fly"
@@ -42726,23 +43276,14 @@
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^14 ^-20 facing entity @s"
+     "tp @s ^ ^24 ^-30 ~ 26"
     ],
     [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:azmar_soldier,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^14 ^-20 facing entity @s"
-    ],
-    [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^14 ^-20 facing entity @s"
-    ],
-    [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^14 ^-20 facing entity @s"
+     "chunks"
     ],
     [
      "wait",
-     20
+     30
     ],
     [
      "shot",
@@ -42761,7 +43302,7 @@
    ],
    "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
    "setup": "/kingdom armies battle aldermark hrafnholt 30, stand by and let it run to its end (2-4 min)",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 444,
@@ -43169,6 +43710,10 @@
      true
     ],
     [
+     "gui",
+     false
+    ],
+    [
      "chat",
      false
     ],
@@ -43259,7 +43804,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^2.5 ^0 ^5 facing entity @s eyes"
+     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^1.5 ^0 ^4 facing entity @s eyes"
     ],
     [
      "wait",
@@ -43275,7 +43820,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^2.5 ^0 ^5 facing entity @s eyes"
+     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^1.5 ^0 ^4 facing entity @s eyes"
     ],
     [
      "wait",
@@ -43287,7 +43832,7 @@
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^2.5 ^0 ^5 facing entity @s eyes"
+     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^1.5 ^0 ^4 facing entity @s eyes"
     ],
     [
      "camera",
@@ -43307,12 +43852,20 @@
      "echo_reliquary_held_face_on_first_person"
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^0 ^0 ^3 facing ^0 ^0 ^10"
+    ],
+    [
+     "gui",
+     true
+    ],
+    [
      "camera",
      "front"
     ],
     [
-     "cmd",
-     "tp @s ~ ~ ~ 180 0"
+     "wait",
+     15
     ],
     [
      "wait",
@@ -43348,7 +43901,7 @@
    "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
    "setup": "survival flat world, `/time set 13000`, full Glimmer, `/attribute @s elsewhere:minion_slots base set 2`; hold use with the Echo Reliquary for 1 s; shot third person front three-quarter from 4 blocks at +3 s",
    "note": "generic: entity echo_knight, 2 setup command(s); framing approximate",
-   "override": "w9-smisc2.json"
+   "override": "z3-e-itemcam.json"
   },
   {
    "n": 450,
@@ -44006,7 +44559,7 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "fly"
@@ -44017,27 +44570,18 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-18 facing entity @s"
+     "tp @s ^ ^5 ^-60 ~ 6"
     ],
     [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:azmar_soldier,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-18 facing entity @s"
-    ],
-    [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-18 facing entity @s"
-    ],
-    [
-     "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-18 facing entity @s"
+     "chunks"
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "shot",
@@ -44056,7 +44600,7 @@
    ],
    "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
    "setup": "flat plains, `/time set 6000`, Soldier detail Medium, render distance 12; `/kingdom patrol 8` for each kingdom near its village (or `/kingdom armies battle aldermark azmar 60`), fly 60 blocks off at soldier height, shot 1 plain, shot 2 with F1 at the same spot",
-   "override": "w7-kingdom.json"
+   "override": "z3-e-battles.json"
   },
   {
    "n": 457,
@@ -45588,11 +46132,15 @@
     ],
     [
      "cmd",
+     "gamerule advance_time false"
+    ],
+    [
+     "cmd",
      "time set 13000"
     ],
     [
      "cmd",
-     "weather clear"
+     "weather clear 1000000"
     ],
     [
      "gui",
@@ -45620,7 +46168,7 @@
     ],
     [
      "wait",
-     100
+     150
     ],
     [
      "chunks"
@@ -45641,28 +46189,39 @@
      "tp",
      "anchor",
      8,
-     20,
+     34,
      30,
      180,
-     40
-    ],
-    [
-     "cmd",
-     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
-    ],
-    [
-     "cmd",
-     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
+     50
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     250
     ],
     [
      "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 13000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -45672,28 +46231,39 @@
      "tp",
      "anchor",
      8,
-     9,
-     -12,
+     22,
+     -14,
      0,
-     25
-    ],
-    [
-     "cmd",
-     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:logs"
-    ],
-    [
-     "cmd",
-     "fill ~-4 ~-2 ~-4 ~4 ~8 ~4 air replace #minecraft:leaves"
+     40
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     250
     ],
     [
      "chunks"
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     80
+    ],
+    [
+     "cmd",
+     "weather clear 1000000"
+    ],
+    [
+     "cmd",
+     "time set 13000"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -45713,7 +46283,7 @@
    "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
    "setup": "Greenhaze fresh chunks, dusk, camera 20 up over the rim looking at the fire",
    "note": "generic: structure bonfire_terrace; framing approximate",
-   "override": "w8-hush-cams.json"
+   "override": "z3-e-structcam.json"
   },
   {
    "n": 480,

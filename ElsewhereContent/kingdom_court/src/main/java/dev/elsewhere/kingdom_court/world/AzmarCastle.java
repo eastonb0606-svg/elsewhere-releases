@@ -261,7 +261,7 @@ public final class AzmarCastle {
 
 	/** The ceiling: lapis (blue terracotta) with yellow-terracotta stars. */
 	static BlockState sky(int x, int z) {
-		return CastleLayout.hash(x, 31, z) < 8 ? GOLD : LAPIS;
+		return CastleLayout.hash(x, 31, z) < 12 ? Blocks.GLOWSTONE.defaultBlockState() : LAPIS; // e-structbug: luminous stars (yellow terracotta read as dark brown)
 	}
 
 	/** Temple wall course: plinth course at {@code base}, glyph frieze, lapis faience band, smooth sandstone. */

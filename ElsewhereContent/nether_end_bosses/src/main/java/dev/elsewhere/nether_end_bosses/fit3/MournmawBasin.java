@@ -53,6 +53,17 @@ public final class MournmawBasin implements FitArena {
 				w.footingOrPier(cx, cz, y - 4, LADDER, 12, 64, o);
 			}
 		}
+		// e-structbug: strip loose single blocks (no solid neighbour) floating around the bowl, above the berm
+		for (int dz = -(R + 10); dz <= R + 10; dz++) for (int dx = -(R + 10); dx <= R + 10; dx++) {
+			double d = Math.sqrt(dx * dx + dz * dz);
+			if (d <= R + 0.5 || d > R + 10) continue;
+			int cx = x + dx, cz = z + dz;
+			for (int yy = y + 1; yy <= y + 30; yy++) {
+				if (w.get(cx, yy, cz).isAir() || !w.get(cx, yy, cz).getFluidState().isEmpty()) continue;
+				if (w.get(cx, yy - 1, cz).isAir() && w.get(cx, yy + 1, cz).isAir() && w.get(cx + 1, yy, cz).isAir() && w.get(cx - 1, yy, cz).isAir()
+					&& w.get(cx, yy, cz + 1).isAir() && w.get(cx, yy, cz - 1).isAir()) w.set(cx, yy, cz, air);
+			}
+		}
 		// the basin: soul-soil bed, enclosed water sunk one block, polished basalt lip
 		w.disc(o, y - 2, 3.5, Blocks.SOUL_SOIL.defaultBlockState());
 		w.disc(o, y - 1, 3.2, Blocks.WATER.defaultBlockState());

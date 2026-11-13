@@ -71,7 +71,7 @@ public final class AphelionHalo implements FitArena {
 			double d = Math.sqrt(dx * dx + dz * dz);
 			double edge = r + (w.hash(cx, 7, cz) - 50) / 85.0;
 			if (d > edge) continue;
-			int depth = 1 + (int) Math.round(Math.pow(1.0 - d / (edge + 0.01), 0.8) * (3 + r)) + (w.hash(cx, 3, cz) < 25 ? 1 : 0);
+			int depth = 1 + (int) Math.round(Math.pow(1.0 - d / (edge + 0.01), 0.8) * (4 + 1.5 * r)) + (w.hash(cx, 3, cz) < 25 ? 1 : 0);
 			for (int k = 1; k <= depth; k++) w.set(cx, top.getY() - k, cz, STONE);
 		}
 		// a broken column from the halo that once stood here, on alternate fragments
