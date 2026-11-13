@@ -1,0 +1,154 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 21,
+          "line": 29,
+          "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:lighthouse": [
+        {
+          "file": "s_struct_verdigris__lighthouse_s_30_10_30.png",
+          "scene": 160,
+          "line": 177,
+          "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p13_particles": {
+      "Rimeback avalanche wall (elsewhere:glacier_shelf)": [
+        {
+          "file": "s_p13_particles__rimeback_avalanche_10s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        },
+        {
+          "file": "s_p13_particles__rimeback_avalanche_20s.png",
+          "scene": 166,
+          "line": 183,
+          "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_swarm1": {
+      "`/kingdom armies swarm` report": [
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "ok",
+          "taken": "01:00:49"
+        },
+        {
+          "file": "s_swarm1__kingdom_armies_swarm_report_5s.png",
+          "scene": 273,
+          "line": 309,
+          "check": "chat lists: switch on, ring changes, march/approach path shares vs misses, follower decisions and real paths, squad plans with rays used, ally pushes skipped; with `\"swarm\": false` the first line says off and all counters stay 0",
+          "status": "ok",
+          "taken": "01:00:55"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "cape wave in motion": [
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 348,
+          "line": 391,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "ok",
+          "taken": "01:01:27"
+        },
+        {
+          "file": "s_p10_tabard__battle_aldermark_hrafnholt_30_30s_later.png",
+          "scene": 348,
+          "line": 391,
+          "check": "walking: the cape lifts back (about 25-30 degrees), a ripple runs down it and the two shots differ; never swings into the legs; idle: hangs nearly straight with a faint ripple; neighbours don't ripple in lockstep",
+          "status": "ok",
+          "taken": "01:01:28"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:glasswaste_starsight_visor": [
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_first_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_third_person.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_after_use.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        },
+        {
+          "file": "s_setbonus_b__glasswaste_starsight_visor_tooltip.png",
+          "scene": 361,
+          "line": 409,
+          "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Mirewick off-time wards": [
+        {
+          "file": "s_routines__mirewick_off_time_wards.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__mirewick_off_time_wards_5s.png",
+          "scene": 382,
+          "line": 430,
+          "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:01:28",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
