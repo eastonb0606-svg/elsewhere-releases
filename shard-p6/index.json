@@ -19,7 +19,8 @@
           "scene": 171,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:45:51"
         }
       ]
     },
@@ -30,14 +31,16 @@
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:46:24"
         },
         {
           "file": "s_struct_core__hollow_shrine_downhill_20.png",
           "scene": 210,
           "line": 240,
           "check": "7x7 floor on a 2-step stone plinth whose lower step meets the ground on every side; downhill the plinth shows underpinned stone, never air under it; 8 broken columns (2 whole with a lintel, hanging lantern and moss), raised altar with chest and 2 candles; a fallen drum lying outside; no square air cut into the hill",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:46:36"
         }
       ]
     },
@@ -148,14 +151,16 @@
           "scene": 396,
           "line": 446,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:46:57"
         },
         {
           "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
           "scene": 396,
           "line": 446,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:47:01"
         }
       ]
     },
@@ -166,21 +171,23 @@
           "scene": 486,
           "line": 538,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:47:33"
         },
         {
           "file": "s_struct_greenhaze__silent_monastery_ground.png",
           "scene": 486,
           "line": 538,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:47:39"
         }
       ]
     }
   },
-  "run": "00:44:41",
+  "run": "00:47:42",
   "totals": {
-    "ok": 12,
+    "ok": 19,
     "fail": 0,
     "manual": 0
   }
