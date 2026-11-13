@@ -7,7 +7,8 @@
           "scene": 412,
           "line": 462,
           "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:13"
         }
       ]
     },
@@ -54,9 +55,9 @@
       ]
     }
   },
-  "run": "00:16:43",
+  "run": "00:17:15",
   "totals": {
-    "ok": 4,
+    "ok": 5,
     "fail": 0,
     "manual": 0
   }
