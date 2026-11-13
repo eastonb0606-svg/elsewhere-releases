@@ -1,0 +1,109 @@
+{
+  "lanes": {
+    "s_townsfolk": {
+      "Azmar bazaar vs siesta": [
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_9000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        },
+        {
+          "file": "s_townsfolk__azmar_capital_time_set_6000.png",
+          "scene": 317,
+          "line": 357,
+          "check": "15:00: about 32 priests (white/gold), scribes (book and quill), porters (bundles) and merchants (emeralds) at the bazaar and caravanserai; 12:00: streets empty (siesta), residents walk indoors and vanish at doors",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_harpoon": {
+      "elsewhere:tidebrass_harpoon_bolt": [
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_first_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "01:21:10"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "01:21:12"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "01:21:14"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "01:21:16"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "01:21:18"
+        },
+        {
+          "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
+          "scene": 324,
+          "line": 364,
+          "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
+          "status": "ok",
+          "taken": "01:21:19"
+        }
+      ]
+    },
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_5_10_y180.png",
+          "scene": 411,
+          "line": 461,
+          "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle façade, scarab over its door",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Distant battle din (subtitles)": [
+        {
+          "file": "s_lod__distant_battle_subtitles.png",
+          "scene": 460,
+          "line": 512,
+          "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
+          "status": "pending"
+        },
+        {
+          "file": "s_lod__melee_subtitles.png",
+          "scene": 460,
+          "line": 512,
+          "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:21:19",
+  "totals": {
+    "ok": 6,
+    "fail": 0,
+    "manual": 0
+  }
+}
