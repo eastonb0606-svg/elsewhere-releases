@@ -287,7 +287,7 @@ public final class CastleLayout {
 				// w6-castles (L540.1): the kit left a cobblestone patch at the two outer gate bays; re-lay the full 5-wide dirt-path apron after it
 				if (placer.ground != null) {
 					L al = new L(origin, placer);
-					for (int x = -2; x <= 2; x++) for (int z = 31; z <= 32; z++) al.b(x, -1, z, Blocks.DIRT_PATH);
+					for (int x = -2; x <= 2; x++) for (int z = 30; z <= 32; z++) al.b(x, -1, z, Blocks.DIRT_PATH);
 				}
 			}
 			case KIT_TOWN_WEST -> CastleKit.town(new L(origin.offset(-TOWN_DX, 0, TOWN_DZ), placer));
@@ -573,6 +573,7 @@ public final class CastleLayout {
 		Ground g = l.p.ground;
 		// s-asm-court: a 5-wide apron at the floor in front of the 5-wide gate, so its outer leaves never open into earth (the road is 3 wide)
 		for (int x = -2; x <= 2; x++) for (int z = 31; z <= 32; z++) pathAt(l, x, z, 0);
+		for (int x = -2; x <= 2; x++) l.b(x, -1, 30, Blocks.DIRT_PATH); // the gate leaves stand on dirt too
 		for (int s = -1; s <= 1; s += 2) {
 			int tx = s * TOWN_DX;
 			int tf = g.floor(s < 0 ? Part.TOWN_WEST : Part.TOWN_EAST, g.y(l.o.getX() + tx, l.o.getZ() + TOWN_DZ)) - l.o.getY();

@@ -411,6 +411,10 @@ public final class AzmarCastle {
 				for (int k = 3; k <= xo; k++) for (int z = 12; z <= zf; z++) {
 					boolean face = k == 3 || k == xo || z == 12 || z == zf;
 					BlockState b = !face ? SANDSTONE : k == xo && (z == zf || z == 12) ? CUT : y == 12 ? LAPIS : y % 4 == 3 ? CUT : SANDSTONE;
+					if (y % 4 == 3 && y < 12 && !(k == xo && (z == zf || z == 12))) { // batter: a stair ramp on each band's top course (front and outer faces)
+						if (z == zf) b = stair(Direction.NORTH, Half.BOTTOM);
+						else if (k == xo) b = stair(s > 0 ? Direction.WEST : Direction.EAST, Half.BOTTOM);
+					}
 					a.s(s * k, y, z, b);
 				}
 			}

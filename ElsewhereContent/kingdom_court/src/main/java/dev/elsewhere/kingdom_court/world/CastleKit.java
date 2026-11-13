@@ -628,6 +628,8 @@ public final class CastleKit {
 
 	static void kiosk(W w, int cx, int cz, int y0, BlockState pillar, BlockState roof, BlockState finial) {
 		for (int sx = -2; sx <= 2; sx += 4) for (int sz = -2; sz <= 2; sz += 4) for (int y = y0; y <= y0 + 2; y++) w.s(cx + sx, y, cz + sz, pillar);
+		// a slab roof sits in the TOP half so the finial rests on it (no half-block of sky under the finial)
+		if (roof.hasProperty(SlabBlock.TYPE)) roof = roof.setValue(SlabBlock.TYPE, SlabType.TOP);
 		for (int x = -2; x <= 2; x++) for (int z = -2; z <= 2; z++) w.s(cx + x, y0 + 3, cz + z, roof);
 		w.s(cx, y0 + 4, cz, finial);
 	}
@@ -646,6 +648,7 @@ public final class CastleKit {
 		for (int y = 1; y <= 13; y++) {
 			w.s(cx, y, cz, shaft);
 			if (y <= 9) for (Direction d : Direction.Plane.HORIZONTAL) w.s(cx + d.getStepX(), y, cz + d.getStepZ(), y == 4 ? glyph : shaft);
+			if (y <= 3) for (int x = -1; x <= 1; x += 2) for (int z = -1; z <= 1; z += 2) w.s(cx + x, y, cz + z, shaft); // broad battered foot
 		}
 		w.s(cx, 14, cz, tip);
 	}
