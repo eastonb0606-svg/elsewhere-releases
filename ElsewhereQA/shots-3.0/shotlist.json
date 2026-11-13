@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 19:03",
+ "generated": "2026-11-12 19:12",
  "scenes": [
   {
    "n": 1,
@@ -13885,35 +13885,44 @@
     [
      "tp",
      "anchor",
-     21,
-     30,
-     21,
+     12,
+     24,
+     12,
      135,
-     24
+     28
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     60
+     200
     ],
     [
      "chunks"
     ],
     [
      "cmd",
-     "execute positioned over world_surface run tp @s ~ ~7 ~ 135 24"
+     "weather clear"
+    ],
+    [
+     "cmd",
+     "execute positioned over world_surface run tp @s ~ ~5 ~ 135 30"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     40
+     200
     ],
     [
-     "chunks"
+     "cmd",
+     "weather clear"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -13928,7 +13937,7 @@
    ],
    "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
    "setup": "tp S+(16, +8, 16) facing S, pitch 20",
-   "override": "w4-structcam.json"
+   "override": "z2-d-struct.json"
   },
   {
    "n": 159,
@@ -15883,7 +15892,7 @@
     ],
     [
      "wait",
-     150
+     300
     ],
     [
      "chunks"
@@ -15891,18 +15900,18 @@
     [
      "tp",
      "anchor",
-     32,
-     16,
-     32,
+     15,
+     17,
+     15,
      135,
-     22
+     38
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "shot",
@@ -15910,18 +15919,18 @@
     ],
     [
      "tp_downhill",
-     26.0
+     34.0
     ],
     [
      "cmd",
-     "tp @s ~ ~8 ~"
+     "tp @s ~ ~14 ~ ~ 22"
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     150
+     300
     ],
     [
      "shot",
@@ -15940,7 +15949,7 @@
    ],
    "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
    "setup": "`/locate structure elsewhere:glacier_shelf` = S; noon; tp S+(30, +14, 30) facing S, pitch 25; second shot from the downhill side at the stair foot looking up",
-   "override": "w4-structfix.json"
+   "override": "z2-d-struct.json"
   },
   {
    "n": 177,
@@ -16136,7 +16145,7 @@
     ],
     [
      "wait",
-     150
+     300
     ],
     [
      "shot",
@@ -16146,17 +16155,17 @@
      "tp",
      "anchor",
      0,
-     -7,
-     24,
+     -4,
+     40,
      180,
-     -8
+     0
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     100
+     250
     ],
     [
      "shot",
@@ -16175,7 +16184,7 @@
    ],
    "check": "deck ring of lashed wrecks at sea level with 3 masted hulls and the capstan; underwater: 8 dark-oak hull stacks carrying the deck down to the sea bed, 3 sunken hulks on sand shoals between the deck hulls, their masts breaking the surface; nothing hangs in mid-water",
    "setup": "`/locate structure elsewhere:wreck_ring` = S; noon, clear; shot 1 tp S+(26, +10, 26) facing S, pitch 20; shot 2 underwater S+(0, -12, 26) yaw 180 (night vision)",
-   "override": "w4-structfix.json"
+   "override": "z2-d-struct.json"
   },
   {
    "n": 179,
@@ -23437,24 +23446,28 @@
      "look_target"
     ],
     [
-     "player_cmd",
-     "kill @e[type=elsewhere:azmar_soldier]"
-    ],
-    [
-     "wait",
-     2
+     "cmd",
+     "clear @s"
     ],
     [
      "cmd",
-     "kill @e[type=elsewhere:azmar_soldier,nbt={DeathTime:0s}]"
+     "item replace entity @s hotbar.0 with elsewhere:azmar_soldier_spawn_egg"
+    ],
+    [
+     "wait",
+     6
     ],
     [
      "chat",
      true
     ],
     [
+     "player_cmd",
+     "kill @e[type=elsewhere:azmar_soldier]"
+    ],
+    [
      "wait",
-     13
+     8
     ],
     [
      "shot",
@@ -23473,7 +23486,7 @@
    ],
    "check": "tooltips read 'Hrafnholt Lawspeaker Spawn Egg', 'Azmar Royal Envoy Spawn Egg', 'Mirewick Counting-House Clerk Spawn Egg', 'Hrafnholt Smith Spawn Egg', 'Azmar Market Inspector Spawn Egg', 'Mirewick Auctioneer Spawn Egg', 'Azmar Caravan Master Spawn Egg', 'Azmar Sand-Dancer Spawn Egg'; the kill message says 'Killed Azmar Elite'; no item.elsewhere./entity.elsewhere. raw key anywhere",
    "setup": "creative, flat noon; open the Kingdom tab and hover each of the 7 trader/diplomat eggs (shot each tooltip, or one shot per egg via /give + hotbar name), then the Azmar tab's soldier egg; place it and look at the spawned soldier with F3 off and crosshair on it, then kill it with /kill @e[type=elsewhere:azmar_soldier] with chat open",
-   "override": "w8-kingdom3.json"
+   "override": "z2-d-kingcam.json"
   },
   {
    "n": 243,
@@ -23616,7 +23629,7 @@
     ],
     [
      "cmd",
-     "tp @s ~ ~6 ~15 180 15"
+     "execute as @e[type=elsewhere:grunthar,limit=1,sort=nearest,distance=..60] at @s run tp @p ^0 ^3 ^-12 facing entity @s"
     ],
     [
      "chunks"
@@ -23671,7 +23684,7 @@
    "check": "call: left fist raised high over the crown, head thrown back, axe arm out to the side; hoard: both fists over the crown (+1.3 s), then bent forward with both arms down at the floor (+1.6 s); differs clearly from the one-armed Golden Axe cleave",
    "setup": "`/elsewhere_dev boss grunthar arena`, `/elsewhere_dev hp 0.6`, three-quarter front view 6 blocks away; `/elsewhere_dev attack call_enforcers`, shoot at +1.2 s; `/elsewhere_dev hp 0.3`, `/elsewhere_dev attack molten_hoard`, shoot at +1.3 s and +1.6 s",
    "note": "generic: entity grunthar, 5 setup command(s); framing approximate",
-   "override": "w8-neb.json"
+   "override": "z2-d-kingcam.json"
   },
   {
    "n": 245,
@@ -25396,7 +25409,7 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "fly"
@@ -25410,12 +25423,36 @@
      "kingdom armies battle aldermark mirewick 32"
     ],
     [
+     "wait",
+     500
+    ],
+    [
      "cmd",
-     "tp @s ^ ^30 ^-28 ~ 50"
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..70] at @s run tp @p ^0 ^10 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..70] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..70] at @s run tp @p ^0 ^10 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..70] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..70] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..70] at @s run tp @p ^0 ^10 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..70] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..70] unless entity @e[type=elsewhere:kingdom_captain,distance=..70] as @e[type=elsewhere:kingdom_knight,limit=1,sort=nearest,distance=..70] at @s run tp @p ^0 ^10 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..70] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..70] unless entity @e[type=elsewhere:kingdom_captain,distance=..70] unless entity @e[type=elsewhere:kingdom_knight,distance=..70] as @e[type=elsewhere:kingdom_archer,limit=1,sort=nearest,distance=..70] at @s run tp @p ^0 ^10 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..70] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..70] unless entity @e[type=elsewhere:kingdom_captain,distance=..70] unless entity @e[type=elsewhere:kingdom_knight,distance=..70] unless entity @e[type=elsewhere:kingdom_archer,distance=..70] as @e[type=elsewhere:kingdom_lance,limit=1,sort=nearest,distance=..70] at @s run tp @p ^0 ^10 ^-16 facing entity @s"
     ],
     [
      "wait",
-     600
+     20
     ],
     [
      "shot",
@@ -25434,7 +25471,7 @@
    ],
    "check": "at most 3 men close on each enemy, from different sides (spread approach angles), while spare men hold their formation slots instead of queueing in a clump behind; walk within 20 blocks and soldiers keep fighting normally (no snap or freeze)",
    "setup": "creative, flat field; `/kingdom armies battle aldermark mirewick 32`, then fly 40 blocks off sideways (R1 ring) and watch the first clash from above",
-   "override": "w4-kingdom.json"
+   "override": "z2-d-kingcam.json"
   },
   {
    "n": 273,
@@ -31226,18 +31263,18 @@
     [
      "tp",
      "anchor",
-     -60,
-     6,
-     30,
+     0,
+     24,
+     0,
      180,
-     6
+     45
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
@@ -31248,11 +31285,15 @@
     ],
     [
      "wait",
-     200
+     300
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
     ],
     [
      "wait",
-     200
+     20
     ],
     [
      "shot",
@@ -31266,10 +31307,10 @@
      "tp",
      "anchor",
      0,
-     5,
-     16,
+     24,
+     0,
      180,
-     4
+     45
     ],
     [
      "chunks"
@@ -31280,11 +31321,15 @@
     ],
     [
      "wait",
-     200
+     300
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
     ],
     [
      "wait",
-     200
+     20
     ],
     [
      "shot",
@@ -31304,7 +31349,7 @@
    "check": "05:00: fisherfolk with fishing rods at the jetty and thralls with axes walking to the grove; 17:00: a crowd at the longhall drinking",
    "setup": "Hrafnholt capital, /time set 23000 (05:00), stand on the strand; then /time set 11000 (17:00) at the longhall",
    "note": "west town of the located castle_hrafnholt at each /time",
-   "override": "w8-kingdom3.json"
+   "override": "z2-d-kingcam.json"
   },
   {
    "n": 317,
@@ -36998,7 +37043,7 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
     ],
     [
      "cmd",
@@ -37011,6 +37056,9 @@
     [
      "gui",
      false
+    ],
+    [
+     "fly"
     ],
     [
      "cmd",
@@ -37034,7 +37082,7 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
@@ -37049,15 +37097,31 @@
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^9 ^-12 facing entity @s"
+     "execute as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^8 ^-13 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^9 ^-12 facing entity @s"
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^8 ^-13 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^9 ^-12 facing entity @s"
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^8 ^-13 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:kingdom_knight,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^8 ^-13 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] unless entity @e[type=elsewhere:kingdom_knight,distance=..90] as @e[type=elsewhere:kingdom_archer,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^8 ^-13 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] unless entity @e[type=elsewhere:kingdom_knight,distance=..90] unless entity @e[type=elsewhere:kingdom_archer,distance=..90] as @e[type=elsewhere:kingdom_lance,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^8 ^-13 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] unless entity @e[type=elsewhere:kingdom_knight,distance=..90] unless entity @e[type=elsewhere:kingdom_archer,distance=..90] unless entity @e[type=elsewhere:kingdom_lance,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^8 ^-13 facing entity @s"
     ],
     [
      "wait",
@@ -37089,7 +37153,7 @@
    "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
    "setup": "survival near the Aldermark castle, `/time set 0` (06:00), wait 1 in-game hour in the yard",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z2-d-kingcam.json"
   },
   {
    "n": 377,
@@ -37222,7 +37286,7 @@
    "steps": [
     [
      "reset",
-     "spectator"
+     "creative"
     ],
     [
      "cmd",
@@ -37235,6 +37299,9 @@
     [
      "gui",
      false
+    ],
+    [
+     "fly"
     ],
     [
      "cmd",
@@ -37258,7 +37325,7 @@
     ],
     [
      "wait",
-     200
+     300
     ],
     [
      "chunks"
@@ -37273,23 +37340,35 @@
     ],
     [
      "wait",
-     40
+     60
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:kingdom_knight,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] unless entity @e[type=elsewhere:kingdom_knight,distance=..90] as @e[type=elsewhere:kingdom_archer,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] unless entity @e[type=elsewhere:kingdom_knight,distance=..90] unless entity @e[type=elsewhere:kingdom_archer,distance=..90] as @e[type=elsewhere:kingdom_lance,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] unless entity @e[type=elsewhere:kingdom_knight,distance=..90] unless entity @e[type=elsewhere:kingdom_archer,distance=..90] unless entity @e[type=elsewhere:kingdom_lance,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-9 facing entity @s"
     ],
     [
      "wait",
@@ -37321,7 +37400,7 @@
    "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
    "setup": "Aldermark, 12:00 (`/time set 6000`), stand at the gate",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z2-d-kingcam.json"
   },
   {
    "n": 379,
@@ -42359,7 +42438,7 @@
     ],
     [
      "gui",
-     true
+     false
     ],
     [
      "fly"
@@ -42370,23 +42449,23 @@
     ],
     [
      "wait",
-     160
+     200
     ],
     [
      "cmd",
-     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^20 ^-26 facing entity @s"
+     "execute as @e[type=elsewhere:azmar_soldier,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-15 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:azmar_soldier,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^20 ^-26 facing entity @s"
+     "execute unless entity @e[type=elsewhere:azmar_soldier,distance=..120] as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-15 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^20 ^-26 facing entity @s"
+     "execute unless entity @e[type=elsewhere:azmar_soldier,distance=..120] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-15 facing entity @s"
     ],
     [
      "cmd",
-     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:azmar_soldier,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^20 ^-26 facing entity @s"
+     "execute unless entity @e[type=elsewhere:azmar_soldier,distance=..120] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^9 ^-15 facing entity @s"
     ],
     [
      "wait",
@@ -42409,7 +42488,7 @@
    ],
    "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
    "setup": "as above with /kingdom armies battle azmar mirewick 110; shot from 25 blocks to one side at head height",
-   "override": "w7-kingdom.json"
+   "override": "z2-d-kingcam.json"
   },
   {
    "n": 441,
