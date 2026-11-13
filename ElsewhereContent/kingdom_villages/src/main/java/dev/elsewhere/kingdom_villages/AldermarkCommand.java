@@ -28,7 +28,10 @@ public final class AldermarkCommand {
 				.then(Commands.literal("on").executes(c -> conquest(c, true)))
 				.then(Commands.literal("off").executes(c -> conquest(c, false))))
 			.then(Commands.literal("siege").executes(AldermarkCommand::siege))
-			.then(Commands.literal("liberate").executes(AldermarkCommand::liberate)));
+			.then(Commands.literal("liberate").executes(AldermarkCommand::liberate))
+			.then(Commands.literal("rush")
+				.then(Commands.literal("on").executes(c -> rush(c, true)))
+				.then(Commands.literal("off").executes(c -> rush(c, false)))));
 	}
 
 	static @Nullable VillageRecord nearestVillage(ServerLevel level, BlockPos p, int max) {
@@ -119,6 +122,17 @@ public final class AldermarkCommand {
 		l.conquestOn = on;
 		l.dirty();
 		c.getSource().sendSuccess(() -> Component.literal("Aldermark conquest (sieges, occupation, outposts) is now " + (on ? "ON" : "OFF") + "."), true);
+		return 1;
+	}
+
+	/**
+	 * QA helper (shot staging): rebuilds run 60 block ops per tick instead of 1 per second, the pace the lane's own gametest uses, so a
+	 * full burn/rebuild fits the 72000-tick player-presence window. Every safety rule still applies (BlockWriter); reset on server stop.
+	 */
+	static int rush(CommandContext<CommandSourceStack> c, boolean on) {
+		VillageManager.opInterval = on ? 1 : VillageManager.OP_INTERVAL;
+		VillageManager.opsPerRun = on ? 60 : 1;
+		c.getSource().sendSuccess(() -> Component.literal("Village rebuild pace: " + (on ? "RUSH (60 ops per tick)" : "normal (1 op per second)") + "."), true);
 		return 1;
 	}
 

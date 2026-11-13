@@ -486,6 +486,7 @@ public final class AzmarCastle {
 		// w6-castles (scene 17, L25.1): battered stair piers and blue banners flanking the keep door
 		for (int s = -1; s <= 1; s += 2) {
 			a.s(s * 3, 1, -1, stair(Direction.NORTH, Half.BOTTOM));
+			a.s(s * 3, 2, -1, CUT);
 			a.s(s * 3, 3, -1, banner());
 		}
 		// back door up to the throne hall (one step)

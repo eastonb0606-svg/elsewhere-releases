@@ -148,6 +148,14 @@ public final class TargetAssigner {
 		Set<LivingEntity> visible = visible(sq, level, now, bodies, lead, enemies, plan);
 		ArmyScale scale = ArmyScale.of(sq.faction());
 		Map<LivingEntity, int[]> load = new IdentityHashMap<>();
+		// melee already committed on one enemy by the OTHER squads' fresh plans counts against the same cap, so two or three lances do not
+		// pile on a lone enemy (s-swarm1 L308.1: 15 knights on one soldier)
+		UUID own = sq.id();
+		for (var en : PLANS.entrySet()) {
+			Plan op = en.getValue();
+			if (own.equals(en.getKey()) || now - op.tick > 3 * DECIDE || now < op.tick) continue;
+			for (var m : op.melee.entrySet()) if (m.getKey().isAlive()) load.computeIfAbsent(m.getKey(), k -> new int[2])[0] += m.getValue();
+		}
 		List<KingdomSoldier> open = new ArrayList<>();
 		// pass 1: keep a valid current target while its cap allows
 		for (KingdomSoldier b : bodies) {
@@ -176,7 +184,7 @@ public final class TargetAssigner {
 				}
 			}
 			if (pick != null) take(plan, load, b, pick);
-			else if (valid(b, b.getTarget())) take(plan, load, b, b.getTarget()); // nothing under the cap: keep fighting what it fights
+			else if ((b.role().ranged() || b.getTarget() instanceof Player) && valid(b, b.getTarget())) take(plan, load, b, b.getTarget()); // melee over the cap holds its slot instead of piling on
 			else if (!b.role().ranged() && !visible.isEmpty()) heldBack++;
 		}
 		// approach angles: each enemy's melee attackers spread around it, starting from the side the squad comes from

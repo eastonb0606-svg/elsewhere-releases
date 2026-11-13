@@ -53,6 +53,15 @@ public class EchoKnight extends MinionEntity {
 		return false;
 	}
 
+	/** Server: tickCount of the last blow; the striking stance (Mob aggressive flag) drops 40 ticks after it. */
+	private int lastStrikeTick = -1000;
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (!level().isClientSide() && isAggressive() && tickCount - lastStrikeTick > 40) setAggressive(false);
+	}
+
 	@Override
 	public double baseDamage() {
 		return EchoReliquary.DAMAGE;
@@ -71,6 +80,8 @@ public class EchoKnight extends MinionEntity {
 	@Override
 	protected void performAttack(ServerLevel level, ServerPlayer owner, LivingEntity target) {
 		this.swingForAttack(InteractionHand.MAIN_HAND);
+		this.setAggressive(true); // synced mob flag: the client holds the blade raised ("striking" stance) between blows
+		this.lastStrikeTick = this.tickCount;
 		if (hitTarget(level, owner, target, baseDamage())) {
 			// a soundless blow: a small sculk puff where it lands is the only tell
 			level.sendParticles(ParticleTypes.SCULK_CHARGE_POP, target.getX(), target.getY() + target.getBbHeight() * 0.6, target.getZ(), 5, 0.25, 0.3, 0.25, 0.01);

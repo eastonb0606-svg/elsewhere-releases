@@ -178,6 +178,12 @@ public final class RoadKit {
 		return out;
 	}
 
+	/** Logs, leaves, mangrove roots and hanging moss: what a tree is made of. */
+	static boolean isTree(BlockState b) {
+		return b.is(net.minecraft.tags.BlockTags.LOGS) || b.is(net.minecraft.tags.BlockTags.LEAVES) || b.is(Blocks.MANGROVE_ROOTS)
+			|| b.is(Blocks.MUDDY_MANGROVE_ROOTS) || b.is(Blocks.PALE_HANGING_MOSS) || b.is(Blocks.PALE_MOSS_CARPET) || b.is(Blocks.PALE_MOSS_BLOCK);
+	}
+
 	public static void build(FitPiece p, W w) {
 		int[][] c = cells(p);
 		if (c.length < 2) return;
@@ -234,6 +240,21 @@ public final class RoadKit {
 				BlockState b = w.getW(x, y, z);
 				if (b.isAir() || !b.getFluidState().isEmpty()) continue;
 				if (W.soft(b) || y <= dy + 2) w.setW(x, y, z, air);
+			}
+			// trees: a trunk, its canopy and roots must not stand in the corridor (a pale-oak trunk in the middle lane left the road
+			// uncleared): remove logs, leaves, roots and hanging moss from the deck up to 32 blocks (a trunk is contiguous; stop after 4 clear blocks)
+			for (int y = dy + 1, gapRun = 0; y <= dy + 32 && gapRun < 4; y++) {
+				BlockState b = w.getW(x, y, z);
+				if (b.isAir()) {
+					gapRun++;
+					continue;
+				}
+				if (isTree(b)) {
+					w.setW(x, y, z, air);
+					gapRun = 0;
+				} else if (y > dy + 3) {
+					gapRun++;
+				}
 			}
 			if (trestle && !centre) {
 				boolean edge = !all.contains(BlockPos.asLong(x + 1, 0, z)) || !all.contains(BlockPos.asLong(x - 1, 0, z))

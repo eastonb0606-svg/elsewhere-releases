@@ -34,6 +34,17 @@ public final class ElsewhereCommands {
 	}
 
 	public static void init() {
+		// Dev: /elsewhere_dev lantern_procession. A literal child only, so it merges with the content modules' /elsewhere_dev roots without clashing.
+		CommandRegistrationCallback.EVENT.register((dispatcher, registries, env) -> dispatcher.register(
+			Commands.literal("elsewhere_dev").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+				.then(Commands.literal("lantern_procession").executes(ctx -> {
+					ServerPlayer p = ctx.getSource().getPlayerOrException();
+					ServerLevel level = p.level();
+					boolean ok = dev.elsewhere.palehollow.LanternEvent.start(level, p)
+						|| dev.elsewhere.palehollow.LanternEvent.begin(level, p.blockPosition().getX(), p.blockPosition().getZ(), p);
+					if (!ok) ctx.getSource().sendFailure(Component.literal("Could not start a procession here"));
+					return ok ? 1 : 0;
+				}))));
 		CommandRegistrationCallback.EVENT.register((dispatcher, registries, env) -> dispatcher.register(
 			Commands.literal("elsewhere")
 				.then(Commands.literal("travel").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS)).then(Commands.argument("dimension", DimensionArgument.dimension()).executes(ctx -> {

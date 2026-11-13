@@ -105,13 +105,16 @@ public class TotemModel extends EntityModel<TotemRenderer.State> {
 		float age = s.ageInTicks;
 		switch (kind) {
 			case BRAMBLE -> {
-				// a lash: both arms whip out and back over 8 ticks after each pulse
-				float lash = s.pulseAge < 8F ? Mth.sin(s.pulseAge / 8F * Mth.PI) : 0F;
+				// a lash (14 ticks after each pulse): wind-up (arms thrown up and out), whip (arms snap forward and down, crossing in),
+				// then recover. Synced to the server pulse, which fires on the tick the lash lands.
+				float t = Mth.clamp(s.pulseAge / 14F, 0F, 1F);
+				float up = s.pulseAge >= 14F ? 0F : t < 0.3F ? Mth.sin(t / 0.3F * Mth.HALF_PI) : Mth.cos((t - 0.3F) / 0.7F * Mth.HALF_PI);
+				float whip = s.pulseAge >= 14F ? 0F : (t >= 0.3F ? Mth.sin((t - 0.3F) / 0.7F * Mth.PI) : 0F);
 				float sway = Mth.sin(age * 0.06F) * 0.06F;
-				leftArm.zRot = -ARM_REST - lash * 1.1F + sway;
-				rightArm.zRot = ARM_REST + lash * 1.1F + sway;
-				leftArm.xRot = -lash * 0.5F;
-				rightArm.xRot = -lash * 0.5F;
+				leftArm.zRot = -ARM_REST - up * 1.4F + whip * 1.0F + sway;
+				rightArm.zRot = ARM_REST + up * 1.4F - whip * 1.0F + sway;
+				leftArm.xRot = -up * 0.4F - whip * 1.5F;
+				rightArm.xRot = -up * 0.4F - whip * 1.5F;
 				fernA.zRot = Mth.sin(age * 0.05F) * 0.08F;
 				fernB.zRot = Mth.cos(age * 0.045F) * 0.08F;
 				crown.yRot = Mth.sin(age * 0.02F) * 0.05F;

@@ -317,7 +317,10 @@ public final class TownsfolkManager {
 			while (left > 0 && budget > 0) {
 				left--;
 				budget--;
-				if (spawnOne(lv, t, obs, null) == null) left = 0; // no place now: the next evaluation asks again
+				if (spawnOne(lv, t, obs, null) == null) {
+					left = 0; // no place now (chunks still loading after a teleport or a time set): ask again at the next evaluation (about 1 s)
+					dirty = true;
+				}
 			}
 			if (left <= 0) it.remove();
 			else e.setValue(left);

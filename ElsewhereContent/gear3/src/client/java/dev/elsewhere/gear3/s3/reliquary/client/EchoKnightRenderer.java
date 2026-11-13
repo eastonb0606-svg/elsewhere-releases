@@ -20,6 +20,8 @@ public class EchoKnightRenderer extends MobRenderer<EchoKnight, EchoKnightRender
 	/** Render state: the sword swing (0..1, from the synced attack swing). */
 	public static class State extends LivingEntityRenderState {
 		public float attack;
+		/** Striking stance: raised blade between blows (synced Mob aggressive flag). */
+		public boolean striking;
 	}
 
 	public EchoKnightRenderer(EntityRendererProvider.Context ctx) {
@@ -41,6 +43,7 @@ public class EchoKnightRenderer extends MobRenderer<EchoKnight, EchoKnightRender
 	public void extractRenderState(EchoKnight e, State s, float pt) {
 		super.extractRenderState(e, s, pt);
 		s.attack = e.getSwingAnimation(pt);
+		s.striking = e.isAggressive();
 	}
 
 	@Override

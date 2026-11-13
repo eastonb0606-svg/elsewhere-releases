@@ -241,8 +241,24 @@ FOREST = (46, 90, 44); FOREST_L = (62, 108, 58); BARK = (107, 74, 43); WADMAL = 
 SEALSKIN = (74, 70, 62); SEA = (70, 98, 118); BRONZE = (176, 132, 64); AMBER = (214, 150, 44)
 
 
+def thrall_collar_over(s):
+    """Iron collar repeated on the jacket layer (front and back, two rows) so a hood or beard cannot hide it."""
+    for f in ("front", "back", "left", "right"):
+        fx, fy, w, h = face_box("jacket", f)
+        for x in range(w):
+            s.fpx("jacket", f, x, 0, IRON, 3)
+            if f in ("front", "back"):
+                s.fpx("jacket", f, x, 1, dk(IRON, 14), 3)
+    s.fpx("jacket", "front", 3, 1, lt(IRON, 30)); s.fpx("jacket", "front", 4, 1, lt(IRON, 30))
+
+
 @role("hrafnholt", "thrall")
 def hraf_thrall(s, v):
+    _hraf_thrall(s, v)
+    thrall_collar_over(s)
+
+
+def _hraf_thrall(s, v):
     if v == 1:
         tone = person(s, (222, 186, 156), (118, 84, 54), "cropped", woman=True, iris=(80, 96, 80), cheeks=(214, 150, 130))
         kerchief(s, WADMAL_D, rows=3, knot=True)
@@ -494,6 +510,11 @@ def az_scribe(s, v):
     for y in range(1, 6):
         s.fpx("head", "right", 5, y, (196, 170, 96))
     s.fpx("head", "right", 5, 0, (40, 30, 24))
+    # also on the hat layer at the front and back edge of the ear so the pen reads from the front and the back
+    for y in range(0, 4):
+        s.fpx("hat", "right", 4, y, (196, 170, 96)); s.fpx("hat", "right", 5, y, (196, 170, 96))
+        s.fpx("hat", "front", 0, y, (196, 170, 96)); s.fpx("hat", "back", 7, y, (196, 170, 96))
+    s.fpx("hat", "front", 0, 0, (40, 30, 24)); s.fpx("hat", "back", 7, 0, (40, 30, 24))
     if v == 2:      # older scribe: grey stubble at the temples
         for f in ("right", "left"):
             for x in range(8):
@@ -542,6 +563,12 @@ def az_scribe(s, v):
     s.frect("body", "left", 0, 8, 4, 11, (190, 160, 110), 2)
     s.fpx("body", "left", 1, 9, CARN); s.fpx("body", "left", 2, 9, OBS)
     s.fpx("rarm", "front", 1, 11, OBS); s.fpx("rarm", "front", 2, 11, (60, 40, 60))
+    # palette at the hip, readable from the front and the back (jacket layer so it stands off the body)
+    s.frect("jacket", "front", 5, 8, 8, 11, (190, 160, 110), 2)
+    s.fpx("jacket", "front", 5, 8, CARN); s.fpx("jacket", "front", 6, 8, OBS)
+    s.frect("jacket", "back", 0, 8, 3, 11, (190, 160, 110), 2)
+    s.fpx("jacket", "back", 0, 8, CARN); s.fpx("jacket", "back", 1, 8, OBS)
+    s.frect("jacket", "left", 0, 8, 4, 11, (190, 160, 110), 2)
 
 
 @role("azmar", "porter")
@@ -883,9 +910,11 @@ def mw_lamp(s, v):
         coat, hat_c = CRIMSON, PURPLE_D
     # tall felt hat with a gold band (crown rows 0-3 on the hat layer)
     s.fill("hat", hat_c, 2, faces=("top",))
-    for f in SIDES:
-        s.frect("hat", f, 0, 0, 8, 3, hat_c, 2)
-        s.frect("hat", f, 0, 2, 8, 3, MGOLD, 1)
+    for f in SIDES:       # crown covers the head rows 0-4 on the sides and back; a wide gold band sits low on it
+        s.frect("hat", f, 0, 0, 8, 5, hat_c, 2)
+        s.frect("hat", f, 0, 3, 8, 5, MGOLD, 1) if f != "front" else None
+    s.frect("hat", "front", 0, 0, 8, 2, hat_c, 2)
+    s.frect("hat", "front", 0, 2, 8, 3, MGOLD, 1)
     clear_face(s)
     # long coat with gold buttons and lantern-amber cuffs, coat skirts to the knee
     flat(s, "body", coat, 3)

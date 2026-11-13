@@ -156,6 +156,10 @@ public final class StarpiercerChecks {
 		checkS("Starpiercer: no gravity for the first 32 blocks, then it falls", () -> {
 			clear(l, base);
 			double z0 = base.getZ() - 19.5; // the whole ~46-block flight stays in the forced test chunks (z 16..79)
+			// real worldgen (the "world" test variant) can put terrain or trees in the corridor: open an air lane so the flight is free
+			for (int dz = -20; dz <= 30; dz++)
+				for (int dy = 1; dy <= 4; dy++)
+					for (int dx = -1; dx <= 1; dx++) l.setBlock(base.offset(dx, dy, dz), net.minecraft.world.level.block.Blocks.AIR.defaultBlockState(), 2);
 			p.snapTo(base.getX() + 0.5, base.getY() + 1, z0, 0, 0);
 			StarpiercerArrow arrow = new StarpiercerArrow(l, p, new ItemStack(Items.ARROW), new ItemStack(bow));
 			arrow.shoot(0, 0, 1, Starpiercer.velocity(1F), 0F);

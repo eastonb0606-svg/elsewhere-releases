@@ -429,7 +429,10 @@ public final class CastleKit {
 			if (Math.abs(x) <= 2) continue;
 			int wx = w.l.o.getX() + x, wy = w.l.o.getY() + dy, wz = w.l.o.getZ() + z;
 			if (!w.l.p.clip.isInside(wx, wy, wz)) continue;
-			if (natural(w.l.p.level.getBlockState(new BlockPos(wx, wy, wz)))) w.s(x, dy, z, deck);
+			if (natural(w.l.p.level.getBlockState(new BlockPos(wx, wy, wz)))) {
+				w.s(x, dy, z, deck);
+				w.under(x, dy, z, Blocks.STONE_BRICKS.defaultBlockState()); // underpinned: never floats over a drop
+			}
 		}
 		clearFoliage(w, -18, 31, 18, 37, dy + 1, 14);
 	}

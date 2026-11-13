@@ -182,6 +182,10 @@ public final class Nameplate {
 			g += (int) ((255 - g) * t);
 			b += (int) ((255 - b) * t);
 		}
+		// L255.1: every faction colour reads as a light tint of itself on the dark plate (a fixed 30% lift toward white)
+		r += (int) ((255 - r) * 0.30);
+		g += (int) ((255 - g) * 0.30);
+		b += (int) ((255 - b) * 0.30);
 		return r << 16 | g << 8 | b;
 	}
 

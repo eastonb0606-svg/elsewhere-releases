@@ -42,7 +42,7 @@ public class EchoKnightModel extends EntityModel<EchoKnightRenderer.State> {
 
 		PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create().texOffs(16, 16).addBox(-4F, 0F, -2F, 8F, 12F, 4F), PartPose.ZERO);
 		body.addOrReplaceChild("tabard", CubeListBuilder.create().texOffs(0, 32).addBox(-4F, 0F, -2F, 8F, 14F, 4F, new CubeDeformation(0.3F)), PartPose.ZERO);
-		body.addOrReplaceChild("cape", CubeListBuilder.create().texOffs(64, 32).addBox(-4F, 0F, 0F, 8F, 18F, 0F), PartPose.offsetAndRotation(0F, 0.5F, 2.6F, 0.08F, 0F, 0F));
+		body.addOrReplaceChild("cape", CubeListBuilder.create().texOffs(64, 32).addBox(-4F, 0F, 0F, 8F, 18F, 0F, new CubeDeformation(0F, 0F, 0.06F)), PartPose.offsetAndRotation(0F, 0.5F, 2.6F, 0.08F, 0F, 0F));
 
 		PartDefinition rArm = root.addOrReplaceChild("right_arm", CubeListBuilder.create().texOffs(40, 16).addBox(-3F, -2F, -2F, 4F, 12F, 4F), PartPose.offset(-5F, 2F, 0F));
 		rArm.addOrReplaceChild("right_pauldron", CubeListBuilder.create().texOffs(80, 16).addBox(-3.5F, -3F, -2.5F, 5F, 3F, 5F), PartPose.ZERO);
@@ -80,6 +80,12 @@ public class EchoKnightModel extends EntityModel<EchoKnightRenderer.State> {
 			rightArm.xRot = -2.4F * arc + stride * 0.3F;
 			rightArm.yRot = -0.35F * arc;
 			blade.xRot = -0.2F - 1.2F * arc;
+		} else if (s.striking) {
+			// between blows in a fight: both hands bring the blade up in a guard, point forward and raised
+			rightArm.xRot = -1.35F + stride * 0.3F - drift;
+			rightArm.yRot = -0.2F;
+			blade.xRot = -0.9F;
+			leftArm.xRot = -0.9F + drift;
 		} else {
 			rightArm.xRot = stride * 0.3F - drift;
 			rightArm.yRot = 0F;
