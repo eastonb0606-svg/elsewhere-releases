@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 19:14",
+ "generated": "2026-11-12 19:15",
  "scenes": [
   {
    "n": 1,
@@ -32696,11 +32696,15 @@
     [
      "tp",
      "stage",
-     3.5,
      0,
-     3,
-     90,
-     0
+     3.4,
+     4.5,
+     0,
+     90
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "camera",
@@ -32761,11 +32765,15 @@
     [
      "tp",
      "stage",
-     -3.5,
      0,
-     3,
-     -90,
-     0
+     3.4,
+     4.5,
+     0,
+     90
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "camera",
@@ -32826,11 +32834,15 @@
     [
      "tp",
      "stage",
-     3.5,
      0,
-     5,
-     90,
-     0
+     3.4,
+     4.5,
+     0,
+     90
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "camera",
@@ -32891,11 +32903,15 @@
     [
      "tp",
      "stage",
-     -3.5,
      0,
-     5,
-     -90,
-     0
+     3.4,
+     4.5,
+     0,
+     90
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "camera",
@@ -32916,11 +32932,15 @@
     [
      "tp",
      "stage",
-     3.5,
      0,
-     6,
-     90,
-     0
+     3.4,
+     4.5,
+     0,
+     90
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "wait",
@@ -32991,7 +33011,7 @@
    "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
    "setup": "a 2-deep pool 12 long, a drowned or a husk standing in the water 10 blocks away, fire the crossbow level across the water from the bank; shot while the bolt is underwater",
    "note": "generic: item tidebrass_harpoon_bolt; framing approximate",
-   "override": "w7z-gearfx.json"
+   "override": "z2-d-items.json"
   },
   {
    "n": 325,
@@ -40560,25 +40580,29 @@
      30
     ],
     [
+     "tp",
+     "stage",
+     7,
+     0.5,
+     -0.5,
+     90,
+     10
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
      "cmd",
      "damage @e[type=elsewhere:rootling,limit=2,sort=nearest] 4"
     ],
     [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     0,
-     12
-    ],
-    [
-     "camera",
-     "front"
-    ],
-    [
      "wait",
-     80
+     14
     ],
     [
      "shot",
@@ -40586,7 +40610,7 @@
     ],
     [
      "wait",
-     40
+     30
     ],
     [
      "shot",
@@ -40610,7 +40634,7 @@
    "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
    "setup": "as above, 3 Rootlings out (e.g. Rootling staff), hurt one (`/damage @e[type=elsewhere:rootling,limit=1,sort=nearest] 4`), wait 5 s, camera 6 back at the side",
    "note": "generic: entity rootling, 1 setup command(s); framing approximate",
-   "override": "w7-kingdom.json"
+   "override": "z2-d-items.json"
   },
   {
    "n": 425,
@@ -40800,7 +40824,7 @@
     ],
     [
      "wait",
-     20
+     40
     ],
     [
      "camera",
@@ -40823,11 +40847,11 @@
     [
      "tp",
      "stage",
-     5,
      0,
      6,
-     90,
-     0
+     4.5,
+     0,
+     90
     ],
     [
      "wait",
@@ -40861,23 +40885,35 @@
      "use_up"
     ],
     [
+     "wait",
+     1
+    ],
+    [
      "tp",
      "stage",
-     -5,
+     5,
      0,
      6,
-     -90,
+     90,
      0
     ],
     [
+     "camera",
+     "back"
+    ],
+    [
      "wait",
-     1
+     3
     ],
     [
      "shot",
      "sunglass_third_person_2"
     ],
     [
+     "camera",
+     "first"
+    ],
+    [
      "tp",
      "stage",
      0,
@@ -40888,54 +40924,62 @@
     ],
     [
      "wait",
-     30
-    ],
-    [
-     "tp",
-     "stage",
-     4,
-     0,
-     7,
-     38.7,
-     0
-    ],
-    [
-     "wait",
-     10
-    ],
-    [
-     "shot",
-     "sunglass_in_use_first_person"
-    ],
-    [
-     "tp",
-     "stage",
-     -4,
-     0,
-     7,
-     -38.7,
-     0
-    ],
-    [
-     "wait",
-     5
-    ],
-    [
-     "shot",
-     "sunglass_in_use_third_person"
+     50
     ],
     [
      "tp",
      "stage",
      2,
      0,
-     9.5,
-     38.7,
+     11,
+     65.8,
      0
     ],
     [
      "wait",
-     5
+     6
+    ],
+    [
+     "shot",
+     "sunglass_in_use_first_person"
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "tp",
+     "stage",
+     2,
+     0,
+     10.4,
+     65.8,
+     0
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "shot",
+     "sunglass_in_use_third_person"
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "tp",
+     "stage",
+     1.3,
+     0,
+     11.3,
+     62,
+     0
+    ],
+    [
+     "wait",
+     4
     ],
     [
      "shot",
@@ -40999,7 +41043,7 @@
    "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
    "setup": "flat daylight, fire a full-draw bow at a stone wall 12 blocks away; third person F5, one shot mid-flight, one of the arrow stuck in the wall from 2 blocks",
    "note": "generic: item sunglass; framing approximate",
-   "override": "w7z-gearfx.json"
+   "override": "z2-d-items.json"
   },
   {
    "n": 428,
@@ -42036,28 +42080,11 @@
      40
     ],
     [
-     "wait",
-     12
-    ],
-    [
-     "shot",
-     "bramble_totem_first_person"
-    ],
-    [
-     "camera",
-     "front"
+     "chunks"
     ],
     [
      "wait",
-     10
-    ],
-    [
-     "shot",
-     "bramble_totem_third_person"
-    ],
-    [
-     "camera",
-     "first"
+     40
     ],
     [
      "use_down"
@@ -42071,7 +42098,49 @@
     ],
     [
      "wait",
-     40
+     20
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     18
+    ],
+    [
+     "wait",
+     25
+    ],
+    [
+     "shot",
+     "bramble_totem_first_person"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     -2,
+     0,
+     12
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "shot",
+     "bramble_totem_third_person"
+    ],
+    [
+     "wait",
+     30
     ],
     [
      "shot",
@@ -42080,19 +42149,19 @@
     [
      "tp",
      "stage",
-     1.5,
+     6,
      0,
-     -1,
-     0,
-     5
+     2.5,
+     90,
+     8
     ],
     [
      "camera",
-     "back"
+     "first"
     ],
     [
      "wait",
-     25
+     20
     ],
     [
      "shot",
@@ -42109,6 +42178,15 @@
     [
      "camera",
      "first"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "hold",
@@ -42160,7 +42238,7 @@
    "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
    "setup": "flat daylight, survival with Glimmer; use the Bramble Totem on grass, then /summon 4 NoAI husks 2-4 blocks around it; camera 5 back, third person, wait 2 s",
    "note": "generic: item bramble_totem; framing approximate",
-   "override": "w5-useanims.json"
+   "override": "z2-d-items.json"
   },
   {
    "n": 437,
@@ -43380,6 +43458,15 @@
      4
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     1.5,
+     0,
+     5
+    ],
+    [
      "look_target"
     ],
     [
@@ -43391,13 +43478,16 @@
     ],
     [
      "wait",
-     8
+     3
     ],
     [
-     "view",
-     0.0,
-     5.0,
-     90.0
+     "tp",
+     "stage",
+     5.5,
+     0,
+     2.5,
+     90,
+     5
     ],
     [
      "camera",
@@ -43408,7 +43498,7 @@
     ],
     [
      "wait",
-     12
+     6
     ],
     [
      "shot",
@@ -43416,7 +43506,7 @@
     ],
     [
      "wait",
-     30
+     25
     ],
     [
      "look_target"
@@ -43439,7 +43529,7 @@
    "check": "the knight raises the blade overhead and brings it down on the husk; a small cyan sculk puff where it lands; no hit sound from the knight, and a nearby sculk sensor stays dark",
    "setup": "same; `/summon husk ~4 ~ ~ {NoAI:1b}`, hit the husk once with the hand; shot side-on from 5 blocks at +2 s",
    "note": "generic: entity echo_knight, 1 setup command(s); framing approximate",
-   "override": "w9-smisc.json"
+   "override": "z2-d-items.json"
   },
   {
    "n": 451,
