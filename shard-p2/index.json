@@ -1,0 +1,170 @@
+{
+  "lanes": {
+    "villages": {
+      "the faction villages and rebuild styles (aldermark realm)": [
+        {
+          "file": "villages__village_near_aldermark.png",
+          "scene": 2,
+          "line": 10,
+          "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:climbers_cairn": [
+        {
+          "file": "s_struct_verdigris__climbers_cairn_s_6_4_6.png",
+          "scene": 154,
+          "line": 171,
+          "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_petalwind": {
+      "elsewhere:petal_pagoda": [
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_24_16_24.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_petalwind__petal_pagoda_s_0_4_26.png",
+          "scene": 181,
+          "line": 196,
+          "check": "three skyblossom tiers with stripped-log posts and lattice windows; red roofs that sweep (stair eaves, a second stair ring, upturned corner tips, lanterns hanging under the corners); the roof terrace on log posts and corbels with 4 wind bells; a calcite platform with a polished-tuff kerb on a ground-fitted foundation; court terraces around it on their own levels stepping down the slope, tuff-brick steps up on all 4 axes, stone lanterns, petals and saplings; nothing floating at the island edge",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p4_rivalanims": {
+      "elsewhere:hrafnholt_jarl (phase 2 glyphs)": [
+        {
+          "file": "s_p4_rivalanims__hrafnholt_jarl_aura_phase2.png",
+          "scene": 202,
+          "line": 235,
+          "check": "glowing glyphs float just outside the armour and pulse slowly: Hrafnholt pale-blue rune staves (algiz on the chest, hagall on the back, forearm runes, brow band); Azmar gold sun disk with lapis eye on the chest, gold armbands and circlet; Mirewick crimson ledger sash and a gold coin seal, violet arm veins; Aldermark white-gold oath cross and limb lines; none at full HP, none on real players",
+          "status": "ok",
+          "taken": "00:43:01"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "rival kingdoms' plates (each kingdom unique)": [
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_6.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "00:43:03"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_12.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "00:43:05"
+        },
+        {
+          "file": "s_p3_nameplates__rival_kingdoms_plates_each_kingdom_uniqu_18.png",
+          "scene": 228,
+          "line": 258,
+          "check": "Hrafnholt: \"Hird-Captain\" / \"Hird-Sergeant\", round green shield with a brown raven, green tint; Azmar: \"Qaid\" / \"Jemadar\", gold-winged blue scarab under a sun disc, blue tint; Mirewick: \"Ward-Captain\" / \"Reeve\", purple-and-gold lantern, purple tint; text readable on the dark plate",
+          "status": "ok",
+          "taken": "00:43:08"
+        }
+      ]
+    },
+    "s_p6_useanims": {
+      "elsewhere:ironclad_flail": [
+        {
+          "file": "s_p6_useanims__ironclad_flail_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_first_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_in_use_third_person_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_after_use_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__ironclad_flail_tooltip_2.png",
+          "scene": 232,
+          "line": 262,
+          "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
+          "status": "pending"
+        }
+      ],
+      "weapon effects level + kill switch": [
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "pending"
+        },
+        {
+          "file": "s_p6_useanims__weapon_effects_level_kill_switch_5s.png",
+          "scene": 237,
+          "line": 267,
+          "check": "shot 1: the flail arc still plays but no ribbon; chat shows \"Elsewhere weapon effects: low\"; shot 2: vanilla sword swing and the plain flail model (2.x behaviour)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:fern_terrace_farms": [
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_overview.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__fern_terrace_farms_ground.png",
+          "scene": 480,
+          "line": 532,
+          "check": "rice-terrace fields stepping with the ground (mud-brick bunds, mossy in places), ripe wheat/carrots/potatoes by tier, small enclosed water squares, ferns and munchfruit, a stair path straight uphill, a lean-to field shed with chest and composter, a scarecrow",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "00:43:08",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
