@@ -27,13 +27,13 @@ final class TrailGeom implements SubmitNodeCollector.CustomGeometryRenderer {
 	final float[] pts = new float[SwingCurves.TRAIL_MAX * 6];
 	int count;
 	int color = 0xFFFFFF;
-	float alpha = 0.55F;
+	float alpha = 0.32F;
 
 	static TrailGeom next() {
 		TrailGeom g = RING[next];
 		next = (next + 1) % POOL;
 		g.count = 0;
-		g.alpha = 0.55F;
+		g.alpha = 0.32F;
 		return g;
 	}
 
@@ -58,6 +58,10 @@ final class TrailGeom implements SubmitNodeCollector.CustomGeometryRenderer {
 	}
 
 	private void v(VertexConsumer buf, PoseStack.Pose pose, int o, int argb) {
-		buf.addVertex(pose, pts[o], pts[o + 1], pts[o + 2]).setColor(argb);
+		// thin ribbon: the outer edge (o + 3) is pulled halfway to the inner edge, so it never fills the view
+		float k = (o % 6 == 0) ? 0F : 0.5F;
+		int b = o - (o % 6);
+		float x = pts[b] + (pts[b + 3] - pts[b]) * k, y = pts[b + 1] + (pts[b + 4] - pts[b + 1]) * k, z = pts[b + 2] + (pts[b + 5] - pts[b + 2]) * k;
+		buf.addVertex(pose, x, y, z).setColor(argb);
 	}
 }

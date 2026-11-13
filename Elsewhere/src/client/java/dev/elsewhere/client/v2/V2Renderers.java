@@ -4,7 +4,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import dev.elsewhere.Elsewhere;
 import dev.elsewhere.palehollow.entity.CompanionEntity;
 import net.minecraft.client.model.animal.feline.AdultCatModel;
-import net.minecraft.client.model.animal.goat.GoatModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.monster.endermite.EndermiteModel;
 import net.minecraft.client.renderer.entity.AgeableMobRenderer;
@@ -26,12 +25,12 @@ public final class V2Renderers {
 		return Elsewhere.id("textures/entity/" + name + ".png");
 	}
 
-	/** Hollow Stag: goat rig, horns always on (antlers), pale bone hide, a little larger than a goat. */
-	public static class Stag extends AgeableMobRenderer<CompanionEntity, GoatRenderState, GoatModel> {
+	/** Hollow Stag: custom deer model (goat quadruped rig, goat horns and beard dropped, multi-tine cube antlers), pale ghost hide. */
+	public static class Stag extends AgeableMobRenderer<CompanionEntity, GoatRenderState, StagModel> {
 		private static final Identifier TEX = tex("hollow_stag");
 
 		public Stag(final EntityRendererProvider.Context ctx) {
-			super(ctx, new GoatModel(ctx.bakeLayer(ModelLayers.GOAT)), new GoatModel(ctx.bakeLayer(ModelLayers.GOAT)), 0.8F);
+			super(ctx, new StagModel(ctx.bakeLayer(StagModel.LAYER)), new StagModel(ctx.bakeLayer(StagModel.LAYER)), 0.8F);
 		}
 
 		@Override
@@ -42,8 +41,6 @@ public final class V2Renderers {
 		@Override
 		public void extractRenderState(final CompanionEntity entity, final GoatRenderState state, final float partialTick) {
 			super.extractRenderState(entity, state, partialTick);
-			state.hasLeftHorn = true;
-			state.hasRightHorn = true;
 			state.rammingXHeadRot = 0.0F;
 		}
 

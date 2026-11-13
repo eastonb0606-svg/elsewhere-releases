@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 18:02",
+ "generated": "2026-11-12 18:05",
  "scenes": [
   {
    "n": 1,
@@ -30023,13 +30023,17 @@
      "elsewhere:castle_aldermark"
     ],
     [
+     "locate_near",
+     "#minecraft:village"
+    ],
+    [
      "tp",
      "anchor",
      0,
-     6,
-     24,
+     22,
+     22,
      180,
-     6
+     38
     ],
     [
      "chunks"
@@ -30051,11 +30055,28 @@
     ],
     [
      "wait",
-     400
+     300
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..110] at @s run tp @p ^0 ^10 ^-16 facing entity @s"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
      "aldermark_fields_at_14_00_vespers"
+    ],
+    [
+     "tp",
+     "anchor",
+     0,
+     22,
+     22,
+     180,
+     38
     ],
     [
      "cmd",
@@ -30071,7 +30092,15 @@
     ],
     [
      "wait",
-     400
+     300
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..110] at @s run tp @p ^0 ^5 ^-10 facing entity @s"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -30091,7 +30120,7 @@
    "check": "14:00: peasants out at the fields working (hoe pose), craftsmen at the workshops; 17:00: residents gathering at the chapel praying; 18:00: tavern crowd",
    "setup": "same capital, /time set 8000 (14:00), then 11000 (17:00)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 316,
@@ -31716,7 +31745,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -31735,9 +31764,6 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "fly"
-    ],
-    [
      "locate",
      "elsewhere:castle_aldermark"
     ],
@@ -31745,10 +31771,10 @@
      "tp",
      "anchor",
      0,
-     8,
-     24,
+     12,
+     14,
      180,
-     8
+     30
     ],
     [
      "chunks"
@@ -31773,6 +31799,26 @@
      300
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-7 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-7 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-7 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-7 facing entity @s"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
      "shot",
      "pose_work_all_four_kingdoms_one_aldermar"
     ]
@@ -31786,7 +31832,7 @@
    "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
    "setup": "the row plus the archer at the end, two shots 1 s apart",
    "note": "generic: entity kingdom_archer; framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 328,
@@ -31814,7 +31860,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -31833,24 +31879,25 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "fly"
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
     ],
     [
      "locate",
      "elsewhere:castle_aldermark"
     ],
     [
+     "cmd",
+     "effect give @s night_vision infinite 1 true"
+    ],
+    [
      "tp",
      "anchor",
      0,
-     10,
-     30,
+     12,
+     14,
      180,
-     8
-    ],
-    [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
+     30
     ],
     [
      "chunks"
@@ -31873,6 +31920,26 @@
     [
      "wait",
      400
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-6 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-6 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-6 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.5 ^-6 facing entity @s"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -31900,7 +31967,7 @@
    "check": "DRINK: Hrafnholt raises a goat horn to the mouth and tips the head back, Aldermark a honey-bottle ale (every ~3.5 s, lowered between); TORCH: the off hand holds a torch (Mirewick a lantern) raised high; sword stays in the main hand",
    "setup": "Hrafnholt + Aldermark with DRINK, Aldermark + Mirewick with TORCH, `/time set 13000`; for DRINK take 4 shots 1 s apart",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 330,
@@ -31945,7 +32012,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -31964,24 +32031,21 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "fly"
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
     ],
     [
      "locate",
      "elsewhere:castle_aldermark"
     ],
     [
-     "cmd",
-     "effect give @s night_vision infinite 0 true"
-    ],
-    [
      "tp",
      "anchor",
      0,
-     10,
-     30,
+     12,
+     14,
      180,
-     8
+     30
     ],
     [
      "chunks"
@@ -32003,7 +32067,27 @@
     ],
     [
      "wait",
-     400
+     500
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^1.6 ^5 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^1.6 ^5 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^1.6 ^5 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^1.6 ^5 facing entity @s"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -32031,7 +32115,7 @@
    "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
    "setup": "a real Aldermark garrison (or 3 soldiers with AI on near their post), `/time set 18000`, wait for the night routine to rest them, camera 5 blocks away",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 333,
@@ -32042,7 +32126,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -32061,9 +32145,6 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "fly"
-    ],
-    [
      "locate",
      "elsewhere:castle_aldermark"
     ],
@@ -32071,10 +32152,10 @@
      "tp",
      "anchor",
      0,
-     4,
-     22,
+     12,
+     14,
      180,
-     4
+     30
     ],
     [
      "chunks"
@@ -32099,6 +32180,18 @@
      400
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.0 ^-5 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:townsfolk,distance=..90] as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^2.0 ^-5 facing entity @s"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
      "shot",
      "townsfolk_routine_poses_s_townsfolk_resi"
     ]
@@ -32112,7 +32205,7 @@
    "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
    "setup": "a capital or kingdom town of each kingdom at its routine hours (Aldermark market 09:00-12:00, Azmar dawn rite 06:00 and siesta 13:00, Hrafnholt Thing, Mirewick Canal Market), or `TownsfolkManager.TYPE.create` + `setup(...)` + `setNoAi(true)` + `RoutinePoses.set(tf, Pose.<POSE>)` for SIT, WORK, CARRY, PRAY, LOUNGE",
    "note": "generic: entity townsfolk; framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 334,
@@ -33951,7 +34044,22 @@
    "steps": [
     [
      "reset",
-     "survival"
+     "creative"
+    ],
+    [
+     "cmd",
+     "difficulty peaceful"
+    ],
+    [
+     "cmd",
+     "execute in minecraft:overworld run tp @p 0 120 0 0 20"
+    ],
+    [
+     "wait",
+     60
+    ],
+    [
+     "chunks"
     ],
     [
      "cmd",
@@ -33966,6 +34074,10 @@
      "gamerule send_command_feedback true"
     ],
     [
+     "cmd",
+     "effect give @s resistance infinite 255 true"
+    ],
+    [
      "gui",
      true
     ],
@@ -33976,6 +34088,10 @@
     [
      "cmd",
      "effect give @s night_vision infinite 1 true"
+    ],
+    [
+     "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..60]"
     ],
     [
      "cmd",
@@ -34039,6 +34155,10 @@
     ],
     [
      "cmd",
+     "kill @e[type=!minecraft:player,type=!minecraft:item,distance=..40]"
+    ],
+    [
+     "cmd",
      "locate structure elsewhere:castle_azmar"
     ],
     [
@@ -34067,7 +34187,7 @@
    "check": "each line reads \"The nearest elsewhere:castle_<x> is at [x, ~, z] (N blocks away)\" within a moment (no \"Could not find\"), rivals 1,500-12,000 blocks out; click one, teleport: the castle courtyard is under the player",
    "setup": "normal survival world with structures on, op player at spawn, chat open, run the 4 commands one after another",
    "note": "generic: structure castle_azmar; framing approximate",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 358,
@@ -35455,12 +35575,8 @@
      false
     ],
     [
-     "chat",
-     false
-    ],
-    [
      "cmd",
-     "effect give @s night_vision infinite 0 true"
+     "effect give @s resistance infinite 255 true"
     ],
     [
      "locate",
@@ -35470,17 +35586,44 @@
      "tp",
      "anchor",
      0,
-     30,
-     40,
+     16,
+     14,
      180,
-     35
+     40
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     1000
+     200
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "wait",
+     800
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^9 ^-12 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^9 ^-12 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^9 ^-12 facing entity @s"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -35508,7 +35651,7 @@
    "check": "half the garrison lances march a square in the yard flipping LINE/SHIELD_WALL every leg (sergeant shout); archer squads stand in rows at the butts with the work pose; knights ride between the quintain ends; others hold their posts",
    "setup": "survival near the Aldermark castle, `/time set 0` (06:00), wait 1 in-game hour in the yard",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "shard-1.out.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 377,
@@ -35519,7 +35662,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -35538,9 +35681,6 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "fly"
-    ],
-    [
      "locate",
      "elsewhere:castle_aldermark"
     ],
@@ -35548,10 +35688,10 @@
      "tp",
      "anchor",
      0,
-     9,
-     40,
+     16,
+     14,
      180,
-     10
+     40
     ],
     [
      "chunks"
@@ -35576,6 +35716,22 @@
      300
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^10 ^-14 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^10 ^-14 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^10 ^-14 facing entity @s"
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
      "shot",
      "aldermark_muster_day_ranks_and_mock_char"
     ],
@@ -35586,6 +35742,18 @@
     [
      "wait",
      160
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^10 ^-14 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^10 ^-14 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^10 ^-14 facing entity @s"
     ],
     [
      "shot",
@@ -35605,7 +35773,7 @@
    "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
    "setup": "`/time set` so the day number is a multiple of 7, then 10:00 (`/time set 4000`), stand in front of the gate on the road",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 378,
@@ -35616,7 +35784,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -35635,9 +35803,6 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "fly"
-    ],
-    [
      "locate",
      "elsewhere:castle_aldermark"
     ],
@@ -35645,10 +35810,10 @@
      "tp",
      "anchor",
      0,
-     12,
-     34,
+     16,
+     14,
      180,
-     12
+     40
     ],
     [
      "chunks"
@@ -35671,6 +35836,26 @@
     [
      "wait",
      40
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^3 ^-8 facing entity @s"
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "shot",
@@ -35698,7 +35883,7 @@
    "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
    "setup": "Aldermark, 12:00 (`/time set 6000`), stand at the gate",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 379,
@@ -35760,7 +35945,7 @@
    "steps": [
     [
      "reset",
-     "creative"
+     "spectator"
     ],
     [
      "cmd",
@@ -35779,9 +35964,6 @@
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "fly"
-    ],
-    [
      "locate",
      "elsewhere:castle_mirewick"
     ],
@@ -35789,10 +35971,10 @@
      "tp",
      "anchor",
      0,
-     9,
-     30,
+     16,
+     16,
      180,
-     10
+     35
     ],
     [
      "chunks"
@@ -35817,6 +35999,26 @@
      100
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "shot",
      "mirewick_off_time_wards"
     ],
@@ -35827,6 +36029,22 @@
     [
      "wait",
      200
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..90] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..90] unless entity @e[type=elsewhere:kingdom_captain,distance=..90] as @e[type=elsewhere:townsfolk,limit=1,sort=nearest,distance=..90] at @s run tp @p ^0 ^4 ^-9 facing entity @s"
     ],
     [
      "shot",
@@ -35846,7 +36064,7 @@
    "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
    "setup": "Mirewick realm, watch the gate from 06:20 to 07:40 (`/time set 333`)",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 383,
@@ -37866,11 +38084,11 @@
     [
      "tp",
      "anchor",
-     42.57,
-     62.0,
-     53.06,
-     140.0,
-     45.0
+     22,
+     45,
+     22,
+     135,
+     55
     ],
     [
      "chunks"
@@ -37895,7 +38113,7 @@
    ],
    "check": "49 x 50 palm-wall enclosure (Aldermark's curtain is 61 x 61) with an undulating top; one processional axis: pylons, palm court with two lapis pools, hypostyle hall (raised nave roof), throne hall with a roof kiosk, naos to the west, mud-brick palace with kiosk and striped awning to the east; terraces stepping up north; nothing floating at the edges",
    "setup": "tp C+(40, +60, 50) yaw 140 pitch 45",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 411,
@@ -37931,11 +38149,11 @@
     [
      "tp",
      "anchor",
-     0.0,
-     5.0,
-     10.0,
-     180.0,
-     10.0
+     0,
+     12,
+     22,
+     180,
+     20
     ],
     [
      "chunks"
@@ -37960,7 +38178,7 @@
    ],
    "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle fa\u00e7ade, scarab over its door",
    "setup": "tp C+(0, +5, 10) yaw 180 pitch 10",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 412,
@@ -37996,11 +38214,11 @@
     [
      "tp",
      "anchor",
-     0.0,
-     2.0,
-     -3.0,
-     180.0,
-     -15.0
+     0,
+     4,
+     4,
+     180,
+     0
     ],
     [
      "chunks"
@@ -38011,6 +38229,22 @@
     ],
     [
      "chunks"
+    ],
+    [
+     "cmd",
+     "execute at @p run fill ~-6 ~3 ~-8 ~6 ~3 ~8 minecraft:light[level=15] replace minecraft:air"
+    ],
+    [
+     "cmd",
+     "execute at @p positioned ~ ~ ~-10 run fill ~-6 ~3 ~-6 ~6 ~3 ~6 minecraft:light[level=15] replace minecraft:air"
+    ],
+    [
+     "cmd",
+     "execute at @p positioned ~ ~ ~-18 run fill ~-6 ~3 ~-6 ~6 ~3 ~6 minecraft:light[level=15] replace minecraft:air"
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "shot",
@@ -38025,7 +38259,7 @@
    ],
    "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
    "setup": "tp C+(0, +2, -3) yaw 180 pitch -15",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 413,
@@ -38634,7 +38868,7 @@
     ],
     [
      "cmd",
-     "damage @e[type=elsewhere:rootling,limit=1,sort=nearest] 4"
+     "damage @e[type=elsewhere:rootling,limit=2,sort=nearest] 4"
     ],
     [
      "tp",
@@ -38647,7 +38881,7 @@
     ],
     [
      "camera",
-     "back"
+     "front"
     ],
     [
      "wait",
@@ -38683,7 +38917,7 @@
    "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
    "setup": "as above, 3 Rootlings out (e.g. Rootling staff), hurt one (`/damage @e[type=elsewhere:rootling,limit=1,sort=nearest] 4`), wait 5 s, camera 6 back at the side",
    "note": "generic: entity rootling, 1 setup command(s); framing approximate",
-   "override": "w4-stage-misc.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 425,
@@ -40491,11 +40725,27 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^20 ^-30 ~ 30"
+     "tp @s ^ ^12 ^-20 ~ 28"
     ],
     [
      "wait",
-     600
+     240
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^8 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^8 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^8 ^-16 facing entity @s"
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "shot",
@@ -40514,7 +40764,7 @@
    ],
    "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
    "setup": "flat open grass, noon; stand at the battle point, /kingdom armies battle aldermark hrafnholt 150; wait 15 s, fly 30 blocks up and back (F1), one wide shot of both armies, then /kingdom armies ranks",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 440,
@@ -40548,11 +40798,15 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^4 ^-26 ~ 8"
+     "tp @s ^ ^24 ^-30 ~ 38"
     ],
     [
      "wait",
-     600
+     140
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "shot",
@@ -40571,7 +40825,7 @@
    ],
    "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
    "setup": "as above with /kingdom armies battle azmar mirewick 110; shot from 25 blocks to one side at head height",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 441,
@@ -40646,6 +40900,22 @@
      3600
     ],
     [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^8 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^8 ^-16 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^8 ^-16 facing entity @s"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
      "shot",
      "battle_aldermark_hrafnholt_30_30s"
     ],
@@ -40662,7 +40932,7 @@
    ],
    "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
    "setup": "/kingdom armies battle aldermark hrafnholt 30, stand by and let it run to its end (2-4 min)",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 444,
@@ -41762,11 +42032,27 @@
     ],
     [
      "cmd",
-     "tp @s ^ ^3 ^-55 ~ 4"
+     "tp @s ^ ^6 ^-30 ~ 12"
     ],
     [
      "wait",
-     600
+     240
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:kingdom_man_at_arms,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^4 ^-22 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] as @e[type=elsewhere:kingdom_sergeant,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^4 ^-22 facing entity @s"
+    ],
+    [
+     "cmd",
+     "execute unless entity @e[type=elsewhere:kingdom_man_at_arms,distance=..120] unless entity @e[type=elsewhere:kingdom_sergeant,distance=..120] as @e[type=elsewhere:kingdom_captain,limit=1,sort=nearest,distance=..120] at @s run tp @p ^0 ^4 ^-22 facing entity @s"
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "shot",
@@ -41785,7 +42071,7 @@
    ],
    "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
    "setup": "flat plains, `/time set 6000`, Soldier detail Medium, render distance 12; `/kingdom patrol 8` for each kingdom near its village (or `/kingdom armies battle aldermark azmar 60`), fly 60 blocks off at soldier height, shot 1 plain, shot 2 with F1 at the same spot",
-   "override": "castles.json"
+   "override": "w7-kingdom.json"
   },
   {
    "n": 457,

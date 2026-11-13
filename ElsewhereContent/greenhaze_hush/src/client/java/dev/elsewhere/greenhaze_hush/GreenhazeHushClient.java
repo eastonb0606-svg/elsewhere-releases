@@ -15,15 +15,20 @@ import dev.elsewhere.hush.HushMobs;
 import dev.elsewhere.hush.Resonance;
 import java.util.function.Supplier;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.ambient.BatModel;
 import net.minecraft.client.model.animal.frog.FrogModel;
 import net.minecraft.client.model.animal.golem.IronGolemModel;
 import net.minecraft.client.model.animal.panda.PandaModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.model.geom.builders.CubeDeformation;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.monster.creeper.CreeperModel;
 import net.minecraft.client.model.monster.enderman.EndermanModel;
 import net.minecraft.client.model.monster.hoglin.HoglinModel;
@@ -38,6 +43,7 @@ import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import net.minecraft.client.renderer.entity.layers.SkeletonClothingLayer;
 import net.minecraft.client.renderer.entity.state.BatRenderState;
 import net.minecraft.client.renderer.entity.state.CreeperRenderState;
 import net.minecraft.client.renderer.entity.state.EndermanRenderState;
@@ -61,6 +67,9 @@ import net.minecraft.world.entity.Mob;
  */
 public final class GreenhazeHushClient {
 	private GreenhazeHushClient() {}
+
+	/** Ossuary Chorister robe and hood: the skeleton humanoid geometry inflated like the Stray's outer layer, own texture. */
+	static final ModelLayerLocation CHORISTER_ROBE = new ModelLayerLocation(Identifier.fromNamespaceAndPath("elsewhere", "ossuary_chorister"), "robe");
 
 	static Identifier tex(String name) {
 		return Identifier.fromNamespaceAndPath("elsewhere", "textures/entity/" + name + ".png");
@@ -96,6 +105,7 @@ public final class GreenhazeHushClient {
 	}
 
 	public static void initClient() {
+		ModelLayerRegistry.registerModelLayer(CHORISTER_ROBE, () -> LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.5F), 0.0F), 64, 32));
 		EntityRendererRegistry.register(GreenhazeEntities.LAZY_GORGER, c -> new Simple<GreenhazeMobs.LazyGorger, PandaRenderState, PandaModel>(
 			c, new PandaModel(c.bakeLayer(ModelLayers.PANDA)), 0.9F, "lazy_gorger", PandaRenderState::new, 1.0F));
 		EntityRendererRegistry.register(GreenhazeEntities.MUNCHIE_BOAR, c -> new Simple<GreenhazeMobs.MunchieBoar, HoglinRenderState, HoglinModel>(
@@ -134,7 +144,11 @@ public final class GreenhazeHushClient {
 			c, new EndermanModel<>(c.bakeLayer(ModelLayers.ENDERMAN)), 0.5F, "echo_stalker", EndermanRenderState::new, 1.25F));
 		EntityRendererRegistry.register(HushEntities.SHRIEKER_SWARM, c -> new Swarm3Renderers.ShriekerSwarmRenderer(c)); // swarm-as-one, 8-12 bats (s-spawngroups; a plain one draws as 2.1)
 		EntityRendererRegistry.register(HushEntities.OSSUARY_CHORISTER, c -> new Simple<HushMobs.OssuaryChorister, SkeletonRenderState, SkeletonModel<SkeletonRenderState>>(
-			c, new SkeletonModel<>(c.bakeLayer(ModelLayers.SKELETON)), 0.5F, "ossuary_chorister", SkeletonRenderState::new, 1.2F));
+			c, new SkeletonModel<>(c.bakeLayer(ModelLayers.SKELETON)), 0.5F, "ossuary_chorister", SkeletonRenderState::new, 1.2F) {
+			{
+				addLayer(new SkeletonClothingLayer<>(this, c.getModelSet(), CHORISTER_ROBE, tex("ossuary_chorister_robe")));
+			}
+		});
 		EntityRendererRegistry.register(HushEntities.CATALYST_MIMIC, c -> new Simple<HushMobs.CatalystMimic, ShulkerRenderState, ShulkerModel>(
 			c, new ShulkerModel(c.bakeLayer(ModelLayers.SHULKER)), 0.0F, "catalyst_mimic", ShulkerRenderState::new, 1.0F) {
 			@Override

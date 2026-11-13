@@ -6,6 +6,7 @@ import dev.elsewhere.registry.ModEntities;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 
 /** Client registrations for the 2.0 core content: companion and Bog Wight renderers, trophy statues, the Atlas screen. */
 public final class V2Client {
@@ -13,6 +14,7 @@ public final class V2Client {
 	}
 
 	public static void init() {
+		ModelLayerRegistry.registerModelLayer(StagModel.LAYER, StagModel::createBodyLayer);
 		EntityRendererRegistry.register(ModEntities.HOLLOW_STAG, V2Renderers.Stag::new);
 		EntityRendererRegistry.register(ModEntities.DOCILE_SCARAB, V2Renderers.Scarab::new);
 		EntityRendererRegistry.register(ModEntities.HAZE_FERRET, V2Renderers.Ferret::new);

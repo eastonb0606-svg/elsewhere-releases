@@ -179,6 +179,6 @@ public final class UseAnims {
 	}
 
 	static int trailColor(Style s) {
-		return s == Style.FLAIL ? 0xC8D6F0 : 0x9EEBFF;
+		return s == Style.FLAIL ? 0x4F86C8 : 0x9EEBFF;
 	}
 }
