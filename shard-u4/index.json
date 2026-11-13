@@ -1,0 +1,107 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "structures_build__castle_aldermark_c_0_75_150_y180.png",
+          "scene": 21,
+          "line": 29,
+          "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
+          "status": "pending"
+        }
+      ]
+    },
+    "z_castle": {
+      "elsewhere:castle_mirewick quay on an fv 2 (new) realm, and elsewhere:castle_azmar corner tower (elsewhere:castle_mirewick)": [
+        {
+          "file": "z_castle__castle_mirewick_c_44_8_44_y135.png",
+          "scene": 149,
+          "line": 164,
+          "check": "supersedes the quay line's canal rule: on fv 2 the canal appears only where the land in front of the quay is at sea level (water top = sea level - 1, quartz-walled bed, no water anywhere else, no trench cut through higher land; on higher ground there is simply no canal); Azmar tower foot ringed by sandstone batter stairs that follow the ground, nothing hanging in the air",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_testfix": {
+      "elsewhere:hrafnholt_hersir": [
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "01:26:40"
+        },
+        {
+          "file": "s_testfix__hrafnholt_hersir_circle_strafe_duelist_k_later.png",
+          "scene": 224,
+          "line": 254,
+          "check": "her body and head face the player in every frame while she moves sideways around him at 8-10 blocks (Marrow 6-8); no frame shows her walking sideways or backwards away with her back or shoulder to the player",
+          "status": "ok",
+          "taken": "01:26:42"
+        }
+      ]
+    },
+    "s_p3_nameplates": {
+      "kingdom soldier nameplates, Aldermark (POLISH P3; supersedes polish2's 10:05 nameplate scene in INTEGRATION-REQUESTS)": [
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_6.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "01:26:45"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_12.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "01:26:46"
+        },
+        {
+          "file": "s_p3_nameplates__kingdom_soldier_nameplates_aldermark_pol_18.png",
+          "scene": 225,
+          "line": 255,
+          "check": "captain: gold star, \"Captain\", grey dot, blue heater shield (red chief, gold crown, cream tower), \"Aldermark\" in light blue; sergeant: silver double chevron, \"Sergeant\"; man-at-arms: only the shield and \"Aldermark\"; icons crisp, sitting on the text baseline, not clipped; one plate each, no doubled/ghost text",
+          "status": "ok",
+          "taken": "01:26:46"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "elsewhere:kingdom_archer": [
+        {
+          "file": "s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png",
+          "scene": 327,
+          "line": 370,
+          "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
+          "status": "pending"
+        }
+      ],
+      "night rest (REST: soldiers the night routine rests)": [
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        },
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:26:46",
+  "totals": {
+    "ok": 5,
+    "fail": 0,
+    "manual": 0
+  }
+}
