@@ -1,0 +1,164 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_52_40_52_y135.png",
+          "scene": 16,
+          "line": 24,
+          "check": "flat roofs with cavetto cornices and lapis bands, kiosks on the tower tops, undulating parapet, palms in the court; no pitched roofs, no gold blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_struct_verdigris": {
+      "elsewhere:ironpeak_return_rift": [
+        {
+          "file": "s_struct_verdigris__ironpeak_return_rift_s_8_5_8.png",
+          "scene": 157,
+          "line": 174,
+          "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_azmarsize": {
+      "Azmar line relief: rank blocks of 5 (army.scale squad 5, relief wave 5 / 30 s at 85%)": [
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_10s.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "01:01:52"
+        },
+        {
+          "file": "s_azmarsize__battle_azmar_aldermark_60_37s_f3.png",
+          "scene": 164,
+          "line": 181,
+          "check": "Azmar visibly the smaller side (12 v 20 live with one watcher); the relief arrives from the Azmar rear as ONE small block of at most 5 (a jemadar + up to 4) to the bell, never a crowd of 16; wounded Azmar leave the line; nothing stuck at the rear",
+          "status": "ok",
+          "taken": "01:02:21"
+        }
+      ]
+    },
+    "s_p8_bossanims": {
+      "elsewhere:mournmaw": [
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "ok",
+          "taken": "01:02:27"
+        },
+        {
+          "file": "s_p8_bossanims__mournmaw_attacks_tear_rain_soul_fireball_later.png",
+          "scene": 243,
+          "line": 273,
+          "check": "tear_rain: mask tipped up, both lantern chains lifted wide; soul_fireball: chains swung back over the crown; mourners: mask bowed toward the floor, chains hanging straight down; grief_storm: body mid-spin with both chains flung out level; no chain clipping through the mask",
+          "status": "ok",
+          "taken": "01:02:32"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:02:34"
+        },
+        {
+          "file": "s_whips__thornlash_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:02:34"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:02:35"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:02:37"
+        },
+        {
+          "file": "s_whips__thornlash_after_use.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:02:38"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:02:39"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "elsewhere:kingdom_archer": [
+        {
+          "file": "s_p9_idle__pose_work_all_four_kingdoms_one_aldermar.png",
+          "scene": 327,
+          "line": 370,
+          "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark Muster Day ranks and mock charge": [
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "300-soldier battle readout with /kingdomlod": [
+        {
+          "file": "s_lod__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 458,
+          "line": 510,
+          "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:02:39",
+  "totals": {
+    "ok": 10,
+    "fail": 0,
+    "manual": 0
+  }
+}
