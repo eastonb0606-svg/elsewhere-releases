@@ -7,14 +7,16 @@
           "scene": 359,
           "line": 407,
           "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:32"
         },
         {
           "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
           "scene": 359,
           "line": 407,
           "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:37"
         }
       ]
     },
@@ -167,9 +169,9 @@
       ]
     }
   },
-  "run": "00:16:55",
+  "run": "00:17:39",
   "totals": {
-    "ok": 17,
+    "ok": 19,
     "fail": 0,
     "manual": 0
   }

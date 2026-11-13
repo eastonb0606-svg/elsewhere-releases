@@ -574,3 +574,37 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [00:17:07] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
 [00:17:07] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
 [00:17:07] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[00:17:13] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_azmar in minecraft:overworld at C = 952 91 -4472
+[00:17:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 952.500000, 116.000000, -4421.500000
+[00:17:18] [Server thread/INFO] (Minecraft) System chat: Replaced 1 slot(s) on ShotRunner with [Empty Map]
+[00:17:18] [Server thread/INFO] (Minecraft) System chat: Failed to parse structure: Failed to parse either. First: No key type in MapLike[{decoration:"minecraft:target_x",destination:"#elsewhere:azmar_castle",function:"minecraft:exploration_map",search_radius:100,skip_existing_chunks:0b,zoom:2}]; Second: Failed to parse either. First: Not a string; Second: Failed to parse either. First: Not a list: {decoration:"minecraft:target_x",destination:"#elsewhere:azmar_castle",function:"minecraft:exploration_map",search_radius:100,skip_existing_chunks:0b,zoom:2}; Second: No key type in MapLike[{decoration:"minecraft:target_x",destination:"#elsewhere:azmar_castle",function:"minecraft:exploration_map",search_radius:100,skip_existing_chunks:0b,zoom:2}]
+[00:17:18] [Server thread/INFO] (Minecraft) System chat: ...adius:100}<--[HERE]
+[00:17:27] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 9357ms or 187 ticks behind
+[00:17:30] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 952.500000, 116.000000, -4421.500000
+[00:17:32] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[00:17:32] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[00:17:32] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_locate__explorer_map_to_a_rival_castle.png: 
+[00:17:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_locate__explorer_map_to_a_rival_castle_5s.png: 
+[00:17:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 359 (s_locate | explorer map to a rival castle) done in 30733 ms
+[00:17:37] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:17:37] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:17:37] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:17:37] [Server thread/INFO] (Minecraft) Stopping server
+[00:17:37] [Server thread/INFO] (Minecraft) Saving players
+[00:17:37] [Server thread/INFO] (Minecraft) Saving worlds
+[00:17:38] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:17:39] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:17:39] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 19 ok, 0 fail, 0 manual
+[00:17:39] [Render thread/INFO] (Minecraft) Stopping!
+
+BUILD SUCCESSFUL in 2m 43s
+10 actionable tasks: 9 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
