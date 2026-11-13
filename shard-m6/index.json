@@ -185,49 +185,55 @@
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:19"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:22"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:24"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:26"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:29"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:17:29"
         }
       ]
     }
   },
-  "run": "00:17:16",
+  "run": "00:17:30",
   "totals": {
-    "ok": 21,
+    "ok": 27,
     "fail": 0,
     "manual": 0
   }

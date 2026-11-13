@@ -516,3 +516,32 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [00:17:19] [Render thread/INFO] (Minecraft) Loaded 21 advancements
 [00:17:19] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_first_person_4.png: 
 [00:17:19] [Server thread/INFO] (Minecraft) System chat: Applied effect Instant Health to Drowned
+[00:17:21] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:17:22] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_third_person_4.png: 
+[00:17:22] [Server thread/INFO] (Minecraft) System chat: Applied effect Instant Health to Drowned
+[00:17:24] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png: 
+[00:17:24] [Server thread/INFO] (Minecraft) System chat: Applied effect Instant Health to Drowned
+[00:17:26] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
+[00:17:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png: 
+[00:17:26] [Server thread/INFO] (Minecraft) System chat: Applied effect Instant Health to Drowned
+[00:17:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_after_use_2.png: 
+[00:17:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png: 
+[00:17:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 324 (s_harpoon | elsewhere:tidebrass_harpoon_bolt) done in 13528 ms
+[00:17:29] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:17:29] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:17:29] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:17:29] [Server thread/INFO] (Minecraft) Stopping server
+[00:17:29] [Server thread/INFO] (Minecraft) Saving players
+[00:17:29] [Server thread/INFO] (Minecraft) Saving worlds
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:17:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:17:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 27 ok, 0 fail, 0 manual
+[00:17:30] [Render thread/INFO] (Minecraft) Stopping!

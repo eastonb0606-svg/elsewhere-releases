@@ -11,3 +11,31 @@ JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_e
 elsewhere-3.0.0.jar
 merged jar elsewhere-3.0.0.jar 146927714 bytes in 81 s
 00:15:05Z client: scenes 304,305,306,307,308,324, watchdog 90 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+remote: 
+remote: Create a pull request for 'cloud-shots-m6' on GitHub by visiting:        
+remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-m6        
+remote: 
+published 22 PNGs (progress) -> cloud-shots-m6 4a2edfd
+client rc=0
+[00:17:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 27 ok, 0 fail, 0 manual
+com.mojang.renderpearl.api.device.BackendCreationException: Failed to create window for OpenGL context: Couldn't find matching GLX visual
+	at knot//com.mojang.renderpearl.backend.opengl.GlDevice.<init>(GlDevice.java:83)
+	at knot//com.mojang.renderpearl.backend.opengl.GlBackend.createDevice(GlBackend.java:68)
+--
+[00:16:20] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[00:16:21] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-17.0.01.hex, loading
+[00:16:21] [Worker-Main-2/INFO] (Minecraft) Found unifont_pua-17.0.01.hex, loading
+--
+[00:16:25] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[00:16:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] 6 flat-stage scenes, 0 worldgen scenes, 0 log/manual scenes from /home/user/elsewhere-releases/ElsewhereQA/shots-3.0/shotlist.json
+[00:16:28] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+--
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+boss_music client selftest:
+[00:16:22] [Render thread/INFO] (Minecraft) [STDOUT]: [boss_music-selftest] TOTAL 6/6 PASS
+[00:16:44] [Render thread/INFO] (Minecraft) [STDOUT]: [boss_music-ingame-selftest] TOTAL 24/24 PASS
+00:18:09Z finished rc=0, 27 PNGs;  TOTAL 27 ok, 0 fail, 0 manual
