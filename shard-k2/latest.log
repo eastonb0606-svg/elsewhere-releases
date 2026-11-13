@@ -358,3 +358,49 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [00:14:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
 [00:14:07] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1272.500000, 117.000000, -1263.500000
 [00:14:10] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5847ms or 116 ticks behind
+[00:14:31] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5738ms or 114 ticks behind
+[00:14:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_aldermark_c_88_26_52_y180.png: 
+[00:14:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 20 (structures_build | elsewhere:castle_aldermark) done in 35412 ms
+[00:14:42] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[00:14:42] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[00:14:42] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[00:14:42] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[00:14:42] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[00:14:42] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[00:14:42] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1368.500000, 139.000000, -1183.500000
+[00:14:49] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3220ms or 64 ticks behind
+[00:15:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK structures_build__castle_aldermark_c_0_75_150_y180.png: 
+[00:15:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 21 (structures_build | elsewhere:castle_aldermark) done in 24751 ms
+[00:15:07] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[00:15:07] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[00:15:07] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[00:15:07] [Server thread/INFO] (Minecraft) Stopping server
+[00:15:07] [Server thread/INFO] (Minecraft) Saving players
+[00:15:07] [Server thread/INFO] (Minecraft) Saving worlds
+[00:15:07] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[00:15:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[00:15:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 5 ok, 0 fail, 0 manual
+[00:15:08] [Render thread/INFO] (Minecraft) Stopping!
+[00:15:08] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)

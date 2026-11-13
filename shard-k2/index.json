@@ -23,14 +23,16 @@
           "scene": 20,
           "line": 28,
           "check": "faction roofs (Aldermark spruce gables + chimneys, Hrafnholt dark gables with finials, Azmar flat parapets + wind-catchers + awnings, Mirewick stepped gables + hoist beams); on fv 2 each house on its own pad, natural ground between, streets and palisade follow the slope",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:14:42"
         },
         {
           "file": "structures_build__castle_aldermark_c_0_75_150_y180.png",
           "scene": 21,
           "line": 29,
           "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:15:07"
         }
       ],
       "elsewhere:castle_hrafnholt": [
@@ -45,9 +47,9 @@
       ]
     }
   },
-  "run": "00:14:07",
+  "run": "00:15:08",
   "totals": {
-    "ok": 3,
+    "ok": 5,
     "fail": 0,
     "manual": 0
   }
