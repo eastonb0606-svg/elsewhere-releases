@@ -1,0 +1,63 @@
+{
+  "lanes": {
+    "s_layout_azmar": {
+      "elsewhere:castle_aldermark": [
+        {
+          "file": "s_layout_azmar__castle_aldermark_c_0_2_3_y180.png",
+          "scene": 412,
+          "line": 462,
+          "check": "18 columns in 3 ranks: tall papyrus columns (lapis ring) along the nave, lower lotus columns in the aisles, capitals flaring in upside-down stairs; blue ceilings with yellow stars; the stone-grille clerestory lighting the nave; hanging lanterns",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_pennant": {
+      "elsewhere:rootling": [
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "ok",
+          "taken": "00:16:19"
+        },
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3_later.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "ok",
+          "taken": "00:16:22"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rank impostors behind a 150-a-side wave battle (Aldermark v Hrafnholt)": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_150_30s.png",
+          "scene": 439,
+          "line": 489,
+          "check": "behind each live front 2 rows of up to 3 ranks 14-22 blocks back, facing the enemy: Aldermark lines of 10 in red/white tabards, Hrafnholt ranks of 16; every figure on the ground (none floating or sunk), no nameplates, no shadow blobs; the command reports ranks <= 12 and the figures shown",
+          "status": "ok",
+          "taken": "00:16:35"
+        }
+      ],
+      "Kingdom rank shapes side by side (Azmar v Mirewick)": [
+        {
+          "file": "s_impostors__battle_azmar_mirewick_110_30s.png",
+          "scene": 440,
+          "line": 490,
+          "check": "Azmar ranks are square blocks of 16 in neat order; Mirewick ranks of 12 stand ragged (uneven spacing, heads at different angles) with a visible gap in the line; baked LOD skins show each kingdom's colours (no pink/black, no plain Steve)",
+          "status": "ok",
+          "taken": "00:16:43"
+        }
+      ]
+    }
+  },
+  "run": "00:16:43",
+  "totals": {
+    "ok": 4,
+    "fail": 0,
+    "manual": 0
+  }
+}
