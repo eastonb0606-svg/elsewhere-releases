@@ -7,7 +7,8 @@
           "scene": 5,
           "line": 10,
           "check": "Hrafnholt longhall and palisade, Azmar obelisks, Mirewick boardwalks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:46:35"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 170,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:47:23"
         }
       ]
     },
@@ -29,14 +31,16 @@
           "scene": 185,
           "line": 200,
           "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:47:43"
         },
         {
           "file": "s_struct_petalwind__eye_of_the_gale_s_20_10_20.png",
           "scene": 185,
           "line": 200,
           "check": "8 shard platforms that are small sky islands: tapered calcite/tuff/stone undersides with rooted dirt and hanging roots, petals on top; the updraft basin 14 below with a raised lip and the same rooted underside",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:47:51"
         }
       ]
     },
@@ -147,14 +151,16 @@
           "scene": 359,
           "line": 407,
           "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:48:25"
         },
         {
           "file": "s_locate__explorer_map_to_a_rival_castle_5s.png",
           "scene": 359,
           "line": 407,
           "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:48:30"
         }
       ]
     },
@@ -165,21 +171,23 @@
           "scene": 485,
           "line": 537,
           "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:49:00"
         },
         {
           "file": "s_struct_greenhaze__choir_geode_ground.png",
           "scene": 485,
           "line": 537,
           "check": "the 2.x geode unchanged (8 choir pillars, lake floor) plus amethyst clusters hanging from the vault; no cave cutting the shell; the north entrance continues as a lined tunnel to the nearest cave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "00:49:06"
         }
       ]
     }
   },
-  "run": "00:45:21",
+  "run": "00:49:08",
   "totals": {
-    "ok": 11,
+    "ok": 19,
     "fail": 0,
     "manual": 0
   }
