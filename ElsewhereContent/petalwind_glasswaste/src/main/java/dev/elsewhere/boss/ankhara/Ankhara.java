@@ -156,8 +156,9 @@ public class Ankhara extends BossBase implements Burrowing {
 		this.setDeltaMovement(move.x, (wantY - getY()) * 0.2, move.z);
 		if (move.lengthSqr() > 0) face(move);
 		if (this.tickCount % (move.lengthSqr() > 0 ? 2 : 8) == 0) { // denser sand trail while moving
-			level.sendParticles(new BlockParticleOption(ParticleTypes.FALLING_DUST, Blocks.SAND.defaultBlockState()), getX(), floorY() + 0.1, getZ(), 4,
-				1.0, 0.05, 1.0, 0);
+			// sand-block crumbs (own texture, forced past the 32-block limit): the old falling-dust clumps read as black soot
+			forceParticles(level, new BlockParticleOption(ParticleTypes.BLOCK, Blocks.SAND.defaultBlockState()), getX(), floorY() + 0.3, getZ(), 6,
+				1.0, 0.15, 1.0, 0.02);
 		}
 	}
 
@@ -184,7 +185,7 @@ public class Ankhara extends BossBase implements Burrowing {
 			case M_BURROWED -> {
 				if (eruptAt != null) {
 					this.setDeltaMovement(Vec3.ZERO);
-					if (modeTicks % 3 == 0) level.sendParticles(ParticleTypes.LAVA, eruptAt.x, floorY(), eruptAt.z, 3, 1.5, 0, 1.5, 0);
+					if (modeTicks % 3 == 0) forceParticles(level, new BlockParticleOption(ParticleTypes.BLOCK, Blocks.SAND.defaultBlockState()), eruptAt.x, floorY() + 0.3, eruptAt.z, 6, 1.5, 0.1, 1.5, 0.05);
 					if (modeTicks >= 30) breach(level);
 					return;
 				}

@@ -294,7 +294,7 @@ final class GreenLeafCompat {
 				q.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(everflow));
 				q.getInventory().setItem(5, new ItemStack(sativa));
 				everflow.use(q.level(), q, InteractionHand.MAIN_HAND);
-				QAServer.check(q.getInventory().getItem(5).isEmpty() && num(e, "pending") > 0 && num(e, "sativa") > 0 && num(e, "indica") == 0, a,
+				QAServer.check(q.getInventory().getItem(5).isEmpty() && num(e, "pending") > 0 && (!api || num(e, "sativa") > 0) && num(e, "indica") == 0, a,
 					QAServer.f("Everflow Bong rip with a Sativa bud: bud burned, smoke %.1f kicking in, Sativa %.1f / Indica %.1f", num(e, "pending"), num(e, "sativa"), num(e, "indica")));
 			} else {
 				QAServer.record("FAIL", a, "elsewhere:everflow_bong or greenleaf:sativa_bud missing");

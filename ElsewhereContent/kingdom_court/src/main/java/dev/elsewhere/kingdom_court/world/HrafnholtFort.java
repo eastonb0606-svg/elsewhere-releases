@@ -403,7 +403,11 @@ public final class HrafnholtFort {
 			else top = CastleLayout.hash(x, 2, z) < 25 ? Blocks.MOSS_BLOCK.defaultBlockState() : Blocks.GRASS_BLOCK.defaultBlockState();
 			h.carve(x, t, Math.max(g, t) + 1, z);
 			h.s(x, t - 1, z, top);
-			h.down(x, t - 2, z, core);
+			if (revet && d >= 1) {
+				// f-castles2: the outer face is stone only for its top two courses; below it the bank is earth (no sheer grey cliff down the slope)
+				h.s(x, t - 2, z, core);
+				h.down(x, t - 3, z, Blocks.COARSE_DIRT.defaultBlockState());
+			} else h.down(x, t - 2, z, core);
 			if (pal) {
 				BlockState lg = log(x, z);
 				// w6-castles: timber hoarding along the palisade head (plank gallery between log posts under a slab roof, fence tips on the posts)

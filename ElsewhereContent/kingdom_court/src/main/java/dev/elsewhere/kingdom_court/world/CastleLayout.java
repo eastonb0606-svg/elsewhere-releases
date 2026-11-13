@@ -889,14 +889,15 @@ public final class CastleLayout {
 			for (int d = 0; d < 4; d++) {
 				int dx = d == 0 ? 1 : d == 1 ? -1 : 0, dz = d == 2 ? 1 : d == 3 ? -1 : 0;
 				int[] h = contour(rawLine(l, dx * 7, dz * 7, dx, dz, 17), new int[] {0}, new int[] {0});
-				for (int i = 0; i < 17; i++) for (int w = -1; w <= 1; w++)
+				// f-castles2: the north street stops 2 short of the palisade (there is no back gate; it used to dead-end into the wall)
+				for (int i = 0; i < (d == 3 ? 14 : 17); i++) for (int w = -1; w <= 1; w++)
 					pathAt(l, dx * (7 + i) + (dz != 0 ? w : 0), dz * (7 + i) + (dx != 0 ? w : 0), h[i]);
 			}
 		}
 		// palisade; 3.0 fit (fv 2): each post stands on its own ground and the top follows the smoothed contour
 		boolean azmar = CastleKit.kitOf(l.p) == CastleKit.Kit.AZMAR;
-		// 3.0 visual QA (generation): the timber palisade's top may drop with the ground (down to 8 below the floor); Azmar's banded curtain keeps its floor-level course
-		int[] pal = l.p.ground != null ? ringLift(l, 22, azmar ? 0 : -8) : null;
+		// 3.0 visual QA (generation): the timber palisade's top may drop with the ground (follows the ground all the way down; f-castles2: was clamped at -8, which left a tall wall slab on a deeper drop); Azmar's banded curtain keeps its floor-level course
+		int[] pal = l.p.ground != null ? ringLift(l, 22, azmar ? 0 : -64) : null;
 		for (int x = -22; x <= 22; x++) for (int z = -22; z <= 22; z++) {
 			if (Math.max(Math.abs(x), Math.abs(z)) != 22) continue;
 			if (z == 22 && Math.abs(x) <= 1) continue;

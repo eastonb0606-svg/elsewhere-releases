@@ -380,11 +380,20 @@ public abstract class BossBase extends Monster {
 		// P13: one packet per column (3 dust spread over the same 0.5-3.5 band) and 3 columns per radius block, was 5 x 3 packets
 		int points = Math.max(48, arenaRadius * 6); // ~1.05 block spacing so the wall reads as continuous
 		double phaseOffset = (this.tickCount % 40) / 40.0;
-		DustParticleOptions dust = new DustParticleOptions(0x9FE8FF, 1.2F);
+		DustParticleOptions dust = new DustParticleOptions(0x9FE8FF, 1.4F);
+		// forced delivery (a plain sendParticles only reaches players within 32 blocks, so the far side of the ring never showed);
+		// 3 stacked columns (0.5 / 1.5 / 2.5 up) keep the wall continuous with the same packet count as before per column
 		for (int i = 0; i < points; i++) {
 			double a = Math.PI * 2 * (i + phaseOffset) / points;
 			double x = c.getX() + 0.5 + Math.cos(a) * (arenaRadius + 1.5), z = c.getZ() + 0.5 + Math.sin(a) * (arenaRadius + 1.5);
-			level.sendParticles(dust, x, c.getY() + 2.0 + phaseOffset, z, 2, 0, 1.0, 0, 0);
+			for (int k = 0; k < 3; k++) forceParticles(level, dust, x, c.getY() + 0.5 + k, z, 1, 0, 0.3, 0, 0);
+		}
+	}
+
+	/** Sends a particle to every player within 128 blocks, past the 32-block limit of the plain overload (alwaysShow set). */
+	public static void forceParticles(ServerLevel level, net.minecraft.core.particles.ParticleOptions p, double x, double y, double z, int count, double dx, double dy, double dz, double speed) {
+		for (ServerPlayer pl : level.players()) {
+			if (pl.distanceToSqr(x, y, z) <= 128.0 * 128.0) level.sendParticles(pl, p, true, true, x, y, z, count, dx, dy, dz, speed);
 		}
 	}
 

@@ -95,7 +95,7 @@ public final class FitSelfTest {
 					&& level.getBlockState(p.above()).isAir()) {
 					// open in the terrain noise too: a carver cave under solid noise ground is air here but "ground" to the metric
 					var nc = col.apply(x, z);
-					if (nc.getBlock(yy - 1).isAir() && nc.getBlock(yy - 2).isAir() && nc.getBlock(yy - 3).isAir()) y = yy;
+					if (nc.getBlock(yy).isAir() && nc.getBlock(yy - 1).isAir() && nc.getBlock(yy - 2).isAir() && nc.getBlock(yy - 3).isAir()) y = yy;
 				}
 			}
 			if (y < 0) { msg.append(key.identifier().getPath()).append(": no open air column; "); continue; }

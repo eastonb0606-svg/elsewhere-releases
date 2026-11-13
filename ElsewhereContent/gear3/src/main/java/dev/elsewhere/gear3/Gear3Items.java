@@ -230,7 +230,7 @@ public final class Gear3Items {
 	static ItemLore lore(Gear3Def d) {
 		List<Component> l = new ArrayList<>();
 		for (int i = 1; i <= d.lore.size(); i++) {
-			ChatFormatting c = d.lore.get(i - 1).startsWith("!") ? ChatFormatting.RED : (i == 1 ? ChatFormatting.GRAY : ChatFormatting.BLUE);
+			ChatFormatting c = d.lore.get(i - 1).startsWith("!") ? ChatFormatting.RED : (i == 1 || "mothlight_staff".equals(d.id) ? ChatFormatting.GRAY : ChatFormatting.BLUE); // mothlight staff: spec wants all lore grey
 			l.add(Component.translatable("item.elsewhere." + d.id + ".lore" + i).withStyle(s -> s.withColor(c).withItalic(false)));
 		}
 		return new ItemLore(l);

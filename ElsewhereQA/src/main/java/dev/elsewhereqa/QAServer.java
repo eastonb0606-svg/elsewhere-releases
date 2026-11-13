@@ -775,6 +775,9 @@ public final class QAServer implements ModInitializer {
 				if (id.getPath().endsWith("_head") || id.getPath().endsWith("_tentacle") || id.getPath().contains("minion")) {
 					continue; // parts of a boss, not bosses
 				}
+				if (id.getPath().startsWith("duelist_test")) {
+					continue; // kingdom_duelist test fixtures (200 HP, no designed drops/XP), not bosses
+				}
 				boolean expected = EXPECTED_BOSSES.stream().anyMatch(b -> id.getPath().equals(b) || id.getPath().startsWith(b + "_") && !id.getPath().contains("minion")) || ReleaseSuite.isKingdomBoss(id.getPath());
 				try {
 					Entity probe = type.create(level, EntitySpawnReason.COMMAND);

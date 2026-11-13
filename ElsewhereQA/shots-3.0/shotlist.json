@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 18:34",
+ "generated": "2026-11-12 18:46",
  "scenes": [
   {
    "n": 1,
@@ -26632,11 +26632,11 @@
     [
      "tp",
      "anchor",
-     22,
-     30,
-     22,
-     135,
-     24
+     32,
+     -10,
+     3,
+     90,
+     -15
     ],
     [
      "chunks"
@@ -26647,10 +26647,6 @@
     ],
     [
      "chunks"
-    ],
-    [
-     "cmd",
-     "execute positioned over world_surface run tp @s ~ ~4 ~ 135 24"
     ],
     [
      "chunks"
@@ -26679,7 +26675,7 @@
    ],
    "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
    "setup": "S+(26, +10, 26) facing S, pitch 20; second shot from below the rim S+(14, -10, 0) facing E, pitch -15",
-   "override": "w4-structcam.json"
+   "override": "w8-neb.json"
   },
   {
    "n": 287,
@@ -30559,7 +30555,7 @@
    "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
    "setup": "shoot level along a flat 60-block field at full draw, F5 back view, screenshot at ~0.3 s",
    "note": "generic: entity starpiercer_arrow; framing approximate",
-   "override": "w7-gearfx.json"
+   "override": "w7z-gearfx.json"
   },
   {
    "n": 313,
@@ -32282,14 +32278,36 @@
      "use_up"
     ],
     [
+     "tp",
+     "stage",
+     3.5,
+     0,
+     3,
+     90,
+     0
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
      "wait",
-     5
+     1
     ],
     [
      "shot",
      "tidebrass_harpoon_bolt_first_person_4"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "camera",
      "first"
     ],
@@ -32325,72 +32343,34 @@
      "use_up"
     ],
     [
-     "wait",
-     5
-    ],
-    [
      "tp",
      "stage",
+     -3.5,
      0,
-     0,
-     0,
-     40,
+     3,
+     -90,
      0
     ],
     [
      "camera",
-     "back"
+     "first"
     ],
     [
      "wait",
-     1
+     2
     ],
     [
      "shot",
      "tidebrass_harpoon_bolt_third_person_4"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
-     "cmd",
-     "effect give @e[type=minecraft:drowned,distance=..40] instant_health 1 4 true"
-    ],
-    [
-     "look_target"
-    ],
-    [
-     "use_down"
-    ],
-    [
-     "wait",
-     30
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     3
-    ],
-    [
-     "use_down"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     4
-    ],
-    [
-     "shot",
-     "tidebrass_harpoon_bolt_in_use_first_person_2"
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "camera",
@@ -32426,10 +32406,27 @@
     ],
     [
      "use_up"
+    ],
+    [
+     "tp",
+     "stage",
+     3.5,
+     0,
+     5,
+     90,
+     0
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "wait",
      6
+    ],
+    [
+     "shot",
+     "tidebrass_harpoon_bolt_in_use_first_person_2"
     ],
     [
      "tp",
@@ -32437,20 +32434,8 @@
      0,
      0,
      0,
-     40,
+     0,
      0
-    ],
-    [
-     "camera",
-     "back"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "shot",
-     "tidebrass_harpoon_bolt_in_use_third_person_2"
     ],
     [
      "camera",
@@ -32488,12 +32473,62 @@
      "use_up"
     ],
     [
+     "tp",
+     "stage",
+     -3.5,
+     0,
+     5,
+     -90,
+     0
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
      "wait",
-     4
+     8
+    ],
+    [
+     "shot",
+     "tidebrass_harpoon_bolt_in_use_third_person_2"
+    ],
+    [
+     "wait",
+     25
+    ],
+    [
+     "tp",
+     "stage",
+     3.5,
+     0,
+     6,
+     90,
+     0
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
      "tidebrass_harpoon_bolt_after_use_2"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "look_target"
     ],
     [
      "inventory",
@@ -32540,7 +32575,7 @@
    "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
    "setup": "a 2-deep pool 12 long, a drowned or a husk standing in the water 10 blocks away, fire the crossbow level across the water from the bank; shot while the bolt is underwater",
    "note": "generic: item tidebrass_harpoon_bolt; framing approximate",
-   "override": "w7-items.json"
+   "override": "w7z-gearfx.json"
   },
   {
    "n": 325,
@@ -35717,7 +35752,7 @@
    "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
    "setup": "wear the Starsight Visor + Prism Mantle with a Marksman/Caster hybrid calling, hover the Visor, hold Shift; then the Outrider Chaps + Boots with Vanguard/Marksman",
    "note": "generic: item glasswaste_starsight_visor; framing approximate",
-   "override": "w7-gearfx.json"
+   "override": "w7z-gearfx.json"
   },
   {
    "n": 362,
@@ -35955,7 +35990,7 @@
    "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
    "setup": "survival, full Ulfhednar set (Mask, Pelt, Breeches, Wolfskin Boots), attack indicator on (crosshair), hit a zombie 5 times fast, then stop for 4 s",
    "note": "generic: item hrafnholt_wolfskin_boots; framing approximate",
-   "override": "w7-gearfx.json"
+   "override": "w7z-gearfx.json"
   },
   {
    "n": 364,
@@ -38405,7 +38440,7 @@
     [
      "summon",
      "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
+     "{PersistenceRequired:1b,Silent:1b}",
      3,
      0
     ],
@@ -38442,6 +38477,14 @@
     ],
     [
      "use_up"
+    ],
+    [
+     "cmd",
+     "effect give @e[type=minecraft:husk] minecraft:jump_boost 120 128 true"
+    ],
+    [
+     "cmd",
+     "effect give @e[type=minecraft:husk] minecraft:slowness 120 255 true"
     ],
     [
      "cmd",
@@ -38490,7 +38533,7 @@
    "check": "the moths circle the husk's chest and dart in one after another, a few white-ash flakes at each strike; the husk shows drifting white-ash effect particles (Mothdust)",
    "setup": "same; `/summon husk ~5 ~ ~ {NoAI:1b}`, hit the husk once with the hand; shot side-on from 4 blocks at +2 s, a second at +3 s",
    "note": "generic: commands only, 1 setup command(s); framing approximate",
-   "override": "w4-vfx.json"
+   "override": "w9-smisc2.json"
   },
   {
    "n": 405,
@@ -40282,10 +40325,19 @@
     ],
     [
      "wait",
-     24
+     14
     ],
     [
      "use_up"
+    ],
+    [
+     "tp",
+     "stage",
+     5,
+     0,
+     6,
+     90,
+     0
     ],
     [
      "wait",
@@ -40296,55 +40348,70 @@
      "sunglass_first_person_2"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "wait",
      40
-    ],
-    [
-     "camera",
-     "front"
-    ],
-    [
-     "wait",
-     5
     ],
     [
      "use_down"
     ],
     [
      "wait",
-     24
+     14
     ],
     [
      "use_up"
     ],
     [
+     "tp",
+     "stage",
+     -5,
+     0,
+     6,
+     -90,
+     0
+    ],
+    [
      "wait",
-     2
+     1
     ],
     [
      "shot",
      "sunglass_third_person_2"
     ],
     [
-     "wait",
-     40
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
      "tp",
      "stage",
-     1.2,
      0,
-     9.4,
-     24,
+     0,
+     0,
+     0,
      0
     ],
     [
      "wait",
-     15
+     30
+    ],
+    [
+     "tp",
+     "stage",
+     4,
+     0,
+     7,
+     38.7,
+     0
+    ],
+    [
+     "wait",
+     10
     ],
     [
      "shot",
@@ -40353,44 +40420,49 @@
     [
      "tp",
      "stage",
-     1.2,
+     -4,
      0,
-     9.4,
-     50,
-     5
-    ],
-    [
-     "camera",
-     "back"
+     7,
+     -38.7,
+     0
     ],
     [
      "wait",
-     10
+     5
     ],
     [
      "shot",
      "sunglass_in_use_third_person"
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
      "tp",
      "stage",
-     0.7,
+     2,
      0,
-     10.6,
-     29,
+     9.5,
+     38.7,
      0
     ],
     [
      "wait",
-     15
+     5
     ],
     [
      "shot",
      "sunglass_after_use"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "inventory",
@@ -40437,7 +40509,7 @@
    "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
    "setup": "flat daylight, fire a full-draw bow at a stone wall 12 blocks away; third person F5, one shot mid-flight, one of the arrow stuck in the wall from 2 blocks",
    "note": "generic: item sunglass; framing approximate",
-   "override": "w7-items.json"
+   "override": "w7z-gearfx.json"
   },
   {
    "n": 428,
@@ -42640,6 +42712,47 @@
     [
      "shot",
      "echo_knight_entity_idle_beside_its_owner_later"
+    ],
+    [
+     "cmd",
+     "execute as @e[type=elsewhere:echo_knight,limit=1,sort=nearest] at @s run tp @p ^2.5 ^0 ^5 facing entity @s eyes"
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:echo_reliquary"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "shot",
+     "echo_reliquary_held_face_on_first_person"
+    ],
+    [
+     "camera",
+     "front"
+    ],
+    [
+     "cmd",
+     "tp @s ~ ~ ~ 180 0"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "shot",
+     "echo_reliquary_held_front_view"
+    ],
+    [
+     "camera",
+     "first"
     ]
    ],
    "shots": [
@@ -42650,12 +42763,20 @@
     {
      "slug": "echo_knight_entity_idle_beside_its_owner_later",
      "file": "s_reliquary__echo_knight_entity_idle_beside_its_owner_later.png"
+    },
+    {
+     "slug": "echo_reliquary_held_face_on_first_person",
+     "file": "s_reliquary__echo_reliquary_held_face_on_first_person.png"
+    },
+    {
+     "slug": "echo_reliquary_held_front_view",
+     "file": "s_reliquary__echo_reliquary_held_front_view.png"
     }
    ],
    "check": "a hooded, black-plated knight a little taller than the player: a closed grey great-helm with a glowing cyan visor slit, heavy pauldrons with teal trim, a black tabard with a glowing cyan bell sigil, a long frayed black cape, a pale blade with a teal edge held point-down. No footstep sounds while it walks",
    "setup": "survival flat world, `/time set 13000`, full Glimmer, `/attribute @s elsewhere:minion_slots base set 2`; hold use with the Echo Reliquary for 1 s; shot third person front three-quarter from 4 blocks at +3 s",
    "note": "generic: entity echo_knight, 2 setup command(s); framing approximate",
-   "override": "w9-smisc.json"
+   "override": "w9-smisc2.json"
   },
   {
    "n": 450,
@@ -43137,9 +43258,8 @@
      "difficulty normal"
     ],
     [
-     "equip",
-     "armor.head",
-     "elsewhere:stormcrest_helm"
+     "cmd",
+     "item replace entity @s armor.head with minecraft:air"
     ],
     [
      "tp",
@@ -43177,6 +43297,70 @@
      "Counter-Brew"
     ],
     [
+     "cmd",
+     "execute at @s run tp @s ~5 ~ ~"
+    ],
+    [
+     "wait",
+     13
+    ],
+    [
+     "shot",
+     "ground_patch_pre_arm_ring_duelist_ground_foresight_off"
+    ],
+    [
+     "cmd",
+     "kill @e[type=elsewhere:azmar_wazir]"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "equip",
+     "armor.head",
+     "elsewhere:stormcrest_helm"
+    ],
+    [
+     "summon",
+     "elsewhere:azmar_wazir",
+     "{PersistenceRequired:1b}",
+     0,
+     5
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "camera",
+     "front"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait_label",
+     2400,
+     "Counter-Brew"
+    ],
+    [
+     "cmd",
+     "execute at @s run tp @s ~5 ~ ~"
+    ],
+    [
      "wait",
      13
     ],
@@ -43187,6 +43371,10 @@
    ],
    "shots": [
     {
+     "slug": "ground_patch_pre_arm_ring_duelist_ground_foresight_off",
+     "file": "s_foresight__ground_patch_pre_arm_ring_duelist_ground_foresight_off.png"
+    },
+    {
      "slug": "ground_patch_pre_arm_ring_duelist_ground",
      "file": "s_foresight__ground_patch_pre_arm_ring_duelist_ground.png"
     }
@@ -43194,7 +43382,7 @@
    "check": "OFF: no ring before it arms, the cloud itself visible once armed; ON: the warning ring first",
    "setup": "stand 5 blocks from where it lands, shot right as it lands",
    "note": "generic: entity azmar_wazir; framing approximate",
-   "override": "w9-smisc.json"
+   "override": "w9-smisc2.json"
   },
   {
    "n": 455,
@@ -47193,7 +47381,7 @@
  ],
  "counts": {
   "scenes": 494,
-  "shots": 930,
+  "shots": 933,
   "manual": 82
  }
 }
