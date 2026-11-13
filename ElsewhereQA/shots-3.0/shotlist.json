@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 19:33",
+ "generated": "2026-11-12 19:34",
  "scenes": [
   {
    "n": 1,
@@ -1486,10 +1486,10 @@
      "tp",
      "anchor",
      0,
-     10,
-     45,
+     6,
+     38,
      180,
-     10
+     8
     ],
     [
      "chunks"
@@ -1525,7 +1525,7 @@
    ],
    "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
    "setup": "tp C+(14, +9, 10) yaw 200 pitch 14 (inside the court)",
-   "override": "z2-d-castles.json"
+   "override": "z4-f-bugs2.json"
   },
   {
    "n": 18,
@@ -16220,7 +16220,7 @@
    ],
    "check": "snow plateau on its own floor with the ground blending into it (no 22-high cut, no 40-deep pillar), the avalanche slope to the north running into the uphill hillside, packed-ice buttresses stepping down where the ground drops, a stone-brick entrance stair down the lowest side between two blue-ice obelisks with lanterns, unlit braziers, ice outcrops, frozen heart on blue ice",
    "setup": "`/locate structure elsewhere:glacier_shelf` = S; noon; tp S+(30, +14, 30) facing S, pitch 25; second shot from the downhill side at the stair foot looking up",
-   "override": "z2-d-struct.json"
+   "override": "z4-f-bugs2.json"
   },
   {
    "n": 177,
@@ -40674,9 +40674,9 @@
      "anchor",
      0,
      8,
-     9,
+     16,
      180,
-     18
+     28
     ],
     [
      "chunks"
@@ -40712,7 +40712,7 @@
    ],
    "check": "two lapis-rimmed pools with lily pads, palms leaning in, colonnaded porticos (lotus columns, turquoise bands) with the barracks and armory doors behind, braziers flanking the steps up to the hypostyle fa\u00e7ade, scarab over its door",
    "setup": "tp C+(0, +5, 10) yaw 180 pitch 10",
-   "override": "z2-d-castles.json"
+   "override": "z4-f-bugs2.json"
   },
   {
    "n": 412,
@@ -40842,10 +40842,10 @@
      "tp",
      "anchor",
      0,
-     3,
-     -17,
+     -2,
+     -14,
      180,
-     10
+     12
     ],
     [
      "chunks"
@@ -40881,7 +40881,7 @@
    ],
    "check": "dark oak throne with gold-terracotta arms on a blackstone dais, lapis runner, four columns, two blue banners, starred ceiling; the King stands before the throne at noon, courtiers and the Chancellor beside it; side doors to the naos (crypt trapdoor) and the palace lane",
    "setup": "tp C+(0, +3, -16) yaw 180 pitch 0",
-   "override": "z2-d-castles.json"
+   "override": "z4-f-bugs2.json"
   },
   {
    "n": 414,
