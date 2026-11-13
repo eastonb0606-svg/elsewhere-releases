@@ -7,7 +7,8 @@
           "scene": 154,
           "line": 171,
           "check": "stacked, gappy stone cone on a rock high point, every base stone touching ground, spruce waymark pole with prayer flags and a hanging lantern, chest at the north foot",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:12:27"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 173,
           "line": 186,
           "check": "no chat text, no death screen, no HUD clutter; the wiki uses cropped 789x444 copies until these land, and the 4 death screens are on the wiki reject list (_tools/wiki3/src.py REJECTED_SHOTS)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:14:45"
         }
       ]
     },
@@ -29,14 +31,16 @@
           "scene": 182,
           "line": 197,
           "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:15:48"
         },
         {
           "file": "s_struct_petalwind__sunwright_ziggurat_downhill_30.png",
           "scene": 182,
           "line": 197,
           "check": "five Sunwright-brick tiers with a chiseled band, yellow-terracotta studs and chiseled quoins (no gold blocks); the lowest terrace meets the ground on every side: brick/cut-sandstone plinth down to the sand on the low side with a stepped smooth-sandstone batter, a sloped sand apron on the high side (never buried); the south flight carved into the tiers with chiseled cheeks, continuing down to the sand; summit mirrors and glass lens ring",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:16:28"
         }
       ]
     },
@@ -111,14 +115,16 @@
           "scene": 396,
           "line": 446,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:16:46"
         },
         {
           "file": "s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png",
           "scene": 396,
           "line": 446,
           "check": "the hoard mounds are honeycomb blocks, yellow and orange terracotta and chiseled polished blackstone (no gold or gilded blackstone); the throne back is honeycomb and the arms yellow terracotta",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:16:50"
         }
       ]
     },
@@ -129,21 +135,23 @@
           "scene": 486,
           "line": 538,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:17:37"
         },
         {
           "file": "s_struct_greenhaze__silent_monastery_ground.png",
           "scene": 486,
           "line": 538,
           "check": "octagonal hushstone chapel with buttresses and a stepped corbel vault, black wool lining, pews facing the lectern and candles, the Mute Archivist; three round wool-lined cells on the cave's own shelves, reached by 3-wide galleries on piers with parapets (steps of 1)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:17:43"
         }
       ]
     }
   },
-  "run": "01:11:15",
+  "run": "01:17:44",
   "totals": {
-    "ok": 7,
+    "ok": 15,
     "fail": 0,
     "manual": 0
   }

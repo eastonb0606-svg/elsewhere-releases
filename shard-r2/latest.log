@@ -473,3 +473,128 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [01:11:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:climbers_cairn in elsewhere:ironpeak at C = 32 1233 32
 [01:11:44] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 39.500000, 1239.000000, 39.500000
 [01:11:44] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[01:11:52] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 15153ms or 303 ticks behind
+[01:12:22] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 39.500000, 1249.000000, 39.500000
+[01:12:26] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[01:12:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_verdigris__climbers_cairn_s_6_4_6.png: 
+[01:12:27] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 154 (s_struct_verdigris | elsewhere:climbers_cairn) done in 58066 ms
+[01:12:27] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:12:27] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:12:27] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[01:12:27] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:12:27] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:12:27] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[01:12:30] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[01:12:31] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 1456 65 -1520
+[01:12:31] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1456.500000, 85.000000, -1519.500000
+[01:12:31] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6433ms or 128 ticks behind
+[01:12:39] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:12:44] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: RUSH (60 ops per tick).
+[01:12:44] [Server thread/INFO] (Minecraft) System chat: Siege started at 1460, 70, -1516.
+[01:12:52] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5760ms or 115 ticks behind
+[01:13:13] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5471ms or 109 ticks behind
+[01:13:16] [Server thread/INFO] (Minecraft) Named entity KingdomSoldier['Royal Tax Collector'/311, l='ServerLevel[New World]', x=1461.46, y=68.94, z=-1518.35] died: Royal Tax Collector was slain by Iron Golem
+[01:13:33] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5304ms or 106 ticks behind
+[01:13:54] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5736ms or 114 ticks behind
+[01:14:14] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5700ms or 114 ticks behind
+[01:14:35] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5944ms or 118 ticks behind
+[01:14:37] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: normal (1 op per second).
+[01:14:37] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:14:37] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:14:37] [Server thread/INFO] (Minecraft) System chat: Set own game mode to Spectator Mode
+[01:14:37] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:14:37] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1434.500000, 75.000000, -1505.500000
+[01:14:44] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[01:14:44] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[01:14:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__villages_aldermark_stone.png: 
+[01:14:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 173 (s_dataclean | villages_aldermark_stone) done in 137873 ms
+[01:14:45] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:14:45] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:14:45] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:14:45] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:14:45] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:14:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:sunwright_ziggurat in elsewhere:glasswaste at C = -448 62 -432
+[01:14:46] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:14:46] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -447.500000, 72.000000, -431.500000
+[01:14:46] [Render thread/INFO] (Minecraft) Loaded 5 advancements
+[01:14:54] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4260ms or 85 ticks behind
+[01:15:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -417.500000, 84.000000, -401.500000
+[01:15:32] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2000ms or 40 ticks behind
+[01:15:47] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:15:48] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__sunwright_ziggurat_s_30_14_30.png: 
+[01:15:48] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -477.500000, 84.000000, -461.500000
+[01:15:51] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2004ms or 40 ticks behind
+[01:16:09] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3332ms or 66 ticks behind
+[01:16:27] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3369ms or 67 ticks behind
+[01:16:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_petalwind__sunwright_ziggurat_downhill_30.png: 
+[01:16:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 182 (s_struct_petalwind | elsewhere:sunwright_ziggurat) done in 103338 ms
+[01:16:28] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:16:28] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:16:28] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:16:28] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:16:29] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:grunthar_treasure_hall in minecraft:the_nether at C = -192 68 64
+[01:16:29] [Server thread/INFO] (Minecraft) System chat: ShotRunner has made the advancement [We Need to Go Deeper]
+[01:16:29] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -183.500000, 72.000000, 72.500000
+[01:16:29] [Render thread/INFO] (Minecraft) Loaded 32 advancements
+[01:16:30] [Server thread/INFO] (Minecraft) System chat: Marked 49 chunks in minecraft:the_nether from [-15, 1] to [-9, 7] to be force loaded
+[01:16:30] [Render thread/INFO] (Minecraft) Loaded 32 advancements
+[01:16:39] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -183.500000, 114.000000, 100.500000
+[01:16:45] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[01:16:46] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_throne__grunthar_legacy_treasure_hall_nether_2_x.png: 
+[01:16:46] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to -161.500000, 102.000000, 78.500000
+[01:16:46] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4047ms or 80 ticks behind
+[01:16:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_throne__grunthar_legacy_treasure_hall_nether_2_x_5s.png: 
+[01:16:50] [Server thread/INFO] (Minecraft) System chat: Unmarked all force loaded chunks in minecraft:the_nether
+[01:16:50] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 396 (s_throne | Grunthar legacy treasure hall (nether, 2.x saved arena)) done in 22268 ms
+[01:16:50] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:16:50] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:16:50] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:16:50] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:16:51] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:silent_monastery in elsewhere:the_hush at C = 96 111 352
+[01:16:51] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 104.500000, 111.000000, 360.500000
+[01:16:51] [Render thread/INFO] (Minecraft) Loaded 33 advancements
+[01:17:03] [Server thread/INFO] (Minecraft) System chat: Marked 36 chunks in elsewhere:the_hush from [4, 20] to [9, 25] to be force loaded
+[01:17:04] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2334ms or 46 ticks behind
+[01:17:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 104.500000, 24.000000, 360.500000
+[01:17:13] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 102.500000, 24.000000, 360.500000
+[01:17:21] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 102.500000, 50.000000, 326.500000
+[01:17:31] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2003ms or 40 ticks behind
+[01:17:37] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__silent_monastery_overview.png: 
+[01:17:37] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 102.500000, 24.000000, 360.500000
+[01:17:38] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 102.500000, 21.400000, 360.500000
+[01:17:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__silent_monastery_ground.png: 
+[01:17:43] [Server thread/INFO] (Minecraft) System chat: Unmarked all force loaded chunks in elsewhere:the_hush
+[01:17:43] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 486 (s_struct_greenhaze | elsewhere:silent_monastery) done in 53169 ms
+[01:17:43] [Server thread/INFO] (Minecraft) Stopping server
+[01:17:43] [Server thread/INFO] (Minecraft) Saving players
+[01:17:43] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[01:17:43] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[01:17:43] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[01:17:43] [Server thread/INFO] (Minecraft) Saving worlds
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:17:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:17:44] [Test thread/INFO] (ElsewhereQA-shots) [shots] TOTAL 15 ok, 0 fail, 0 manual
+[01:17:44] [Render thread/INFO] (Minecraft) Stopping!
+[01:17:44] [Render thread/WARN] (Minecraft) Couldn't acquire next surface texture with config Optional[Configuration[width=1280, height=720, presentMode=FIFO]]
+com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swapchain out of date
+	at knot//com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface.acquireNextTexture(VulkanGpuSurface.java:277)
+	at knot//com.mojang.renderpearl.frontend.FrontendGpuSurface.acquireNextTexture(FrontendGpuSurface.java:71)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1330)
+	at knot//net.minecraft.client.Minecraft.setScreenAndShow(Minecraft.java:2321)
+	at knot//net.minecraft.client.Minecraft.disconnect(Minecraft.java:2271)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2220)
+	at knot//net.minecraft.client.Minecraft.disconnectWithProgressScreen(Minecraft.java:2216)
+	at knot//net.minecraft.client.Minecraft.exitWorldAndClose(Minecraft.java:1169)
+	at knot//net.minecraft.client.main.Main.main(Main.java:296)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
