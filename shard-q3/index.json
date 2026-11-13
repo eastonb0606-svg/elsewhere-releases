@@ -7,7 +7,8 @@
           "scene": 21,
           "line": 29,
           "check": "on fv 2 the roads curve over the terrain (A*) from the castle gate to both town gates, 3 wide, lamp posts, no cliffs or causeways taller than about 2; on fv 1 the 2.1 straight road",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:19"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 160,
           "line": 177,
           "check": "banded teal/white tower standing on a rubble sea stack (mossy cobble, tuff, andesite) that widens at the waterline and roots on the bed, plated sea door and landing on the south; the platform on corbels with 10 rods (cut-copper pedestals); the platform height follows the shoal, not a fixed Y 120",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:34"
         }
       ]
     },
@@ -29,14 +31,16 @@
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:06:58"
         },
         {
           "file": "s_p13_particles__rimeback_avalanche_20s.png",
           "scene": 166,
           "line": 183,
           "check": "one solid snow-dust wall across the arena width, no stripes or gaps along the wave",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:07:01"
         }
       ]
     },
@@ -87,42 +91,48 @@
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:29"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_third_person.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:30"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_first_person.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:31"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_in_use_third_person.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:32"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_after_use.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:32"
         },
         {
           "file": "s_setbonus_b__glasswaste_starsight_visor_tooltip.png",
           "scene": 361,
           "line": 409,
           "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:34"
         }
       ]
     },
@@ -133,21 +143,23 @@
           "scene": 382,
           "line": 430,
           "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:09:37"
         },
         {
           "file": "s_routines__mirewick_off_time_wards_5s.png",
           "scene": 382,
           "line": 430,
           "check": "the wards change watch at different moments between about 06:30 and 07:30, not all at 07:00",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:09:47"
         }
       ]
     }
   },
-  "run": "01:01:28",
+  "run": "01:09:48",
   "totals": {
-    "ok": 4,
+    "ok": 16,
     "fail": 0,
     "manual": 0
   }
