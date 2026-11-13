@@ -7,14 +7,16 @@
           "scene": 283,
           "line": 322,
           "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:47"
         },
         {
           "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
           "scene": 283,
           "line": 322,
           "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:53"
         }
       ],
       "elsewhere:mournmaw_weeping_basin": [
@@ -23,7 +25,8 @@
           "scene": 285,
           "line": 324,
           "check": "a soul-sand bowl rising 2 to its rim and blending into the valley with a soul-soil berm; 14 standing basalt pillars (4-9 high, some with soul lanterns) round the rim, rooted in the floor; five bone arches; the soul-water basin lit by 4 soul lanterns on basalt posts (no campfires); the open space above is a dome, not a cylinder cut",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:03"
         }
       ],
       "elsewhere:aphelion_shattered_halo": [
@@ -32,14 +35,16 @@
           "scene": 286,
           "line": 325,
           "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:12"
         },
         {
           "file": "s_struct_nether__aphelion_shattered_halo_s_14_10_0.png",
           "scene": 286,
           "line": 325,
           "check": "centre end-stone disc meeting the island under it (sloped apron, no overhang); obsidian spire with crying-obsidian bands and amethyst tip; four obsidian crystal pillars with bedrock caps; seven ragged halo islands floating at the ring (by design) with jagged tapered undersides, broken end-stone-brick columns with end rods on alternate islands",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:21"
         }
       ],
       "elsewhere:ossyra_matriarch_spire": [
@@ -48,14 +53,16 @@
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:33"
         },
         {
           "file": "s_struct_nether__ossyra_matriarch_spire_s_12_26_0.png",
           "scene": 287,
           "line": 326,
           "check": "purpur tower rising from an end-stone island cap that meets the island ground (no ledge over the void), six purpur-pillar buttress roots arching down from the tower to end-stone-brick feet on the island; the hollow purpur cube on top unchanged (end rods, pedestal inside)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:42"
         }
       ]
     },
@@ -136,9 +143,9 @@
       ]
     }
   },
-  "run": "01:01:26",
+  "run": "01:02:43",
   "totals": {
-    "ok": 8,
+    "ok": 15,
     "fail": 0,
     "manual": 0
   }
