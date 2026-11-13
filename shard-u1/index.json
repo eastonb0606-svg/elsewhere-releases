@@ -1,0 +1,133 @@
+{
+  "lanes": {
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, idle)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_idle.png",
+          "scene": 145,
+          "line": 160,
+          "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
+          "status": "ok",
+          "taken": "01:26:11"
+        }
+      ]
+    },
+    "s_struct_nether": {
+      "elsewhere:grunthar_treasure_hall": [
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_0_0_21.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_nether__grunthar_treasure_hall_s_18_6_34.png",
+          "scene": 283,
+          "line": 322,
+          "check": "bastion gate façade (polished blackstone bricks, chiseled snout band, honey-gold keystone, hanging lantern on a chain) between two 5x5 crenellated towers with barred slits; the round hall behind it buried in the netherrack cliff or under a stepped blackstone dome; a railed terrace with blackstone stair flights down both sides to the cavern floor; abutment walls and footings reach the ground, no hanging slab over lava; inside: hoard of honeycomb/yellow/orange terracotta (NO gold blocks or gilded blackstone), throne on its dais, 4 barred lavafalls",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_whips": {
+      "elsewhere:thornlash": [
+        {
+          "file": "s_whips__thornlash_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:26:13"
+        },
+        {
+          "file": "s_whips__thornlash_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:26:14"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_first_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:26:14"
+        },
+        {
+          "file": "s_whips__thornlash_in_use_third_person.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:26:16"
+        },
+        {
+          "file": "s_whips__thornlash_after_use.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:26:18"
+        },
+        {
+          "file": "s_whips__thornlash_tooltip.png",
+          "scene": 303,
+          "line": 343,
+          "check": "GUI: each whip's own coiled sprite, not checkerboard; tooltip lore line 3 names its mark (\"Hit marks it Thorned 5 s...\" / Shackled / Venom / Resonant) and line 4 the crack; while the cooldown runs the held model swaps to the cracked lash (same handle, lash snapped straight out to the upper right in the whip's colours, a spark at the tip), back to the coil after 0.5 s; the arm swing is the overhead whack, held a little longer than a sword's",
+          "status": "ok",
+          "taken": "01:26:18"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_in_flight.png",
+          "scene": 312,
+          "line": 352,
+          "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
+          "status": "ok",
+          "taken": "01:26:21"
+        }
+      ]
+    },
+    "s_routines": {
+      "Aldermark Muster Day ranks and mock charge": [
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        },
+        {
+          "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
+          "scene": 377,
+          "line": 425,
+          "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_lod": {
+      "Far soldiers in their baked LOD skin (48-96 blocks, ARMIES 3.7)": [
+        {
+          "file": "s_lod__battle_aldermark_azmar_60_30s.png",
+          "scene": 456,
+          "line": 508,
+          "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:26:21",
+  "totals": {
+    "ok": 8,
+    "fail": 0,
+    "manual": 0
+  }
+}
