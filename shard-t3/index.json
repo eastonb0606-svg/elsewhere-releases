@@ -1,0 +1,104 @@
+{
+  "lanes": {
+    "structures_build": {
+      "elsewhere:castle_azmar": [
+        {
+          "file": "structures_build__castle_azmar_c_14_9_10_y200.png",
+          "scene": 17,
+          "line": 25,
+          "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "elsewhere:townsfolk": [
+        {
+          "file": "s_p9_idle__townsfolk_routine_poses_s_townsfolk_resi.png",
+          "scene": 333,
+          "line": 376,
+          "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_pennant": {
+      "elsewhere:rootling": [
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "ok",
+          "taken": "01:21:17"
+        },
+        {
+          "file": "s_pennant__standard_waving_with_minions_gear3_later.png",
+          "scene": 424,
+          "line": 474,
+          "check": "the flag sways slowly and its two tails flutter; green motes rise from the flag every second and pop on the hurt Rootling as it heals; the Rootlings move a little faster",
+          "status": "ok",
+          "taken": "01:21:18"
+        }
+      ]
+    },
+    "s_totems": {
+      "elsewhere:bramble_totem": [
+        {
+          "file": "s_totems__bramble_totem_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "01:21:23"
+        },
+        {
+          "file": "s_totems__bramble_totem_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "01:21:24"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_first_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "01:21:26"
+        },
+        {
+          "file": "s_totems__bramble_totem_in_use_third_person.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "01:21:27"
+        },
+        {
+          "file": "s_totems__bramble_totem_after_use.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "01:21:30"
+        },
+        {
+          "file": "s_totems__bramble_totem_tooltip.png",
+          "scene": 436,
+          "line": 486,
+          "check": "a bark post with a fern crown and two thorn-vine arms; arms whip out on the lash, green composter specks along each lash, crits on 3 husks (not the 4th), sometimes a husk sneezes (sneeze puffs + panda sneeze)",
+          "status": "ok",
+          "taken": "01:21:31"
+        }
+      ]
+    }
+  },
+  "run": "01:21:31",
+  "totals": {
+    "ok": 8,
+    "fail": 0,
+    "manual": 0
+  }
+}
