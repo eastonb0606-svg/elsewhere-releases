@@ -11,3 +11,10 @@ JAVA-DUP dev/elsewhere/boss/kit/AddWaves.java: verdigris_ironpeak kept, nether_e
 elsewhere-3.0.0.jar
 merged jar elsewhere-3.0.0.jar 146938890 bytes in 86 s
 01:09:32Z client: scenes 2,5,171,217,239,473,478, watchdog 44 min
+fatal: expected 'acknowledgments', received 'packfile'
+warning: push negotiation failed; proceeding anyway with push
+remote: 
+remote: Create a pull request for 'cloud-shots-r4' on GitHub by visiting:        
+remote:      https://github.com/eastonb0606-svg/elsewhere-releases/pull/new/cloud-shots-r4        
+remote: 
+published 5 PNGs (progress) -> cloud-shots-r4 78df3e7

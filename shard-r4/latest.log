@@ -362,3 +362,227 @@ com.mojang.renderpearl.api.device.SurfaceException: Failed to acquire image, swa
 [01:10:59] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 0.500000, -60.000000, 0.500000
 [01:11:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_first_person_2.png: 
 [01:11:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_third_person_2.png: 
+[01:11:02] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_in_use_first_person.png: 
+[01:11:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_in_use_third_person.png: 
+[01:11:07] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_after_use.png: 
+[01:11:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_waryak__ironpeak_war_yak_horn_tooltip_2.png: 
+[01:11:08] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 473 (s_waryak | elsewhere:ironpeak_war_yak_horn) done in 10894 ms
+[01:11:08] [Server thread/INFO] (Minecraft) ShotRunner lost connection: Disconnected
+[01:11:08] [Server thread/INFO] (Minecraft) System chat: ShotRunner left the game
+[01:11:08] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[01:11:08] [Server thread/INFO] (Minecraft) Stopping server
+[01:11:08] [Server thread/INFO] (Minecraft) Saving players
+[01:11:08] [Server thread/INFO] (Minecraft) Saving worlds
+[01:11:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:11:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:11:10] [Worker-Main-3/INFO] (Minecraft) Loaded 1931 advancements
+[01:11:10] [Render thread/INFO] (Elsewhere) Loaded 7 Wayfinder attunements
+[01:11:10] [Render thread/INFO] (elsewhere-kingdom) Army scale loaded for 4 kingdoms: [elsewhere:mirewick, elsewhere:aldermark, elsewhere:azmar, elsewhere:hrafnholt]
+[01:11:10] [Render thread/INFO] (elsewhere-kingdom) Loaded 4 kingdom factions: [elsewhere:aldermark, elsewhere:azmar, elsewhere:hrafnholt, elsewhere:mirewick]
+[01:11:10] [Render thread/INFO] (elsewhere-kingdom) Townsfolk roles loaded for 4 kingdoms: [elsewhere:mirewick, elsewhere:aldermark, elsewhere:azmar, elsewhere:hrafnholt]
+[01:11:10] [Render thread/INFO] (elsewhere-kingdom) Loaded 80 kingdom unit types
+[01:11:10] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.GenericMessageScreen@7df7eed9
+[01:11:10] [Render thread/INFO] (BiomeModificationImpl) Applied 58 biome modifications to 35 of 102 new biomes in 4.382 ms
+[01:11:10] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 26.3
+[01:11:10] [Server thread/INFO] (Minecraft) Generating keypair
+[01:11:10] [Server thread/INFO] (Minecraft) Selecting global world spawn...
+[01:11:12] [Server thread/INFO] (Minecraft) Loading 0 persistent chunks...
+[01:11:12] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:glasswaste
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:greenhaze
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:the_hush
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:petalwind
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:ironpeak
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:pale_hollow
+[01:11:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/elsewhere:verdigris_sea
+[01:11:12] [Server thread/INFO] (Elsewhere) Bounty boards: 7 traders
+[01:11:13] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:aldermark realm site: BlockPos{x=1368, y=69, z=-1304}
+[01:11:13] [Server thread/INFO] (elsewhere-kingdom-court) Rival realm placement of [elsewhere:azmar, elsewhere:hrafnholt, elsewhere:mirewick] took 629 ms: {elsewhere:azmar=BlockPos{x=952, y=85, z=-4472}, elsewhere:hrafnholt=BlockPos{x=1576, y=81, z=-7160}, elsewhere:mirewick=BlockPos{x=2888, y=116, z=-3672}}
+[01:11:13] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:azmar realm site: BlockPos{x=952, y=85, z=-4472}
+[01:11:13] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:hrafnholt realm site: BlockPos{x=1576, y=81, z=-7160}
+[01:11:13] [Server thread/INFO] (elsewhere-kingdom-court) elsewhere:mirewick realm site: BlockPos{x=2888, y=116, z=-3672}
+[01:11:13] [Server thread/WARN] (TranslationConventionLogWarnings) 
+	Dev warning - Untranslated Item Tags detected. Please translate your item tags so other mods such as recipe viewers can properly display your tag's name.
+	The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods.
+	To disable this message, set this system property in your runs: `-Dfabric-tag-conventions-v2.missingTagTranslationWarning=SILENCED`.
+	To see individual untranslated item tags found, set the system property to `-Dfabric-tag-conventions-v2.missingTagTranslationWarning=VERBOSE`.
+	Default is `SHORT`.
+
+[01:11:13] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:13] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:13] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:13] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Server thread/INFO] (Minecraft) Loading 47 chunks for player spawn...
+[01:11:14] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[01:11:14] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:14] [Server thread/INFO] (Minecraft) Preparing spawn area: 16%
+[01:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:15] [Server thread/INFO] (Minecraft) Preparing spawn area: 18%
+[01:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:15] [Server thread/INFO] (Minecraft) Preparing spawn area: 18%
+[01:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:15] [Server thread/INFO] (Minecraft) Preparing spawn area: 18%
+[01:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:15] [Server thread/INFO] (Minecraft) Preparing spawn area: 29%
+[01:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:15] [Server thread/INFO] (Minecraft) Preparing spawn area: 29%
+[01:11:15] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:15] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2128ms or 42 ticks behind
+[01:11:15] [Server thread/INFO] (Minecraft) Preparing spawn area: 29%
+[01:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:16] [Server thread/INFO] (Minecraft) Preparing spawn area: 31%
+[01:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:16] [Server thread/INFO] (Minecraft) Preparing spawn area: 57%
+[01:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:16] [Server thread/INFO] (Minecraft) Preparing spawn area: 100%
+[01:11:16] [Server thread/INFO] (Minecraft) Time elapsed: 6039 ms
+[01:11:16] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: null screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:16] [Server thread/INFO] (Minecraft) ShotRunner[local:E:24100c56] logged in with entity id 20 at (-4.5, 63.0, -7.5)
+[01:11:16] [Server thread/INFO] (Minecraft) System chat: ShotRunner joined the game
+[01:11:16] [Server thread/INFO] (Minecraft) Changing view distance to 5, from 10
+[01:11:16] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[01:11:17] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[01:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:17] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: net.minecraft.client.gui.screens.LevelLoadingScreen@2d5e21ba
+[01:11:18] [Render thread/INFO] (fabric-client-gametest-api-v1) World loading finished: ClientLevel screen: null
+[01:11:22] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Game rule random_tick_speed is now set to 0
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Game rule spawn_mobs is now set to false
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: gamerule do_daylight_cycle false<--[HERE]
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: gamerule do_weather_cycle false<--[HERE]
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Incorrect argument for command
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: gamerule do_mob_spawning false<--[HERE]
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Game rule send_command_feedback is now set to false
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Target has no effects to remove
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:11:22] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[01:11:26] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[01:11:28] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 1456 65 -1520
+[01:11:28] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1456.500000, 85.000000, -1519.500000
+[01:11:36] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:11:42] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: RUSH (60 ops per tick).
+[01:11:42] [Server thread/INFO] (Minecraft) System chat: Siege started at 1460, 70, -1516.
+[01:11:45] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 14444ms or 288 ticks behind
+[01:12:05] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5293ms or 105 ticks behind
+[01:12:16] [Server thread/INFO] (Minecraft) Named entity KingdomSoldier['Royal Tax Collector'/323, l='ServerLevel[New World]', x=1460.80, y=69.23, z=-1518.76] died: Royal Tax Collector was slain by Iron Golem
+[01:12:26] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5874ms or 117 ticks behind
+[01:12:47] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6149ms or 122 ticks behind
+[01:13:09] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6593ms or 131 ticks behind
+[01:13:29] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5512ms or 110 ticks behind
+[01:13:36] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: normal (1 op per second).
+[01:13:36] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:13:36] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:13:36] [Server thread/INFO] (Minecraft) System chat: Set own game mode to Spectator Mode
+[01:13:36] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:13:36] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1456.500000, 105.000000, -1479.500000
+[01:13:37] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[01:13:44] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Command Buffer, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[01:13:44] [Render thread/INFO] (Minecraft) Resizing Chunk Sections Instanced, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[01:13:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK villages__village_near_aldermark.png: 
+[01:13:45] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 2 (villages | the faction villages and rebuild styles (aldermark realm)) done in 142584 ms
+[01:13:45] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:13:45] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:13:45] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[01:13:45] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:13:45] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:13:45] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[01:14:01] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_mirewick in minecraft:overworld at C = 2888 116 -3672
+[01:14:03] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 2896 71 -3440
+[01:14:03] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2896.500000, 91.000000, -3439.500000
+[01:14:07] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 23142ms or 462 ticks behind
+[01:14:16] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: RUSH (60 ops per tick).
+[01:14:16] [Server thread/INFO] (Minecraft) System chat: No siege: village is FORTIFYING
+[01:14:28] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5862ms or 117 ticks behind
+[01:14:49] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5563ms or 111 ticks behind
+[01:15:09] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5712ms or 114 ticks behind
+[01:15:29] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4857ms or 97 ticks behind
+[01:15:50] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 6124ms or 122 ticks behind
+[01:16:08] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: normal (1 op per second).
+[01:16:08] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:16:08] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:16:08] [Server thread/INFO] (Minecraft) System chat: Set own game mode to Spectator Mode
+[01:16:08] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:16:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 2896.500000, 99.000000, -3409.500000
+[01:16:11] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 5639ms or 112 ticks behind
+[01:16:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK villages__village_near_mirewick.png: 
+[01:16:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 5 (villages | the faction villages and rebuild styles (mirewick realm)) done in 151338 ms
+[01:16:16] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:16:16] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:16:16] [Server thread/INFO] (Minecraft) System chat: Set ShotRunner's game mode to Creative Mode
+[01:16:16] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:16:16] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:16:16] [Server thread/INFO] (Minecraft) System chat: Applied effect Resistance to ShotRunner
+[01:16:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:castle_aldermark in minecraft:overworld at C = 1368 69 -1304
+[01:16:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] located #minecraft:village in minecraft:overworld at C = 1456 65 -1520
+[01:16:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1456.500000, 85.000000, -1519.500000
+[01:16:26] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: RUSH (60 ops per tick).
+[01:16:26] [Server thread/INFO] (Minecraft) System chat: No siege: village is LIBERATED
+[01:16:29] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3608ms or 72 ticks behind
+[01:16:49] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4331ms or 86 ticks behind
+[01:17:08] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 4024ms or 80 ticks behind
+[01:17:26] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3302ms or 66 ticks behind
+[01:17:44] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3239ms or 64 ticks behind
+[01:18:02] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3220ms or 64 ticks behind
+[01:18:08] [Server thread/INFO] (Minecraft) System chat: Village rebuild pace: normal (1 op per second).
+[01:18:08] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:18:08] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:18:08] [Server thread/INFO] (Minecraft) System chat: Set own game mode to Spectator Mode
+[01:18:08] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 1456.500000, 79.000000, -1493.500000
+[01:18:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_dataclean__villages_aldermark_overview_street.png: 
+[01:18:15] [Test thread/INFO] (ElsewhereQA-shots) [shots] scene 171 (s_dataclean | villages_aldermark_overview_street) done in 118748 ms
+[01:18:15] [Server thread/INFO] (Minecraft) System chat: No items were found on player ShotRunner
+[01:18:15] [Server thread/INFO] (Minecraft) System chat: Removed every effect from ShotRunner
+[01:18:15] [Server thread/INFO] (Minecraft) System chat: Set minecraft:overworld to 6000 tick(s)
+[01:18:15] [Server thread/INFO] (Minecraft) System chat: Set the weather to clear
+[01:18:15] [Server thread/INFO] (Minecraft) System chat: Applied effect Night Vision to ShotRunner
+[01:18:17] [Test thread/INFO] (ElsewhereQA-shots) [shots] located elsewhere:great_hotbox in elsewhere:greenhaze at C = 48 84 64
+[01:18:17] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 56.500000, 88.000000, 72.500000
+[01:18:17] [Render thread/INFO] (Minecraft) Loaded 4 advancements
+[01:18:18] [Server thread/INFO] (Minecraft) System chat: Marked 36 chunks in elsewhere:greenhaze from [1, 2] to [6, 7] to be force loaded
+[01:18:28] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 10138ms or 202 ticks behind
+[01:18:50] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 56.500000, 108.000000, 36.500000
+[01:18:50] [Server thread/INFO] (Minecraft) System chat: Successfully filled 1005 block(s)
+[01:18:50] [Server thread/INFO] (Minecraft) System chat: Successfully filled 152 block(s)
+[01:18:50] [Server thread/INFO] (Minecraft) System chat: Successfully filled 188 block(s)
+[01:18:50] [Server thread/INFO] (Minecraft) System chat: Successfully filled 51 block(s)
+[01:19:00] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 17776ms or 355 ticks behind
+[01:19:16] [Test thread/INFO] (ElsewhereQA-shots) [shots] OK s_struct_greenhaze__great_hotbox_overview.png: 
+[01:19:16] [Server thread/INFO] (Minecraft) System chat: Teleported ShotRunner to 36.500000, 93.000000, 52.500000
+[01:19:16] [Server thread/INFO] (Minecraft) System chat: Successfully filled 431 block(s)
+[01:19:16] [Server thread/INFO] (Minecraft) System chat: Successfully filled 134 block(s)
