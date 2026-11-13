@@ -1,0 +1,149 @@
+{
+  "lanes": {
+    "anim": {
+      "elsewhere:mother_creak": [
+        {
+          "file": "anim__mother_creak_hurt_peak.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "01:00:55"
+        },
+        {
+          "file": "anim__mother_creak_hurt_rest.png",
+          "scene": 70,
+          "line": 83,
+          "check": "peak: whole boss rocked back from its feet by about 7 degrees and squashed slightly; at 8 ticks back upright (one small forward overshoot around 5 ticks is intended); its own idle/attack/death keyframes unchanged",
+          "status": "ok",
+          "taken": "01:00:56"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, idle)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_idle.png",
+          "scene": 145,
+          "line": 160,
+          "check": "a small 3D steel buckler (10 px disc, blue ring, gold boss, handle behind) in the vanilla shield position; smaller than a vanilla shield; no flat sprite, no checkerboard",
+          "status": "ok",
+          "taken": "01:00:58"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Azmar looks (priest, scribe, porter, merchant x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_front.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "01:01:01"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_azmar_looks_priest_scribe_port_back.png",
+          "scene": 221,
+          "line": 251,
+          "check": "Egyptian: kohl eyes on everyone; priest_0 shaved head + leopard pelt, priest_1 priestess with long wig and gold fillet, priest_2 lector with a white chest sash; scribes with a reed pen behind the ear and a palette at the hip (scribe_1 ochre dress + shawl); porters bare-chested or in sand linen with headcloths and a carrying strap; merchant_0 lapis-striped robe + gold collar, merchant_1 turquoise bead-net dress, merchant_2 caravan trader in a striped headcloth; no two roles look alike",
+          "status": "ok",
+          "taken": "01:01:01"
+        }
+      ]
+    },
+    "s_starpiercer": {
+      "elsewhere:starpiercer_arrow": [
+        {
+          "file": "s_starpiercer__starpiercer_arrow_in_flight.png",
+          "scene": 312,
+          "line": 352,
+          "check": "dark-violet arrow with star-white head drawn bright (full light even at night), END_ROD star sparks + reverse-portal motes trailing it, a straight line for the first 32 blocks, then a visible drop",
+          "status": "ok",
+          "taken": "01:01:03"
+        }
+      ]
+    },
+    "s_p9_idle": {
+      "night rest (REST: soldiers the night routine rests)": [
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        },
+        {
+          "file": "s_p9_idle__night_rest_rest_soldiers_the_night_routi_5s.png",
+          "scene": 332,
+          "line": 375,
+          "check": "resting soldiers are SEATED and dozing (head nodding slowly) instead of the 2.x crouch; still no nameplate on them (s-p3 rule unchanged); they stand up when hit or when an enemy comes",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_setbonus_b": {
+      "elsewhere:hrafnholt_wolfskin_boots": [
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_first_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "ok",
+          "taken": "01:01:09"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_third_person.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "ok",
+          "taken": "01:01:09"
+        },
+        {
+          "file": "s_setbonus_b__hrafnholt_wolfskin_boots_tooltip.png",
+          "scene": 363,
+          "line": 411,
+          "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
+          "status": "ok",
+          "taken": "01:01:10"
+        }
+      ]
+    },
+    "s_impostors": {
+      "Rout at the end of a battle": [
+        {
+          "file": "s_impostors__battle_aldermark_hrafnholt_30_30s.png",
+          "scene": 443,
+          "line": 493,
+          "check": "the winner's ranks march off toward their rear in step; the loser's ranks turn and walk away in a loose, ragged line, faster, and are gone once out of sight",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_layout_hraf": {
+      "elsewhere:castle_hrafnholt": [
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_overview.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        },
+        {
+          "file": "s_layout_hraf__castle_hrafnholt_ground.png",
+          "scene": 466,
+          "line": 518,
+          "check": "a ROUND earth rampart (grass and moss bank, mossy cobble revetment where it is high) with a log palisade and fence tips following the ground, four gate towers on the axes (side gates only where the ground outside is level), the longhall with a hogback roof in the middle, four turf-roofed longhouses, the hof's spire; NOT the Aldermark square curtain or keep",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:01:10",
+  "totals": {
+    "ok": 9,
+    "fail": 0,
+    "manual": 0
+  }
+}
