@@ -7,7 +7,8 @@
           "scene": 16,
           "line": 24,
           "check": "flat roofs with cavetto cornices and lapis bands, kiosks on the tower tops, undulating parapet, palms in the court; no pitched roofs, no gold blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:45"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 157,
           "line": 174,
           "check": "8 leaning standing stones each on its own ground around a 5x5 dais with the rift; no beacon or iron blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:04:04"
         }
       ]
     },
@@ -121,7 +123,8 @@
           "scene": 327,
           "line": 370,
           "check": "Aldermark and Azmar sweeping the yard with a broom (stripped-spruce pole, hay head, held two-handed, swinging low side to side); Hrafnholt a two-handed overhead chop; Mirewick rubbing its gilded kit with a cloth (off-hand shield hidden, main-hand item held up); the archer raising, drawing and loosing its bow at the butts. No arm swing packets (the motion is smooth, not vanilla's jab)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:04:47"
         }
       ]
     },
@@ -132,14 +135,16 @@
           "scene": 377,
           "line": 425,
           "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:05:27"
         },
         {
           "file": "s_routines__aldermark_muster_day_ranks_and_mock_char_5s.png",
           "scene": 377,
           "line": 425,
           "check": "every garrison squad stands in rows at attention on the tilting field (war horn); at 11:00 the ranks charge 18 blocks forward and back; a townsfolk crowd cheers at the edge",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:05:37"
         }
       ]
     },
@@ -150,14 +155,15 @@
           "scene": 458,
           "line": 510,
           "check": "chat line \"Army render LOD on ... full-detail cap 48 | last frame: N full (48 or fewer), ... near, ... far ... | 66 baked skins | ... soldiers tracked, battle true | ... combat particles this second (400 or fewer), ... battle sounds playing (12 or fewer) ...\"; FPS on F3 steady; no soldier invisible within 96 blocks",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:03"
         }
       ]
     }
   },
-  "run": "01:02:39",
+  "run": "01:05:38",
   "totals": {
-    "ok": 10,
+    "ok": 16,
     "fail": 0,
     "manual": 0
   }
