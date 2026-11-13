@@ -7,7 +7,8 @@
           "scene": 17,
           "line": 25,
           "check": "two battered pylons flanking the keep door with blue banners, obelisk pair with yellow-terracotta tips",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:01"
         }
       ]
     },
@@ -18,7 +19,8 @@
           "scene": 158,
           "line": 175,
           "check": "kelpwood hut on a tuff plinth with a plate eave and copper weathervane, a 3-wide jetty stepping down from a side door to deep water on log piles with fence rails and copper lanterns at the end, tuff-brick quay edge and bollards along the shore",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:14"
         }
       ]
     },
@@ -29,14 +31,16 @@
           "scene": 165,
           "line": 182,
           "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:22"
         },
         {
           "file": "s_p13_particles__ankhara_burrow_trail_8s.png",
           "scene": 165,
           "line": 182,
           "check": "seal reads as a continuous light wall about 0.5-3.5 high all round (columns ~2 blocks apart, no big gaps); sand dust trail visible behind the burrowed boss",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:02:27"
         }
       ]
     },
@@ -67,42 +71,48 @@
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:10"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_third_person_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:12"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_first_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:15"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_in_use_third_person_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:17"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_after_use_2.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:19"
         },
         {
           "file": "s_harpoon__tidebrass_harpoon_bolt_tooltip_4.png",
           "scene": 324,
           "line": 364,
           "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:01:20"
         }
       ]
     },
@@ -113,7 +123,8 @@
           "scene": 333,
           "line": 376,
           "check": "townsfolk take the same kingdom-styled poses as the soldiers (Azmar porters carrying jars on the head, Azmar priests at the dawn rite with arms raised, Hrafnholt fisherfolk sitting leaned in, Mirewick clerks lounging back), never the 2.x crouch",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:07"
         }
       ]
     },
@@ -124,14 +135,16 @@
           "scene": 378,
           "line": 426,
           "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:28"
         },
         {
           "file": "s_routines__changing_of_the_guard_salute_5s.png",
           "scene": 378,
           "line": 426,
           "check": "squads at their posts salute for ~5 s at the bell, then stand normally; court squads stand in two facing lines in the hall",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:35"
         }
       ]
     },
@@ -142,14 +155,15 @@
           "scene": 488,
           "line": 540,
           "check": "the 5 open spruce fence gates at z 30 open onto a 5-wide dirt-path apron (2 deep) that narrows into the 3-wide road; no earth bank against the outer two gate leaves",
-          "status": "pending"
+          "status": "ok",
+          "taken": "01:03:41"
         }
       ]
     }
   },
-  "run": "01:01:06",
+  "run": "01:03:42",
   "totals": {
-    "ok": 2,
+    "ok": 16,
     "fail": 0,
     "manual": 0
   }
