@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 18:05",
+ "generated": "2026-11-12 18:07",
  "scenes": [
   {
    "n": 1,
@@ -21123,7 +21123,7 @@
     ],
     [
      "camera",
-     "front"
+     "back"
     ],
     [
      "tp",
@@ -21131,8 +21131,8 @@
      0,
      0,
      0,
-     180,
-     0
+     0,
+     10
     ],
     [
      "wait",
@@ -21153,14 +21153,14 @@
      0,
      0,
      0,
-     0
+     8
     ],
     [
      "look_target"
     ],
     [
      "wait",
-     20
+     14
     ],
     [
      "attack"
@@ -21179,7 +21179,7 @@
     ],
     [
      "camera",
-     "front"
+     "back"
     ],
     [
      "tp",
@@ -21187,19 +21187,22 @@
      0,
      0,
      0,
-     180,
-     0
+     0,
+     8
+    ],
+    [
+     "look_target"
     ],
     [
      "wait",
-     12
+     14
     ],
     [
      "attack"
     ],
     [
      "wait",
-     2
+     3
     ],
     [
      "shot",
@@ -21212,15 +21215,6 @@
     [
      "camera",
      "first"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     0,
-     0
     ],
     [
      "look_target"
@@ -21283,7 +21277,7 @@
    "check": "the flail chops from up-right down across to lower-left (not the vanilla sword flick), a pale steel-blue glowing ribbon (up to 5 segments) trails the head and fades toward its tail; no ribbon before the click or after the swing; nothing clips into the camera",
    "setup": "flat world, noon, survival, `elsewhere:ironclad_flail` in main hand, a NoAI husk 2 blocks ahead; left-click it and shoot 2 ticks after the click (mid-swing), then again 4 ticks after",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "w5-useanims.json"
+   "override": "w6-flail.json"
   },
   {
    "n": 232,
@@ -21330,8 +21324,8 @@
      0,
      0,
      0,
-     180,
-     0
+     0,
+     8
     ],
     [
      "chunks"
@@ -21346,7 +21340,7 @@
     ],
     [
      "camera",
-     "front"
+     "back"
     ],
     [
      "wait",
@@ -21361,12 +21355,39 @@
      8
     ],
     [
+     "attack"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
      "shot",
      "ironclad_flail_third_person_2"
     ],
     [
      "wait",
-     10
+     25
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     8
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     14
     ],
     [
      "attack"
@@ -21382,6 +21403,26 @@
     [
      "wait",
      30
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     8
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     14
     ],
     [
      "attack"
@@ -21456,7 +21497,7 @@
    "check": "flail: arm wound overhead then smashed down with a body twist, ribbon follows the head; rapier: lunge (sword-side leg forward, other leg back, sword arm level and aimed where the head looks, off arm back), cyan ribbon along the thrust; nothing T-posed, arms return to the walk pose after",
    "setup": "same scene, F5 (front view), or a second player 6 blocks away swinging; shoot mid-swing for each weapon",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "w5-useanims.json"
+   "override": "w6-flail.json"
   },
   {
    "n": 233,
@@ -21616,6 +21657,32 @@
      "elsewhere:ironclad_flail"
     ],
     [
+     "summon",
+     "minecraft:husk",
+     "{NoAI:1b,PersistenceRequired:1b}",
+     0,
+     3
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     8
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "cmd",
+     "effect give @e[type=minecraft:husk,distance=..12] minecraft:regeneration infinite 10 true"
+    ],
+    [
+     "look_target"
+    ],
+    [
      "wait",
      25
     ],
@@ -21625,7 +21692,7 @@
     ],
     [
      "camera",
-     "front"
+     "back"
     ],
     [
      "wait",
@@ -21640,27 +21707,55 @@
      "first"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     8
+    ],
+    [
+     "look_target"
+    ],
+    [
      "wait",
-     30
+     14
     ],
     [
      "attack"
     ],
     [
      "wait",
-     6
+     2
     ],
     [
      "shot",
      "ironclad_flail_in_use_first_person_3"
     ],
     [
+     "wait",
+     30
+    ],
+    [
      "camera",
-     "front"
+     "back"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     8
+    ],
+    [
+     "look_target"
     ],
     [
      "wait",
-     30
+     14
     ],
     [
      "attack"
@@ -21730,7 +21825,7 @@
    "check": "shot 1: `ironclad_flail_charged` (brighter head with white glints); shot 2: the plain flail head while the attack recharges",
    "setup": "flail in hand, stand still 1 s (shot 1, also the hotbar slot), swing at air and shoot within 4 ticks (shot 2)",
    "note": "generic: item ironclad_flail; framing approximate",
-   "override": "w5-useanims.json"
+   "override": "w6-flail.json"
   },
   {
    "n": 235,
@@ -26558,11 +26653,19 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
      "effect give @s water_breathing infinite 0 true"
+    ],
+    [
+     "cmd",
+     "effect give @s night_vision infinite 0 true"
     ],
     [
      "cmd",
@@ -26578,23 +26681,11 @@
     ],
     [
      "cmd",
-     "setblock ~1 ~-4 ~7 minecraft:gravel"
-    ],
-    [
-     "cmd",
-     "setblock ~-1 ~-4 ~5 minecraft:clay"
-    ],
-    [
-     "cmd",
      "fill ~-4 ~-3 ~10 ~4 ~-1 ~10 minecraft:sand"
     ],
     [
      "cmd",
-     "fill ~-4 ~-3 ~11 ~4 ~-1 ~11 minecraft:stone"
-    ],
-    [
-     "cmd",
-     "fill ~5 ~-1 ~3 ~7 ~-1 ~5 minecraft:sand"
+     "fill ~-4 ~-3 ~11 ~4 ~-1 ~11 minecraft:sea_lantern"
     ],
     [
      "hold",
@@ -26606,7 +26697,7 @@
      "stage",
      0,
      -3,
-     6,
+     7,
      0,
      0
     ],
@@ -26622,7 +26713,7 @@
     ],
     [
      "wait",
-     6
+     16
     ],
     [
      "shot",
@@ -26631,22 +26722,11 @@
     [
      "tp",
      "stage",
+     0,
+     -3,
      6,
-     0,
-     1,
-     0,
-     28
-    ],
-    [
-     "wait",
-     15
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     6
+     28,
+     12
     ],
     [
      "camera",
@@ -26654,7 +26734,7 @@
     ],
     [
      "wait",
-     6
+     12
     ],
     [
      "shot",
@@ -26697,7 +26777,7 @@
    "check": "wall: the 3x3 opens in the wall's plane (vertical), mined at full speed while swimming; dry land: only the one block breaks (a normal shovel)",
    "setup": "same pool, swim to a sand wall at eye height (not touching the floor) and break one block; then on dry land break one sand block",
    "note": "generic: item tidebrass_dredge; framing approximate",
-   "override": "w4-gear.json"
+   "override": "w7-items.json"
   },
   {
    "n": 291,
@@ -28357,19 +28437,34 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
     ],
     [
      "summon",
      "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
+     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f}",
      0,
-     2.5
-    ],
-    [
-     "hold",
-     "mainhand",
-     "elsewhere:thornlash"
+     4
     ],
     [
      "tp",
@@ -28385,74 +28480,26 @@
     ],
     [
      "wait",
-     20
+     15
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
-     "look_target"
-    ],
-    [
-     "wait",
-     6
-    ],
-    [
-     "shot",
-     "thornlash_first_person_2"
-    ],
-    [
-     "camera",
-     "back"
+     "hold",
+     "mainhand",
+     "elsewhere:rootcall_staff"
     ],
     [
      "wait",
      10
     ],
     [
-     "shot",
-     "thornlash_third_person_2"
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
-     "look_target"
-    ],
-    [
-     "wait",
-     3
-    ],
-    [
      "use_down"
     ],
     [
      "wait",
-     1
+     28
     ],
     [
      "use_up"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     4
-    ],
-    [
-     "shot",
-     "thornlash_in_use_first_person_2"
-    ],
-    [
-     "camera",
-     "back"
     ],
     [
      "wait",
@@ -28463,6 +28510,49 @@
     ],
     [
      "wait",
+     28
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "wait",
+     20
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:thornlash"
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
      1
     ],
     [
@@ -28470,14 +28560,80 @@
     ],
     [
      "wait",
+     2
+    ],
+    [
+     "shot",
+     "thornlash_first_person_2"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     35,
+     12
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "wait",
      1
+    ],
+    [
+     "shot",
+     "thornlash_third_person_2"
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "look_target"
+    ],
+    [
+     "wait",
+     14
     ],
     [
      "attack"
     ],
     [
      "wait",
-     4
+     3
+    ],
+    [
+     "shot",
+     "thornlash_in_use_first_person_2"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     35,
+     12
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -28488,19 +28644,28 @@
      "first"
     ],
     [
-     "wait",
-     25
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "look_target"
     ],
     [
      "wait",
-     3
+     130
     ],
     [
      "shot",
      "thornlash_after_use_2"
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "inventory",
@@ -28547,7 +28712,7 @@
    "check": "crack: a pale-green dust line from the hand out to the tip (full reach), crit sparks there, a swish + crack with a dry thorn snap and leaf rustle (subtitle \"Thornlash cracks\"); hit: green dust and crit burst on the husk, overlay \"Thorned: Husk (your minions +2 damage)\" in pale green, both minions turn to the husk, each minion hit puffs green dust on it",
    "setup": "flat field, noon, two Rootling minions out (summoner staff), a NoAI husk 4 blocks ahead; right-click once, then hit the husk once",
    "note": "generic: item thornlash; framing approximate",
-   "override": "w4-stage-weapons.json"
+   "override": "w7-items.json"
   },
   {
    "n": 305,
@@ -28574,27 +28739,51 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
-     "fill ~-2 ~-1 ~1 ~2 ~-1 ~4 minecraft:water"
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
+    ],
+    [
+     "cmd",
+     "fill ~-2 ~-1 ~2 ~2 ~-1 ~6 minecraft:water"
     ],
     [
      "summon",
      "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
+     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f}",
      0,
-     2.5
+     4
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "cmd",
-     "tp @e[type=minecraft:husk,distance=..8,limit=1,sort=nearest] ~0.0 ~-1 ~2.5"
-    ],
-    [
-     "hold",
-     "mainhand",
-     "elsewhere:tidechain_lash"
+     "tp @e[type=minecraft:husk,distance=..8,limit=1,sort=nearest] ~0 ~-0.9 ~4"
     ],
     [
      "tp",
@@ -28610,30 +28799,32 @@
     ],
     [
      "wait",
-     20
+     15
     ],
     [
-     "camera",
-     "first"
-    ],
-    [
-     "look_target"
+     "hold",
+     "mainhand",
+     "elsewhere:tidechain_lash"
     ],
     [
      "wait",
      6
     ],
     [
-     "shot",
-     "tidechain_lash_first_person"
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
-     "camera",
-     "back"
+     "look_target"
     ],
     [
      "wait",
-     10
+     4
     ],
     [
      "use_down"
@@ -28647,14 +28838,35 @@
     ],
     [
      "wait",
-     1
+     2
+    ],
+    [
+     "shot",
+     "tidechain_lash_first_person"
     ],
     [
      "attack"
     ],
     [
      "wait",
-     4
+     3
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     35,
+     12
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "wait",
+     2
     ],
     [
      "shot",
@@ -28697,7 +28909,7 @@
    "check": "crack: copper-orange dust line, splash drops at the tip, chain-link pings and a spray (subtitle \"Tidechain Lash cracks\"); hit: overlay \"Shackled: Husk (your minions +20%)\" in copper; on the wet husk the mark lasts 7 s instead of 5 s (minions still on it at 6 s while you keep cracking)",
    "setup": "same field, then a husk standing in a 1-deep pool",
    "note": "generic: item tidechain_lash; framing approximate",
-   "override": "w4-stage-weapons.json"
+   "override": "w7-items.json"
   },
   {
    "n": 306,
@@ -28724,19 +28936,34 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
     ],
     [
      "summon",
      "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b,equipment:{head:{id:\"minecraft:iron_helmet\",count:1},chest:{id:\"minecraft:iron_chestplate\",count:1},legs:{id:\"minecraft:iron_leggings\",count:1},feet:{id:\"minecraft:iron_boots\",count:1}}}",
+     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f,equipment:{head:{id:\"minecraft:iron_helmet\",count:1},chest:{id:\"minecraft:iron_chestplate\",count:1},legs:{id:\"minecraft:iron_leggings\",count:1},feet:{id:\"minecraft:iron_boots\",count:1}}}",
      0,
-     2.5
-    ],
-    [
-     "hold",
-     "mainhand",
-     "elsewhere:azmar_sunscourge"
+     4
     ],
     [
      "tp",
@@ -28752,18 +28979,32 @@
     ],
     [
      "wait",
-     20
+     15
     ],
     [
-     "camera",
-     "first"
+     "hold",
+     "mainhand",
+     "elsewhere:azmar_sunscourge"
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "look_target"
     ],
     [
      "wait",
-     6
+     4
     ],
     [
      "use_down"
@@ -28777,18 +29018,27 @@
     ],
     [
      "wait",
-     1
+     2
+    ],
+    [
+     "shot",
+     "azmar_sunscourge_first_person"
     ],
     [
      "attack"
     ],
     [
      "wait",
-     4
+     3
     ],
     [
-     "shot",
-     "azmar_sunscourge_first_person"
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     35,
+     12
     ],
     [
      "camera",
@@ -28796,28 +29046,7 @@
     ],
     [
      "wait",
-     12
-    ],
-    [
-     "use_down"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     4
+     2
     ],
     [
      "shot",
@@ -28860,7 +29089,7 @@
    "check": "crack: gold dust line, wax-on glints at the tip, a venom hiss with a thin brass shimmer (subtitle \"Sunscourge cracks\"); hit: overlay \"Venom: Husk (your minions +15%, ignore 3 armor)\" in gold; minion hits on the armored husk take visibly more off than on a second armored husk that is not marked",
    "setup": "same field, a husk in full iron armor",
    "note": "generic: item azmar_sunscourge; framing approximate",
-   "override": "w4-stage-weapons.json"
+   "override": "w7-items.json"
   },
   {
    "n": 307,
@@ -28875,7 +29104,7 @@
     ],
     [
      "cmd",
-     "time set 13000"
+     "time set 12000"
     ],
     [
      "cmd",
@@ -28887,19 +29116,34 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
+    ],
+    [
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
     ],
     [
      "summon",
      "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
+     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f}",
      0,
-     2.5
-    ],
-    [
-     "hold",
-     "mainhand",
-     "elsewhere:echo_chord"
+     4
     ],
     [
      "tp",
@@ -28915,18 +29159,32 @@
     ],
     [
      "wait",
-     20
+     15
     ],
     [
-     "camera",
-     "first"
+     "hold",
+     "mainhand",
+     "elsewhere:echo_chord"
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     [
      "look_target"
     ],
     [
      "wait",
-     6
+     4
     ],
     [
      "use_down"
@@ -28940,18 +29198,27 @@
     ],
     [
      "wait",
-     1
+     2
+    ],
+    [
+     "shot",
+     "echo_chord_first_person"
     ],
     [
      "attack"
     ],
     [
      "wait",
-     4
+     3
     ],
     [
-     "shot",
-     "echo_chord_first_person"
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     35,
+     12
     ],
     [
      "camera",
@@ -28959,28 +29226,7 @@
     ],
     [
      "wait",
-     12
-    ],
-    [
-     "use_down"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     4
+     2
     ],
     [
      "shot",
@@ -29023,7 +29269,7 @@
    "check": "crack: teal dust line, sculk charge pops at the tip, a ringing A-E-A chord that echoes the crack back twice (subtitle \"Echo Chord cracks\"); hit: overlay \"Resonant: Husk (your minions +25%)\" in teal, sculk pops on the husk",
    "setup": "same field, dusk",
    "note": "generic: item echo_chord; framing approximate",
-   "override": "w4-stage-weapons.json"
+   "override": "w7-items.json"
   },
   {
    "n": 308,
@@ -29050,26 +29296,145 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
-     "summon",
-     "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
-     -1.3,
-     2.4
+     "cmd",
+     "effect give @s saturation infinite 255 true"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:max_glimmer base set 100"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:spell_cost base set 0.5"
+    ],
+    [
+     "cmd",
+     "attribute @s elsewhere:minion_slots base set 3"
     ],
     [
      "summon",
      "minecraft:husk",
-     "{NoAI:1b,PersistenceRequired:1b}",
-     1.3,
-     2.4
+     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f}",
+     -2,
+     5
+    ],
+    [
+     "summon",
+     "minecraft:husk",
+     "{NoAI:1b,PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f}",
+     2,
+     5
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     "chunks"
+    ],
+    [
+     "wait",
+     15
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:rootcall_staff"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     28
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     28
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "wait",
+     20
     ],
     [
      "hold",
      "mainhand",
      "elsewhere:thornlash"
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     21.8,
+     8
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "shot",
+     "thornlash_first_person_3"
     ],
     [
      "tp",
@@ -29081,31 +29446,12 @@
      12
     ],
     [
-     "chunks"
-    ],
-    [
-     "wait",
-     20
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
-     "wait",
-     6
-    ],
-    [
-     "shot",
-     "thornlash_first_person_3"
-    ],
-    [
      "camera",
      "back"
     ],
     [
      "wait",
-     10
+     2
     ],
     [
      "shot",
@@ -29121,12 +29467,12 @@
      0,
      0,
      0,
-     28,
-     12
+     -21.8,
+     8
     ],
     [
      "wait",
-     3
+     12
     ],
     [
      "use_down"
@@ -29147,7 +29493,11 @@
     ],
     [
      "wait",
-     4
+     3
+    ],
+    [
+     "shot",
+     "thornlash_in_use_first_person_3"
     ],
     [
      "tp",
@@ -29155,41 +29505,8 @@
      0,
      0,
      0,
-     -28,
+     0,
      12
-    ],
-    [
-     "wait",
-     3
-    ],
-    [
-     "wait",
-     8
-    ],
-    [
-     "use_down"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     4
-    ],
-    [
-     "shot",
-     "thornlash_in_use_first_person_3"
     ],
     [
      "camera",
@@ -29197,28 +29514,7 @@
     ],
     [
      "wait",
-     12
-    ],
-    [
-     "use_down"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     1
-    ],
-    [
-     "attack"
-    ],
-    [
-     "wait",
-     4
+     2
     ],
     [
      "shot",
@@ -29229,12 +29525,86 @@
      "first"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     -21.8,
+     8
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:gale_ribbon"
+    ],
+    [
      "wait",
-     20
+     10
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     8
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:echo_chord"
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "attack"
+    ],
+    [
+     "wait",
+     4
     ],
     [
      "shot",
      "thornlash_after_use_3"
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:thornlash"
+    ],
+    [
+     "camera",
+     "first"
     ],
     [
      "inventory",
@@ -29281,7 +29651,7 @@
    "check": "the Thorned marks move A -> B (A loses its particles, minions switch to B); the Gale Ribbon hit replaces the Thorned mark (no Thorned message, Gale Ribbon behaviour); the Echo Chord hit gives \"Resonant: Husk\"; with no swing for 3 s the minions drop the forced target",
    "setup": "two husks A and B, minions out; hit A with the Thornlash, then B with the Thornlash, then B with a Gale Ribbon, then B with the Echo Chord; wait 4 s without swinging",
    "note": "generic: item thornlash; framing approximate",
-   "override": "w4-stage-weapons.json"
+   "override": "w7-items.json"
   },
   {
    "n": 309,
@@ -29831,7 +30201,7 @@
     ],
     [
      "cmd",
-     "fill -4 -60 10 4 -55 10 minecraft:stone"
+     "fill ~-5 ~ ~6 ~5 ~4 ~6 minecraft:smooth_quartz"
     ],
     [
      "hold",
@@ -29875,10 +30245,10 @@
     [
      "tp",
      "stage",
-     -0.8,
+     -1.2,
      0,
-     8,
-     -28,
+     3.6,
+     -31,
      0
     ],
     [
@@ -29886,15 +30256,15 @@
      10
     ],
     [
+     "shot",
+     "starpiercer_arrow_stuck_sprint_cancel"
+    ],
+    [
      "use_down"
     ],
     [
      "wait",
-     14
-    ],
-    [
-     "shot",
-     "starpiercer_arrow_stuck_sprint_cancel"
+     12
     ],
     [
      "use_up"
@@ -29909,7 +30279,7 @@
    "check": "arrow texture correct in the block (violet shaft, pale fletching, no missing/purple-black texture), amethyst hit sound; sprinting drops the draw (string springs back, subtitle \"Starpiercer draw slackens\"), right-click while sprinting does nothing",
    "setup": "after the flight shot, walk to the arrow stuck in a block; then start drawing and sprint",
    "note": "generic: entity starpiercer_arrow; framing approximate",
-   "override": "w5-bows.json"
+   "override": "w7-items.json"
   },
   {
    "n": 314,
@@ -31246,7 +31616,7 @@
      "minecraft:husk",
      "{PersistenceRequired:1b}",
      0,
-     8
+     6
     ],
     [
      "tp",
@@ -31268,10 +31638,6 @@
      10
     ],
     [
-     "shot",
-     "tidebrass_harpoon_bolt_first_person_3"
-    ],
-    [
      "use_down"
     ],
     [
@@ -31280,6 +31646,14 @@
     ],
     [
      "use_up"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "shot",
+     "tidebrass_harpoon_bolt_first_person_3"
     ],
     [
      "wait",
@@ -31347,7 +31721,7 @@
    "check": "the zombie hops a little and slides about 3 blocks straight toward the player (stops well short of you), a short line of copper scrape sparks along the pull, reel sound; a wither or the ender dragon shot the same way does not move",
    "setup": "flat stone ground, `/summon husk ~ ~ ~10 {NoAI:0b}` (or a zombie), survival with a loaded crossbow, shoot it from 10 blocks; shot ~0.3 s after the hit from the side, camera 6 back",
    "note": "generic: item tidebrass_harpoon_bolt, 1 setup command(s); framing approximate",
-   "override": "w4-stage-weapons.json"
+   "override": "w7-items.json"
   },
   {
    "n": 324,
@@ -31403,7 +31777,7 @@
     [
      "summon",
      "minecraft:drowned",
-     "{PersistenceRequired:1b,Silent:1b}",
+     "{PersistenceRequired:1b,Silent:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f}",
      0,
      10
     ],
@@ -31645,11 +32019,39 @@
      "first"
     ],
     [
-     "wait",
-     25
+     "cmd",
+     "effect give @e[type=minecraft:drowned,distance=..40] instant_health 1 4 true"
     ],
     [
      "look_target"
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     30
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     1
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     4
     ],
     [
      "shot",
@@ -31700,7 +32102,7 @@
    "check": "the bolt keeps a straight fast line through the water (a vanilla arrow fired the same way drops and slows within a few blocks); on the hit, bubbles instead of sparks along the pull; the target takes more damage than on land (x1.5, not shot-checkable: covered by the self-test)",
    "setup": "a 2-deep pool 12 long, a drowned or a husk standing in the water 10 blocks away, fire the crossbow level across the water from the bank; shot while the bolt is underwater",
    "note": "generic: item tidebrass_harpoon_bolt; framing approximate",
-   "override": "w4-stage-weapons.json"
+   "override": "w7-items.json"
   },
   {
    "n": 325,
@@ -34333,7 +34735,7 @@
     ],
     [
      "cmd",
-     "item modify entity @s weapon.mainhand {type:\"minecraft:exploration_map\",destination:\"elsewhere:azmar_castle\",decoration:\"minecraft:target_x\",zoom:2,skip_existing_chunks:false,search_radius:100}"
+     "item modify entity @s weapon.mainhand {function:\"minecraft:exploration_map\",destination:\"#elsewhere:azmar_castle\",decoration:\"minecraft:target_x\",zoom:2,skip_existing_chunks:false,search_radius:100}"
     ],
     [
      "wait",
@@ -34346,7 +34748,7 @@
      25,
      50,
      180,
-     50
+     30
     ],
     [
      "wait",
@@ -34378,7 +34780,7 @@
    "check": "a filled map with a target marker on Azmar's castle site (same x/z as `/locate`), desert/badlands biome colours around it",
    "setup": "same world, `/give @s minecraft:map`, hold it, then `/item modify entity @s weapon.mainhand {\"type\":\"minecraft:exploration_map\",\"destination\":\"#elsewhere:azmar_castle\"}`; hold the map, first person",
    "note": "generic: commands only, 2 setup command(s); framing approximate",
-   "override": "npc.json"
+   "override": "w7-items.json"
   },
   {
    "n": 360,
@@ -34550,13 +34952,22 @@
      0,
      0,
      0,
-     0,
+     180,
      0
     ],
     [
      "hold",
      "mainhand",
      "elsewhere:glasswaste_starsight_visor"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     180,
+     0
     ],
     [
      "camera",
@@ -34586,6 +34997,15 @@
      "minecraft:air"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "camera",
      "front"
     ],
@@ -34601,6 +35021,15 @@
      "hold",
      "mainhand",
      "elsewhere:glasswaste_starsight_visor"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     180,
+     0
     ],
     [
      "camera",
@@ -34620,6 +35049,15 @@
      "minecraft:air"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "camera",
      "front"
     ],
@@ -34632,6 +35070,15 @@
      "glasswaste_starsight_visor_in_use_third_person"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
      "camera",
      "back"
     ],
@@ -34642,6 +35089,15 @@
     [
      "shot",
      "glasswaste_starsight_visor_after_use"
+    ],
+    [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     180,
+     0
     ],
     [
      "camera",
@@ -34708,7 +35164,7 @@
    "check": "\"Pair bonus: Starsight (2/2)\" with 2 detail lines and \"Pair strength NN% (Marksman and Caster)\"; Outrider shows \"Outrider's Charge\"",
    "setup": "wear the Starsight Visor + Prism Mantle with a Marksman/Caster hybrid calling, hover the Visor, hold Shift; then the Outrider Chaps + Boots with Vanguard/Marksman",
    "note": "generic: item glasswaste_starsight_visor; framing approximate",
-   "override": "w5-setbonus.json"
+   "override": "w7-gearfx.json"
   },
   {
    "n": 362,
@@ -34774,6 +35230,33 @@
     [
      "cmd",
      "item replace entity @s armor.feet with elsewhere:hrafnholt_wolfskin_boots"
+    ],
+    [
+     "cmd",
+     "give @s elsewhere:hrafnholt_mead_horn"
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:hrafnholt_mead_horn"
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     45
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "cmd",
+     "item replace entity @s hotbar.1 with elsewhere:hrafnholt_mead_horn"
     ],
     [
      "hold",
@@ -34844,7 +35327,7 @@
     ],
     [
      "wait",
-     3
+     1
     ],
     [
      "shot",
@@ -34875,6 +35358,10 @@
      "dev.elsewhere.gear3.setbonus.client.SetBonusTooltips",
      "forceShift",
      true
+    ],
+    [
+     "cmd",
+     "effect clear @s"
     ],
     [
      "inventory",
@@ -34915,7 +35402,7 @@
    "check": "the crosshair cooldown sword refills visibly faster with each hit up to the 5th; 4 s after the last hit it is back to normal speed",
    "setup": "survival, full Ulfhednar set (Mask, Pelt, Breeches, Wolfskin Boots), attack indicator on (crosshair), hit a zombie 5 times fast, then stop for 4 s",
    "note": "generic: item hrafnholt_wolfskin_boots; framing approximate",
-   "override": "w5-setbonus.json"
+   "override": "w7-gearfx.json"
   },
   {
    "n": 364,
@@ -35308,56 +35795,60 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
-     "fill ~3 ~-2 ~3 ~5 ~-2 ~5 minecraft:stone"
+     "fill ~1 ~-2 ~2 ~3 ~-2 ~4 minecraft:stone"
     ],
     [
      "cmd",
-     "fill ~3 ~-1 ~3 ~5 ~-1 ~5 minecraft:water"
+     "fill ~1 ~-1 ~2 ~3 ~-1 ~4 minecraft:water"
     ],
     [
      "cmd",
-     "setblock ~ ~ ~5 elsewhere:mirewick_mire_snare"
+     "setblock ~-2 ~ ~3 elsewhere:mirewick_mire_snare"
     ],
     [
      "cmd",
-     "setblock ~4 ~-1 ~4 elsewhere:mirewick_mire_snare[waterlogged=true]"
+     "setblock ~2 ~-1 ~3 elsewhere:mirewick_mire_snare[waterlogged=true]"
     ],
     [
      "tp",
      "stage",
-     1,
      0,
-     1,
-     -21.8,
-     21
+     0,
+     -0.5,
+     0,
+     32
     ],
     [
      "chunks"
     ],
     [
      "wait",
-     10
+     12
     ],
     [
      "shot",
      "mirewick_mire_snare_first_person_2"
     ],
     [
-     "camera",
-     "back"
-    ],
-    [
      "tp",
      "stage",
-     -2,
      0,
      0,
-     -25,
-     10
+     0,
+     0,
+     28
+    ],
+    [
+     "camera",
+     "back"
     ],
     [
      "wait",
@@ -35374,11 +35865,16 @@
     [
      "tp",
      "stage",
-     1,
+     -1,
      0,
-     2,
-     -28.1,
-     28
+     0.5,
+     -5,
+     45
+    ],
+    [
+     "hold",
+     "mainhand",
+     "elsewhere:mirewick_mire_snare"
     ],
     [
      "wait",
@@ -35406,7 +35902,7 @@
    "check": "low open trap on a woven reed mat with a purple cord border, two raised tooth rows, side rods and a gold pan; the wet one sits in the water (waterlogged, water surface over it, no gap); no pink/black, no full-block outline (the outline is a low slab)",
    "setup": "flat world, noon; place one snare on grass and one in a 1-deep water pool (stone floor) 3 blocks east; F5 third person 3 blocks away, 30 degrees down",
    "note": "generic: item mirewick_mire_snare; framing approximate",
-   "override": "w4-stage-misc.json"
+   "override": "w7-items.json"
   },
   {
    "n": 374,
@@ -35421,7 +35917,7 @@
     ],
     [
      "cmd",
-     "time set 18000"
+     "time set 6000"
     ],
     [
      "cmd",
@@ -35433,6 +35929,10 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
@@ -35441,14 +35941,14 @@
     ],
     [
      "cmd",
-     "setblock ~2 ~ ~4 elsewhere:mirewick_mire_snare"
+     "setblock ~ ~ ~3 elsewhere:mirewick_mire_snare"
     ],
     [
      "summon",
      "minecraft:husk",
-     "{PersistenceRequired:1b}",
-     2,
-     1
+     "{PersistenceRequired:1b,attributes:[{id:\"minecraft:max_health\",base:600}],Health:600f}",
+     0,
+     8
     ],
     [
      "tp",
@@ -35460,12 +35960,15 @@
      0
     ],
     [
+     "chunks"
+    ],
+    [
      "wait",
      5
     ],
     [
      "cmd",
-     "tp @e[type=minecraft:husk,limit=1,sort=nearest] ~2 ~ ~4"
+     "tp @e[type=minecraft:husk,limit=1,sort=nearest] ~0 ~ ~3"
     ],
     [
      "look_target"
@@ -35479,12 +35982,21 @@
      "mirewick_mire_snare_first_person_3"
     ],
     [
+     "tp",
+     "stage",
+     0,
+     0,
+     0,
+     35,
+     10
+    ],
+    [
      "camera",
      "back"
     ],
     [
      "wait",
-     4
+     6
     ],
     [
      "shot",
@@ -35532,7 +36044,7 @@
    "check": "the jaws snap shut upright (sprung model: two interlocking toothed plates), mud particles burst at the trap, the husk flashes red (6 damage) and stands rooted with dark purple effect swirls until 3 s; at 3 s the snare crumbles (root particles) and the husk walks again; standing in an armed snare yourself never springs it",
    "setup": "flat world, night; /summon husk 4 blocks from an armed snare and let it walk in (or /tp it onto the snare); shot at +0.3 s and at +2 s from 4 blocks",
    "note": "generic: item mirewick_mire_snare; framing approximate",
-   "override": "w4-stage-misc.json"
+   "override": "w7-items.json"
   },
   {
    "n": 375,
@@ -39074,16 +39586,24 @@
     ],
     [
      "cmd",
+     "difficulty normal"
+    ],
+    [
+     "cmd",
      "effect give @s resistance infinite 255 true"
     ],
     [
      "cmd",
-     "fill -6 -60 12 6 -55 12 minecraft:stone_bricks"
+     "fill ~-6 ~ ~12 ~6 ~5 ~12 minecraft:stone_bricks"
     ],
     [
      "hold",
      "mainhand",
-     "elsewhere:sunglass_arrow"
+     "minecraft:bow"
+    ],
+    [
+     "cmd",
+     "give @s elsewhere:sunglass_arrow 32"
     ],
     [
      "tp",
@@ -39110,87 +39630,6 @@
      6
     ],
     [
-     "shot",
-     "sunglass_first_person_2"
-    ],
-    [
-     "camera",
-     "front"
-    ],
-    [
-     "wait",
-     12
-    ],
-    [
-     "shot",
-     "sunglass_third_person_2"
-    ],
-    [
-     "camera",
-     "first"
-    ],
-    [
-     "hold",
-     "mainhand",
-     "minecraft:bow"
-    ],
-    [
-     "cmd",
-     "give @s elsewhere:sunglass_arrow 32"
-    ],
-    [
-     "wait",
-     6
-    ],
-    [
-     "use_down"
-    ],
-    [
-     "wait",
-     24
-    ],
-    [
-     "use_up"
-    ],
-    [
-     "wait",
-     30
-    ],
-    [
-     "tp",
-     "stage",
-     1.5,
-     0,
-     10,
-     45,
-     0
-    ],
-    [
-     "wait",
-     15
-    ],
-    [
-     "shot",
-     "sunglass_in_use_first_person"
-    ],
-    [
-     "tp",
-     "stage",
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    [
-     "camera",
-     "back"
-    ],
-    [
-     "wait",
-     10
-    ],
-    [
      "use_down"
     ],
     [
@@ -39206,24 +39645,96 @@
     ],
     [
      "shot",
-     "sunglass_in_use_third_person"
+     "sunglass_first_person_2"
     ],
     [
      "wait",
-     30
+     40
     ],
     [
-     "tp",
-     "stage",
-     1.5,
-     0,
-     10,
-     45,
-     0
+     "camera",
+     "front"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "use_down"
+    ],
+    [
+     "wait",
+     24
+    ],
+    [
+     "use_up"
+    ],
+    [
+     "wait",
+     2
+    ],
+    [
+     "shot",
+     "sunglass_third_person_2"
+    ],
+    [
+     "wait",
+     40
     ],
     [
      "camera",
      "first"
+    ],
+    [
+     "tp",
+     "stage",
+     1.2,
+     0,
+     9.4,
+     24,
+     0
+    ],
+    [
+     "wait",
+     15
+    ],
+    [
+     "shot",
+     "sunglass_in_use_first_person"
+    ],
+    [
+     "tp",
+     "stage",
+     1.2,
+     0,
+     9.4,
+     50,
+     5
+    ],
+    [
+     "camera",
+     "back"
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "shot",
+     "sunglass_in_use_third_person"
+    ],
+    [
+     "camera",
+     "first"
+    ],
+    [
+     "tp",
+     "stage",
+     0.7,
+     0,
+     10.6,
+     29,
+     0
     ],
     [
      "wait",
@@ -39278,7 +39789,7 @@
    "check": "flying and stuck arrow use the sunglass texture (amber fletching, pale glass head, dark shaft; not the vanilla arrow, no pink/black); a few small flame specks behind it in flight only, none once stuck",
    "setup": "flat daylight, fire a full-draw bow at a stone wall 12 blocks away; third person F5, one shot mid-flight, one of the arrow stuck in the wall from 2 blocks",
    "note": "generic: item sunglass; framing approximate",
-   "override": "w5-bows.json"
+   "override": "w7-items.json"
   },
   {
    "n": 428,
@@ -39298,6 +39809,10 @@
     [
      "cmd",
      "weather clear"
+    ],
+    [
+     "cmd",
+     "difficulty normal"
     ],
     [
      "gui",
@@ -39368,7 +39883,7 @@
     [
      "tp",
      "stage",
-     5,
+     4,
      0,
      12,
      90,
@@ -39389,6 +39904,15 @@
     [
      "camera",
      "back"
+    ],
+    [
+     "tp",
+     "stage",
+     4,
+     0,
+     12,
+     60,
+     10
     ],
     [
      "wait",
@@ -39439,7 +39963,7 @@
    "check": "glass and panes intact (no holes), the arrow in or under the zombie, the zombie on fire (flame overlay); a plain arrow fired the same way sticks in the first glass block",
    "setup": "flat, /time set 18000 (night, so only the arrow can set it alight); a 3x3 glass wall, a glass-pane wall 3 blocks behind it, a NoAI zombie 3 blocks behind the panes (/summon zombie ~ ~ ~ {NoAI:1b}); shoot it from 10 blocks in front of the glass, shot 0.5 s after the hit, camera to the side",
    "note": "generic: item sunglass, 1 setup command(s); framing approximate",
-   "override": "w5-bows.json"
+   "override": "w7-items.json"
   },
   {
    "n": 429,
@@ -40034,7 +40558,7 @@
     ],
     [
      "cmd",
-     "effect give @s resistance infinite 255 true"
+     "effect clear @s"
     ],
     [
      "hold",
@@ -40056,38 +40580,35 @@
     [
      "click_at",
      1000,
-     700
+     690
     ],
     [
      "type",
-     "bud"
+     "everflow"
     ],
     [
      "wait",
-     15
+     20
     ],
     [
      "shot",
      "everflow_bong_first_person"
     ],
     [
-     "close"
-    ],
-    [
-     "camera",
-     "front"
+     "click_at",
+     936,
+     60
     ],
     [
      "wait",
-     10
+     20
     ],
     [
      "shot",
      "everflow_bong_third_person"
     ],
     [
-     "camera",
-     "first"
+     "close"
     ]
    ],
    "shots": [
@@ -40103,7 +40624,7 @@
    "check": "greenleaf: buds/seeds/joints and elsewhere: items both listed with icons (no missing textures, no duplicate tabs); both info pages render their text",
    "setup": "both mods + JEI; open JEI, search \"bud\", then open the info page of elsewhere:everflow_bong and elsewhere:hazeborn_bud",
    "note": "generic: item everflow_bong; framing approximate",
-   "override": "w4-stage-misc.json"
+   "override": "w7-items.json"
   },
   {
    "n": 435,

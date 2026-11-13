@@ -46,7 +46,7 @@ public final class WhipFx {
 		ServerLevel l = p.level();
 		Vec3 tip = tip(p);
 		Vec3 hand = p.getEyePosition().add(p.getLookAngle().scale(0.6)).add(0, -0.35, 0);
-		DustParticleOptions d = dust(k, 0.7F);
+		DustParticleOptions d = dust(k, 0.4F);
 		for (int i = 1; i <= LASH_POINTS; i++) {
 			Vec3 at = hand.lerp(tip, i / (double) LASH_POINTS);
 			l.sendParticles(d, at.x, at.y, at.z, 1, 0, 0, 0, 0);
@@ -60,7 +60,7 @@ public final class WhipFx {
 	public static void tagged(ServerPlayer owner, LivingEntity t, WhipKind k, boolean fresh) {
 		ServerLevel l = owner.level();
 		double x = t.getX(), y = t.getY() + t.getBbHeight() * 0.6, z = t.getZ(), w = t.getBbWidth() * 0.4, h = t.getBbHeight() * 0.3;
-		l.sendParticles(dust(k, 1.0F), x, y, z, fresh ? 10 : 4, w, h, w, 0);
+		l.sendParticles(dust(k, 0.45F), x, y, z, fresh ? 6 : 3, w, h, w, 0);
 		l.sendParticles(k.mark, x, y, z, fresh ? 6 : 2, w, h, w, 0.02);
 		sound(l, t.position().add(0, t.getBbHeight() * 0.5, 0), k, 0.8F, 1.05F + owner.getRandom().nextFloat() * 0.1F);
 		if (fresh) owner.sendOverlayMessage(Component.translatable("message.elsewhere.whip." + k.tag, t.getDisplayName()).withStyle(s -> s.withColor(k.color)));

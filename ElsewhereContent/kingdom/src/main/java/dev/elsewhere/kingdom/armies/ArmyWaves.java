@@ -319,6 +319,7 @@ public final class ArmyWaves {
 			s.nextWave = now + s.intervalTicks(lv.getRandom());
 		}
 		if (rankHook != null) rankHook.tick(lv, b);
+		dinFor(lv, b);
 		la = alive(lv, b.a);
 		ld = alive(lv, b.d);
 		maxLiveSeen = Math.max(maxLiveSeen, la + ld);
@@ -326,6 +327,22 @@ public final class ArmyWaves {
 		if (la + b.a.reserve <= 0 || ld + b.d.reserve <= 0 || now - b.start > TIMEOUT_TICKS || !watched) {
 			end(lv, b, false);
 			BATTLES.remove(b);
+		}
+	}
+
+	/** The battle din is a variable-range sound id with no registry entry (the client names it by id), so the server sends it as a direct holder. */
+	private static final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> DIN = net.minecraft.core.Holder.direct(
+		net.minecraft.sounds.SoundEvent.createVariableRangeEvent(KingdomContent.id("army.battle_din")));
+
+	/**
+	 * Distant battle: soldier hits are volume 1 sounds, which the server only sends to players within 16 blocks, so a watcher 33-60 blocks
+	 * away heard (and read in subtitles) nothing of the fight. Once a second, while any fighter is engaged, one din (volume 4 = 64 blocks) goes out
+	 * at the centre of the battle. The client drops it inside {@code RenderLod.DIN_RANGE}, where the hits themselves are heard.
+	 */
+	private static void dinFor(ServerLevel lv, Battle b) {
+		if (!lv.players().isEmpty() && KingdomLod.observerNear(lv, b.pos.getX(), b.pos.getZ(), 72)) {
+			lv.playSound(null, b.pos.getX() + 0.5, b.pos.getY() + 1.0, b.pos.getZ() + 0.5, DIN, net.minecraft.sounds.SoundSource.HOSTILE, 4.0F,
+				0.9F + lv.getRandom().nextFloat() * 0.2F);
 		}
 	}
 

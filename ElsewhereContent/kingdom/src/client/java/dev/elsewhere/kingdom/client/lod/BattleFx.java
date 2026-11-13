@@ -105,6 +105,11 @@ public final class BattleFx {
 	public static boolean allowSound(SoundEngine engine, SoundInstance s) {
 		if (!battle() || s.isRelative() || s.getSource() == SoundSource.MASTER || s.getSource() == SoundSource.MUSIC) return true;
 		Identifier id = s.getIdentifier();
+		if (id.equals(DIN_ID) && s.getAttenuation() != SoundInstance.Attenuation.NONE) {
+			// the server's distant-battle din (our own is unattenuated): inside the din range the real hits are heard instead
+			Vec3 c0 = Minecraft.getInstance().gameRenderer.mainCamera().position();
+			return c0.distanceToSqr(s.getX(), s.getY(), s.getZ()) > (double) RenderLod.DIN_RANGE * RenderLod.DIN_RANGE;
+		}
 		if (!BATTLE_SOUNDS.contains(id)) return true;
 		Vec3 cam = Minecraft.getInstance().gameRenderer.mainCamera().position();
 		double d2 = cam.distanceToSqr(s.getX(), s.getY(), s.getZ());

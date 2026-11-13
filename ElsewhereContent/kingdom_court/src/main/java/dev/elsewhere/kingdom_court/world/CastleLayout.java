@@ -282,7 +282,14 @@ public final class CastleLayout {
 			case WALL -> {
 				if (placer.ground != null) wallFit(new L(origin, placer));
 			}
-			case KIT_CASTLE -> CastleKit.castle(new L(origin, placer));
+			case KIT_CASTLE -> {
+				CastleKit.castle(new L(origin, placer));
+				// w6-castles (L540.1): the kit left a cobblestone patch at the two outer gate bays; re-lay the full 5-wide dirt-path apron after it
+				if (placer.ground != null) {
+					L al = new L(origin, placer);
+					for (int x = -2; x <= 2; x++) for (int z = 31; z <= 32; z++) al.b(x, -1, z, Blocks.DIRT_PATH);
+				}
+			}
 			case KIT_TOWN_WEST -> CastleKit.town(new L(origin.offset(-TOWN_DX, 0, TOWN_DZ), placer));
 			case KIT_TOWN_EAST -> CastleKit.town(new L(origin.offset(TOWN_DX, 0, TOWN_DZ), placer));
 		}
