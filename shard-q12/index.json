@@ -1,0 +1,162 @@
+{
+  "lanes": {
+    "items": {
+      "elsewhere:mirewick_lanternfang_estoc": [
+        {
+          "file": "items__mirewick_lanternfang_estoc_held.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "01:01:29"
+        },
+        {
+          "file": "items__mirewick_lanternfang_estoc_tooltip.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "01:01:30"
+        },
+        {
+          "file": "items__mirewick_lanternfang_estoc_held_first_person.png",
+          "scene": 106,
+          "line": 122,
+          "check": "icon matches the sprite page (16x16, Lanternfang Estoc), held model is not a checkerboard, tooltip lines readable and in order (grey, blue, red drawback)",
+          "status": "ok",
+          "taken": "01:01:30"
+        }
+      ]
+    },
+    "z_items": {
+      "elsewhere:aldermark_parrying_buckler (first person, blocking)": [
+        {
+          "file": "z_items__aldermark_parrying_buckler_first_person_blocking.png",
+          "scene": 146,
+          "line": 161,
+          "check": "rises to the vanilla blocking spot",
+          "status": "ok",
+          "taken": "01:01:33"
+        }
+      ]
+    },
+    "s_townsfolk_art": {
+      "elsewhere:townsfolk, Mirewick looks (clerk, bargeman, lamplighter, peat_cutter x 0..2)": [
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_front.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "01:01:36"
+        },
+        {
+          "file": "s_townsfolk_art__townsfolk_mirewick_looks_clerk_bargeman_back.png",
+          "scene": 222,
+          "line": 252,
+          "check": "purple, crimson and gold: clerks with white falling collars and black caps (clerk_0 spectacles, clerk_1 white Dutch cap); bargemen in oilskin or a purple waistcoat with a crimson neckerchief and wooden clogs; lamplighters in long purple or crimson coats with gold buttons and a tall banded hat (lamplighter_1 crimson hooded cloak); peat-cutters with peat mud on boots and legs (peat_cutter_0 wide brown hat)",
+          "status": "ok",
+          "taken": "01:01:37"
+        }
+      ]
+    },
+    "s_townsfolk": {
+      "Aldermark capital market (elsewhere:townsfolk, peasants and craftsmen)": [
+        {
+          "file": "s_townsfolk__aldermark_capital_time_set_3000.png",
+          "scene": 314,
+          "line": 354,
+          "check": "about 40 residents in brown/blue wool with hoes and stone axes milling at the square, more at the edges walking in along the streets; nobody on roofs, in water or floating",
+          "status": "pending"
+        }
+      ]
+    },
+    "s_p10_tabard": {
+      "elsewhere:kingdom_captain": [
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "01:01:40"
+        },
+        {
+          "file": "s_p10_tabard__cape_and_emblem_lod_later.png",
+          "scene": 349,
+          "line": 392,
+          "check": "10: waving cape and emblem; 30: one-piece cape (no ripple) and emblem; 40: no tabard, no cape (2.1 medium tabard distance; with the army render LOD on, its NEAR/FAR tiers decide the tabard, the cape follows it); low: tabard and emblem within 12 blocks only, no cape at any distance",
+          "status": "ok",
+          "taken": "01:01:42"
+        }
+      ]
+    },
+    "s_compat_transmute": {
+      "elsewhere:skyiron_ingot": [
+        {
+          "file": "s_compat_transmute__skyiron_ingot_first_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "fail",
+          "detail": "scene threw: java.lang.NullPointerException: Cannot invoke \"net.minecraft.client.gui.screens.inventory.AbstractContainerScreen.getMenu()\" because \"scr\" is null",
+          "taken": "01:01:45"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_third_person.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "fail",
+          "detail": "scene threw: java.lang.NullPointerException: Cannot invoke \"net.minecraft.client.gui.screens.inventory.AbstractContainerScreen.getMenu()\" because \"scr\" is null",
+          "taken": "01:01:45"
+        },
+        {
+          "file": "s_compat_transmute__skyiron_ingot_tooltip.png",
+          "scene": 429,
+          "line": 479,
+          "check": "Quanta counter rises by 2,295,808 (1,147,904 each, 20x a netherite ingot); Skyiron Ingot shows in the learned list and can be withdrawn for the same price",
+          "status": "fail",
+          "detail": "scene threw: java.lang.NullPointerException: Cannot invoke \"net.minecraft.client.gui.screens.inventory.AbstractContainerScreen.getMenu()\" because \"scr\" is null",
+          "taken": "01:01:45"
+        }
+      ]
+    },
+    "s_lod": {
+      "Far soldiers in their baked LOD skin (48-96 blocks, ARMIES 3.7)": [
+        {
+          "file": "s_lod__battle_aldermark_azmar_60_30s.png",
+          "scene": 456,
+          "line": 508,
+          "check": "each soldier at 60 blocks shows its armour, dye, trim colour and its kingdom's tabard colour painted in (looks the same as up close, only flatter); no armour drawn on top of the baked skin (no double helmet / z-fighting), no capes, only banners and spears in hand; Aldermark blue, Hrafnholt green, Azmar purple, Mirewick red, Free Company grey",
+          "status": "ok",
+          "taken": "01:01:59"
+        }
+      ]
+    },
+    "s_struct_greenhaze": {
+      "elsewhere:bonfire_terrace": [
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_overview.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        },
+        {
+          "file": "s_struct_greenhaze__bonfire_terrace_ground.png",
+          "scene": 479,
+          "line": 531,
+          "check": "a Greek-theatre cavea: 4 seat rings stepping up (following the hill where it rises) with mud-brick risers, cardinal aisles, a moss-carpet first ring, 4 fruit trees on ring 3, 12 lantern posts on the promenade; one lit signal fire on a log pyre in a mud-brick ring, snack altar 5 south of it",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "run": "01:01:59",
+  "totals": {
+    "ok": 9,
+    "fail": 3,
+    "manual": 0
+  }
+}
