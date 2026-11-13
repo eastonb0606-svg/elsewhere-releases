@@ -1,6 +1,6 @@
 {
  "source": "ElsewhereContent/SHOTS-3.0.md",
- "generated": "2026-11-12 19:13",
+ "generated": "2026-11-12 19:14",
  "scenes": [
   {
    "n": 1,
@@ -44171,7 +44171,11 @@
     ],
     [
      "wait",
-     300
+     700
+    ],
+    [
+     "wait",
+     60
     ],
     [
      "shot",
@@ -44219,7 +44223,7 @@
    "check": "subtitles show \"Distant battle\" every half second or so, not dozens of separate Strong attack / Shield blocks lines; walk into the melee (6 blocks): single hits and shield blocks are heard and subtitled as usual",
    "setup": "Options > Accessibility > Show Subtitles on; same battle, stand 50 blocks from the fighting",
    "note": "hurt to 45% of max HP (just past the first threshold); flat stage instead of the arena",
-   "override": "w7-kingdom.json"
+   "override": "z2-d-kingdom.json"
   },
   {
    "n": 461,

@@ -374,6 +374,11 @@ public abstract class BossBase extends Monster {
 		announceTicks = ticks;
 	}
 
+	/** Radius of the particle seal ring; arenas whose rim is solid at the edge pull it inside so the wall is not buried. */
+	protected double sealRingRadius() {
+		return arenaRadius + 1.5;
+	}
+
 	private void drawSeal(ServerLevel level) {
 		BlockPos c = arenaCenter;
 		if (c == null) return;
@@ -385,7 +390,8 @@ public abstract class BossBase extends Monster {
 		// 3 stacked columns (0.5 / 1.5 / 2.5 up) keep the wall continuous with the same packet count as before per column
 		for (int i = 0; i < points; i++) {
 			double a = Math.PI * 2 * (i + phaseOffset) / points;
-			double x = c.getX() + 0.5 + Math.cos(a) * (arenaRadius + 1.5), z = c.getZ() + 0.5 + Math.sin(a) * (arenaRadius + 1.5);
+			double sr = sealRingRadius();
+			double x = c.getX() + 0.5 + Math.cos(a) * sr, z = c.getZ() + 0.5 + Math.sin(a) * sr;
 			for (int k = 0; k < 3; k++) forceParticles(level, dust, x, c.getY() + 0.5 + k, z, 1, 0, 0.3, 0, 0);
 		}
 	}
